@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#F8FAFC"/>
+  <rect x="40" y="40" width="1520" height="820" rx="28" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="80" y="110" font-size="44" font-weight="700" fill="#0F172A" font-family="Droid Sans Fallback, DejaVu Sans, sans-serif">MCP：Agent 互操作正在从“各接各的”走向开放协议栈</text>
+  <text x="80" y="152" font-size="22" fill="#475569" font-family="Droid Sans Fallback, DejaVu Sans, sans-serif">核心变化：不是给模型再加一个工具，而是把客户端、工具、资源、认证与治理放进统一连接层</text>
+
+  <rect x="90" y="220" width="350" height="470" rx="24" fill="#EEF2FF" stroke="#C7D2FE"/>
+  <text x="125" y="275" font-size="30" font-weight="700" fill="#312E81" font-family="Droid Sans Fallback, DejaVu Sans, sans-serif">客户端 / Hosts</text>
+  <rect x="125" y="310" width="280" height="72" rx="18" fill="#FFFFFF" stroke="#C7D2FE"/>
+  <text x="155" y="355" font-size="30" fill="#1E293B" font-family="Droid Sans Fallback, DejaVu Sans, sans-serif">Claude</text>
+  <rect x="125" y="398" width="280" height="72" rx="18" fill="#FFFFFF" stroke="#C7D2FE"/>
+  <text x="155" y="443" font-size="30" fill="#1E293B" font-family="Droid Sans Fallback, DejaVu Sans, sans-serif">ChatGPT</text>
+  <rect x="125" y="486" width="280" height="72" rx="18" fill="#FFFFFF" stroke="#C7D2FE"/>
+  <text x="155" y="531" font-size="30" fill="#1E293B" font-family="Droid Sans Fallback, DejaVu Sans, sans-serif">VS Code</text>
+  <rect x="125" y="574" width="280" height="72" rx="18" fill="#FFFFFF" stroke="#C7D2FE"/>
+  <text x="155" y="619" font-size="30" fill="#1E293B" font-family="Droid Sans Fallback, DejaVu Sans, sans-serif">Cursor</text>
+
+  <rect x="545" y="205" width="510" height="500" rx="28" fill="#ECFDF5" stroke="#86EFAC"/>
+  <text x="720" y="268" font-size="42" font-weight="700" fill="#166534" font-family="Droid Sans Fallback, DejaVu Sans, sans-serif">MCP 协议层</text>
+  <rect x="610" y="302" width="380" height="74" rx="18" fill="#FFFFFF" stroke="#86EFAC"/>
+  <text x="645" y="348" font-size="28" fill="#14532D" font-family="Droid Sans Fallback, DejaVu Sans, sans-serif">Tools / Resources / Prompts / Apps</text>
+  <rect x="610" y="395" width="380" height="74" rx="18" fill="#FFFFFF" stroke="#86EFAC"/>
+  <text x="655" y="441" font-size="28" fill="#14532D" font-family="Droid Sans Fallback, DejaVu Sans, sans-serif">Remote Servers / OAuth / DCR</text>
+  <rect x="610" y="488" width="380" height="74" rx="18" fill="#FFFFFF" stroke="#86EFAC"/>
+  <text x="680" y="534" font-size="28" fill="#14532D" font-family="Droid Sans Fallback, DejaVu Sans, sans-serif">Trust / Sandbox / Policy</text>
+  <rect x="610" y="581" width="380" height="74" rx="18" fill="#FFFFFF" stroke="#86EFAC"/>
+  <text x="655" y="627" font-size="28" fill="#14532D" font-family="Droid Sans Fallback, DejaVu Sans, sans-serif">一次接入，多端复用，降低锁定</text>
+
+  <rect x="1160" y="220" width="350" height="470" rx="24" fill="#FFF7ED" stroke="#FDBA74"/>
+  <text x="1195" y="275" font-size="30" font-weight="700" fill="#9A3412" font-family="Droid Sans Fallback, DejaVu Sans, sans-serif">外部系统 / Servers</text>
+  <rect x="1195" y="310" width="280" height="72" rx="18" fill="#FFFFFF" stroke="#FDBA74"/>
+  <text x="1230" y="355" font-size="30" fill="#1E293B" font-family="Droid Sans Fallback, DejaVu Sans, sans-serif">GitHub / Git</text>
+  <rect x="1195" y="398" width="280" height="72" rx="18" fill="#FFFFFF" stroke="#FDBA74"/>
+  <text x="1230" y="443" font-size="30" fill="#1E293B" font-family="Droid Sans Fallback, DejaVu Sans, sans-serif">Files / Databases</text>
+  <rect x="1195" y="486" width="280" height="72" rx="18" fill="#FFFFFF" stroke="#FDBA74"/>
+  <text x="1230" y="531" font-size="30" fill="#1E293B" font-family="Droid Sans Fallback, DejaVu Sans, sans-serif">SaaS / APIs</text>
+  <rect x="1195" y="574" width="280" height="72" rx="18" fill="#FFFFFF" stroke="#FDBA74"/>
+  <text x="1230" y="619" font-size="30" fill="#1E293B" font-family="Droid Sans Fallback, DejaVu Sans, sans-serif">企业内部知识与工作流</text>
+
+  <path d="M 440 455 C 490 455, 510 455, 545 455" stroke="#6366F1" stroke-width="8" fill="none"/>
+  <polygon points="545,455 520,442 520,468" fill="#6366F1"/>
+  <path d="M 1055 455 C 1100 455, 1120 455, 1160 455" stroke="#22C55E" stroke-width="8" fill="none"/>
+  <polygon points="1160,455 1135,442 1135,468" fill="#22C55E"/>
+
+  <rect x="95" y="735" width="1410" height="90" rx="20" fill="#0F172A"/>
+  <text x="130" y="785" font-size="30" font-weight="700" fill="#F8FAFC" font-family="Droid Sans Fallback, DejaVu Sans, sans-serif">关键判断：</text>
+  <text x="300" y="785" font-size="28" fill="#E2E8F0" font-family="Droid Sans Fallback, DejaVu Sans, sans-serif">2026 年的竞争重点，正从“谁家插件多”转向“谁能把开放协议、认证、信任边界与生态采纳一起做成默认基础设施”。</text>
+</svg>
