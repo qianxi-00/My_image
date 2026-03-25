@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#f7f9fc"/>
+  <text x="800" y="80" text-anchor="middle" font-size="40" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#0f172a" font-weight="700">为什么 Agent 工作流会把 LLM 服务推向“异构调度”</text>
+  <text x="800" y="125" text-anchor="middle" font-size="22" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#475569">单次推理优化已经不够，系统需要同时理解任务难度、队列拥塞与模型能力差异</text>
+
+  <rect x="90" y="200" rx="24" ry="24" width="320" height="210" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="250" y="255" text-anchor="middle" font-size="30" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#1d4ed8" font-weight="700">旧范式</text>
+  <text x="250" y="305" text-anchor="middle" font-size="24" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#0f172a">单模型副本 + 请求级排队</text>
+  <text x="250" y="350" text-anchor="middle" font-size="21" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#334155">擅长：提升单次调用吞吐</text>
+  <text x="250" y="385" text-anchor="middle" font-size="21" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#334155">问题：看不见跨阶段依赖</text>
+
+  <rect x="470" y="200" rx="24" ry="24" width="300" height="210" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="620" y="255" text-anchor="middle" font-size="30" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#7c3aed" font-weight="700">Agent 工作流</text>
+  <text x="620" y="305" text-anchor="middle" font-size="24" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#0f172a">多阶段、可分叉、相互依赖</text>
+  <text x="620" y="350" text-anchor="middle" font-size="21" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#334155">同一请求会触发多次 LLM 调用</text>
+  <text x="620" y="385" text-anchor="middle" font-size="21" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#334155">延迟来自整条链路，而非某一次调用</text>
+
+  <rect x="830" y="200" rx="24" ry="24" width="300" height="210" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="980" y="255" text-anchor="middle" font-size="30" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#ea580c" font-weight="700">异构模型池</text>
+  <text x="980" y="305" text-anchor="middle" font-size="24" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#0f172a">小模型快，大模型强</text>
+  <text x="980" y="350" text-anchor="middle" font-size="21" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#334155">简单阶段不必占用最强模型</text>
+  <text x="980" y="385" text-anchor="middle" font-size="21" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#334155">复杂阶段才值得付更高时延</text>
+
+  <rect x="1190" y="200" rx="24" ry="24" width="320" height="210" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="1350" y="255" text-anchor="middle" font-size="30" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#059669" font-weight="700">新目标</text>
+  <text x="1350" y="305" text-anchor="middle" font-size="24" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#0f172a">同时优化“延迟 + 任务成功率”</text>
+  <text x="1350" y="350" text-anchor="middle" font-size="21" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#334155">调度不只看谁最快</text>
+  <text x="1350" y="385" text-anchor="middle" font-size="21" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#334155">而看谁在当前拥塞下最划算</text>
+
+  <line x1="410" y1="305" x2="470" y2="305" stroke="#94a3b8" stroke-width="8" stroke-linecap="round"/>
+  <polygon points="470,305 442,290 442,320" fill="#94a3b8"/>
+  <line x1="770" y1="305" x2="830" y2="305" stroke="#94a3b8" stroke-width="8" stroke-linecap="round"/>
+  <polygon points="830,305 802,290 802,320" fill="#94a3b8"/>
+  <line x1="1130" y1="305" x2="1190" y2="305" stroke="#94a3b8" stroke-width="8" stroke-linecap="round"/>
+  <polygon points="1190,305 1162,290 1162,320" fill="#94a3b8"/>
+
+  <rect x="150" y="510" rx="26" ry="26" width="1300" height="250" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="2"/>
+  <text x="800" y="570" text-anchor="middle" font-size="34" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#0c4a6e" font-weight="700">Chimera 的判断逻辑</text>
+  <text x="800" y="625" text-anchor="middle" font-size="24" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#0f172a">先估计“每个模型做这一步有多大把握”，再估计“当前队列把它拖慢多少”，最后选择</text>
+  <text x="800" y="665" text-anchor="middle" font-size="24" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#0f172a">“在允许的延迟松弛范围内，置信度最高的那个模型”</text>
+  <text x="800" y="720" text-anchor="middle" font-size="22" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#334155">这意味着服务系统第一次把“任务难度、模型能力、实时拥塞”放进同一个调度回路</text>
+</svg>
