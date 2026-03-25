@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="#f7f7fb"/>
+<text x="80" y="90" font-size="42" font-family="Arial, Helvetica, sans-serif" fill="#111">Claude Opus 4.6 的三层升级逻辑</text>
+<rect x="80" y="160" width="420" height="560" rx="24" fill="#fff" stroke="#6b7cff" stroke-width="4"/>
+<text x="120" y="230" font-size="34" font-family="Arial, Helvetica, sans-serif" fill="#243">模型层</text>
+<text x="120" y="300" font-size="26" font-family="Arial, Helvetica, sans-serif" fill="#222">• 更强的代码规划与调试能力</text>
+<text x="120" y="350" font-size="26" font-family="Arial, Helvetica, sans-serif" fill="#222">• 1M 上下文窗口（测试版）</text>
+<text x="120" y="400" font-size="26" font-family="Arial, Helvetica, sans-serif" fill="#222">• 长程任务更稳，信息漂移更少</text>
+<text x="120" y="450" font-size="26" font-family="Arial, Helvetica, sans-serif" fill="#222">• 在多项评测中刷新前沿成绩</text>
+<rect x="590" y="160" width="420" height="560" rx="24" fill="#fff" stroke="#20a070" stroke-width="4"/>
+<text x="630" y="230" font-size="34" font-family="Arial, Helvetica, sans-serif" fill="#243">代理层</text>
+<text x="630" y="300" font-size="26" font-family="Arial, Helvetica, sans-serif" fill="#222">• 自适应思考按任务难度分配推理</text>
+<text x="630" y="350" font-size="26" font-family="Arial, Helvetica, sans-serif" fill="#222">• effort 参数控制速度、成本与深度</text>
+<text x="630" y="400" font-size="26" font-family="Arial, Helvetica, sans-serif" fill="#222">• compaction 支撑长会话与长任务</text>
+<text x="630" y="450" font-size="26" font-family="Arial, Helvetica, sans-serif" fill="#222">• 工具调用与检索成为第一公民</text>
+<rect x="1100" y="160" width="420" height="560" rx="24" fill="#fff" stroke="#ff9f1c" stroke-width="4"/>
+<text x="1140" y="230" font-size="34" font-family="Arial, Helvetica, sans-serif" fill="#243">产品层</text>
+<text x="1140" y="300" font-size="26" font-family="Arial, Helvetica, sans-serif" fill="#222">• Claude Code 支持 agent teams</text>
+<text x="1140" y="350" font-size="26" font-family="Arial, Helvetica, sans-serif" fill="#222">• Excel 与 PowerPoint 能力升级</text>
+<text x="1140" y="400" font-size="26" font-family="Arial, Helvetica, sans-serif" fill="#222">• 从“聊天模型”走向“工作系统”</text>
+<text x="1140" y="450" font-size="26" font-family="Arial, Helvetica, sans-serif" fill="#222">• 企业工作流更容易闭环</text>
+<line x1="500" y1="440" x2="590" y2="440" stroke="#555" stroke-width="6" marker-end="url(#a)"/>
+<line x1="1010" y1="440" x2="1100" y2="440" stroke="#555" stroke-width="6" marker-end="url(#a)"/>
+<defs><marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#555"/></marker></defs>
+<text x="80" y="810" font-size="24" font-family="Arial, Helvetica, sans-serif" fill="#666">示意图：从模型能力，到代理基础设施，再到产品工作流，Anthropic 将 Opus 4.6 包装成一套可直接落地的生产能力。</text>
+</svg>
