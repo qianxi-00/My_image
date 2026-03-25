@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="920" viewBox="0 0 1600 920">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fbfdff"/>
+      <stop offset="100%" stop-color="#eef5ff"/>
+    </linearGradient>
+    <filter id="shadow2" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#36486b" flood-opacity="0.14"/>
+    </filter>
+    <marker id="arrow2" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#53627f"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="920" fill="url(#bg2)"/>
+  <g font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, sans-serif" fill="#1f2f48">
+    <text x="800" y="70" text-anchor="middle" font-size="42" font-weight="700">SAiW 的核心逻辑：把“来源身份”变成嵌入条件，而不是事后猜测</text>
+
+    <rect x="90" y="170" rx="26" ry="26" width="260" height="210" fill="#ffffff" filter="url(#shadow2)"/>
+    <text x="220" y="228" text-anchor="middle" font-size="30" font-weight="700">输入 1</text>
+    <text x="220" y="278" text-anchor="middle" font-size="24">原始图像</text>
+    <rect x="140" y="305" width="160" height="48" rx="12" ry="12" fill="#e7f1ff"/>
+    <text x="220" y="336" text-anchor="middle" font-size="22">待发布内容</text>
+
+    <rect x="90" y="455" rx="26" ry="26" width="260" height="210" fill="#ffffff" filter="url(#shadow2)"/>
+    <text x="220" y="513" text-anchor="middle" font-size="30" font-weight="700">输入 2</text>
+    <text x="220" y="563" text-anchor="middle" font-size="24">来源标识 / 水印 logo</text>
+    <rect x="140" y="590" width="160" height="48" rx="12" ry="12" fill="#eef0ff"/>
+    <text x="220" y="621" text-anchor="middle" font-size="22">平台 / 模型 / 工具</text>
+
+    <rect x="460" y="170" rx="30" ry="30" width="680" height="495" fill="#ffffff" filter="url(#shadow2)"/>
+    <text x="800" y="225" text-anchor="middle" font-size="32" font-weight="700">SAiW 嵌入网络</text>
+    <rect x="510" y="270" rx="18" ry="18" width="250" height="92" fill="#eef7ff"/>
+    <text x="635" y="323" text-anchor="middle" font-size="25" font-weight="700">来源编码器</text>
+    <text x="635" y="353" text-anchor="middle" font-size="20">把 logo / 标识转成向量</text>
+
+    <rect x="835" y="270" rx="18" ry="18" width="255" height="92" fill="#eef7ff"/>
+    <text x="962" y="323" text-anchor="middle" font-size="25" font-weight="700">感知引导模块</text>
+    <text x="962" y="353" text-anchor="middle" font-size="20">优先把扰动藏进纹理区域</text>
+
+    <rect x="540" y="410" rx="20" ry="20" width="520" height="170" fill="#f7f3ff"/>
+    <text x="800" y="466" text-anchor="middle" font-size="28" font-weight="700">FiLM 调制的 U-Net + 混合 Transformer</text>
+    <text x="800" y="512" text-anchor="middle" font-size="22">来源身份不再只是“附加比特”，而是直接参与每层特征调制</text>
+    <text x="800" y="548" text-anchor="middle" font-size="22">结果：同一套模型能学到不同来源的可区分水印模式</text>
+
+    <rect x="1245" y="255" rx="26" ry="26" width="270" height="180" fill="#ffffff" filter="url(#shadow2)"/>
+    <text x="1380" y="315" text-anchor="middle" font-size="30" font-weight="700">输出</text>
+    <text x="1380" y="365" text-anchor="middle" font-size="24">带不可见水印的图像</text>
+    <rect x="1298" y="390" width="164" height="26" rx="10" ry="10" fill="#dff6ea"/>
+
+    <rect x="1220" y="520" rx="30" ry="30" width="310" height="220" fill="#ffffff" filter="url(#shadow2)"/>
+    <text x="1375" y="578" text-anchor="middle" font-size="30" font-weight="700">取证解码器</text>
+    <text x="1375" y="624" text-anchor="middle" font-size="22">同时做两件事：</text>
+    <text x="1375" y="660" text-anchor="middle" font-size="22">1. 恢复水印</text>
+    <text x="1375" y="695" text-anchor="middle" font-size="22">2. 判断具体来源</text>
+
+    <line x1="350" y1="275" x2="510" y2="316" stroke="#53627f" stroke-width="5" marker-end="url(#arrow2)"/>
+    <line x1="350" y1="560" x2="510" y2="316" stroke="#53627f" stroke-width="5" marker-end="url(#arrow2)"/>
+    <line x1="760" y1="316" x2="835" y2="316" stroke="#53627f" stroke-width="5" marker-end="url(#arrow2)"/>
+    <line x1="962" y1="362" x2="962" y2="410" stroke="#53627f" stroke-width="5" marker-end="url(#arrow2)"/>
+    <line x1="1060" y1="495" x2="1245" y2="345" stroke="#53627f" stroke-width="5" marker-end="url(#arrow2)"/>
+    <line x1="1140" y1="495" x2="1220" y2="630" stroke="#53627f" stroke-width="5" marker-end="url(#arrow2)"/>
+
+    <rect x="200" y="782" rx="20" ry="20" width="1200" height="82" fill="#22314f"/>
+    <text x="800" y="832" text-anchor="middle" font-size="24" fill="#ffffff">关键转变：从“事后判断像不像 AI”转向“在内容产生那一刻就写入可验证、可归因的来源信号”</text>
+  </g>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f9fcff"/>
+      <stop offset="100%" stop-color="#eef6ff"/>
+    </linearGradient>
+    <filter id="shadow3" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#31425f" flood-opacity="0.13"/>
+    </filter>
+    <marker id="arrow3" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#5a6a84"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg3)"/>
+  <g font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, sans-serif" fill="#1f2f48">
+    <text x="800" y="78" text-anchor="middle" font-size="42" font-weight="700">把 SAiW 放进真实业务后的闭环</text>
+    <text x="800" y="120" text-anchor="middle" font-size="22" fill="#5d6d86">它不是孤立论文技巧，而是可接在生成平台、审核系统、媒体工作流和平台治理链路中的一环</text>
+
+    <rect x="80" y="250" rx="26" ry="26" width="250" height="300" fill="#ffffff" filter="url(#shadow3)"/>
+    <text x="205" y="325" text-anchor="middle" font-size="30" font-weight="700">1. 生成端</text>
+    <text x="205" y="380" text-anchor="middle" font-size="22">模型提供方</text>
+    <text x="205" y="414" text-anchor="middle" font-size="22">创作工具</text>
+    <text x="205" y="448" text-anchor="middle" font-size="22">编辑软件</text>
+    <text x="205" y="505" text-anchor="middle" font-size="22">写入来源身份</text>
+
+    <rect x="390" y="210" rx="26" ry="26" width="300" height="380" fill="#ffffff" filter="url(#shadow3)"/>
+    <text x="540" y="280" text-anchor="middle" font-size="30" font-weight="700">2. 双轨证据</text>
+    <text x="540" y="340" text-anchor="middle" font-size="22">轨道 A：C2PA 元数据</text>
+    <text x="540" y="378" text-anchor="middle" font-size="22">记录工具、编辑历史、签名</text>
+    <line x1="470" y1="410" x2="610" y2="410" stroke="#d5ddeb" stroke-width="3"/>
+    <text x="540" y="462" text-anchor="middle" font-size="22">轨道 B：内容内嵌水印</text>
+    <text x="540" y="500" text-anchor="middle" font-size="22">即使转码、截图、二次压缩</text>
+    <text x="540" y="534" text-anchor="middle" font-size="22">仍尽量保留判别信号</text>
+
+    <rect x="760" y="250" rx="26" ry="26" width="250" height="300" fill="#ffffff" filter="url(#shadow3)"/>
+    <text x="885" y="325" text-anchor="middle" font-size="30" font-weight="700">3. 平台侧</text>
+    <text x="885" y="380" text-anchor="middle" font-size="22">上传校验</text>
+    <text x="885" y="414" text-anchor="middle" font-size="22">风险分层</text>
+    <text x="885" y="448" text-anchor="middle" font-size="22">保留凭证链</text>
+    <text x="885" y="505" text-anchor="middle" font-size="22">触发治理规则</text>
+
+    <rect x="1070" y="210" rx="26" ry="26" width="300" height="380" fill="#ffffff" filter="url(#shadow3)"/>
+    <text x="1220" y="280" text-anchor="middle" font-size="30" font-weight="700">4. 验证与取证</text>
+    <text x="1220" y="340" text-anchor="middle" font-size="22">媒体核查</text>
+    <text x="1220" y="378" text-anchor="middle" font-size="22">平台复核</text>
+    <text x="1220" y="416" text-anchor="middle" font-size="22">法务取证</text>
+    <text x="1220" y="454" text-anchor="middle" font-size="22">争议责任划分</text>
+    <text x="1220" y="520" text-anchor="middle" font-size="22">回答三个问题：</text>
+    <text x="1220" y="556" text-anchor="middle" font-size="22">它来自哪一类工具？</text>
+    <text x="1220" y="588" text-anchor="middle" font-size="22">它是否被改动？</text>
+
+    <rect x="1430" y="250" rx="26" ry="26" width="120" height="300" fill="#20314c"/>
+    <text x="1490" y="360" text-anchor="middle" font-size="30" font-weight="700" fill="#ffffff">5.</text>
+    <text x="1490" y="410" text-anchor="middle" font-size="24" fill="#ffffff">用户</text>
+    <text x="1490" y="446" text-anchor="middle" font-size="24" fill="#ffffff">看到</text>
+    <text x="1490" y="482" text-anchor="middle" font-size="24" fill="#ffffff">更清楚</text>
+
+    <line x1="330" y1="400" x2="390" y2="400" stroke="#5a6a84" stroke-width="5" marker-end="url(#arrow3)"/>
+    <line x1="690" y1="400" x2="760" y2="400" stroke="#5a6a84" stroke-width="5" marker-end="url(#arrow3)"/>
+    <line x1="1010" y1="400" x2="1070" y2="400" stroke="#5a6a84" stroke-width="5" marker-end="url(#arrow3)"/>
+    <line x1="1370" y1="400" x2="1430" y2="400" stroke="#5a6a84" stroke-width="5" marker-end="url(#arrow3)"/>
+
+    <rect x="235" y="700" rx="22" ry="22" width="1130" height="100" fill="#eef2fb" stroke="#cad5ea" stroke-width="2"/>
+    <text x="800" y="748" text-anchor="middle" font-size="24" font-weight="700">部署启示</text>
+    <text x="800" y="786" text-anchor="middle" font-size="22">不要把 SAiW 看成 C2PA 的替代品；真正有价值的，是让“可签名的链路证明”和“可留在内容里的来源信号”互相补位</text>
+  </g>
+</svg>

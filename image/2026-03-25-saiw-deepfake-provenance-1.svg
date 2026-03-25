@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f6fbff"/>
+      <stop offset="100%" stop-color="#eef3ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#3b4b7a" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#5b6b92"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, sans-serif" fill="#20304a">
+    <text x="800" y="78" text-anchor="middle" font-size="42" font-weight="700">内容真实性技术栈：为什么单靠“检测器”已经不够</text>
+    <text x="800" y="122" text-anchor="middle" font-size="22" fill="#5c6b85">2026 年的可行路线，不是押注某一种万能方案，而是把元数据、生成时水印和源可归因标记组合成闭环</text>
+
+    <rect x="90" y="180" rx="28" ry="28" width="430" height="560" fill="#ffffff" filter="url(#shadow)"/>
+    <rect x="130" y="220" rx="16" ry="16" width="350" height="92" fill="#e8f2ff"/>
+    <text x="305" y="278" text-anchor="middle" font-size="30" font-weight="700">第一层：C2PA / 内容凭证</text>
+    <text x="145" y="360" font-size="24" font-weight="700">解决什么</text>
+    <text x="145" y="398" font-size="22">记录“谁创建、谁编辑、用过什么工具、</text>
+    <text x="145" y="430" font-size="22">经历过哪些改动”的签名化元数据链路</text>
+    <text x="145" y="490" font-size="24" font-weight="700">优势</text>
+    <text x="145" y="528" font-size="22">• 加密签名，误报率极低</text>
+    <text x="145" y="560" font-size="22">• 适合平台、相机、编辑器统一接入</text>
+    <text x="145" y="592" font-size="22">• 对“编辑历史”表达清晰</text>
+    <text x="145" y="652" font-size="24" font-weight="700">短板</text>
+    <text x="145" y="690" font-size="22">• 截图、转码、重压缩后可能被剥离</text>
+    <text x="145" y="722" font-size="22">• 需要平台与工具链共同保留元数据</text>
+
+    <rect x="585" y="180" rx="28" ry="28" width="430" height="560" fill="#ffffff" filter="url(#shadow)"/>
+    <rect x="625" y="220" rx="16" ry="16" width="350" height="92" fill="#f1ecff"/>
+    <text x="800" y="278" text-anchor="middle" font-size="30" font-weight="700">第二层：生成阶段水印</text>
+    <text x="640" y="360" font-size="24" font-weight="700">代表思路</text>
+    <text x="640" y="398" font-size="22">SynthID、Tree-Ring 这类“在生成过程中</text>
+    <text x="640" y="430" font-size="22">直接嵌入不可见信号”的方案</text>
+    <text x="640" y="490" font-size="24" font-weight="700">优势</text>
+    <text x="640" y="528" font-size="22">• 信号写进内容本体，抗部分裁剪/压缩</text>
+    <text x="640" y="560" font-size="22">• 能把“是否由某类模型生成”前置标记</text>
+    <text x="640" y="592" font-size="22">• 比纯检测更不依赖事后泛化</text>
+    <text x="640" y="652" font-size="24" font-weight="700">短板</text>
+    <text x="640" y="690" font-size="22">• 常常偏向“有没有 AI 痕迹”</text>
+    <text x="640" y="722" font-size="22">• 很难天然表达更细粒度的来源归因</text>
+
+    <rect x="1080" y="180" rx="28" ry="28" width="430" height="560" fill="#ffffff" filter="url(#shadow)"/>
+    <rect x="1120" y="220" rx="16" ry="16" width="350" height="92" fill="#e9fff6"/>
+    <text x="1295" y="278" text-anchor="middle" font-size="30" font-weight="700">第三层：源可归因水印</text>
+    <text x="1135" y="360" font-size="24" font-weight="700">代表思路</text>
+    <text x="1135" y="398" font-size="22">SAiW 把“来源身份”当作嵌入条件，</text>
+    <text x="1135" y="430" font-size="22">不只判断真假，还尝试回答“来自谁”</text>
+    <text x="1135" y="490" font-size="24" font-weight="700">优势</text>
+    <text x="1135" y="528" font-size="22">• 同时做水印恢复与来源分类</text>
+    <text x="1135" y="560" font-size="22">• 更适合平台治理、模型责任划分</text>
+    <text x="1135" y="592" font-size="22">• 给取证链路增加“生成源”这一维</text>
+    <text x="1135" y="652" font-size="24" font-weight="700">短板</text>
+    <text x="1135" y="690" font-size="22">• 仍需可信生成入口参与</text>
+    <text x="1135" y="722" font-size="22">• 当前验证范围主要集中在图像深伪场景</text>
+
+    <line x1="520" y1="460" x2="585" y2="460" stroke="#5b6b92" stroke-width="5" marker-end="url(#arrow)"/>
+    <line x1="1015" y1="460" x2="1080" y2="460" stroke="#5b6b92" stroke-width="5" marker-end="url(#arrow)"/>
+
+    <rect x="360" y="790" rx="18" ry="18" width="880" height="62" fill="#20304a"/>
+    <text x="800" y="829" text-anchor="middle" font-size="24" fill="#ffffff">真正可落地的体系 = 证据链元数据 + 内容内嵌标记 + 平台验证与治理策略</text>
+  </g>
+</svg>
