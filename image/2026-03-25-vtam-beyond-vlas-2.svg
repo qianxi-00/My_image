@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#fbfcfe"/>
+  <style>
+    .title{font:700 42px 'Noto Sans CJK SC','Microsoft YaHei','PingFang SC',sans-serif;fill:#102a43}
+    .subtitle{font:400 20px 'Noto Sans CJK SC','Microsoft YaHei','PingFang SC',sans-serif;fill:#486581}
+    .label{font:700 24px 'Noto Sans CJK SC','Microsoft YaHei','PingFang SC',sans-serif;fill:#102a43}
+    .text{font:400 20px 'Noto Sans CJK SC','Microsoft YaHei','PingFang SC',sans-serif;fill:#243b53}
+    .small{font:400 18px 'Noto Sans CJK SC','Microsoft YaHei','PingFang SC',sans-serif;fill:#52606d}
+    .value{font:700 28px 'Noto Sans CJK SC','Microsoft YaHei','PingFang SC',sans-serif;fill:#0b7285}
+  </style>
+  <text x="70" y="80" class="title">VTAM 的训练与推理闭环：触觉不是外挂，而是世界模型的第二只眼</text>
+  <text x="70" y="118" class="subtitle">文章配图建议：用一张图讲清 VTAM 为什么比“视觉策略 + 触觉拼接”更像真正的多模态机器人基础模型。</text>
+
+  <g transform="translate(70,180)">
+    <rect x="0" y="0" rx="26" ry="26" width="260" height="420" fill="#e9f2ff" stroke="#bcd2ff" stroke-width="3"/>
+    <text x="30" y="60" class="label">输入层</text>
+    <text x="30" y="118" class="text">多视角相机视频</text>
+    <text x="30" y="168" class="text">触觉流（GelSight）</text>
+    <text x="30" y="218" class="text">机器人状态 / 动作上下文</text>
+    <text x="30" y="292" class="small">问题：接触一发生，真正决定成败的</text>
+    <text x="30" y="324" class="small">往往不是像素，而是摩擦、压力、滑移</text>
+    <text x="30" y="356" class="small">和材料变形。</text>
+  </g>
+
+  <g transform="translate(410,180)">
+    <rect x="0" y="0" rx="26" ry="26" width="310" height="420" fill="#eefcf6" stroke="#b7ebd1" stroke-width="3"/>
+    <text x="30" y="60" class="label">阶段一：联合世界建模</text>
+    <text x="30" y="118" class="text">共享视觉-触觉潜空间</text>
+    <text x="30" y="168" class="text">学习交互动态的时间一致性</text>
+    <text x="30" y="218" class="text">让模型先会“预测接触会发生什么”</text>
+    <text x="30" y="292" class="small">这一步相当于先建立一个会看、会摸、</text>
+    <text x="30" y="324" class="small">还会联想未来状态变化的世界模型。</text>
+  </g>
+
+  <g transform="translate(800,180)">
+    <rect x="0" y="0" rx="26" ry="26" width="320" height="420" fill="#f3efff" stroke="#d0c2ff" stroke-width="3"/>
+    <text x="30" y="60" class="label">阶段二：动作-状态-力联合扩散头</text>
+    <text x="30" y="118" class="text">输出动作</text>
+    <text x="30" y="168" class="text">同时预测状态与“虚拟力代理”</text>
+    <text x="30" y="218" class="text">用触觉相关目标稳住训练方向</text>
+    <text x="30" y="292" class="small">关键不是多预测一个量，</text>
+    <text x="30" y="324" class="small">而是把“受力敏感性”写进优化目标。</text>
+  </g>
+
+  <g transform="translate(1200,180)">
+    <rect x="0" y="0" rx="26" ry="26" width="320" height="420" fill="#fff1f4" stroke="#ffc2d1" stroke-width="3"/>
+    <text x="30" y="60" class="label">真实任务结果</text>
+    <text x="30" y="118" class="text">薯片抓取放置：更需要轻柔控力</text>
+    <text x="30" y="168" class="text">黄瓜削皮：更需要连续接触判断</text>
+    <text x="30" y="218" class="text">白板擦拭：更需要边界与摩擦控制</text>
+    <text x="30" y="292" class="value">平均成功率 90%</text>
+    <text x="30" y="332" class="small">文中给出的对比里，VTAM 显著高于</text>
+    <text x="30" y="364" class="small">Genie Envisioner、视觉版 pi0.5</text>
+    <text x="30" y="396" class="small">以及简单拼接触觉的变体。</text>
+  </g>
+
+  <path d="M330 390 L400 390" stroke="#9fb3c8" stroke-width="8" stroke-linecap="round"/>
+  <polygon points="400,390 378,378 378,402" fill="#9fb3c8"/>
+  <path d="M730 390 L790 390" stroke="#9fb3c8" stroke-width="8" stroke-linecap="round"/>
+  <polygon points="790,390 768,378 768,402" fill="#9fb3c8"/>
+  <path d="M1130 390 L1190 390" stroke="#9fb3c8" stroke-width="8" stroke-linecap="round"/>
+  <polygon points="1190,390 1168,378 1168,402" fill="#9fb3c8"/>
+
+  <g transform="translate(100,670)">
+    <rect x="0" y="0" rx="18" ry="18" width="1380" height="150" fill="#ffffff" stroke="#d9e2ec" stroke-width="3"/>
+    <text x="28" y="46" class="label">读图结论</text>
+    <text x="28" y="84" class="text">1. 触觉模态解决的是“视觉看不见但动作必须知道”的信息缺口。</text>
+    <text x="28" y="116" class="text">2. VTAM 真正领先之处，是把触觉写进世界模型与控制目标，而不是简单把传感器并联上去。</text>
+    <text x="28" y="148" class="text">3. 这意味着未来的机器人基础模型，很可能会从“多模态理解”进一步进化为“多物理量理解”。</text>
+  </g>
+</svg>

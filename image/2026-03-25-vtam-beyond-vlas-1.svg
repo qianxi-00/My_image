@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#f7f9fc"/>
+  <style>
+    .title{font:700 44px 'Noto Sans CJK SC','Microsoft YaHei','PingFang SC',sans-serif;fill:#102a43}
+    .subtitle{font:400 20px 'Noto Sans CJK SC','Microsoft YaHei','PingFang SC',sans-serif;fill:#486581}
+    .boxTitle{font:700 28px 'Noto Sans CJK SC','Microsoft YaHei','PingFang SC',sans-serif;fill:#102a43}
+    .boxText{font:400 20px 'Noto Sans CJK SC','Microsoft YaHei','PingFang SC',sans-serif;fill:#243b53}
+    .tag{font:700 18px 'Noto Sans CJK SC','Microsoft YaHei','PingFang SC',sans-serif;fill:white}
+    .foot{font:400 18px 'Noto Sans CJK SC','Microsoft YaHei','PingFang SC',sans-serif;fill:#52606d}
+  </style>
+
+  <text x="80" y="85" class="title">机器人基础模型的感知演进：为什么 VTAM 代表“从会看”到“会接触”的拐点</text>
+  <text x="80" y="125" class="subtitle">同样是基础模型，差别不只在参数量，而在模型有没有办法读懂“接触、摩擦、受力、滑动”这些视觉看不清的状态。</text>
+
+  <g transform="translate(80,180)">
+    <rect x="0" y="0" rx="26" ry="26" width="320" height="520" fill="#ffffff" stroke="#d9e2ec" stroke-width="3"/>
+    <rect x="24" y="24" rx="14" ry="14" width="120" height="42" fill="#3e7bfa"/>
+    <text x="84" y="52" text-anchor="middle" class="tag">第一阶段</text>
+    <text x="30" y="110" class="boxTitle">RT-2</text>
+    <text x="30" y="150" class="boxText">核心能力：把视觉语言模型</text>
+    <text x="30" y="182" class="boxText">直接接到机器人动作输出。</text>
+    <text x="30" y="230" class="boxText">优势：</text>
+    <text x="52" y="264" class="boxText">• 继承互联网语义知识</text>
+    <text x="52" y="296" class="boxText">• 能做物体识别与指令泛化</text>
+    <text x="52" y="328" class="boxText">• 让 VLA 变成主流路线</text>
+    <text x="30" y="382" class="boxText">短板：</text>
+    <text x="52" y="416" class="boxText">• 对接触状态几乎失明</text>
+    <text x="52" y="448" class="boxText">• 视觉里看不出的力学变化</text>
+    <text x="52" y="480" class="boxText">  无法稳定感知</text>
+  </g>
+
+  <g transform="translate(450,180)">
+    <rect x="0" y="0" rx="26" ry="26" width="320" height="520" fill="#ffffff" stroke="#d9e2ec" stroke-width="3"/>
+    <rect x="24" y="24" rx="14" ry="14" width="120" height="42" fill="#00a6a6"/>
+    <text x="84" y="52" text-anchor="middle" class="tag">第二阶段</text>
+    <text x="30" y="110" class="boxTitle">π0 / 通用机器人策略</text>
+    <text x="30" y="150" class="boxText">核心能力：更大规模跨机体训练，</text>
+    <text x="30" y="182" class="boxText">把连续动作输出做得更灵活。</text>
+    <text x="30" y="230" class="boxText">优势：</text>
+    <text x="52" y="264" class="boxText">• 从“会做任务”走向“会迁移”</text>
+    <text x="52" y="296" class="boxText">• 适合多任务、多机器人数据</text>
+    <text x="52" y="328" class="boxText">• 强化真实世界操作泛化</text>
+    <text x="30" y="382" class="boxText">短板：</text>
+    <text x="52" y="416" class="boxText">• 仍以视觉为主导模态</text>
+    <text x="52" y="448" class="boxText">• 对细颗粒受力与摩擦反馈</text>
+    <text x="52" y="480" class="boxText">  仍然缺少原生建模</text>
+  </g>
+
+  <g transform="translate(820,180)">
+    <rect x="0" y="0" rx="26" ry="26" width="320" height="520" fill="#ffffff" stroke="#d9e2ec" stroke-width="3"/>
+    <rect x="24" y="24" rx="14" ry="14" width="120" height="42" fill="#7a5af8"/>
+    <text x="84" y="52" text-anchor="middle" class="tag">第三阶段</text>
+    <text x="30" y="110" class="boxTitle">UVA / 视频-动作统一模型</text>
+    <text x="30" y="150" class="boxText">核心能力：把视频预测与动作预测</text>
+    <text x="30" y="182" class="boxText">放到同一潜变量空间里学习。</text>
+    <text x="30" y="230" class="boxText">优势：</text>
+    <text x="52" y="264" class="boxText">• 更像“世界模型”思路</text>
+    <text x="52" y="296" class="boxText">• 能兼顾策略、前向与逆向动力学</text>
+    <text x="52" y="328" class="boxText">• 推理时可跳过视频生成提速</text>
+    <text x="30" y="382" class="boxText">短板：</text>
+    <text x="52" y="416" class="boxText">• 世界模型依旧主要看视频</text>
+    <text x="52" y="448" class="boxText">• 接触发生时，最关键的信息</text>
+    <text x="52" y="480" class="boxText">  仍有可能被视觉漏掉</text>
+  </g>
+
+  <g transform="translate(1190,180)">
+    <rect x="0" y="0" rx="26" ry="26" width="320" height="520" fill="#ffffff" stroke="#d9e2ec" stroke-width="3"/>
+    <rect x="24" y="24" rx="14" ry="14" width="120" height="42" fill="#ef4e7b"/>
+    <text x="84" y="52" text-anchor="middle" class="tag">第四阶段</text>
+    <text x="30" y="110" class="boxTitle">VTAM</text>
+    <text x="30" y="150" class="boxText">核心能力：把触觉变成世界模型的</text>
+    <text x="30" y="182" class="boxText">原生输入，而不是事后补丁。</text>
+    <text x="30" y="230" class="boxText">突破：</text>
+    <text x="52" y="264" class="boxText">• 视觉 + 触觉 + 动作联合建模</text>
+    <text x="52" y="296" class="boxText">• 面向高接触操作任务设计</text>
+    <text x="52" y="328" class="boxText">• 用“虚拟力代理”稳定训练</text>
+    <text x="30" y="382" class="boxText">意义：</text>
+    <text x="52" y="416" class="boxText">• 让模型不只会“看起来对”</text>
+    <text x="52" y="448" class="boxText">• 更重要的是“摸起来也对”</text>
+    <text x="52" y="480" class="boxText">• 这是物理智能的重要分水岭</text>
+  </g>
+
+  <path d="M410 440 L440 440" stroke="#9fb3c8" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="440,440 422,430 422,450" fill="#9fb3c8"/>
+  <path d="M780 440 L810 440" stroke="#9fb3c8" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="810,440 792,430 792,450" fill="#9fb3c8"/>
+  <path d="M1150 440 L1180 440" stroke="#9fb3c8" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="1180,440 1162,430 1162,450" fill="#9fb3c8"/>
+
+  <text x="80" y="790" class="foot">关键信号：当任务进入“抓住却不能捏碎、擦到却不能越界、剥开却不能断裂”这些阶段时，视觉主导模型会迅速暴露上限。</text>
+  <text x="80" y="825" class="foot">VTAM 的价值，不只是多了一种传感器，而是把“接触信息”升级成机器人基础模型的第一性输入。</text>
+</svg>
