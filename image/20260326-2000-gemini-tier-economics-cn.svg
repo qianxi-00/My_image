@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980">
+  <rect width="1600" height="980" fill="#f8fafc"/>
+  <text x="800" y="70" text-anchor="middle" font-size="34" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#102a43" font-weight="700">Gemini 3 系列真正的变化：不是一颗更强模型，而是三层推理体系</text>
+  <text x="800" y="108" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#486581">Google 正在把“最强推理、复杂通用、高频低成本”拆到不同层，各自服务不同工作流</text>
+
+  <rect x="240" y="160" rx="28" ry="28" width="1120" height="170" fill="#d9e2ec" stroke="#bcccdc" stroke-width="2"/>
+  <text x="800" y="220" text-anchor="middle" font-size="30" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#102a43" font-weight="700">Gemini 3 Deep Think</text>
+  <text x="800" y="260" text-anchor="middle" font-size="19" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">适合科学、研究、工程等高难度问题：数据混乱、解法不唯一、需要长链判断</text>
+  <text x="800" y="295" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">角色：少量高价值任务的“最强推理层” —— 不是拿来跑海量并发，而是拿来解决最难问题</text>
+
+  <rect x="220" y="410" rx="28" ry="28" width="1160" height="180" fill="#c3ddfd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="800" y="470" text-anchor="middle" font-size="30" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#102a43" font-weight="700">Gemini 3.1 Pro</text>
+  <text x="800" y="510" text-anchor="middle" font-size="19" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">适合复杂通用问题：跨文档综合、深上下文计划、可视化解释、企业级高可靠交付</text>
+  <text x="800" y="545" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">角色：企业和开发者的“复杂任务基线层” —— 比普通模型更深，但比 Deep Think 更适合大规模使用</text>
+
+  <rect x="200" y="670" rx="28" ry="28" width="1200" height="180" fill="#e7f7e8" stroke="#7fb069" stroke-width="2"/>
+  <text x="800" y="730" text-anchor="middle" font-size="30" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#102a43" font-weight="700">Gemini 3.1 Flash-Lite</text>
+  <text x="800" y="770" text-anchor="middle" font-size="19" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">适合翻译、审核、批量分类、界面生成、模拟生成等高频任务：更快、更便宜、仍保留可控 thinking</text>
+  <text x="800" y="805" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">角色：高吞吐“执行层” —— 它的重要性不在绝对最强，而在于让 AI 系统可以真正按量跑起来</text>
+
+  <line x1="800" y1="330" x2="800" y2="410" stroke="#486581" stroke-width="6"/>
+  <polygon points="800,410 788,388 812,388" fill="#486581"/>
+  <line x1="800" y1="590" x2="800" y2="670" stroke="#486581" stroke-width="6"/>
+  <polygon points="800,670 788,648 812,648" fill="#486581"/>
+
+  <rect x="180" y="890" rx="18" ry="18" width="1240" height="52" fill="#fff" stroke="#d9e2ec" stroke-width="2"/>
+  <text x="800" y="924" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">核心信号：Google 不再把“更强模型”当作单点升级，而是在公开把推理深度、复杂度与成本做成分层架构</text>
+</svg>
