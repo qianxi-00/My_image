@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#F7F9FC"/>
+  <rect x="60" y="50" width="1480" height="800" rx="28" fill="#FFFFFF" stroke="#D9E2F1" stroke-width="3"/>
+  <text x="100" y="125" font-size="42" font-weight="700" fill="#15233B" font-family="Microsoft YaHei, PingFang SC, sans-serif">Agent 框架从“碎片并存”走向“统一运行时”</text>
+  <text x="100" y="170" font-size="22" fill="#4E5B73" font-family="Microsoft YaHei, PingFang SC, sans-serif">Microsoft Agent Framework 到 RC 的真正信号：不是又多一个框架，而是把旧栈收口成一个可迁移、可编排、可观测的统一基础层</text>
+
+  <rect x="110" y="240" width="560" height="500" rx="24" fill="#FFF5F5" stroke="#F3B3B3" stroke-width="3"/>
+  <text x="150" y="295" font-size="34" font-weight="700" fill="#9D1C1C" font-family="Microsoft YaHei, PingFang SC, sans-serif">旧格局：功能分散，心智割裂</text>
+
+  <rect x="150" y="340" width="210" height="140" rx="18" fill="#FFFFFF" stroke="#E57E7E" stroke-width="3"/>
+  <text x="185" y="392" font-size="30" font-weight="700" fill="#8C2020" font-family="Microsoft YaHei, PingFang SC, sans-serif">Semantic</text>
+  <text x="205" y="430" font-size="30" font-weight="700" fill="#8C2020" font-family="Microsoft YaHei, PingFang SC, sans-serif">Kernel</text>
+  <text x="178" y="462" font-size="18" fill="#6B7280" font-family="Microsoft YaHei, PingFang SC, sans-serif">偏企业能力、内存、插件、</text>
+  <text x="195" y="488" font-size="18" fill="#6B7280" font-family="Microsoft YaHei, PingFang SC, sans-serif">类型安全与生态集成</text>
+
+  <rect x="410" y="340" width="210" height="140" rx="18" fill="#FFFFFF" stroke="#E57E7E" stroke-width="3"/>
+  <text x="474" y="406" font-size="34" font-weight="700" fill="#8C2020" font-family="Microsoft YaHei, PingFang SC, sans-serif">AutoGen</text>
+  <text x="445" y="462" font-size="18" fill="#6B7280" font-family="Microsoft YaHei, PingFang SC, sans-serif">偏多代理编排、研究原型、</text>
+  <text x="455" y="488" font-size="18" fill="#6B7280" font-family="Microsoft YaHei, PingFang SC, sans-serif">团队协作与事件驱动</text>
+
+  <rect x="150" y="540" width="470" height="150" rx="18" fill="#FFFFFF" stroke="#E57E7E" stroke-dasharray="10 8" stroke-width="3"/>
+  <text x="185" y="590" font-size="28" font-weight="700" fill="#8C2020" font-family="Microsoft YaHei, PingFang SC, sans-serif">团队常见痛点</text>
+  <text x="185" y="630" font-size="20" fill="#4B5563" font-family="Microsoft YaHei, PingFang SC, sans-serif">• 单代理、多代理、工作流、会话状态分属不同心智模型</text>
+  <text x="185" y="664" font-size="20" fill="#4B5563" font-family="Microsoft YaHei, PingFang SC, sans-serif">• Python / .NET 体验不统一，迁移与治理成本高</text>
+  <text x="185" y="698" font-size="20" fill="#4B5563" font-family="Microsoft YaHei, PingFang SC, sans-serif">• 生产能力常靠额外胶水代码补齐</text>
+
+  <g>
+    <line x1="720" y1="490" x2="860" y2="490" stroke="#7C3AED" stroke-width="10" stroke-linecap="round"/>
+    <polygon points="860,490 825,470 825,510" fill="#7C3AED"/>
+    <text x="710" y="445" font-size="26" font-weight="700" fill="#5B21B6" font-family="Microsoft YaHei, PingFang SC, sans-serif">收口 / 迁移 / 统一编排</text>
+  </g>
+
+  <rect x="920" y="240" width="560" height="500" rx="24" fill="#F3FAF7" stroke="#97D5B6" stroke-width="3"/>
+  <text x="960" y="295" font-size="34" font-weight="700" fill="#0F6B42" font-family="Microsoft YaHei, PingFang SC, sans-serif">新格局：统一运行时与工作流底座</text>
+
+  <rect x="980" y="340" width="440" height="110" rx="18" fill="#FFFFFF" stroke="#59B487" stroke-width="3"/>
+  <text x="1040" y="385" font-size="34" font-weight="700" fill="#0F6B42" font-family="Microsoft YaHei, PingFang SC, sans-serif">Microsoft Agent Framework</text>
+  <text x="1055" y="422" font-size="20" fill="#4B5563" font-family="Microsoft YaHei, PingFang SC, sans-serif">同一套抽象承接 Agent、会话、工具、工作流与托管能力</text>
+
+  <rect x="980" y="485" width="200" height="84" rx="16" fill="#E9F7EF" stroke="#7DCEA5" stroke-width="2"/>
+  <text x="1033" y="536" font-size="30" font-weight="700" fill="#136A43" font-family="Microsoft YaHei, PingFang SC, sans-serif">Python</text>
+
+  <rect x="1220" y="485" width="200" height="84" rx="16" fill="#E9F7EF" stroke="#7DCEA5" stroke-width="2"/>
+  <text x="1290" y="536" font-size="30" font-weight="700" fill="#136A43" font-family="Microsoft YaHei, PingFang SC, sans-serif">.NET</text>
+
+  <rect x="980" y="600" width="440" height="120" rx="18" fill="#FFFFFF" stroke="#59B487" stroke-dasharray="10 8" stroke-width="3"/>
+  <text x="1015" y="646" font-size="27" font-weight="700" fill="#0F6B42" font-family="Microsoft YaHei, PingFang SC, sans-serif">统一收益</text>
+  <text x="1015" y="682" font-size="20" fill="#4B5563" font-family="Microsoft YaHei, PingFang SC, sans-serif">• 图工作流、Checkpoint、人机接管、可观测性进入同一栈</text>
+  <text x="1015" y="714" font-size="20" fill="#4B5563" font-family="Microsoft YaHei, PingFang SC, sans-serif">• 迁移路径明确：从 Semantic Kernel 与 AutoGen 收口</text>
+
+  <text x="100" y="810" font-size="22" fill="#52607A" font-family="Microsoft YaHei, PingFang SC, sans-serif">结论：框架竞争的焦点正在从“再造一个 Agent SDK”转向“谁能把状态、工具、工作流与协议层做成统一底座”。</text>
+</svg>

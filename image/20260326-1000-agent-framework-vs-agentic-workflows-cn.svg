@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#F8FAFD"/>
+  <rect x="55" y="50" width="1490" height="800" rx="28" fill="#FFFFFF" stroke="#DCE6F5" stroke-width="3"/>
+  <text x="95" y="120" font-size="42" font-weight="700" fill="#18283F" font-family="Microsoft YaHei, PingFang SC, sans-serif">2026 年 Agent 运行时竞争：统一框架 vs 仓库自动化工作流</text>
+  <text x="95" y="165" font-size="22" fill="#52607A" font-family="Microsoft YaHei, PingFang SC, sans-serif">同一轮趋势的两种落点：一边在统一开发底座，一边在把编码代理嵌进持续交付与仓库运维</text>
+
+  <rect x="105" y="235" width="630" height="530" rx="24" fill="#F3F8FF" stroke="#8EB8FF" stroke-width="3"/>
+  <text x="145" y="292" font-size="34" font-weight="700" fill="#1D4ED8" font-family="Microsoft YaHei, PingFang SC, sans-serif">Microsoft Agent Framework</text>
+  <text x="145" y="332" font-size="22" fill="#4B5563" font-family="Microsoft YaHei, PingFang SC, sans-serif">目标：把 Agent、会话、工具、工作流、协议支持统一为开发底座</text>
+
+  <rect x="145" y="375" width="550" height="120" rx="18" fill="#FFFFFF" stroke="#A9C8FF" stroke-width="2"/>
+  <text x="175" y="420" font-size="26" font-weight="700" fill="#1E40AF" font-family="Microsoft YaHei, PingFang SC, sans-serif">关键能力</text>
+  <text x="175" y="455" font-size="20" fill="#4B5563" font-family="Microsoft YaHei, PingFang SC, sans-serif">• Graph-based workflows、checkpoint、human-in-the-loop</text>
+  <text x="175" y="487" font-size="20" fill="#4B5563" font-family="Microsoft YaHei, PingFang SC, sans-serif">• Python / .NET 统一编程模型，兼容多模型与 MCP / A2A</text>
+
+  <rect x="145" y="525" width="550" height="96" rx="18" fill="#FFFFFF" stroke="#A9C8FF" stroke-width="2"/>
+  <text x="175" y="570" font-size="26" font-weight="700" fill="#1E40AF" font-family="Microsoft YaHei, PingFang SC, sans-serif">最像谁在用</text>
+  <text x="175" y="606" font-size="20" fill="#4B5563" font-family="Microsoft YaHei, PingFang SC, sans-serif">平台团队、企业开发者、要统一单代理 / 多代理 / 工作流栈的组织</text>
+
+  <rect x="145" y="650" width="550" height="90" rx="18" fill="#EAF3FF" stroke="#A9C8FF" stroke-dasharray="10 8" stroke-width="2"/>
+  <text x="175" y="704" font-size="22" fill="#1E3A8A" font-family="Microsoft YaHei, PingFang SC, sans-serif">关键词：统一运行时、迁移收口、开发底座、企业治理</text>
+
+  <rect x="865" y="235" width="630" height="530" rx="24" fill="#F4FBF7" stroke="#8FD3A8" stroke-width="3"/>
+  <text x="905" y="292" font-size="34" font-weight="700" fill="#0F7A45" font-family="Microsoft YaHei, PingFang SC, sans-serif">GitHub Agentic Workflows</text>
+  <text x="905" y="332" font-size="22" fill="#4B5563" font-family="Microsoft YaHei, PingFang SC, sans-serif">目标：把编码代理嵌进 GitHub Actions，做持续仓库自动化与受控输出</text>
+
+  <rect x="905" y="375" width="550" height="120" rx="18" fill="#FFFFFF" stroke="#A7DDBA" stroke-width="2"/>
+  <text x="935" y="420" font-size="26" font-weight="700" fill="#166534" font-family="Microsoft YaHei, PingFang SC, sans-serif">关键能力</text>
+  <text x="935" y="455" font-size="20" fill="#4B5563" font-family="Microsoft YaHei, PingFang SC, sans-serif">• Markdown 工作流、safe outputs、沙箱、只读默认权限</text>
+  <text x="935" y="487" font-size="20" fill="#4B5563" font-family="Microsoft YaHei, PingFang SC, sans-serif">• 可调用 Copilot / Claude / Codex / Gemini 做仓库级自动化</text>
+
+  <rect x="905" y="525" width="550" height="96" rx="18" fill="#FFFFFF" stroke="#A7DDBA" stroke-width="2"/>
+  <text x="935" y="570" font-size="26" font-weight="700" fill="#166534" font-family="Microsoft YaHei, PingFang SC, sans-serif">最像谁在用</text>
+  <text x="935" y="606" font-size="20" fill="#4B5563" font-family="Microsoft YaHei, PingFang SC, sans-serif">维护仓库健康、文档、测试、CI 修复、例行报告的工程团队</text>
+
+  <rect x="905" y="650" width="550" height="90" rx="18" fill="#EDFDF3" stroke="#A7DDBA" stroke-dasharray="10 8" stroke-width="2"/>
+  <text x="935" y="704" font-size="22" fill="#166534" font-family="Microsoft YaHei, PingFang SC, sans-serif">关键词：仓库自动化、Guardrails、Safe Outputs、Continuous AI</text>
+
+  <line x1="800" y1="250" x2="800" y2="760" stroke="#C7D2E5" stroke-width="3" stroke-dasharray="12 10"/>
+
+  <rect x="415" y="785" width="770" height="46" rx="20" fill="#FFF7E8" stroke="#F2C46D" stroke-width="2"/>
+  <text x="455" y="816" font-size="22" fill="#7C4A00" font-family="Microsoft YaHei, PingFang SC, sans-serif">共同信号：Agent 竞争正在从“谁再做一个更强模型”转向“谁把运行时、权限、状态与交付链路组织得更像真正系统”。</text>
+</svg>
