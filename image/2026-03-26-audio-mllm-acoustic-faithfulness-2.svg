@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#F8FAFC"/>
+  <rect x="40" y="40" width="1520" height="820" rx="28" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="800" y="94" text-anchor="middle" font-size="42" font-weight="700" fill="#0F172A">DEAF 的三层文本干扰框架：音频模型到底跟着“声音”还是跟着“文字”走</text>
+  <text x="800" y="134" text-anchor="middle" font-size="22" fill="#475569">同一问题逐层增加文本压力：如果模型越往后越被文字带偏，就说明它缺少真正的声学忠实度</text>
+
+  <rect x="110" y="210" width="1380" height="150" rx="24" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="2"/>
+  <text x="800" y="260" text-anchor="middle" font-size="30" font-weight="700" fill="#1E293B">共同目标：判断音频里的真实信号，而不是重复文本暗示</text>
+  <text x="800" y="312" text-anchor="middle" font-size="22" fill="#334155">示例：文字在说“我很开心”，但声音可能悲伤；文本说“很安静”，背景里却有交通噪声；内容像“年长女性”，声音却是年轻男孩</text>
+
+  <rect x="110" y="420" width="400" height="290" rx="24" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="2"/>
+  <text x="310" y="472" text-anchor="middle" font-size="30" font-weight="700" fill="#312E81">Level 1</text>
+  <text x="310" y="512" text-anchor="middle" font-size="24" font-weight="700" fill="#1E1B4B">只有音频内部冲突</text>
+  <text x="310" y="560" text-anchor="middle" font-size="20" fill="#334155">没有额外提示词</text>
+  <text x="310" y="590" text-anchor="middle" font-size="20" fill="#334155">只能靠声音与文本本身的矛盾作答</text>
+  <rect x="155" y="620" width="310" height="60" rx="16" fill="#FFFFFF" stroke="#A5B4FC" stroke-width="2"/>
+  <text x="310" y="658" text-anchor="middle" font-size="20" font-weight="700" fill="#4338CA">测：内容偏差会不会压过声学线索</text>
+
+  <rect x="600" y="420" width="400" height="290" rx="24" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="2"/>
+  <text x="800" y="472" text-anchor="middle" font-size="30" font-weight="700" fill="#065F46">Level 2</text>
+  <text x="800" y="512" text-anchor="middle" font-size="24" font-weight="700" fill="#14532D">中性音频 + 误导提示</text>
+  <text x="800" y="560" text-anchor="middle" font-size="20" fill="#334155">音频本身不冲突</text>
+  <text x="800" y="590" text-anchor="middle" font-size="20" fill="#334155">但外部文本明确把模型往错误方向带</text>
+  <rect x="645" y="620" width="310" height="60" rx="16" fill="#FFFFFF" stroke="#86EFAC" stroke-width="2"/>
+  <text x="800" y="658" text-anchor="middle" font-size="20" font-weight="700" fill="#15803D">测：模型会不会对提示词过度顺从</text>
+
+  <rect x="1090" y="420" width="400" height="290" rx="24" fill="#FFF7ED" stroke="#FDBA74" stroke-width="2"/>
+  <text x="1290" y="472" text-anchor="middle" font-size="30" font-weight="700" fill="#9A3412">Level 3</text>
+  <text x="1290" y="512" text-anchor="middle" font-size="24" font-weight="700" fill="#7C2D12">音频冲突 + 误导提示</text>
+  <text x="1290" y="560" text-anchor="middle" font-size="20" fill="#334155">语义内容和外部提示</text>
+  <text x="1290" y="590" text-anchor="middle" font-size="20" fill="#334155">一起把模型往错误答案推</text>
+  <rect x="1135" y="620" width="310" height="60" rx="16" fill="#FFFFFF" stroke="#FDBA74" stroke-width="2"/>
+  <text x="1290" y="658" text-anchor="middle" font-size="20" font-weight="700" fill="#C2410C">测：双重文本压力下是否还愿意信声音</text>
+
+  <path d="M510 565 L585 565" stroke="#6366F1" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="585,565 567,554 567,576" fill="#6366F1"/>
+  <path d="M1000 565 L1075 565" stroke="#10B981" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="1075,565 1057,554 1057,576" fill="#10B981"/>
+
+  <rect x="170" y="760" width="1260" height="68" rx="18" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="2"/>
+  <text x="800" y="804" text-anchor="middle" font-size="24" font-weight="700" fill="#991B1B">如果 Level 1 → Level 3 过程中 ARS 快速坍塌，就说明模型虽然“听到了变化”，但最终仍把文本当成主导证据</text>
+</svg>

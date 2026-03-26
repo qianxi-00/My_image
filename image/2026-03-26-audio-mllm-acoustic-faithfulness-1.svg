@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#F8FAFC"/>
+  <rect x="40" y="40" width="1520" height="820" rx="28" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="800" y="96" text-anchor="middle" font-size="42" font-weight="700" fill="#0F172A">音频大模型评测正在从“转写准确”走向“声学忠实”</text>
+  <text x="800" y="136" text-anchor="middle" font-size="22" fill="#475569">真正的问题不再只是 WER 够不够低，而是模型有没有真的利用情绪、背景声、说话人和空间线索</text>
+
+  <rect x="90" y="210" width="360" height="470" rx="24" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="2"/>
+  <text x="270" y="258" text-anchor="middle" font-size="30" font-weight="700" fill="#312E81">旧范式：ASR 导向评测</text>
+  <rect x="125" y="300" width="290" height="92" rx="18" fill="#FFFFFF" stroke="#A5B4FC" stroke-width="2"/>
+  <text x="270" y="345" text-anchor="middle" font-size="24" font-weight="700" fill="#1E1B4B">主要指标</text>
+  <text x="270" y="378" text-anchor="middle" font-size="22" fill="#334155">WER、BLEU、转写正确率</text>
+  <rect x="125" y="420" width="290" height="108" rx="18" fill="#FFFFFF" stroke="#A5B4FC" stroke-width="2"/>
+  <text x="270" y="465" text-anchor="middle" font-size="24" font-weight="700" fill="#1E1B4B">隐含假设</text>
+  <text x="270" y="500" text-anchor="middle" font-size="20" fill="#334155">只要把话转成字</text>
+  <text x="270" y="528" text-anchor="middle" font-size="20" fill="#334155">再靠文本推理就够了</text>
+  <rect x="125" y="558" width="290" height="92" rx="18" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="2"/>
+  <text x="270" y="603" text-anchor="middle" font-size="24" font-weight="700" fill="#991B1B">典型盲点</text>
+  <text x="270" y="636" text-anchor="middle" font-size="20" fill="#7F1D1D">高分可能只是“会读字”</text>
+
+  <rect x="520" y="210" width="560" height="470" rx="24" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="2"/>
+  <text x="800" y="258" text-anchor="middle" font-size="30" font-weight="700" fill="#065F46">被忽视的真正声学信息</text>
+  <rect x="570" y="305" width="210" height="120" rx="18" fill="#FFFFFF" stroke="#86EFAC" stroke-width="2"/>
+  <text x="675" y="352" text-anchor="middle" font-size="24" font-weight="700" fill="#14532D">情绪与语气</text>
+  <text x="675" y="388" text-anchor="middle" font-size="20" fill="#334155">重音、迟疑、讽刺、情绪反转</text>
+  <rect x="820" y="305" width="210" height="120" rx="18" fill="#FFFFFF" stroke="#86EFAC" stroke-width="2"/>
+  <text x="925" y="352" text-anchor="middle" font-size="24" font-weight="700" fill="#14532D">背景声音</text>
+  <text x="925" y="388" text-anchor="middle" font-size="20" fill="#334155">警笛、交通、机器噪声、环境线索</text>
+  <rect x="570" y="455" width="210" height="120" rx="18" fill="#FFFFFF" stroke="#86EFAC" stroke-width="2"/>
+  <text x="675" y="502" text-anchor="middle" font-size="24" font-weight="700" fill="#14532D">说话人属性</text>
+  <text x="675" y="538" text-anchor="middle" font-size="20" fill="#334155">年龄、性别、身份与风格提示</text>
+  <rect x="820" y="455" width="210" height="120" rx="18" fill="#FFFFFF" stroke="#86EFAC" stroke-width="2"/>
+  <text x="925" y="502" text-anchor="middle" font-size="24" font-weight="700" fill="#14532D">空间与非语音</text>
+  <text x="925" y="538" text-anchor="middle" font-size="20" fill="#334155">接近/远离、咳嗽、哭声、笑声</text>
+  <text x="800" y="626" text-anchor="middle" font-size="22" fill="#166534">这些信息决定模型是不是“真的在听”，而不是只把音频先转成文字</text>
+
+  <rect x="1150" y="210" width="360" height="470" rx="24" fill="#FFF7ED" stroke="#FDBA74" stroke-width="2"/>
+  <text x="1330" y="258" text-anchor="middle" font-size="30" font-weight="700" fill="#9A3412">新范式：诊断声学忠实度</text>
+  <rect x="1185" y="300" width="290" height="106" rx="18" fill="#FFFFFF" stroke="#FDBA74" stroke-width="2"/>
+  <text x="1330" y="344" text-anchor="middle" font-size="24" font-weight="700" fill="#7C2D12">SCENEBench</text>
+  <text x="1330" y="377" text-anchor="middle" font-size="20" fill="#334155">看模型能否理解背景声</text>
+  <text x="1330" y="405" text-anchor="middle" font-size="20" fill="#334155">定位变化、跨语言与非语音</text>
+  <rect x="1185" y="434" width="290" height="136" rx="18" fill="#FFFFFF" stroke="#FDBA74" stroke-width="2"/>
+  <text x="1330" y="476" text-anchor="middle" font-size="24" font-weight="700" fill="#7C2D12">DEAF</text>
+  <text x="1330" y="509" text-anchor="middle" font-size="20" fill="#334155">把声音和文字故意做冲突</text>
+  <text x="1330" y="537" text-anchor="middle" font-size="20" fill="#334155">测模型到底跟着声音走</text>
+  <text x="1330" y="565" text-anchor="middle" font-size="20" fill="#334155">还是继续依赖文本捷径</text>
+  <rect x="1185" y="598" width="290" height="70" rx="18" fill="#FFF1F2" stroke="#FDA4AF" stroke-width="2"/>
+  <text x="1330" y="641" text-anchor="middle" font-size="22" font-weight="700" fill="#9F1239">高分 ≠ 真听懂；关键是能否拒绝“文本主导”</text>
+
+  <path d="M460 445 L510 445" stroke="#6366F1" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="510,445 492,434 492,456" fill="#6366F1"/>
+  <path d="M1090 445 L1140 445" stroke="#10B981" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="1140,445 1122,434 1122,456" fill="#10B981"/>
+
+  <text x="800" y="790" text-anchor="middle" font-size="24" font-weight="700" fill="#0F172A">结论：语音 Agent 的真实门槛，正在从“转写更准”升级为“声学证据是否真的进入推理”</text>
+</svg>
