@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820">
+  <defs>
+    <style>
+      .title { font: 700 38px 'Noto Sans SC','Microsoft YaHei','PingFang SC',sans-serif; fill:#111827; }
+      .subtitle { font: 500 22px 'Noto Sans SC','Microsoft YaHei','PingFang SC',sans-serif; fill:#374151; }
+      .label { font: 700 28px 'Noto Sans SC','Microsoft YaHei','PingFang SC',sans-serif; fill:#111827; }
+      .text { font: 500 22px 'Noto Sans SC','Microsoft YaHei','PingFang SC',sans-serif; fill:#1f2937; }
+      .small { font: 500 19px 'Noto Sans SC','Microsoft YaHei','PingFang SC',sans-serif; fill:#4b5563; }
+      .pill { font: 700 18px 'Noto Sans SC','Microsoft YaHei','PingFang SC',sans-serif; fill:#ffffff; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb" />
+    </marker>
+  </defs>
+
+  <rect width="1400" height="820" fill="#f8fafc"/>
+  <text x="700" y="70" text-anchor="middle" class="title">PIXAR 的核心转向：从“目标物遮罩”到“真实编辑像素 + 语义后果”</text>
+  <text x="700" y="110" text-anchor="middle" class="subtitle">旧范式的问题不是有没有标注，而是标注单位和真正的篡改信号错位了</text>
+
+  <rect x="70" y="150" width="580" height="580" rx="28" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <rect x="750" y="150" width="580" height="580" rx="28" fill="#ffffff" stroke="#dbeafe" stroke-width="2"/>
+
+  <rect x="110" y="175" width="160" height="40" rx="20" fill="#dc2626"/>
+  <text x="190" y="202" text-anchor="middle" class="pill">旧式 mask 标注</text>
+  <text x="360" y="203" class="label">大致圈住“被改对象”</text>
+
+  <rect x="790" y="175" width="190" height="40" rx="20" fill="#2563eb"/>
+  <text x="885" y="202" text-anchor="middle" class="pill">PIXAR 像素差分标注</text>
+  <text x="1020" y="203" class="label">按真实编辑强度逐像素刻画</text>
+
+  <rect x="130" y="260" width="220" height="220" rx="18" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+  <rect x="370" y="260" width="220" height="220" rx="18" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+  <circle cx="240" cy="370" r="70" fill="#fcd34d" stroke="#f59e0b" stroke-width="4"/>
+  <rect x="415" y="300" width="140" height="140" rx="18" fill="#fca5a5" opacity="0.45" stroke="#dc2626" stroke-width="4"/>
+  <circle cx="480" cy="370" r="54" fill="#fcd34d" stroke="#f59e0b" stroke-width="4"/>
+  <rect x="400" y="290" width="170" height="170" rx="22" fill="none" stroke="#dc2626" stroke-width="8" stroke-dasharray="12 10"/>
+
+  <line x1="335" y1="370" x2="382" y2="370" stroke="#2563eb" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="362" y="352" text-anchor="middle" class="small">标注迁移</text>
+
+  <text x="130" y="540" class="text">问题 1：大块遮罩里有大量“没改动”的像素</text>
+  <text x="130" y="575" class="text">问题 2：框外的小改动、边缘改动经常被当成自然区域</text>
+  <text x="130" y="610" class="text">问题 3：评测会高估“圈对对象”却没找到真实篡改点的模型</text>
+
+  <rect x="810" y="260" width="240" height="220" rx="18" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+  <rect x="1065" y="260" width="220" height="220" rx="18" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+  <circle cx="930" cy="370" r="70" fill="#fcd34d" stroke="#f59e0b" stroke-width="4"/>
+  <g opacity="0.9">
+    <circle cx="906" cy="346" r="10" fill="#ef4444"/>
+    <circle cx="944" cy="334" r="12" fill="#f97316"/>
+    <circle cx="972" cy="370" r="14" fill="#dc2626"/>
+    <circle cx="934" cy="396" r="11" fill="#f59e0b"/>
+    <circle cx="892" cy="392" r="9" fill="#ef4444"/>
+    <circle cx="981" cy="334" r="8" fill="#fb7185"/>
+    <circle cx="1032" cy="298" r="8" fill="#fb7185"/>
+    <circle cx="1045" cy="315" r="10" fill="#ef4444"/>
+    <circle cx="1060" cy="332" r="7" fill="#f97316"/>
+  </g>
+  <rect x="1100" y="300" width="150" height="140" rx="18" fill="#eef2ff" stroke="#93c5fd" stroke-width="3"/>
+  <text x="1175" y="338" text-anchor="middle" class="text">语义标签</text>
+  <text x="1175" y="378" text-anchor="middle" class="small">被改对象：路牌</text>
+  <text x="1175" y="410" text-anchor="middle" class="small">改动类型：替换 / 改字</text>
+
+  <text x="810" y="540" class="text">PIXAR：先用像素差分图 D = |原图 - 生成图| 抓真实改动</text>
+  <text x="810" y="575" class="text">再用阈值 τ 派生 Mτ：既能看微编辑，也能看高置信语义改动</text>
+  <text x="810" y="610" class="text">最后把“哪里变了”与“改了什么、意味着什么”放进同一协议</text>
+
+  <rect x="120" y="675" width="1160" height="70" rx="18" fill="#eff6ff" stroke="#bfdbfe" stroke-width="2"/>
+  <text x="700" y="718" text-anchor="middle" class="label">关键结论：如果评测单位错了，再强的 VLM 也可能只是“圈到对象”，并没有真正理解篡改信号</text>
+</svg>
