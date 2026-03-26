@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#F7F8FC"/>
+  <text x="800" y="70" text-anchor="middle" font-size="34" font-family="PingFang SC, Microsoft YaHei, Arial" font-weight="700" fill="#111827">ARC-AGI-3 想测的，不再是“会不会答题”，而是“能否在陌生环境里探索并学会怎么玩”</text>
+  <rect x="70" y="130" width="670" height="680" rx="26" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="3"/>
+  <rect x="860" y="130" width="670" height="680" rx="26" fill="#FFFFFF" stroke="#6366F1" stroke-width="3"/>
+  <text x="405" y="185" text-anchor="middle" font-size="28" font-family="PingFang SC, Microsoft YaHei, Arial" font-weight="700" fill="#334155">旧式静态推理基准</text>
+  <text x="1195" y="185" text-anchor="middle" font-size="28" font-family="PingFang SC, Microsoft YaHei, Arial" font-weight="700" fill="#4338CA">ARC-AGI-3 互动推理基准</text>
+
+  <rect x="130" y="230" width="550" height="90" rx="18" fill="#EEF2FF" stroke="#A5B4FC" stroke-width="2"/>
+  <text x="405" y="286" text-anchor="middle" font-size="24" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#1F2937">给定题面、规则或自然语言指令</text>
+  <rect x="130" y="370" width="550" height="90" rx="18" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+  <text x="405" y="426" text-anchor="middle" font-size="24" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#1F2937">模型直接输出答案或步骤</text>
+  <rect x="130" y="510" width="550" height="90" rx="18" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="405" y="566" text-anchor="middle" font-size="24" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#1F2937">主要看正确率、通过率、榜单分数</text>
+  <rect x="130" y="650" width="550" height="110" rx="18" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+  <text x="405" y="705" text-anchor="middle" font-size="24" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#991B1B">容易高估“会跟指令走”的系统</text>
+  <text x="405" y="742" text-anchor="middle" font-size="22" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#991B1B">却测不到探索、记忆、试错与策略迁移</text>
+  <line x1="405" y1="320" x2="405" y2="370" stroke="#94A3B8" stroke-width="6" marker-end="url(#arrowGray)"/>
+  <line x1="405" y1="460" x2="405" y2="510" stroke="#94A3B8" stroke-width="6" marker-end="url(#arrowGray)"/>
+  <line x1="405" y1="600" x2="405" y2="650" stroke="#94A3B8" stroke-width="6" marker-end="url(#arrowGray)"/>
+
+  <rect x="920" y="225" width="550" height="95" rx="18" fill="#E0E7FF" stroke="#6366F1" stroke-width="2"/>
+  <text x="1195" y="267" text-anchor="middle" font-size="24" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#1F2937">没有规则说明、没有自然语言提示</text>
+  <text x="1195" y="298" text-anchor="middle" font-size="22" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#1F2937">代理必须先观察环境，再自己发现目标</text>
+
+  <rect x="920" y="370" width="550" height="210" rx="18" fill="#F5F3FF" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="1195" y="420" text-anchor="middle" font-size="25" font-family="PingFang SC, Microsoft YaHei, Arial" font-weight="700" fill="#4C1D95">互动闭环</text>
+  <text x="1195" y="465" text-anchor="middle" font-size="23" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#1F2937">观察 → 试动作 → 获得反馈 → 更新策略</text>
+  <text x="1195" y="505" text-anchor="middle" font-size="23" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#1F2937">再探索 → 再记忆 → 再规划</text>
+  <circle cx="1035" cy="545" r="18" fill="#6366F1"/>
+  <circle cx="1195" cy="545" r="18" fill="#8B5CF6"/>
+  <circle cx="1355" cy="545" r="18" fill="#A855F7"/>
+  <path d="M1035 545 C1080 500,1150 500,1195 545" fill="none" stroke="#6366F1" stroke-width="5" marker-end="url(#arrowIndigo)"/>
+  <path d="M1195 545 C1240 590,1310 590,1355 545" fill="none" stroke="#8B5CF6" stroke-width="5" marker-end="url(#arrowIndigo)"/>
+  <path d="M1355 545 C1290 640,1080 640,1035 545" fill="none" stroke="#A855F7" stroke-width="5" marker-end="url(#arrowIndigo)"/>
+
+  <rect x="920" y="625" width="550" height="135" rx="18" fill="#DCFCE7" stroke="#22C55E" stroke-width="2"/>
+  <text x="1195" y="675" text-anchor="middle" font-size="25" font-family="PingFang SC, Microsoft YaHei, Arial" font-weight="700" fill="#166534">核心衡量对象</text>
+  <text x="1195" y="715" text-anchor="middle" font-size="23" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#166534">完成多少关卡 + 相对人类要多做多少动作</text>
+  <text x="1195" y="748" text-anchor="middle" font-size="22" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#166534">看的是学习效率，而不是只看最终答对</text>
+
+  <text x="800" y="850" text-anchor="middle" font-size="22" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#475569">结论：ARC-AGI-3 把 Agent 评测从“静态答题”推进到“交互式探索、记忆与适应”</text>
+
+  <defs>
+    <marker id="arrowGray" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#94A3B8"/>
+    </marker>
+    <marker id="arrowIndigo" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#6366F1"/>
+    </marker>
+  </defs>
+</svg>

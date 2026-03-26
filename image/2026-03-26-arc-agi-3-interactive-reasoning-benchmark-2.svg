@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#F8FAFC"/>
+  <text x="800" y="68" text-anchor="middle" font-size="34" font-family="PingFang SC, Microsoft YaHei, Arial" font-weight="700" fill="#0F172A">ARC-AGI-3 的新尺子：不是只看通关，而是看相对人类要多做多少动作</text>
+
+  <rect x="90" y="120" width="1420" height="690" rx="28" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="3"/>
+
+  <text x="250" y="180" text-anchor="middle" font-size="28" font-family="PingFang SC, Microsoft YaHei, Arial" font-weight="700" fill="#1E293B">评分输入</text>
+  <rect x="140" y="220" width="220" height="110" rx="18" fill="#DBEAFE" stroke="#60A5FA" stroke-width="2"/>
+  <text x="250" y="268" text-anchor="middle" font-size="23" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#1E293B">是否通关</text>
+  <text x="250" y="303" text-anchor="middle" font-size="21" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#1E293B">每一关有没有完成</text>
+  <rect x="140" y="370" width="220" height="110" rx="18" fill="#E0E7FF" stroke="#818CF8" stroke-width="2"/>
+  <text x="250" y="418" text-anchor="middle" font-size="23" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#1E293B">动作效率</text>
+  <text x="250" y="453" text-anchor="middle" font-size="21" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#1E293B">和人类动作数比较</text>
+  <rect x="140" y="520" width="220" height="180" rx="18" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+  <text x="250" y="565" text-anchor="middle" font-size="23" font-family="PingFang SC, Microsoft YaHei, Arial" font-weight="700" fill="#334155">动作定义</text>
+  <text x="250" y="605" text-anchor="middle" font-size="21" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334155">只有真正改变环境</text>
+  <text x="250" y="637" text-anchor="middle" font-size="21" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334155">的提交动作才计数</text>
+  <text x="250" y="676" text-anchor="middle" font-size="19" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#64748B">内部推理、工具调用、重试</text>
+  <text x="250" y="705" text-anchor="middle" font-size="19" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#64748B">不直接算作动作</text>
+
+  <text x="800" y="180" text-anchor="middle" font-size="28" font-family="PingFang SC, Microsoft YaHei, Arial" font-weight="700" fill="#1E293B">核心公式：RHAE（相对人类动作效率）</text>
+  <rect x="470" y="225" width="660" height="180" rx="24" fill="#EEF2FF" stroke="#6366F1" stroke-width="3"/>
+  <text x="800" y="300" text-anchor="middle" font-size="42" font-family="Georgia, Times New Roman, serif" fill="#312E81">level score = (人类基线动作数 / AI 动作数)²</text>
+  <text x="800" y="352" text-anchor="middle" font-size="22" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#4338CA">每关得分上限封顶为 1.0；AI 即便找到捷径，也不会因为单关投机超过人类满分</text>
+
+  <rect x="470" y="445" width="660" height="255" rx="24" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+  <text x="800" y="490" text-anchor="middle" font-size="26" font-family="PingFang SC, Microsoft YaHei, Arial" font-weight="700" fill="#0F172A">为什么这个公式重要</text>
+  <text x="800" y="535" text-anchor="middle" font-size="22" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334155">同样通关，不代表智能水平一样</text>
+  <text x="800" y="572" text-anchor="middle" font-size="22" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334155">动作越多，说明探索、记忆压缩与策略学习效率越差</text>
+  <text x="800" y="609" text-anchor="middle" font-size="22" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334155">高分系统必须既能通关，又不能靠海量试错硬撞出来</text>
+  <text x="800" y="656" text-anchor="middle" font-size="20" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#64748B">这把尺子把“会不会做”升级成“能否像人类一样高效学会做”</text>
+
+  <text x="1335" y="180" text-anchor="middle" font-size="28" font-family="PingFang SC, Microsoft YaHei, Arial" font-weight="700" fill="#1E293B">分数解读</text>
+  <rect x="1210" y="220" width="250" height="130" rx="18" fill="#DCFCE7" stroke="#22C55E" stroke-width="2"/>
+  <text x="1335" y="270" text-anchor="middle" font-size="24" font-family="PingFang SC, Microsoft YaHei, Arial" font-weight="700" fill="#166534">100%</text>
+  <text x="1335" y="308" text-anchor="middle" font-size="21" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#166534">全部通关且效率达到</text>
+  <text x="1335" y="337" text-anchor="middle" font-size="21" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#166534">或超过人类基线</text>
+  <rect x="1210" y="385" width="250" height="130" rx="18" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="1335" y="435" text-anchor="middle" font-size="24" font-family="PingFang SC, Microsoft YaHei, Arial" font-weight="700" fill="#92400E">1% - 99%</text>
+  <text x="1335" y="473" text-anchor="middle" font-size="21" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#92400E">通关率与动作效率</text>
+  <text x="1335" y="502" text-anchor="middle" font-size="21" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#92400E">共同决定中间分段</text>
+  <rect x="1210" y="550" width="250" height="130" rx="18" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+  <text x="1335" y="600" text-anchor="middle" font-size="24" font-family="PingFang SC, Microsoft YaHei, Arial" font-weight="700" fill="#991B1B">0%</text>
+  <text x="1335" y="638" text-anchor="middle" font-size="21" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#991B1B">跨所有游戏没有</text>
+  <text x="1335" y="667" text-anchor="middle" font-size="21" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#991B1B">完成任何关卡</text>
+
+  <line x1="360" y1="275" x2="470" y2="275" stroke="#94A3B8" stroke-width="6" marker-end="url(#arrow)"/>
+  <line x1="360" y1="425" x2="470" y2="425" stroke="#94A3B8" stroke-width="6" marker-end="url(#arrow)"/>
+  <line x1="1130" y1="315" x2="1210" y2="315" stroke="#94A3B8" stroke-width="6" marker-end="url(#arrow)"/>
+  <line x1="1130" y1="575" x2="1210" y2="575" stroke="#94A3B8" stroke-width="6" marker-end="url(#arrow)"/>
+
+  <text x="800" y="855" text-anchor="middle" font-size="22" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#475569">ARC-AGI-3 的核心创新不是只看结果，而是把“学习效率”也正式纳入智能评估</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#94A3B8"/>
+    </marker>
+  </defs>
+</svg>
