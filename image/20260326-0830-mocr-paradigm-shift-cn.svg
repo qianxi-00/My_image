@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#f7f9fc"/>
+  <text x="800" y="78" text-anchor="middle" font-size="40" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#0f172a" font-weight="700">从传统 OCR 到 MOCR：文档解析目标为什么变了</text>
+  <text x="800" y="122" text-anchor="middle" font-size="22" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#475569">关键变化不是“识别更准一点”，而是把图表、图示、UI 和科学图形也当成可解析、可重建、可复用的知识对象</text>
+
+  <rect x="90" y="190" rx="24" ry="24" width="620" height="570" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="400" y="248" text-anchor="middle" font-size="34" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#2563eb" font-weight="700">传统 OCR / 文档解析</text>
+  <rect x="140" y="300" rx="18" ry="18" width="220" height="90" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="250" y="355" text-anchor="middle" font-size="24" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#1e3a8a">文字块识别</text>
+  <rect x="390" y="300" rx="18" ry="18" width="260" height="90" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="520" y="355" text-anchor="middle" font-size="24" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#1e3a8a">版面排序与阅读顺序</text>
+
+  <rect x="140" y="440" rx="18" ry="18" width="510" height="110" fill="#fff7ed" stroke="#fdba74" stroke-width="2"/>
+  <text x="395" y="492" text-anchor="middle" font-size="26" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#9a3412" font-weight="700">图表 / 流程图 / UI / 化学结构</text>
+  <text x="395" y="532" text-anchor="middle" font-size="22" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#7c2d12">通常被裁成像素块保存，难以进入可计算知识链路</text>
+
+  <rect x="140" y="600" rx="18" ry="18" width="510" height="110" fill="#fef2f2" stroke="#fca5a5" stroke-width="2"/>
+  <text x="395" y="652" text-anchor="middle" font-size="26" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#991b1b" font-weight="700">结果：文本能进系统，图形常常被丢掉</text>
+  <text x="395" y="692" text-anchor="middle" font-size="22" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#7f1d1d">RAG、预训练、分析与自动化只能吃到残缺监督</text>
+
+  <rect x="890" y="190" rx="24" ry="24" width="620" height="570" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="1200" y="248" text-anchor="middle" font-size="34" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#059669" font-weight="700">MOCR / dots.mocr 范式</text>
+  <rect x="940" y="300" rx="18" ry="18" width="220" height="90" fill="#ecfdf5" stroke="#86efac" stroke-width="2"/>
+  <text x="1050" y="355" text-anchor="middle" font-size="24" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#14532d">文字与版面</text>
+  <rect x="1190" y="300" rx="18" ry="18" width="260" height="90" fill="#ecfdf5" stroke="#86efac" stroke-width="2"/>
+  <text x="1320" y="355" text-anchor="middle" font-size="24" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#14532d">图表与图形也解析</text>
+
+  <rect x="940" y="440" rx="18" ry="18" width="510" height="130" fill="#f0fdf4" stroke="#4ade80" stroke-width="2"/>
+  <text x="1195" y="487" text-anchor="middle" font-size="26" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#166534" font-weight="700">输出不再只是文本，而是统一结构表示</text>
+  <text x="1195" y="530" text-anchor="middle" font-size="22" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#166534">Markdown / HTML 表格 / LaTeX 公式 / SVG 代码 / 带顺序的 JSON</text>
+
+  <rect x="940" y="600" rx="18" ry="18" width="510" height="110" fill="#eef2ff" stroke="#a5b4fc" stroke-width="2"/>
+  <text x="1195" y="648" text-anchor="middle" font-size="24" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#312e81">图形第一次变成可复用监督与可检索知识单元</text>
+  <text x="1195" y="688" text-anchor="middle" font-size="22" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#4338ca">这正是“Parse Anything from Documents”的真实含义</text>
+
+  <line x1="710" y1="475" x2="890" y2="475" stroke="#64748b" stroke-width="8" stroke-linecap="round"/>
+  <polygon points="890,475 858,456 858,494" fill="#64748b"/>
+  <text x="800" y="445" text-anchor="middle" font-size="24" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#334155" font-weight="700">范式升级</text>
+
+  <text x="800" y="835" text-anchor="middle" font-size="22" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#64748b">示意图：MOCR 的关键不只是更强 OCR，而是把文档里的视觉语言纳入统一解析和可计算重建流程。</text>
+</svg>

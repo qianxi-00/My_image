@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#f8fafc"/>
+  <text x="800" y="76" text-anchor="middle" font-size="40" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#0f172a" font-weight="700">2026 年文档理解的三条路线：dots.mocr、GLM-OCR 与 Logics-Parsing-Omni</text>
+  <text x="800" y="118" text-anchor="middle" font-size="22" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#475569">它们都在做“解析”，但主问题并不相同：一个在重建图形代码，一个在做轻量高吞吐 OCR，一个在做跨模态证据锚定解析</text>
+
+  <rect x="80" y="180" rx="24" ry="24" width="440" height="600" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="300" y="236" text-anchor="middle" font-size="34" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#059669" font-weight="700">dots.mocr</text>
+  <text x="300" y="276" text-anchor="middle" font-size="22" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#334155">目标：把“文档中的一切”变成可重建结构</text>
+  <text x="120" y="340" font-size="24" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#0f172a">• 主轴：文字 + 图表 + 图示 + UI + 科学图形</text>
+  <text x="120" y="390" font-size="24" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#0f172a">• 关键输出：SVG / 表格 / 公式 / JSON</text>
+  <text x="120" y="440" font-size="24" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#0f172a">• 亮点：图形不再只是像素裁剪</text>
+  <text x="120" y="490" font-size="24" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#0f172a">• 含义：文档数据开始进入 image-to-code 阶段</text>
+  <rect x="120" y="560" rx="16" ry="16" width="360" height="120" fill="#ecfdf5" stroke="#86efac" stroke-width="2"/>
+  <text x="300" y="612" text-anchor="middle" font-size="24" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#166534" font-weight="700">最适合讨论“监督资产升级”</text>
+  <text x="300" y="652" text-anchor="middle" font-size="21" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#166534">文档不只喂文本，还能喂可执行图形表示</text>
+
+  <rect x="580" y="180" rx="24" ry="24" width="440" height="600" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="800" y="236" text-anchor="middle" font-size="34" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#2563eb" font-weight="700">GLM-OCR</text>
+  <text x="800" y="276" text-anchor="middle" font-size="22" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#334155">目标：在 0.9B 体量上做高效、可部署的真实 OCR</text>
+  <text x="620" y="340" font-size="24" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#0f172a">• 主轴：布局分析 + 区域级并行识别</text>
+  <text x="620" y="390" font-size="24" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#0f172a">• 关键机制：Multi-Token Prediction 提升吞吐</text>
+  <text x="620" y="440" font-size="24" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#0f172a">• 亮点：边缘部署与生产系统友好</text>
+  <text x="620" y="490" font-size="24" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#0f172a">• 含义：小模型 OCR 仍有强现实价值</text>
+  <rect x="620" y="560" rx="16" ry="16" width="360" height="120" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="800" y="612" text-anchor="middle" font-size="24" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#1e3a8a" font-weight="700">最适合讨论“效率与落地”</text>
+  <text x="800" y="652" text-anchor="middle" font-size="21" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#1e3a8a">不是一味做大，而是把 OCR 做成可部署系统</text>
+
+  <rect x="1080" y="180" rx="24" ry="24" width="440" height="600" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="1300" y="236" text-anchor="middle" font-size="34" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#7c3aed" font-weight="700">Logics-Parsing-Omni</text>
+  <text x="1300" y="276" text-anchor="middle" font-size="22" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#334155">目标：跨文档、图像、音频、视频的统一解析框架</text>
+  <text x="1120" y="340" font-size="24" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#0f172a">• 主轴：检测 → 识别 → 解释 三层范式</text>
+  <text x="1120" y="390" font-size="24" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#0f172a">• 关键概念：证据锚定、可定位、可枚举、可追溯</text>
+  <text x="1120" y="440" font-size="24" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#0f172a">• 亮点：把解析直接连到多模态认知</text>
+  <text x="1120" y="490" font-size="24" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#0f172a">• 含义：解析开始成为 reasoning 的前置层</text>
+  <rect x="1120" y="560" rx="16" ry="16" width="360" height="120" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="2"/>
+  <text x="1300" y="612" text-anchor="middle" font-size="24" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#5b21b6" font-weight="700">最适合讨论“统一多模态解析”</text>
+  <text x="1300" y="652" text-anchor="middle" font-size="21" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#5b21b6">它解决的不只是 OCR，而是解析如何支撑证据推理</text>
+
+  <text x="800" y="840" text-anchor="middle" font-size="22" font-family="Noto Sans CJK SC, Microsoft YaHei, Arial" fill="#64748b">结论：三者不是简单谁替代谁，而是分别代表“可重建图形监督”“高效部署 OCR”“跨模态证据解析”三条不同产品路线。</text>
+</svg>
