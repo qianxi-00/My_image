@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#f8fafc"/>
+  <text x="800" y="68" text-anchor="middle" font-size="34" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#0f172a" font-weight="700">从“点中率”到“可信执行”：GUI Agent 的四层指标栈</text>
+  <text x="800" y="108" text-anchor="middle" font-size="18" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#475569">同一个 click(x, y)，上线前至少要经过精度、可靠性、安全性与运营性的共同审视</text>
+
+  <rect x="120" y="180" width="300" height="500" rx="26" ry="26" fill="#e0f2fe" stroke="#38bdf8" stroke-width="3"/>
+  <text x="270" y="242" text-anchor="middle" font-size="30" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#0c4a6e" font-weight="700">第一层：精度</text>
+  <text x="160" y="300" font-size="20" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#164e63">• 能不能点到真正目标</text>
+  <text x="160" y="342" font-size="20" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#164e63">• 高分辨率、小目标、多应用</text>
+  <text x="160" y="384" font-size="20" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#164e63">• ScreenSpot-Pro 揭示短板</text>
+  <text x="160" y="450" font-size="22" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#0369a1" font-weight="700">没有命中率，就谈不上自动化</text>
+
+  <rect x="470" y="180" width="300" height="500" rx="26" ry="26" fill="#dcfce7" stroke="#4ade80" stroke-width="3"/>
+  <text x="620" y="242" text-anchor="middle" font-size="30" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#14532d" font-weight="700">第二层：可靠性</text>
+  <text x="510" y="300" font-size="20" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#166534">• 知不知道自己没把握</text>
+  <text x="510" y="342" font-size="20" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#166534">• 允许拒绝、升级、回退</text>
+  <text x="510" y="384" font-size="20" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#166534">• SafeGround 做风险阈值校准</text>
+  <text x="510" y="450" font-size="22" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#15803d" font-weight="700">不知道时先别点，比逞强更重要</text>
+
+  <rect x="820" y="180" width="300" height="500" rx="26" ry="26" fill="#fee2e2" stroke="#fb7185" stroke-width="3"/>
+  <text x="970" y="242" text-anchor="middle" font-size="30" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#7f1d1d" font-weight="700">第三层：安全</text>
+  <text x="860" y="300" font-size="20" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#991b1b">• 点错不是失败，而可能是越权</text>
+  <text x="860" y="342" font-size="20" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#991b1b">• 截图污染、TOCTOU、误感知</text>
+  <text x="860" y="384" font-size="20" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#991b1b">• 外部守门独立核验目标与意图</text>
+  <text x="860" y="450" font-size="22" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#be123c" font-weight="700">执行授权必须独立于主模型闭环</text>
+
+  <rect x="1170" y="180" width="300" height="500" rx="26" ry="26" fill="#ede9fe" stroke="#a78bfa" stroke-width="3"/>
+  <text x="1320" y="242" text-anchor="middle" font-size="30" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#4c1d95" font-weight="700">第四层：运营性</text>
+  <text x="1210" y="300" font-size="20" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#5b21b6">• 是否可审计、可回退、可解释</text>
+  <text x="1210" y="342" font-size="20" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#5b21b6">• 是否支持人工确认和权限分级</text>
+  <text x="1210" y="384" font-size="20" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#5b21b6">• 是否适配企业真实流程</text>
+  <text x="1210" y="450" font-size="22" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#6d28d9" font-weight="700">Computer-Use 要像系统，而不只是像模型</text>
+
+  <path d="M420 430 L470 430" stroke="#94a3b8" stroke-width="6" fill="none"/>
+  <polygon points="470,430 454,420 454,440" fill="#94a3b8"/>
+  <path d="M770 430 L820 430" stroke="#94a3b8" stroke-width="6" fill="none"/>
+  <polygon points="820,430 804,420 804,440" fill="#94a3b8"/>
+  <path d="M1120 430 L1170 430" stroke="#94a3b8" stroke-width="6" fill="none"/>
+  <polygon points="1170,430 1154,420 1154,440" fill="#94a3b8"/>
+
+  <text x="800" y="800" text-anchor="middle" font-size="18" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#64748b">结论：未来真正值钱的桌面 Agent，不会先赢在“会操作”，而会先赢在“能被放心托付操作”</text>
+</svg>
