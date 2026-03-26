@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980">
+  <rect width="1600" height="980" fill="#f8fafc"/>
+  <text x="800" y="70" text-anchor="middle" font-size="34" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#102a43" font-weight="700">任务应该怎么分配给 GPT-5.4 / mini / nano？</text>
+  <text x="800" y="108" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#486581">真正的架构价值不在“换模型”，而在于把复杂度、工具需求、延迟预算和成本预算一起纳入路由逻辑</text>
+
+  <rect x="120" y="180" rx="24" ry="24" width="1360" height="140" fill="#fff" stroke="#cbd2d9" stroke-width="2"/>
+  <text x="800" y="235" text-anchor="middle" font-size="28" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#102a43" font-weight="700">先问四个问题</text>
+  <text x="800" y="280" text-anchor="middle" font-size="19" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">是不是长上下文？要不要 computer use？需要多少工具选择？失败成本高不高？</text>
+
+  <rect x="120" y="380" rx="22" ry="22" width="400" height="360" fill="#d9e2ec" stroke="#9fb3c8" stroke-width="2"/>
+  <text x="320" y="435" text-anchor="middle" font-size="29" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#102a43" font-weight="700">路由到 GPT-5.4</text>
+  <text x="320" y="485" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">适用场景</text>
+  <text x="320" y="525" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">• 任务跨度长、上下文极大</text>
+  <text x="320" y="560" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">• 需要 tool search / computer use / 最终审校</text>
+  <text x="320" y="595" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">• 出错代价高，宁可慢一点也要稳</text>
+  <text x="320" y="645" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">代价</text>
+  <text x="320" y="680" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">延迟和 token 成本最高，但适合做“总控台”</text>
+
+  <rect x="600" y="380" rx="22" ry="22" width="400" height="360" fill="#c3ddfd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="800" y="435" text-anchor="middle" font-size="29" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#102a43" font-weight="700">路由到 GPT-5.4 mini</text>
+  <text x="800" y="485" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">适用场景</text>
+  <text x="800" y="525" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">• 并发代码子任务、截图理解、资料处理</text>
+  <text x="800" y="560" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">• 需要 computer use 或 tool search，但不必由主模型亲自做</text>
+  <text x="800" y="595" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">• 要求响应快、数量多、可接受分层复核</text>
+  <text x="800" y="645" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">代价</text>
+  <text x="800" y="680" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">成本约为 GPT-5.4 的 30%，是“执行层主力”</text>
+
+  <rect x="1080" y="380" rx="22" ry="22" width="400" height="360" fill="#e7d8fd" stroke="#b38bfa" stroke-width="2"/>
+  <text x="1280" y="435" text-anchor="middle" font-size="29" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#102a43" font-weight="700">路由到 GPT-5.4 nano</text>
+  <text x="1280" y="485" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">适用场景</text>
+  <text x="1280" y="525" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">• 分类、抽取、排序、批量预筛选</text>
+  <text x="1280" y="560" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">• 规则明确、失败可复跑、无须 computer use</text>
+  <text x="1280" y="595" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">• 适合作为“廉价工序处理层”</text>
+  <text x="1280" y="645" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">代价</text>
+  <text x="1280" y="680" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">最便宜，但能力边界更清晰，适合把大任务拆小后吸收流量</text>
+
+  <rect x="180" y="810" rx="20" ry="20" width="1240" height="95" fill="#fff" stroke="#d9e2ec" stroke-width="2"/>
+  <text x="800" y="850" text-anchor="middle" font-size="22" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#102a43" font-weight="700">一条简单原则</text>
+  <text x="800" y="885" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">高判断价值留给 GPT-5.4，高执行密度交给 mini，高批量低风险工序下放给 nano —— 这就是分层 Agent 体系的经济学</text>
+</svg>

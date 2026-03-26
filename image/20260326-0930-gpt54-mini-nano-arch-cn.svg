@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980">
+  <rect width="1600" height="980" fill="#f7f9fc"/>
+  <text x="800" y="70" text-anchor="middle" font-size="34" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#102a43" font-weight="700">GPT-5.4 家族的分层 Agent 架构：规划在上，并行在下</text>
+  <text x="800" y="108" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#486581">这次更新真正重要的不是“小模型更便宜”，而是可以把任务按复杂度与工具需求拆到不同层执行</text>
+
+  <rect x="120" y="160" rx="26" ry="26" width="1360" height="180" fill="#d9e2ec" stroke="#bcccdc" stroke-width="2"/>
+  <text x="800" y="215" text-anchor="middle" font-size="30" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#102a43" font-weight="700">第 1 层：GPT-5.4 / GPT-5.4 Pro —— 规划、协调、最终判断</text>
+  <text x="800" y="255" text-anchor="middle" font-size="19" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">适合：跨文件推理、长上下文、工具选择、失败重试策略、最终汇总与质量把关</text>
+  <text x="800" y="290" text-anchor="middle" font-size="19" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">关键原语：1M 上下文、tool search、built-in computer use、compaction、较强长程执行能力</text>
+
+  <rect x="140" y="400" rx="24" ry="24" width="620" height="230" fill="#c3ddfd" stroke="#829ab1" stroke-width="2"/>
+  <text x="450" y="455" text-anchor="middle" font-size="28" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#102a43" font-weight="700">第 2 层：GPT-5.4 mini —— 高并发主力工位</text>
+  <text x="450" y="495" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">适合：代码库搜索、局部重构、文档处理、截图理解、浏览器/桌面执行型子任务</text>
+  <text x="450" y="530" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">特点：400K 上下文；支持 computer use、tool search、MCP；价格约为 GPT-5.4 的 30%</text>
+  <text x="450" y="565" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">定位：不是“缩水版主模型”，而是适合并发扩张的执行层模型</text>
+
+  <rect x="840" y="400" rx="24" ry="24" width="620" height="230" fill="#e7d8fd" stroke="#9f7aea" stroke-width="2"/>
+  <text x="1150" y="455" text-anchor="middle" font-size="28" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#102a43" font-weight="700">第 3 层：GPT-5.4 nano —— 低成本微型子代理</text>
+  <text x="1150" y="495" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">适合：分类、抽取、排序、规则判断、批量预处理、简单补充编码任务</text>
+  <text x="1150" y="530" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">特点：400K 上下文；极低成本；支持 MCP，但不支持 computer use 与 tool search</text>
+  <text x="1150" y="565" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">定位：让“简单但量大”的工序从主模型上剥离出来</text>
+
+  <line x1="800" y1="340" x2="450" y2="398" stroke="#486581" stroke-width="5"/>
+  <line x1="800" y1="340" x2="1150" y2="398" stroke="#486581" stroke-width="5"/>
+  <polygon points="450,398 468,390 461,410" fill="#486581"/>
+  <polygon points="1150,398 1132,390 1139,410" fill="#486581"/>
+
+  <rect x="160" y="715" rx="22" ry="22" width="1280" height="170" fill="#fff" stroke="#d9e2ec" stroke-width="2"/>
+  <text x="800" y="765" text-anchor="middle" font-size="26" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#102a43" font-weight="700">从“一个大模型包打天下”到“多层模型协同”</text>
+  <text x="800" y="805" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">主模型负责高价值判断，小模型负责高频执行，微型模型负责批量预处理——这才是 mini / nano 这次最重要的产品信号</text>
+  <text x="800" y="840" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">当延迟、成本、并发数和工具能力被重新分层后，subagent 不再只是“附属功能”，而会变成默认架构</text>
+</svg>
