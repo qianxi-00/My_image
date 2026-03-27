@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#FCFCFD"/>
+  <rect x="70" y="50" width="1460" height="120" rx="24" fill="#0F172A"/>
+  <text x="110" y="118" font-size="42" font-weight="700" fill="#FFFFFF" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">隐藏思考成本是怎样吞掉“低价优势”的</text>
+  <text x="110" y="166" font-size="24" fill="#CBD5E1" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">同样一道题，不同推理模型在思考 token 消耗上可能出现数量级差异</text>
+
+  <rect x="90" y="220" width="470" height="600" rx="28" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="2"/>
+  <text x="130" y="278" font-size="32" font-weight="700" fill="#111827" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">过去常见的错误比较法</text>
+  <rect x="140" y="320" width="290" height="76" rx="16" fill="#DBEAFE"/>
+  <text x="170" y="368" font-size="28" fill="#1D4ED8" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">只看输入/输出单价</text>
+  <path d="M 285 396 L 285 445" stroke="#94A3B8" stroke-width="6"/>
+  <rect x="140" y="445" width="290" height="76" rx="16" fill="#E5E7EB"/>
+  <text x="182" y="493" font-size="28" fill="#334155" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">默认总成本同步更低</text>
+  <path d="M 285 521 L 285 570" stroke="#94A3B8" stroke-width="6"/>
+  <rect x="140" y="570" width="290" height="96" rx="18" fill="#FEE2E2"/>
+  <text x="166" y="622" font-size="30" font-weight="700" fill="#B91C1C" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">问题：忽略了隐藏思考</text>
+  <text x="128" y="725" font-size="24" fill="#6B7280" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">价签只告诉你“每单位 token 多贵”，</text>
+  <text x="128" y="760" font-size="24" fill="#6B7280" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">却不告诉你“为了答完一题会耗掉多少 token”。</text>
+
+  <rect x="620" y="220" width="360" height="600" rx="28" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="2"/>
+  <text x="655" y="278" font-size="32" font-weight="700" fill="#111827" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">真实成本拆解</text>
+  <rect x="690" y="330" width="220" height="70" rx="14" fill="#E5E7EB"/>
+  <text x="728" y="374" font-size="26" fill="#111827" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">提示词 token</text>
+  <rect x="690" y="420" width="220" height="70" rx="14" fill="#BFDBFE"/>
+  <text x="716" y="464" font-size="26" fill="#1D4ED8" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">可见回答 token</text>
+  <rect x="660" y="510" width="280" height="110" rx="18" fill="#FECACA"/>
+  <text x="700" y="566" font-size="30" font-weight="700" fill="#991B1B" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">隐藏思考 token</text>
+  <text x="675" y="606" font-size="22" fill="#991B1B" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">决定了很多“低价模型”为何反而更贵</text>
+  <text x="662" y="700" font-size="24" fill="#6B7280" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">如果思考 token 暴涨，单价优势会被直接吞没。</text>
+
+  <rect x="1040" y="220" width="470" height="600" rx="28" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="2"/>
+  <text x="1080" y="278" font-size="32" font-weight="700" fill="#111827" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">对工程与采购的三个提醒</text>
+  <rect x="1080" y="330" width="390" height="110" rx="18" fill="#EEF2FF"/>
+  <text x="1110" y="378" font-size="26" font-weight="700" fill="#4338CA" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">1. 不能只看 API 价目表</text>
+  <text x="1110" y="415" font-size="22" fill="#4338CA" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">必须按真实任务集统计每请求总成本。</text>
+
+  <rect x="1080" y="470" width="390" height="110" rx="18" fill="#ECFDF5"/>
+  <text x="1110" y="518" font-size="26" font-weight="700" fill="#047857" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">2. 要持续监控思考 token</text>
+  <text x="1110" y="555" font-size="22" fill="#047857" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">它才是推理模型账单最不稳定的一层。</text>
+
+  <rect x="1080" y="610" width="390" height="150" rx="18" fill="#FEF3C7"/>
+  <text x="1110" y="658" font-size="26" font-weight="700" fill="#92400E" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">3. 路由策略要改成成本感知</text>
+  <text x="1110" y="695" font-size="22" fill="#92400E" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">按题型、负载、延迟预算和思考习惯选模型，</text>
+  <text x="1110" y="727" font-size="22" fill="#92400E" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">而不是默认“价签更低 = 真实更省”。</text>
+
+  <rect x="80" y="845" width="1440" height="36" rx="12" fill="#E2E8F0"/>
+  <text x="110" y="870" font-size="20" fill="#334155" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">一句话：推理模型时代的价格战，已经不是“谁每百万 token 标得更低”，而是“谁在真实工作负载下更省”。</text>
+</svg>
