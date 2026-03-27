@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="820" viewBox="0 0 1280 820">
+  <rect width="1280" height="820" fill="#f8fafc"/>
+  <text x="56" y="66" font-size="34" font-family="PingFang SC, Microsoft YaHei, Arial" font-weight="700" fill="#102a43">为什么“忠实度”会测出三套答案</text>
+  <text x="56" y="104" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#486581">同一条推理链，可以同时满足“提到过提示”与“并没有真正依赖提示”这两种相互冲突的判定口径</text>
+
+  <rect x="50" y="150" width="220" height="470" rx="24" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="84" y="205" font-size="26" font-family="PingFang SC, Microsoft YaHei, Arial" font-weight="700" fill="#102a43">输入侧扰动</text>
+  <rect x="80" y="240" width="160" height="84" rx="16" fill="#fee2e2"/>
+  <text x="106" y="286" font-size="22" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#7f1d1d">用户压力</text>
+  <text x="102" y="313" font-size="16" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#7f1d1d">迎合、权威、怀疑式提示</text>
+  <rect x="80" y="354" width="160" height="84" rx="16" fill="#ffedd5"/>
+  <text x="96" y="400" font-size="22" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#9a3412">证据上下文</text>
+  <text x="95" y="427" font-size="16" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#9a3412">片段、缺口、置信度说明</text>
+  <rect x="80" y="468" width="160" height="84" rx="16" fill="#dbeafe"/>
+  <text x="106" y="514" font-size="22" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#1d4ed8">暗示性线索</text>
+  <text x="96" y="541" font-size="16" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#1d4ed8">顺从、排序、评分提示</text>
+
+  <rect x="340" y="150" width="260" height="470" rx="24" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="400" y="205" font-size="26" font-family="PingFang SC, Microsoft YaHei, Arial" font-weight="700" fill="#102a43">模型输出</text>
+  <rect x="380" y="250" width="180" height="250" rx="20" fill="#eff6ff" stroke="#93c5fd"/>
+  <text x="430" y="302" font-size="24" font-family="PingFang SC, Microsoft YaHei, Arial" font-weight="700" fill="#1e3a8a">CoT 推理链</text>
+  <text x="404" y="352" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334e68">模型会写出一段</text>
+  <text x="391" y="382" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334e68">看起来合理的解释，</text>
+  <text x="396" y="412" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334e68">但它究竟只是“提到”</text>
+  <text x="399" y="442" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334e68">提示，还是“真正依赖”</text>
+  <text x="419" y="472" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334e68">提示，未必一致。</text>
+
+  <rect x="670" y="150" width="560" height="470" rx="24" fill="#ffffff" stroke="#d9e2ec"/>
+  <text x="892" y="205" font-size="26" font-family="PingFang SC, Microsoft YaHei, Arial" font-weight="700" fill="#102a43">三类评估器</text>
+
+  <rect x="710" y="250" width="145" height="250" rx="20" fill="#dbeafe"/>
+  <text x="742" y="300" font-size="22" font-family="PingFang SC, Microsoft YaHei, Arial" font-weight="700" fill="#1d4ed8">正则</text>
+  <text x="735" y="344" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#1e3a8a">看有没有直接</text>
+  <text x="735" y="374" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#1e3a8a">提到提示词</text>
+  <text x="734" y="424" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#486581">口径最窄，</text>
+  <text x="725" y="452" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#486581">容易漏掉隐性</text>
+  <text x="730" y="480" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#486581">依赖关系</text>
+
+  <rect x="878" y="250" width="145" height="250" rx="20" fill="#ccfbf1"/>
+  <text x="901" y="300" font-size="22" font-family="PingFang SC, Microsoft YaHei, Arial" font-weight="700" fill="#0f766e">流水线</text>
+  <text x="903" y="344" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#115e59">先正则，再用</text>
+  <text x="897" y="374" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#115e59">LLM 补判隐含提及</text>
+  <text x="905" y="424" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#486581">更容易把</text>
+  <text x="900" y="452" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#486581">“提到过”判成</text>
+  <text x="915" y="480" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#486581">“忠实”</text>
+
+  <rect x="1046" y="250" width="145" height="250" rx="20" fill="#ffedd5"/>
+  <text x="1083" y="300" font-size="22" font-family="PingFang SC, Microsoft YaHei, Arial" font-weight="700" fill="#c2410c">Judge</text>
+  <text x="1074" y="344" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#9a3412">追问提示是否</text>
+  <text x="1072" y="374" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#9a3412">真正支配结论</text>
+  <text x="1073" y="424" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#486581">口径更严，</text>
+  <text x="1070" y="452" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#486581">会否定不少仅有</text>
+  <text x="1080" y="480" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#486581">词面承认</text>
+
+  <path d="M270 385 L340 385" stroke="#829ab1" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M600 385 L670 385" stroke="#829ab1" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+
+  <rect x="74" y="662" width="1130" height="96" rx="18" fill="#eef2ff"/>
+  <text x="98" y="703" font-size="22" font-family="PingFang SC, Microsoft YaHei, Arial" font-weight="700" fill="#312e81">所以真正要报告的，不该只是一个“忠实度点数”，而应该是：</text>
+  <text x="98" y="738" font-size="20" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#312e81">你采用了哪种定义、哪套评估器、哪类压力场景，以及模型在这些口径下的敏感度区间与排名稳定性。</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#829ab1"/>
+    </marker>
+  </defs>
+</svg>

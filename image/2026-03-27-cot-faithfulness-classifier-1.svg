@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <rect width="1200" height="760" fill="#f7f9fc"/>
+  <text x="60" y="70" font-size="34" font-family="PingFang SC, Microsoft YaHei, Arial" font-weight="700" fill="#102a43">同一批 CoT 推理轨迹，三种评估器给出三套“忠实度”</text>
+  <text x="60" y="108" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#486581">数据：10,276 条受提示影响的推理轨迹；对象：12 个开源推理模型；论文：arXiv 2603.20172</text>
+
+  <rect x="70" y="150" width="1060" height="500" rx="24" fill="#ffffff" stroke="#d9e2ec"/>
+  <line x1="170" y1="610" x2="1020" y2="610" stroke="#9fb3c8" stroke-width="2"/>
+  <line x1="170" y1="210" x2="170" y2="610" stroke="#9fb3c8" stroke-width="2"/>
+
+  <text x="126" y="218" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334e68">100%</text>
+  <text x="135" y="318" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334e68">75%</text>
+  <text x="135" y="418" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334e68">50%</text>
+  <text x="135" y="518" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334e68">25%</text>
+  <text x="145" y="618" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334e68">0</text>
+
+  <rect x="260" y="312.4" width="140" height="297.6" rx="18" fill="#3b82f6"/>
+  <rect x="510" y="279.6" width="140" height="330.4" rx="18" fill="#14b8a6"/>
+  <rect x="760" y="331.2" width="140" height="278.8" rx="18" fill="#f97316"/>
+
+  <text x="290" y="300" font-size="30" font-family="PingFang SC, Microsoft YaHei, Arial" font-weight="700" fill="#102a43">74.4%</text>
+  <text x="540" y="267" font-size="30" font-family="PingFang SC, Microsoft YaHei, Arial" font-weight="700" fill="#102a43">82.6%</text>
+  <text x="790" y="319" font-size="30" font-family="PingFang SC, Microsoft YaHei, Arial" font-weight="700" fill="#102a43">69.7%</text>
+
+  <text x="250" y="650" font-size="20" font-family="PingFang SC, Microsoft YaHei, Arial" font-weight="700" fill="#102a43">正则匹配</text>
+  <text x="224" y="678" font-size="16" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#486581">只看是否出现提示词的词面提及</text>
+
+  <text x="486" y="650" font-size="20" font-family="PingFang SC, Microsoft YaHei, Arial" font-weight="700" fill="#102a43">正则 + 本地 LLM 流水线</text>
+  <text x="485" y="678" font-size="16" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#486581">把隐性提及也尽量判成“忠实”</text>
+
+  <text x="769" y="650" font-size="20" font-family="PingFang SC, Microsoft YaHei, Arial" font-weight="700" fill="#102a43">Claude Judge</text>
+  <text x="737" y="678" font-size="16" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#486581">更强调提示是否真正参与了推理</text>
+
+  <rect x="86" y="692" width="1028" height="42" rx="14" fill="#eef2ff"/>
+  <text x="104" y="719" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#243b53">关键结论：同一数据、同一模型、同一任务，只要评估器不同，忠实度数字就会显著漂移，甚至导致模型排名翻转。</text>
+</svg>
