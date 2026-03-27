@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#F7F8FC"/>
+  <rect x="60" y="50" width="1480" height="800" rx="28" fill="#FFFFFF" stroke="#D9E0F2" stroke-width="4"/>
+  <text x="100" y="120" font-size="44" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700" fill="#172554">ARRoL 的核心变化：把“生成完再判断”改成“边生成边裁剪”</text>
+  <text x="100" y="165" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#475569">目标不是少采样而已，而是让算力优先留给更值得活到最后、且更有训练价值的 rollout。</text>
+
+  <rect x="110" y="230" width="300" height="120" rx="24" fill="#E0ECFF" stroke="#7CA8FF" stroke-width="3"/>
+  <text x="260" y="280" text-anchor="middle" font-size="30" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700" fill="#1E3A8A">传统 RLVR</text>
+  <text x="260" y="320" text-anchor="middle" font-size="22" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#334155">先把整组 rollout 全部生成到结尾</text>
+
+  <rect x="490" y="230" width="300" height="120" rx="24" fill="#DBFCE7" stroke="#4CAF72" stroke-width="3"/>
+  <text x="640" y="280" text-anchor="middle" font-size="30" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700" fill="#166534">ARRoL 第一步</text>
+  <text x="640" y="320" text-anchor="middle" font-size="22" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#334155">生成到中段就做质量判断</text>
+
+  <rect x="870" y="230" width="300" height="120" rx="24" fill="#FFF4D6" stroke="#F2B94B" stroke-width="3"/>
+  <text x="1020" y="280" text-anchor="middle" font-size="30" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700" fill="#9A6700">ARRoL 第二步</text>
+  <text x="1020" y="320" text-anchor="middle" font-size="22" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#334155">按目标分布保留更值钱样本</text>
+
+  <rect x="1250" y="230" width="220" height="120" rx="24" fill="#FDE2E2" stroke="#E87B7B" stroke-width="3"/>
+  <text x="1360" y="280" text-anchor="middle" font-size="30" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700" fill="#991B1B">最终效果</text>
+  <text x="1360" y="320" text-anchor="middle" font-size="22" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#334155">更快且更会学</text>
+
+  <line x1="410" y1="290" x2="490" y2="290" stroke="#94A3B8" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="490,290 468,278 468,302" fill="#94A3B8"/>
+  <line x1="790" y1="290" x2="870" y2="290" stroke="#94A3B8" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="870,290 848,278 848,302" fill="#94A3B8"/>
+  <line x1="1170" y1="290" x2="1250" y2="290" stroke="#94A3B8" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="1250,290 1228,278 1228,302" fill="#94A3B8"/>
+
+  <rect x="120" y="430" width="620" height="310" rx="26" fill="#F8FBFF" stroke="#C7D7F6" stroke-width="3"/>
+  <text x="160" y="485" font-size="32" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700" fill="#1E3A8A">传统流程的问题</text>
+  <text x="170" y="545" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#334155">• 很多 rollout 在中途已经明显跑偏，却还要把 token 烧到底</text>
+  <text x="170" y="595" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#334155">• 组内经常“几乎全对”或“几乎全错”，梯度信息反而变弱</text>
+  <text x="170" y="645" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#334155">• 省下的往往只是后处理，最贵的生成阶段仍然照常发生</text>
+  <text x="170" y="695" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#334155">• 算力花在“已经不值得继续”的轨迹上，训练账单持续膨胀</text>
+
+  <rect x="790" y="430" width="690" height="310" rx="26" fill="#F6FFFB" stroke="#9BD5B0" stroke-width="3"/>
+  <text x="830" y="485" font-size="32" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700" fill="#166534">ARRoL 的三个关键动作</text>
+  <text x="840" y="545" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#334155">1. 用轻量质量头估计“这条部分轨迹最终答对的概率”</text>
+  <text x="840" y="595" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#334155">2. 在生成中途裁掉低价值 rollout，把资源释放给幸存者</text>
+  <text x="840" y="645" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#334155">3. 不只追求高分样本，还要把正负样本比例调向更有学习信号的区间</text>
+  <text x="840" y="695" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#334155">结果：同时优化“算力花在哪里”和“梯度从哪里来”</text>
+
+  <text x="100" y="805" font-size="22" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#64748B">图示要点：ARRoL 不是简单早停，而是在生成阶段就把“价值判断”和“样本平衡”一起前移。</text>
+</svg>
