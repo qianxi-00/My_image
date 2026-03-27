@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#f8fafc"/>
+  <text x="800" y="76" text-anchor="middle" font-size="34" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700" fill="#15233b">WildASR 把 Voice Agent 的 ASR 风险拆成三条独立退化轴</text>
+  <text x="800" y="118" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#55657d">真正有用的不是“平均分更高”，而是知道哪类环境、哪类人群、哪类语言现象会把系统打穿</text>
+
+  <rect x="130" y="205" width="380" height="420" rx="28" ry="28" fill="#fff7ed" stroke="#fb923c" stroke-width="4"/>
+  <text x="320" y="265" text-anchor="middle" font-size="30" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700" fill="#c2410c">一、环境退化</text>
+  <text x="320" y="315" text-anchor="middle" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#7c2d12">问的是“在哪里坏”</text>
+  <text x="180" y="382" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#7c2d12">• 混响：房间反射拉长音节</text>
+  <text x="180" y="422" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#7c2d12">• 远场：声源变远，辅音更难辨</text>
+  <text x="180" y="462" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#7c2d12">• 电话编码：8kHz 窄带压缩</text>
+  <text x="180" y="502" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#7c2d12">• 噪声间隙：长非语音段诱发幻觉补全</text>
+  <text x="180" y="542" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#7c2d12">• 削顶：爆音导致波形失真</text>
+  <text x="320" y="598" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#9a3412">关键风险：错的不是几个词，而是会生成“没说过的话”</text>
+
+  <rect x="610" y="205" width="380" height="420" rx="28" ry="28" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="4"/>
+  <text x="800" y="265" text-anchor="middle" font-size="30" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700" fill="#6d28d9">二、人口差异</text>
+  <text x="800" y="315" text-anchor="middle" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#5b21b6">问的是“谁会先坏”</text>
+  <text x="660" y="382" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#5b21b6">• 儿童语音：更高基频、更多犹豫与断裂</text>
+  <text x="660" y="422" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#5b21b6">• 老年语音：气息、嘶哑、震颤、慢速发音</text>
+  <text x="660" y="462" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#5b21b6">• 口音与区域差异：鲁棒性不能互相外推</text>
+  <text x="660" y="502" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#5b21b6">• 提示词改写也会改变误差分布</text>
+  <text x="800" y="598" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#7e22ce">关键风险：平均分掩盖了特定群体的系统性脆弱</text>
+
+  <rect x="1090" y="205" width="380" height="420" rx="28" ry="28" fill="#effdf5" stroke="#22c55e" stroke-width="4"/>
+  <text x="1280" y="265" text-anchor="middle" font-size="30" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700" fill="#15803d">三、语言多样性</text>
+  <text x="1280" y="315" text-anchor="middle" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#166534">问的是“说了什么样的话会坏”</text>
+  <text x="1140" y="382" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#166534">• 短句：转写极易被“自动补全”带偏</text>
+  <text x="1140" y="422" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#166534">• 截断：半句话会诱发完整幻觉句子</text>
+  <text x="1140" y="462" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#166534">• 夹码：多语言切换最容易被胡乱平滑</text>
+  <text x="1140" y="502" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#166534">• HER 能补 WER/CER 看不见的语义性伤害</text>
+  <text x="1280" y="598" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#166534">关键风险：系统会用语言先验，编出听起来合理但根本没说过的内容</text>
+
+  <rect x="305" y="700" width="990" height="110" rx="22" ry="22" fill="#0f172a"/>
+  <text x="800" y="750" text-anchor="middle" font-size="25" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700" fill="#ffffff">对 Voice Agent 来说，最危险的不是字错一点，而是 ASR 在退化条件下“语义幻觉补全”，把不存在的指令也转写出来</text>
+  <text x="800" y="788" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#dbeafe">因此上线策略不该只看 WER，而要同时看：分场景退化、群体鲁棒性、HER、拒答与人工回退机制</text>
+</svg>
