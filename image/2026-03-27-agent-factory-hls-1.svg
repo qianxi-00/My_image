@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <rect width="1400" height="900" fill="#f8fafc"/>
+  <text x="700" y="64" text-anchor="middle" font-size="34" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#0f172a" font-weight="700">Agent Factory for HLS：两阶段搜索工厂</text>
+  <text x="700" y="104" text-anchor="middle" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#475569">从高层算法描述出发，不只改代码，而是组织一整条“分解—综合—筛选—全局优化”链路</text>
+
+  <rect x="70" y="150" rx="20" ry="20" width="240" height="110" fill="#dbeafe" stroke="#60a5fa" stroke-width="3"/>
+  <text x="190" y="192" text-anchor="middle" font-size="24" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#1e3a8a" font-weight="700">输入设计</text>
+  <text x="190" y="228" text-anchor="middle" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#1e40af">C/C++ 高层算法</text>
+
+  <rect x="370" y="150" rx="20" ry="20" width="300" height="110" fill="#e0f2fe" stroke="#38bdf8" stroke-width="3"/>
+  <text x="520" y="190" text-anchor="middle" font-size="24" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#0c4a6e" font-weight="700">Stage 1：子内核拆分</text>
+  <text x="520" y="224" text-anchor="middle" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#075985">按函数/子模块拆解搜索空间</text>
+
+  <rect x="730" y="150" rx="20" ry="20" width="300" height="110" fill="#ecfeff" stroke="#22d3ee" stroke-width="3"/>
+  <text x="880" y="188" text-anchor="middle" font-size="24" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#155e75" font-weight="700">局部优化 Agent 群</text>
+  <text x="880" y="218" text-anchor="middle" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#0e7490">pragma 组合 / 代码改写</text>
+  <text x="880" y="242" text-anchor="middle" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#0e7490">正确性检查 + HLS 综合</text>
+
+  <rect x="1090" y="150" rx="20" ry="20" width="240" height="110" fill="#f0fdf4" stroke="#4ade80" stroke-width="3"/>
+  <text x="1210" y="190" text-anchor="middle" font-size="24" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#166534" font-weight="700">ILP 筛选</text>
+  <text x="1210" y="224" text-anchor="middle" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#15803d">在面积约束下</text>
+  <text x="1210" y="246" text-anchor="middle" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#15803d">组装候选全局方案</text>
+
+  <path d="M310 205 L370 205" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M670 205 L730 205" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M1030 205 L1090 205" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="160" y="360" rx="24" ry="24" width="1080" height="340" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+  <text x="700" y="408" text-anchor="middle" font-size="28" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#111827" font-weight="700">Stage 2：全局搜索不是继续堆参数，而是继续堆“探索路径”</text>
+  <text x="700" y="446" text-anchor="middle" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#475569">从前一阶段筛出的 Top-N 候选方案出发，同时派出多个专家 Agent，寻找跨函数的全局优化机会</text>
+
+  <rect x="230" y="500" rx="18" ry="18" width="220" height="120" fill="#fef3c7" stroke="#f59e0b" stroke-width="3"/>
+  <text x="340" y="548" text-anchor="middle" font-size="22" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#92400e" font-weight="700">专家 Agent A</text>
+  <text x="340" y="582" text-anchor="middle" font-size="17" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#b45309">pragma 重组</text>
+
+  <rect x="480" y="500" rx="18" ry="18" width="220" height="120" fill="#fde68a" stroke="#f59e0b" stroke-width="3"/>
+  <text x="590" y="548" text-anchor="middle" font-size="22" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#92400e" font-weight="700">专家 Agent B</text>
+  <text x="590" y="582" text-anchor="middle" font-size="17" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#b45309">循环融合 / 重排</text>
+
+  <rect x="730" y="500" rx="18" ry="18" width="220" height="120" fill="#fde68a" stroke="#f59e0b" stroke-width="3"/>
+  <text x="840" y="548" text-anchor="middle" font-size="22" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#92400e" font-weight="700">专家 Agent C</text>
+  <text x="840" y="582" text-anchor="middle" font-size="17" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#b45309">内存重构 / 分区</text>
+
+  <rect x="980" y="500" rx="18" ry="18" width="220" height="120" fill="#fef3c7" stroke="#f59e0b" stroke-width="3"/>
+  <text x="1090" y="548" text-anchor="middle" font-size="22" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#92400e" font-weight="700">专家 Agent N</text>
+  <text x="1090" y="582" text-anchor="middle" font-size="17" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#b45309">跨函数联合优化</text>
+
+  <path d="M340 470 L340 500" stroke="#94a3b8" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M590 470 L590 500" stroke="#94a3b8" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M840 470 L840 500" stroke="#94a3b8" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M1090 470 L1090 500" stroke="#94a3b8" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="480" y="740" rx="20" ry="20" width="440" height="92" fill="#dcfce7" stroke="#22c55e" stroke-width="3"/>
+  <text x="700" y="778" text-anchor="middle" font-size="24" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#166534" font-weight="700">输出：更优的面积—延迟 Pareto 前沿</text>
+  <text x="700" y="808" text-anchor="middle" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#15803d">重点不是生成一份代码，而是持续找出更好的设计点</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#64748b"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <rect width="1400" height="900" fill="#f8fafc"/>
+  <text x="700" y="64" text-anchor="middle" font-size="34" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#0f172a" font-weight="700">AI 编程 Agent 的边界正在变化</text>
+  <text x="700" y="104" text-anchor="middle" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#475569">从“修一个 PR / 补一个函数”走向“在编译器、综合器与硬件约束之间组织大规模搜索”</text>
+
+  <rect x="90" y="160" width="540" height="620" rx="28" ry="28" fill="#eff6ff" stroke="#60a5fa" stroke-width="4"/>
+  <rect x="770" y="160" width="540" height="620" rx="28" ry="28" fill="#f0fdf4" stroke="#4ade80" stroke-width="4"/>
+
+  <text x="360" y="220" text-anchor="middle" font-size="30" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#1d4ed8" font-weight="700">传统 AI 编程 Agent</text>
+  <text x="1040" y="220" text-anchor="middle" font-size="30" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#15803d" font-weight="700">HLS Agent Factory</text>
+
+  <text x="150" y="300" font-size="22" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#1e3a8a" font-weight="700">目标函数</text>
+  <text x="150" y="340" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334155">• 代码正确</text>
+  <text x="150" y="372" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334155">• 测试通过</text>
+  <text x="150" y="404" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334155">• PR 可合并</text>
+
+  <text x="830" y="300" font-size="22" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#166534" font-weight="700">目标函数</text>
+  <text x="830" y="340" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334155">• 面积—延迟更优</text>
+  <text x="830" y="372" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334155">• 时序 / 资源约束满足</text>
+  <text x="830" y="404" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334155">• Pareto 前沿尽量外扩</text>
+
+  <text x="150" y="490" font-size="22" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#1e3a8a" font-weight="700">反馈来源</text>
+  <text x="150" y="530" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334155">• 编译器</text>
+  <text x="150" y="562" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334155">• 单元测试</text>
+  <text x="150" y="594" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334155">• 运行日志</text>
+
+  <text x="830" y="490" font-size="22" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#166534" font-weight="700">反馈来源</text>
+  <text x="830" y="530" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334155">• HLS 综合报告</text>
+  <text x="830" y="562" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334155">• 面积 / 时序 / 延迟</text>
+  <text x="830" y="594" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334155">• 跨函数全局约束</text>
+
+  <text x="150" y="680" font-size="22" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#1e3a8a" font-weight="700">搜索方式</text>
+  <text x="150" y="720" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334155">• 一条主轨迹为主</text>
+  <text x="150" y="752" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334155">• 局部修补和回归</text>
+
+  <text x="830" y="680" font-size="22" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#166534" font-weight="700">搜索方式</text>
+  <text x="830" y="720" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334155">• 子内核并行探索</text>
+  <text x="830" y="752" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334155">• 多专家 Agent 继续全局扩搜</text>
+
+  <text x="700" y="850" text-anchor="middle" font-size="22" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#111827" font-weight="700">结论：AI 编程 Agent 不再只回答“代码能不能跑”，而开始回答“系统在约束下还能不能更优”</text>
+</svg>
