@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#F7F8FC"/>
+  <rect x="60" y="48" width="1480" height="126" rx="24" fill="#111827"/>
+  <text x="102" y="112" font-size="44" font-weight="700" fill="#FFFFFF" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">自动驾驶 VLA 的新拐点：从“平均司机”走向“听你怎么开”</text>
+  <text x="102" y="160" font-size="24" fill="#D1D5DB" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">同样是语言进入驾驶控制，Vega 解决“你现在想怎么开”，DMW 进一步解决“你一贯习惯怎么开”</text>
+
+  <rect x="86" y="225" width="438" height="500" rx="26" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="2"/>
+  <text x="122" y="278" font-size="34" font-weight="700" fill="#111827" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">旧范式：平均策略</text>
+  <rect x="122" y="312" width="300" height="56" rx="14" fill="#E5E7EB"/>
+  <text x="146" y="349" font-size="25" fill="#111827" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">输入：相机 + 导航 + 历史轨迹</text>
+  <rect x="122" y="388" width="300" height="56" rx="14" fill="#DBEAFE"/>
+  <text x="146" y="425" font-size="25" fill="#1D4ED8" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">目标：模仿“平均专家”</text>
+  <rect x="122" y="464" width="300" height="56" rx="14" fill="#FEE2E2"/>
+  <text x="146" y="501" font-size="25" fill="#B91C1C" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">短板：很难表达个体差异</text>
+  <text x="122" y="580" font-size="25" fill="#6B7280" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">它擅长安全、稳健、可复制，</text>
+  <text x="122" y="618" font-size="25" fill="#6B7280" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">却天然把所有乘客压成“同一种开法”。</text>
+
+  <rect x="582" y="225" width="438" height="500" rx="26" fill="#FFFFFF" stroke="#93C5FD" stroke-width="3"/>
+  <text x="618" y="278" font-size="34" font-weight="700" fill="#111827" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">Vega：指令驾驶</text>
+  <rect x="618" y="312" width="324" height="56" rx="14" fill="#E0F2FE"/>
+  <text x="642" y="349" font-size="25" fill="#075985" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">输入：视觉 + 自然语言指令</text>
+  <rect x="618" y="388" width="324" height="56" rx="14" fill="#DBEAFE"/>
+  <text x="642" y="425" font-size="25" fill="#1D4ED8" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">方法：世界建模 + 轨迹规划联合学习</text>
+  <rect x="618" y="464" width="324" height="56" rx="14" fill="#DCFCE7"/>
+  <text x="642" y="501" font-size="25" fill="#166534" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">解决：此刻“你希望怎么开”</text>
+  <text x="618" y="580" font-size="25" fill="#6B7280" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">它把自动驾驶从固定导航命令，</text>
+  <text x="618" y="618" font-size="25" fill="#6B7280" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">推进到可理解开放自然语言意图。</text>
+
+  <rect x="1078" y="225" width="438" height="500" rx="26" fill="#FFFFFF" stroke="#C4B5FD" stroke-width="3"/>
+  <text x="1114" y="278" font-size="34" font-weight="700" fill="#111827" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">DMW：个性化驾驶</text>
+  <rect x="1114" y="312" width="322" height="56" rx="14" fill="#F3E8FF"/>
+  <text x="1138" y="349" font-size="25" fill="#7E22CE" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">输入：视觉 + 指令 + 用户画像</text>
+  <rect x="1114" y="388" width="322" height="56" rx="14" fill="#EDE9FE"/>
+  <text x="1138" y="425" font-size="25" fill="#6D28D9" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">方法：用户嵌入 + GRPO 风格对齐</text>
+  <rect x="1114" y="464" width="322" height="56" rx="14" fill="#FEF3C7"/>
+  <text x="1138" y="501" font-size="25" fill="#92400E" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">解决：长期“你一贯怎么开”</text>
+  <text x="1114" y="580" font-size="25" fill="#6B7280" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">它让驾驶策略不再只服从平均值，</text>
+  <text x="1114" y="618" font-size="25" fill="#6B7280" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">而开始对齐真实人的长期风格偏好。</text>
+
+  <rect x="120" y="760" width="1360" height="96" rx="22" fill="#111827"/>
+  <text x="160" y="818" font-size="30" font-weight="700" fill="#FFFFFF" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">结论</text>
+  <text x="250" y="818" font-size="28" fill="#E5E7EB" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">自动驾驶下一阶段的关键，不只是“更安全的平均策略”，而是把</text>
+  <text x="250" y="852" font-size="28" fill="#E5E7EB" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">开放语言意图、长期驾驶习惯与闭环世界建模同时写进控制栈。</text>
+</svg>
