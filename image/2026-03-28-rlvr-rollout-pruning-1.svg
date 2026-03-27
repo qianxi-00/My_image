@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#f8fafc"/>
+  <text x="800" y="58" text-anchor="middle" font-size="34" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#0f172a" font-weight="700">RLVR 训练为什么越来越贵：从“全量 rollout”到“边生成边裁剪”</text>
+
+  <rect x="70" y="120" width="680" height="700" rx="28" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+  <text x="410" y="168" text-anchor="middle" font-size="30" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#7c2d12" font-weight="700">传统 RLVR / GRPO / DAPO 路线</text>
+  <text x="410" y="206" text-anchor="middle" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#475569">一个 prompt 先完整采样一大组 rollout，再统一算奖励与优势</text>
+
+  <rect x="125" y="245" width="560" height="92" rx="20" fill="#fff7ed" stroke="#fdba74" stroke-width="2"/>
+  <text x="405" y="283" text-anchor="middle" font-size="26" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#9a3412" font-weight="700">步骤 1：一次生成 16 条以上完整 rollout</text>
+  <text x="405" y="317" text-anchor="middle" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#7c2d12">大部分 token 会在“最终没用上”的错误轨迹上白白烧掉</text>
+
+  <rect x="125" y="382" width="560" height="120" rx="20" fill="#fff1f2" stroke="#fda4af" stroke-width="2"/>
+  <text x="405" y="420" text-anchor="middle" font-size="26" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#9f1239" font-weight="700">步骤 2：奖励常常失衡</text>
+  <text x="405" y="456" text-anchor="middle" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#881337">一组样本经常几乎全对或全错</text>
+  <text x="405" y="486" text-anchor="middle" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#881337">组内方差变小，归一化优势接近 0，学习信号变弱</text>
+
+  <rect x="125" y="548" width="560" height="170" rx="20" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="405" y="586" text-anchor="middle" font-size="26" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#1d4ed8" font-weight="700">后果：成本与信号一起恶化</text>
+  <text x="405" y="624" text-anchor="middle" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#1e40af">• 生成阶段最贵，但大多数工作要到最后才知道值不值</text>
+  <text x="405" y="656" text-anchor="middle" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#1e40af">• 后处理再裁剪，只能省更新成本，省不了前面的大头</text>
+  <text x="405" y="688" text-anchor="middle" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#1e40af">• 训练越来越像“多花算力换更多重复轨迹”</text>
+
+  <rect x="850" y="120" width="680" height="700" rx="28" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+  <text x="1190" y="168" text-anchor="middle" font-size="30" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#166534" font-weight="700">ARRoL：在线 rollout 裁剪</text>
+  <text x="1190" y="206" text-anchor="middle" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#475569">在生成中途先判断“这条轨迹值不值得继续烧 token”</text>
+
+  <rect x="905" y="245" width="560" height="96" rx="20" fill="#ecfdf5" stroke="#86efac" stroke-width="2"/>
+  <text x="1185" y="282" text-anchor="middle" font-size="26" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#166534" font-weight="700">步骤 1：生成到检测长度（如 512 token）</text>
+  <text x="1185" y="316" text-anchor="middle" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#166534">轻量 quality head 读取部分 rollout，估计“最终答对概率”</text>
+
+  <rect x="905" y="382" width="560" height="130" rx="20" fill="#f0fdf4" stroke="#4ade80" stroke-width="2"/>
+  <text x="1185" y="420" text-anchor="middle" font-size="26" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#15803d" font-weight="700">步骤 2：裁掉一半左右低价值轨迹</text>
+  <text x="1185" y="456" text-anchor="middle" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#166534">目标不是只留“最像正确”的，而是把留下来的样本调得更均衡</text>
+  <text x="1185" y="486" text-anchor="middle" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#166534">让正负样本比例更接近 0.5，放大学习信号</text>
+
+  <rect x="905" y="548" width="560" height="170" rx="20" fill="#eff6ff" stroke="#60a5fa" stroke-width="2"/>
+  <text x="1185" y="586" text-anchor="middle" font-size="26" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#1d4ed8" font-weight="700">结果：少生成、少回传、少更新，但学得更快</text>
+  <text x="1185" y="624" text-anchor="middle" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#1e3a8a">• 训练端最高约 1.7× 加速</text>
+  <text x="1185" y="656" text-anchor="middle" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#1e3a8a">• 平均准确率还能提升约 2.3 到 3.0 点</text>
+  <text x="1185" y="688" text-anchor="middle" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#1e3a8a">• 同一套 quality head 还能拿去做测试时加权投票</text>
+
+  <line x1="750" y1="470" x2="850" y2="470" stroke="#94a3b8" stroke-width="5" marker-end="url(#arrow)"/>
+  <text x="800" y="446" text-anchor="middle" font-size="18" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#475569">关键转向</text>
+  <text x="800" y="496" text-anchor="middle" font-size="16" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#64748b">从“生成完再算”</text>
+  <text x="800" y="520" text-anchor="middle" font-size="16" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#64748b">到“边生成边筛”</text>
+
+  <rect x="410" y="760" width="780" height="82" rx="18" fill="#0f172a"/>
+  <text x="800" y="802" text-anchor="middle" font-size="22" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#f8fafc" font-weight="700">真正变化：RLVR 的优化目标，开始从“更多 rollout”转向“更值钱的 rollout”</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>
