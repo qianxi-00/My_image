@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#f8fafc"/>
+  <text x="800" y="90" text-anchor="middle" font-size="38" font-weight="700" fill="#0f172a">代码智能体在长期迭代中的典型退化链</text>
+  <text x="800" y="135" text-anchor="middle" font-size="18" fill="#475569">SlopCodeBench 想测的不是“这一轮能不能过”，而是“下一轮会不会因为上一轮的设计选择越改越难”</text>
+
+  <rect x="90" y="240" rx="26" ry="26" width="220" height="150" fill="#dbeafe" stroke="#60a5fa" stroke-width="3"/>
+  <text x="200" y="290" text-anchor="middle" font-size="28" font-weight="700" fill="#1d4ed8">新需求到来</text>
+  <text x="200" y="335" text-anchor="middle" font-size="18" fill="#1e3a8a">规格继续变化</text>
+  <text x="200" y="365" text-anchor="middle" font-size="18" fill="#1e3a8a">但 agent 只能接着</text>
+  <text x="200" y="395" text-anchor="middle" font-size="18" fill="#1e3a8a">修改自己上一轮代码</text>
+
+  <rect x="370" y="240" rx="26" ry="26" width="220" height="150" fill="#e0e7ff" stroke="#818cf8" stroke-width="3"/>
+  <text x="480" y="290" text-anchor="middle" font-size="28" font-weight="700" fill="#4338ca">局部补丁化</text>
+  <text x="480" y="335" text-anchor="middle" font-size="18" fill="#3730a3">先保当前 checkpoint</text>
+  <text x="480" y="365" text-anchor="middle" font-size="18" fill="#3730a3">再说整体结构</text>
+  <text x="480" y="395" text-anchor="middle" font-size="18" fill="#3730a3">重构意愿不足</text>
+
+  <rect x="650" y="240" rx="26" ry="26" width="220" height="150" fill="#ede9fe" stroke="#a78bfa" stroke-width="3"/>
+  <text x="760" y="290" text-anchor="middle" font-size="28" font-weight="700" fill="#6d28d9">冗余快速增长</text>
+  <text x="760" y="335" text-anchor="middle" font-size="18" fill="#5b21b6">复制旧分支</text>
+  <text x="760" y="365" text-anchor="middle" font-size="18" fill="#5b21b6">堆条件判断</text>
+  <text x="760" y="395" text-anchor="middle" font-size="18" fill="#5b21b6">新增代码多于必要量</text>
+
+  <rect x="930" y="240" rx="26" ry="26" width="220" height="150" fill="#fae8ff" stroke="#e879f9" stroke-width="3"/>
+  <text x="1040" y="290" text-anchor="middle" font-size="28" font-weight="700" fill="#a21caf">复杂度侵蚀</text>
+  <text x="1040" y="335" text-anchor="middle" font-size="18" fill="#86198f">高复杂度函数</text>
+  <text x="1040" y="365" text-anchor="middle" font-size="18" fill="#86198f">吸走越来越多</text>
+  <text x="1040" y="395" text-anchor="middle" font-size="18" fill="#86198f">决策与控制负担</text>
+
+  <rect x="1210" y="240" rx="26" ry="26" width="300" height="150" fill="#fee2e2" stroke="#f87171" stroke-width="3"/>
+  <text x="1360" y="290" text-anchor="middle" font-size="28" font-weight="700" fill="#b91c1c">后续迭代越来越钝</text>
+  <text x="1360" y="335" text-anchor="middle" font-size="18" fill="#991b1b">改一处牵一片</text>
+  <text x="1360" y="365" text-anchor="middle" font-size="18" fill="#991b1b">成本上升但正确率不涨</text>
+  <text x="1360" y="395" text-anchor="middle" font-size="18" fill="#991b1b">最终无法持续扩展</text>
+
+  <g stroke="#64748b" stroke-width="4" fill="none" marker-end="url(#arrow)">
+    <path d="M310 315 L370 315"/>
+    <path d="M590 315 L650 315"/>
+    <path d="M870 315 L930 315"/>
+    <path d="M1150 315 L1210 315"/>
+  </g>
+
+  <rect x="120" y="520" rx="24" ry="24" width="1360" height="250" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="180" y="575" font-size="28" font-weight="700" fill="#0f172a">SlopCodeBench 给出的三条关键信号</text>
+
+  <circle cx="195" cy="640" r="8" fill="#2563eb"/>
+  <text x="220" y="647" font-size="22" fill="#1e293b">没有任何 agent 能把 20 个问题端到端全部做完；最高 checkpoint solve rate 只有 17.2%</text>
+
+  <circle cx="195" cy="690" r="8" fill="#7c3aed"/>
+  <text x="220" y="697" font-size="22" fill="#1e293b">80% 的轨迹里结构侵蚀上升，89.8% 的轨迹里冗余度上升</text>
+
+  <circle cx="195" cy="740" r="8" fill="#dc2626"/>
+  <text x="220" y="747" font-size="22" fill="#1e293b">和 48 个开源 Python 仓库相比，agent 代码平均更冗余，整体约高 2.2 倍</text>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+</svg>

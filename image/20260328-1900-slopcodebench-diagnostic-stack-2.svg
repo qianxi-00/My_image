@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#f8fafc"/>
+  <text x="800" y="88" text-anchor="middle" font-size="38" font-weight="700" fill="#0f172a">为什么“能过一次”不等于“以后还能改得动”</text>
+  <text x="800" y="132" text-anchor="middle" font-size="18" fill="#475569">把 SlopCodeBench、TRAJEVAL、Specification Gap 和 SWE-CI 放在一起看，代码智能体真正缺的是长期设计纪律</text>
+
+  <rect x="110" y="210" rx="26" ry="26" width="300" height="430" fill="#dbeafe" stroke="#60a5fa" stroke-width="3"/>
+  <text x="260" y="265" text-anchor="middle" font-size="30" font-weight="700" fill="#1d4ed8">SlopCodeBench</text>
+  <text x="260" y="310" text-anchor="middle" font-size="20" fill="#1e3a8a">看长期自我迭代后</text>
+  <text x="260" y="340" text-anchor="middle" font-size="20" fill="#1e3a8a">代码会不会变“越写越散”</text>
+  <line x1="150" y1="380" x2="370" y2="380" stroke="#93c5fd" stroke-width="2"/>
+  <text x="260" y="430" text-anchor="middle" font-size="22" fill="#0f172a">核心信号</text>
+  <text x="260" y="470" text-anchor="middle" font-size="19" fill="#334155">冗余度 Verbosity</text>
+  <text x="260" y="505" text-anchor="middle" font-size="19" fill="#334155">结构侵蚀 Erosion</text>
+  <text x="260" y="555" text-anchor="middle" font-size="18" fill="#475569">关注结果之外的</text>
+  <text x="260" y="583" text-anchor="middle" font-size="18" fill="#475569">代码演化质量</text>
+
+  <rect x="460" y="210" rx="26" ry="26" width="300" height="430" fill="#ede9fe" stroke="#a78bfa" stroke-width="3"/>
+  <text x="610" y="265" text-anchor="middle" font-size="30" font-weight="700" fill="#6d28d9">TRAJEVAL</text>
+  <text x="610" y="310" text-anchor="middle" font-size="20" fill="#5b21b6">把轨迹拆成</text>
+  <text x="610" y="340" text-anchor="middle" font-size="20" fill="#5b21b6">搜索 / 阅读 / 编辑</text>
+  <line x1="500" y1="380" x2="720" y2="380" stroke="#c4b5fd" stroke-width="2"/>
+  <text x="610" y="430" text-anchor="middle" font-size="22" fill="#0f172a">核心信号</text>
+  <text x="610" y="470" text-anchor="middle" font-size="19" fill="#334155">所有 agent 都会</text>
+  <text x="610" y="500" text-anchor="middle" font-size="19" fill="#334155">多看约 22 倍无关函数</text>
+  <text x="610" y="550" text-anchor="middle" font-size="18" fill="#475569">说明失败不只在最后 patch</text>
+  <text x="610" y="578" text-anchor="middle" font-size="18" fill="#475569">而是前面检索与理解就偏了</text>
+
+  <rect x="810" y="210" rx="26" ry="26" width="300" height="430" fill="#fae8ff" stroke="#e879f9" stroke-width="3"/>
+  <text x="960" y="265" text-anchor="middle" font-size="30" font-weight="700" fill="#a21caf">Specification Gap</text>
+  <text x="960" y="310" text-anchor="middle" font-size="20" fill="#86198f">多人/多代理协作时</text>
+  <text x="960" y="340" text-anchor="middle" font-size="20" fill="#86198f">缺规格会直接放大冲突</text>
+  <line x1="850" y1="380" x2="1070" y2="380" stroke="#f0abfc" stroke-width="2"/>
+  <text x="960" y="430" text-anchor="middle" font-size="22" fill="#0f172a">核心信号</text>
+  <text x="960" y="470" text-anchor="middle" font-size="19" fill="#334155">双 agent 集成准确率</text>
+  <text x="960" y="500" text-anchor="middle" font-size="19" fill="#334155">会随规格抽空显著下滑</text>
+  <text x="960" y="550" text-anchor="middle" font-size="18" fill="#475569">说明很多“智能协作”问题</text>
+  <text x="960" y="578" text-anchor="middle" font-size="18" fill="#475569">本质上仍是决策对齐问题</text>
+
+  <rect x="1160" y="210" rx="26" ry="26" width="330" height="430" fill="#fee2e2" stroke="#f87171" stroke-width="3"/>
+  <text x="1325" y="265" text-anchor="middle" font-size="30" font-weight="700" fill="#b91c1c">SWE-CI</text>
+  <text x="1325" y="310" text-anchor="middle" font-size="20" fill="#991b1b">把代码维护带回</text>
+  <text x="1325" y="340" text-anchor="middle" font-size="20" fill="#991b1b">真实仓库与持续集成循环</text>
+  <line x1="1200" y1="380" x2="1450" y2="380" stroke="#fca5a5" stroke-width="2"/>
+  <text x="1325" y="430" text-anchor="middle" font-size="22" fill="#0f172a">核心信号</text>
+  <text x="1325" y="470" text-anchor="middle" font-size="19" fill="#334155">平均 233 天</text>
+  <text x="1325" y="500" text-anchor="middle" font-size="19" fill="#334155">71 次连续提交演化</text>
+  <text x="1325" y="550" text-anchor="middle" font-size="18" fill="#475569">提醒行业别再只用一次性修复</text>
+  <text x="1325" y="578" text-anchor="middle" font-size="18" fill="#475569">来代表真实软件维护能力</text>
+
+  <rect x="250" y="710" rx="28" ry="28" width="1100" height="120" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="800" y="760" text-anchor="middle" font-size="30" font-weight="700" fill="#0f172a">共同结论：代码智能体缺的不是“再多生成一点”，而是长期设计纪律</text>
+  <text x="800" y="803" text-anchor="middle" font-size="21" fill="#334155">要同时守住规格澄清、信息检索、结构重构、协作对齐和连续维护，否则每轮看似过关，长期却越来越钝</text>
+</svg>
