@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980">
+  <rect width="1600" height="980" fill="#f7f9fc"/>
+  <rect x="48" y="36" width="1504" height="112" rx="24" fill="#111827"/>
+  <text x="800" y="92" text-anchor="middle" font-size="38" font-weight="700" fill="#ffffff" font-family="Microsoft YaHei, PingFang SC, sans-serif">BizGenEval 的核心不是“再做一个榜单”</text>
+  <text x="800" y="132" text-anchor="middle" font-size="24" fill="#cbd5e1" font-family="Microsoft YaHei, PingFang SC, sans-serif">它第一次把商业视觉内容生成拆成“5 类文档 × 4 类能力”的系统评测矩阵</text>
+
+  <rect x="80" y="188" width="250" height="82" rx="16" fill="#1d4ed8"/>
+  <text x="205" y="238" text-anchor="middle" font-size="28" font-weight="700" fill="#ffffff" font-family="Microsoft YaHei, PingFang SC, sans-serif">内容域</text>
+
+  <rect x="360" y="188" width="280" height="82" rx="16" fill="#0f766e"/>
+  <text x="500" y="238" text-anchor="middle" font-size="26" font-weight="700" fill="#ffffff" font-family="Microsoft YaHei, PingFang SC, sans-serif">文本渲染</text>
+
+  <rect x="660" y="188" width="280" height="82" rx="16" fill="#7c3aed"/>
+  <text x="800" y="238" text-anchor="middle" font-size="26" font-weight="700" fill="#ffffff" font-family="Microsoft YaHei, PingFang SC, sans-serif">布局控制</text>
+
+  <rect x="960" y="188" width="280" height="82" rx="16" fill="#b45309"/>
+  <text x="1100" y="238" text-anchor="middle" font-size="26" font-weight="700" fill="#ffffff" font-family="Microsoft YaHei, PingFang SC, sans-serif">属性绑定</text>
+
+  <rect x="1260" y="188" width="260" height="82" rx="16" fill="#be123c"/>
+  <text x="1390" y="238" text-anchor="middle" font-size="26" font-weight="700" fill="#ffffff" font-family="Microsoft YaHei, PingFang SC, sans-serif">知识推理</text>
+
+  <g font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="24" fill="#0f172a">
+    <rect x="80" y="294" width="250" height="92" rx="18" fill="#dbeafe" stroke="#93c5fd"/>
+    <text x="205" y="350" text-anchor="middle" font-size="28" font-weight="700">幻灯片</text>
+
+    <rect x="80" y="406" width="250" height="92" rx="18" fill="#dcfce7" stroke="#86efac"/>
+    <text x="205" y="462" text-anchor="middle" font-size="28" font-weight="700">网页</text>
+
+    <rect x="80" y="518" width="250" height="92" rx="18" fill="#fef3c7" stroke="#fcd34d"/>
+    <text x="205" y="574" text-anchor="middle" font-size="28" font-weight="700">海报</text>
+
+    <rect x="80" y="630" width="250" height="92" rx="18" fill="#fee2e2" stroke="#fca5a5"/>
+    <text x="205" y="686" text-anchor="middle" font-size="28" font-weight="700">图表</text>
+
+    <rect x="80" y="742" width="250" height="92" rx="18" fill="#ede9fe" stroke="#c4b5fd"/>
+    <text x="205" y="798" text-anchor="middle" font-size="28" font-weight="700">科学插图</text>
+  </g>
+
+  <g font-family="Microsoft YaHei, PingFang SC, sans-serif" fill="#0f172a" font-size="21">
+    <!-- row 1 -->
+    <rect x="360" y="294" width="280" height="92" rx="18" fill="#ecfeff" stroke="#67e8f9"/>
+    <text x="500" y="338" text-anchor="middle" font-weight="700">长标题、段落、项目符号</text>
+    <text x="500" y="366" text-anchor="middle">看的是字符正确率</text>
+
+    <rect x="660" y="294" width="280" height="92" rx="18" fill="#f5f3ff" stroke="#c4b5fd"/>
+    <text x="800" y="338" text-anchor="middle" font-weight="700">分栏、层级、箭头、对齐</text>
+    <text x="800" y="366" text-anchor="middle">看的是结构是否守约束</text>
+
+    <rect x="960" y="294" width="280" height="92" rx="18" fill="#fff7ed" stroke="#fdba74"/>
+    <text x="1100" y="338" text-anchor="middle" font-weight="700">颜色、数量、形状、图标</text>
+    <text x="1100" y="366" text-anchor="middle">看的是元素属性是否绑定正确</text>
+
+    <rect x="1260" y="294" width="260" height="92" rx="18" fill="#fff1f2" stroke="#fda4af"/>
+    <text x="1390" y="338" text-anchor="middle" font-weight="700">事实与概念是否成立</text>
+    <text x="1390" y="366" text-anchor="middle">不是“像”，而是“对”</text>
+
+    <!-- row 2 -->
+    <rect x="360" y="406" width="280" height="92" rx="18" fill="#ecfeff" stroke="#67e8f9"/>
+    <text x="500" y="450" text-anchor="middle" font-weight="700">导航、按钮、段落密集排版</text>
+    <text x="500" y="478" text-anchor="middle">考的是可读与可点击逻辑</text>
+
+    <rect x="660" y="406" width="280" height="92" rx="18" fill="#f5f3ff" stroke="#c4b5fd"/>
+    <text x="800" y="450" text-anchor="middle" font-weight="700">模块边界、留白、层级折叠</text>
+    <text x="800" y="478" text-anchor="middle">网页不是拼贴图，而是信息架构</text>
+
+    <rect x="960" y="406" width="280" height="92" rx="18" fill="#fff7ed" stroke="#fdba74"/>
+    <text x="1100" y="450" text-anchor="middle" font-weight="700">品牌色、组件风格、图标一致性</text>
+    <text x="1100" y="478" text-anchor="middle">要求全页不能自相矛盾</text>
+
+    <rect x="1260" y="406" width="260" height="92" rx="18" fill="#fff1f2" stroke="#fda4af"/>
+    <text x="1390" y="450" text-anchor="middle" font-weight="700">文案与页面语义要匹配</text>
+    <text x="1390" y="478" text-anchor="middle">不能只像模板站截图</text>
+
+    <!-- row 3 -->
+    <rect x="360" y="518" width="280" height="92" rx="18" fill="#ecfeff" stroke="#67e8f9"/>
+    <text x="500" y="562" text-anchor="middle" font-weight="700">口号、卖点、价格、说明文案</text>
+    <text x="500" y="590" text-anchor="middle">海报最怕错字和漏字</text>
+
+    <rect x="660" y="518" width="280" height="92" rx="18" fill="#f5f3ff" stroke="#c4b5fd"/>
+    <text x="800" y="562" text-anchor="middle" font-weight="700">视觉中心、信息主次、版面平衡</text>
+    <text x="800" y="590" text-anchor="middle">不是只会堆元素</text>
+
+    <rect x="960" y="518" width="280" height="92" rx="18" fill="#fff7ed" stroke="#fdba74"/>
+    <text x="1100" y="562" text-anchor="middle" font-weight="700">配色、物料数量、品牌素材组合</text>
+    <text x="1100" y="590" text-anchor="middle">检验约束是否真正落地</text>
+
+    <rect x="1260" y="518" width="260" height="92" rx="18" fill="#fff1f2" stroke="#fda4af"/>
+    <text x="1390" y="562" text-anchor="middle" font-weight="700">主题概念是否有常识支撑</text>
+    <text x="1390" y="590" text-anchor="middle">不能只会风格模仿</text>
+
+    <!-- row 4 -->
+    <rect x="360" y="630" width="280" height="92" rx="18" fill="#ecfeff" stroke="#67e8f9"/>
+    <text x="500" y="674" text-anchor="middle" font-weight="700">坐标轴、图例、数字标签</text>
+    <text x="500" y="702" text-anchor="middle">字符正确比“像图表”更重要</text>
+
+    <rect x="660" y="630" width="280" height="92" rx="18" fill="#f5f3ff" stroke="#c4b5fd"/>
+    <text x="800" y="674" text-anchor="middle" font-weight="700">点位、线段、栏位、刻度关系</text>
+    <text x="800" y="702" text-anchor="middle">一处错位就会毁掉结论</text>
+
+    <rect x="960" y="630" width="280" height="92" rx="18" fill="#fff7ed" stroke="#fdba74"/>
+    <text x="1100" y="674" text-anchor="middle" font-weight="700">颜色映射、系列数量、标记符号</text>
+    <text x="1100" y="702" text-anchor="middle">最容易暴露“凑像不像”的缺陷</text>
+
+    <rect x="1260" y="630" width="260" height="92" rx="18" fill="#fff1f2" stroke="#fda4af"/>
+    <text x="1390" y="674" text-anchor="middle" font-weight="700">解释、统计、常识必须一致</text>
+    <text x="1390" y="702" text-anchor="middle">否则漂亮图也是错图</text>
+
+    <!-- row 5 -->
+    <rect x="360" y="742" width="280" height="92" rx="18" fill="#ecfeff" stroke="#67e8f9"/>
+    <text x="500" y="786" text-anchor="middle" font-weight="700">标注、公式、编号、注释</text>
+    <text x="500" y="814" text-anchor="middle">科学内容容错率最低</text>
+
+    <rect x="660" y="742" width="280" height="92" rx="18" fill="#f5f3ff" stroke="#c4b5fd"/>
+    <text x="800" y="786" text-anchor="middle" font-weight="700">流程箭头、模块依赖、层级关系</text>
+    <text x="800" y="814" text-anchor="middle">结构错了就不是科研图</text>
+
+    <rect x="960" y="742" width="280" height="92" rx="18" fill="#fff7ed" stroke="#fdba74"/>
+    <text x="1100" y="786" text-anchor="middle" font-weight="700">配色、形状、符号语义要对应</text>
+    <text x="1100" y="814" text-anchor="middle">模型最容易在这里“看似会画”</text>
+
+    <rect x="1260" y="742" width="260" height="92" rx="18" fill="#fff1f2" stroke="#fda4af"/>
+    <text x="1390" y="786" text-anchor="middle" font-weight="700">专业知识与图示必须一致</text>
+    <text x="1390" y="814" text-anchor="middle">它决定结果能不能被真正采用</text>
+  </g>
+
+  <rect x="80" y="872" width="1440" height="64" rx="20" fill="#0f172a"/>
+  <text x="800" y="914" text-anchor="middle" font-size="28" font-weight="700" fill="#ffffff" font-family="Microsoft YaHei, PingFang SC, sans-serif">400 个提示词 · 8000 个人工核验问题 · 26 个模型 · 59 位参与者的人类校验中自动评审与人工判断高度一致</text>
+</svg>

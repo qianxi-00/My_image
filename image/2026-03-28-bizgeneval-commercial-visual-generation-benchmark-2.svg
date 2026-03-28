@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#f8fafc"/>
+  <rect x="50" y="36" width="1500" height="108" rx="24" fill="#111827"/>
+  <text x="800" y="92" text-anchor="middle" font-size="38" font-weight="700" fill="#ffffff" font-family="Microsoft YaHei, PingFang SC, sans-serif">BizGenEval 想推动的行业迁移</text>
+  <text x="800" y="130" text-anchor="middle" font-size="24" fill="#cbd5e1" font-family="Microsoft YaHei, PingFang SC, sans-serif">从“模型会不会生成一张好看的图”转向“模型能不能完成带约束、可交付、可核验的商业视觉任务”</text>
+
+  <rect x="88" y="206" width="410" height="520" rx="28" fill="#e0f2fe" stroke="#38bdf8" stroke-width="3"/>
+  <text x="293" y="262" text-anchor="middle" font-size="30" font-weight="700" fill="#0c4a6e" font-family="Microsoft YaHei, PingFang SC, sans-serif">旧评测重心：自然图像与整体对齐</text>
+  <g font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="24" fill="#0f172a">
+    <rect x="128" y="300" width="330" height="72" rx="18" fill="#ffffff"/>
+    <text x="293" y="345" text-anchor="middle" font-weight="700">看整体像不像</text>
+    <rect x="128" y="392" width="330" height="72" rx="18" fill="#ffffff"/>
+    <text x="293" y="437" text-anchor="middle" font-weight="700">看物体是否共现、计数、颜色</text>
+    <rect x="128" y="484" width="330" height="72" rx="18" fill="#ffffff"/>
+    <text x="293" y="529" text-anchor="middle" font-weight="700">默认输出是海报式、审美式单图</text>
+    <rect x="128" y="576" width="330" height="110" rx="18" fill="#ffffff"/>
+    <text x="293" y="622" text-anchor="middle" font-weight="700">问题：</text>
+    <text x="293" y="658" text-anchor="middle">难以暴露密集文字、复杂版式、</text>
+    <text x="293" y="690" text-anchor="middle">属性绑定和专业知识错误</text>
+  </g>
+
+  <rect x="596" y="176" width="410" height="580" rx="28" fill="#ecfccb" stroke="#84cc16" stroke-width="3"/>
+  <text x="801" y="232" text-anchor="middle" font-size="30" font-weight="700" fill="#3f6212" font-family="Microsoft YaHei, PingFang SC, sans-serif">BizGenEval 的新重心：商业视觉任务</text>
+  <g font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="24" fill="#0f172a">
+    <rect x="636" y="270" width="330" height="72" rx="18" fill="#ffffff"/>
+    <text x="801" y="315" text-anchor="middle" font-weight="700">5 类文档：幻灯片、网页、海报、图表、科学插图</text>
+    <rect x="636" y="362" width="330" height="72" rx="18" fill="#ffffff"/>
+    <text x="801" y="407" text-anchor="middle" font-weight="700">4 类能力：文本、布局、属性、知识</text>
+    <rect x="636" y="454" width="330" height="72" rx="18" fill="#ffffff"/>
+    <text x="801" y="499" text-anchor="middle" font-weight="700">400 提示词 + 8000 条人工核验问题</text>
+    <rect x="636" y="546" width="330" height="72" rx="18" fill="#ffffff"/>
+    <text x="801" y="591" text-anchor="middle" font-weight="700">硬题 / 易题双层打分，放大真实差距</text>
+    <rect x="636" y="638" width="330" height="88" rx="18" fill="#ffffff"/>
+    <text x="801" y="684" text-anchor="middle" font-weight="700">核心判断标准：</text>
+    <text x="801" y="718" text-anchor="middle">不是“好看”，而是“约束有没有同时满足”</text>
+  </g>
+
+  <rect x="1104" y="206" width="410" height="520" rx="28" fill="#fee2e2" stroke="#f87171" stroke-width="3"/>
+  <text x="1309" y="262" text-anchor="middle" font-size="30" font-weight="700" fill="#7f1d1d" font-family="Microsoft YaHei, PingFang SC, sans-serif">下游影响：从榜单走向产品路线</text>
+  <g font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="24" fill="#0f172a">
+    <rect x="1144" y="300" width="330" height="72" rx="18" fill="#ffffff"/>
+    <text x="1309" y="345" text-anchor="middle" font-weight="700">模型厂商得补布局与属性控制</text>
+    <rect x="1144" y="392" width="330" height="72" rx="18" fill="#ffffff"/>
+    <text x="1309" y="437" text-anchor="middle" font-weight="700">企业用户能更真实地挑选模型</text>
+    <rect x="1144" y="484" width="330" height="72" rx="18" fill="#ffffff"/>
+    <text x="1309" y="529" text-anchor="middle" font-weight="700">设计系统开始追求“可交付文件”</text>
+    <rect x="1144" y="576" width="330" height="110" rx="18" fill="#ffffff"/>
+    <text x="1309" y="622" text-anchor="middle" font-weight="700">与 PSDesigner 这类系统的关系：</text>
+    <text x="1309" y="658" text-anchor="middle">BizGenEval 负责定义考试，</text>
+    <text x="1309" y="690" text-anchor="middle">PSDesigner 负责把考试要求变成流程能力</text>
+  </g>
+
+  <path d="M518 468 C550 468, 560 468, 596 468" fill="none" stroke="#0f172a" stroke-width="10" stroke-linecap="round"/>
+  <polygon points="596,468 566,450 566,486" fill="#0f172a"/>
+
+  <path d="M1016 468 C1048 468, 1060 468, 1104 468" fill="none" stroke="#0f172a" stroke-width="10" stroke-linecap="round"/>
+  <polygon points="1104,468 1074,450 1074,486" fill="#0f172a"/>
+
+  <rect x="180" y="780" width="1240" height="72" rx="22" fill="#0f172a"/>
+  <text x="800" y="826" text-anchor="middle" font-size="28" font-weight="700" fill="#ffffff" font-family="Microsoft YaHei, PingFang SC, sans-serif">一句话总结：商业视觉生成的竞争门槛，已经从“生成审美”升级为“约束执行 + 结构正确 + 文本可信 + 知识成立”</text>
+</svg>
