@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980">
+  <rect width="1600" height="980" fill="#f7f9fc"/>
+  <text x="800" y="72" text-anchor="middle" font-size="34" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#102a43" font-weight="700">异步 GRPO 的意义：把后训练从串行训练器推进到训练—推理协同系统</text>
+  <text x="800" y="110" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#486581">TRL v1.0 最关键的工程信号之一，是开始把 rollout、vLLM 与训练更新放进同一张系统图里</text>
+
+  <rect x="120" y="210" rx="24" ry="24" width="360" height="200" fill="#d9e2ec" stroke="#bcccdc" stroke-width="2"/>
+  <text x="300" y="275" text-anchor="middle" font-size="28" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#102a43" font-weight="700">推理侧 worker</text>
+  <text x="300" y="318" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">从 vLLM 持续生成 rollout</text>
+  <text x="300" y="352" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">执行工具 / 环境交互</text>
+  <text x="300" y="386" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">计算奖励、优势与样本元数据</text>
+
+  <rect x="620" y="210" rx="24" ry="24" width="360" height="200" fill="#c3ddfd" stroke="#7aa5d2" stroke-width="2"/>
+  <text x="800" y="275" text-anchor="middle" font-size="28" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#102a43" font-weight="700">样本队列与陈旧性控制</text>
+  <text x="800" y="318" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">max_staleness 限制旧策略样本</text>
+  <text x="800" y="352" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">max_inflight_tasks 限制在途任务</text>
+  <text x="800" y="386" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">避免白白生成会被丢弃的 rollout</text>
+
+  <rect x="1120" y="210" rx="24" ry="24" width="360" height="200" fill="#e7d8fd" stroke="#b38bfa" stroke-width="2"/>
+  <text x="1300" y="275" text-anchor="middle" font-size="28" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#102a43" font-weight="700">训练主循环</text>
+  <text x="1300" y="318" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">持续消费样本并更新参数</text>
+  <text x="1300" y="352" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">按节奏把新权重同步回推理端</text>
+  <text x="1300" y="386" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">把训练与生成重叠执行起来</text>
+
+  <line x1="480" y1="310" x2="620" y2="310" stroke="#486581" stroke-width="6"/>
+  <polygon points="620,310 600,300 600,320" fill="#486581"/>
+  <line x1="980" y1="310" x2="1120" y2="310" stroke="#486581" stroke-width="6"/>
+  <polygon points="1120,310 1100,300 1100,320" fill="#486581"/>
+  <line x1="1300" y1="410" x2="1300" y2="520" stroke="#7b8794" stroke-width="5" stroke-dasharray="10 8"/>
+  <line x1="1300" y1="520" x2="300" y2="520" stroke="#7b8794" stroke-width="5" stroke-dasharray="10 8"/>
+  <line x1="300" y1="520" x2="300" y2="410" stroke="#7b8794" stroke-width="5" stroke-dasharray="10 8"/>
+  <polygon points="300,410 292,428 308,428" fill="#7b8794"/>
+  <text x="800" y="505" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#52606d">权重回传与下一轮 rollout 同时进行，不再是“生成完再训练”的单线程节奏</text>
+
+  <rect x="170" y="640" rx="22" ry="22" width="1260" height="190" fill="#ffffff" stroke="#d9e2ec" stroke-width="2"/>
+  <text x="800" y="698" text-anchor="middle" font-size="28" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#102a43" font-weight="700">为什么这件事重要</text>
+  <text x="800" y="740" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">未来越多后训练任务会涉及验证器奖励、工具调用、环境交互与长链路智能体轨迹，串行流程会越来越浪费 GPU</text>
+  <text x="800" y="776" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#243b53">Async GRPO 的意义不是“快一点”，而是承认后训练正在变成一套数据、推理、优化同时运行的系统工程</text>
+</svg>
