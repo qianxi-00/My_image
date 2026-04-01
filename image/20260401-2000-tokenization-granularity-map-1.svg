@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="940" viewBox="0 0 1600 940">
+  <rect width="1600" height="940" fill="#f6f8fb"/>
+  <rect x="40" y="32" width="1520" height="110" rx="24" fill="#111827"/>
+  <text x="800" y="86" text-anchor="middle" font-size="38" font-weight="700" fill="#ffffff" font-family="Microsoft YaHei, PingFang SC, sans-serif">Tokenizer 决定的不是“切词小事”，而是模型处理世界的基本粒度</text>
+  <text x="800" y="126" text-anchor="middle" font-size="21" fill="#d1d5db" font-family="Microsoft YaHei, PingFang SC, sans-serif">每一个 token 都是一次预测单位、一个 embedding 索引、一个注意力位置、一个 KV Cache 槽位，也是训练与计费的记账单位</text>
+
+  <rect x="70" y="190" width="300" height="540" rx="24" fill="#ffffff" stroke="#dbe3f0" stroke-width="2"/>
+  <text x="220" y="238" text-anchor="middle" font-size="28" font-weight="700" fill="#2563eb" font-family="Microsoft YaHei, PingFang SC, sans-serif">输入文本</text>
+  <rect x="102" y="270" width="236" height="94" rx="16" fill="#eff6ff"/>
+  <text x="220" y="320" text-anchor="middle" font-size="24" fill="#1e3a8a" font-family="Microsoft YaHei, PingFang SC, sans-serif">Tokenization 决定模型</text>
+  <text x="220" y="352" text-anchor="middle" font-size="24" fill="#1e3a8a" font-family="Microsoft YaHei, PingFang SC, sans-serif">怎样“看见”世界</text>
+  <text x="220" y="430" text-anchor="middle" font-size="24" font-weight="700" fill="#111827" font-family="Microsoft YaHei, PingFang SC, sans-serif">三种常见拆分视角</text>
+  <text x="220" y="482" text-anchor="middle" font-size="21" fill="#374151" font-family="Microsoft YaHei, PingFang SC, sans-serif">词级：词表大、稀有词脆弱</text>
+  <text x="220" y="522" text-anchor="middle" font-size="21" fill="#374151" font-family="Microsoft YaHei, PingFang SC, sans-serif">子词级：长度与泛化折中</text>
+  <text x="220" y="562" text-anchor="middle" font-size="21" fill="#374151" font-family="Microsoft YaHei, PingFang SC, sans-serif">字节/字符级：覆盖强、序列更长</text>
+  <text x="220" y="642" text-anchor="middle" font-size="20" fill="#6b7280" font-family="Microsoft YaHei, PingFang SC, sans-serif">同一句文本被切成什么样，</text>
+  <text x="220" y="676" text-anchor="middle" font-size="20" fill="#6b7280" font-family="Microsoft YaHei, PingFang SC, sans-serif">会直接改变模型看到的统计规律。</text>
+
+  <rect x="420" y="190" width="350" height="540" rx="24" fill="#ffffff" stroke="#dbe3f0" stroke-width="2"/>
+  <text x="595" y="238" text-anchor="middle" font-size="28" font-weight="700" fill="#059669" font-family="Microsoft YaHei, PingFang SC, sans-serif">分词算法层</text>
+  <rect x="456" y="274" width="278" height="96" rx="16" fill="#ecfdf5"/>
+  <text x="595" y="316" text-anchor="middle" font-size="24" font-weight="700" fill="#065f46" font-family="Microsoft YaHei, PingFang SC, sans-serif">BPE</text>
+  <text x="595" y="348" text-anchor="middle" font-size="18" fill="#065f46" font-family="Microsoft YaHei, PingFang SC, sans-serif">按高频相邻符号持续合并</text>
+  <rect x="456" y="398" width="278" height="96" rx="16" fill="#ecfeff"/>
+  <text x="595" y="440" text-anchor="middle" font-size="24" font-weight="700" fill="#155e75" font-family="Microsoft YaHei, PingFang SC, sans-serif">WordPiece</text>
+  <text x="595" y="472" text-anchor="middle" font-size="18" fill="#155e75" font-family="Microsoft YaHei, PingFang SC, sans-serif">更偏似然增益的合并准则</text>
+  <rect x="456" y="522" width="278" height="132" rx="16" fill="#f5f3ff"/>
+  <text x="595" y="564" text-anchor="middle" font-size="24" font-weight="700" fill="#5b21b6" font-family="Microsoft YaHei, PingFang SC, sans-serif">SentencePiece / Unigram LM</text>
+  <text x="595" y="600" text-anchor="middle" font-size="18" fill="#5b21b6" font-family="Microsoft YaHei, PingFang SC, sans-serif">先给候选词表，再按概率</text>
+  <text x="595" y="628" text-anchor="middle" font-size="18" fill="#5b21b6" font-family="Microsoft YaHei, PingFang SC, sans-serif">保留最能解释语料的子词集合</text>
+  <text x="595" y="694" text-anchor="middle" font-size="19" fill="#6b7280" font-family="Microsoft YaHei, PingFang SC, sans-serif">SentencePiece 还是一套工程化工具：</text>
+  <text x="595" y="724" text-anchor="middle" font-size="19" fill="#6b7280" font-family="Microsoft YaHei, PingFang SC, sans-serif">原始文本训练、归一化、detokenize、采样都打包了。</text>
+
+  <rect x="820" y="190" width="340" height="540" rx="24" fill="#ffffff" stroke="#dbe3f0" stroke-width="2"/>
+  <text x="990" y="238" text-anchor="middle" font-size="28" font-weight="700" fill="#dc2626" font-family="Microsoft YaHei, PingFang SC, sans-serif">模型训练层</text>
+  <text x="990" y="310" text-anchor="middle" font-size="22" fill="#111827" font-family="Microsoft YaHei, PingFang SC, sans-serif">每个 token 都意味着：</text>
+  <text x="990" y="366" text-anchor="middle" font-size="20" fill="#374151" font-family="Microsoft YaHei, PingFang SC, sans-serif">• 一个 embedding 查表</text>
+  <text x="990" y="406" text-anchor="middle" font-size="20" fill="#374151" font-family="Microsoft YaHei, PingFang SC, sans-serif">• 一个预测目标与 loss 项</text>
+  <text x="990" y="446" text-anchor="middle" font-size="20" fill="#374151" font-family="Microsoft YaHei, PingFang SC, sans-serif">• 一个注意力位置</text>
+  <text x="990" y="486" text-anchor="middle" font-size="20" fill="#374151" font-family="Microsoft YaHei, PingFang SC, sans-serif">• 一个上下文预算单位</text>
+  <text x="990" y="526" text-anchor="middle" font-size="20" fill="#374151" font-family="Microsoft YaHei, PingFang SC, sans-serif">• 一个统计频率被估计的坐标点</text>
+  <rect x="866" y="574" width="248" height="112" rx="16" fill="#fef2f2"/>
+  <text x="990" y="620" text-anchor="middle" font-size="20" font-weight="700" fill="#991b1b" font-family="Microsoft YaHei, PingFang SC, sans-serif">所以 tokenizer 改了，</text>
+  <text x="990" y="652" text-anchor="middle" font-size="20" fill="#991b1b" font-family="Microsoft YaHei, PingFang SC, sans-serif">训练分布、loss 曲面、上下文利用率</text>
+  <text x="990" y="680" text-anchor="middle" font-size="20" fill="#991b1b" font-family="Microsoft YaHei, PingFang SC, sans-serif">都会跟着变。</text>
+
+  <rect x="1210" y="190" width="320" height="540" rx="24" fill="#ffffff" stroke="#dbe3f0" stroke-width="2"/>
+  <text x="1370" y="238" text-anchor="middle" font-size="28" font-weight="700" fill="#7c3aed" font-family="Microsoft YaHei, PingFang SC, sans-serif">部署与 Agent 层</text>
+  <text x="1370" y="316" text-anchor="middle" font-size="20" fill="#374151" font-family="Microsoft YaHei, PingFang SC, sans-serif">上下文窗口、KV Cache、</text>
+  <text x="1370" y="348" text-anchor="middle" font-size="20" fill="#374151" font-family="Microsoft YaHei, PingFang SC, sans-serif">工具调用 JSON、代码片段、</text>
+  <text x="1370" y="380" text-anchor="middle" font-size="20" fill="#374151" font-family="Microsoft YaHei, PingFang SC, sans-serif">多语混输，都在消耗 token 预算</text>
+  <rect x="1250" y="432" width="240" height="90" rx="16" fill="#f5f3ff"/>
+  <text x="1370" y="472" text-anchor="middle" font-size="20" font-weight="700" fill="#5b21b6" font-family="Microsoft YaHei, PingFang SC, sans-serif">token 更短</text>
+  <text x="1370" y="502" text-anchor="middle" font-size="19" fill="#5b21b6" font-family="Microsoft YaHei, PingFang SC, sans-serif">泛化更强，但序列更长</text>
+  <rect x="1250" y="548" width="240" height="90" rx="16" fill="#eef2ff"/>
+  <text x="1370" y="588" text-anchor="middle" font-size="20" font-weight="700" fill="#3730a3" font-family="Microsoft YaHei, PingFang SC, sans-serif">token 更长</text>
+  <text x="1370" y="618" text-anchor="middle" font-size="19" fill="#3730a3" font-family="Microsoft YaHei, PingFang SC, sans-serif">序列更短，但词表更重</text>
+  <text x="1370" y="688" text-anchor="middle" font-size="19" fill="#6b7280" font-family="Microsoft YaHei, PingFang SC, sans-serif">Agent 系统里，tokenizer</text>
+  <text x="1370" y="716" text-anchor="middle" font-size="19" fill="#6b7280" font-family="Microsoft YaHei, PingFang SC, sans-serif">直接决定“同样一段日志”能塞进多少历史。</text>
+
+  <path d="M370 460 L420 460" stroke="#94a3b8" stroke-width="6" marker-end="url(#arrow)"/>
+  <path d="M770 460 L820 460" stroke="#94a3b8" stroke-width="6" marker-end="url(#arrow)"/>
+  <path d="M1160 460 L1210 460" stroke="#94a3b8" stroke-width="6" marker-end="url(#arrow)"/>
+
+  <rect x="120" y="784" width="1360" height="108" rx="20" fill="#e0f2fe"/>
+  <text x="800" y="832" text-anchor="middle" font-size="26" font-weight="700" fill="#0c4a6e" font-family="Microsoft YaHei, PingFang SC, sans-serif">“认知粒度”并不是玄学：模型能看到什么模式、以多长序列学习、以多高成本推理，首先由 tokenizer 划定边界。</text>
+  <text x="800" y="868" text-anchor="middle" font-size="18" fill="#075985" font-family="Microsoft YaHei, PingFang SC, sans-serif">这也是为什么预训练规模、上下文长度、跨语言能力、对齐与安全讨论，最后都会回到 token 这个最小单位。</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="940" viewBox="0 0 1600 940">
+  <rect width="1600" height="940" fill="#f8fafc"/>
+  <rect x="44" y="32" width="1512" height="108" rx="24" fill="#0f172a"/>
+  <text x="800" y="86" text-anchor="middle" font-size="38" font-weight="700" fill="#ffffff" font-family="Microsoft YaHei, PingFang SC, sans-serif">Tokenizer 的核心张力：压缩率、泛化能力、工程成本三者很难同时极致</text>
+  <text x="800" y="126" text-anchor="middle" font-size="21" fill="#cbd5e1" font-family="Microsoft YaHei, PingFang SC, sans-serif">BPE、WordPiece、SentencePiece / Unigram LM 的价值，不是“谁绝对更先进”，而是在不同数据与系统约束里找到更合适的平衡点</text>
+
+  <polygon points="800,210 1240,730 360,730" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+  <circle cx="800" cy="210" r="72" fill="#dbeafe" stroke="#60a5fa" stroke-width="3"/>
+  <text x="800" y="205" text-anchor="middle" font-size="24" font-weight="700" fill="#1d4ed8" font-family="Microsoft YaHei, PingFang SC, sans-serif">压缩率</text>
+  <text x="800" y="238" text-anchor="middle" font-size="18" fill="#1d4ed8" font-family="Microsoft YaHei, PingFang SC, sans-serif">更短序列、更省上下文</text>
+
+  <circle cx="360" cy="730" r="72" fill="#dcfce7" stroke="#34d399" stroke-width="3"/>
+  <text x="360" y="724" text-anchor="middle" font-size="24" font-weight="700" fill="#047857" font-family="Microsoft YaHei, PingFang SC, sans-serif">泛化能力</text>
+  <text x="360" y="757" text-anchor="middle" font-size="18" fill="#047857" font-family="Microsoft YaHei, PingFang SC, sans-serif">稀有词、多语、拼写变体</text>
+
+  <circle cx="1240" cy="730" r="72" fill="#fee2e2" stroke="#f87171" stroke-width="3"/>
+  <text x="1240" y="724" text-anchor="middle" font-size="24" font-weight="700" fill="#b91c1c" font-family="Microsoft YaHei, PingFang SC, sans-serif">工程成本</text>
+  <text x="1240" y="757" text-anchor="middle" font-size="18" fill="#b91c1c" font-family="Microsoft YaHei, PingFang SC, sans-serif">词表、访存、推理与对齐</text>
+
+  <rect x="594" y="356" width="412" height="182" rx="20" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="800" y="402" text-anchor="middle" font-size="28" font-weight="700" fill="#1e3a8a" font-family="Microsoft YaHei, PingFang SC, sans-serif">子词路线为何成为主流</text>
+  <text x="800" y="444" text-anchor="middle" font-size="21" fill="#1e40af" font-family="Microsoft YaHei, PingFang SC, sans-serif">比整词更能处理 OOV，比字符/字节更省序列长度</text>
+  <text x="800" y="478" text-anchor="middle" font-size="21" fill="#1e40af" font-family="Microsoft YaHei, PingFang SC, sans-serif">同时又保留词缀、词根、拼写片段等统计规律</text>
+  <text x="800" y="514" text-anchor="middle" font-size="20" fill="#334155" font-family="Microsoft YaHei, PingFang SC, sans-serif">因此它既是语料压缩策略，也是预训练与部署策略。</text>
+
+  <rect x="130" y="194" width="298" height="150" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="279" y="236" text-anchor="middle" font-size="24" font-weight="700" fill="#111827" font-family="Microsoft YaHei, PingFang SC, sans-serif">BPE</text>
+  <text x="279" y="274" text-anchor="middle" font-size="18" fill="#374151" font-family="Microsoft YaHei, PingFang SC, sans-serif">频率驱动合并，简单、稳定</text>
+  <text x="279" y="308" text-anchor="middle" font-size="18" fill="#374151" font-family="Microsoft YaHei, PingFang SC, sans-serif">适合大规模语料的工程实现</text>
+  <text x="279" y="340" text-anchor="middle" font-size="18" fill="#374151" font-family="Microsoft YaHei, PingFang SC, sans-serif">但切分未必最符合概率解释</text>
+
+  <rect x="1172" y="194" width="298" height="150" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="1321" y="236" text-anchor="middle" font-size="24" font-weight="700" fill="#111827" font-family="Microsoft YaHei, PingFang SC, sans-serif">WordPiece</text>
+  <text x="1321" y="274" text-anchor="middle" font-size="18" fill="#374151" font-family="Microsoft YaHei, PingFang SC, sans-serif">更强调似然/得分收益</text>
+  <text x="1321" y="308" text-anchor="middle" font-size="18" fill="#374151" font-family="Microsoft YaHei, PingFang SC, sans-serif">在 GNMT、BERT 路线上影响深远</text>
+  <text x="1321" y="340" text-anchor="middle" font-size="18" fill="#374151" font-family="Microsoft YaHei, PingFang SC, sans-serif">与整词和字符之间做工程折中</text>
+
+  <rect x="119" y="560" width="320" height="170" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="279" y="604" text-anchor="middle" font-size="24" font-weight="700" fill="#111827" font-family="Microsoft YaHei, PingFang SC, sans-serif">Unigram LM / SentencePiece</text>
+  <text x="279" y="642" text-anchor="middle" font-size="18" fill="#374151" font-family="Microsoft YaHei, PingFang SC, sans-serif">可从原始文本直接训练</text>
+  <text x="279" y="676" text-anchor="middle" font-size="18" fill="#374151" font-family="Microsoft YaHei, PingFang SC, sans-serif">支持子词采样、归一化与多语场景</text>
+  <text x="279" y="708" text-anchor="middle" font-size="18" fill="#374151" font-family="Microsoft YaHei, PingFang SC, sans-serif">在 T5、LLaMA 一类开源路线里常见</text>
+
+  <rect x="1122" y="560" width="348" height="170" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="1296" y="604" text-anchor="middle" font-size="24" font-weight="700" fill="#111827" font-family="Microsoft YaHei, PingFang SC, sans-serif">字节级路线的提醒</text>
+  <text x="1296" y="642" text-anchor="middle" font-size="18" fill="#374151" font-family="Microsoft YaHei, PingFang SC, sans-serif">覆盖最稳，不怕罕见字符与脏数据</text>
+  <text x="1296" y="676" text-anchor="middle" font-size="18" fill="#374151" font-family="Microsoft YaHei, PingFang SC, sans-serif">但会把序列拉长，推理预算与注意力成本上升</text>
+  <text x="1296" y="708" text-anchor="middle" font-size="18" fill="#374151" font-family="Microsoft YaHei, PingFang SC, sans-serif">所以强鲁棒与低成本经常不能同时拿满</text>
+
+  <rect x="452" y="792" width="696" height="102" rx="18" fill="#e2e8f0"/>
+  <text x="800" y="836" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a" font-family="Microsoft YaHei, PingFang SC, sans-serif">同一个“10T tokens”训练预算，在不同 tokenizer 下并不等价：token 是统计单位，不是自然单位。</text>
+  <text x="800" y="870" text-anchor="middle" font-size="18" fill="#334155" font-family="Microsoft YaHei, PingFang SC, sans-serif">因此 scaling law、Chinchilla 配比、上下文长度、Agent 日志预算，都会被 tokenizer 间接改写。</text>
+</svg>
