@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f8fbff"/>
+      <stop offset="100%" stop-color="#eef4ff"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4f6ef7" />
+    </marker>
+    <style>
+      .title{font:700 34px 'Noto Sans CJK SC','Microsoft YaHei',sans-serif;fill:#16325c}
+      .subtitle{font:500 18px 'Noto Sans CJK SC','Microsoft YaHei',sans-serif;fill:#4f6380}
+      .h{font:700 24px 'Noto Sans CJK SC','Microsoft YaHei',sans-serif;fill:#1c3560}
+      .b{font:500 18px 'Noto Sans CJK SC','Microsoft YaHei',sans-serif;fill:#28415f}
+      .s{font:500 16px 'Noto Sans CJK SC','Microsoft YaHei',sans-serif;fill:#4b607d}
+      .box{fill:#ffffff;stroke:#d7e3ff;stroke-width:2}
+      .pill{fill:#e9f1ff;stroke:#bdd2ff;stroke-width:1.5}
+    </style>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <text x="60" y="72" class="title">Transformer 与 Self-Attention：为什么它会成为序列建模的分水岭</text>
+  <text x="60" y="108" class="subtitle">核心变化不是“少了循环”，而是把“谁应该关注谁”变成了可并行、可扩展、可工程化的内容路由机制。</text>
+
+  <rect x="60" y="160" rx="24" ry="24" width="420" height="610" class="box"/>
+  <text x="90" y="215" class="h">旧范式：RNN / CNN 时代</text>
+  <rect x="90" y="245" rx="16" ry="16" width="360" height="92" class="pill"/>
+  <text x="115" y="282" class="b">信息沿时间步逐段传递</text>
+  <text x="115" y="312" class="s">长距离依赖要跨很多步，路径长、梯度难传</text>
+  <rect x="90" y="360" rx="16" ry="16" width="360" height="92" class="pill"/>
+  <text x="115" y="397" class="b">训练并行性有限</text>
+  <text x="115" y="427" class="s">序列长度一拉长，吞吐、延迟与硬件利用率都受限</text>
+  <rect x="90" y="475" rx="16" ry="16" width="360" height="92" class="pill"/>
+  <text x="115" y="512" class="b">卷积能缩短路径，但感受野仍靠堆层数</text>
+  <text x="115" y="542" class="s">对远距离 token 关系的表达不够直接</text>
+  <rect x="90" y="590" rx="16" ry="16" width="360" height="120" class="pill"/>
+  <text x="115" y="627" class="b">核心局限</text>
+  <text x="115" y="657" class="s">“序列状态怎么传”主导了架构设计，</text>
+  <text x="115" y="684" class="s">而不是“内容之间该如何动态建立关系”。</text>
+
+  <rect x="590" y="160" rx="24" ry="24" width="420" height="610" class="box"/>
+  <text x="620" y="215" class="h">Transformer：把关系计算搬到注意力里</text>
+  <rect x="620" y="245" rx="16" ry="16" width="360" height="92" class="pill"/>
+  <text x="645" y="282" class="b">Query / Key / Value</text>
+  <text x="645" y="312" class="s">每个 token 不再只“往后传”，而是去选择该看谁</text>
+  <rect x="620" y="360" rx="16" ry="16" width="360" height="92" class="pill"/>
+  <text x="645" y="397" class="b">全局依赖一步可达</text>
+  <text x="645" y="427" class="s">任意两个位置的关系都能直接建边，路径长度显著缩短</text>
+  <rect x="620" y="475" rx="16" ry="16" width="360" height="92" class="pill"/>
+  <text x="645" y="512" class="b">训练天然适合矩阵并行</text>
+  <text x="645" y="542" class="s">大规模预训练第一次真正吃满 GPU / TPU 的吞吐优势</text>
+  <rect x="620" y="590" rx="16" ry="16" width="360" height="120" class="pill"/>
+  <text x="645" y="627" class="b">结果</text>
+  <text x="645" y="657" class="s">语言建模、表示学习、长上下文和提示式交互</text>
+  <text x="645" y="684" class="s">都开始围绕“上下文内关系计算”重新组织。</text>
+
+  <rect x="1120" y="160" rx="24" ry="24" width="420" height="610" class="box"/>
+  <text x="1150" y="215" class="h">当代工程链路：从原理走向系统</text>
+  <rect x="1150" y="245" rx="16" ry="16" width="360" height="72" class="pill"/>
+  <text x="1175" y="289" class="b">位置编码 → RoPE</text>
+  <rect x="1150" y="335" rx="16" ry="16" width="360" height="72" class="pill"/>
+  <text x="1175" y="379" class="b">多头注意力 → MQA / GQA</text>
+  <rect x="1150" y="425" rx="16" ry="16" width="360" height="72" class="pill"/>
+  <text x="1175" y="469" class="b">自回归推理 → KV Cache</text>
+  <rect x="1150" y="515" rx="16" ry="16" width="360" height="72" class="pill"/>
+  <text x="1175" y="559" class="b">显存带宽瓶颈 → FlashAttention</text>
+  <rect x="1150" y="605" rx="16" ry="16" width="360" height="72" class="pill"/>
+  <text x="1175" y="649" class="b">服务调度与分页管理 → PagedAttention / 连续批处理</text>
+  <text x="1150" y="723" class="s">今天的大模型不是“离开了注意力”，而是围绕注意力成本继续进化。</text>
+
+  <line x1="480" y1="465" x2="590" y2="465" stroke="#4f6ef7" stroke-width="5" marker-end="url(#arrow)"/>
+  <line x1="1010" y1="465" x2="1120" y2="465" stroke="#4f6ef7" stroke-width="5" marker-end="url(#arrow)"/>
+
+  <rect x="60" y="805" rx="18" ry="18" width="1480" height="62" fill="#16325c" opacity="0.92"/>
+  <text x="90" y="845" style="font:600 24px 'Noto Sans CJK SC','Microsoft YaHei',sans-serif;fill:#ffffff">一句话总结：Self-Attention 改变了一切，不是因为它“替掉了循环”，而是因为它把序列建模的核心从状态传递，改成了内容相关的全局关系建模。</text>
+</svg>

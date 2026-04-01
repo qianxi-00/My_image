@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg2" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#fbfcff"/>
+      <stop offset="100%" stop-color="#eef6ff"/>
+    </linearGradient>
+    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2770ff"/>
+    </marker>
+    <style>
+      .title{font:700 34px 'Noto Sans CJK SC','Microsoft YaHei',sans-serif;fill:#16325c}
+      .subtitle{font:500 18px 'Noto Sans CJK SC','Microsoft YaHei',sans-serif;fill:#50647f}
+      .h{font:700 24px 'Noto Sans CJK SC','Microsoft YaHei',sans-serif;fill:#16325c}
+      .b{font:600 18px 'Noto Sans CJK SC','Microsoft YaHei',sans-serif;fill:#224062}
+      .s{font:500 16px 'Noto Sans CJK SC','Microsoft YaHei',sans-serif;fill:#51657f}
+      .box{fill:#ffffff;stroke:#d4e4ff;stroke-width:2}
+      .accent{fill:#eaf2ff;stroke:#b9d2ff;stroke-width:1.5}
+      .green{fill:#ecfbf3;stroke:#b7e6cd;stroke-width:1.5}
+      .orange{fill:#fff5e8;stroke:#ffd29a;stroke-width:1.5}
+    </style>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg2)"/>
+  <text x="60" y="72" class="title">Self-Attention 走到大模型推理之后，工程问题是怎样一层层冒出来的</text>
+  <text x="60" y="108" class="subtitle">训练阶段强调并行矩阵计算；部署阶段则暴露出 KV 缓存、显存带宽、分页管理与在线调度的系统瓶颈。</text>
+
+  <rect x="60" y="170" rx="24" ry="24" width="1480" height="640" class="box"/>
+
+  <rect x="100" y="220" rx="18" ry="18" width="270" height="120" class="accent"/>
+  <text x="128" y="270" class="b">阶段 1：Prefill</text>
+  <text x="128" y="302" class="s">整段提示词一次性进模型</text>
+  <text x="128" y="329" class="s">计算密集，适合大矩阵并行</text>
+
+  <rect x="430" y="220" rx="18" ry="18" width="270" height="120" class="accent"/>
+  <text x="458" y="270" class="b">阶段 2：Decode</text>
+  <text x="458" y="302" class="s">每次只生成一个新 token</text>
+  <text x="458" y="329" class="s">算力利用率低，访存开销高</text>
+
+  <rect x="760" y="220" rx="18" ry="18" width="270" height="120" class="green"/>
+  <text x="788" y="270" class="b">阶段 3：KV Cache</text>
+  <text x="788" y="302" class="s">把旧 token 的 Key / Value 留在显存</text>
+  <text x="788" y="329" class="s">避免每步重复回看整段历史</text>
+
+  <rect x="1090" y="220" rx="18" ry="18" width="330" height="120" class="green"/>
+  <text x="1118" y="270" class="b">阶段 4：减少 KV 头数</text>
+  <text x="1118" y="302" class="s">MQA / GQA 用更少的 KV 头</text>
+  <text x="1118" y="329" class="s">缓解显存与带宽压力</text>
+
+  <line x1="370" y1="280" x2="430" y2="280" stroke="#2770ff" stroke-width="5" marker-end="url(#arrow2)"/>
+  <line x1="700" y1="280" x2="760" y2="280" stroke="#2770ff" stroke-width="5" marker-end="url(#arrow2)"/>
+  <line x1="1030" y1="280" x2="1090" y2="280" stroke="#2770ff" stroke-width="5" marker-end="url(#arrow2)"/>
+
+  <rect x="110" y="430" rx="18" ry="18" width="360" height="130" class="orange"/>
+  <text x="138" y="478" class="b">FlashAttention</text>
+  <text x="138" y="510" class="s">关键点不是近似，而是 IO-aware：减少 HBM ↔ SRAM 往返</text>
+  <text x="138" y="537" class="s">让注意力真正按硬件访存规律重排</text>
+
+  <rect x="530" y="430" rx="18" ry="18" width="360" height="130" class="orange"/>
+  <text x="558" y="478" class="b">PagedAttention</text>
+  <text x="558" y="510" class="s">把动态增长的 KV Cache 按“分页”管理</text>
+  <text x="558" y="537" class="s">减少碎片浪费，支持共享与回收</text>
+
+  <rect x="950" y="430" rx="18" ry="18" width="470" height="130" class="orange"/>
+  <text x="978" y="478" class="b">连续批处理 / Chunked Prefill</text>
+  <text x="978" y="510" class="s">在线服务把不同请求的 prefill 与 decode 动态拼批</text>
+  <text x="978" y="537" class="s">尽量让 GPU 持续有活干，而不是等单条请求独占</text>
+
+  <line x1="1255" y1="340" x2="1255" y2="405" stroke="#2770ff" stroke-width="5" marker-end="url(#arrow2)"/>
+  <line x1="1255" y1="405" x2="290" y2="405" stroke="#2770ff" stroke-width="5" marker-end="url(#arrow2)"/>
+  <line x1="1255" y1="405" x2="710" y2="405" stroke="#2770ff" stroke-width="5" marker-end="url(#arrow2)"/>
+  <line x1="1255" y1="405" x2="1185" y2="405" stroke="#2770ff" stroke-width="5" marker-end="url(#arrow2)"/>
+
+  <rect x="110" y="635" rx="18" ry="18" width="1310" height="110" fill="#16325c" opacity="0.94"/>
+  <text x="142" y="683" style="font:700 24px 'Noto Sans CJK SC','Microsoft YaHei',sans-serif;fill:#ffffff">工程结论</text>
+  <text x="142" y="718" style="font:500 22px 'Noto Sans CJK SC','Microsoft YaHei',sans-serif;fill:#ffffff">Self-Attention 的“改变一切”并没有在 2017 年结束。今天每一项推理优化，本质上都是在回答：如何让注意力的关系建模能力，继续以更低的显存、更少的带宽和更高的吞吐跑起来。</text>
+</svg>
