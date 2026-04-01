@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#f8fafc"/>
+  <rect x="70" y="60" width="1460" height="110" rx="24" fill="#0f172a"/>
+  <text x="110" y="128" font-size="38" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#ffffff" font-weight="700">Transformer 骨架：残差、Norm、FFN 为什么决定大模型能否训练、扩深与部署</text>
+
+  <rect x="120" y="210" width="420" height="540" rx="28" fill="#e0f2fe" stroke="#38bdf8" stroke-width="3"/>
+  <text x="165" y="270" font-size="34" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#0f172a" font-weight="700">残差连接</text>
+  <text x="165" y="320" font-size="24" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334155">作用：保住主信息流与梯度通道</text>
+  <rect x="185" y="390" width="280" height="70" rx="18" fill="#ffffff" stroke="#0ea5e9" stroke-width="3"/>
+  <rect x="185" y="520" width="280" height="70" rx="18" fill="#ffffff" stroke="#0ea5e9" stroke-width="3"/>
+  <text x="255" y="435" font-size="28" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#0f172a" font-weight="700">输入表示</text>
+  <text x="245" y="565" font-size="28" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#0f172a" font-weight="700">子层输出</text>
+  <line x1="325" y1="460" x2="325" y2="520" stroke="#0284c7" stroke-width="4"/>
+  <path d="M470 430 C 530 430, 530 600, 470 600" fill="none" stroke="#0284c7" stroke-width="4"/>
+  <line x1="470" y1="600" x2="470" y2="625" stroke="#0284c7" stroke-width="4"/>
+  <rect x="215" y="625" width="220" height="62" rx="16" fill="#ffffff" stroke="#0284c7" stroke-width="3"/>
+  <text x="255" y="665" font-size="26" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#075985" font-weight="700">相加后继续走</text>
+  <text x="165" y="715" font-size="23" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334155">没有残差，深层网络很容易出现</text>
+  <text x="165" y="748" font-size="23" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334155">梯度断流、信息退化、训练难以扩深。</text>
+
+  <rect x="590" y="210" width="420" height="540" rx="28" fill="#ede9fe" stroke="#8b5cf6" stroke-width="3"/>
+  <text x="655" y="270" font-size="34" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#3b0764" font-weight="700">Norm</text>
+  <text x="655" y="320" font-size="24" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#5b21b6">作用：控制尺度，驯服深层训练不稳定</text>
+  <rect x="665" y="400" width="270" height="72" rx="18" fill="#ffffff" stroke="#8b5cf6" stroke-width="3"/>
+  <rect x="665" y="520" width="270" height="72" rx="18" fill="#ffffff" stroke="#8b5cf6" stroke-width="3"/>
+  <text x="707" y="445" font-size="28" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#3b0764" font-weight="700">Pre-LN / RMSNorm</text>
+  <text x="715" y="565" font-size="28" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#3b0764" font-weight="700">Post-LN / DeepNorm</text>
+  <text x="655" y="650" font-size="23" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#5b21b6">同样叫归一化，但它决定的是：</text>
+  <text x="655" y="685" font-size="23" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#5b21b6">• 梯度是否稳定</text>
+  <text x="655" y="718" font-size="23" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#5b21b6">• 层数能不能继续堆高</text>
+  <text x="655" y="751" font-size="23" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#5b21b6">• 微调与推理时数值是否可控</text>
+
+  <rect x="1060" y="210" width="420" height="540" rx="28" fill="#dcfce7" stroke="#22c55e" stroke-width="3"/>
+  <text x="1125" y="270" font-size="34" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#14532d" font-weight="700">FFN</text>
+  <text x="1125" y="320" font-size="24" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#166534">作用：在单 token 内完成大部分参数化变换</text>
+  <rect x="1135" y="400" width="270" height="72" rx="18" fill="#ffffff" stroke="#22c55e" stroke-width="3"/>
+  <rect x="1135" y="520" width="270" height="72" rx="18" fill="#ffffff" stroke="#22c55e" stroke-width="3"/>
+  <text x="1215" y="445" font-size="28" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#14532d" font-weight="700">激活与扩维</text>
+  <text x="1200" y="565" font-size="28" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#14532d" font-weight="700">GELU / SwiGLU</text>
+  <text x="1125" y="650" font-size="23" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#166534">Attention 负责“看谁”，FFN 更像负责</text>
+  <text x="1125" y="685" font-size="23" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#166534">“每个 token 自己内部怎么改写和存知识”。</text>
+
+  <rect x="350" y="790" width="900" height="68" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="395" y="835" font-size="24" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334155">一句话总结：Attention 决定关系建模，残差负责保住信息，Norm 负责稳定深层训练，FFN 负责容量扩展与 token 内变换。</text>
+</svg>
