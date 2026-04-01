@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#f8fafc"/>
+  <rect x="70" y="60" width="1460" height="110" rx="24" fill="#0f172a"/>
+  <text x="110" y="128" font-size="40" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#ffffff" font-weight="700">从马尔可夫链到隐马尔可夫模型：序列决策的第一课是状态转移</text>
+
+  <rect x="90" y="220" width="640" height="560" rx="28" fill="#e0f2fe" stroke="#38bdf8" stroke-width="3"/>
+  <text x="120" y="275" font-size="34" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#0f172a" font-weight="700">马尔可夫链：先把系统如何演化讲清楚</text>
+  <text x="120" y="322" font-size="24" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334155">核心假设：下一步只依赖当前状态，而不是完整历史</text>
+
+  <circle cx="220" cy="470" r="78" fill="#ffffff" stroke="#0ea5e9" stroke-width="4"/>
+  <circle cx="410" cy="470" r="78" fill="#ffffff" stroke="#0ea5e9" stroke-width="4"/>
+  <circle cx="600" cy="470" r="78" fill="#ffffff" stroke="#0ea5e9" stroke-width="4"/>
+  <text x="184" y="480" font-size="34" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#0f172a" font-weight="700">状态A</text>
+  <text x="374" y="480" font-size="34" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#0f172a" font-weight="700">状态B</text>
+  <text x="564" y="480" font-size="34" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#0f172a" font-weight="700">状态C</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#0284c7"/>
+    </marker>
+    <marker id="arrow2" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+
+  <line x1="298" y1="470" x2="332" y2="470" stroke="#0284c7" stroke-width="5" marker-end="url(#arrow)"/>
+  <line x1="488" y1="470" x2="522" y2="470" stroke="#0284c7" stroke-width="5" marker-end="url(#arrow)"/>
+  <path d="M220 392 C 170 320, 170 620, 220 548" fill="none" stroke="#0284c7" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M410 392 C 360 320, 360 620, 410 548" fill="none" stroke="#0284c7" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M600 392 C 650 320, 650 620, 600 548" fill="none" stroke="#0284c7" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <text x="250" y="445" font-size="24" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#0369a1">转移概率</text>
+  <text x="440" y="445" font-size="24" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#0369a1">转移概率</text>
+  <text x="120" y="640" font-size="26" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#0f172a">关键理解：</text>
+  <text x="120" y="685" font-size="24" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334155">• 状态 = 对未来最有用的历史摘要</text>
+  <text x="120" y="725" font-size="24" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334155">• 一旦状态定义合理，未来就可以递推分析</text>
+
+  <rect x="860" y="220" width="650" height="560" rx="28" fill="#f3e8ff" stroke="#a855f7" stroke-width="3"/>
+  <text x="890" y="275" font-size="34" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#3b0764" font-weight="700">隐马尔可夫模型：现实里你看到的往往只是观测</text>
+  <text x="890" y="322" font-size="24" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#6b21a8">隐藏状态负责演化，观测只是状态投影出来的信号</text>
+
+  <circle cx="1010" cy="430" r="72" fill="#ffffff" stroke="#9333ea" stroke-width="4"/>
+  <circle cx="1200" cy="430" r="72" fill="#ffffff" stroke="#9333ea" stroke-width="4"/>
+  <circle cx="1390" cy="430" r="72" fill="#ffffff" stroke="#9333ea" stroke-width="4"/>
+  <text x="955" y="440" font-size="32" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#3b0764" font-weight="700">隐状态1</text>
+  <text x="1145" y="440" font-size="32" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#3b0764" font-weight="700">隐状态2</text>
+  <text x="1335" y="440" font-size="32" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#3b0764" font-weight="700">隐状态3</text>
+  <line x1="1082" y1="430" x2="1118" y2="430" stroke="#7c3aed" stroke-width="5" marker-end="url(#arrow2)"/>
+  <line x1="1272" y1="430" x2="1308" y2="430" stroke="#7c3aed" stroke-width="5" marker-end="url(#arrow2)"/>
+
+  <rect x="935" y="610" width="150" height="72" rx="18" fill="#ffffff" stroke="#c084fc" stroke-width="3"/>
+  <rect x="1125" y="610" width="150" height="72" rx="18" fill="#ffffff" stroke="#c084fc" stroke-width="3"/>
+  <rect x="1315" y="610" width="150" height="72" rx="18" fill="#ffffff" stroke="#c084fc" stroke-width="3"/>
+  <text x="968" y="655" font-size="30" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#581c87" font-weight="700">观测1</text>
+  <text x="1158" y="655" font-size="30" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#581c87" font-weight="700">观测2</text>
+  <text x="1348" y="655" font-size="30" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#581c87" font-weight="700">观测3</text>
+
+  <line x1="1010" y1="502" x2="1010" y2="610" stroke="#7c3aed" stroke-width="4" marker-end="url(#arrow2)"/>
+  <line x1="1200" y1="502" x2="1200" y2="610" stroke="#7c3aed" stroke-width="4" marker-end="url(#arrow2)"/>
+  <line x1="1390" y1="502" x2="1390" y2="610" stroke="#7c3aed" stroke-width="4" marker-end="url(#arrow2)"/>
+
+  <text x="885" y="725" font-size="24" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#4c1d95">关键理解：</text>
+  <text x="885" y="765" font-size="24" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#6b21a8">• 决策前先要推断：我当前真正处在哪个状态？</text>
+
+  <text x="540" y="845" font-size="24" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#475569">这条线会自然通向：马尔可夫决策过程（MDP）→ 部分可观测决策（POMDP）→ 世界模型与 Agent 长程决策</text>
+</svg>
