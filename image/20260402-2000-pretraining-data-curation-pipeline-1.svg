@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#f8fafc"/>
+  <text x="80" y="90" font-size="36" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700" fill="#0f172a">预训练语料从原始网页到可训练样本的六道闸门</text>
+  <text x="80" y="132" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#475569">真正昂贵的不是抓网页，而是把噪声、重复、污染与低信息密度样本挡在训练预算之外</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <g font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+    <rect x="70" y="220" rx="18" ry="18" width="190" height="120" fill="#dbeafe" stroke="#60a5fa" stroke-width="2"/>
+    <text x="165" y="265" text-anchor="middle" font-size="24" font-weight="700" fill="#1d4ed8">原始抓取网页</text>
+    <text x="165" y="300" text-anchor="middle" font-size="16" fill="#334155">Common Crawl / 站点抓取</text>
+    <text x="165" y="325" text-anchor="middle" font-size="16" fill="#334155">正文 + 模板 + 广告混杂</text>
+
+    <rect x="300" y="220" rx="18" ry="18" width="190" height="120" fill="#e0f2fe" stroke="#38bdf8" stroke-width="2"/>
+    <text x="395" y="265" text-anchor="middle" font-size="24" font-weight="700" fill="#0369a1">正文提取</text>
+    <text x="395" y="300" text-anchor="middle" font-size="16" fill="#334155">去导航栏 / 页脚 / 样板</text>
+    <text x="395" y="325" text-anchor="middle" font-size="16" fill="#334155">保留自然语言主体</text>
+
+    <rect x="530" y="220" rx="18" ry="18" width="190" height="120" fill="#dcfce7" stroke="#4ade80" stroke-width="2"/>
+    <text x="625" y="265" text-anchor="middle" font-size="24" font-weight="700" fill="#15803d">质量过滤</text>
+    <text x="625" y="300" text-anchor="middle" font-size="16" fill="#334155">语言识别 / 垃圾页剔除</text>
+    <text x="625" y="325" text-anchor="middle" font-size="16" fill="#334155">低熵、SEO、机翻降权</text>
+
+    <rect x="760" y="220" rx="18" ry="18" width="190" height="120" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+    <text x="855" y="265" text-anchor="middle" font-size="24" font-weight="700" fill="#b45309">近重复去重</text>
+    <text x="855" y="300" text-anchor="middle" font-size="16" fill="#334155">文档去重 / 子串去重</text>
+    <text x="855" y="325" text-anchor="middle" font-size="16" fill="#334155">镜像转载 / 模板复写剔除</text>
+
+    <rect x="990" y="220" rx="18" ry="18" width="190" height="120" fill="#fee2e2" stroke="#f87171" stroke-width="2"/>
+    <text x="1085" y="265" text-anchor="middle" font-size="24" font-weight="700" fill="#b91c1c">污染与风险控制</text>
+    <text x="1085" y="300" text-anchor="middle" font-size="16" fill="#334155">Benchmark overlap / PII</text>
+    <text x="1085" y="325" text-anchor="middle" font-size="16" fill="#334155">版权与敏感样本审查</text>
+
+    <rect x="1220" y="220" rx="18" ry="18" width="280" height="120" fill="#ede9fe" stroke="#8b5cf6" stroke-width="2"/>
+    <text x="1360" y="265" text-anchor="middle" font-size="24" font-weight="700" fill="#6d28d9">混合采样与训练配比</text>
+    <text x="1360" y="300" text-anchor="middle" font-size="16" fill="#334155">网页 / 论文 / 代码 / 书籍 / 数学</text>
+    <text x="1360" y="325" text-anchor="middle" font-size="16" fill="#334155">不是“剩下什么都喂进去”</text>
+
+    <line x1="260" y1="280" x2="300" y2="280" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+    <line x1="490" y1="280" x2="530" y2="280" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+    <line x1="720" y1="280" x2="760" y2="280" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+    <line x1="950" y1="280" x2="990" y2="280" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+    <line x1="1180" y1="280" x2="1220" y2="280" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+
+    <rect x="95" y="420" rx="16" ry="16" width="1410" height="360" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="130" y="470" font-size="28" font-weight="700" fill="#0f172a">六道闸门分别在防什么？</text>
+
+    <rect x="130" y="505" rx="14" ry="14" width="420" height="95" fill="#eff6ff"/>
+    <text x="155" y="540" font-size="22" font-weight="700" fill="#1d4ed8">① 不清正文，模型就会学会网页模板</text>
+    <text x="155" y="572" font-size="17" fill="#334155">导航栏、cookie 提示、页脚版权、相关推荐会反复出现，浪费大量 token 预算。</text>
+
+    <rect x="575" y="505" rx="14" ry="14" width="420" height="95" fill="#f0fdf4"/>
+    <text x="600" y="540" font-size="22" font-weight="700" fill="#15803d">② 不做质量过滤，模型会被低熵文本稀释</text>
+    <text x="600" y="572" font-size="17" fill="#334155">SEO 垃圾页、机器翻译站、聚合页、广告农场会让“账面 token 很多，信息密度很低”。</text>
+
+    <rect x="1020" y="505" rx="14" ry="14" width="450" height="95" fill="#fff7ed"/>
+    <text x="1045" y="540" font-size="22" font-weight="700" fill="#c2410c">③ 不去重，模型会把算力烧在重复样本上</text>
+    <text x="1045" y="572" font-size="17" fill="#334155">重复文档、转载镜像、长模板串不仅浪费训练步数，还会加重记忆化与评测污染。</text>
+
+    <rect x="130" y="625" rx="14" ry="14" width="420" height="95" fill="#fef2f2"/>
+    <text x="155" y="660" font-size="22" font-weight="700" fill="#b91c1c">④ 不查污染，评测会被虚高结果误导</text>
+    <text x="155" y="692" font-size="17" fill="#334155">benchmark overlap、训练—验证近重复、泄露测试答案，会让“能力提升”看起来比真实更大。</text>
+
+    <rect x="575" y="625" rx="14" ry="14" width="420" height="95" fill="#faf5ff"/>
+    <text x="600" y="660" font-size="22" font-weight="700" fill="#7c3aed">⑤ 不做配比，模型会被单一来源牵着走</text>
+    <text x="600" y="692" font-size="17" fill="#334155">网页、论文、代码、数学、问答各自分布不同，混合比例决定了模型偏好与能力边界。</text>
+
+    <rect x="1020" y="625" rx="14" ry="14" width="450" height="95" fill="#ecfeff"/>
+    <text x="1045" y="660" font-size="22" font-weight="700" fill="#0f766e">⑥ 真正的目标不是“删数据”，而是抬高有效信息密度</text>
+    <text x="1045" y="692" font-size="17" fill="#334155">表面 token 少一点并不可怕；可怕的是把大量 GPU 时间花在低价值、重复、污染样本上。</text>
+
+    <text x="80" y="840" font-size="16" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#64748b">小英子制图｜用于《预训练数据清洗与去重：语料质量为何比规模更重要》</text>
+  </g>
+</svg>

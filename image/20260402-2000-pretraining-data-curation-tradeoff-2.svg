@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#f8fafc"/>
+  <text x="80" y="88" font-size="36" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700" fill="#0f172a">语料质量为何常常比“再多一点 token”更重要</text>
+  <text x="80" y="130" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#475569">重点不是否认规模，而是把训练预算从重复、污染和低熵网页里解放出来，换成更高的信息密度</text>
+
+  <g font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">
+    <rect x="90" y="190" rx="18" ry="18" width="650" height="610" fill="#fff7ed" stroke="#fdba74" stroke-width="2"/>
+    <text x="125" y="245" font-size="30" font-weight="700" fill="#c2410c">只追“表面规模”时，常见会发生什么？</text>
+
+    <rect x="125" y="285" rx="14" ry="14" width="280" height="120" fill="#ffedd5"/>
+    <text x="145" y="330" font-size="24" font-weight="700" fill="#9a3412">重复页面占预算</text>
+    <text x="145" y="365" font-size="17" fill="#334155">转载、镜像、模板站让 token 看起来很多，</text>
+    <text x="145" y="390" font-size="17" fill="#334155">但有效新信息增量并不成比例。</text>
+
+    <rect x="430" y="285" rx="14" ry="14" width="280" height="120" fill="#ffedd5"/>
+    <text x="450" y="330" font-size="24" font-weight="700" fill="#9a3412">低熵文本稀释训练</text>
+    <text x="450" y="365" font-size="17" fill="#334155">SEO 农场、导航模板、机器生成垃圾页</text>
+    <text x="450" y="390" font-size="17" fill="#334155">会把训练步数消耗在低价值模式上。</text>
+
+    <rect x="125" y="430" rx="14" ry="14" width="585" height="120" fill="#fee2e2"/>
+    <text x="145" y="475" font-size="24" font-weight="700" fill="#b91c1c">记忆化与评测污染会抬高“虚假进步”</text>
+    <text x="145" y="510" font-size="18" fill="#334155">Deduplicating Training Data Makes Language Models Better 指出：未去重数据会导致超过 1% 的无提示输出直接逐字复制训练文本；</text>
+    <text x="145" y="538" font-size="18" fill="#334155">去重后，记忆化输出频率可下降约 10 倍，并减少训练—验证重叠带来的虚高评测。</text>
+
+    <rect x="125" y="575" rx="14" ry="14" width="585" height="170" fill="#fef2f2"/>
+    <text x="145" y="620" font-size="24" font-weight="700" fill="#991b1b">账面 token ≠ 有效信息密度</text>
+    <text x="145" y="655" font-size="18" fill="#334155">当同一 1000 个 token 里，重复模板、无效 boilerplate、低质量广告文案越多，</text>
+    <text x="145" y="683" font-size="18" fill="#334155">模型真正学到的新分布、新知识、新组合规律就越少；GPU 时间看似花在“规模”上，</text>
+    <text x="145" y="711" font-size="18" fill="#334155">其实更多花在了重复噪声上。</text>
+
+    <rect x="860" y="190" rx="18" ry="18" width="650" height="610" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="895" y="245" font-size="30" font-weight="700" fill="#1d4ed8">认真做清洗 / 去重后，预算会换来什么？</text>
+
+    <rect x="895" y="285" rx="14" ry="14" width="280" height="120" fill="#dbeafe"/>
+    <text x="915" y="330" font-size="24" font-weight="700" fill="#1d4ed8">更高的信息密度</text>
+    <text x="915" y="365" font-size="17" fill="#334155">同样算力下，模型看到的“新模式”更多，</text>
+    <text x="915" y="390" font-size="17" fill="#334155">有效训练步数被抬高。</text>
+
+    <rect x="1200" y="285" rx="14" ry="14" width="280" height="120" fill="#dbeafe"/>
+    <text x="1220" y="330" font-size="24" font-weight="700" fill="#1d4ed8">更可信的评测</text>
+    <text x="1220" y="365" font-size="17" fill="#334155">降低 train-test overlap，减少“背题式”提升，</text>
+    <text x="1220" y="390" font-size="17" fill="#334155">更接近真实泛化能力。</text>
+
+    <rect x="895" y="430" rx="14" ry="14" width="585" height="120" fill="#dcfce7"/>
+    <text x="915" y="475" font-size="24" font-weight="700" fill="#15803d">RefinedWeb / Dolma / FineWeb 的共同信号</text>
+    <text x="915" y="510" font-size="18" fill="#334155">大规模网页语料不是不能用，而是必须经过足够严格的过滤、去重、文档化与配比；</text>
+    <text x="915" y="538" font-size="18" fill="#334155">“web-only”也能很强，但前提是把网页变成真正可训练的文本，而不是原样灌进模型。</text>
+
+    <rect x="895" y="575" rx="14" ry="14" width="585" height="170" fill="#ecfeff"/>
+    <text x="915" y="620" font-size="24" font-weight="700" fill="#0f766e">结论：规模仍重要，但质量决定规模是否值钱</text>
+    <text x="915" y="655" font-size="18" fill="#334155">真正的问题从来不是“要不要更多数据”，而是“新增 token 是否带来新增信息、</text>
+    <text x="915" y="683" font-size="18" fill="#334155">更低污染、更少重复、更稳的分布覆盖”。先把低价值样本清出去，再谈扩大规模，</text>
+    <text x="915" y="711" font-size="18" fill="#334155">往往比盲目堆网页更符合算力经济学。</text>
+
+    <line x1="770" y1="495" x2="840" y2="495" stroke="#64748b" stroke-width="6"/>
+    <polygon points="840,495 820,483 820,507" fill="#64748b"/>
+    <text x="792" y="470" text-anchor="middle" font-size="18" fill="#475569">把预算从噪声中释放</text>
+
+    <text x="80" y="846" font-size="16" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#64748b">小英子制图｜用于《预训练数据清洗与去重：语料质量为何比规模更重要》</text>
+  </g>
+</svg>
