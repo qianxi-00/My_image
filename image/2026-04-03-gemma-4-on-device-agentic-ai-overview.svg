@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#f5f7fb"/>
+  <rect x="50" y="40" width="1500" height="820" rx="28" fill="#ffffff" stroke="#d8e0ef" stroke-width="2"/>
+  <text x="90" y="110" font-size="42" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-weight="700" fill="#1f2d3d">Gemma 4 家族：从边缘设备到工作站的统一产品矩阵</text>
+  <text x="90" y="155" font-size="22" font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#5b6b82">Google DeepMind 于 2026-04-02 发布，核心关键词：开源、长上下文、多模态、Agent、端侧部署</text>
+
+  <rect x="90" y="210" width="650" height="560" rx="24" fill="#eef5ff" stroke="#9ec5ff" stroke-width="2"/>
+  <text x="120" y="270" font-size="34" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-weight="700" fill="#2457c5">边缘端模型</text>
+  <text x="120" y="305" font-size="22" font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#44607f">重点：低延迟、低内存、手机 / IoT / 树莓派 / 端侧多模态</text>
+
+  <rect x="120" y="345" width="280" height="360" rx="20" fill="#ffffff" stroke="#9ec5ff" stroke-width="2"/>
+  <text x="150" y="395" font-size="30" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-weight="700" fill="#1f2d3d">E2B</text>
+  <text x="150" y="435" font-size="21" font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#43556e">有效参数：2.3B</text>
+  <text x="150" y="470" font-size="21" font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#43556e">含嵌入：5.1B</text>
+  <text x="150" y="505" font-size="21" font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#43556e">上下文：128K</text>
+  <text x="150" y="540" font-size="21" font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#43556e">模态：文本 / 图像 / 音频</text>
+  <text x="150" y="575" font-size="21" font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#43556e">典型场景：离线助手、轻量 Agent</text>
+  <text x="150" y="610" font-size="21" font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#43556e">特点：更像系统能力底座</text>
+
+  <rect x="430" y="345" width="280" height="360" rx="20" fill="#ffffff" stroke="#9ec5ff" stroke-width="2"/>
+  <text x="460" y="395" font-size="30" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-weight="700" fill="#1f2d3d">E4B</text>
+  <text x="460" y="435" font-size="21" font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#43556e">有效参数：4.5B</text>
+  <text x="460" y="470" font-size="21" font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#43556e">含嵌入：8B</text>
+  <text x="460" y="505" font-size="21" font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#43556e">上下文：128K</text>
+  <text x="460" y="540" font-size="21" font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#43556e">模态：文本 / 图像 / 音频</text>
+  <text x="460" y="575" font-size="21" font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#43556e">典型场景：本地多模态应用</text>
+  <text x="460" y="610" font-size="21" font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#43556e">特点：更完整的端侧智能体验</text>
+
+  <rect x="850" y="210" width="660" height="560" rx="24" fill="#fff4e8" stroke="#ffbe7a" stroke-width="2"/>
+  <text x="880" y="270" font-size="34" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-weight="700" fill="#b85d00">工作站 / 云边协同模型</text>
+  <text x="880" y="305" font-size="22" font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#6b5d4c">重点：更强推理、更大上下文、编码与复杂 Agent 工作流</text>
+
+  <rect x="880" y="345" width="280" height="360" rx="20" fill="#ffffff" stroke="#ffbe7a" stroke-width="2"/>
+  <text x="910" y="395" font-size="30" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-weight="700" fill="#1f2d3d">26B A4B</text>
+  <text x="910" y="435" font-size="21" font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#43556e">总参数：25.2B</text>
+  <text x="910" y="470" font-size="21" font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#43556e">激活参数：3.8B</text>
+  <text x="910" y="505" font-size="21" font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#43556e">上下文：256K</text>
+  <text x="910" y="540" font-size="21" font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#43556e">模态：文本 / 图像</text>
+  <text x="910" y="575" font-size="21" font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#43556e">典型场景：高性价比 Agent</text>
+  <text x="910" y="610" font-size="21" font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#43556e">特点：MoE 兼顾质量与吞吐</text>
+
+  <rect x="1190" y="345" width="280" height="360" rx="20" fill="#ffffff" stroke="#ffbe7a" stroke-width="2"/>
+  <text x="1220" y="395" font-size="30" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-weight="700" fill="#1f2d3d">31B Dense</text>
+  <text x="1220" y="435" font-size="21" font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#43556e">总参数：30.7B</text>
+  <text x="1220" y="470" font-size="21" font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#43556e">上下文：256K</text>
+  <text x="1220" y="505" font-size="21" font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#43556e">模态：文本 / 图像</text>
+  <text x="1220" y="540" font-size="21" font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#43556e">典型场景：高质量离线推理</text>
+  <text x="1220" y="575" font-size="21" font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#43556e">特点：质量优先、适合微调</text>
+  <text x="1220" y="610" font-size="21" font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#43556e">排名：开源榜前列</text>
+
+  <rect x="100" y="795" width="1400" height="42" rx="18" fill="#e9eef7"/>
+  <text x="122" y="823" font-size="20" font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#42546b">核心判断：Gemma 4 的意义不在于“再发一组开源权重”，而在于第一次把端侧多模态、长上下文、工具调用和多平台部署打包成一条完整路线。</text>
+</svg>
