@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#f7f8fc"/>
+  <text x="800" y="70" text-anchor="middle" font-size="38" font-family="'Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#1f2937" font-weight="700">DeepSeek V4 的系统化架构路线</text>
+  <text x="800" y="112" text-anchor="middle" font-size="20" font-family="'Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#4b5563">不是只把模型做大，而是把长上下文、KV、MoE、推理与工具调用一起重写</text>
+
+  <rect x="90" y="180" rx="22" ry="22" width="260" height="150" fill="#ffffff" stroke="#c7d2fe" stroke-width="3"/>
+  <text x="220" y="228" text-anchor="middle" font-size="28" font-family="'Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#4338ca" font-weight="700">问题入口</text>
+  <text x="220" y="270" text-anchor="middle" font-size="22" font-family="'Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#374151">1M 上下文</text>
+  <text x="220" y="304" text-anchor="middle" font-size="22" font-family="'Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#374151">不能再靠传统</text>
+  <text x="220" y="338" text-anchor="middle" font-size="22" font-family="'Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#374151">全量注意力硬扛</text>
+
+  <rect x="420" y="150" rx="22" ry="22" width="320" height="210" fill="#eef2ff" stroke="#818cf8" stroke-width="3"/>
+  <text x="580" y="195" text-anchor="middle" font-size="30" font-family="'Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#3730a3" font-weight="700">混合注意力</text>
+  <text x="580" y="240" text-anchor="middle" font-size="24" font-family="'Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#1f2937">CSA：压缩 + 稀疏选择</text>
+  <text x="580" y="278" text-anchor="middle" font-size="24" font-family="'Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#1f2937">HCA：更强压缩 + 稠密算子</text>
+  <text x="580" y="316" text-anchor="middle" font-size="22" font-family="'Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#4b5563">配合 128 滑窗、压缩比切换</text>
+  <text x="580" y="348" text-anchor="middle" font-size="22" font-family="'Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#4b5563">把长上下文成本改写成可管理账本</text>
+
+  <rect x="810" y="150" rx="22" ry="22" width="320" height="210" fill="#ecfeff" stroke="#22d3ee" stroke-width="3"/>
+  <text x="970" y="195" text-anchor="middle" font-size="30" font-family="'Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#0f766e" font-weight="700">稳定与容量</text>
+  <text x="970" y="240" text-anchor="middle" font-size="24" font-family="'Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#1f2937">mHC 强化残差稳定性</text>
+  <text x="970" y="278" text-anchor="middle" font-size="24" font-family="'Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#1f2937">DeepSeekMoE 保留大容量</text>
+  <text x="970" y="316" text-anchor="middle" font-size="22" font-family="'Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#4b5563">Pro：49B 激活 / 1.6T 总量</text>
+  <text x="970" y="348" text-anchor="middle" font-size="22" font-family="'Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#4b5563">Flash：13B 激活 / 284B 总量</text>
+
+  <rect x="1190" y="150" rx="22" ry="22" width="320" height="210" fill="#fff7ed" stroke="#fb923c" stroke-width="3"/>
+  <text x="1350" y="195" text-anchor="middle" font-size="30" font-family="'Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#c2410c" font-weight="700">推理框架</text>
+  <text x="1350" y="240" text-anchor="middle" font-size="24" font-family="'Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#1f2937">异构 KV Cache</text>
+  <text x="1350" y="278" text-anchor="middle" font-size="24" font-family="'Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#1f2937">磁盘前缀复用</text>
+  <text x="1350" y="316" text-anchor="middle" font-size="22" font-family="'Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#4b5563">不是只有权重文件升级</text>
+  <text x="1350" y="348" text-anchor="middle" font-size="22" font-family="'Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#4b5563">而是部署方法也一起升级</text>
+
+  <rect x="260" y="480" rx="22" ry="22" width="500" height="220" fill="#ffffff" stroke="#a7f3d0" stroke-width="3"/>
+  <text x="510" y="528" text-anchor="middle" font-size="32" font-family="'Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#047857" font-weight="700">后训练与产品接口</text>
+  <text x="510" y="574" text-anchor="middle" font-size="24" font-family="'Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#1f2937">领域专家训练 + OPD 统一蒸馏</text>
+  <text x="510" y="612" text-anchor="middle" font-size="24" font-family="'Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#1f2937">Think High / Think Max</text>
+  <text x="510" y="650" text-anchor="middle" font-size="24" font-family="'Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#1f2937">DSML 工具调用 + Quick Instruction</text>
+  <text x="510" y="686" text-anchor="middle" font-size="22" font-family="'Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#4b5563">模型、接口、代理工作流被统一成一套系统</text>
+
+  <rect x="850" y="480" rx="22" ry="22" width="500" height="220" fill="#ffffff" stroke="#fbcfe8" stroke-width="3"/>
+  <text x="1100" y="528" text-anchor="middle" font-size="32" font-family="'Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#be185d" font-weight="700">最终指向的路线</text>
+  <text x="1100" y="574" text-anchor="middle" font-size="24" font-family="'Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#1f2937">开源大模型不再只拼参数与榜单</text>
+  <text x="1100" y="612" text-anchor="middle" font-size="24" font-family="'Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#1f2937">而是一起优化：</text>
+  <text x="1100" y="650" text-anchor="middle" font-size="24" font-family="'Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#1f2937">注意力结构、KV 经济、训练稳定性、代理接口</text>
+  <text x="1100" y="686" text-anchor="middle" font-size="22" font-family="'Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#4b5563">这才是 DeepSeek V4 真正的升级含义</text>
+
+  <path d="M350 255 L420 255" stroke="#6366f1" stroke-width="6" fill="none" marker-end="url(#arrow)"/>
+  <path d="M740 255 L810 255" stroke="#06b6d4" stroke-width="6" fill="none" marker-end="url(#arrow)"/>
+  <path d="M1130 255 L1190 255" stroke="#f97316" stroke-width="6" fill="none" marker-end="url(#arrow)"/>
+  <path d="M970 360 L970 450" stroke="#9ca3af" stroke-width="6" fill="none" marker-end="url(#arrow)"/>
+  <path d="M760 590 L850 590" stroke="#10b981" stroke-width="6" fill="none" marker-end="url(#arrow)"/>
+
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#6b7280"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366F1;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#6366F1;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EC4899;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#F97316;stop-opacity:1"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#00000020"/>
+    </filter>
+  </defs>
+  <rect width="900" height="520" rx="16" fill="#F8FAFC"/>
+  <text x="450" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1E293B">Google Gemini Omni：统一多模态生成架构示意</text>
+
+  <!-- Input: Three streams -->
+  <rect x="40" y="80" width="180" height="90" rx="12" fill="url(#g1)" filter="url(#shadow)"/>
+  <text x="130" y="118" text-anchor="middle" font-size="16" font-weight="600" fill="#fff">📝 文本生成</text>
+  <text x="130" y="145" text-anchor="middle" font-size="12" fill="#E0E7FF">Gemini LLM</text>
+
+  <rect x="40" y="200" width="180" height="90" rx="12" fill="url(#g2)" filter="url(#shadow)"/>
+  <text x="130" y="238" text-anchor="middle" font-size="16" font-weight="600" fill="#fff">🖼️ 图像生成</text>
+  <text x="130" y="265" text-anchor="middle" font-size="12" fill="#DBEAFE">Nano Banana / Imagen</text>
+
+  <rect x="40" y="320" width="180" height="90" rx="12" fill="url(#g3)" filter="url(#shadow)"/>
+  <text x="130" y="358" text-anchor="middle" font-size="16" font-weight="600" fill="#fff">🎬 视频生成</text>
+  <text x="130" y="385" text-anchor="middle" font-size="12" fill="#FDE68A">Veo → Omni</text>
+
+  <!-- Arrows converging -->
+  <path d="M220,125 Q320,125 390,240" stroke="#6366F1" stroke-width="2.5" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M220,245 Q320,245 390,250" stroke="#3B82F6" stroke-width="2.5" fill="none"/>
+  <path d="M220,365 Q320,365 390,270" stroke="#EC4899" stroke-width="2.5" fill="none"/>
+
+  <!-- Central unified model -->
+  <rect x="380" y="170" width="200" height="160" rx="16" fill="#1E293B" filter="url(#shadow)"/>
+  <text x="480" y="220" text-anchor="middle" font-size="18" font-weight="700" fill="#A5B4FC">统一多模态</text>
+  <text x="480" y="248" text-anchor="middle" font-size="18" font-weight="700" fill="#A5B4FC">生成模型</text>
+  <text x="480" y="280" text-anchor="middle" font-size="13" fill="#94A3B8">Gemini Omni</text>
+  <text x="480" y="300" text-anchor="middle" font-size="11" fill="#64748B">Single Architecture</text>
+
+  <!-- Output: Conversational editing -->
+  <path d="M580,250 Q650,250 680,250" stroke="#10B981" stroke-width="2.5" fill="none"/>
+  <rect x="680" y="170" width="190" height="160" rx="16" fill="#059669" filter="url(#shadow)"/>
+  <text x="775" y="215" text-anchor="middle" font-size="16" font-weight="600" fill="#fff">💬 对话式编辑</text>
+  <text x="775" y="245" text-anchor="middle" font-size="12" fill="#D1FAE5">Chat-to-Edit</text>
+  <text x="775" y="270" text-anchor="middle" font-size="12" fill="#D1FAE5">模板 Remix</text>
+  <text x="775" y="295" text-anchor="middle" font-size="12" fill="#D1FAE5">上下文连贯</text>
+  <text x="775" y="315" text-anchor="middle" font-size="12" fill="#D1FAE5">多轮迭代</text>
+
+  <!-- Bottom: Key difference -->
+  <rect x="120" y="440" width="660" height="55" rx="10" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="450" y="462" text-anchor="middle" font-size="14" font-weight="600" fill="#92400E">核心转向：从「独立工具各司其职」→「单一模型统一生成 + 对话式交互」</text>
+  <text x="450" y="483" text-anchor="middle" font-size="12" fill="#B45309">用户不再需要切换工具，在一个对话中完成文本→图像→视频的完整创作流</text>
+</svg>

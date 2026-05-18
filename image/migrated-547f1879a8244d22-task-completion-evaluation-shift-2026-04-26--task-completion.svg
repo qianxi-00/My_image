@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="860" viewBox="0 0 1400 860">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f8fbff"/>
+      <stop offset="100%" stop-color="#eef5ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#9bb7ff" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="1400" height="860" fill="url(#bg)"/>
+  <text x="700" y="70" font-size="34" text-anchor="middle" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" fill="#16325c" font-weight="700">AI 评测正在从“排行榜”走向“任务完成率”，并继续升级到“证据 + 恢复 + 治理”</text>
+  <text x="700" y="110" font-size="18" text-anchor="middle" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" fill="#4d6489">真正变化的不是分数表，而是评测单位：从答题结果，变成环境中的行动、轨迹、稳定性与可证明完成</text>
+
+  <rect x="70" y="170" rx="24" ry="24" width="380" height="560" fill="#ffffff" stroke="#d9e6ff" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="510" y="170" rx="24" ry="24" width="380" height="560" fill="#ffffff" stroke="#d9e6ff" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="950" y="170" rx="24" ry="24" width="380" height="560" fill="#ffffff" stroke="#d9e6ff" stroke-width="2" filter="url(#shadow)"/>
+
+  <text x="260" y="225" font-size="28" text-anchor="middle" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" fill="#b54708" font-weight="700">旧范式：排行榜中心</text>
+  <text x="700" y="225" font-size="28" text-anchor="middle" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" fill="#0b6bcb" font-weight="700">当前范式：任务完成率中心</text>
+  <text x="1140" y="225" font-size="28" text-anchor="middle" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" fill="#0f766e" font-weight="700">下一阶段：可证明执行中心</text>
+
+  <g font-size="20" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" fill="#3d4f6a">
+    <circle cx="110" cy="290" r="8" fill="#f59e0b"/>
+    <text x="130" y="297">静态题库、单轮答题、单次运行</text>
+    <circle cx="110" cy="340" r="8" fill="#f59e0b"/>
+    <text x="130" y="347">核心输出被压成一张总榜单</text>
+    <circle cx="110" cy="390" r="8" fill="#f59e0b"/>
+    <text x="130" y="397">更擅长比较“谁更像刷题高手”</text>
+    <circle cx="110" cy="440" r="8" fill="#f59e0b"/>
+    <text x="130" y="447">很难解释真实工作流中的失败链条</text>
+    <circle cx="110" cy="490" r="8" fill="#f59e0b"/>
+    <text x="130" y="497">一次成功常被误读为稳定成功</text>
+    <circle cx="110" cy="540" r="8" fill="#f59e0b"/>
+    <text x="130" y="547">不容易衡量工具调用、恢复与合规</text>
+  </g>
+
+  <g font-size="20" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" fill="#3d4f6a">
+    <circle cx="550" cy="290" r="8" fill="#3b82f6"/>
+    <text x="570" y="297">环境成为评测对象：桌面、网页、代码库、客服流程</text>
+    <circle cx="550" cy="340" r="8" fill="#3b82f6"/>
+    <text x="570" y="347">看的是任务是否做成，而不只是答案是否命中</text>
+    <circle cx="550" cy="390" r="8" fill="#3b82f6"/>
+    <text x="570" y="397">轨迹、子任务、工具使用开始进入主指标</text>
+    <circle cx="550" cy="440" r="8" fill="#3b82f6"/>
+    <text x="570" y="447">多模态与实时交互让“做事能力”更重要</text>
+    <circle cx="550" cy="490" r="8" fill="#3b82f6"/>
+    <text x="570" y="497">任务完成率成为产品可用性的首层门槛</text>
+    <circle cx="550" cy="540" r="8" fill="#3b82f6"/>
+    <text x="570" y="547">代表 benchmark：OSWorld、SWE-bench、τ³-bench 等</text>
+  </g>
+
+  <g font-size="20" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" fill="#3d4f6a">
+    <circle cx="990" cy="290" r="8" fill="#14b8a6"/>
+    <text x="1010" y="297">不只问“完成了没”，还问“为什么算完成”</text>
+    <circle cx="990" cy="340" r="8" fill="#14b8a6"/>
+    <text x="1010" y="347">要求可视证据、重复执行稳定性与恢复能力</text>
+    <circle cx="990" cy="390" r="8" fill="#14b8a6"/>
+    <text x="1010" y="397">动作质量、意图匹配、循环检测进入评估</text>
+    <circle cx="990" cy="440" r="8" fill="#14b8a6"/>
+    <text x="1010" y="447">识别问题本身，成为任务前置能力</text>
+    <circle cx="990" cy="490" r="8" fill="#14b8a6"/>
+    <text x="1010" y="497">治理、审计、动作证据与 runtime assurance 上台面</text>
+    <circle cx="990" cy="540" r="8" fill="#14b8a6"/>
+    <text x="1010" y="547">代表方向：IntentScore、VLAA-GUI、KWBench 等</text>
+  </g>
+
+  <path d="M 450 450 C 480 450, 490 450, 510 450" fill="none" stroke="#8fb5ff" stroke-width="8" stroke-linecap="round"/>
+  <polygon points="505,435 535,450 505,465" fill="#8fb5ff"/>
+  <path d="M 890 450 C 920 450, 930 450, 950 450" fill="none" stroke="#79d4c6" stroke-width="8" stroke-linecap="round"/>
+  <polygon points="945,435 975,450 945,465" fill="#79d4c6"/>
+
+  <rect x="160" y="620" rx="16" ry="16" width="1080" height="80" fill="#f5f8ff" stroke="#dce7ff"/>
+  <text x="700" y="668" font-size="22" text-anchor="middle" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" fill="#183153">一句话总结：排行榜没有消失，但它正在从“最终答案”退回成“辅助切片”；真正决定产品胜负的，是任务完成、稳定复现与可审计执行。</text>
+
+  <text x="700" y="790" font-size="16" text-anchor="middle" font-family="'Noto Sans SC','Microsoft YaHei',sans-serif" fill="#61738f">示意图为本文根据 2026 年 4 月近源资料整理，不对应单一官方架构图</text>
+</svg>

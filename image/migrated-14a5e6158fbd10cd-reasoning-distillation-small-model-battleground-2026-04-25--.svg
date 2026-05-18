@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7f8ff"/>
+      <stop offset="100%" stop-color="#eef5ff"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4c5bd4"/>
+    </marker>
+    <style>
+      .t { font-family: 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif; fill:#1f2d3d; }
+      .h { font-size: 32px; font-weight: 700; }
+      .sh { font-size: 20px; font-weight: 700; }
+      .b { font-size: 18px; }
+      .s { font-size: 16px; }
+      .box { rx:22; ry:22; stroke-width:2; }
+      .line { stroke:#4c5bd4; stroke-width:4; fill:none; marker-end:url(#arrow); }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="1200" height="780" fill="url(#bg)"/>
+  <text x="600" y="56" text-anchor="middle" class="t h">小模型推理路线的真正分水岭：不是谁想得更长，而是谁更会设计教学</text>
+  <text x="600" y="92" text-anchor="middle" class="t b">最近十五天的研究把竞争焦点从“长链模仿”推进到“教学信号选择与部署取舍”</text>
+  <rect x="60" y="150" width="300" height="190" class="box" fill="#ffffff" stroke="#6d7ef3"/>
+  <text x="210" y="190" text-anchor="middle" class="t sh">老师端：强模型提供什么</text>
+  <text x="90" y="230" class="t b">• 推理轨迹与答案链</text>
+  <text x="90" y="264" class="t b">• 逐步聚焦的注意力重心</text>
+  <text x="90" y="298" class="t b">• 局部提示与思维模式先验</text>
+  <text x="90" y="332" class="t b">• 何时求助、何时停止的策略</text>
+  <rect x="450" y="126" width="300" height="238" class="box" fill="#fffef8" stroke="#f3a43b"/>
+  <text x="600" y="166" text-anchor="middle" class="t sh">主战场：推理蒸馏如何改写教学</text>
+  <text x="480" y="206" class="t b">1. 纪律化 CoT：减少过度思考</text>
+  <text x="480" y="240" class="t b">2. 过程蒸馏：迁移“该看哪里”</text>
+  <text x="480" y="274" class="t b">3. 提示式蒸馏：教局部步骤，不代做</text>
+  <text x="480" y="308" class="t b">4. 思维先验蒸馏：先学会拆题与规划</text>
+  <text x="480" y="342" class="t b">5. 再用 RL / 轻量推理时机制补强</text>
+  <rect x="840" y="150" width="300" height="190" class="box" fill="#ffffff" stroke="#22a06b"/>
+  <text x="990" y="190" text-anchor="middle" class="t sh">学生端：小模型真正要学会的</text>
+  <text x="870" y="230" class="t b">• 在有限 token 内收束思路</text>
+  <text x="870" y="264" class="t b">• 避免早期错误一路放大</text>
+  <text x="870" y="298" class="t b">• 在必要时主动求助或调用工具</text>
+  <text x="870" y="332" class="t b">• 把复杂老师改写成可部署行为</text>
+  <path d="M360 245 C400 245, 410 245, 450 245" class="line"/>
+  <path d="M750 245 C790 245, 800 245, 840 245" class="line"/>
+  <rect x="120" y="450" width="960" height="230" class="box" fill="#ffffff" stroke="#c8d1ff"/>
+  <text x="600" y="492" text-anchor="middle" class="t sh">为什么说这是主战场</text>
+  <text x="170" y="540" class="t b">• 纯 RL 太依赖奖励与数据分布，往往更像第二阶段精修。</text>
+  <text x="170" y="578" class="t b">• 纯 agent 化和复杂 ReAct 结构，对 1B 到 7B 级模型常常形成额外“认知税”。</text>
+  <text x="170" y="616" class="t b">• 纯 test-time scaling 会把成本留到用户请求发生时，违背小模型低延迟、低成本初衷。</text>
+  <text x="170" y="654" class="t b">• 推理蒸馏处在中间层：能吸收老师、RL、协作和推理时机制的成果，再压缩成学生的常驻能力。</text>
+  <text x="600" y="734" text-anchor="middle" class="t s">结论：会推理的小模型，既不是单纯压出来的，也不是凭空教出来的；关键在于谁更会把老师改造成课程。</text>
+</svg>

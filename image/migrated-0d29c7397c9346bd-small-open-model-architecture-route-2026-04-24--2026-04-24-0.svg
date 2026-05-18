@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <rect width="1200" height="760" fill="#f7f9fc"/>
+  <rect x="40" y="28" width="1120" height="78" rx="18" fill="#101828"/>
+  <text x="600" y="63" text-anchor="middle" font-size="30" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#ffffff" font-weight="700">小型开源模型的两条架构路线</text>
+  <text x="600" y="93" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#d0d5dd">从“参数量竞赛”转向“静态内存、激活路径、上下文与模态预算”的联合优化</text>
+
+  <rect x="70" y="150" width="470" height="430" rx="22" fill="#e8f1ff" stroke="#84adff" stroke-width="2"/>
+  <text x="305" y="190" text-anchor="middle" font-size="28" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#174ea6" font-weight="700">路线 A：有效参数小型多模态 Dense</text>
+  <text x="305" y="225" text-anchor="middle" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#174ea6">代表：Gemma 4 E2B / E4B</text>
+  <rect x="100" y="255" width="410" height="285" rx="16" fill="#ffffff" stroke="#b9d1ff" stroke-width="2"/>
+  <text x="125" y="295" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#101828">• 用“有效参数”而不是裸总参数命名</text>
+  <text x="125" y="333" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#101828">• PLE + 混合注意力：兼顾本地运行与长上下文</text>
+  <text x="125" y="371" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#101828">• 128K 上下文，原生图像与音频输入</text>
+  <text x="125" y="409" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#101828">• 目标设备：高端手机、浏览器、笔记本</text>
+  <text x="125" y="447" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#101828">• 重点不是极限省权重，而是提高“可用能力密度”</text>
+  <text x="125" y="485" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#101828">• 代价：静态权重占用仍高于名字表面的 2B / 4B</text>
+  <rect x="120" y="560" width="370" height="56" rx="12" fill="#d7e6ff"/>
+  <text x="305" y="595" text-anchor="middle" font-size="22" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#174ea6" font-weight="700">适合：多模态本地助手、长文档理解、浏览器端 AI</text>
+
+  <rect x="660" y="150" width="470" height="430" rx="22" fill="#eef8e9" stroke="#8bc48a" stroke-width="2"/>
+  <text x="895" y="190" text-anchor="middle" font-size="28" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#1d6f42" font-weight="700">路线 B：激活参数优先的端侧 MoE</text>
+  <text x="895" y="225" text-anchor="middle" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#1d6f42">代表：LFM2-8B-A1B</text>
+  <rect x="690" y="255" width="410" height="285" rx="16" fill="#ffffff" stroke="#b8ddb8" stroke-width="2"/>
+  <text x="715" y="295" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#101828">• 8.3B 总参数，但每个 token 只激活 1.5B</text>
+  <text x="715" y="333" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#101828">• 18 个短卷积块 + 6 个 GQA 块的混合骨干</text>
+  <text x="715" y="371" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#101828">• 32 个专家、Top-4 路由、前两层保持 Dense</text>
+  <text x="715" y="409" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#101828">• 目标设备：手机、平板、笔记本的低时延推理</text>
+  <text x="715" y="447" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#101828">• 重点是把容量放到总参数，而把在线算力压到激活路径</text>
+  <text x="715" y="485" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#101828">• 代价：路由、总权重加载与短上下文仍是现实约束</text>
+  <rect x="710" y="560" width="370" height="56" rx="12" fill="#ddf0da"/>
+  <text x="895" y="595" text-anchor="middle" font-size="22" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#1d6f42" font-weight="700">适合：隐私敏感、本地低时延、窄场景任务型应用</text>
+
+  <path d="M540 345 C585 345, 615 345, 660 345" stroke="#98a2b3" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M660 390 C615 390, 585 390, 540 390" stroke="#98a2b3" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+
+  <rect x="235" y="650" width="730" height="70" rx="18" fill="#ffffff" stroke="#d0d5dd" stroke-width="2"/>
+  <text x="600" y="682" text-anchor="middle" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#101828" font-weight="700">真正的分水岭</text>
+  <text x="600" y="710" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#475467">不是“2B、4B、8B 谁更大”，而是静态权重、在线算力、KV Cache、视觉与音频 token 成本应该怎么分配</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#98a2b3"/>
+    </marker>
+  </defs>
+</svg>

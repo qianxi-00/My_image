@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#f8fafc"/>
+  <text x="800" y="70" text-anchor="middle" font-size="34" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#0f172a" font-weight="700">训练并行到部署并行：大模型系统架构贯通图</text>
+  <text x="800" y="110" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#475569">同一套模型，如果只为训练优化、不为服务优化，最终会在权重格式、缓存、调度与成本上重新付费</text>
+
+  <rect x="80" y="180" rx="18" ry="18" width="250" height="180" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+  <text x="205" y="225" text-anchor="middle" font-size="28" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#1e3a8a" font-weight="700">模型结构设计</text>
+  <text x="205" y="268" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#1e293b">Dense / MoE</text>
+  <text x="205" y="298" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#1e293b">头数 / 隐藏维 / 上下文长度</text>
+  <text x="205" y="328" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#1e293b">GQA / Router / Top-k</text>
+
+  <rect x="390" y="180" rx="18" ry="18" width="290" height="180" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+  <text x="535" y="225" text-anchor="middle" font-size="28" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#14532d" font-weight="700">训练并行策略</text>
+  <text x="535" y="268" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#1e293b">DP / TP / PP / EP / ZeRO</text>
+  <text x="535" y="298" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#1e293b">目标：吞吐、收敛、显存可放下</text>
+  <text x="535" y="328" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#1e293b">问题：切得开，不代表服务得顺</text>
+
+  <rect x="740" y="180" rx="18" ry="18" width="290" height="180" fill="#fef3c7" stroke="#d97706" stroke-width="3"/>
+  <text x="885" y="225" text-anchor="middle" font-size="28" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#92400e" font-weight="700">Checkpoint 与格式</text>
+  <text x="885" y="268" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#1e293b">合并 / 重分片 / 量化</text>
+  <text x="885" y="298" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#1e293b">Kernel 兼容 / 权重布局转换</text>
+  <text x="885" y="328" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#1e293b">这里往往决定迁移成本</text>
+
+  <rect x="1090" y="180" rx="18" ry="18" width="290" height="180" fill="#ede9fe" stroke="#7c3aed" stroke-width="3"/>
+  <text x="1235" y="225" text-anchor="middle" font-size="28" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#5b21b6" font-weight="700">部署并行与缓存</text>
+  <text x="1235" y="268" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#1e293b">TP / PP / EP / 连续批处理</text>
+  <text x="1235" y="298" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#1e293b">KV Cache / PagedAttention</text>
+  <text x="1235" y="328" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#1e293b">目标：时延、吞吐、稳定性</text>
+
+  <rect x="570" y="470" rx="18" ry="18" width="460" height="170" fill="#fff1f2" stroke="#e11d48" stroke-width="3"/>
+  <text x="800" y="515" text-anchor="middle" font-size="30" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#9f1239" font-weight="700">业务 SLO 与成本账本</text>
+  <text x="800" y="555" text-anchor="middle" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#1e293b">首 Token 延迟、每 Token 延迟、吞吐、显存驻留、网络带宽、可运维性</text>
+  <text x="800" y="590" text-anchor="middle" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#1e293b">只有把训练决策与服务约束放进同一张账，系统才真正“贯通”</text>
+
+  <rect x="140" y="700" rx="18" ry="18" width="1320" height="110" fill="#ffffff" stroke="#94a3b8" stroke-width="2.5" stroke-dasharray="10 8"/>
+  <text x="800" y="745" text-anchor="middle" font-size="25" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#0f172a" font-weight="700">典型断裂点</text>
+  <text x="800" y="785" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#334155">训练阶段只看吞吐 → 部署时重做分片、重做量化、KV Cache 爆显存、MoE 热点专家拖慢尾延迟、推理引擎无法直接吃训练权重</text>
+
+  <path d="M330 270 L390 270" stroke="#2563eb" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M680 270 L740 270" stroke="#16a34a" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M1030 270 L1090 270" stroke="#d97706" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M1235 360 L1235 430 L1030 430 L1030 470" stroke="#7c3aed" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M205 360 L205 430 L570 430 L570 470" stroke="#2563eb" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M535 360 L535 470" stroke="#16a34a" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M885 360 L885 470" stroke="#d97706" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+    </marker>
+  </defs>
+</svg>

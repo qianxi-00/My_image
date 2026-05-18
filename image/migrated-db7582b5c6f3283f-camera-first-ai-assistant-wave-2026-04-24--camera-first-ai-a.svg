@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.04"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1350" cy="120" r="180" fill="#60a5fa" opacity="0.08"/>
+  <circle cx="250" cy="760" r="220" fill="#22c55e" opacity="0.06"/>
+  <text x="90" y="120" fill="#e5f0ff" font-size="42" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">Camera-first AI Assistant：入口从“输入问题”转向“共享现场”</text>
+  <text x="90" y="165" fill="#cbd5e1" font-size="22" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">手机 / 眼镜 / XR 并不是三条互斥路线，而是同一条 context-first 交互演化的不同阶段</text>
+
+  <g filter="url(#shadow)">
+    <rect x="80" y="240" rx="28" ry="28" width="410" height="520" fill="url(#card)" stroke="#93c5fd" stroke-opacity="0.35"/>
+    <rect x="595" y="240" rx="28" ry="28" width="410" height="520" fill="url(#card)" stroke="#86efac" stroke-opacity="0.35"/>
+    <rect x="1110" y="240" rx="28" ry="28" width="410" height="520" fill="url(#card)" stroke="#f9a8d4" stroke-opacity="0.35"/>
+  </g>
+
+  <text x="130" y="295" fill="#bfdbfe" font-size="28" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">手机：最现实的 camera-first 助理</text>
+  <text x="130" y="340" fill="#e2e8f0" font-size="21" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">• Search Live：voice + camera + web links</text>
+  <text x="130" y="378" fill="#e2e8f0" font-size="21" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">• 适合偶发任务：导购、排障、旅行、识别</text>
+  <text x="130" y="416" fill="#e2e8f0" font-size="21" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">• 优势：分发最广、用户教育成本最低</text>
+  <text x="130" y="454" fill="#e2e8f0" font-size="21" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">• 局限：仍需手持，难以持续常开</text>
+  <text x="130" y="520" fill="#93c5fd" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">交互公式</text>
+  <text x="130" y="560" fill="#f8fafc" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">看见现场 → 说出目标 → 获取建议 / 链接</text>
+  <rect x="130" y="610" width="300" height="72" rx="16" fill="#1d4ed8" opacity="0.24" stroke="#93c5fd" stroke-opacity="0.5"/>
+  <text x="150" y="655" fill="#dbeafe" font-size="22" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">最近最可能先放量的形态</text>
+
+  <text x="645" y="295" fill="#bbf7d0" font-size="28" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">眼镜：最符合直觉的 camera-first 入口</text>
+  <text x="645" y="340" fill="#e2e8f0" font-size="21" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">• built-in camera + open-ear audio</text>
+  <text x="645" y="378" fill="#e2e8f0" font-size="21" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">• 适合：hands-free 导航、第一视角解释、即时提醒</text>
+  <text x="645" y="416" fill="#e2e8f0" font-size="21" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">• 优势：视线同向、随时可用、最自然</text>
+  <text x="645" y="454" fill="#e2e8f0" font-size="21" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">• 局限：隐私、社会接受度、续航与重量</text>
+  <text x="645" y="520" fill="#86efac" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">真正被争夺的不是眼镜</text>
+  <text x="645" y="560" fill="#f8fafc" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">而是“现实世界第一手上下文”</text>
+  <rect x="645" y="610" width="300" height="72" rx="16" fill="#16a34a" opacity="0.20" stroke="#86efac" stroke-opacity="0.5"/>
+  <text x="665" y="655" fill="#dcfce7" font-size="22" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">中期最具象征性的入口</text>
+
+  <text x="1160" y="295" fill="#fbcfe8" font-size="28" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">XR：把现场变成持续空间工作台</text>
+  <text x="1160" y="340" fill="#e2e8f0" font-size="21" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">• Project Astra / Android XR 指向 spatial-first</text>
+  <text x="1160" y="378" fill="#e2e8f0" font-size="21" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">• 适合：培训、协作、远程指导、复杂任务</text>
+  <text x="1160" y="416" fill="#e2e8f0" font-size="21" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">• 优势：现场理解 + 空间标注 + 会话连续性</text>
+  <text x="1160" y="454" fill="#e2e8f0" font-size="21" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">• 局限：设备门槛高，日常普及仍慢</text>
+  <text x="1160" y="520" fill="#f9a8d4" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">终局想象</text>
+  <text x="1160" y="560" fill="#f8fafc" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">AI 不只“回答”，而是与你并排处理空间任务</text>
+  <rect x="1160" y="610" width="300" height="72" rx="16" fill="#be185d" opacity="0.18" stroke="#f9a8d4" stroke-opacity="0.5"/>
+  <text x="1180" y="655" fill="#fce7f3" font-size="22" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">长期最能改写交互上限</text>
+
+  <path d="M490 500 C540 500, 545 500, 595 500" stroke="#93c5fd" stroke-width="6" fill="none" opacity="0.8"/>
+  <polygon points="595,500 575,490 575,510" fill="#93c5fd" opacity="0.9"/>
+  <path d="M1005 500 C1055 500, 1060 500, 1110 500" stroke="#f9a8d4" stroke-width="6" fill="none" opacity="0.8"/>
+  <polygon points="1110,500 1090,490 1090,510" fill="#f9a8d4" opacity="0.9"/>
+
+  <text x="640" y="840" fill="#dbeafe" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" text-anchor="middle">关键变化：世界本身开始成为 AI 的 prompt</text>
+  <text x="990" y="840" fill="#d1fae5" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" text-anchor="middle">而不是用户先把世界翻译成长提示词</text>
+</svg>

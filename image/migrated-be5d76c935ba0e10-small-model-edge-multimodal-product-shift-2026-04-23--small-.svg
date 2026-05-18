@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F7FAFF"/>
+      <stop offset="100%" stop-color="#EEF3FF"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <style>
+      .title{font:700 34px 'Noto Sans SC','Microsoft YaHei',sans-serif;fill:#111827}
+      .subtitle{font:400 20px 'Noto Sans SC','Microsoft YaHei',sans-serif;fill:#374151}
+      .boxTitle{font:700 24px 'Noto Sans SC','Microsoft YaHei',sans-serif;fill:#111827}
+      .boxText{font:400 18px 'Noto Sans SC','Microsoft YaHei',sans-serif;fill:#374151}
+      .small{font:400 17px 'Noto Sans SC','Microsoft YaHei',sans-serif;fill:#4B5563}
+      .strong{font:700 20px 'Noto Sans SC','Microsoft YaHei',sans-serif;fill:#0F172A}
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bg)" rx="24"/>
+  <rect x="50" y="36" width="1300" height="96" rx="20" fill="#FFFFFF" stroke="#D7E3FF"/>
+  <text x="80" y="82" class="title">小模型与端侧多模态重新升温，不只是为了省钱</text>
+  <text x="80" y="116" class="subtitle">真正的变化，是模型、运行时、技能层与分发入口一起产品化：AI 正从“云端服务”变成“设备能力”。</text>
+
+  <rect x="70" y="180" width="420" height="118" rx="18" fill="#FFFFFF" stroke="#C7D2FE"/>
+  <text x="98" y="220" class="boxTitle">1. 模型层</text>
+  <text x="98" y="254" class="boxText">小参数、多模态、长上下文、工具调用</text>
+  <text x="98" y="283" class="small">代表信号：Gemma 4 E2B / E4B、FunctionGemma</text>
+
+  <rect x="70" y="330" width="420" height="118" rx="18" fill="#FFFFFF" stroke="#BFDBFE"/>
+  <text x="98" y="370" class="boxTitle">2. 运行时层</text>
+  <text x="98" y="404" class="boxText">量化、内存映射、结构化输出、GPU / NPU</text>
+  <text x="98" y="433" class="small">代表信号：LiteRT、LiteRT-LM、跨端部署能力</text>
+
+  <rect x="70" y="480" width="420" height="118" rx="18" fill="#FFFFFF" stroke="#C4B5FD"/>
+  <text x="98" y="520" class="boxTitle">3. 技能与系统接口层</text>
+  <text x="98" y="554" class="boxText">JS Skill、原生 App Intent、函数调用</text>
+  <text x="98" y="583" class="small">端侧 Agent 不是云端 Agent 的缩小版，而是受控系统能力</text>
+
+  <rect x="70" y="630" width="420" height="118" rx="18" fill="#FFFFFF" stroke="#A7F3D0"/>
+  <text x="98" y="670" class="boxTitle">4. 分发与体验层</text>
+  <text x="98" y="704" class="boxText">Android、iOS、CLI、App Store、开源仓库</text>
+  <text x="98" y="733" class="small">代表信号：AI Edge Gallery、社区技能、跨设备试用入口</text>
+
+  <path d="M520 238 C620 238 620 238 720 238" stroke="#64748B" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M520 388 C620 388 620 388 720 388" stroke="#64748B" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M520 538 C620 538 620 538 720 538" stroke="#64748B" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M520 688 C620 688 620 688 720 688" stroke="#64748B" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+
+  <rect x="740" y="190" width="590" height="560" rx="24" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <rect x="770" y="220" width="530" height="74" rx="18" fill="url(#accent)"/>
+  <text x="805" y="267" style="font:700 30px 'Noto Sans SC','Microsoft YaHei',sans-serif;fill:#FFFFFF">真正被重新定义的，是 AI 产品入口</text>
+
+  <text x="790" y="340" class="strong">过去：</text>
+  <text x="870" y="340" class="boxText">把大模型放在云上，手机或边缘设备只是请求入口</text>
+
+  <text x="790" y="395" class="strong">现在：</text>
+  <text x="870" y="395" class="boxText">设备本身开始承担理解、判断、调用系统能力与即时反馈</text>
+
+  <text x="790" y="470" class="strong">因此产品重点从“省几块钱”转向：</text>
+  <text x="820" y="515" class="boxText">• 低时延、离线可用、隐私与权限边界</text>
+  <text x="820" y="553" class="boxText">• 摄像头、麦克风、系统动作、可穿戴入口</text>
+  <text x="820" y="591" class="boxText">• 专用小模型 + 通用运行时 + 技能市场</text>
+  <text x="820" y="629" class="boxText">• “应用内能力”而不是“网页问答”</text>
+
+  <rect x="790" y="670" width="510" height="54" rx="16" fill="#EEF2FF" stroke="#C7D2FE"/>
+  <text x="816" y="705" class="boxText">成本下降是前提；产品形态重写才是这波升温的核心。</text>
+
+  <rect x="50" y="800" width="1300" height="60" rx="18" fill="#FFFFFF" stroke="#D7E3FF"/>
+  <text x="78" y="838" class="subtitle">结论：小模型与端侧多模态的价值，正在从“便宜的替代品”转向“新的设备原生 AI 体验基础设施”。</text>
+</svg>

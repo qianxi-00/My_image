@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7fbff"/>
+      <stop offset="100%" stop-color="#eef4ff"/>
+    </linearGradient>
+    <linearGradient id="left" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffe4e6"/>
+      <stop offset="100%" stop-color="#fff1f2"/>
+    </linearGradient>
+    <linearGradient id="right" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#dcfce7"/>
+      <stop offset="100%" stop-color="#f0fdf4"/>
+    </linearGradient>
+    <style>
+      .title{font:700 42px 'Noto Sans SC','Microsoft YaHei',sans-serif;fill:#0f172a}
+      .subtitle{font:400 22px 'Noto Sans SC','Microsoft YaHei',sans-serif;fill:#334155}
+      .h{font:700 30px 'Noto Sans SC','Microsoft YaHei',sans-serif;fill:#111827}
+      .b{font:500 21px 'Noto Sans SC','Microsoft YaHei',sans-serif;fill:#1f2937}
+      .small{font:400 18px 'Noto Sans SC','Microsoft YaHei',sans-serif;fill:#475569}
+      .pill{font:700 22px 'Noto Sans SC','Microsoft YaHei',sans-serif;fill:white}
+    </style>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <text x="800" y="80" text-anchor="middle" class="title">多模态评测“重置标准”的核心变化</text>
+  <text x="800" y="120" text-anchor="middle" class="subtitle">从静态图像问答与单一榜单，转向专家推理、视频知识获取、搜索式任务、滚动更新与统一工具链</text>
+
+  <rect x="90" y="170" rx="28" ry="28" width="610" height="620" fill="url(#left)" stroke="#fda4af" stroke-width="3"/>
+  <rect x="900" y="170" rx="28" ry="28" width="610" height="620" fill="url(#right)" stroke="#86efac" stroke-width="3"/>
+
+  <rect x="250" y="190" rx="20" ry="20" width="290" height="54" fill="#ef4444"/>
+  <text x="395" y="226" text-anchor="middle" class="pill">旧标准：更像考试题库</text>
+
+  <rect x="1060" y="190" rx="20" ry="20" width="290" height="54" fill="#16a34a"/>
+  <text x="1205" y="226" text-anchor="middle" class="pill">新标准：更像真实工作流</text>
+
+  <text x="130" y="300" class="h">过去主要在测什么</text>
+  <text x="130" y="350" class="b">• 单张图片上的问答、识别与描述</text>
+  <text x="130" y="395" class="b">• 公开题库上的固定分数</text>
+  <text x="130" y="440" class="b">• 单一 accuracy，难看出提升真假</text>
+  <text x="130" y="485" class="b">• 短样本、短上下文、低时间维度</text>
+  <text x="130" y="530" class="b">• 很少评估搜索、检索、知识获取过程</text>
+  <text x="130" y="575" class="b">• 工具链碎片化，同一模型不同人跑分不同</text>
+  <text x="130" y="640" class="small">问题：榜单涨分越来越快，但对真实能力的解释力越来越弱</text>
+
+  <text x="940" y="300" class="h">现在开始重新测什么</text>
+  <text x="940" y="350" class="b">• 专家级异构材料理解：图表、表格、试题、专业图像</text>
+  <text x="940" y="395" class="b">• 视频中的知识获取，而不只是动作识别</text>
+  <text x="940" y="440" class="b">• 多模态搜索与跨来源整合能力</text>
+  <text x="940" y="485" class="b">• 长视频、长上下文、时序推理与文档理解</text>
+  <text x="940" y="530" class="b">• 统一评测工具链下的可复现实验</text>
+  <text x="940" y="575" class="b">• 更频繁更新、抗污染、不断补任务的活体评测</text>
+  <text x="940" y="640" class="small">关键变化：从“模型会不会答题”，转向“模型能不能完成更接近现实的信息处理任务”</text>
+
+  <path d="M730 480 C820 480, 820 480, 870 480" stroke="#64748b" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <polygon points="870,480 842,463 842,497" fill="#64748b"/>
+
+  <rect x="420" y="740" rx="18" ry="18" width="760" height="90" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="800" y="785" text-anchor="middle" class="b">最近的信号不是“又一张榜单换了冠军”，而是 benchmark 本身正在朝着更难、更活、更接近真实世界的方向改写题面。</text>
+</svg>

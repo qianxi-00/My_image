@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="920" viewBox="0 0 1440 920">
+  <defs>
+    <style>
+      .title { font: 700 30px 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif; fill: #0f172a; }
+      .subtitle { font: 500 18px 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif; fill: #334155; }
+      .h2 { font: 700 22px 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif; fill: #0f172a; }
+      .text { font: 500 18px 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif; fill: #1f2937; }
+      .small { font: 500 16px 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif; fill: #475569; }
+      .box { stroke-width: 2; rx: 16; ry: 16; }
+      .arrow { stroke: #475569; stroke-width: 4; fill: none; marker-end: url(#arrowHead); }
+    </style>
+    <marker id="arrowHead" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect width="1440" height="920" fill="#f8fafc"/>
+  <text x="720" y="56" text-anchor="middle" class="title">端到端 Speech-to-Speech 为何重新升温</text>
+  <text x="720" y="88" text-anchor="middle" class="subtitle">真正被压缩的是在线主链路里的串行等待、文本中转和多模型对齐成本；审计、工具、合规与观测层并不会一起消失</text>
+
+  <rect x="40" y="130" width="400" height="560" fill="#ffffff" stroke="#cbd5e1" class="box"/>
+  <text x="240" y="172" text-anchor="middle" class="h2">传统级联语音链路</text>
+  <text x="240" y="202" text-anchor="middle" class="small">STT → LLM → TTS</text>
+
+  <rect x="90" y="240" width="300" height="68" fill="#e0f2fe" stroke="#38bdf8" class="box"/>
+  <text x="240" y="282" text-anchor="middle" class="text">用户语音输入</text>
+  <path d="M240 308 L240 338" class="arrow"/>
+
+  <rect x="90" y="338" width="300" height="68" fill="#ede9fe" stroke="#8b5cf6" class="box"/>
+  <text x="240" y="380" text-anchor="middle" class="text">端点检测 / 语音活动检测</text>
+  <path d="M240 406 L240 436" class="arrow"/>
+
+  <rect x="90" y="436" width="300" height="68" fill="#dbeafe" stroke="#3b82f6" class="box"/>
+  <text x="240" y="478" text-anchor="middle" class="text">ASR 转写成文本</text>
+  <path d="M240 504 L240 534" class="arrow"/>
+
+  <rect x="90" y="534" width="300" height="68" fill="#dcfce7" stroke="#22c55e" class="box"/>
+  <text x="240" y="576" text-anchor="middle" class="text">LLM / 业务逻辑 / 工具调用</text>
+  <path d="M240 602 L240 632" class="arrow"/>
+
+  <rect x="90" y="632" width="300" height="68" fill="#fee2e2" stroke="#ef4444" class="box"/>
+  <text x="240" y="674" text-anchor="middle" class="text">TTS 合成语音</text>
+
+  <text x="68" y="734" class="small">优点：易观测、易审计、模块替换灵活</text>
+  <text x="68" y="764" class="small">问题：每层都增加等待；打断、抢话和情绪表达不自然</text>
+
+  <rect x="520" y="130" width="400" height="560" fill="#ffffff" stroke="#cbd5e1" class="box"/>
+  <text x="720" y="172" text-anchor="middle" class="h2">端到端 S2S / Omni</text>
+  <text x="720" y="202" text-anchor="middle" class="small">直接“听懂再说回去”</text>
+
+  <rect x="570" y="260" width="300" height="68" fill="#e0f2fe" stroke="#38bdf8" class="box"/>
+  <text x="720" y="302" text-anchor="middle" class="text">用户语音输入</text>
+  <path d="M720 328 L720 366" class="arrow"/>
+
+  <rect x="570" y="366" width="300" height="108" fill="#fef3c7" stroke="#f59e0b" class="box"/>
+  <text x="720" y="412" text-anchor="middle" class="text">统一语音理解与生成模型</text>
+  <text x="720" y="442" text-anchor="middle" class="small">内部完成听觉理解、对话决策、韵律生成</text>
+  <path d="M720 474 L720 512" class="arrow"/>
+
+  <rect x="570" y="512" width="300" height="68" fill="#fee2e2" stroke="#ef4444" class="box"/>
+  <text x="720" y="554" text-anchor="middle" class="text">流式语音输出</text>
+
+  <text x="548" y="624" class="small">减少：在线文本中转、跨模型等待、对齐损耗</text>
+  <text x="548" y="654" class="small">代价：可解释性下降，审计与合规需要额外补层</text>
+
+  <rect x="1000" y="130" width="400" height="560" fill="#ffffff" stroke="#cbd5e1" class="box"/>
+  <text x="1200" y="172" text-anchor="middle" class="h2">混合式未来链路</text>
+  <text x="1200" y="202" text-anchor="middle" class="small">快路先开口，慢路再校正</text>
+
+  <rect x="1050" y="248" width="300" height="62" fill="#e0f2fe" stroke="#38bdf8" class="box"/>
+  <text x="1200" y="286" text-anchor="middle" class="text">用户语音输入</text>
+
+  <path d="M1200 310 L1120 360" class="arrow"/>
+  <path d="M1200 310 L1280 360" class="arrow"/>
+
+  <rect x="1020" y="360" width="200" height="86" fill="#fde68a" stroke="#f59e0b" class="box"/>
+  <text x="1120" y="398" text-anchor="middle" class="text">快路：S2S 前缀</text>
+  <text x="1120" y="426" text-anchor="middle" class="small">先发出自然短回应</text>
+
+  <rect x="1180" y="360" width="200" height="86" fill="#dcfce7" stroke="#22c55e" class="box"/>
+  <text x="1280" y="398" text-anchor="middle" class="text">慢路：ASR + LLM</text>
+  <text x="1280" y="426" text-anchor="middle" class="small">补足事实性与复杂推理</text>
+
+  <path d="M1120 446 L1120 500 L1200 500" class="arrow"/>
+  <path d="M1280 446 L1280 500 L1200 500" class="arrow"/>
+
+  <rect x="1050" y="500" width="300" height="86" fill="#fee2e2" stroke="#ef4444" class="box"/>
+  <text x="1200" y="538" text-anchor="middle" class="text">合并输出与持续对话</text>
+  <text x="1200" y="566" text-anchor="middle" class="small">兼顾首音延迟、质量与可控性</text>
+
+  <text x="1028" y="624" class="small">趋势：不是所有人都走纯 S2S，很多系统会走混合架构</text>
+  <text x="1028" y="654" class="small">重点：让“自然交互”和“业务可靠性”同时成立</text>
+
+  <rect x="40" y="740" width="1360" height="130" fill="#e2e8f0" stroke="#94a3b8" class="box"/>
+  <text x="70" y="786" class="h2">一句话总结</text>
+  <text x="70" y="824" class="text">端到端语音重新升温，不是因为工程世界突然不需要 ASR、TTS、日志和审核，而是因为这些层不再都必须卡在在线主链路里。</text>
+  <text x="70" y="854" class="text">真正有价值的变化，是把“先听懂、再说回去”的延迟压低，把打断、抢话、情绪与韵律控制拉回实时交互里，同时把审计、合规、工具和观测层后移到可治理的位置。</text>
+</svg>

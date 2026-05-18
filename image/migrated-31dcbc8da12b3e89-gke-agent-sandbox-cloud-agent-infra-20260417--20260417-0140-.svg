@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">云上 Agent 基础设施分层示意</title>
+  <desc id="desc">展示 GKE Agent 基础设施从控制接口、生命周期到隔离边界的四层结构。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F7FAFF"/>
+      <stop offset="100%" stop-color="#EEF4FF"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5B6B8C"/>
+    </marker>
+    <style>
+      .title { font: 700 34px 'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif; fill: #1F2A44; }
+      .subtitle { font: 500 18px 'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif; fill: #4D5B78; }
+      .layerTitle { font: 700 24px 'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif; fill: #1F2A44; }
+      .layerText { font: 500 18px 'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif; fill: #2F3C56; }
+      .small { font: 500 16px 'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif; fill: #54627C; }
+      .note { font: 600 18px 'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif; fill: #1F2A44; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="760" fill="url(#bg)"/>
+  <text x="70" y="70" class="title">云上 Agent 基础设施不再只是“跑一个容器”</text>
+  <text x="70" y="108" class="subtitle">更像是：可隔离、可恢复、可审计、可被 Agent 调用的运行时栈</text>
+
+  <rect x="70" y="150" rx="28" ry="28" width="1060" height="110" fill="#E8F0FE" stroke="#A7C0FF" stroke-width="2"/>
+  <text x="110" y="198" class="layerTitle">应用与任务层</text>
+  <text x="110" y="236" class="layerText">用户任务、工具调用、代码执行、浏览器操作、推理请求、会话状态</text>
+
+  <rect x="70" y="290" rx="28" ry="28" width="1060" height="110" fill="#EAF8F0" stroke="#9BD0AF" stroke-width="2"/>
+  <text x="110" y="338" class="layerTitle">控制与接入层</text>
+  <text x="110" y="376" class="layerText">GKE MCP、IAM、审计日志、只读端点、网关策略、Model Armor</text>
+
+  <rect x="70" y="430" rx="28" ry="28" width="1060" height="110" fill="#FFF4E6" stroke="#F2C27B" stroke-width="2"/>
+  <text x="110" y="478" class="layerTitle">生命周期与调度层</text>
+  <text x="110" y="516" class="layerText">Agent Sandbox、Warm Pool、Pod Snapshots、调度器、弹性伸缩、状态恢复</text>
+
+  <rect x="70" y="570" rx="28" ry="28" width="1060" height="110" fill="#F4ECFF" stroke="#C7A8FF" stroke-width="2"/>
+  <text x="110" y="618" class="layerTitle">隔离与硬件层</text>
+  <text x="110" y="656" class="layerText">GKE Sandbox（gVisor）、GPU / TPU、网络边界、元数据隔离、宿主机内核保护</text>
+
+  <line x1="600" y1="260" x2="600" y2="288" stroke="#5B6B8C" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="600" y1="400" x2="600" y2="428" stroke="#5B6B8C" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="600" y1="540" x2="600" y2="568" stroke="#5B6B8C" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="750" y="58" rx="18" ry="18" width="380" height="56" fill="#FFFFFF" stroke="#D5DDF0"/>
+  <text x="775" y="93" class="small">核心判断：调度单元正从“副本”变成“有身份的会话”</text>
+
+  <text x="70" y="728" class="note">关键词：稳定身份 + 强隔离 + 低冷启动 + 可恢复状态 + 可控工具面</text>
+</svg>

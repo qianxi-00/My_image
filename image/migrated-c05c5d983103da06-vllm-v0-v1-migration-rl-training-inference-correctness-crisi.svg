@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#c0392b"/>
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">推理引擎在 RL 训练中的角色演变</text>
+  
+  <!-- Traditional Training Section -->
+  <rect x="30" y="50" width="840" height="160" rx="8" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.5"/>
+  <text x="450" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="#666">传统训练流程：训练与推理分离</text>
+  
+  <!-- Training box -->
+  <rect x="120" y="95" width="200" height="80" rx="6" fill="#3498db" opacity="0.85"/>
+  <text x="220" y="130" text-anchor="middle" font-size="14" font-weight="bold" fill="white">训练阶段</text>
+  <text x="220" y="150" text-anchor="middle" font-size="11" fill="white">模型训练、微调</text>
+  
+  <!-- Arrow -->
+  <line x1="330" y1="135" x2="430" y2="135" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="380" y="125" text-anchor="middle" font-size="10" fill="#888">模型导出</text>
+  
+  <!-- Inference box -->
+  <rect x="440" y="95" width="200" height="80" rx="6" fill="#27ae60" opacity="0.85"/>
+  <text x="540" y="130" text-anchor="middle" font-size="14" font-weight="bold" fill="white">推理阶段</text>
+  <text x="540" y="150" text-anchor="middle" font-size="11" fill="white">模型部署、服务</text>
+  
+  <!-- Separation indicator -->
+  <line x1="415" y1="90" x2="415" y2="180" stroke="#e74c3c" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="415" y="195" text-anchor="middle" font-size="10" fill="#e74c3c">相对独立</text>
+  
+  <!-- Online RL Training Section -->
+  <rect x="30" y="230" width="840" height="370" rx="8" fill="#fef9e7" stroke="#f0e68c" stroke-width="1.5"/>
+  <text x="450" y="255" text-anchor="middle" font-size="14" font-weight="bold" fill="#666">在线 RL 训练流程：推理引擎成为训练基础设施</text>
+  
+  <!-- Trainer -->
+  <rect x="330" y="275" width="200" height="60" rx="6" fill="#8e44ad" opacity="0.85"/>
+  <text x="430" y="300" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Trainer / 优化器</text>
+  <text x="430" y="318" text-anchor="middle" font-size="10" fill="white">计算梯度、更新权重</text>
+  
+  <!-- Arrow: Trainer → Inference -->
+  <line x1="430" y1="335" x2="430" y2="370" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="460" y="355" font-size="10" fill="#888">权重更新</text>
+  
+  <!-- Inference Engine (highlighted) -->
+  <rect x="280" y="375" width="300" height="80" rx="6" fill="#c0392b" opacity="0.9"/>
+  <text x="430" y="405" text-anchor="middle" font-size="14" font-weight="bold" fill="white">推理引擎 (vLLM V0→V1)</text>
+  <text x="430" y="425" text-anchor="middle" font-size="11" fill="white">Rollout 生成 + Logprobs 计算</text>
+  <text x="430" y="442" text-anchor="middle" font-size="10" fill="#ffcccc">⚠ 训练正确性的关键环节</text>
+  
+  <!-- Arrow: Inference → Data -->
+  <line x1="430" y1="455" x2="430" y2="490" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="460" y="475" font-size="10" fill="#888">Rollout + Logprobs</text>
+  
+  <!-- Training Data -->
+  <rect x="330" y="495" width="200" height="50" rx="6" fill="#e67e22" opacity="0.85"/>
+  <text x="430" y="518" text-anchor="middle" font-size="12" font-weight="bold" fill="white">训练数据 (on-policy)</text>
+  
+  <!-- Arrow: Data → Trainer (loop back) -->
+  <path d="M 330 520 Q 180 520 180 390 Q 180 305 330 305" fill="none" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="170" y="415" text-anchor="middle" font-size="10" fill="#888" transform="rotate(-90, 170, 415)">送入优化器</text>
+  
+  <!-- Four Crises Box -->
+  <rect x="630" y="310" width="220" height="230" rx="6" fill="#fdedec" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="740" y="335" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">V0→V1 四重正确性危机</text>
+  <text x="650" y="360" font-size="11" fill="#333">1. Logprobs 语义偏移</text>
+  <text x="650" y="385" font-size="11" fill="#333">2. 默认参数漂移</text>
+  <text x="650" y="410" font-size="11" fill="#333">3. 权重热更新路径不一致</text>
+  <text x="650" y="435" font-size="11" fill="#333">4. 数值精度链断裂</text>
+  <line x1="650" y1="455" x2="830" y2="455" stroke="#e74c3c" stroke-width="1"/>
+  <text x="740" y="475" text-anchor="middle" font-size="10" fill="#c0392b">推理引擎的任何「无感变更」</text>
+  <text x="740" y="495" text-anchor="middle" font-size="10" fill="#c0392b">都可能污染训练动态</text>
+  
+  <!-- Connection from inference to crisis -->
+  <line x1="580" y1="415" x2="630" y2="415" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow-red)"/>
+</svg>

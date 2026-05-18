@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#0b1020"/>
+  <rect x="40" y="30" width="1520" height="840" rx="24" fill="#111831" stroke="#2a3866" stroke-width="2"/>
+  <text x="800" y="85" text-anchor="middle" font-size="34" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#f5f7ff" font-weight="700">浏览器原生 Agent 工作台正在成形</text>
+  <text x="800" y="122" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#b9c4ea">前台看见会话与页面，后台维护 tracing、handoff 与审批状态</text>
+
+  <rect x="90" y="180" width="520" height="560" rx="20" fill="#162142" stroke="#3e5fb3" stroke-width="2"/>
+  <text x="350" y="220" text-anchor="middle" font-size="28" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#ffffff" font-weight="700">浏览器前台</text>
+  <rect x="125" y="255" width="450" height="84" rx="14" fill="#24408f"/>
+  <text x="350" y="305" text-anchor="middle" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#ffffff">Live View：看、点、输、滚</text>
+  <rect x="125" y="360" width="450" height="84" rx="14" fill="#2957a5"/>
+  <text x="350" y="410" text-anchor="middle" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#ffffff">Session Recording：事后回放</text>
+  <rect x="125" y="465" width="450" height="84" rx="14" fill="#2f6ab8"/>
+  <text x="350" y="515" text-anchor="middle" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#ffffff">Observe：先看可执行动作，再决定执行</text>
+  <rect x="125" y="570" width="450" height="84" rx="14" fill="#377bcb"/>
+  <text x="350" y="620" text-anchor="middle" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#ffffff">人工接管：登录、上传、确认、例外处理</text>
+  <text x="350" y="700" text-anchor="middle" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#cfe0ff">适合页面状态、标签页切换、上传登录与可视复盘</text>
+
+  <rect x="690" y="180" width="820" height="560" rx="20" fill="#171d33" stroke="#7a4bd1" stroke-width="2"/>
+  <text x="1100" y="220" text-anchor="middle" font-size="28" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#ffffff" font-weight="700">通用控制平面</text>
+
+  <rect x="740" y="260" width="330" height="110" rx="16" fill="#5d3fb0"/>
+  <text x="905" y="305" text-anchor="middle" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#ffffff">Tracing / Span</text>
+  <text x="905" y="337" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#efe7ff">记录工具调用、生成、耗时与责任链</text>
+
+  <rect x="1125" y="260" width="330" height="110" rx="16" fill="#6845c2"/>
+  <text x="1290" y="305" text-anchor="middle" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#ffffff">Handoff</text>
+  <text x="1290" y="337" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#efe7ff">在多代理之间转交任务与上下文</text>
+
+  <rect x="740" y="410" width="330" height="110" rx="16" fill="#7552cd"/>
+  <text x="905" y="455" text-anchor="middle" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#ffffff">HITL / 审批</text>
+  <text x="905" y="487" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#efe7ff">在敏感动作前中断、批准、拒绝、恢复</text>
+
+  <rect x="1125" y="410" width="330" height="110" rx="16" fill="#8260d7"/>
+  <text x="1290" y="455" text-anchor="middle" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#ffffff">Raw Events</text>
+  <text x="1290" y="487" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#efe7ff">保留会话事件、工具结果与审计线索</text>
+
+  <rect x="740" y="560" width="715" height="120" rx="16" fill="#9170de"/>
+  <text x="1097" y="607" text-anchor="middle" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#ffffff">组织级分析与治理</text>
+  <text x="1097" y="640" text-anchor="middle" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#f3ebff">成本、策略、跨会话聚合、权限、告警、非浏览器工具链诊断</text>
+
+  <line x1="610" y1="330" x2="740" y2="330" stroke="#77a7ff" stroke-width="4" stroke-dasharray="12 10"/>
+  <line x1="610" y1="510" x2="740" y2="465" stroke="#77a7ff" stroke-width="4" stroke-dasharray="12 10"/>
+  <line x1="610" y1="620" x2="740" y2="620" stroke="#77a7ff" stroke-width="4" stroke-dasharray="12 10"/>
+
+  <text x="800" y="790" text-anchor="middle" font-size="22" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#ffffff" font-weight="700">核心判断</text>
+  <text x="800" y="825" text-anchor="middle" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#d7e0ff">浏览器任务的监督前台应该回到浏览器里，但系统级治理不能只留在浏览器里。</text>
+</svg>

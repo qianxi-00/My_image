@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="920" viewBox="0 0 1400 920">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fbff"/>
+      <stop offset="100%" stop-color="#eef4ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#9bb3d9" flood-opacity="0.28"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#5b6b8a"/>
+    </marker>
+  </defs>
+
+  <rect width="1400" height="920" fill="url(#bg)"/>
+  <text x="700" y="64" text-anchor="middle" font-size="34" font-weight="700" fill="#23324d" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">visual token compression 最近为何再次升温</text>
+  <text x="700" y="103" text-anchor="middle" font-size="18" fill="#4f6286" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">核心不是“把图像压小”本身，而是把视觉预算重新分配给高分辨率、多图、长视频、GUI 与低延迟部署</text>
+
+  <rect x="60" y="170" rx="24" ry="24" width="260" height="170" fill="#ffffff" stroke="#bfd2f6" stroke-width="2" filter="url(#shadow)"/>
+  <text x="190" y="218" text-anchor="middle" font-size="26" font-weight="700" fill="#2a4168" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">输入侧压力</text>
+  <text x="190" y="258" text-anchor="middle" font-size="18" fill="#51688d" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">高分辨率图片</text>
+  <text x="190" y="288" text-anchor="middle" font-size="18" fill="#51688d" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">多截图 / UI / 文档页面</text>
+  <text x="190" y="318" text-anchor="middle" font-size="18" fill="#51688d" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">长视频 / 多帧上下文</text>
+
+  <rect x="390" y="155" rx="24" ry="24" width="300" height="200" fill="#ffffff" stroke="#b4d8d0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="540" y="200" text-anchor="middle" font-size="26" font-weight="700" fill="#1f4a4a" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">视觉编码后</text>
+  <text x="540" y="238" text-anchor="middle" font-size="18" fill="#456767" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">大量 visual tokens 进入</text>
+  <text x="540" y="268" text-anchor="middle" font-size="18" fill="#456767" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">prefill、显存、KV cache、TTFT</text>
+  <text x="540" y="298" text-anchor="middle" font-size="18" fill="#456767" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">一起变重</text>
+  <text x="540" y="332" text-anchor="middle" font-size="18" fill="#456767" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">所以第一刀常先砍视觉表示</text>
+
+  <line x1="320" y1="255" x2="390" y2="255" stroke="#5b6b8a" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="760" y="150" rx="22" ry="22" width="265" height="180" fill="#ffffff" stroke="#f0c9a9" stroke-width="2" filter="url(#shadow)"/>
+  <text x="892" y="192" text-anchor="middle" font-size="24" font-weight="700" fill="#7d4a1f" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">训练无关裁剪</text>
+  <text x="892" y="230" text-anchor="middle" font-size="18" fill="#8a5b30" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">SVD-Prune：看全局结构</text>
+  <text x="892" y="260" text-anchor="middle" font-size="18" fill="#8a5b30" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">HAWK：看 head 分工</text>
+  <text x="892" y="290" text-anchor="middle" font-size="18" fill="#8a5b30" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">DeSAP：看任务相关性</text>
+
+  <rect x="1080" y="150" rx="22" ry="22" width="260" height="180" fill="#ffffff" stroke="#d0c0f3" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1210" y="192" text-anchor="middle" font-size="24" font-weight="700" fill="#573789" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">动态与多阶段</text>
+  <text x="1210" y="230" text-anchor="middle" font-size="18" fill="#6c52a1" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">DSTP：防止推理时</text>
+  <text x="1210" y="258" text-anchor="middle" font-size="18" fill="#6c52a1" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">相关视觉信息漂移</text>
+  <text x="1210" y="292" text-anchor="middle" font-size="18" fill="#6c52a1" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">VisPCO：直接找 Pareto 前沿</text>
+
+  <rect x="760" y="390" rx="22" ry="22" width="580" height="180" fill="#ffffff" stroke="#bfe0b8" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1050" y="432" text-anchor="middle" font-size="24" font-weight="700" fill="#2b6f34" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">任务化压缩与长视频扩展</text>
+  <text x="1050" y="470" text-anchor="middle" font-size="18" fill="#477c4a" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">UIPress：把 UI-to-Code 的数千视觉 token 压成固定预算</text>
+  <text x="1050" y="502" text-anchor="middle" font-size="18" fill="#477c4a" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">XComp：长视频里不只压 token，还要同时选择关键帧</text>
+  <text x="1050" y="534" text-anchor="middle" font-size="18" fill="#477c4a" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">目标不是“更小”，而是在预算内看见更多真正重要的信息</text>
+
+  <line x1="690" y1="255" x2="760" y2="240" stroke="#5b6b8a" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="690" y1="255" x2="1080" y2="240" stroke="#5b6b8a" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="690" y1="270" x2="760" y2="475" stroke="#5b6b8a" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="80" y="430" rx="24" ry="24" width="610" height="260" fill="#ffffff" stroke="#ffd6a6" stroke-width="2" filter="url(#shadow)"/>
+  <text x="385" y="472" text-anchor="middle" font-size="25" font-weight="700" fill="#8a4f0f" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">为什么这波方向会再次升温</text>
+  <text x="130" y="520" font-size="19" fill="#7b5b38" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">• 视觉 token 在多模态里通常先于文本爆表，尤其是高分图、多图和视频</text>
+  <text x="130" y="556" font-size="19" fill="#7b5b38" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">• 空间与时间冗余比文本更高，压缩收益往往更直接</text>
+  <text x="130" y="592" font-size="19" fill="#7b5b38" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">• 视觉路径通常更模块化，更适合在 encoder / projector 侧单独动手术</text>
+  <text x="130" y="628" font-size="19" fill="#7b5b38" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">• TTFT、prefill、显存、长视频可见范围，都直接受 visual budget 影响</text>
+  <text x="130" y="664" font-size="19" fill="#7b5b38" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">• 最近论文不再只问“能不能压”，而是在问“怎么压、何时压、压完会不会坏”</text>
+
+  <rect x="760" y="630" rx="24" ry="24" width="580" height="170" fill="#ffffff" stroke="#f2b8b8" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1050" y="672" text-anchor="middle" font-size="24" font-weight="700" fill="#8c2f2f" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">不能忽略的风险</text>
+  <text x="1050" y="710" text-anchor="middle" font-size="18" fill="#924848" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">复杂推理时，相关视觉信息会在解码过程中发生漂移</text>
+  <text x="1050" y="742" text-anchor="middle" font-size="18" fill="#924848" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">极端压缩可能抹掉小文字、边角证据与长尾细节</text>
+  <text x="1050" y="774" text-anchor="middle" font-size="18" fill="#924848" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">视觉端不一定永远是主瓶颈，VLA 还可能受动作表示限制</text>
+
+  <text x="700" y="875" text-anchor="middle" font-size="18" fill="#5c6f92" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">结论：这波热度指向的不是单一技巧，而是“多模态系统开始为视觉预算负责”</text>
+</svg>

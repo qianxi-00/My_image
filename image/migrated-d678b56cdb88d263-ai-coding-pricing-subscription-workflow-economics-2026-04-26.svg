@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680">
+  <rect width="1200" height="680" fill="#111827"/>
+  <text x="600" y="60" text-anchor="middle" font-size="34" fill="#ffffff" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">最近 45 天内的计费与产品信号</text>
+  <text x="600" y="96" text-anchor="middle" font-size="18" fill="#cbd5e1" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">这些变化共同说明：AI 编程产品正在从“卖补全”转向“卖可持续的软件生产力”</text>
+  <line x1="120" y1="350" x2="1080" y2="350" stroke="#94a3b8" stroke-width="6"/>
+
+  <circle cx="220" cy="350" r="16" fill="#22c55e"/>
+  <rect x="140" y="190" width="180" height="120" rx="18" fill="#16381f" stroke="#22c55e" stroke-width="2"/>
+  <text x="230" y="228" text-anchor="middle" font-size="22" fill="#dcfce7" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">3 月 11 日</text>
+  <text x="230" y="262" text-anchor="middle" font-size="18" fill="#dcfce7" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">Replit Agent 4</text>
+  <text x="230" y="288" text-anchor="middle" font-size="15" fill="#bbf7d0" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">并行代理与创作式</text>
+  <text x="230" y="308" text-anchor="middle" font-size="15" fill="#bbf7d0" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">工作流成为卖点</text>
+
+  <circle cx="430" cy="350" r="16" fill="#38bdf8"/>
+  <rect x="340" y="390" width="180" height="120" rx="18" fill="#122c3b" stroke="#38bdf8" stroke-width="2"/>
+  <text x="430" y="428" text-anchor="middle" font-size="22" fill="#e0f2fe" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">4 月 15 日</text>
+  <text x="430" y="462" text-anchor="middle" font-size="18" fill="#e0f2fe" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">Windsurf 2.0</text>
+  <text x="430" y="488" text-anchor="middle" font-size="15" fill="#bae6fd" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">Agent 指挥中心与</text>
+  <text x="430" y="508" text-anchor="middle" font-size="15" fill="#bae6fd" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">云端开发会话浮出水面</text>
+
+  <circle cx="620" cy="350" r="16" fill="#f59e0b"/>
+  <rect x="530" y="190" width="180" height="120" rx="18" fill="#3b2a12" stroke="#f59e0b" stroke-width="2"/>
+  <text x="620" y="228" text-anchor="middle" font-size="22" fill="#fef3c7" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">4 月 20 日</text>
+  <text x="620" y="262" text-anchor="middle" font-size="18" fill="#fef3c7" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">GitHub Copilot</text>
+  <text x="620" y="288" text-anchor="middle" font-size="15" fill="#fde68a" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">暂停部分新订阅并</text>
+  <text x="620" y="308" text-anchor="middle" font-size="15" fill="#fde68a" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">收紧个人计划额度</text>
+
+  <circle cx="820" cy="350" r="16" fill="#a78bfa"/>
+  <rect x="730" y="390" width="180" height="120" rx="18" fill="#2e1f4f" stroke="#a78bfa" stroke-width="2"/>
+  <text x="820" y="428" text-anchor="middle" font-size="22" fill="#ede9fe" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">4 月 24 日</text>
+  <text x="820" y="462" text-anchor="middle" font-size="18" fill="#ede9fe" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">Cursor 3.2</text>
+  <text x="820" y="488" text-anchor="middle" font-size="15" fill="#ddd6fe" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">异步子代理、多任务</text>
+  <text x="820" y="508" text-anchor="middle" font-size="15" fill="#ddd6fe" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">与多仓工作区强化</text>
+
+  <circle cx="1000" cy="350" r="16" fill="#fb7185"/>
+  <rect x="900" y="190" width="200" height="120" rx="18" fill="#4a1f2f" stroke="#fb7185" stroke-width="2"/>
+  <text x="1000" y="228" text-anchor="middle" font-size="22" fill="#ffe4e6" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">4 月下旬现状</text>
+  <text x="1000" y="262" text-anchor="middle" font-size="18" fill="#ffe4e6" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">定价页全面改写</text>
+  <text x="1000" y="288" text-anchor="middle" font-size="15" fill="#fecdd3" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">额度、超额、池化、</text>
+  <text x="1000" y="308" text-anchor="middle" font-size="15" fill="#fecdd3" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">后台任务一起成为商品</text>
+</svg>

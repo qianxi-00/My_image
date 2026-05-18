@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7fbff"/>
+      <stop offset="100%" stop-color="#eef4ff"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4a67d6"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <text x="640" y="58" text-anchor="middle" font-size="30" font-family="Microsoft YaHei, Noto Sans SC, Arial" fill="#1f2a44" font-weight="700">企业采购对开放权重模型的关注，正在从“模型能力”转向“能力 + 治理 + 成本 + 边界”</text>
+  <text x="640" y="92" text-anchor="middle" font-size="16" font-family="Microsoft YaHei, Noto Sans SC, Arial" fill="#4b5b7c">最近 15 天的官方信号：Google 把 Gemma 4 接入 Sovereign Cloud，AWS 强化 Bedrock 组织级 Guardrails，Microsoft Foundry 持续完善 partner/community models 与 data zone、regional deployment 文档</text>
+
+  <rect x="70" y="150" rx="18" ry="18" width="220" height="220" fill="#ffffff" stroke="#6d89ff" stroke-width="2"/>
+  <text x="180" y="190" text-anchor="middle" font-size="24" font-family="Microsoft YaHei, Noto Sans SC, Arial" fill="#2846c0" font-weight="700">能力</text>
+  <text x="100" y="230" font-size="16" font-family="Microsoft YaHei, Noto Sans SC, Arial" fill="#24324d">• 是否接近前沿模型能力</text>
+  <text x="100" y="262" font-size="16" font-family="Microsoft YaHei, Noto Sans SC, Arial" fill="#24324d">• 是否支持推理、代码、多模态</text>
+  <text x="100" y="294" font-size="16" font-family="Microsoft YaHei, Noto Sans SC, Arial" fill="#24324d">• 是否能按业务场景微调</text>
+  <text x="100" y="326" font-size="16" font-family="Microsoft YaHei, Noto Sans SC, Arial" fill="#24324d">• 是否适合边缘或专有环境</text>
+
+  <rect x="320" y="150" rx="18" ry="18" width="220" height="220" fill="#ffffff" stroke="#6d89ff" stroke-width="2"/>
+  <text x="430" y="190" text-anchor="middle" font-size="24" font-family="Microsoft YaHei, Noto Sans SC, Arial" fill="#2846c0" font-weight="700">治理</text>
+  <text x="350" y="230" font-size="16" font-family="Microsoft YaHei, Noto Sans SC, Arial" fill="#24324d">• 许可证能否满足商用</text>
+  <text x="350" y="262" font-size="16" font-family="Microsoft YaHei, Noto Sans SC, Arial" fill="#24324d">• 是否有组织级策略与审计</text>
+  <text x="350" y="294" font-size="16" font-family="Microsoft YaHei, Noto Sans SC, Arial" fill="#24324d">• 谁负责安全、合规与更新</text>
+  <text x="350" y="326" font-size="16" font-family="Microsoft YaHei, Noto Sans SC, Arial" fill="#24324d">• 第三方模型责任边界是否清楚</text>
+
+  <rect x="570" y="150" rx="18" ry="18" width="220" height="220" fill="#ffffff" stroke="#6d89ff" stroke-width="2"/>
+  <text x="680" y="190" text-anchor="middle" font-size="24" font-family="Microsoft YaHei, Noto Sans SC, Arial" fill="#2846c0" font-weight="700">部署边界</text>
+  <text x="600" y="230" font-size="16" font-family="Microsoft YaHei, Noto Sans SC, Arial" fill="#24324d">• Global / Data Zone / Regional</text>
+  <text x="600" y="262" font-size="16" font-family="Microsoft YaHei, Noto Sans SC, Arial" fill="#24324d">• 公有云 / 专有云 / 气隙环境</text>
+  <text x="600" y="294" font-size="16" font-family="Microsoft YaHei, Noto Sans SC, Arial" fill="#24324d">• 管理权和数据处理位置</text>
+  <text x="600" y="326" font-size="16" font-family="Microsoft YaHei, Noto Sans SC, Arial" fill="#24324d">• 是否支持区域与跨区域弹性</text>
+
+  <rect x="820" y="150" rx="18" ry="18" width="220" height="220" fill="#ffffff" stroke="#6d89ff" stroke-width="2"/>
+  <text x="930" y="190" text-anchor="middle" font-size="24" font-family="Microsoft YaHei, Noto Sans SC, Arial" fill="#2846c0" font-weight="700">成本</text>
+  <text x="850" y="230" font-size="16" font-family="Microsoft YaHei, Noto Sans SC, Arial" fill="#24324d">• 推理单价与吞吐</text>
+  <text x="850" y="262" font-size="16" font-family="Microsoft YaHei, Noto Sans SC, Arial" fill="#24324d">• 自托管与托管服务分界</text>
+  <text x="850" y="294" font-size="16" font-family="Microsoft YaHei, Noto Sans SC, Arial" fill="#24324d">• 冷热路径是否可分层</text>
+  <text x="850" y="326" font-size="16" font-family="Microsoft YaHei, Noto Sans SC, Arial" fill="#24324d">• 长期议价与替代能力</text>
+
+  <line x1="180" y1="390" x2="180" y2="455" stroke="#4a67d6" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="430" y1="390" x2="430" y2="455" stroke="#4a67d6" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="680" y1="390" x2="680" y2="455" stroke="#4a67d6" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="930" y1="390" x2="930" y2="455" stroke="#4a67d6" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="150" y="480" rx="24" ry="24" width="980" height="150" fill="#ffffff" stroke="#2e56e5" stroke-width="3"/>
+  <text x="640" y="528" text-anchor="middle" font-size="28" font-family="Microsoft YaHei, Noto Sans SC, Arial" fill="#2143b6" font-weight="700">采购委员会最终买的，不只是一个模型，而是一整套可被审计、可被部署、可被治理、可被替换的 AI 运行选项</text>
+  <text x="210" y="572" font-size="18" font-family="Microsoft YaHei, Noto Sans SC, Arial" fill="#24324d">• 官方事实层：平台开始把开放模型包装成标准化产品入口、部署类型、合规选项和组织级控制策略</text>
+  <text x="210" y="604" font-size="18" font-family="Microsoft YaHei, Noto Sans SC, Arial" fill="#24324d">• 市场判断层：开放权重模型因此更容易从“实验室技术偏好”进入“正式采购讨论”</text>
+  <text x="210" y="636" font-size="18" font-family="Microsoft YaHei, Noto Sans SC, Arial" fill="#24324d">• 但它仍不自动等于低成本、低风险或完全去锁定，许可证、运营与责任边界仍需逐项审查</text>
+</svg>

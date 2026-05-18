@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <rect width="1200" height="760" fill="#0b1020"/>
+  <text x="600" y="64" text-anchor="middle" font-size="34" fill="#ffffff" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">AI 编程产品的三层计费结构</text>
+  <text x="600" y="100" text-anchor="middle" font-size="18" fill="#b7c3d7" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">2026 年春季，卖点已经不只是模型额度，而是把开发工作流打包成可计费的产品层</text>
+
+  <rect x="120" y="150" rx="26" ry="26" width="960" height="150" fill="#1d4ed8" opacity="0.95"/>
+  <text x="600" y="196" text-anchor="middle" font-size="30" fill="#ffffff" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">第一层：工作流产品层</text>
+  <text x="600" y="238" text-anchor="middle" font-size="22" fill="#eaf2ff" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">并行子代理 · 云端后台任务 · PR 审查 · 多仓协作 · 部署与交付 · 团队治理</text>
+  <text x="600" y="272" text-anchor="middle" font-size="18" fill="#dce7ff" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">用户真正感知到的价值，来自“少切换、少排队、更快交付”，而不是单次补全本身</text>
+
+  <rect x="160" y="340" rx="26" ry="26" width="880" height="150" fill="#0f766e" opacity="0.95"/>
+  <text x="600" y="386" text-anchor="middle" font-size="30" fill="#ffffff" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">第二层：计量与结算层</text>
+  <text x="600" y="428" text-anchor="middle" font-size="22" fill="#e8fffb" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">Premium Requests · 月度 Credits · 日/周 Usage Allowance · 超额按 API 价结算 · 团队池化用量</text>
+  <text x="600" y="462" text-anchor="middle" font-size="18" fill="#d8fff9" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">平台用这一层控制毛利、稳定性与服务质量，也把不同模型与任务复杂度折算成统一预算</text>
+
+  <rect x="220" y="530" rx="26" ry="26" width="760" height="150" fill="#7c3aed" opacity="0.95"/>
+  <text x="600" y="576" text-anchor="middle" font-size="30" fill="#ffffff" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">第三层：真实模型成本层</text>
+  <text x="600" y="618" text-anchor="middle" font-size="22" fill="#f3e8ff" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">长上下文 · Frontier 模型差价 · 后台轮询 · 工具调用 · 重试与验证 · 多代理并发</text>
+  <text x="600" y="652" text-anchor="middle" font-size="18" fill="#f1ddff" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">如果不把底层成本包装成更高层的工作流定价，订阅就会很快失真甚至亏损</text>
+
+  <line x1="600" y1="300" x2="600" y2="340" stroke="#93c5fd" stroke-width="5" stroke-dasharray="12 10"/>
+  <line x1="600" y1="490" x2="600" y2="530" stroke="#99f6e4" stroke-width="5" stroke-dasharray="12 10"/>
+</svg>

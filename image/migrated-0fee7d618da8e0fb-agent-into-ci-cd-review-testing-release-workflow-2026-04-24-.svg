@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820">
+  <rect width="1400" height="820" fill="#0f172a"/>
+  <rect x="40" y="32" width="1320" height="756" rx="28" fill="#111827" stroke="#334155" stroke-width="2"/>
+  <text x="80" y="108" fill="#f8fafc" font-size="40" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">Agent 正在进入软件交付流水线</text>
+  <text x="80" y="150" fill="#cbd5e1" font-size="22" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">从“IDE 里帮你写代码”转向“在 PR、测试、评审与发布闸门里持续工作”</text>
+
+  <rect x="84" y="220" width="220" height="120" rx="18" fill="#1d4ed8"/>
+  <text x="194" y="272" text-anchor="middle" fill="#eff6ff" font-size="28" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">PR / Issue 触发</text>
+  <text x="194" y="310" text-anchor="middle" fill="#dbeafe" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">评论、标签、工作流事件</text>
+
+  <rect x="344" y="220" width="250" height="120" rx="18" fill="#0f766e"/>
+  <text x="469" y="272" text-anchor="middle" fill="#ecfeff" font-size="28" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">Agent 读取上下文</text>
+  <text x="469" y="310" text-anchor="middle" fill="#ccfbf1" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">Diff、日志、仓库、规范、历史讨论</text>
+
+  <rect x="634" y="220" width="250" height="120" rx="18" fill="#7c3aed"/>
+  <text x="759" y="272" text-anchor="middle" fill="#f5f3ff" font-size="28" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">生成可执行动作</text>
+  <text x="759" y="310" text-anchor="middle" fill="#ede9fe" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">评审意见、修复补丁、单测、说明</text>
+
+  <rect x="924" y="220" width="250" height="120" rx="18" fill="#b45309"/>
+  <text x="1049" y="272" text-anchor="middle" fill="#fff7ed" font-size="28" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">CI 执行与回写</text>
+  <text x="1049" y="310" text-anchor="middle" fill="#ffedd5" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">测试结果、失败日志、回归验证</text>
+
+  <rect x="344" y="420" width="520" height="138" rx="18" fill="#1f2937" stroke="#475569" stroke-width="2"/>
+  <text x="604" y="470" text-anchor="middle" fill="#f8fafc" font-size="30" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">为什么这条线比“自动发布”先成熟</text>
+  <text x="604" y="510" text-anchor="middle" fill="#cbd5e1" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">输出可审计、可回滚、可评论；风险低于直接上线</text>
+  <text x="604" y="544" text-anchor="middle" fill="#cbd5e1" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">PR 与测试天然自带“验证器”，比开放式编码更适合先代理化</text>
+
+  <rect x="924" y="420" width="250" height="138" rx="18" fill="#7f1d1d"/>
+  <text x="1049" y="472" text-anchor="middle" fill="#fef2f2" font-size="28" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">人工审批仍保留</text>
+  <text x="1049" y="510" text-anchor="middle" fill="#fee2e2" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">合并、发布、权限、回滚决策</text>
+
+  <line x1="304" y1="280" x2="344" y2="280" stroke="#94a3b8" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="344,280 328,270 328,290" fill="#94a3b8"/>
+
+  <line x1="594" y1="280" x2="634" y2="280" stroke="#94a3b8" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="634,280 618,270 618,290" fill="#94a3b8"/>
+
+  <line x1="884" y1="280" x2="924" y2="280" stroke="#94a3b8" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="924,280 908,270 908,290" fill="#94a3b8"/>
+
+  <line x1="1049" y1="340" x2="1049" y2="420" stroke="#94a3b8" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="1049,420 1039,404 1059,404" fill="#94a3b8"/>
+
+  <text x="84" y="664" fill="#93c5fd" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">本轮行业共识：</text>
+  <text x="84" y="708" fill="#e5e7eb" font-size="22" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">先把 Agent 放进 Review、测试、PR 协调与发布前检查，再逐步逼近真正高风险的生产发布。</text>
+</svg>

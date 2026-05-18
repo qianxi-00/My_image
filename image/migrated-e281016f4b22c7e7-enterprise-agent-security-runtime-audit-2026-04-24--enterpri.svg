@@ -1,0 +1,72 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#EEF2FF"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#94A3B8" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <text x="600" y="56" text-anchor="middle" font-size="30" font-weight="700" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#0F172A">企业 Agent 安全控制面，正在从“批准一次动作”扩展到“审计整个运行过程”</text>
+  <text x="600" y="92" text-anchor="middle" font-size="16" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#475569">权限决定能不能做，批准决定要不要放行，运行时审计决定事情到底如何发生、影响了什么、出了问题如何复盘</text>
+
+  <rect x="50" y="140" rx="24" ry="24" width="320" height="500" fill="#FFFFFF" filter="url(#shadow)"/>
+  <rect x="50" y="140" rx="24" ry="24" width="320" height="76" fill="#FEE2E2"/>
+  <text x="210" y="186" text-anchor="middle" font-size="24" font-weight="700" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#991B1B">只有权限与批准时</text>
+  <text x="80" y="250" font-size="18" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#111827">能解决的问题</text>
+  <text x="80" y="288" font-size="16" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#334155">• 哪些工具、文件、服务器可见</text>
+  <text x="80" y="322" font-size="16" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#334155">• 哪个敏感动作需要人工点头</text>
+  <text x="80" y="356" font-size="16" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#334155">• 某次补丁或删除是否放行</text>
+  <text x="80" y="416" font-size="18" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#111827">解决不了的问题</text>
+  <text x="80" y="454" font-size="16" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#334155">• 运行中究竟调用了哪些工具</text>
+  <text x="80" y="488" font-size="16" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#334155">• 为什么会走到那一步，经历了哪些交接</text>
+  <text x="80" y="522" font-size="16" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#334155">• 触碰了哪些文件、网址、租户数据</text>
+  <text x="80" y="556" font-size="16" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#334155">• 延迟、成本、重试与失败发生在哪里</text>
+  <text x="80" y="590" font-size="16" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#334155">• 事故之后怎样还原完整执行链</text>
+
+  <rect x="440" y="140" rx="24" ry="24" width="320" height="500" fill="#FFFFFF" filter="url(#shadow)"/>
+  <rect x="440" y="140" rx="24" ry="24" width="320" height="76" fill="#DBEAFE"/>
+  <text x="600" y="186" text-anchor="middle" font-size="24" font-weight="700" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#1D4ED8">真实的 Agent 运行过程</text>
+  <rect x="520" y="244" rx="14" ry="14" width="160" height="44" fill="#EFF6FF" stroke="#93C5FD"/>
+  <text x="600" y="272" text-anchor="middle" font-size="17" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#1E3A8A">用户请求进入</text>
+  <line x1="600" y1="288" x2="600" y2="320" stroke="#60A5FA" stroke-width="3"/>
+  <rect x="520" y="320" rx="14" ry="14" width="160" height="44" fill="#EFF6FF" stroke="#93C5FD"/>
+  <text x="600" y="348" text-anchor="middle" font-size="17" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#1E3A8A">模型生成与计划</text>
+  <line x1="600" y1="364" x2="600" y2="396" stroke="#60A5FA" stroke-width="3"/>
+  <rect x="520" y="396" rx="14" ry="14" width="160" height="44" fill="#EFF6FF" stroke="#93C5FD"/>
+  <text x="600" y="424" text-anchor="middle" font-size="17" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#1E3A8A">工具调用与交接</text>
+  <line x1="600" y1="440" x2="600" y2="472" stroke="#60A5FA" stroke-width="3"/>
+  <rect x="520" y="472" rx="14" ry="14" width="160" height="44" fill="#EFF6FF" stroke="#93C5FD"/>
+  <text x="600" y="500" text-anchor="middle" font-size="17" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#1E3A8A">沙箱、文件、网络、副作用</text>
+  <line x1="600" y1="516" x2="600" y2="548" stroke="#60A5FA" stroke-width="3"/>
+  <rect x="520" y="548" rx="14" ry="14" width="160" height="44" fill="#EFF6FF" stroke="#93C5FD"/>
+  <text x="600" y="576" text-anchor="middle" font-size="17" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#1E3A8A">输出、重试、成本归集</text>
+  <text x="600" y="620" text-anchor="middle" font-size="15" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#475569">每一段都可能需要策略、追踪、关联标识与审计事件</text>
+
+  <rect x="830" y="140" rx="24" ry="24" width="320" height="500" fill="#FFFFFF" filter="url(#shadow)"/>
+  <rect x="830" y="140" rx="24" ry="24" width="320" height="76" fill="#DCFCE7"/>
+  <text x="990" y="186" text-anchor="middle" font-size="24" font-weight="700" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#166534">加入运行时审计之后</text>
+  <text x="860" y="250" font-size="18" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#111827">要记录的关键对象</text>
+  <text x="860" y="288" font-size="16" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#334155">• 会话、用户、租户、仓库与工作流标识</text>
+  <text x="860" y="322" font-size="16" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#334155">• 生成、工具、护栏、交接、沙箱事件</text>
+  <text x="860" y="356" font-size="16" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#334155">• 追踪编号、跨度编号、操作元数据</text>
+  <text x="860" y="390" font-size="16" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#334155">• 成本、延迟、重试、失败与策略命中</text>
+  <text x="860" y="450" font-size="18" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#111827">换来的组织能力</text>
+  <text x="860" y="488" font-size="16" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#334155">• 事故复盘与根因定位</text>
+  <text x="860" y="522" font-size="16" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#334155">• 成本归因与滥用发现</text>
+  <text x="860" y="556" font-size="16" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#334155">• 合规审查与责任链条证明</text>
+  <text x="860" y="590" font-size="16" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#334155">• 面向平台治理的持续优化</text>
+
+  <path d="M370 390 C405 390, 405 390, 440 390" stroke="#F97316" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M760 390 C795 390, 795 390, 830 390" stroke="#16A34A" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <rect x="120" y="672" rx="18" ry="18" width="960" height="54" fill="#0F172A"/>
+  <text x="600" y="706" text-anchor="middle" font-size="18" font-weight="600" font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#FFFFFF">结论：企业不会停在“把危险动作拦一下”，而会继续走向“对整个 Agent 运行链具备可见、可查、可解释、可复盘的能力”</text>
+</svg>

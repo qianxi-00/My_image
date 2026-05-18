@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="s2s" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:0.05"/>
+    </linearGradient>
+    <linearGradient id="llm" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#10B981;stop-opacity:0.05"/>
+    </linearGradient>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3B82F6"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#10B981"/>
+    </marker>
+    <marker id="arrowGray" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6B7280"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#F59E0B"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="520" fill="#FAFBFC" rx="12"/>
+
+  <!-- Title -->
+  <text x="500" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#1F2937">KAME 串联架构（Tandem Architecture）工作流程</text>
+
+  <!-- User input -->
+  <rect x="30" y="220" width="110" height="70" rx="10" fill="#F3F4F6" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="85" y="248" text-anchor="middle" font-size="13" fill="#6B7280">🎤</text>
+  <text x="85" y="270" text-anchor="middle" font-size="13" font-weight="600" fill="#374151">用户语音</text>
+
+  <!-- Arrow from user -->
+  <line x1="140" y1="255" x2="200" y2="255" stroke="#6B7280" stroke-width="2" marker-end="url(#arrowGray)"/>
+
+  <!-- Split point -->
+  <circle cx="215" cy="255" r="8" fill="#6B7280"/>
+  <text x="215" y="258" text-anchor="middle" font-size="10" fill="white">↕</text>
+
+  <!-- Top track: S2S Model -->
+  <rect x="260" y="110" width="300" height="80" rx="10" fill="url(#s2s)" stroke="#3B82F6" stroke-width="2"/>
+  <text x="280" y="140" font-size="14" font-weight="bold" fill="#1D4ED8">S2S 前端模型</text>
+  <text x="280" y="160" font-size="11" fill="#3B82F6">（实时语音-语音模型，低延迟响应）</text>
+  <text x="280" y="178" font-size="11" fill="#6B7280">≈ 160ms 首字延迟</text>
+
+  <!-- Arrow to S2S -->
+  <line x1="223" y1="248" x2="260" y2="165" stroke="#3B82F6" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+
+  <!-- Bottom track: LLM Backend -->
+  <rect x="260" y="300" width="300" height="80" rx="10" fill="url(#llm)" stroke="#10B981" stroke-width="2"/>
+  <text x="280" y="330" font-size="14" font-weight="bold" fill="#047857">LLM 后端模型</text>
+  <text x="280" y="350" font-size="11" fill="#10B981">（深度知识推理，异步并行处理）</text>
+  <text x="280" y="368" font-size="11" fill="#6B7280">并行异步，不阻塞语音输出</text>
+
+  <!-- Arrow to LLM -->
+  <line x1="223" y1="262" x2="260" y2="345" stroke="#10B981" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+
+  <!-- Knowledge injection arrow -->
+  <line x1="410" y1="300" x2="410" y2="190" stroke="#F59E0B" stroke-width="2.5" stroke-dasharray="6,3" marker-end="url(#arrowOrange)"/>
+  <rect x="350" y="235" width="120" height="28" rx="6" fill="#FFFBEB" stroke="#F59E0B" stroke-width="1"/>
+  <text x="410" y="254" text-anchor="middle" font-size="11" font-weight="600" fill="#92400E">知识信号注入</text>
+
+  <!-- Merge point -->
+  <rect x="620" y="190" width="150" height="70" rx="10" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="695" y="218" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400E">实时融合输出</text>
+  <text x="695" y="240" text-anchor="middle" font-size="11" fill="#B45309">S2S + 知识增强</text>
+
+  <!-- Arrows to merge -->
+  <line x1="560" y1="150" x2="620" y2="210" stroke="#3B82F6" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+  <line x1="560" y1="340" x2="620" y2="240" stroke="#10B981" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+
+  <!-- Output -->
+  <line x1="770" y1="225" x2="830" y2="225" stroke="#6B7280" stroke-width="2" marker-end="url(#arrowGray)"/>
+  <rect x="830" y="195" width="130" height="60" rx="10" fill="#F3F4F6" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="895" y="222" text-anchor="middle" font-size="13" fill="#6B7280">🔊</text>
+  <text x="895" y="243" text-anchor="middle" font-size="13" font-weight="600" fill="#374151">高质量语音输出</text>
+
+  <!-- Comparison boxes -->
+  <rect x="50" y="440" width="250" height="55" rx="8" fill="#FEE2E2" stroke="#EF4444" stroke-width="1"/>
+  <text x="175" y="462" text-anchor="middle" font-size="12" font-weight="bold" fill="#991B1B">传统级联：STT→LLM→TTS</text>
+  <text x="175" y="482" text-anchor="middle" font-size="11" fill="#B91C1C">延迟 &gt; 2s · 情感丢失 · 模块化可控</text>
+
+  <rect x="350" y="440" width="250" height="55" rx="8" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1"/>
+  <text x="475" y="462" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E40AF">纯 S2S 端到端</text>
+  <text x="475" y="482" text-anchor="middle" font-size="11" fill="#2563EB">延迟 &lt; 200ms · 知识浅 · 快但不准</text>
+
+  <rect x="650" y="440" width="300" height="55" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <text x="800" y="462" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">KAME 串联架构（本文）</text>
+  <text x="800" y="482" text-anchor="middle" font-size="11" fill="#047857">延迟 ≈ 160ms · 知识深度 ≈ 级联 · 又快又准</text>
+
+  <!-- Annotation -->
+  <text x="500" y="512" text-anchor="middle" font-size="10" fill="#9CA3AF">数据来源：Sakana AI KAME 论文 (ICASSP 2026) · arXiv:2510.02327</text>
+</svg>

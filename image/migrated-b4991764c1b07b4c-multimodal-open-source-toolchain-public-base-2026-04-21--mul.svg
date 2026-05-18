@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="box1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="box2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f766e"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+    <linearGradient id="box3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="box4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#9a3412"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#94a3b8"/>
+    </marker>
+    <style>
+      .title{font-family:"Noto Sans CJK SC","Microsoft YaHei",Arial,sans-serif;font-size:38px;font-weight:700;fill:#f8fafc}
+      .subtitle{font-family:"Noto Sans CJK SC","Microsoft YaHei",Arial,sans-serif;font-size:20px;fill:#cbd5e1}
+      .boxTitle{font-family:"Noto Sans CJK SC","Microsoft YaHei",Arial,sans-serif;font-size:30px;font-weight:700;fill:#ffffff}
+      .boxText{font-family:"Noto Sans CJK SC","Microsoft YaHei",Arial,sans-serif;font-size:22px;fill:#eff6ff}
+      .small{font-family:"Noto Sans CJK SC","Microsoft YaHei",Arial,sans-serif;font-size:20px;fill:#e2e8f0}
+      .chip{font-family:"Noto Sans CJK SC","Microsoft YaHei",Arial,sans-serif;font-size:21px;font-weight:600;fill:#0f172a}
+    </style>
+  </defs>
+  <rect width="1600" height="980" fill="url(#bg)"/>
+  <text x="800" y="70" text-anchor="middle" class="title">多模态开源工具链的“公共底座”正在成形</text>
+  <text x="800" y="108" text-anchor="middle" class="subtitle">最近半个月的关键信号：输入抽象、训练适配、推理部署与运维能力开始连续对齐</text>
+
+  <rect x="70" y="170" rx="26" ry="26" width="335" height="360" fill="url(#box1)" filter="url(#shadow)"/>
+  <text x="238" y="225" text-anchor="middle" class="boxTitle">数据处理 / 输入抽象</text>
+  <text x="105" y="280" class="boxText">• 原始图像、音频、视频直接进模型</text>
+  <text x="105" y="320" class="boxText">• processor 输出成为中间层契约</text>
+  <text x="105" y="360" class="boxText">• 预计算 embedding 可以复用缓存</text>
+  <text x="105" y="400" class="boxText">• 安全边界开始进入文档默认项</text>
+  <text x="105" y="455" class="small">代表项目：vLLM / SGLang / Transformers</text>
+
+  <rect x="440" y="170" rx="26" ry="26" width="335" height="360" fill="url(#box2)" filter="url(#shadow)"/>
+  <text x="607" y="225" text-anchor="middle" class="boxTitle">训练 / 适配 / 后训练</text>
+  <text x="475" y="280" class="boxText">• 多模态 SFT、GRPO、DPO、KTO 配方</text>
+  <text x="475" y="320" class="boxText">• LoRA 与全参混合训练开始标准化</text>
+  <text x="475" y="360" class="boxText">• VLM 与工具调用数据格式逐步统一</text>
+  <text x="475" y="400" class="boxText">• 适配器层成为共享部件</text>
+  <text x="475" y="455" class="small">代表项目：ms-swift / TRL / PEFT</text>
+
+  <rect x="810" y="170" rx="26" ry="26" width="335" height="360" fill="url(#box3)" filter="url(#shadow)"/>
+  <text x="978" y="225" text-anchor="middle" class="boxTitle">推理 / 部署 / Serving</text>
+  <text x="845" y="280" class="boxText">• ViT CUDA Graph 与分段图执行</text>
+  <text x="845" y="320" class="boxText">• 多模态 attention、spec decode 升级</text>
+  <text x="845" y="360" class="boxText">• KV cache、并行与容错继续工程化</text>
+  <text x="845" y="400" class="boxText">• Vision 与 Audio 不再各跑一套栈</text>
+  <text x="845" y="455" class="small">代表项目：vLLM / SGLang</text>
+
+  <rect x="1180" y="170" rx="26" ry="26" width="350" height="360" fill="url(#box4)" filter="url(#shadow)"/>
+  <text x="1355" y="225" text-anchor="middle" class="boxTitle">现实结论</text>
+  <text x="1215" y="280" class="boxText">• 视觉团队已较接近公共底座</text>
+  <text x="1215" y="320" class="boxText">• 音频团队正在接入同一基础设施</text>
+  <text x="1215" y="360" class="boxText">• 但并未形成单一统一标准</text>
+  <text x="1215" y="400" class="boxText">• 真正共享的是“契约”而非单体框架</text>
+  <text x="1215" y="455" class="small">关键词：processor / adapter / API / cache</text>
+
+  <line x1="405" y1="350" x2="440" y2="350" stroke="#94a3b8" stroke-width="6" marker-end="url(#arrow)"/>
+  <line x1="775" y1="350" x2="810" y2="350" stroke="#94a3b8" stroke-width="6" marker-end="url(#arrow)"/>
+  <line x1="1145" y1="350" x2="1180" y2="350" stroke="#94a3b8" stroke-width="6" marker-end="url(#arrow)"/>
+
+  <rect x="120" y="620" rx="28" ry="28" width="1360" height="235" fill="#e2e8f0" opacity="0.95" filter="url(#shadow)"/>
+  <text x="800" y="675" text-anchor="middle" style="font-family:'Noto Sans CJK SC','Microsoft YaHei',Arial,sans-serif;font-size:30px;font-weight:700;fill:#0f172a">真正开始共享的不是某一个框架，而是跨项目的共同接口与工程习惯</text>
+
+  <rect x="165" y="720" rx="18" ry="18" width="240" height="56" fill="#bfdbfe"/>
+  <text x="285" y="756" text-anchor="middle" class="chip">统一模型定义</text>
+  <rect x="430" y="720" rx="18" ry="18" width="240" height="56" fill="#a7f3d0"/>
+  <text x="550" y="756" text-anchor="middle" class="chip">processor 契约</text>
+  <rect x="695" y="720" rx="18" ry="18" width="240" height="56" fill="#ddd6fe"/>
+  <text x="815" y="756" text-anchor="middle" class="chip">adapter 生态</text>
+  <rect x="960" y="720" rx="18" ry="18" width="240" height="56" fill="#fed7aa"/>
+  <text x="1080" y="756" text-anchor="middle" class="chip">OpenAI 风格 API</text>
+  <rect x="1225" y="720" rx="18" ry="18" width="210" height="56" fill="#fef08a"/>
+  <text x="1330" y="756" text-anchor="middle" class="chip">cache 与并行</text>
+
+  <text x="800" y="825" text-anchor="middle" style="font-family:'Noto Sans CJK SC','Microsoft YaHei',Arial,sans-serif;font-size:24px;fill:#334155">如果这几层能持续兼容，视觉与音频团队就不必再为每个新模型重新搭一遍训练到部署的独立流水线。</text>
+  <text x="800" y="905" text-anchor="middle" style="font-family:'Noto Sans CJK SC','Microsoft YaHei',Arial,sans-serif;font-size:18px;fill:#94a3b8">图示为本文根据 2026 年 4 月近两周官方 release / 文档整理绘制，不代表任何单一项目的官方路线图。</text>
+</svg>

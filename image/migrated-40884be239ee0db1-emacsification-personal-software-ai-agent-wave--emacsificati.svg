@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6" />
+      <stop offset="100%" style="stop-color:#8b5cf6" />
+    </linearGradient>
+    <linearGradient id="accent2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f59e0b" />
+      <stop offset="100%" style="stop-color:#ef4444" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="600" fill="url(#bg)" rx="16"/>
+  
+  <!-- Title -->
+  <text x="600" y="55" text-anchor="middle" fill="#f8fafc" font-size="28" font-weight="bold">从 Emacs 到 AI Agent：个人软件的三次浪潮</text>
+  <text x="600" y="82" text-anchor="middle" fill="#94a3b8" font-size="14">软件开发正在从"工程活动"变成"配置活动"</text>
+  
+  <!-- Timeline line -->
+  <line x1="150" y1="300" x2="1050" y2="300" stroke="#334155" stroke-width="3" stroke-dasharray="8,4"/>
+  
+  <!-- Arrow heads -->
+  <polygon points="1050,295 1065,300 1050,305" fill="#334155"/>
+  
+  <!-- Era 1: Emacs (1976) -->
+  <circle cx="250" cy="300" r="50" fill="#1e3a5f" stroke="#3b82f6" stroke-width="3"/>
+  <text x="250" y="295" text-anchor="middle" fill="#60a5fa" font-size="24">⌨️</text>
+  <text x="250" y="318" text-anchor="middle" fill="#93c5fd" font-size="11" font-weight="bold">1976</text>
+  
+  <rect x="150" y="370" width="200" height="140" rx="12" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="250" y="400" text-anchor="middle" fill="#60a5fa" font-size="18" font-weight="bold">Emacs 时代</text>
+  <text x="250" y="425" text-anchor="middle" fill="#cbd5e1" font-size="12">每个人自己造工具</text>
+  <text x="250" y="445" text-anchor="middle" fill="#94a3b8" font-size="11">Elisp 配置即软件</text>
+  <text x="250" y="465" text-anchor="middle" fill="#94a3b8" font-size="11">极度定制 · 门槛极高</text>
+  <text x="250" y="490" text-anchor="middle" fill="#f59e0b" font-size="11" font-weight="bold">受众：极少数极客</text>
+  
+  <!-- Era 2: Electron (2013) -->
+  <circle cx="600" cy="300" r="50" fill="#3b1f4e" stroke="#8b5cf6" stroke-width="3"/>
+  <text x="600" y="295" text-anchor="middle" fill="#a78bfa" font-size="24">📦</text>
+  <text x="600" y="318" text-anchor="middle" fill="#c4b5fd" font-size="11" font-weight="bold">2013+</text>
+  
+  <rect x="500" y="370" width="200" height="140" rx="12" fill="#1e293b" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="600" y="400" text-anchor="middle" fill="#a78bfa" font-size="18" font-weight="bold">Electron 时代</text>
+  <text x="600" y="425" text-anchor="middle" fill="#cbd5e1" font-size="12">Web 技术统一桌面</text>
+  <text x="600" y="445" text-anchor="middle" fill="#94a3b8" font-size="11">标准化平庸 · 性能妥协</text>
+  <text x="600" y="465" text-anchor="middle" fill="#94a3b8" font-size="11">降低门槛 · 但仍是专业活动</text>
+  <text x="600" y="490" text-anchor="middle" fill="#f59e0b" font-size="11" font-weight="bold">受众：专业开发者</text>
+  
+  <!-- Era 3: AI Agent (2026) -->
+  <circle cx="950" cy="300" r="50" fill="#451a03" stroke="#f59e0b" stroke-width="3"/>
+  <text x="950" y="295" text-anchor="middle" fill="#fbbf24" font-size="24">🤖</text>
+  <text x="950" y="318" text-anchor="middle" fill="#fcd34d" font-size="11" font-weight="bold">2026</text>
+  
+  <rect x="850" y="370" width="200" height="140" rx="12" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="950" y="400" text-anchor="middle" fill="#fbbf24" font-size="18" font-weight="bold">AI Agent 时代</text>
+  <text x="950" y="425" text-anchor="middle" fill="#cbd5e1" font-size="12">说需求 → 自动生成应用</text>
+  <text x="950" y="445" text-anchor="middle" fill="#94a3b8" font-size="11">原生 UI · 30 分钟构建</text>
+  <text x="950" y="465" text-anchor="middle" fill="#94a3b8" font-size="11">提示词即源代码</text>
+  <text x="950" y="490" text-anchor="middle" fill="#22c55e" font-size="11" font-weight="bold">受众：所有人</text>
+  
+  <!-- Connecting arrows -->
+  <path d="M305,300 L545,300" stroke="url(#accent1)" stroke-width="2.5" fill="none" marker-end="url(#arrowBlue)"/>
+  <path d="M655,300 L895,300" stroke="url(#accent2)" stroke-width="2.5" fill="none"/>
+  
+  <!-- Transition labels -->
+  <rect x="380" y="240" width="140" height="28" rx="14" fill="#1e3a5f" opacity="0.9"/>
+  <text x="450" y="259" text-anchor="middle" fill="#60a5fa" font-size="11">降低开发门槛</text>
+  
+  <rect x="730" y="240" width="140" height="28" rx="14" fill="#451a03" opacity="0.9"/>
+  <text x="800" y="259" text-anchor="middle" fill="#fbbf24" font-size="11">消除编程门槛</text>
+  
+  <!-- MDV callout -->
+  <rect x="830" y="130" width="250" height="90" rx="10" fill="#1e293b" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="955" y="155" text-anchor="middle" fill="#22c55e" font-size="13" font-weight="bold">📌 MDV 案例</text>
+  <text x="955" y="175" text-anchor="middle" fill="#cbd5e1" font-size="11">Claude + 30 分钟 =</text>
+  <text x="955" y="195" text-anchor="middle" fill="#f8fafc" font-size="12" font-weight="bold">最佳 macOS Markdown 查看器</text>
+  
+  <!-- Bottom note -->
+  <text x="600" y="565" text-anchor="middle" fill="#64748b" font-size="12">当"构建软件"从工程活动变成配置活动，参与者从百万级扩展到十亿级</text>
+  <text x="600" y="585" text-anchor="middle" fill="#475569" font-size="11">数据来源：Thomas Ptacek "The Emacsification of Software" (2026.05.12)</text>
+</svg>

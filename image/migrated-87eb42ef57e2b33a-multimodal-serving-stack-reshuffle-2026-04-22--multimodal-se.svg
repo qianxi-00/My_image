@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="860" viewBox="0 0 1400 860">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f7f9fc"/>
+      <stop offset="100%" stop-color="#eef3ff"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="violet" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#94a3b8" flood-opacity="0.22"/>
+    </filter>
+    <style>
+      .title { font: 700 34px 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif; fill: #0f172a; }
+      .subtitle { font: 500 18px 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif; fill: #334155; }
+      .h { font: 700 24px 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif; fill: #ffffff; }
+      .boxh { font: 700 22px 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif; fill: #0f172a; }
+      .txt { font: 500 17px 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif; fill: #1e293b; }
+      .small { font: 500 15px 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif; fill: #475569; }
+      .badge { font: 700 16px 'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif; fill: #ffffff; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1400" height="860" fill="url(#bg)"/>
+
+  <text x="64" y="64" class="title">多模态 serving 栈为什么开始重写</text>
+  <text x="64" y="98" class="subtitle">文本时代“单引擎 + 单批处理 + 单层缓存”的默认假设，被媒体输入、异构调度、KV 流动与网关化运营同时打破</text>
+
+  <rect x="64" y="138" rx="24" ry="24" width="1272" height="84" fill="#ffffff" stroke="#dbe4ff" stroke-width="2" filter="url(#shadow)"/>
+  <text x="96" y="190" class="boxh">旧范式：文本请求几乎等价于“token 进入解码器”</text>
+  <text x="675" y="190" class="txt">新范式：多模态请求更像“对象接入 → 编码/渲染 → 路由/传输 → 推理/生成”的流水线</text>
+
+  <rect x="64" y="266" rx="26" ry="26" width="280" height="482" fill="#ffffff" stroke="#c7d2fe" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="86" y="290" rx="16" ry="16" width="236" height="58" fill="url(#orange)"/>
+  <text x="118" y="328" class="h">① 媒体接入层</text>
+  <text x="94" y="388" class="txt">• 图片 / 视频 / 音频 URL 接入</text>
+  <text x="94" y="424" class="txt">• 渲染、抽帧、转码、对齐</text>
+  <text x="94" y="460" class="txt">• 编码器前处理与对象校验</text>
+  <text x="94" y="496" class="txt">• SSRF、防跳转、可信输入</text>
+  <text x="94" y="548" class="small">对应变化：</text>
+  <text x="94" y="580" class="small">vLLM 的 GPU-less render、</text>
+  <text x="94" y="608" class="small">allowed-media-domains、</text>
+  <text x="94" y="636" class="small">TensorRT-LLM 的 VisualGen</text>
+  <text x="94" y="664" class="small">请求校验与 image-as-tensor 统一</text>
+
+  <rect x="372" y="266" rx="26" ry="26" width="280" height="482" fill="#ffffff" stroke="#bfdbfe" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="394" y="290" rx="16" ry="16" width="236" height="58" fill="url(#blue)"/>
+  <text x="426" y="328" class="h">② 异构调度层</text>
+  <text x="402" y="388" class="txt">• encoder / prefill / decode 分离</text>
+  <text x="402" y="424" class="txt">• 连续批处理不再是唯一核心</text>
+  <text x="402" y="460" class="txt">• 不同 GPU 池与并行策略</text>
+  <text x="402" y="496" class="txt">• 路由亲和性与跨阶段回传</text>
+  <text x="402" y="548" class="small">对应变化：</text>
+  <text x="402" y="580" class="small">vLLM 把 disaggregated prefill /</text>
+  <text x="402" y="608" class="small">decode / encode 写入 README，</text>
+  <text x="402" y="636" class="small">SGLang 的 PD disaggregation、</text>
+  <text x="402" y="664" class="small">TensorRT-LLM 的 conversation-affinity</text>
+
+  <rect x="680" y="266" rx="26" ry="26" width="280" height="482" fill="#ffffff" stroke="#c4b5fd" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="702" y="290" rx="16" ry="16" width="236" height="58" fill="url(#violet)"/>
+  <text x="734" y="328" class="h">③ 缓存 / KV 层</text>
+  <text x="710" y="388" class="txt">• 前缀缓存之外还有媒体复用</text>
+  <text x="710" y="424" class="txt">• UUID / 远程对象 / embedding 输入</text>
+  <text x="710" y="460" class="txt">• KV offload、远程连接器、共享</text>
+  <text x="710" y="496" class="txt">• 跨节点、跨阶段的 KV 传输</text>
+  <text x="710" y="548" class="small">对应变化：</text>
+  <text x="710" y="580" class="small">vLLM Cached Inputs、CPU KV offload，</text>
+  <text x="710" y="608" class="small">SGLang 的 RadixAttention 与</text>
+  <text x="710" y="636" class="small">GPU staging buffer，</text>
+  <text x="710" y="664" class="small">TensorRT-LLM 的 KV Cache Connector</text>
+
+  <rect x="988" y="266" rx="26" ry="26" width="348" height="482" fill="#ffffff" stroke="#bbf7d0" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1010" y="290" rx="16" ry="16" width="304" height="58" fill="url(#green)"/>
+  <text x="1046" y="328" class="h">④ 网关 / 策略 / 观测层</text>
+  <text x="1018" y="388" class="txt">• HTTP / gRPC / OpenAI 兼容路由</text>
+  <text x="1018" y="424" class="txt">• 历史管理、限流、熔断、健康检查</text>
+  <text x="1018" y="460" class="txt">• 生产级 Prometheus 与阶段指标</text>
+  <text x="1018" y="496" class="txt">• IPC 认证、remote code、隐私边界</text>
+  <text x="1018" y="548" class="small">对应变化：</text>
+  <text x="1018" y="580" class="small">SGLang Model Gateway、</text>
+  <text x="1018" y="608" class="small">vLLM gRPC serving、</text>
+  <text x="1018" y="636" class="small">TensorRT-LLM 的生产指标、</text>
+  <text x="1018" y="664" class="small">HMAC 认证与 disagg 路由策略</text>
+
+  <path d="M344 506 C356 506, 356 506, 372 506" stroke="#94a3b8" stroke-width="5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M652 506 C664 506, 664 506, 680 506" stroke="#94a3b8" stroke-width="5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M960 506 C972 506, 972 506, 988 506" stroke="#94a3b8" stroke-width="5" fill="none" marker-end="url(#arrow)"/>
+
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <rect x="64" y="776" rx="18" ry="18" width="1272" height="48" fill="#0f172a" opacity="0.92"/>
+  <text x="92" y="807" class="badge">核心判断：多模态时代真正稀缺的，不再只是更快的解码 kernel，而是能把媒体接入、异构调度、KV 流动、网关策略与安全观测整合起来的整套 serving 栈</text>
+</svg>

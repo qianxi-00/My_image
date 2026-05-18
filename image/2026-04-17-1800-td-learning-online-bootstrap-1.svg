@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#f8fafc"/>
+  <rect x="70" y="55" width="1460" height="110" rx="24" fill="#0f172a"/>
+  <text x="800" y="123" text-anchor="middle" font-size="40" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#ffffff" font-weight="700">Temporal Difference Learning：为什么强化学习可以边走边学</text>
+
+  <rect x="80" y="210" width="430" height="520" rx="28" fill="#e0f2fe" stroke="#38bdf8" stroke-width="3"/>
+  <text x="295" y="270" text-anchor="middle" font-size="32" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#0f172a" font-weight="700">动态规划 DP</text>
+  <text x="295" y="315" text-anchor="middle" font-size="22" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334155">知道环境模型，直接做 Bellman 递推</text>
+  <rect x="125" y="365" width="340" height="95" rx="18" fill="#ffffff" stroke="#7dd3fc" stroke-width="2"/>
+  <text x="295" y="420" text-anchor="middle" font-size="24" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#0f172a">当前价值 = 奖励期望 + 下一步价值期望</text>
+  <text x="120" y="515" font-size="24" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#0f172a">特点：</text>
+  <text x="120" y="560" font-size="23" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334155">• 更新快，但依赖完整环境模型</text>
+  <text x="120" y="602" font-size="23" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334155">• 更像“算未来”而不是“试未来”</text>
+  <text x="120" y="644" font-size="23" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#334155">• 适合理解价值递推骨架</text>
+
+  <rect x="585" y="210" width="430" height="520" rx="28" fill="#ecfccb" stroke="#84cc16" stroke-width="3"/>
+  <text x="800" y="270" text-anchor="middle" font-size="32" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#1a2e05" font-weight="700">Monte Carlo</text>
+  <text x="800" y="315" text-anchor="middle" font-size="22" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#3f6212">不知道模型，但要等一整局结束</text>
+  <rect x="630" y="365" width="340" height="95" rx="18" fill="#ffffff" stroke="#bef264" stroke-width="2"/>
+  <text x="800" y="420" text-anchor="middle" font-size="24" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#1a2e05">当前价值 = 完整回合真实回报的样本平均</text>
+  <text x="625" y="515" font-size="24" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#1a2e05">特点：</text>
+  <text x="625" y="560" font-size="23" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#3f6212">• 无模型、直观、估计更干净</text>
+  <text x="625" y="602" font-size="23" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#3f6212">• 但更新晚，方差高，依赖 episode</text>
+  <text x="625" y="644" font-size="23" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#3f6212">• 代表“等未来发生再回头记账”</text>
+
+  <rect x="1090" y="210" width="430" height="520" rx="28" fill="#ede9fe" stroke="#8b5cf6" stroke-width="3"/>
+  <text x="1305" y="270" text-anchor="middle" font-size="32" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#2e1065" font-weight="700">Temporal Difference</text>
+  <text x="1305" y="315" text-anchor="middle" font-size="22" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#5b21b6">不知道模型，也不用等到终局</text>
+  <rect x="1135" y="355" width="340" height="120" rx="18" fill="#ffffff" stroke="#c4b5fd" stroke-width="2"/>
+  <text x="1305" y="408" text-anchor="middle" font-size="25" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#2e1065">V(Sₜ) ← V(Sₜ) + α [ Rₜ₊₁ + γV(Sₜ₊₁) − V(Sₜ) ]</text>
+  <text x="1130" y="515" font-size="24" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#2e1065">特点：</text>
+  <text x="1130" y="560" font-size="23" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#5b21b6">• 一步真实奖励 + 下一步估计值</text>
+  <text x="1130" y="602" font-size="23" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#5b21b6">• 在线更新，更接近真实交互系统</text>
+  <text x="1130" y="644" font-size="23" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#5b21b6">• 用自举换来速度，也引入偏差</text>
+
+  <line x1="510" y1="470" x2="585" y2="470" stroke="#64748b" stroke-width="5" marker-end="url(#arrow)"/>
+  <line x1="1015" y1="470" x2="1090" y2="470" stroke="#64748b" stroke-width="5" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto">
+      <path d="M0,0 L14,7 L0,14 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="140" y="775" width="1320" height="85" rx="20" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="800" y="827" text-anchor="middle" font-size="28" font-family="PingFang SC, Microsoft YaHei, Arial" fill="#0f172a" font-weight="700">TD 学习站在 DP 与 MC 之间：保留无模型学习，同时把“整局后更新”改成“每走一步就更新”</text>
+</svg>

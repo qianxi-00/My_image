@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760">
+  <rect width="1280" height="760" fill="#f7f9fc"/>
+  <rect x="40" y="36" width="1200" height="84" rx="18" fill="#132238"/>
+  <text x="640" y="82" text-anchor="middle" font-size="32" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#ffffff" font-weight="700">Notebook Agent 正在重写研究工作流</text>
+  <text x="640" y="112" text-anchor="middle" font-size="16" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#cfe0ff">不是简单加聊天框，而是把“计划—执行—读取结果—产出草稿”接到同一工作台</text>
+
+  <rect x="70" y="170" width="150" height="92" rx="16" fill="#e3efff" stroke="#7aa7ff" stroke-width="2"/>
+  <text x="145" y="208" text-anchor="middle" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#17355e" font-weight="700">1</text>
+  <text x="145" y="238" text-anchor="middle" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#17355e">提出问题</text>
+  <text x="145" y="258" text-anchor="middle" font-size="14" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#355b8b">目标、范围、约束</text>
+
+  <rect x="250" y="170" width="150" height="92" rx="16" fill="#e9f8ef" stroke="#67c587" stroke-width="2"/>
+  <text x="325" y="208" text-anchor="middle" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#18522a" font-weight="700">2</text>
+  <text x="325" y="238" text-anchor="middle" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#18522a">接入上下文</text>
+  <text x="325" y="258" text-anchor="middle" font-size="14" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#2f7040">文件、单元格、表、文档</text>
+
+  <rect x="430" y="170" width="150" height="92" rx="16" fill="#fff4df" stroke="#e6b85c" stroke-width="2"/>
+  <text x="505" y="208" text-anchor="middle" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#7a4f00" font-weight="700">3</text>
+  <text x="505" y="238" text-anchor="middle" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#7a4f00">研究计划</text>
+  <text x="505" y="258" text-anchor="middle" font-size="14" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#8c650b">假设、步骤、优先级</text>
+
+  <rect x="610" y="170" width="150" height="92" rx="16" fill="#ffe8e8" stroke="#e07a7a" stroke-width="2"/>
+  <text x="685" y="208" text-anchor="middle" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#7b1f1f" font-weight="700">4</text>
+  <text x="685" y="238" text-anchor="middle" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#7b1f1f">生成并执行</text>
+  <text x="685" y="258" text-anchor="middle" font-size="14" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#9a3b3b">代码、单元、命令、审批</text>
+
+  <rect x="790" y="170" width="150" height="92" rx="16" fill="#efe6ff" stroke="#9c7ce6" stroke-width="2"/>
+  <text x="865" y="208" text-anchor="middle" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#4f347e" font-weight="700">5</text>
+  <text x="865" y="238" text-anchor="middle" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#4f347e">读取结果</text>
+  <text x="865" y="258" text-anchor="middle" font-size="14" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#6b52a0">单元输出、报错、表结果</text>
+
+  <rect x="970" y="170" width="150" height="92" rx="16" fill="#e6fbfb" stroke="#58b9b9" stroke-width="2"/>
+  <text x="1045" y="208" text-anchor="middle" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#115b5b" font-weight="700">6</text>
+  <text x="1045" y="238" text-anchor="middle" font-size="20" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#115b5b">报告初稿</text>
+  <text x="1045" y="258" text-anchor="middle" font-size="14" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#2a7474">图表、引用、结论草案</text>
+
+  <line x1="220" y1="216" x2="250" y2="216" stroke="#7f92a8" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="400" y1="216" x2="430" y2="216" stroke="#7f92a8" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="580" y1="216" x2="610" y2="216" stroke="#7f92a8" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="760" y1="216" x2="790" y2="216" stroke="#7f92a8" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="940" y1="216" x2="970" y2="216" stroke="#7f92a8" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="110" y="338" width="1060" height="208" rx="22" fill="#ffffff" stroke="#d7dfeb" stroke-width="2"/>
+  <text x="160" y="382" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#22344b" font-weight="700">当前平台正在覆盖的能力层</text>
+  <text x="160" y="420" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#2d4868">• Jupyter AI v3：聊天文件化、单元格与文件作为上下文、Notebook 工具、命令与写入审批、自定义 MCP</text>
+  <text x="160" y="456" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#2d4868">• Databricks Genie Code：计划方案、检索资产、运行代码、读取单元输出、自动修错、共享技能</text>
+  <text x="160" y="492" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#2d4868">• Genie spaces Agent mode：研究计划、假设检验、多条查询、引用与可视化报告</text>
+  <text x="160" y="528" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#2d4868">• SageMaker Unified Studio：JupyterLab + Amazon Q 聊天生成代码与代码补全，仍偏“助手”而非完整研究代理</text>
+
+  <rect x="80" y="600" width="520" height="108" rx="18" fill="#fff7e8" stroke="#efc468" stroke-width="2"/>
+  <text x="110" y="640" font-size="22" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#7a5605" font-weight="700">AI 已较强接管</text>
+  <text x="110" y="674" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#8a650d">研究计划、初步清洗、代码草稿、单元执行、结果解释、报告初稿</text>
+
+  <rect x="640" y="600" width="560" height="108" rx="18" fill="#fff0f0" stroke="#e48d8d" stroke-width="2"/>
+  <text x="670" y="640" font-size="22" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#7b1f1f" font-weight="700">仍必须由人类兜底</text>
+  <text x="670" y="674" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" fill="#8f3838">数据口径、环境冻结、随机种子、结果复核、因果判断、最终发布责任</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#7f92a8"/>
+    </marker>
+  </defs>
+</svg>

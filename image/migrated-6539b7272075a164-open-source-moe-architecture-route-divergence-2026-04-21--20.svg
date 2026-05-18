@@ -1,0 +1,50 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fbff"/>
+      <stop offset="100%" stop-color="#eef4ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#7d8fb3" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="1200" height="760" fill="url(#bg)"/>
+  <text x="60" y="72" font-size="34" font-weight="700" fill="#14213d" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Arial, sans-serif">开源 MoE 路线分化的三条主线</text>
+  <text x="60" y="110" font-size="18" fill="#43506a" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Arial, sans-serif">核心不再只是“专家越多越强”，而是：激活预算、路由复杂度、部署目标分别被谁放在第一位。</text>
+
+  <rect x="60" y="150" rx="26" ry="26" width="320" height="370" fill="#fff3f0" stroke="#ffccb8" stroke-width="2" filter="url(#shadow)"/>
+  <text x="90" y="205" font-size="28" font-weight="700" fill="#b23a20" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Arial, sans-serif">路线 A：云侧 Agentic 强度</text>
+  <text x="90" y="245" font-size="22" font-weight="700" fill="#84210f" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Arial, sans-serif">Kimi K2</text>
+  <text x="90" y="285" font-size="20" fill="#5c2b23" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Arial, sans-serif">• 1T 总参数 / 32B 激活参数</text>
+  <text x="90" y="321" font-size="20" fill="#5c2b23" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Arial, sans-serif">• 官方强调：更高 MoE 稀疏度、减少 head</text>
+  <text x="90" y="357" font-size="20" fill="#5c2b23" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Arial, sans-serif">• 目标：长上下文、工具使用、云侧 Agent</text>
+  <text x="90" y="393" font-size="20" fill="#5c2b23" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Arial, sans-serif">• 含义：愿意为单 token 智力付更高在线预算</text>
+  <text x="90" y="452" font-size="18" fill="#7b4338" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Arial, sans-serif">关键词：大总参、较高激活、云优先</text>
+
+  <rect x="440" y="150" rx="26" ry="26" width="320" height="370" fill="#f1faf2" stroke="#b7e0bf" stroke-width="2" filter="url(#shadow)"/>
+  <text x="470" y="205" font-size="28" font-weight="700" fill="#156a3a" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Arial, sans-serif">路线 B：本地多模态平衡</text>
+  <text x="470" y="245" font-size="22" font-weight="700" fill="#0f5d33" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Arial, sans-serif">Gemma 4 26B A4B</text>
+  <text x="470" y="285" font-size="20" fill="#254933" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Arial, sans-serif">• 25.2B 总参数 / 3.8B 激活参数</text>
+  <text x="470" y="321" font-size="20" fill="#254933" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Arial, sans-serif">• 8 个激活专家 / 128 个总专家 + 1 shared</text>
+  <text x="470" y="357" font-size="20" fill="#254933" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Arial, sans-serif">• 256K 上下文，文本 + 图像</text>
+  <text x="470" y="393" font-size="20" fill="#254933" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Arial, sans-serif">• 同一家族同时保留 dense 与 MoE</text>
+  <text x="470" y="452" font-size="18" fill="#3c6650" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Arial, sans-serif">关键词：中等激活、家族分叉、平衡路线</text>
+
+  <rect x="820" y="150" rx="26" ry="26" width="320" height="370" fill="#f2f7ff" stroke="#c1d6ff" stroke-width="2" filter="url(#shadow)"/>
+  <text x="850" y="205" font-size="28" font-weight="700" fill="#245ab8" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Arial, sans-serif">路线 C：边缘部署优先</text>
+  <text x="850" y="245" font-size="22" font-weight="700" fill="#144b9a" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Arial, sans-serif">LFM2-24B-A2B</text>
+  <text x="850" y="285" font-size="20" fill="#28456b" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Arial, sans-serif">• 24B 总参数 / 2B 激活参数</text>
+  <text x="850" y="321" font-size="20" fill="#28456b" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Arial, sans-serif">• 32GB RAM 目标，CPU / H100 吞吐明示</text>
+  <text x="850" y="357" font-size="20" fill="#28456b" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Arial, sans-serif">• 混合 backbone：短卷积 + 少量 GQA</text>
+  <text x="850" y="393" font-size="20" fill="#28456b" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Arial, sans-serif">• day-zero 支持 llama.cpp / vLLM / SGLang</text>
+  <text x="850" y="452" font-size="18" fill="#446183" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Arial, sans-serif">关键词：低激活、吞吐优先、落地友好</text>
+
+  <line x1="220" y1="560" x2="980" y2="560" stroke="#8ca2cf" stroke-width="4" stroke-linecap="round"/>
+  <polygon points="980,560 958,548 958,572" fill="#8ca2cf"/>
+  <text x="430" y="538" font-size="21" font-weight="700" fill="#30446e" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Arial, sans-serif">激活预算越来越低，部署门槛通常也更低</text>
+
+  <rect x="80" y="610" rx="18" ry="18" width="1040" height="100" fill="#ffffff" stroke="#d7e1f7" stroke-width="2"/>
+  <text x="110" y="652" font-size="24" font-weight="700" fill="#213555" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Arial, sans-serif">编辑判断</text>
+  <text x="110" y="690" font-size="19" fill="#42536f" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Arial, sans-serif">2026 年这轮开源 MoE 的真正分化，不是某家多 64 个专家、某家少 2 个专家，而是谁愿意为每个 token 支付多少激活成本，</text>
+  <text x="110" y="718" font-size="19" fill="#42536f" font-family="Noto Sans CJK SC, Microsoft YaHei, PingFang SC, Arial, sans-serif">以及是否愿意把路由复杂度、服务框架适配和硬件友好性一起纳入架构设计。</text>
+</svg>

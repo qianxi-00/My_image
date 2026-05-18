@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="840" viewBox="0 0 1400 840">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7f9fc"/>
+      <stop offset="100%" stop-color="#eef4ff"/>
+    </linearGradient>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e8f0fe"/>
+      <stop offset="100%" stop-color="#d2e3fc"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e6f4ea"/>
+      <stop offset="100%" stop-color="#c4eed0"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fff8e1"/>
+      <stop offset="100%" stop-color="#fde293"/>
+    </linearGradient>
+    <linearGradient id="g4" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fce8e6"/>
+      <stop offset="100%" stop-color="#f8c1bd"/>
+    </linearGradient>
+    <style>
+      .t{font-family:"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif; fill:#202124}
+      .small{font-size:24px}
+      .body{font-size:26px}
+      .title{font-size:42px;font-weight:700}
+      .subtitle{font-size:24px;fill:#5f6368}
+      .box{rx:24;ry:24;stroke:#d0d7e2;stroke-width:2}
+      .line{stroke:#5f6368;stroke-width:3;stroke-dasharray:8 8;fill:none}
+    </style>
+  </defs>
+  <rect x="0" y="0" width="1400" height="840" fill="url(#bg)"/>
+  <text x="70" y="90" class="t title">Gemma 4 从 Google Cloud 到 Sovereign Cloud 的部署路径</text>
+  <text x="70" y="130" class="t subtitle">这次真正值得重视的，不只是“能上云”，而是开放权重模型开始进入“可治理、可主权部署”的官方叙事</text>
+
+  <rect x="70" y="190" width="280" height="180" class="box" fill="url(#g1)"/>
+  <text x="105" y="245" class="t body">第一层：模型入口</text>
+  <text x="105" y="290" class="t small">Vertex AI / Model Garden</text>
+  <text x="105" y="330" class="t small">自建端点、微调、受管模型目录</text>
+
+  <rect x="390" y="190" width="280" height="180" class="box" fill="url(#g2)"/>
+  <text x="425" y="245" class="t body">第二层：弹性推理</text>
+  <text x="425" y="290" class="t small">Cloud Run + vLLM</text>
+  <text x="425" y="330" class="t small">按需付费、Scale to zero、OpenAI 兼容</text>
+
+  <rect x="710" y="190" width="280" height="180" class="box" fill="url(#g3)"/>
+  <text x="745" y="245" class="t body">第三层：平台工程</text>
+  <text x="745" y="290" class="t small">GKE / TPU / Inference Gateway</text>
+  <text x="745" y="330" class="t small">集群治理、沙箱、吞吐与调度优化</text>
+
+  <rect x="1030" y="190" width="280" height="180" class="box" fill="url(#g4)"/>
+  <text x="1065" y="245" class="t body">第四层：Agent 运行</text>
+  <text x="1065" y="290" class="t small">ADK + 自托管端点</text>
+  <text x="1065" y="330" class="t small">工具调用、结构化输出、工作流编排</text>
+
+  <path d="M350 280 L390 280" class="line"/>
+  <path d="M670 280 L710 280" class="line"/>
+  <path d="M990 280 L1030 280" class="line"/>
+
+  <rect x="130" y="470" width="1140" height="250" class="box" fill="#ffffff"/>
+  <text x="180" y="530" class="t body">主权控制谱系：Google 官方当前强调的三层能力</text>
+
+  <rect x="180" y="575" width="290" height="100" class="box" fill="#eef3fd"/>
+  <text x="210" y="620" class="t small">Data Boundary</text>
+  <text x="210" y="652" class="t small">数据驻留、访问审计、密钥控制</text>
+
+  <rect x="555" y="575" width="290" height="100" class="box" fill="#eef8ef"/>
+  <text x="585" y="620" class="t small">Dedicated</text>
+  <text x="585" y="652" class="t small">本地伙伴运营、隔离基础设施、区域控制</text>
+
+  <rect x="930" y="575" width="290" height="100" class="box" fill="#fff4e8"/>
+  <text x="960" y="620" class="t small">Air-Gapped / GDC</text>
+  <text x="960" y="652" class="t small">断网运行、物理隔离、无法远程关闭</text>
+
+  <text x="180" y="760" class="t subtitle">结论：Gemma 4 的变化不是“多一个部署入口”，而是开放模型第一次更像组织级主权基础设施选项。</text>
+</svg>

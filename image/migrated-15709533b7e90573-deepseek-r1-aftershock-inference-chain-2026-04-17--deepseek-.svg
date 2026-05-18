@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="860" viewBox="0 0 1400 860">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#101b33"/>
+    </linearGradient>
+    <linearGradient id="card1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1f6feb"/>
+      <stop offset="100%" stop-color="#1558c0"/>
+    </linearGradient>
+    <linearGradient id="card2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#238636"/>
+      <stop offset="100%" stop-color="#1a6a2d"/>
+    </linearGradient>
+    <linearGradient id="card3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#9e6a03"/>
+      <stop offset="100%" stop-color="#7f5502"/>
+    </linearGradient>
+    <linearGradient id="card4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#bf4b8a"/>
+      <stop offset="100%" stop-color="#a33673"/>
+    </linearGradient>
+    <linearGradient id="card5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6f42c1"/>
+      <stop offset="100%" stop-color="#5a35a0"/>
+    </linearGradient>
+    <style>
+      text { font-family: "Noto Sans CJK SC", "Microsoft YaHei", "PingFang SC", Arial, sans-serif; }
+      .title { fill: #f8fafc; font-size: 34px; font-weight: 700; }
+      .subtitle { fill: #cbd5e1; font-size: 18px; }
+      .card-title { fill: #ffffff; font-size: 22px; font-weight: 700; }
+      .card-text { fill: #e5eefc; font-size: 16px; }
+      .timeline-title { fill: #f8fafc; font-size: 24px; font-weight: 700; }
+      .timeline-text { fill: #dbe4f3; font-size: 15px; }
+      .small { fill: #94a3b8; font-size: 14px; }
+    </style>
+  </defs>
+  <rect width="1400" height="860" fill="url(#bg)" rx="24"/>
+  <text x="60" y="70" class="title">DeepSeek-R1 的余波如何沿着推理基础设施链继续扩散</text>
+  <text x="60" y="105" class="subtitle">最近三周官方版本记录呈现出同一条主线：开源推理模型留下的长期影响，正在从“模型新闻”转化为“系统工程默认项”。</text>
+
+  <rect x="60" y="150" width="240" height="170" rx="20" fill="url(#card1)"/>
+  <text x="84" y="195" class="card-title">1. 开源推理模型</text>
+  <text x="84" y="225" class="card-text">成为常见输入</text>
+  <text x="84" y="255" class="card-text">不再只是榜单事件，</text>
+  <text x="84" y="283" class="card-text">而是需要长期承载的</text>
+  <text x="84" y="311" class="card-text">生产工作负载。</text>
+
+  <rect x="320" y="150" width="240" height="170" rx="20" fill="url(#card2)"/>
+  <text x="344" y="195" class="card-title">2. 长思维链</text>
+  <text x="344" y="225" class="card-text">让 TTFT / TPOT /</text>
+  <text x="344" y="253" class="card-text">队列调度 / KV Cache</text>
+  <text x="344" y="281" class="card-text">从优化项升级为</text>
+  <text x="344" y="309" class="card-text">主干能力。</text>
+
+  <rect x="580" y="150" width="240" height="170" rx="20" fill="url(#card3)"/>
+  <text x="604" y="195" class="card-title">3. MoE 与 Wide EP</text>
+  <text x="604" y="225" class="card-text">放大路由、All-to-All、</text>
+  <text x="604" y="253" class="card-text">故障半径与恢复时间，</text>
+  <text x="604" y="281" class="card-text">容错从可选题变成</text>
+  <text x="604" y="309" class="card-text">必答题。</text>
+
+  <rect x="840" y="150" width="240" height="170" rx="20" fill="url(#card4)"/>
+  <text x="864" y="195" class="card-title">4. 推理语义上桌</text>
+  <text x="864" y="225" class="card-text">reasoning parser、</text>
+  <text x="864" y="253" class="card-text">interleaved thinking、</text>
+  <text x="864" y="281" class="card-text">tool calling 开始进入</text>
+  <text x="864" y="309" class="card-text">服务接口层。</text>
+
+  <rect x="1100" y="150" width="240" height="170" rx="20" fill="url(#card5)"/>
+  <text x="1124" y="195" class="card-title">5. 新主战场</text>
+  <text x="1124" y="225" class="card-text">调度、缓存、图捕获、</text>
+  <text x="1124" y="253" class="card-text">推测解码、EP 容错、</text>
+  <text x="1124" y="281" class="card-text">可观测性与降级</text>
+  <text x="1124" y="309" class="card-text">共同构成壁垒。</text>
+
+  <path d="M300 235 L320 235" stroke="#dbe4f3" stroke-width="5" marker-end="url(#arrow)"/>
+  <path d="M560 235 L580 235" stroke="#dbe4f3" stroke-width="5"/>
+  <path d="M820 235 L840 235" stroke="#dbe4f3" stroke-width="5"/>
+  <path d="M1080 235 L1100 235" stroke="#dbe4f3" stroke-width="5"/>
+
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="6" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#dbe4f3" />
+    </marker>
+  </defs>
+
+  <text x="60" y="405" class="timeline-title">最近三周的官方信号</text>
+  <text x="60" y="435" class="subtitle">不同位置的技术栈，在相近时间窗口里同时强调 DeepSeek 类推理工作负载带来的系统问题。</text>
+
+  <line x1="90" y1="530" x2="1310" y2="530" stroke="#475569" stroke-width="4" stroke-linecap="round"/>
+
+  <circle cx="220" cy="530" r="16" fill="#f59e0b"/>
+  <text x="172" y="485" class="timeline-text">2026-03-24</text>
+  <text x="128" y="570" class="timeline-text">TensorRT-LLM rc9</text>
+  <text x="118" y="595" class="small">routing kernels / reasoning parser / KV cache / spec decode</text>
+
+  <circle cx="500" cy="530" r="16" fill="#38bdf8"/>
+  <text x="452" y="485" class="timeline-text">2026-03-25</text>
+  <text x="455" y="570" class="timeline-text">LMSYS 博客</text>
+  <text x="392" y="595" class="small">Elastic EP：32 GPU 场景下把中断压到 10 秒以内</text>
+
+  <circle cx="790" cy="530" r="16" fill="#22c55e"/>
+  <text x="742" y="485" class="timeline-text">2026-04-03</text>
+  <text x="754" y="570" class="timeline-text">vLLM 0.19.0</text>
+  <text x="697" y="595" class="small">zero-bubble async scheduling / CPU KV offload / MRV2 / EPLB</text>
+
+  <circle cx="1080" cy="530" r="16" fill="#f472b6"/>
+  <text x="1032" y="485" class="timeline-text">2026-04-06</text>
+  <text x="1036" y="570" class="timeline-text">SGLang 0.5.10</text>
+  <text x="970" y="595" class="small">Elastic EP / piecewise CUDA graph / FA4 spec decode / MoE LoRA</text>
+
+  <rect x="60" y="660" width="1280" height="135" rx="18" fill="#0f172a" stroke="#334155"/>
+  <text x="90" y="705" class="timeline-title">图解结论</text>
+  <text x="90" y="742" class="timeline-text">当主流推理栈的版本说明，从“支持了哪些模型”转向“如何让推理工作负载更稳、更便宜、更可恢复”时，说明变化已经深入到基础设施层。</text>
+  <text x="90" y="772" class="timeline-text">这也是为什么今天再写 DeepSeek-R1，最有价值的角度不是回顾发布周，而是观察它如何持续重排行业的系统工程优先级。</text>
+</svg>

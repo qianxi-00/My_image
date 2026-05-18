@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc"/>
+      <stop offset="100%" style="stop-color:#e2e8f0"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="480" rx="12" fill="url(#bg2)"/>
+  <text x="450" y="32" text-anchor="middle" font-size="17" font-weight="bold" fill="#1e293b">RadixAttention vs vLLM Prefix Caching 对比</text>
+
+  <!-- Left: RadixAttention -->
+  <rect x="30" y="50" width="410" height="410" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="235" y="78" text-anchor="middle" font-size="15" font-weight="bold" fill="#1d4ed8">RadixAttention（SGLang）</text>
+
+  <rect x="55" y="95" width="360" height="36" rx="6" fill="#3b82f6"/>
+  <text x="235" y="119" text-anchor="middle" font-size="12" fill="#fff">数据结构：Radix Tree（基数树）</text>
+
+  <rect x="55" y="145" width="360" height="36" rx="6" fill="#60a5fa"/>
+  <text x="235" y="169" text-anchor="middle" font-size="12" fill="#fff">前缀匹配：自动最长前缀匹配</text>
+
+  <rect x="55" y="195" width="360" height="36" rx="6" fill="#93c5fd"/>
+  <text x="235" y="219" text-anchor="middle" font-size="12" fill="#1e40af">缓存粒度：Token 级 KV 张量</text>
+
+  <rect x="55" y="245" width="360" height="36" rx="6" fill="#bfdbfe"/>
+  <text x="235" y="269" text-anchor="middle" font-size="12" fill="#1e40af">淘汰策略：LRU 叶子优先</text>
+
+  <rect x="55" y="295" width="360" height="55" rx="6" fill="#dbeafe"/>
+  <text x="235" y="316" text-anchor="middle" font-size="12" fill="#1e40af" font-weight="bold">核心优势：</text>
+  <text x="235" y="336" text-anchor="middle" font-size="11" fill="#1e40af">· 自动发现所有可共享前缀</text>
+  <text x="235" y="352" text-anchor="middle" font-size="11" fill="#1e40af">· 多租户/多会话天然支持</text>
+
+  <!-- Right: vLLM -->
+  <rect x="460" y="50" width="410" height="410" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="665" y="78" text-anchor="middle" font-size="15" font-weight="bold" fill="#92400e">vLLM Automatic Prefix Caching</text>
+
+  <rect x="485" y="95" width="360" height="36" rx="6" fill="#f59e0b"/>
+  <text x="665" y="119" text-anchor="middle" font-size="12" fill="#fff">数据结构：Block-level Hash Table</text>
+
+  <rect x="485" y="145" width="360" height="36" rx="6" fill="#fbbf24"/>
+  <text x="665" y="169" text-anchor="middle" font-size="12" fill="#78350f">前缀匹配：哈希键精确匹配</text>
+
+  <rect x="485" y="195" width="360" height="36" rx="6" fill="#fcd34d"/>
+  <text x="665" y="219" text-anchor="middle" font-size="12" fill="#78350f">缓存粒度：Block 级（如 16 tokens）</text>
+
+  <rect x="485" y="245" width="360" height="36" rx="6" fill="#fde68a"/>
+  <text x="665" y="269" text-anchor="middle" font-size="12" fill="#78350f">淘汰策略：Eviction-free 设计</text>
+
+  <rect x="485" y="295" width="360" height="55" rx="6" fill="#fef9c3"/>
+  <text x="665" y="316" text-anchor="middle" font-size="12" fill="#78350f" font-weight="bold">核心特点：</text>
+  <text x="665" y="336" text-anchor="middle" font-size="11" fill="#78350f">· 与 PagedAttention 深度集成</text>
+  <text x="665" y="352" text-anchor="middle" font-size="11" fill="#78350f">· 实现简单，内存碎片可控</text>
+
+  <!-- Bottom comparison -->
+  <rect x="30" y="380" width="840" height="70" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="450" y="402" text-anchor="middle" font-size="13" font-weight="bold" fill="#166534">关键差异总结</text>
+  <text x="450" y="422" text-anchor="middle" font-size="11" fill="#15803d">RadixAttention 追求「最大前缀复用率」→ 适合多租户/Agent 工作流 · vLLM 追求「工程简洁性」→ 适合通用推理服务</text>
+  <text x="450" y="440" text-anchor="middle" font-size="11" fill="#15803d">SGLang 在 multi-turn 场景吞吐提升 3-5x · vLLM 在单轮场景开销更低且与 PagedAttention 无缝集成</text>
+</svg>

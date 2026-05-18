@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fbff"/>
+      <stop offset="100%" stop-color="#eef4ff"/>
+    </linearGradient>
+    <linearGradient id="mid" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2f6bff"/>
+      <stop offset="100%" stop-color="#4f8cff"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#4b5563"/>
+    </marker>
+    <style>
+      .title { font: 700 34px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; fill: #0f172a; }
+      .subtitle { font: 500 18px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; fill: #334155; }
+      .boxTitle { font: 700 24px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; fill: #0f172a; }
+      .midTitle { font: 700 30px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; fill: white; }
+      .label { font: 600 18px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; fill: #1e293b; }
+      .small { font: 500 16px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; fill: #475569; }
+      .midSmall { font: 500 18px 'Noto Sans SC', 'Microsoft YaHei', sans-serif; fill: rgba(255,255,255,0.95); }
+      .chip { fill: rgba(255,255,255,0.16); stroke: rgba(255,255,255,0.28); }
+      .topBox { fill: white; stroke: #cbd5e1; }
+      .bottomBox { fill: #f8fafc; stroke: #cbd5e1; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="720" fill="url(#bg)"/>
+  <text x="600" y="60" text-anchor="middle" class="title">OpenClaw ACP runtime 为何更像“统一协议 + 工作入口”</text>
+  <text x="600" y="92" text-anchor="middle" class="subtitle">最近几周的变化，不只是多接一个外部代理，而是在收拢会话、绑定、任务、交付与权限语义</text>
+
+  <rect x="90" y="140" rx="20" ry="20" width="250" height="110" class="topBox"/>
+  <text x="215" y="186" text-anchor="middle" class="boxTitle">聊天渠道</text>
+  <text x="215" y="220" text-anchor="middle" class="small">Slack / Telegram / Discord / 飞书</text>
+
+  <rect x="475" y="140" rx="20" ry="20" width="250" height="110" class="topBox"/>
+  <text x="600" y="186" text-anchor="middle" class="boxTitle">线程与当前会话</text>
+  <text x="600" y="220" text-anchor="middle" class="small">绑定当前聊天、绑定线程、持续跟进</text>
+
+  <rect x="860" y="140" rx="20" ry="20" width="250" height="110" class="topBox"/>
+  <text x="985" y="186" text-anchor="middle" class="boxTitle">IDE / ACP 客户端</text>
+  <text x="985" y="220" text-anchor="middle" class="small">Zed、编辑器面板、其他 ACP 客户端</text>
+
+  <line x1="215" y1="250" x2="215" y2="310" stroke="#4b5563" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="600" y1="250" x2="600" y2="310" stroke="#4b5563" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="985" y1="250" x2="985" y2="310" stroke="#4b5563" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="120" y="320" rx="28" ry="28" width="960" height="190" fill="url(#mid)"/>
+  <text x="600" y="372" text-anchor="middle" class="midTitle">OpenClaw 会话控制平面</text>
+  <text x="600" y="406" text-anchor="middle" class="midSmall">把 ACP 会话、聊天入口、线程绑定、后台任务和结果交付，收拢到同一套运行时语义里</text>
+
+  <rect x="170" y="438" rx="16" ry="16" width="140" height="42" class="chip"/>
+  <text x="240" y="465" text-anchor="middle" class="midSmall">会话键映射</text>
+  <rect x="330" y="438" rx="16" ry="16" width="110" height="42" class="chip"/>
+  <text x="385" y="465" text-anchor="middle" class="midSmall">绑定</text>
+  <rect x="460" y="438" rx="16" ry="16" width="140" height="42" class="chip"/>
+  <text x="530" y="465" text-anchor="middle" class="midSmall">任务账本</text>
+  <rect x="620" y="438" rx="16" ry="16" width="140" height="42" class="chip"/>
+  <text x="690" y="465" text-anchor="middle" class="midSmall">交付路由</text>
+  <rect x="780" y="438" rx="16" ry="16" width="140" height="42" class="chip"/>
+  <text x="850" y="465" text-anchor="middle" class="midSmall">权限边界</text>
+  <rect x="940" y="438" rx="16" ry="16" width="110" height="42" class="chip"/>
+  <text x="995" y="465" text-anchor="middle" class="midSmall">提示词连续性</text>
+
+  <line x1="300" y1="510" x2="300" y2="570" stroke="#4b5563" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="600" y1="510" x2="600" y2="570" stroke="#4b5563" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="900" y1="510" x2="900" y2="570" stroke="#4b5563" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="120" y="580" rx="20" ry="20" width="360" height="92" class="bottomBox"/>
+  <text x="300" y="618" text-anchor="middle" class="boxTitle">ACP bridge</text>
+  <text x="300" y="648" text-anchor="middle" class="small">OpenClaw 作为 ACP 服务端，被 IDE / 客户端接入</text>
+
+  <rect x="420" y="580" rx="20" ry="20" width="360" height="92" class="bottomBox"/>
+  <text x="600" y="618" text-anchor="middle" class="boxTitle">ACP runtime（acpx）</text>
+  <text x="600" y="648" text-anchor="middle" class="small">OpenClaw 作为上层调度方，启动与恢复外部 harness</text>
+
+  <rect x="720" y="580" rx="20" ry="20" width="360" height="92" class="bottomBox"/>
+  <text x="900" y="618" text-anchor="middle" class="boxTitle">外部 harness</text>
+  <text x="900" y="648" text-anchor="middle" class="small">Codex / Claude Code / Gemini CLI / 其他 ACPX 目标</text>
+</svg>
