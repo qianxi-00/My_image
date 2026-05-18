@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="800" viewBox="0 0 1400 800">
+  <defs>
+    <style>
+      .title { font: 700 28px 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif; fill: #0f172a; }
+      .subtitle { font: 500 16px 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif; fill: #64748b; }
+      .h2 { font: 700 20px 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif; fill: #0f172a; }
+      .text { font: 500 16px 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif; fill: #1e293b; }
+      .small { font: 400 14px 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif; fill: #475569; }
+      .label { font: 700 15px 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif; fill: #fff; }
+      .box { rx: 12; ry: 12; stroke-width: 2; }
+      .arrow { stroke: #94a3b8; stroke-width: 3; fill: none; marker-end: url(#ah); }
+      .highlight { stroke: #2563eb; stroke-width: 3; fill: none; stroke-dasharray: 8 4; }
+    </style>
+    <marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#94a3b8"/>
+    </marker>
+    <marker id="ahBlue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="800" fill="#f8fafc"/>
+
+  <!-- Title -->
+  <text x="700" y="48" text-anchor="middle" class="title">语音AI三大技术路线对比</text>
+  <text x="700" y="78" text-anchor="middle" class="subtitle">级联管线 vs 原生语音模型 vs 端侧方案 —— GPT-Realtime-2 正在打破原生模型的推理瓶颈</text>
+
+  <!-- Column 1: Cascade Pipeline -->
+  <rect x="40" y="120" width="400" height="600" fill="#f1f5f9" class="box" stroke="#cbd5e1"/>
+  <text x="240" y="158" text-anchor="middle" class="h2">级联管线</text>
+  <text x="240" y="182" text-anchor="middle" class="small">Cascade Pipeline</text>
+
+  <!-- STT Box -->
+  <rect x="100" y="220" width="280" height="60" fill="#3b82f6" class="box" stroke="#2563eb"/>
+  <text x="240" y="257" text-anchor="middle" class="label">语音识别 (STT)</text>
+
+  <!-- Arrow 1 -->
+  <line x1="240" y1="280" x2="240" y2="320" class="arrow"/>
+
+  <!-- LLM Box -->
+  <rect x="100" y="320" width="280" height="60" fill="#8b5cf6" class="box" stroke="#7c3aed"/>
+  <text x="240" y="357" text-anchor="middle" class="label">语言模型推理 (LLM)</text>
+
+  <!-- Arrow 2 -->
+  <line x1="240" y1="380" x2="240" y2="420" class="arrow"/>
+
+  <!-- TTS Box -->
+  <rect x="100" y="420" width="280" height="60" fill="#10b981" class="box" stroke="#059669"/>
+  <text x="240" y="457" text-anchor="middle" class="label">语音合成 (TTS)</text>
+
+  <!-- Characteristics -->
+  <text x="240" y="530" text-anchor="middle" class="text">✓ 延迟可控 (500-800ms)</text>
+  <text x="240" y="558" text-anchor="middle" class="text">✓ 各组件可独立替换</text>
+  <text x="240" y="586" text-anchor="middle" class="text">✗ 丢失语音韵律信息</text>
+  <text x="240" y="614" text-anchor="middle" class="text">✗ 情绪信号被截断</text>
+  <text x="240" y="642" text-anchor="middle" class="text">✗ 多轮对话体验差</text>
+  <text x="240" y="680" text-anchor="middle" class="small">代表：Deepgram + GPT + Cartesia</text>
+
+  <!-- Column 2: Native Speech-to-Speech (Highlighted) -->
+  <rect x="500" y="120" width="400" height="600" fill="#eff6ff" class="highlight" stroke="#2563eb"/>
+  <text x="700" y="158" text-anchor="middle" class="h2">原生语音模型 ⭐</text>
+  <text x="700" y="182" text-anchor="middle" class="small">Native Speech-to-Speech</text>
+
+  <!-- Audio Input -->
+  <rect x="560" y="220" width="280" height="60" fill="#f59e0b" class="box" stroke="#d97706"/>
+  <text x="700" y="257" text-anchor="middle" class="label">音频输入 (Audio In)</text>
+
+  <!-- Arrow -->
+  <line x1="700" y1="280" x2="700" y2="320" class="arrow" style="stroke:#2563eb;marker-end:url(#ahBlue)"/>
+
+  <!-- Core Model -->
+  <rect x="560" y="320" width="280" height="80" fill="#2563eb" class="box" stroke="#1d4ed8"/>
+  <text x="700" y="352" text-anchor="middle" class="label" style="font-size:17px">GPT-Realtime-2</text>
+  <text x="700" y="378" text-anchor="middle" style="font:500 13px sans-serif;fill:#bfdbfe">推理 + 工具调用 + MCP</text>
+
+  <!-- Arrow -->
+  <line x1="700" y1="400" x2="700" y2="440" class="arrow" style="stroke:#2563eb;marker-end:url(#ahBlue)"/>
+
+  <!-- Audio Output -->
+  <rect x="560" y="440" width="280" height="60" fill="#06b6d4" class="box" stroke="#0891b2"/>
+  <text x="700" y="477" text-anchor="middle" class="label">音频输出 (Audio Out)</text>
+
+  <!-- Characteristics -->
+  <text x="700" y="540" text-anchor="middle" class="text">✓ 保留韵律与情绪信息</text>
+  <text x="700" y="568" text-anchor="middle" class="text">✓ 128K 上下文窗口</text>
+  <text x="700" y="596" text-anchor="middle" class="text">✓ 五档推理强度可调</text>
+  <text x="700" y="624" text-anchor="middle" class="text">✓ 并行工具调用 + MCP</text>
+  <text x="700" y="652" text-anchor="middle" class="text">⚠ 计算成本较高</text>
+  <text x="700" y="680" text-anchor="middle" class="small">代表：OpenAI Realtime API</text>
+
+  <!-- Column 3: Edge Solution -->
+  <rect x="960" y="120" width="400" height="600" fill="#f1f5f9" class="box" stroke="#cbd5e1"/>
+  <text x="1160" y="158" text-anchor="middle" class="h2">端侧方案</text>
+  <text x="1160" y="182" text-anchor="middle" class="small">Edge Solution</text>
+
+  <!-- Device Model -->
+  <rect x="1020" y="220" width="280" height="60" fill="#6366f1" class="box" stroke="#4f46e5"/>
+  <text x="1160" y="257" text-anchor="middle" class="label">端侧小模型 (Device)</text>
+
+  <!-- Arrow -->
+  <line x1="1160" y1="280" x2="1160" y2="320" class="arrow"/>
+
+  <!-- Cloud Model -->
+  <rect x="1020" y="320" width="280" height="60" fill="#ec4899" class="box" stroke="#db2777"/>
+  <text x="1160" y="357" text-anchor="middle" class="label">云端大模型 (Cloud)</text>
+
+  <!-- Characteristics -->
+  <text x="1160" y="440" text-anchor="middle" class="text">✓ 隐私保护</text>
+  <text x="1160" y="468" text-anchor="middle" class="text">✓ 低延迟（简单任务）</text>
+  <text x="1160" y="496" text-anchor="middle" class="text">✗ 推理能力有限</text>
+  <text x="1160" y="524" text-anchor="middle" class="text">✗ 依赖硬件厂商生态</text>
+  <text x="1160" y="552" text-anchor="middle" class="text">✗ 复杂任务需上云</text>
+  <text x="1160" y="590" text-anchor="middle" class="small">代表：Apple Intelligence</text>
+  <text x="1160" y="614" text-anchor="middle" class="small">Samsung Galaxy AI</text>
+
+  <!-- Bottom annotation -->
+  <rect x="40" y="740" width="1320" height="44" fill="#1e293b" rx="8"/>
+  <text x="700" y="768" text-anchor="middle" style="font:500 15px 'Noto Sans CJK SC',sans-serif;fill:#e2e8f0">GPT-Realtime-2 的突破：在保持原生语音体验的同时，达到与文本模型同级的推理能力</text>
+</svg>
