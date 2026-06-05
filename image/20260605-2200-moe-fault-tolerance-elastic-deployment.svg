@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#1e293b"/></linearGradient>
+    <linearGradient id="ok" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22c55e"/><stop offset="1" stop-color="#14b8a6"/></linearGradient>
+    <linearGradient id="warn" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f97316"/><stop offset="1" stop-color="#ef4444"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000" flood-opacity="0.35"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#93c5fd"/></marker>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <text x="64" y="70" fill="#f8fafc" font-size="34" font-family="Arial, 'Noto Sans CJK SC', sans-serif" font-weight="700">MoE 弹性部署：从专家故障到优雅降级</text>
+  <text x="64" y="110" fill="#cbd5e1" font-size="18" font-family="Arial, 'Noto Sans CJK SC', sans-serif">健康检测、路由重映射、冗余专家与 DP Group 隔离共同缩小故障半径</text>
+
+  <rect x="70" y="155" width="1140" height="430" rx="26" fill="#0b1220" stroke="#334155" stroke-width="2" filter="url(#shadow)"/>
+
+  <rect x="110" y="205" width="230" height="310" rx="20" fill="#111827" stroke="#475569"/>
+  <text x="145" y="245" fill="#e2e8f0" font-size="22" font-weight="700" font-family="Arial, 'Noto Sans CJK SC', sans-serif">入口调度层</text>
+  <text x="135" y="285" fill="#94a3b8" font-size="16" font-family="Arial, 'Noto Sans CJK SC', sans-serif">Admission / Router</text>
+  <rect x="145" y="330" width="160" height="44" rx="12" fill="#1d4ed8"/>
+  <text x="176" y="358" fill="#fff" font-size="16" font-family="Arial, 'Noto Sans CJK SC', sans-serif">健康检查</text>
+  <rect x="145" y="395" width="160" height="44" rx="12" fill="#2563eb"/>
+  <text x="169" y="423" fill="#fff" font-size="16" font-family="Arial, 'Noto Sans CJK SC', sans-serif">DP组隔离</text>
+
+  <line x1="350" y1="360" x2="455" y2="360" stroke="#93c5fd" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <g transform="translate(470 185)">
+    <rect width="340" height="350" rx="22" fill="#111827" stroke="#475569"/>
+    <text x="42" y="45" fill="#e2e8f0" font-size="22" font-weight="700" font-family="Arial, 'Noto Sans CJK SC', sans-serif">DP + EP 逻辑模型组</text>
+    <text x="42" y="78" fill="#94a3b8" font-size="15" font-family="Arial, 'Noto Sans CJK SC', sans-serif">Attention 复制，Experts 分片</text>
+    <rect x="38" y="112" width="270" height="50" rx="12" fill="#312e81" stroke="#818cf8"/>
+    <text x="78" y="144" fill="#e0e7ff" font-size="16" font-family="Arial, 'Noto Sans CJK SC', sans-serif">复制的 Attention / KV 状态</text>
+    <g font-family="Arial, 'Noto Sans CJK SC', sans-serif" font-size="15" fill="#f8fafc">
+      <rect x="38" y="205" width="70" height="52" rx="12" fill="url(#ok)"/><text x="55" y="237">E1</text>
+      <rect x="122" y="205" width="70" height="52" rx="12" fill="url(#ok)"/><text x="139" y="237">E2</text>
+      <rect x="206" y="205" width="70" height="52" rx="12" fill="url(#warn)"/><text x="223" y="237">E3✕</text>
+      <rect x="38" y="276" width="70" height="52" rx="12" fill="url(#ok)"/><text x="55" y="308">E4</text>
+      <rect x="122" y="276" width="70" height="52" rx="12" fill="#0f766e"/><text x="138" y="308">E3'</text>
+      <rect x="206" y="276" width="70" height="52" rx="12" fill="url(#ok)"/><text x="223" y="308">E5</text>
+    </g>
+    <path d="M241 257 C230 274 205 282 170 291" stroke="#fbbf24" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+    <text x="44" y="185" fill="#cbd5e1" font-size="15" font-family="Arial, 'Noto Sans CJK SC', sans-serif">专家故障 → 重映射到备份专家</text>
+  </g>
+
+  <line x1="825" y1="360" x2="930" y2="360" stroke="#93c5fd" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="945" y="205" width="220" height="310" rx="20" fill="#111827" stroke="#475569"/>
+  <text x="980" y="245" fill="#e2e8f0" font-size="22" font-weight="700" font-family="Arial, 'Noto Sans CJK SC', sans-serif">降级后服务</text>
+  <text x="982" y="285" fill="#94a3b8" font-size="16" font-family="Arial, 'Noto Sans CJK SC', sans-serif">剩余 GPU 继续接流量</text>
+  <rect x="986" y="330" width="140" height="44" rx="12" fill="#065f46"/>
+  <text x="1012" y="358" fill="#d1fae5" font-size="16" font-family="Arial, 'Noto Sans CJK SC', sans-serif">可用性优先</text>
+  <rect x="986" y="395" width="140" height="44" rx="12" fill="#7c2d12"/>
+  <text x="1004" y="423" fill="#ffedd5" font-size="16" font-family="Arial, 'Noto Sans CJK SC', sans-serif">吞吐按比例下降</text>
+
+  <text x="86" y="638" fill="#94a3b8" font-size="16" font-family="Arial, 'Noto Sans CJK SC', sans-serif">关键不变量：不要让半失效的专家组继续承诺完整模型能力；要么组级隔离，要么专家级弹性重映射。</text>
+</svg>
