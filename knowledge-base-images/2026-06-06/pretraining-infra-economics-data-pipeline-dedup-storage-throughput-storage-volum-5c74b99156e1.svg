@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 580" font-family="'PingFang SC','Microsoft YaHei',Arial,sans-serif">
+  <defs>
+    <linearGradient id="hbm" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#D9534F;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#C9302C;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="nvm" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F0AD4E;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#EC971F;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="obj" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#5CB85C;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#449D44;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="580" fill="#F8F9FA" rx="8"/>
+
+  <!-- Title -->
+  <text x="500" y="35" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">预训练数据访问模式：容量"两头大、中间小"</text>
+
+  <!-- Left axis: Data Volume -->
+  <text x="50" y="380" text-anchor="middle" font-size="12" fill="#666" transform="rotate(-90,50,380)">数据量 (PB级)</text>
+
+  <!-- Y axis -->
+  <line x1="80" y1="80" x2="80" y2="450" stroke="#333" stroke-width="2"/>
+  <text x="70" y="90" text-anchor="end" font-size="11" fill="#666">高</text>
+  <text x="70" y="270" text-anchor="end" font-size="11" fill="#666">中</text>
+  <text x="70" y="445" text-anchor="end" font-size="11" fill="#666">低</text>
+
+  <!-- X axis -->
+  <line x1="80" y1="450" x2="950" y2="450" stroke="#333" stroke-width="2"/>
+  <text x="515" y="475" text-anchor="middle" font-size="12" fill="#666">数据访问频率</text>
+  <text x="180" y="468" text-anchor="middle" font-size="11" fill="#666">低频</text>
+  <text x="500" y="468" text-anchor="middle" font-size="11" fill="#666">中频</text>
+  <text x="800" y="468" text-anchor="middle" font-size="11" fill="#666">高频</text>
+
+  <!-- Bar 1: Raw Data (Cold) - tall bar, low frequency -->
+  <rect x="120" y="100" width="120" height="350" rx="4" fill="url(#obj)"/>
+  <text x="180" y="480" text-anchor="middle" font-size="11" font-weight="bold" fill="#449D44">原始语料</text>
+  <text x="180" y="495" text-anchor="middle" font-size="10" fill="#666">PB-EB级</text>
+  <text x="180" y="440" text-anchor="middle" fill="white" font-size="13" font-weight="bold">冷层</text>
+  <text x="180" y="418" text-anchor="middle" fill="#DDD" font-size="10">对象存储/HDD</text>
+  <text x="180" y="400" text-anchor="middle" fill="#DDD" font-size="10">~$0.01/GB</text>
+
+  <!-- Bar 2: Tokenized Data (Warm) - medium bar, medium frequency -->
+  <rect x="300" y="180" width="150" height="270" rx="4" fill="url(#nvm)"/>
+  <text x="375" y="480" text-anchor="middle" font-size="11" font-weight="bold" fill="#EC971F">训练数据</text>
+  <text x="375" y="495" text-anchor="middle" font-size="10" fill="#666">TB-PB级</text>
+  <text x="375" y="435" text-anchor="middle" fill="white" font-size="13" font-weight="bold">温层</text>
+  <text x="375" y="415" text-anchor="middle" fill="#FFF" font-size="10">NVMe SSD</text>
+  <text x="375" y="398" text-anchor="middle" fill="#FFF" font-size="10">~$0.30/GB</text>
+
+  <!-- Bar 3: Checkpoints & Active (Hot) - small bar, high frequency -->
+  <rect x="530" y="300" width="160" height="150" rx="4" fill="url(#hbm)"/>
+  <text x="610" y="480" text-anchor="middle" font-size="11" font-weight="bold" fill="#C9302C">活跃数据</text>
+  <text x="610" y="495" text-anchor="middle" font-size="10" fill="#666">GB-TB级</text>
+  <text x="610" y="430" text-anchor="middle" fill="white" font-size="13" font-weight="bold">热层</text>
+  <text x="610" y="410" text-anchor="middle" fill="#DDD" font-size="10">GPU HBM/本地SSD</text>
+  <text x="610" y="392" text-anchor="middle" fill="#DDD" font-size="10">极高成本</text>
+
+  <!-- Arrow showing data flow direction -->
+  <path d="M 240 420 Q 270 420 300 390" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M 450 350 Q 480 350 530 360" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Arrow definitions -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#666"/>
+    </marker>
+  </defs>
+
+  <!-- Bottom info boxes -->
+  <rect x="750" y="80" width="220" height="160" rx="6" fill="#FFF3CD" stroke="#F0AD4E" stroke-width="1"/>
+  <text x="860" y="105" text-anchor="middle" font-size="12" font-weight="bold" fill="#856404">关键洞察</text>
+  <text x="760" y="128" font-size="11" fill="#856404">• 数据从冷到热的首次迁移</text>
+  <text x="760" y="148" font-size="11" fill="#856404">  可能耗时30-60分钟</text>
+  <text x="760" y="168" font-size="11" fill="#856404">• Checkpoint写入同步阻塞</text>
+  <text x="760" y="188" font-size="11" fill="#856404">  优化写入=节省数天训练</text>
+  <text x="760" y="208" font-size="11" fill="#856404">• 冷热迁移带宽决定</text>
+  <text x="760" y="228" font-size="11" fill="#856404">  训练效率上限</text>
+
+  <!-- Cost comparison box -->
+  <rect x="750" y="260" width="220" height="120" rx="6" fill="#E8F4FD" stroke="#4A90D9" stroke-width="1"/>
+  <text x="860" y="285" text-anchor="middle" font-size="12" font-weight="bold" fill="#357ABD">成本对比</text>
+  <text x="760" y="308" font-size="11" fill="#357ABD">• 存储成本仅占GPU的7-8%</text>
+  <text x="760" y="328" font-size="11" fill="#357ABD">• 但I/O瓶颈浪费</text>
+  <text x="760" y="348" font-size="11" fill="#357ABD">  20-30% GPU周期</text>
+  <text x="760" y="368" font-size="11" fill="#357ABD">• 存储投资的ROI极高</text>
+
+</svg>
