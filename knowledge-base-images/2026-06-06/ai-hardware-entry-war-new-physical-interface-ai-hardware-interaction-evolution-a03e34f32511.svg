@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" font-family="'Microsoft YaHei','PingFang SC',sans-serif">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1b2a"/>
+      <stop offset="100%" stop-color="#1b2838"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg2)"/>
+  <text x="600" y="45" text-anchor="middle" fill="#e0e8f0" font-size="22" font-weight="bold">AI 硬件交互范式演进：从屏幕到环境智能</text>
+  <!-- Era 1: Screen Era -->
+  <rect x="40" y="80" width="340" height="440" rx="12" fill="#0f2030" stroke="#3a7ca5" stroke-width="2"/>
+  <text x="210" y="120" text-anchor="middle" fill="#3a7ca5" font-size="18" font-weight="bold">📱 屏幕时代</text>
+  <text x="210" y="150" text-anchor="middle" fill="#6a9cc0" font-size="12">2007—2023</text>
+  <rect x="130" y="170" width="160" height="100" rx="8" fill="#1a3050" stroke="#3a7ca5" stroke-width="1"/>
+  <text x="210" y="210" text-anchor="middle" fill="#8ab4d0" font-size="28">📱💻</text>
+  <text x="210" y="250" text-anchor="middle" fill="#6a9cc0" font-size="10">手机 · 平板 · 电脑</text>
+  <text x="210" y="300" text-anchor="middle" fill="#8ab4d0" font-size="11">• 用户主动打开App查询</text>
+  <text x="210" y="325" text-anchor="middle" fill="#8ab4d0" font-size="11">• AI被动等待输入</text>
+  <text x="210" y="350" text-anchor="middle" fill="#8ab4d0" font-size="11">• 交互依赖屏幕触控</text>
+  <text x="210" y="375" text-anchor="middle" fill="#8ab4d0" font-size="11">• 注意力争夺型设计</text>
+  <rect x="80" y="410" width="260" height="36" rx="6" fill="#1a3a5a"/>
+  <text x="210" y="434" text-anchor="middle" fill="#5a9ac0" font-size="10">核心矛盾：AI能力↑ 交互界面→</text>
+  <!-- Arrow 1 -->
+  <polygon points="400,300 430,285 430,315" fill="#4a9eff"/>
+  <!-- Era 2: Transition -->
+  <rect x="440" y="80" width="320" height="440" rx="12" fill="#1a1030" stroke="#7c4dff" stroke-width="2"/>
+  <text x="600" y="120" text-anchor="middle" fill="#7c4dff" font-size="18" font-weight="bold">⚡ 过渡时代</text>
+  <text x="600" y="150" text-anchor="middle" fill="#a080e0" font-size="12">2024—2025</text>
+  <rect x="520" y="170" width="160" height="100" rx="8" fill="#2a1040" stroke="#7c4dff" stroke-width="1"/>
+  <text x="600" y="210" text-anchor="middle" fill="#b090f0" font-size="28">📌🥽</text>
+  <text x="600" y="250" text-anchor="middle" fill="#a080e0" font-size="10">AI Pin · VR头显</text>
+  <text x="600" y="300" text-anchor="middle" fill="#b090f0" font-size="11">• Humane AI Pin失败(2024)</text>
+  <text x="600" y="325" text-anchor="middle" fill="#b090f0" font-size="11">• 投影交互不实用</text>
+  <text x="600" y="350" text-anchor="middle" fill="#b090f0" font-size="11">• 热管理硬约束</text>
+  <text x="600" y="375" text-anchor="middle" fill="#b090f0" font-size="11">• 野心过大，体验不足</text>
+  <rect x="470" y="410" width="260" height="36" rx="6" fill="#2a1040"/>
+  <text x="600" y="434" text-anchor="middle" fill="#8a60c0" font-size="10">教训：形式因子必须服务可用性</text>
+  <!-- Arrow 2 -->
+  <polygon points="780,300 810,285 810,315" fill="#00d4aa"/>
+  <!-- Era 3: Ambient Intelligence -->
+  <rect x="820" y="80" width="360" height="440" rx="12" fill="#0d2020" stroke="#00d4aa" stroke-width="2"/>
+  <text x="1000" y="120" text-anchor="middle" fill="#00d4aa" font-size="18" font-weight="bold">🌿 环境智能时代</text>
+  <text x="1000" y="150" text-anchor="middle" fill="#60c4a0" font-size="12">2026—</text>
+  <rect x="900" y="170" width="200" height="100" rx="8" fill="#0d3030" stroke="#00d4aa" stroke-width="1"/>
+  <text x="1000" y="210" text-anchor="middle" fill="#80e4c0" font-size="28">🎧👓⌚</text>
+  <text x="1000" y="250" text-anchor="middle" fill="#60c4a0" font-size="10">耳塞 · 眼镜 · 手环 · 笔</text>
+  <text x="1000" y="300" text-anchor="middle" fill="#80e4c0" font-size="11">• AI主动感知环境</text>
+  <text x="1000" y="325" text-anchor="middle" fill="#80e4c0" font-size="11">• 纯语音/轻量显示交互</text>
+  <text x="1000" y="350" text-anchor="middle" fill="#80e4c0" font-size="11">• 端侧NPU本地推理</text>
+  <text x="1000" y="375" text-anchor="middle" fill="#80e4c0" font-size="11">• 平静计算(Calm Computing)</text>
+  <rect x="860" y="410" width="280" height="36" rx="6" fill="#0d3030"/>
+  <text x="1000" y="434" text-anchor="middle" fill="#40a080" font-size="10">核心转变：从"人找AI"到"AI找人"</text>
+  <!-- Key tech enablers -->
+  <rect x="860" y="460" width="280" height="50" rx="8" fill="#0a1a1a" stroke="#00d4aa" stroke-width="1"/>
+  <text x="1000" y="480" text-anchor="middle" fill="#00d4aa" font-size="10" font-weight="bold">技术驱动：GPT-Realtime-2 + Snapdragon Wear Elite</text>
+  <text x="1000" y="500" text-anchor="middle" fill="#60a080" font-size="9">实时语音推理 + 端侧NPU → 无屏设备成为可能</text>
+  <!-- Bottom -->
+  <text x="600" y="570" text-anchor="middle" fill="#4a6a8a" font-size="10">交互范式的核心转变：AI从"被动工具"进化为"环境感知的主动伴侣"</text>
+</svg>
