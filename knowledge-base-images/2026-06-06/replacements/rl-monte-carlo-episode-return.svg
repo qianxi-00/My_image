@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ecfeff"/>
+      <stop offset="55%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#fff7ed"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0f766e"/>
+    </marker>
+    <style>
+      text { font-family: "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #0f172a; }
+      .h1 { font-size: 30px; font-weight: 800; }
+      .subtitle { font-size: 17px; fill: #475569; }
+      .title { font-size: 20px; font-weight: 700; }
+      .body { font-size: 15px; fill: #475569; }
+      .small { font-size: 13px; fill: #64748b; }
+    </style>
+  </defs>
+  <rect width="1200" height="520" fill="url(#bg)"/>
+  <text x="60" y="54" class="h1">Monte Carlo：等一整局结束后再回算回报</text>
+  <text x="60" y="84" class="subtitle">MC 不需要环境模型，但必须看到完整 episode，才能用真实累计回报更新价值。</text>
+  
+
+  <rect x="80" y="230" width="120" height="76" rx="18" fill="#e0f2fe" stroke="#334155" stroke-width="2"/>
+  <text x="140.0" y="264" text-anchor="middle" class="title">s0,a0</text>
+  <text x="140.0" y="288" text-anchor="middle" class="body">r1</text>
+
+
+  <rect x="270" y="230" width="120" height="76" rx="18" fill="#e0f2fe" stroke="#334155" stroke-width="2"/>
+  <text x="330.0" y="264" text-anchor="middle" class="title">s1,a1</text>
+  <text x="330.0" y="288" text-anchor="middle" class="body">r2</text>
+
+
+  <rect x="460" y="230" width="120" height="76" rx="18" fill="#e0f2fe" stroke="#334155" stroke-width="2"/>
+  <text x="520.0" y="264" text-anchor="middle" class="title">s2,a2</text>
+  <text x="520.0" y="288" text-anchor="middle" class="body">r3</text>
+
+
+  <rect x="650" y="230" width="120" height="76" rx="18" fill="#fee2e2" stroke="#334155" stroke-width="2"/>
+  <text x="710.0" y="264" text-anchor="middle" class="title">Terminal</text>
+  <text x="710.0" y="288" text-anchor="middle" class="body">结束</text>
+
+
+  <rect x="885" y="200" width="230" height="136" rx="18" fill="#dcfce7" stroke="#334155" stroke-width="2"/>
+  <text x="1000.0" y="234" text-anchor="middle" class="title">Return Gt</text>
+  <text x="1000.0" y="258" text-anchor="middle" class="body">从终点向前累计折扣奖励</text>
+
+<path d="M200,268 C235,268 235,268 270,268" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/><path d="M390,268 C425,268 425,268 460,268" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/><path d="M580,268 C615,268 615,268 650,268" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/><path d="M770,268 C827,268 827,268 885,268" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M985,200 C830,115 540,115 155,220" fill="none" stroke="#ea580c" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="540" y="125" text-anchor="middle" class="small">回传真实回报，更新 V(s) 或 Q(s,a)</text>
+
+</svg>
