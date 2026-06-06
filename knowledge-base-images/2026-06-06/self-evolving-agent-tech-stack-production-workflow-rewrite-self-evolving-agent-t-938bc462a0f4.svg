@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="'Microsoft YaHei','PingFang SC',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1628"/>
+      <stop offset="100%" style="stop-color:#1a2a4a"/>
+    </linearGradient>
+    <linearGradient id="box1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#0099cc;stop-opacity:0.1"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" fill="#00d4ff" font-size="18" font-weight="bold" filter="url(#glow)">自进化AI Agent技术栈架构</text>
+
+  <!-- 5 Core Components -->
+  <!-- 1. Self-Evolving Prompt -->
+  <rect x="30" y="60" width="140" height="80" rx="8" fill="url(#box1)" stroke="#00d4ff" stroke-width="1.5"/>
+  <text x="100" y="95" text-anchor="middle" fill="#00d4ff" font-size="13" font-weight="bold">自进化Prompt</text>
+  <text x="100" y="115" text-anchor="middle" fill="#88ccdd" font-size="10">Self-Evolving Prompt</text>
+
+  <!-- 2. Compiled Workflow -->
+  <rect x="190" y="60" width="140" height="80" rx="8" fill="url(#box1)" stroke="#00d4ff" stroke-width="1.5"/>
+  <text x="260" y="95" text-anchor="middle" fill="#00d4ff" font-size="13" font-weight="bold">编译型工作流</text>
+  <text x="260" y="115" text-anchor="middle" fill="#88ccdd" font-size="10">Compiled Workflow</text>
+
+  <!-- 3. Multi-Agent Orchestration -->
+  <rect x="350" y="60" width="140" height="80" rx="8" fill="url(#box1)" stroke="#00d4ff" stroke-width="1.5"/>
+  <text x="420" y="95" text-anchor="middle" fill="#00d4ff" font-size="13" font-weight="bold">多Agent编排</text>
+  <text x="420" y="115" text-anchor="middle" fill="#88ccdd" font-size="10">Multi-Agent Orchestration</text>
+
+  <!-- 4. Validation Agent -->
+  <rect x="510" y="60" width="140" height="80" rx="8" fill="url(#box1)" stroke="#00d4ff" stroke-width="1.5"/>
+  <text x="580" y="95" text-anchor="middle" fill="#00d4ff" font-size="13" font-weight="bold">验证Agent</text>
+  <text x="580" y="115" text-anchor="middle" fill="#88ccdd" font-size="10">Validation Agent</text>
+
+  <!-- 5. Observability Layer -->
+  <rect x="670" y="60" width="110" height="80" rx="8" fill="url(#box1)" stroke="#00d4ff" stroke-width="1.5"/>
+  <text x="725" y="95" text-anchor="middle" fill="#00d4ff" font-size="13" font-weight="bold">可观测性层</text>
+  <text x="725" y="115" text-anchor="middle" fill="#88ccdd" font-size="10">Observability</text>
+
+  <!-- Flow arrows down -->
+  <line x1="100" y1="140" x2="100" y2="180" stroke="#00d4ff" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+  <line x1="260" y1="140" x2="260" y2="180" stroke="#00d4ff" stroke-width="1.5"/>
+  <line x1="420" y1="140" x2="420" y2="180" stroke="#00d4ff" stroke-width="1.5"/>
+  <line x1="580" y1="140" x2="580" y2="180" stroke="#00d4ff" stroke-width="1.5"/>
+  <line x1="725" y1="140" x2="725" y2="180" stroke="#00d4ff" stroke-width="1.5"/>
+
+  <!-- Central orchestration box -->
+  <rect x="150" y="180" width="500" height="60" rx="10" fill="rgba(0,212,255,0.08)" stroke="#00d4ff" stroke-width="2"/>
+  <text x="400" y="215" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="bold">Agent 生产化运行时（Production Runtime）</text>
+
+  <!-- Arrow down to MCP -->
+  <line x1="400" y1="240" x2="400" y2="280" stroke="#00d4ff" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+  <!-- MCP Protocol Layer -->
+  <rect x="200" y="280" width="400" height="55" rx="10" fill="rgba(0,255,136,0.08)" stroke="#00ff88" stroke-width="2"/>
+  <text x="400" y="305" text-anchor="middle" fill="#00ff88" font-size="14" font-weight="bold">MCP 协议层（Model Context Protocol）</text>
+  <text x="400" y="322" text-anchor="middle" fill="#88ddaa" font-size="11">标准化工具连接 · 上下文共享 · 能力发现</text>
+
+  <!-- Arrow down to tools -->
+  <line x1="400" y1="335" x2="400" y2="370" stroke="#00ff88" stroke-width="1.5"/>
+
+  <!-- Tool ecosystem -->
+  <rect x="80" y="370" width="130" height="45" rx="6" fill="rgba(255,170,0,0.1)" stroke="#ffaa00" stroke-width="1"/>
+  <text x="145" y="397" text-anchor="middle" fill="#ffaa00" font-size="11">外部API</text>
+
+  <rect x="230" y="370" width="130" height="45" rx="6" fill="rgba(255,170,0,0.1)" stroke="#ffaa00" stroke-width="1"/>
+  <text x="295" y="397" text-anchor="middle" fill="#ffaa00" font-size="11">数据库</text>
+
+  <rect x="380" y="370" width="130" height="45" rx="6" fill="rgba(255,170,0,0.1)" stroke="#ffaa00" stroke-width="1"/>
+  <text x="445" y="397" text-anchor="middle" fill="#ffaa00" font-size="11">代码仓库</text>
+
+  <rect x="530" y="370" width="130" height="45" rx="6" fill="rgba(255,170,0,0.1)" stroke="#ffaa00" stroke-width="1"/>
+  <text x="595" y="397" text-anchor="middle" fill="#ffaa00" font-size="11">企业系统</text>
+
+  <rect x="680" y="370" width="100" height="45" rx="6" fill="rgba(255,170,0,0.1)" stroke="#ffaa00" stroke-width="1"/>
+  <text x="730" y="397" text-anchor="middle" fill="#ffaa00" font-size="11">云服务</text>
+
+  <!-- Bottom label -->
+  <text x="400" y="450" text-anchor="middle" fill="#667788" font-size="11">从Demo到生产：五大组件通过MCP协议连接，构建可自我优化的Agent基础设施</text>
+  <text x="400" y="470" text-anchor="middle" fill="#445566" font-size="10">来源：Requesty AI、Automation Atlas、LangGraph 等 | 2026-05</text>
+</svg>
