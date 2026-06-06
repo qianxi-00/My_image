@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)" rx="12"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" font-size="18" font-weight="bold" fill="#1e293b">Notion Developer Platform 3.5 架构全景</text>
+  
+  <!-- Notion Workspace (center) -->
+  <rect x="250" y="180" width="300" height="140" rx="16" fill="#ffffff" stroke="#6366f1" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="400" y="215" text-anchor="middle" font-size="15" font-weight="bold" fill="#6366f1">Notion Workspace</text>
+  <text x="400" y="240" text-anchor="middle" font-size="12" fill="#475569">Pages · Databases · Custom Agents</text>
+  <text x="400" y="260" text-anchor="middle" font-size="12" fill="#475569">Knowledge Base · Team Collaboration</text>
+  <text x="400" y="295" text-anchor="middle" font-size="11" fill="#94a3b8">人和 Agent 共同使用的工作区</text>
+  
+  <!-- Workers (top-left) -->
+  <rect x="40" y="60" width="200" height="110" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" filter="url(#shadow)"/>
+  <text x="140" y="88" text-anchor="middle" font-size="14" font-weight="bold" fill="#92400e">Workers</text>
+  <text x="140" y="110" text-anchor="middle" font-size="11" fill="#78350f">托管代码运行时</text>
+  <text x="140" y="128" text-anchor="middle" font-size="10" fill="#92400e">Vercel Sandbox (Firecracker)</text>
+  <text x="140" y="145" text-anchor="middle" font-size="10" fill="#92400e">Data Sync · Agent Tools · Webhooks</text>
+  
+  <!-- External Agents API (top-right) -->
+  <rect x="560" y="60" width="200" height="110" rx="12" fill="#dbeafe" stroke="#3b82f6" stroke-width="2" filter="url(#shadow)"/>
+  <text x="660" y="88" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e40af">External Agents API</text>
+  <text x="660" y="110" text-anchor="middle" font-size="11" fill="#1e3a8a">外部 Agent 接入</text>
+  <text x="660" y="128" text-anchor="middle" font-size="10" fill="#1e40af">Claude · Cursor · Codex</text>
+  <text x="660" y="145" text-anchor="middle" font-size="10" fill="#1e40af">Decagon · 自定义 Agent</text>
+  
+  <!-- Database Sync (bottom-left) -->
+  <rect x="40" y="340" width="200" height="100" rx="12" fill="#d1fae5" stroke="#10b981" stroke-width="2" filter="url(#shadow)"/>
+  <text x="140" y="368" text-anchor="middle" font-size="14" font-weight="bold" fill="#065f46">Database Sync</text>
+  <text x="140" y="390" text-anchor="middle" font-size="11" fill="#064e3b">外部数据源同步</text>
+  <text x="140" y="410" text-anchor="middle" font-size="10" fill="#065f46">Salesforce · Zendesk · GitHub</text>
+  
+  <!-- CLI (bottom-right) -->
+  <rect x="560" y="340" width="200" height="100" rx="12" fill="#fce7f3" stroke="#ec4899" stroke-width="2" filter="url(#shadow)"/>
+  <text x="660" y="368" text-anchor="middle" font-size="14" font-weight="bold" fill="#9d174d">Notion CLI</text>
+  <text x="660" y="390" text-anchor="middle" font-size="11" fill="#831843">开发者命令行工具</text>
+  <text x="660" y="410" text-anchor="middle" font-size="10" fill="#9d174d">ntn workers deploy · ntn agents</text>
+  
+  <!-- Arrows: Workers -> Notion -->
+  <line x1="200" y1="130" x2="280" y2="210" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrow-yellow)"/>
+  <!-- Arrows: External Agents -> Notion -->
+  <line x1="600" y1="130" x2="520" y2="210" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <!-- Arrows: Database Sync -> Notion -->
+  <line x1="200" y1="380" x2="280" y2="300" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <!-- Arrows: CLI -> Notion -->
+  <line x1="600" y1="380" x2="520" y2="300" stroke="#ec4899" stroke-width="2" marker-end="url(#arrow-pink)"/>
+  
+  <defs>
+    <marker id="arrow-yellow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#f59e0b"/></marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#3b82f6"/></marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#10b981"/></marker>
+    <marker id="arrow-pink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#ec4899"/></marker>
+  </defs>
+  
+  <!-- Footer -->
+  <text x="400" y="480" text-anchor="middle" font-size="11" fill="#94a3b8">Notion Developer Platform 3.5 — 从「人操作的工作区」到「人和 Agent 共同使用的平台」</text>
+</svg>
