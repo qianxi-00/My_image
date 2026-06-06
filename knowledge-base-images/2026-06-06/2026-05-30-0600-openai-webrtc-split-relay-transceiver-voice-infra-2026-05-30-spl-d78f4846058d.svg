@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <linearGradient id="relayGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#60A5FA;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:0.9"/>
+    </linearGradient>
+    <linearGradient id="transGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#34D399;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#10B981;stop-opacity:0.9"/>
+    </linearGradient>
+    <linearGradient id="infraGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FBBF24;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#F59E0B;stop-opacity:0.9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="500" fill="#F8FAFC" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" font-size="18" font-weight="bold" fill="#1E293B">OpenAI Split Relay + Transceiver 架构</text>
+  <text x="450" y="55" text-anchor="middle" font-size="12" fill="#64748B">数据包路由与协议终止分离</text>
+
+  <!-- User Device -->
+  <rect x="30" y="180" width="120" height="80" rx="10" fill="#E0E7FF" stroke="#6366F1" stroke-width="2"/>
+  <text x="90" y="215" text-anchor="middle" font-size="13" font-weight="bold" fill="#4338CA">用户设备</text>
+  <text x="90" y="235" text-anchor="middle" font-size="10" fill="#6366F1">浏览器 / App</text>
+  <text x="90" y="250" text-anchor="middle" font-size="9" fill="#818CF8">WebRTC 客户端</text>
+
+  <!-- Arrow: User → Relay -->
+  <line x1="150" y1="220" x2="240" y2="220" stroke="#555" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="195" y="210" text-anchor="middle" font-size="9" fill="#64748B">DTLS+SRTP</text>
+
+  <!-- Relay Layer -->
+  <rect x="250" y="100" width="180" height="280" rx="10" fill="url(#relayGrad)" stroke="#2563EB" stroke-width="2"/>
+  <text x="340" y="125" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Relay 层</text>
+  <text x="340" y="145" text-anchor="middle" font-size="10" fill="#DBEAFE">无状态 · UDP 转发</text>
+
+  <!-- Relay instances -->
+  <rect x="270" y="160" width="140" height="35" rx="6" fill="rgba(255,255,255,0.25)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+  <text x="340" y="183" text-anchor="middle" font-size="10" fill="white">ICE ufrag 路由表</text>
+
+  <rect x="270" y="205" width="140" height="35" rx="6" fill="rgba(255,255,255,0.25)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+  <text x="340" y="228" text-anchor="middle" font-size="10" fill="white">单端口解复用</text>
+
+  <rect x="270" y="250" width="140" height="35" rx="6" fill="rgba(255,255,255,0.25)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+  <text x="340" y="273" text-anchor="middle" font-size="10" fill="white">Pod 级水平扩展</text>
+
+  <rect x="270" y="295" width="140" height="35" rx="6" fill="rgba(255,255,255,0.25)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+  <text x="340" y="318" text-anchor="middle" font-size="10" fill="white">全球边缘部署</text>
+
+  <!-- Arrow: Relay → Transceiver -->
+  <line x1="430" y1="220" x2="520" y2="220" stroke="#555" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="475" y="210" text-anchor="middle" font-size="9" fill="#64748B">转发</text>
+
+  <!-- Transceiver Layer -->
+  <rect x="530" y="100" width="180" height="280" rx="10" fill="url(#transGrad)" stroke="#059669" stroke-width="2"/>
+  <text x="620" y="125" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Transceiver 层</text>
+  <text x="620" y="145" text-anchor="middle" font-size="10" fill="#D1FAE5">有状态 · 协议终止</text>
+
+  <!-- Transceiver instances -->
+  <rect x="550" y="160" width="140" height="35" rx="6" fill="rgba(255,255,255,0.25)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+  <text x="620" y="183" text-anchor="middle" font-size="10" fill="white">ICE / DTLS 终止</text>
+
+  <rect x="550" y="205" width="140" height="35" rx="6" fill="rgba(255,255,255,0.25)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+  <text x="620" y="228" text-anchor="middle" font-size="10" fill="white">SRTP 解密 / 编解码</text>
+
+  <rect x="550" y="250" width="140" height="35" rx="6" fill="rgba(255,255,255,0.25)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+  <text x="620" y="273" text-anchor="middle" font-size="10" fill="white">会话生命周期管理</text>
+
+  <rect x="550" y="295" width="140" height="35" rx="6" fill="rgba(255,255,255,0.25)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+  <text x="620" y="318" text-anchor="middle" font-size="10" fill="white">Barge-in / VAD 处理</text>
+
+  <!-- Arrow: Transceiver → Inference -->
+  <line x1="710" y1="220" x2="770" y2="220" stroke="#555" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="740" y="210" text-anchor="middle" font-size="9" fill="#64748B">PCM</text>
+
+  <!-- Inference Service -->
+  <rect x="780" y="170" width="100" height="100" rx="10" fill="url(#infraGrad)" stroke="#D97706" stroke-width="2"/>
+  <text x="830" y="210" text-anchor="middle" font-size="12" font-weight="bold" fill="white">推理服务</text>
+  <text x="830" y="230" text-anchor="middle" font-size="9" fill="#FEF3C7">GPT-Realtime</text>
+  <text x="830" y="245" text-anchor="middle" font-size="9" fill="#FEF3C7">GPU 集群</text>
+
+  <!-- Bottom label -->
+  <rect x="250" y="410" width="460" height="50" rx="8" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="480" y="430" text-anchor="middle" font-size="11" font-weight="bold" fill="#334155">核心分离原则</text>
+  <text x="480" y="448" text-anchor="middle" font-size="10" fill="#64748B">Relay 只做路由（无状态） → Transceiver 终止协议（有状态） → 推理服务处理音频</text>
+
+  <!-- Annotations -->
+  <rect x="30" y="410" width="200" height="50" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1"/>
+  <text x="130" y="430" text-anchor="middle" font-size="10" font-weight="bold" fill="#DC2626">解决了什么？</text>
+  <text x="130" y="448" text-anchor="middle" font-size="9" fill="#991B1B">K8s 端口冲突 · ICE 会话稳定性 · 全球低延迟</text>
+</svg>
