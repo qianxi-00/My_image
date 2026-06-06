@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ecfeff"/>
+      <stop offset="55%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#fff7ed"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0f766e"/>
+    </marker>
+    <style>
+      text { font-family: "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #0f172a; }
+      .h1 { font-size: 30px; font-weight: 800; }
+      .subtitle { font-size: 17px; fill: #475569; }
+      .title { font-size: 20px; font-weight: 700; }
+      .body { font-size: 15px; fill: #475569; }
+      .small { font-size: 13px; fill: #64748b; }
+    </style>
+  </defs>
+  <rect width="1200" height="520" fill="url(#bg)"/>
+  <text x="60" y="54" class="h1">Multi-Head Attention：把关系拆到多个子空间</text>
+  <text x="60" y="84" class="subtitle">同一组 token 被映射为多组 Q/K/V，每个 head 学一种关系，再拼接回统一表示。</text>
+  
+
+  <rect x="70" y="170" width="170" height="92" rx="18" fill="#e0f2fe" stroke="#334155" stroke-width="2"/>
+  <text x="155.0" y="204" text-anchor="middle" class="title">输入 token</text>
+  <text x="155.0" y="228" text-anchor="middle" class="body">词义 / 位置 / 上下文</text>
+
+
+  <rect x="310" y="130" width="190" height="70" rx="18" fill="#fef3c7" stroke="#334155" stroke-width="2"/>
+  <text x="405.0" y="164" text-anchor="middle" class="title">Head 1</text>
+  <text x="405.0" y="188" text-anchor="middle" class="body">局部搭配关系</text>
+
+
+  <rect x="310" y="225" width="190" height="70" rx="18" fill="#dcfce7" stroke="#334155" stroke-width="2"/>
+  <text x="405.0" y="259" text-anchor="middle" class="title">Head 2</text>
+  <text x="405.0" y="283" text-anchor="middle" class="body">长程依赖关系</text>
+
+
+  <rect x="310" y="320" width="190" height="70" rx="18" fill="#ede9fe" stroke="#334155" stroke-width="2"/>
+  <text x="405.0" y="354" text-anchor="middle" class="title">Head 3</text>
+  <text x="405.0" y="378" text-anchor="middle" class="body">语法角色关系</text>
+
+
+  <rect x="580" y="215" width="180" height="92" rx="18" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <text x="670.0" y="249" text-anchor="middle" class="title">Concat</text>
+  <text x="670.0" y="273" text-anchor="middle" class="body">多视角拼接</text>
+
+
+  <rect x="840" y="215" width="230" height="92" rx="18" fill="#ffedd5" stroke="#334155" stroke-width="2"/>
+  <text x="955.0" y="249" text-anchor="middle" class="title">输出表示</text>
+  <text x="955.0" y="273" text-anchor="middle" class="body">更丰富的上下文向量</text>
+
+<path d="M240,216 C275,216 275,165 310,165" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/><path d="M240,216 C275,216 275,260 310,260" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/><path d="M240,216 C275,216 275,355 310,355" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M500,165 C540,165 540,245 580,245" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/><path d="M500,260 C540,260 540,260 580,260" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/><path d="M500,355 C540,355 540,276 580,276" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M760,260 C800,260 800,260 840,260" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+
+</svg>
