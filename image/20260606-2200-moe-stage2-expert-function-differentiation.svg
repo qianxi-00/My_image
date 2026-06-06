@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="1" stop-color="#15243a"/>
+    </linearGradient>
+    <linearGradient id="left" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#334155"/>
+      <stop offset="1" stop-color="#475569"/>
+    </linearGradient>
+    <linearGradient id="right" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#14b8a6"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <style>
+      .title{font:700 38px 'Noto Sans CJK SC','Microsoft YaHei',Arial,sans-serif;fill:#f8fafc}
+      .sub{font:500 20px 'Noto Sans CJK SC','Microsoft YaHei',Arial,sans-serif;fill:#cbd5e1}
+      .label{font:700 21px 'Noto Sans CJK SC','Microsoft YaHei',Arial,sans-serif;fill:#f8fafc}
+      .small{font:500 16px 'Noto Sans CJK SC','Microsoft YaHei',Arial,sans-serif;fill:#dbeafe}
+      .tiny{font:500 14px 'Noto Sans CJK SC','Microsoft YaHei',Arial,sans-serif;fill:#cbd5e1}
+      .box{rx:18;filter:url(#shadow)}
+      .line{stroke:#60a5fa;stroke-width:3;fill:none;marker-end:url(#arrow)}
+      .soft{stroke:#38bdf8;stroke-width:2;stroke-dasharray:8 8;fill:none;opacity:.75}
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#60a5fa"/></marker>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <circle cx="1130" cy="110" r="150" fill="#2563eb" opacity="0.10"/>
+  <circle cx="160" cy="620" r="190" fill="#14b8a6" opacity="0.08"/>
+
+  <text x="640" y="62" text-anchor="middle" class="title">MoE 第二阶段：从专家数量扩张到专家功能分化</text>
+  <text x="640" y="98" text-anchor="middle" class="sub">关键变化：不再只问“有多少专家”，而是追问“专家承担什么功能、如何被系统稳定服务”</text>
+
+  <rect x="64" y="150" width="310" height="410" class="box" fill="url(#left)"/>
+  <text x="219" y="192" text-anchor="middle" class="label">第一阶段</text>
+  <text x="219" y="222" text-anchor="middle" class="small">更多专家 / 更大参数</text>
+  <g opacity="0.95">
+    <rect x="108" y="260" width="95" height="54" rx="12" fill="#64748b"/><text x="155" y="294" text-anchor="middle" class="tiny">专家 A</text>
+    <rect x="235" y="260" width="95" height="54" rx="12" fill="#64748b"/><text x="282" y="294" text-anchor="middle" class="tiny">专家 B</text>
+    <rect x="108" y="338" width="95" height="54" rx="12" fill="#64748b"/><text x="155" y="372" text-anchor="middle" class="tiny">专家 C</text>
+    <rect x="235" y="338" width="95" height="54" rx="12" fill="#64748b"/><text x="282" y="372" text-anchor="middle" class="tiny">专家 D</text>
+    <rect x="108" y="416" width="95" height="54" rx="12" fill="#64748b"/><text x="155" y="450" text-anchor="middle" class="tiny">专家 E</text>
+    <rect x="235" y="416" width="95" height="54" rx="12" fill="#64748b"/><text x="282" y="450" text-anchor="middle" class="tiny">专家 F</text>
+  </g>
+  <text x="219" y="515" text-anchor="middle" class="tiny">分工容易同质化</text>
+  <text x="219" y="540" text-anchor="middle" class="tiny">负载均衡压过语义专业化</text>
+
+  <rect x="472" y="245" width="190" height="155" rx="28" fill="#1d4ed8" filter="url(#shadow)"/>
+  <text x="567" y="304" text-anchor="middle" class="label">路由器</text>
+  <text x="567" y="337" text-anchor="middle" class="small">Token 分发</text>
+  <text x="567" y="367" text-anchor="middle" class="tiny">语义 × 负载 × 拓扑</text>
+  <path d="M374 355 C410 355 428 322 472 322" class="line"/>
+
+  <rect x="770" y="140" width="420" height="455" class="box" fill="url(#right)"/>
+  <text x="980" y="185" text-anchor="middle" class="label">第二阶段</text>
+  <text x="980" y="216" text-anchor="middle" class="small">专家功能分化 / 可服务架构</text>
+
+  <g>
+    <rect x="820" y="260" width="145" height="54" rx="14" fill="#0f766e"/><text x="892" y="294" text-anchor="middle" class="tiny">共享专家</text>
+    <rect x="995" y="260" width="145" height="54" rx="14" fill="#0369a1"/><text x="1067" y="294" text-anchor="middle" class="tiny">领域专家</text>
+    <rect x="820" y="342" width="145" height="54" rx="14" fill="#7c3aed"/><text x="892" y="376" text-anchor="middle" class="tiny">推理专家</text>
+    <rect x="995" y="342" width="145" height="54" rx="14" fill="#be123c"/><text x="1067" y="376" text-anchor="middle" class="tiny">工具/代码专家</text>
+    <rect x="907" y="424" width="145" height="54" rx="14" fill="#ca8a04"/><text x="980" y="458" text-anchor="middle" class="tiny">长尾专家</text>
+  </g>
+  <path d="M662 322 C705 285 755 286 820 286" class="line"/>
+  <path d="M662 322 C725 302 903 286 995 286" class="line"/>
+  <path d="M662 322 C725 350 765 365 820 365" class="line"/>
+  <path d="M662 322 C735 365 910 365 995 365" class="line"/>
+  <path d="M662 322 C745 420 840 450 907 450" class="line"/>
+
+  <rect x="120" y="622" width="1040" height="58" rx="18" fill="#0f172a" stroke="#334155"/>
+  <text x="200" y="658" text-anchor="middle" class="tiny">负载均衡</text>
+  <text x="410" y="658" text-anchor="middle" class="tiny">通信成本</text>
+  <text x="640" y="658" text-anchor="middle" class="tiny">可服务性</text>
+  <text x="870" y="658" text-anchor="middle" class="tiny">可观测性</text>
+  <text x="1080" y="658" text-anchor="middle" class="tiny">容错与弹性</text>
+  <path d="M220 622 C330 575 430 565 535 400" class="soft"/>
+  <path d="M640 622 C645 545 635 465 590 400" class="soft"/>
+  <path d="M1040 622 C1058 565 1050 522 1010 478" class="soft"/>
+</svg>
