@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="13">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8f4fd"/>
+      <stop offset="100%" stop-color="#d0e8f7"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3e2"/>
+      <stop offset="100%" stop-color="#fde6c4"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8f5e9"/>
+      <stop offset="100%" stop-color="#c8e6c9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a2e">KV Cache 分层存储架构对比：SGLang HiCache vs vLLM HMA</text>
+
+  <!-- SGLang Side -->
+  <rect x="20" y="50" width="420" height="450" rx="12" fill="url(#g1)" stroke="#4a90d9" stroke-width="1.5"/>
+  <text x="230" y="75" text-anchor="middle" font-size="15" font-weight="bold" fill="#1565c0">SGLang：HiCache + ShadowRadix 架构</text>
+
+  <!-- GPU HBM Layer -->
+  <rect x="40" y="90" width="380" height="70" rx="8" fill="#bbdefb" stroke="#1976d2" stroke-width="1"/>
+  <text x="230" y="112" text-anchor="middle" font-size="12" font-weight="bold" fill="#0d47a1">GPU HBM（热层）</text>
+  <text x="230" y="130" text-anchor="middle" font-size="11" fill="#1565c0">UnifiedRadixTree → Radix 前缀树节点</text>
+  <text x="230" y="146" text-anchor="middle" font-size="11" fill="#1565c0">ShadowRadix：影子前缀 → 跨请求零拷贝复用</text>
+
+  <!-- Arrow -->
+  <line x1="230" y1="160" x2="230" y2="180" stroke="#1976d2" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <defs><marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1976d2"/></marker></defs>
+
+  <!-- CPU DRAM Layer -->
+  <rect x="40" y="180" width="380" height="70" rx="8" fill="#e3f2fd" stroke="#42a5f5" stroke-width="1"/>
+  <text x="230" y="202" text-anchor="middle" font-size="12" font-weight="bold" fill="#1565c0">CPU DRAM（温层）</text>
+  <text x="230" y="220" text-anchor="middle" font-size="11" fill="#1976d2">HiCache 分层驱逐：SWA 短周期 → 优先淘汰</text>
+  <text x="230" y="236" text-anchor="middle" font-size="11" fill="#1976d2">C4/C128 长周期 → 保留至 DRAM</text>
+
+  <!-- Arrow -->
+  <line x1="230" y1="250" x2="230" y2="270" stroke="#42a5f5" stroke-width="2" marker-end="url(#arrowBlue2)"/>
+  <defs><marker id="arrowBlue2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#42a5f5"/></marker></defs>
+
+  <!-- Disk/Remote Layer -->
+  <rect x="40" y="270" width="380" height="60" rx="8" fill="#f3e5f5" stroke="#ab47bc" stroke-width="1"/>
+  <text x="230" y="292" text-anchor="middle" font-size="12" font-weight="bold" fill="#7b1fa2">磁盘 / 远程存储（冷层）</text>
+  <text x="230" y="310" text-anchor="middle" font-size="11" fill="#8e24aa">长上下文溢出 KV → 按需加载回温</text>
+
+  <!-- DeepSeek-V4 Box -->
+  <rect x="40" y="350" width="380" height="130" rx="8" fill="#fff9c4" stroke="#f9a825" stroke-width="1.5"/>
+  <text x="230" y="372" text-anchor="middle" font-size="12" font-weight="bold" fill="#e65100">DeepSeek-V4 混合注意力驱动</text>
+  <rect x="55" y="382" width="170" height="36" rx="6" fill="#ffe0b2" stroke="#ef6c00" stroke-width="0.8"/>
+  <text x="140" y="400" text-anchor="middle" font-size="11" fill="#bf360c">SWA（滑动窗口 128）</text>
+  <text x="140" y="413" text-anchor="middle" font-size="10" fill="#bf360c">短生命周期 → 快速淘汰</text>
+  <rect x="240" y="382" width="170" height="36" rx="6" fill="#ffe0b2" stroke="#ef6c00" stroke-width="0.8"/>
+  <text x="325" y="400" text-anchor="middle" font-size="11" fill="#bf360c">C4/C128（压缩注意力）</text>
+  <text x="325" y="413" text-anchor="middle" font-size="10" fill="#bf360c">长生命周期 → 保留复用</text>
+  <text x="230" y="445" text-anchor="middle" font-size="11" fill="#e65100">同一请求内不同层 KV 生命周期异构</text>
+  <text x="230" y="460" text-anchor="middle" font-size="11" fill="#e65100">→ HiCache 按注意力类型分层管理</text>
+
+  <!-- vLLM Side -->
+  <rect x="460" y="50" width="420" height="450" rx="12" fill="url(#g2)" stroke="#e6a720" stroke-width="1.5"/>
+  <text x="670" y="75" text-anchor="middle" font-size="15" font-weight="bold" fill="#e65100">vLLM：Hybrid Memory Allocator (HMA)</text>
+
+  <!-- GPU HBM Layer -->
+  <rect x="480" y="90" width="380" height="70" rx="8" fill="#ffe0b2" stroke="#ef6c00" stroke-width="1"/>
+  <text x="670" y="112" text-anchor="middle" font-size="12" font-weight="bold" fill="#bf360c">GPU HBM（热层）</text>
+  <text x="670" y="130" text-anchor="middle" font-size="11" fill="#e65100">KV Cache Block Manager</text>
+  <text x="670" y="146" text-anchor="middle" font-size="11" fill="#e65100">滑动窗口组调度器 → 动态分配</text>
+
+  <!-- Arrow -->
+  <line x1="670" y1="160" x2="670" y2="180" stroke="#ef6c00" stroke-width="2" marker-end="url(#arrowOrange)"/>
+  <defs><marker id="arrowOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#ef6c00"/></marker></defs>
+
+  <!-- Connector Layer -->
+  <rect x="480" y="180" width="380" height="70" rx="8" fill="#fff3e0" stroke="#ff9800" stroke-width="1"/>
+  <text x="670" y="202" text-anchor="middle" font-size="12" font-weight="bold" fill="#e65100">可插拔连接器层</text>
+  <text x="670" y="220" text-anchor="middle" font-size="11" fill="#ef6c00">CPU Connector / NIXL Connector</text>
+  <text x="670" y="236" text-anchor="middle" font-size="11" fill="#ef6c00">统一接口 → 灵活挂载不同后端</text>
+
+  <!-- Arrow -->
+  <line x1="670" y1="250" x2="670" y2="270" stroke="#ff9800" stroke-width="2" marker-end="url(#arrowOrange2)"/>
+  <defs><marker id="arrowOrange2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#ff9800"/></marker></defs>
+
+  <!-- Storage Backends -->
+  <rect x="480" y="270" width="380" height="80" rx="8" fill="#fce4ec" stroke="#e91e63" stroke-width="1"/>
+  <text x="670" y="292" text-anchor="middle" font-size="12" font-weight="bold" fill="#880e4f">分布式存储后端</text>
+  <rect x="495" y="300" width="110" height="36" rx="5" fill="#f8bbd0" stroke="#c2185b" stroke-width="0.8"/>
+  <text x="550" y="318" text-anchor="middle" font-size="10" fill="#880e4f">CPU DRAM</text>
+  <rect x="615" y="300" width="110" height="36" rx="5" fill="#f8bbd0" stroke="#c2185b" stroke-width="0.8"/>
+  <text x="670" y="318" text-anchor="middle" font-size="10" fill="#880e4f">NVMe SSD</text>
+  <rect x="735" y="300" width="110" height="36" rx="5" fill="#f8bbd0" stroke="#c2185b" stroke-width="0.8"/>
+  <text x="790" y="318" text-anchor="middle" font-size="10" fill="#880e4f">NIXL 远程节点</text>
+
+  <!-- Design Philosophy -->
+  <rect x="480" y="370" width="380" height="110" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="1.5"/>
+  <text x="670" y="392" text-anchor="middle" font-size="12" font-weight="bold" fill="#2e7d32">设计理念：通用 KV Offload 基础设施</text>
+  <text x="670" y="412" text-anchor="middle" font-size="11" fill="#388e3c">• 模型无关：不依赖特定注意力架构</text>
+  <text x="670" y="430" text-anchor="middle" font-size="11" fill="#388e3c">• 可插拔连接器：CPU / NVMe / NIXL 自由组合</text>
+  <text x="670" y="448" text-anchor="middle" font-size="11" fill="#388e3c">• 调度器驱动：滑动窗口组自动决策卸载时机</text>
+  <text x="670" y="466" text-anchor="middle" font-size="11" fill="#388e3c">• 面向多模态长序列场景的通用解决方案</text>
+
+  <!-- Footer -->
+  <text x="450" y="515" text-anchor="middle" font-size="11" fill="#666">数据来源：SGLang v0.5.12 Release Notes / vLLM v0.9.0 Release Notes / LMSYS Blog</text>
+</svg>
