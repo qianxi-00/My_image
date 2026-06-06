@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ecfeff"/>
+      <stop offset="55%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#fff7ed"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0f766e"/>
+    </marker>
+    <style>
+      text { font-family: "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #0f172a; }
+      .h1 { font-size: 30px; font-weight: 800; }
+      .subtitle { font-size: 17px; fill: #475569; }
+      .title { font-size: 20px; font-weight: 700; }
+      .body { font-size: 15px; fill: #475569; }
+      .small { font-size: 13px; fill: #64748b; }
+    </style>
+  </defs>
+  <rect width="1200" height="520" fill="url(#bg)"/>
+  <text x="60" y="54" class="h1">Expert Parallel：MoE 训练里的 token 分发</text>
+  <text x="60" y="84" class="subtitle">Router 决定 token 去哪些 expert；All-to-All 通信把 token 发到不同设备上的专家。</text>
+  
+
+  <rect x="60" y="220" width="170" height="86" rx="18" fill="#e0f2fe" stroke="#334155" stroke-width="2"/>
+  <text x="145.0" y="254" text-anchor="middle" class="title">Token Batch</text>
+  <text x="145.0" y="278" text-anchor="middle" class="body">多条样本 token</text>
+
+
+  <rect x="310" y="210" width="170" height="106" rx="18" fill="#fef3c7" stroke="#334155" stroke-width="2"/>
+  <text x="395.0" y="244" text-anchor="middle" class="title">Router</text>
+  <text x="395.0" y="268" text-anchor="middle" class="body">Top-k expert 选择</text>
+
+
+  <rect x="610" y="95" width="170" height="70" rx="18" fill="#dcfce7" stroke="#334155" stroke-width="2"/>
+  <text x="695.0" y="129" text-anchor="middle" class="title">Expert 1</text>
+  <text x="695.0" y="153" text-anchor="middle" class="body">GPU A</text>
+
+
+  <rect x="610" y="205" width="170" height="70" rx="18" fill="#ede9fe" stroke="#334155" stroke-width="2"/>
+  <text x="695.0" y="239" text-anchor="middle" class="title">Expert 2</text>
+  <text x="695.0" y="263" text-anchor="middle" class="body">GPU B</text>
+
+
+  <rect x="610" y="315" width="170" height="70" rx="18" fill="#ffedd5" stroke="#334155" stroke-width="2"/>
+  <text x="695.0" y="349" text-anchor="middle" class="title">Expert 3</text>
+  <text x="695.0" y="373" text-anchor="middle" class="body">GPU C</text>
+
+
+  <rect x="900" y="220" width="190" height="86" rx="18" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <text x="995.0" y="254" text-anchor="middle" class="title">Combine</text>
+  <text x="995.0" y="278" text-anchor="middle" class="body">聚合 expert 输出</text>
+
+<path d="M230,263 C270,263 270,263 310,263" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/><path d="M480,245 C545,245 545,130 610,130" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/><path d="M480,263 C545,263 545,240 610,240" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/><path d="M480,281 C545,281 545,350 610,350" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M780,130 C840,130 840,245 900,245" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/><path d="M780,240 C840,240 840,263 900,263" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/><path d="M780,350 C840,350 840,282 900,282" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="545" y="430" text-anchor="middle" class="small">瓶颈常在通信与负载不均，而不只是 expert 本身的计算</text>
+
+</svg>
