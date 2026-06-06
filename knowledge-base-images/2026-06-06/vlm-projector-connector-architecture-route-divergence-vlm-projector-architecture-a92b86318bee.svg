@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="gMLP" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <linearGradient id="gPS" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <linearGradient id="gTP" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <linearGradient id="gDS" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <linearGradient id="gMZ" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#f472b6"/>
+    </linearGradient>
+    <linearGradient id="gTF" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#fb923c"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="1200" height="800" fill="url(#bg)" rx="12"/>
+
+  <!-- 标题 -->
+  <text x="600" y="48" text-anchor="middle" fill="#f8fafc" font-size="22" font-weight="bold">VLM 视觉 Projector 六大架构路线对比</text>
+  <text x="600" y="72" text-anchor="middle" fill="#94a3b8" font-size="13">从 MLP 直通映射到多层级融合：视觉信息进入语言模型的六种路径</text>
+
+  <!-- 中央共享区域：视觉编码器 → Projector → LLM -->
+  <rect x="430" y="100" width="340" height="44" rx="22" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+  <text x="600" y="128" text-anchor="middle" fill="#e2e8f0" font-size="14" font-weight="600">视觉编码器 (ViT) → Projector / Connector → 语言模型 (LLM)</text>
+
+  <!-- 六条路线卡片 -->
+  <!-- Row 1 -->
+  <!-- 1. MLP 直通映射 -->
+  <g filter="url(#shadow)">
+    <rect x="30" y="170" width="360" height="180" rx="10" fill="#1e293b" stroke="#6366f1" stroke-width="1.5"/>
+    <rect x="30" y="170" width="360" height="36" rx="10" fill="url(#gMLP)"/>
+    <rect x="30" y="196" width="360" height="10" fill="url(#gMLP)"/>
+    <text x="210" y="195" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">① MLP 直通映射</text>
+    <text x="50" y="228" fill="#cbd5e1" font-size="12">代表：LLaVA / LLaVA-OneVision-2</text>
+    <text x="50" y="250" fill="#94a3b8" font-size="11">• 双层 MLP 线性变换</text>
+    <text x="50" y="268" fill="#94a3b8" font-size="11">• AnyRes 多分辨率切片策略</text>
+    <text x="50" y="286" fill="#94a3b8" font-size="11">• Token 数 = Patch 数（无压缩）</text>
+    <text x="50" y="304" fill="#fbbf24" font-size="11">✓ 简单高效  ✗ Token 冗余严重</text>
+    <text x="50" y="322" fill="#94a3b8" font-size="11">适用：快速原型、资源受限场景</text>
+    <text x="50" y="340" fill="#6366f1" font-size="11" font-weight="600">复杂度：★☆☆  压缩率：1:1</text>
+  </g>
+
+  <!-- 2. PixelShuffle 固定压缩 -->
+  <g filter="url(#shadow)">
+    <rect x="420" y="170" width="360" height="180" rx="10" fill="#1e293b" stroke="#0ea5e9" stroke-width="1.5"/>
+    <rect x="420" y="170" width="360" height="36" rx="10" fill="url(#gPS)"/>
+    <rect x="420" y="196" width="360" height="10" fill="url(#gPS)"/>
+    <text x="600" y="195" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">② PixelShuffle 固定压缩</text>
+    <text x="440" y="228" fill="#cbd5e1" font-size="12">代表：InternVL3 / VILA</text>
+    <text x="440" y="250" fill="#94a3b8" font-size="11">• PixelShuffle 空间重排降采样</text>
+    <text x="440" y="268" fill="#94a3b8" font-size="11">• 固定压缩比（通常 2x~4x）</text>
+    <text x="440" y="286" fill="#94a3b8" font-size="11">• 保留空间结构信息</text>
+    <text x="440" y="304" fill="#fbbf24" font-size="11">✓ 压缩稳定  ✗ 灵活性不足</text>
+    <text x="440" y="322" fill="#94a3b8" font-size="11">适用：中等分辨率、平衡场景</text>
+    <text x="440" y="340" fill="#0ea5e9" font-size="11" font-weight="600">复杂度：★★☆  压缩率：4:1~16:1</text>
+  </g>
+
+  <!-- 3. TokenPacker 粗到细 -->
+  <g filter="url(#shadow)">
+    <rect x="810" y="170" width="360" height="180" rx="10" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect x="810" y="170" width="360" height="36" rx="10" fill="url(#gTP)"/>
+    <rect x="810" y="196" width="360" height="10" fill="url(#gTP)"/>
+    <text x="990" y="195" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">③ TokenPacker 粗到细压缩</text>
+    <text x="830" y="228" fill="#cbd5e1" font-size="12">代表：TokenPacker / FasterVLM</text>
+    <text x="830" y="250" fill="#94a3b8" font-size="11">• 粗粒度 Query + 细粒度聚合</text>
+    <text x="830" y="268" fill="#94a3b8" font-size="11">• Cross-Attention 选择性提取</text>
+    <text x="830" y="286" fill="#94a3b8" font-size="11">• Token 数大幅缩减（4x~16x）</text>
+    <text x="830" y="304" fill="#fbbf24" font-size="11">✓ 高压缩比  ✗ 可能丢失细节</text>
+    <text x="830" y="322" fill="#94a3b8" font-size="11">适用：高分辨率、长视频场景</text>
+    <text x="830" y="340" fill="#f59e0b" font-size="11" font-weight="600">复杂度：★★★  压缩率：4:1~16:1</text>
+  </g>
+
+  <!-- Row 2 -->
+  <!-- 4. DeepStack 多层注入 -->
+  <g filter="url(#shadow)">
+    <rect x="30" y="380" width="360" height="180" rx="10" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+    <rect x="30" y="380" width="360" height="36" rx="10" fill="url(#gDS)"/>
+    <rect x="30" y="406" width="360" height="10" fill="url(#gDS)"/>
+    <text x="210" y="405" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">④ DeepStack 多层注入</text>
+    <text x="50" y="438" fill="#cbd5e1" font-size="12">代表：Qwen3-VL</text>
+    <text x="50" y="460" fill="#94a3b8" font-size="11">• 视觉中间层特征注入 LLM 早期层</text>
+    <text x="50" y="478" fill="#94a3b8" font-size="11">• 多尺度视觉信息逐层融合</text>
+    <text x="50" y="496" fill="#94a3b8" font-size="11">• 浅层纹理 + 深层语义同步利用</text>
+    <text x="50" y="514" fill="#fbbf24" font-size="11">✓ 信息利用率高  ✗ 训练复杂度增加</text>
+    <text x="50" y="532" fill="#94a3b8" font-size="11">适用：精细理解、文档 OCR、GUI Agent</text>
+    <text x="50" y="550" fill="#10b981" font-size="11" font-weight="600">复杂度：★★★★  压缩率：可变</text>
+  </g>
+
+  <!-- 5. Manzano 双 Projector -->
+  <g filter="url(#shadow)">
+    <rect x="420" y="380" width="360" height="180" rx="10" fill="#1e293b" stroke="#ec4899" stroke-width="1.5"/>
+    <rect x="420" y="380" width="360" height="36" rx="10" fill="url(#gMZ)"/>
+    <rect x="420" y="406" width="360" height="10" fill="url(#gMZ)"/>
+    <text x="600" y="405" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">⑤ Manzano 双 Projector</text>
+    <text x="440" y="438" fill="#cbd5e1" font-size="12">代表：Apple Manzano</text>
+    <text x="440" y="460" fill="#94a3b8" font-size="11">• 共享 ViT + 理解/生成双 Projector</text>
+    <text x="440" y="478" fill="#94a3b8" font-size="11">• 连续特征 → 理解；离散 token → 生成</text>
+    <text x="440" y="496" fill="#94a3b8" font-size="11">• 统一架构同时支持理解与生成</text>
+    <text x="440" y="514" fill="#fbbf24" font-size="11">✓ 架构统一  ✗ 双路径训练开销大</text>
+    <text x="440" y="532" fill="#94a3b8" font-size="11">适用：统一多模态、理解+生成</text>
+    <text x="440" y="550" fill="#ec4899" font-size="11" font-weight="600">复杂度：★★★★  压缩率：视任务而定</text>
+  </g>
+
+  <!-- 6. TokenFLEX 自适应池化 -->
+  <g filter="url(#shadow)">
+    <rect x="810" y="380" width="360" height="180" rx="10" fill="#1e293b" stroke="#f97316" stroke-width="1.5"/>
+    <rect x="810" y="380" width="360" height="36" rx="10" fill="url(#gTF)"/>
+    <rect x="810" y="406" width="360" height="10" fill="url(#gTF)"/>
+    <text x="990" y="405" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">⑥ TokenFLEX 自适应池化</text>
+    <text x="830" y="438" fill="#cbd5e1" font-size="12">代表：理想汽车 TokenFLEX</text>
+    <text x="830" y="460" fill="#94a3b8" font-size="11">• 自适应池化可变 token 数量</text>
+    <text x="830" y="478" fill="#94a3b8" font-size="11">• 推理时按任务动态调整压缩比</text>
+    <text x="830" y="496" fill="#94a3b8" font-size="11">• 简单任务少 token，复杂任务多 token</text>
+    <text x="830" y="514" fill="#fbbf24" font-size="11">✓ 推理效率最优  ✗ 需额外调度逻辑</text>
+    <text x="830" y="532" fill="#94a3b8" font-size="11">适用：端侧部署、成本敏感场景</text>
+    <text x="830" y="550" fill="#f97316" font-size="11" font-weight="600">复杂度：★★★  压缩率：动态 1:1~16:1</text>
+  </g>
+
+  <!-- 底部总结 -->
+  <rect x="30" y="590" width="1140" height="50" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="600" y="612" text-anchor="middle" fill="#e2e8f0" font-size="13" font-weight="600">核心趋势：Projector 从"被动管道"进化为"主动调度层"——压缩比动态化、注入位置多层化、任务感知自适应</text>
+  <text x="600" y="632" text-anchor="middle" fill="#94a3b8" font-size="11">选择标准：分辨率需求 × token 预算 × 部署约束 × 任务复杂度 → 最优 Projector 路线</text>
+
+  <!-- 底部图例 -->
+  <text x="600" y="670" text-anchor="middle" fill="#64748b" font-size="11">数据来源：Qwen3-VL Technical Report / Manzano (Apple ICLR 2026) / TokenFLEX (Li Auto) / InternVL3 / LLaVA-OneVision-2</text>
+  <text x="600" y="690" text-anchor="middle" fill="#475569" font-size="10">图表由 AI 生成，仅供参考</text>
+</svg>
