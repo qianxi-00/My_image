@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">GSPO 序列级概率比</title>
+  <desc id="desc">GRPO 的 token-level ratio 与 GSPO 的 sequence-level ratio 对比</desc>
+  <defs><style>.bg{fill:#f8fbff}.panel{fill:#fff;stroke:#1f4e79;stroke-width:3;rx:24}.left{fill:#fff4e6}.right{fill:#eaf4ff}.txt{font-family:"Microsoft YaHei",Arial,sans-serif;fill:#17324d}.title{font-size:34px;font-weight:800}.mid{font-size:28px;font-weight:800}.small{font-size:21px}.formula{font-size:24px;font-weight:700}.token{fill:#fff;stroke:#c76b00;stroke-width:2;rx:12}.seq{fill:#fff;stroke:#1f4e79;stroke-width:3;rx:16}.arrow{stroke:#1f4e79;stroke-width:4;fill:none;marker-end:url(#a)}</style><marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#1f4e79"/></marker></defs>
+  <rect class="bg" width="1280" height="720"/>
+  <text class="txt title" x="60" y="60">GSPO：奖励评整段，ratio 也看整段</text>
+  <rect class="panel left" x="70" y="120" width="560" height="560"/>
+  <text class="txt mid" x="240" y="170">GRPO 常见形式</text>
+  <text class="txt small" x="120" y="215">每个 token 都有自己的重要性比率</text>
+  <rect class="token" x="130" y="275" width="90" height="62"/><text class="txt small" x="154" y="314">$r_1$</text>
+  <rect class="token" x="250" y="275" width="90" height="62"/><text class="txt small" x="274" y="314">$r_2$</text>
+  <rect class="token" x="370" y="275" width="90" height="62"/><text class="txt small" x="394" y="314">$r_3$</text>
+  <rect class="token" x="490" y="275" width="90" height="62"/><text class="txt small" x="514" y="314">$r_T$</text>
+  <text class="txt formula" x="120" y="420">$r_t(\theta)=\pi_\theta(y_t|x,y_{&lt;t})/\pi_{old}(y_t|x,y_{&lt;t})$</text>
+  <text class="txt small" x="120" y="500">风险：长回答中 token 级噪声累积</text>
+  <text class="txt small" x="120" y="535">MoE 路由变化会放大单 token 概率波动</text>
+  <rect class="panel right" x="710" y="120" width="560" height="560"/>
+  <text class="txt mid" x="890" y="170">GSPO</text>
+  <text class="txt small" x="760" y="215">整段回答共享一个 sequence-level ratio</text>
+  <rect class="seq" x="820" y="275" width="330" height="90"/><text class="txt mid" x="902" y="325">完整回答 $y$</text>
+  <path class="arrow" d="M985 365 V420"/>
+  <text class="txt formula" x="750" y="470">$s(\theta)=\left(\pi_\theta(y|x)/\pi_{old}(y|x)\right)^{1/T}$</text>
+  <text class="txt small" x="760" y="535">直觉：判断整段回答是否过度 off-policy</text>
+  <text class="txt small" x="760" y="570">让奖励、裁剪和优化单位对齐</text>
+</svg>
