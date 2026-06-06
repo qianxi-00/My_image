@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:0.08"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:0.08"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:0.08"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a2e">三种多智能体数学研究架构对比</text>
+  <text x="450" y="55" text-anchor="middle" font-size="12" fill="#666">OpenAI · DeepMind AlphaProof Nexus · Anthropic Claude Mythos</text>
+
+  <!-- Column 1: OpenAI -->
+  <rect x="20" y="75" width="270" height="520" rx="12" fill="url(#g1)" stroke="#667eea" stroke-width="1.5"/>
+  <rect x="20" y="75" width="270" height="40" rx="12" fill="#667eea"/>
+  <rect x="20" y="103" width="270" height="12" fill="#667eea"/>
+  <text x="155" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="white">OpenAI 纯推理流</text>
+
+  <!-- OpenAI flow -->
+  <rect x="45" y="130" width="220" height="36" rx="8" fill="white" stroke="#667eea" stroke-width="1"/>
+  <text x="155" y="153" text-anchor="middle" font-size="11" fill="#333">LLM 推理模型（GPT-5.4 Pro）</text>
+
+  <line x1="155" y1="166" x2="155" y2="182" stroke="#667eea" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="45" y="182" width="220" height="36" rx="8" fill="white" stroke="#667eea" stroke-width="1"/>
+  <text x="155" y="205" text-anchor="middle" font-size="11" fill="#333">自主探索 → 猜想生成 → 验证</text>
+
+  <line x1="155" y1="218" x2="155" y2="234" stroke="#667eea" stroke-width="2"/>
+
+  <rect x="45" y="234" width="220" height="36" rx="8" fill="white" stroke="#667eea" stroke-width="1"/>
+  <text x="155" y="257" text-anchor="middle" font-size="11" fill="#333">Lean4 形式化验证</text>
+
+  <!-- OpenAI characteristics -->
+  <text x="45" y="300" font-size="11" font-weight="bold" fill="#667eea">✦ 核心特征</text>
+  <text x="45" y="318" font-size="10" fill="#555">• 单一模型全链路自主完成</text>
+  <text x="45" y="334" font-size="10" fill="#555">• 端到端推理，无外部工具调度</text>
+  <text x="45" y="350" font-size="10" fill="#555">• 依赖模型内部推理能力</text>
+  <text x="45" y="366" font-size="10" fill="#555">• 推翻 Erdős 单位距离猜想</text>
+
+  <text x="45" y="396" font-size="11" font-weight="bold" fill="#667eea">✦ 适用场景</text>
+  <text x="45" y="414" font-size="10" fill="#555">• 问题可由单一推理链解决</text>
+  <text x="45" y="430" font-size="10" fill="#555">• 反例搜索类问题</text>
+  <text x="45" y="446" font-size="10" fill="#555">• 需要创造性洞察的问题</text>
+
+  <text x="45" y="476" font-size="11" font-weight="bold" fill="#667eea">✦ 局限</text>
+  <text x="45" y="494" font-size="10" fill="#555">• 模型能力天花板 = 系统天花板</text>
+  <text x="45" y="510" font-size="10" fill="#555">• 缺乏外部知识注入机制</text>
+  <text x="45" y="526" font-size="10" fill="#555">• 难以处理需要大量枚举的问题</text>
+  <text x="45" y="542" font-size="10" fill="#555">• 单次推理成本高</text>
+
+  <text x="45" y="575" font-size="12" font-weight="bold" fill="#667eea">成本：~$200/问题</text>
+
+  <!-- Column 2: DeepMind -->
+  <rect x="315" y="75" width="270" height="520" rx="12" fill="url(#g2)" stroke="#f5576c" stroke-width="1.5"/>
+  <rect x="315" y="75" width="270" height="40" rx="12" fill="#f5576c"/>
+  <rect x="315" y="103" width="270" height="12" fill="#f5576c"/>
+  <text x="450" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="white">AlphaProof Nexus 四层架构</text>
+
+  <!-- DeepMind layers -->
+  <rect x="340" y="130" width="220" height="30" rx="6" fill="white" stroke="#f5576c" stroke-width="1"/>
+  <text x="450" y="150" text-anchor="middle" font-size="10" fill="#333">L1: 猜想生成（LLM Brainstorm）</text>
+
+  <line x1="450" y1="160" x2="450" y2="172" stroke="#f5576c" stroke-width="2"/>
+
+  <rect x="340" y="172" width="220" height="30" rx="6" fill="white" stroke="#f5576c" stroke-width="1"/>
+  <text x="450" y="192" text-anchor="middle" font-size="10" fill="#333">L2: 形式化翻译（Lean4 Codex）</text>
+
+  <line x1="450" y1="202" x2="450" y2="214" stroke="#f5576c" stroke-width="2"/>
+
+  <rect x="340" y="214" width="220" height="30" rx="6" fill="white" stroke="#f5576c" stroke-width="1"/>
+  <text x="450" y="234" text-anchor="middle" font-size="10" fill="#333">L3: 证明搜索（MCTS + RL）</text>
+
+  <line x1="450" y1="244" x2="450" y2="256" stroke="#f5576c" stroke-width="2"/>
+
+  <rect x="340" y="256" width="220" height="30" rx="6" fill="white" stroke="#f5576c" stroke-width="1"/>
+  <text x="450" y="276" text-anchor="middle" font-size="10" fill="#333">L4: 验证 + 反馈循环</text>
+
+  <!-- DeepMind characteristics -->
+  <text x="340" y="316" font-size="11" font-weight="bold" fill="#f5576c">✦ 核心特征</text>
+  <text x="340" y="334" font-size="10" fill="#555">• 四层渐进式流水线</text>
+  <text x="340" y="350" font-size="10" fill="#555">• 每层独立优化，可替换升级</text>
+  <text x="340" y="366" font-size="10" fill="#555">• MCTS 搜索空间远超单模型推理</text>
+  <text x="340" y="382" font-size="10" fill="#555">• 解决 9 个 Erdős 问题</text>
+
+  <text x="340" y="412" font-size="11" font-weight="bold" fill="#f5576c">✦ 适用场景</text>
+  <text x="340" y="430" font-size="10" fill="#555">• 需要大规模枚举的证明搜索</text>
+  <text x="340" y="446" font-size="10" fill="#555">• 可形式化描述的数学问题</text>
+  <text x="340" y="462" font-size="10" fill="#555">• 有明确验证标准的领域</text>
+
+  <text x="340" y="492" font-size="11" font-weight="bold" fill="#f5576c">✦ 局限</text>
+  <text x="340" y="510" font-size="10" fill="#555">• 需要问题可形式化</text>
+  <text x="340" y="526" font-size="10" fill="#555">• 搜索空间爆炸风险</text>
+  <text x="340" y="542" font-size="10" fill="#555">• 工程复杂度高</text>
+
+  <text x="340" y="575" font-size="12" font-weight="bold" fill="#f5576c">成本：~$300/问题</text>
+
+  <!-- Column 3: Anthropic -->
+  <rect x="610" y="75" width="270" height="520" rx="12" fill="url(#g3)" stroke="#4facfe" stroke-width="1.5"/>
+  <rect x="610" y="75" width="270" height="40" rx="12" fill="#4facfe"/>
+  <rect x="610" y="103" width="270" height="12" fill="#4facfe"/>
+  <text x="745" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Anthropic 分布式实例</text>
+
+  <!-- Anthropic flow -->
+  <rect x="635" y="125" width="100" height="55" rx="8" fill="white" stroke="#4facfe" stroke-width="1"/>
+  <text x="685" y="148" text-anchor="middle" font-size="10" fill="#333">实例 A</text>
+  <text x="685" y="163" text-anchor="middle" font-size="9" fill="#666">代数方向探索</text>
+
+  <rect x="745" y="125" width="100" height="55" rx="8" fill="white" stroke="#4facfe" stroke-width="1"/>
+  <text x="795" y="148" text-anchor="middle" font-size="10" fill="#333">实例 B</text>
+  <text x="795" y="163" text-anchor="middle" font-size="9" fill="#666">几何方向探索</text>
+
+  <rect x="635" y="195" width="100" height="55" rx="8" fill="white" stroke="#4facfe" stroke-width="1"/>
+  <text x="685" y="218" text-anchor="middle" font-size="10" fill="#333">实例 C</text>
+  <text x="685" y="233" text-anchor="middle" font-size="9" fill="#666">组合方向探索</text>
+
+  <rect x="745" y="195" width="100" height="55" rx="8" fill="white" stroke="#4facfe" stroke-width="1"/>
+  <text x="795" y="218" text-anchor="middle" font-size="10" fill="#333">实例 D</text>
+  <text x="795" y="233" text-anchor="middle" font-size="9" fill="#666">概率方向探索</text>
+
+  <!-- Aggregator -->
+  <line x1="685" y1="250" x2="745" y2="270" stroke="#4facfe" stroke-width="1.5"/>
+  <line x1="795" y1="250" x2="745" y2="270" stroke="#4facfe" stroke-width="1.5"/>
+  <line x1="685" y1="250" x2="745" y2="270" stroke="#4facfe" stroke-width="1.5"/>
+  <line x1="795" y1="250" x2="745" y2="270" stroke="#4facfe" stroke-width="1.5"/>
+
+  <rect x="670" y="270" width="150" height="36" rx="8" fill="#4facfe" stroke="none"/>
+  <text x="745" y="293" text-anchor="middle" font-size="11" fill="white" font-weight="bold">汇总 + 交叉验证</text>
+
+  <!-- Anthropic characteristics -->
+  <text x="635" y="336" font-size="11" font-weight="bold" fill="#4facfe">✦ 核心特征</text>
+  <text x="635" y="354" font-size="10" fill="#555">• 多实例并行独立探索</text>
+  <text x="635" y="370" font-size="10" fill="#555">• 不同实例用不同策略/提示</text>
+  <text x="635" y="386" font-size="10" fill="#555">• 汇总层交叉验证结果</text>
+  <text x="635" y="402" font-size="10" fill="#555">• 推翻同一单位距离猜想</text>
+
+  <text x="635" y="432" font-size="11" font-weight="bold" fill="#4facfe">✦ 适用场景</text>
+  <text x="635" y="450" font-size="10" fill="#555">• 解空间宽阔、方向不确定</text>
+  <text x="635" y="466" font-size="10" fill="#555">• 需要多角度交叉验证</text>
+  <text x="635" y="482" font-size="10" fill="#555">• 探索性研究任务</text>
+
+  <text x="635" y="512" font-size="11" font-weight="bold" fill="#4facfe">✦ 局限</text>
+  <text x="635" y="530" font-size="10" fill="#555">• 实例间缺乏深度协作</text>
+  <text x="635" y="546" font-size="10" fill="#555">• 汇总层可能遗漏最优解</text>
+  <text x="635" y="562" font-size="10" fill="#555">• 并行成本线性增长</text>
+
+  <text x="635" y="575" font-size="12" font-weight="bold" fill="#4facfe">成本：~$500/问题</text>
+
+  <!-- Footer -->
+  <text x="450" y="610" text-anchor="middle" font-size="10" fill="#999">数据来源：arXiv:2605.22763, The Decoder, Erdős Problems | 制图：AI 热点分析</text>
+</svg>
