@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">策略梯度更新流程</title>
+  <desc id="desc">策略采样轨迹、计算回报和优势、提高好动作概率、降低坏动作概率</desc>
+  <defs><style>.bg{fill:#f9fbff}.box{fill:#fff;stroke:#1f4e79;stroke-width:3;rx:18}.good{fill:#eaf7ea;stroke:#2e7d32}.bad{fill:#fff1e8;stroke:#c76b00}.txt{font-family:"Microsoft YaHei",Arial,sans-serif;fill:#17324d}.title{font-size:34px;font-weight:800}.mid{font-size:27px;font-weight:800}.small{font-size:21px}.arrow{stroke:#1f4e79;stroke-width:4;fill:none;marker-end:url(#a)}.up{stroke:#2e7d32}.down{stroke:#c76b00}</style><marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#1f4e79"/></marker></defs>
+  <rect class="bg" width="1280" height="720"/>
+  <text class="txt title" x="60" y="64">策略梯度：好轨迹提高概率，坏轨迹降低概率</text>
+  <rect class="box" x="80" y="150" width="230" height="110"/><text class="txt mid" x="126" y="195">当前策略</text><text class="txt small" x="113" y="230">$\pi_\theta(a \mid s)$</text>
+  <rect class="box" x="380" y="150" width="230" height="110"/><text class="txt mid" x="432" y="195">采样轨迹</text><text class="txt small" x="405" y="230">动作序列 + 奖励</text>
+  <rect class="box" x="680" y="150" width="230" height="110"/><text class="txt mid" x="730" y="195">计算优势</text><text class="txt small" x="725" y="230">$\hat A_t$</text>
+  <rect class="box" x="980" y="150" width="230" height="110"/><text class="txt mid" x="1022" y="195">更新参数</text><text class="txt small" x="1012" y="230">梯度上升</text>
+  <path class="arrow" d="M310 205 H380"/><path class="arrow" d="M610 205 H680"/><path class="arrow" d="M910 205 H980"/>
+  <rect class="box good" x="190" y="390" width="420" height="125"/>
+  <text class="txt mid" x="226" y="435">如果优势 $\hat A_t &gt; 0$</text>
+  <text class="txt small" x="226" y="475">这个动作比平均水平好</text>
+  <path class="arrow up" d="M620 452 H780"/>
+  <text class="txt small" x="798" y="460">提高 $\log \pi_\theta(a_t \mid s_t)$</text>
+  <rect class="box bad" x="190" y="545" width="420" height="105"/>
+  <text class="txt mid" x="226" y="588">如果优势 $\hat A_t &lt; 0$</text>
+  <text class="txt small" x="226" y="626">这个动作拖累回报</text>
+  <path class="arrow down" d="M620 598 H780"/>
+  <text class="txt small" x="798" y="606">降低 $\log \pi_\theta(a_t \mid s_t)$</text>
+  <rect class="box" x="850" y="390" width="330" height="250"/>
+  <text class="txt mid" x="910" y="440">核心公式直觉</text>
+  <text class="txt small" x="890" y="493">$\nabla J(\theta)$</text>
+  <text class="txt small" x="890" y="528">$\approx \nabla \log \pi_\theta(a_t|s_t)\hat A_t$</text>
+  <text class="txt small" x="890" y="580">优势决定方向，log 概率</text>
+  <text class="txt small" x="890" y="610">决定要调哪个动作。</text>
+</svg>
