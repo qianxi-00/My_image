@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="600" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#e2e8f0" font-size="20" font-weight="bold">MoE 路由拓扑分野：三条路线的架构对比</text>
+  <text x="450" y="64" text-anchor="middle" fill="#94a3b8" font-size="12">2026 年开源大模型专家激活策略的三个极端</text>
+
+  <!-- Three columns -->
+  <!-- Column 1: DeepSeek V4-Pro -->
+  <rect x="30" y="85" width="265" height="490" rx="10" fill="#1e1b4b" stroke="#6366f1" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="30" y="85" width="265" height="44" rx="10" fill="url(#g1)"/>
+  <text x="162" y="113" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">DeepSeek V4-Pro</text>
+
+  <!-- Config -->
+  <text x="50" y="150" fill="#c7d2fe" font-size="12" font-weight="bold">架构配置</text>
+  <text x="50" y="170" fill="#a5b4fc" font-size="11">• 总参数：1.6T</text>
+  <text x="50" y="188" fill="#a5b4fc" font-size="11">• 激活参数：49B</text>
+  <text x="50" y="206" fill="#a5b4fc" font-size="11">• 激活率：3.1%</text>
+  <text x="50" y="224" fill="#a5b4fc" font-size="11">• 专家：384 路由 + 1 共享</text>
+  <text x="50" y="242" fill="#a5b4fc" font-size="11">• 每层激活：6 + 1</text>
+
+  <!-- Attention -->
+  <text x="50" y="272" fill="#c7d2fe" font-size="12" font-weight="bold">注意力机制</text>
+  <text x="50" y="292" fill="#a5b4fc" font-size="11">CSA + HCA 混合</text>
+  <text x="50" y="310" fill="#a5b4fc" font-size="11">KV Cache 压缩至 10%</text>
+
+  <!-- Highlight box -->
+  <rect x="45" y="325" width="235" height="55" rx="6" fill="#312e81" stroke="#6366f1" stroke-width="1"/>
+  <text x="162" y="345" text-anchor="middle" fill="#e0e7ff" font-size="11" font-weight="bold">🎯 核心策略</text>
+  <text x="162" y="363" text-anchor="middle" fill="#a5b4fc" font-size="10">极致压缩：FFN+注意力双稀疏</text>
+
+  <!-- Pros/Cons -->
+  <text x="50" y="402" fill="#22c55e" font-size="11">✓ 每 token 推理成本最低</text>
+  <text x="50" y="420" fill="#22c55e" font-size="11">✓ 1M 上下文实际可用</text>
+  <text x="50" y="438" fill="#22c55e" font-size="11">✓ H100 即可部署</text>
+  <text x="50" y="462" fill="#f87171" font-size="11">✗ 通信模式复杂</text>
+  <text x="50" y="480" fill="#f87171" font-size="11">✗ 需 FP4/FP8 混合精度</text>
+
+  <!-- Bottom label -->
+  <rect x="80" y="505" width="170" height="28" rx="14" fill="#4f46e5"/>
+  <text x="165" y="524" text-anchor="middle" fill="#fff" font-size="12">极致压缩路线</text>
+
+  <!-- Column 2: Kimi K2.6 -->
+  <rect x="318" y="85" width="265" height="490" rx="10" fill="#451a03" stroke="#f59e0b" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="318" y="85" width="265" height="44" rx="10" fill="url(#g2)"/>
+  <text x="450" y="113" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">Kimi K2.6</text>
+
+  <text x="338" y="150" fill="#fde68a" font-size="12" font-weight="bold">架构配置</text>
+  <text x="338" y="170" fill="#fcd34d" font-size="11">• 总参数：1T</text>
+  <text x="338" y="188" fill="#fcd34d" font-size="11">• 激活参数：32B</text>
+  <text x="338" y="206" fill="#fcd34d" font-size="11">• 激活率：3.2%</text>
+  <text x="338" y="224" fill="#fcd34d" font-size="11">• 专家：384 路由 + 1 共享</text>
+  <text x="338" y="242" fill="#fcd34d" font-size="11">• 每层激活：8 + 1</text>
+
+  <text x="338" y="272" fill="#fde68a" font-size="12" font-weight="bold">注意力机制</text>
+  <text x="338" y="292" fill="#fcd34d" font-size="11">MLA（Multi-head Latent）</text>
+  <text x="338" y="310" fill="#fcd34d" font-size="11">256K 上下文窗口</text>
+
+  <rect x="333" y="325" width="235" height="55" rx="6" fill="#78350f" stroke="#f59e0b" stroke-width="1"/>
+  <text x="450" y="345" text-anchor="middle" fill="#fef3c7" font-size="11" font-weight="bold">🎯 核心策略</text>
+  <text x="450" y="363" text-anchor="middle" fill="#fcd34d" font-size="10">多模态融合 + Agent Swarm</text>
+
+  <text x="338" y="402" fill="#22c55e" font-size="11">✓ 原生多模态（MoonViT）</text>
+  <text x="338" y="420" fill="#22c55e" font-size="11">✓ 300 Agent 并发编排</text>
+  <text x="338" y="438" fill="#22c55e" font-size="11">✓ MLA 信息保真度高</text>
+  <text x="338" y="462" fill="#f87171" font-size="11">✗ 激活率非最低</text>
+  <text x="338" y="480" fill="#f87171" font-size="11">✗ 显存需求较高</text>
+
+  <rect x="368" y="505" width="170" height="28" rx="14" fill="#d97706"/>
+  <text x="453" y="524" text-anchor="middle" fill="#fff" font-size="12">多模态融合路线</text>
+
+  <!-- Column 3: Qwen3-Next -->
+  <rect x="605" y="85" width="265" height="490" rx="10" fill="#052e16" stroke="#10b981" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="605" y="85" width="265" height="44" rx="10" fill="url(#g3)"/>
+  <text x="737" y="113" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">Qwen3-Next</text>
+
+  <text x="625" y="150" fill="#a7f3d0" font-size="12" font-weight="bold">架构配置</text>
+  <text x="625" y="170" fill="#6ee7b7" font-size="11">• 总参数：80B</text>
+  <text x="625" y="188" fill="#6ee7b7" font-size="11">• 激活参数：3B</text>
+  <text x="625" y="206" fill="#6ee7b7" font-size="11">• 激活率：3.75%</text>
+  <text x="625" y="224" fill="#6ee7b7" font-size="11">• 专家：512 路由 + 1 共享</text>
+  <text x="625" y="242" fill="#6ee7b7" font-size="11">• 每层激活：10 + 1</text>
+
+  <text x="625" y="272" fill="#a7f3d0" font-size="12" font-weight="bold">注意力机制</text>
+  <text x="625" y="292" fill="#6ee7b7" font-size="11">GQA + Gated DeltaNet（3:1）</text>
+  <text x="625" y="310" fill="#6ee7b7" font-size="11">260K+ 上下文窗口</text>
+
+  <rect x="620" y="325" width="235" height="55" rx="6" fill="#064e3b" stroke="#10b981" stroke-width="1"/>
+  <text x="737" y="345" text-anchor="middle" fill="#d1fae5" font-size="11" font-weight="bold">🎯 核心策略</text>
+  <text x="737" y="363" text-anchor="middle" fill="#6ee7b7" font-size="10">双重稀疏：MoE + 线性注意力</text>
+
+  <text x="625" y="402" fill="#22c55e" font-size="11">✓ 超长上下文内存效率极高</text>
+  <text x="625" y="420" fill="#22c55e" font-size="11">✓ 路由组合空间最大</text>
+  <text x="625" y="438" fill="#22c55e" font-size="11">✓ 4xH100 即可推理</text>
+  <text x="625" y="462" fill="#f87171" font-size="11">✗ 强依赖 Blackwell NVLink</text>
+  <text x="625" y="480" fill="#f87171" font-size="11">✗ Gated DeltaNet 生态未成熟</text>
+
+  <rect x="655" y="505" width="170" height="28" rx="14" fill="#059669"/>
+  <text x="740" y="524" text-anchor="middle" fill="#fff" font-size="12">双重稀疏路线</text>
+
+  <!-- Bottom note -->
+  <text x="450" y="588" text-anchor="middle" fill="#64748b" font-size="10">数据来源：DeepSeek V4 Model Card / Kimi K2.6 Specs / Qwen3-Next NVIDIA Blog · 2026-06-02</text>
+</svg>
