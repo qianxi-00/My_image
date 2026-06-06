@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0176D3;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#0176D3;stop-opacity:0.03"/>
+    </linearGradient>
+    <linearGradient id="gAgent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0176D3"/>
+      <stop offset="100%" style="stop-color:#032D60"/>
+    </linearGradient>
+    <linearGradient id="gOrch" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B35"/>
+      <stop offset="100%" style="stop-color:#C0392B"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#00000022"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="520" rx="12" fill="#F8FAFC"/>
+  <rect width="900" height="520" rx="12" fill="url(#g1)"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="#1E293B">Salesforce Summer '26 多 Agent 编排架构</text>
+
+  <!-- User Layer -->
+  <rect x="340" y="58" width="220" height="48" rx="24" fill="#E8F4FD" stroke="#0176D3" stroke-width="2" filter="url(#shadow)"/>
+  <text x="450" y="87" text-anchor="middle" font-size="14" font-weight="bold" fill="#0176D3">👤 用户 / 客户入口</text>
+
+  <!-- Arrow down -->
+  <line x1="450" y1="106" x2="450" y2="138" stroke="#64748B" stroke-width="2" marker-end="url(#arrowGray)"/>
+  <defs><marker id="arrowGray" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#64748B"/></marker></defs>
+
+  <!-- Orchestrator -->
+  <rect x="290" y="140" width="320" height="60" rx="12" fill="url(#gOrch)" filter="url(#shadow)"/>
+  <text x="450" y="168" text-anchor="middle" font-size="15" font-weight="bold" fill="#FFF">🧠 编排 Agent（Orchestrator）</text>
+  <text x="450" y="188" text-anchor="middle" font-size="11" fill="#FFDDD3">上下文理解 · 任务分解 · 路由调度 · 结果聚合</text>
+
+  <!-- Arrows from Orchestrator to Agents -->
+  <line x1="350" y1="200" x2="150" y2="255" stroke="#FF6B35" stroke-width="1.5" marker-end="url(#arrowOrange)"/>
+  <line x1="400" y1="200" x2="350" y2="255" stroke="#FF6B35" stroke-width="1.5" marker-end="url(#arrowOrange)"/>
+  <line x1="500" y1="200" x2="550" y2="255" stroke="#FF6B35" stroke-width="1.5" marker-end="url(#arrowOrange)"/>
+  <line x1="550" y1="200" x2="750" y2="255" stroke="#FF6B35" stroke-width="1.5" marker-end="url(#arrowOrange)"/>
+  <defs><marker id="arrowOrange" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#FF6B35"/></marker></defs>
+
+  <!-- Expert Agents -->
+  <g filter="url(#shadow)">
+    <rect x="50" y="258" width="180" height="64" rx="10" fill="url(#gAgent)"/>
+    <text x="140" y="285" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFF">销售 Agent</text>
+    <text x="140" y="305" text-anchor="middle" font-size="10" fill="#B8D4E8">线索评分 · 商机推进</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="260" y="258" width="180" height="64" rx="10" fill="url(#gAgent)"/>
+    <text x="350" y="285" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFF">服务 Agent</text>
+    <text x="350" y="305" text-anchor="middle" font-size="10" fill="#B8D4E8">工单处理 · 客户回访</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="470" y="258" width="180" height="64" rx="10" fill="url(#gAgent)"/>
+    <text x="560" y="285" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFF">分析 Agent</text>
+    <text x="560" y="305" text-anchor="middle" font-size="10" fill="#B8D4E8">Tableau MCP · 数据洞察</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="680" y="258" width="180" height="64" rx="10" fill="url(#gAgent)"/>
+    <text x="770" y="285" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFF">营销 Agent</text>
+    <text x="770" y="305" text-anchor="middle" font-size="10" fill="#B8D4E8">活动管理 · Engagement</text>
+  </g>
+
+  <!-- Arrows to Systems -->
+  <line x1="140" y1="322" x2="140" y2="365" stroke="#0176D3" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+  <line x1="350" y1="322" x2="350" y2="365" stroke="#0176D3" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+  <line x1="560" y1="322" x2="560" y2="365" stroke="#0176D3" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+  <line x1="770" y1="322" x2="770" y2="365" stroke="#0176D3" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+  <defs><marker id="arrowBlue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#0176D3"/></marker></defs>
+
+  <!-- System Layer -->
+  <g filter="url(#shadow)">
+    <rect x="50" y="368" width="180" height="48" rx="8" fill="#F0F9FF" stroke="#0176D3" stroke-width="1.5"/>
+    <text x="140" y="397" text-anchor="middle" font-size="12" font-weight="bold" fill="#032D60">Salesforce CRM</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="260" y="368" width="180" height="48" rx="8" fill="#F0F9FF" stroke="#0176D3" stroke-width="1.5"/>
+    <text x="350" y="397" text-anchor="middle" font-size="12" font-weight="bold" fill="#032D60">Service Cloud</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="470" y="368" width="180" height="48" rx="8" fill="#F0F9FF" stroke="#0176D3" stroke-width="1.5"/>
+    <text x="560" y="397" text-anchor="middle" font-size="12" font-weight="bold" fill="#032D60">Tableau / Data Cloud</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="680" y="368" width="180" height="48" rx="8" fill="#F0F9FF" stroke="#0176D3" stroke-width="1.5"/>
+    <text x="770" y="397" text-anchor="middle" font-size="12" font-weight="bold" fill="#032D60">Marketing Cloud</text>
+  </g>
+
+  <!-- Trust Layer -->
+  <rect x="120" y="440" width="660" height="50" rx="10" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="450" y="462" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400E">🔒 Agentforce Trust Layer</text>
+  <text x="450" y="480" text-anchor="middle" font-size="10" fill="#92400E">数据权限 · 审计日志 · 升级规则 · 人类审批 · 安全边界</text>
+</svg>
