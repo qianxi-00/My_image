@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Noto Sans SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#4a6fa5"/></marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#e67e22"/></marker>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f8f9fa"/><stop offset="100%" stop-color="#e9ecef"/></linearGradient>
+  </defs>
+
+  <rect width="900" height="620" fill="url(#bg)" rx="12"/>
+  <text x="450" y="35" text-anchor="middle" font-size="20" font-weight="bold" fill="#2c3e50">Ring Attention：序列分块 + 环形通信 + 计算重叠</text>
+
+  <!-- Device 0 -->
+  <rect x="60" y="70" width="180" height="160" rx="8" fill="#d5e8f0" stroke="#4a6fa5" stroke-width="2"/>
+  <text x="150" y="95" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">GPU 0</text>
+  <rect x="75" y="108" width="150" height="30" rx="4" fill="#4a6fa5" opacity="0.85"/>
+  <text x="150" y="128" text-anchor="middle" font-size="12" fill="#fff">Q₀ (本地序列块)</text>
+  <rect x="75" y="145" width="150" height="30" rx="4" fill="#27ae60" opacity="0.85"/>
+  <text x="150" y="165" text-anchor="middle" font-size="12" fill="#fff">K₀ V₀ (本地KV)</text>
+  <rect x="75" y="182" width="150" height="30" rx="4" fill="#e67e22" opacity="0.5"/>
+  <text x="150" y="202" text-anchor="middle" font-size="11" fill="#fff">K₁V₁ ← 从GPU1接收</text>
+
+  <!-- Device 1 -->
+  <rect x="360" y="70" width="180" height="160" rx="8" fill="#d5e8f0" stroke="#4a6fa5" stroke-width="2"/>
+  <text x="450" y="95" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">GPU 1</text>
+  <rect x="375" y="108" width="150" height="30" rx="4" fill="#4a6fa5" opacity="0.85"/>
+  <text x="450" y="128" text-anchor="middle" font-size="12" fill="#fff">Q₁ (本地序列块)</text>
+  <rect x="375" y="145" width="150" height="30" rx="4" fill="#27ae60" opacity="0.85"/>
+  <text x="450" y="165" text-anchor="middle" font-size="12" fill="#fff">K₁ V₁ (本地KV)</text>
+  <rect x="375" y="182" width="150" height="30" rx="4" fill="#e67e22" opacity="0.5"/>
+  <text x="450" y="202" text-anchor="middle" font-size="11" fill="#fff">K₂V₂ ← 从GPU2接收</text>
+
+  <!-- Device 2 -->
+  <rect x="660" y="70" width="180" height="160" rx="8" fill="#d5e8f0" stroke="#4a6fa5" stroke-width="2"/>
+  <text x="750" y="95" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">GPU 2</text>
+  <rect x="675" y="108" width="150" height="30" rx="4" fill="#4a6fa5" opacity="0.85"/>
+  <text x="750" y="128" text-anchor="middle" font-size="12" fill="#fff">Q₂ (本地序列块)</text>
+  <rect x="675" y="145" width="150" height="30" rx="4" fill="#27ae60" opacity="0.85"/>
+  <text x="750" y="165" text-anchor="middle" font-size="12" fill="#fff">K₂ V₂ (本地KV)</text>
+  <rect x="675" y="182" width="150" height="30" rx="4" fill="#e67e22" opacity="0.5"/>
+  <text x="750" y="202" text-anchor="middle" font-size="11" fill="#fff">K₀V₀ ← 从GPU0接收</text>
+
+  <!-- Ring arrows -->
+  <path d="M 240 150 L 360 150" stroke="#e67e22" stroke-width="2.5" marker-end="url(#arrow-orange)" stroke-dasharray="6,3"/>
+  <text x="300" y="142" text-anchor="middle" font-size="11" fill="#e67e22">KV→</text>
+
+  <path d="M 540 150 L 660 150" stroke="#e67e22" stroke-width="2.5" marker-end="url(#arrow-orange)" stroke-dasharray="6,3"/>
+  <text x="600" y="142" text-anchor="middle" font-size="11" fill="#e67e22">KV→</text>
+
+  <path d="M 750 230 Q 750 290 450 290 Q 150 290 150 230" stroke="#e67e22" stroke-width="2.5" marker-end="url(#arrow-orange)" stroke-dasharray="6,3" fill="none"/>
+  <text x="450" y="308" text-anchor="middle" font-size="11" fill="#e67e22">KV→ (环形回绕)</text>
+
+  <!-- Timeline -->
+  <text x="450" y="350" text-anchor="middle" font-size="15" font-weight="bold" fill="#2c3e50">通信与计算时间线（以 GPU 0 为例）</text>
+
+  <rect x="80" y="370" width="740" height="200" rx="6" fill="#fff" stroke="#dee2e6" stroke-width="1"/>
+
+  <!-- Step labels -->
+  <text x="55" y="400" text-anchor="end" font-size="11" fill="#555">Step 1</text>
+  <text x="55" y="445" text-anchor="end" font-size="11" fill="#555">Step 2</text>
+  <text x="55" y="490" text-anchor="end" font-size="11" fill="#555">Step 3</text>
+  <text x="55" y="535" text-anchor="end" font-size="11" fill="#555">Step 4</text>
+
+  <!-- Step 1 -->
+  <rect x="90" y="383" width="200" height="24" rx="3" fill="#27ae60" opacity="0.8"/>
+  <text x="190" y="400" text-anchor="middle" font-size="11" fill="#fff">计算 Attn(Q₀, K₀, V₀)</text>
+  <rect x="300" y="383" width="180" height="24" rx="3" fill="#e67e22" opacity="0.8"/>
+  <text x="390" y="400" text-anchor="middle" font-size="11" fill="#fff">发送K₀V₀→GPU1</text>
+  <text x="500" y="400" font-size="11" fill="#888">← 重叠！</text>
+
+  <!-- Step 2 -->
+  <rect x="90" y="428" width="200" height="24" rx="3" fill="#4a6fa5" opacity="0.8"/>
+  <text x="190" y="445" text-anchor="middle" font-size="11" fill="#fff">计算 Attn(Q₀, K₁, V₁)</text>
+  <rect x="300" y="428" width="180" height="24" rx="3" fill="#e67e22" opacity="0.8"/>
+  <text x="390" y="445" text-anchor="middle" font-size="11" fill="#fff">接收K₁V₁←GPU1</text>
+
+  <!-- Step 3 -->
+  <rect x="90" y="473" width="200" height="24" rx="3" fill="#4a6fa5" opacity="0.8"/>
+  <text x="190" y="490" text-anchor="middle" font-size="11" fill="#fff">计算 Attn(Q₀, K₂, V₂)</text>
+  <rect x="300" y="473" width="180" height="24" rx="3" fill="#e67e22" opacity="0.8"/>
+  <text x="390" y="490" text-anchor="middle" font-size="11" fill="#fff">接收K₂V₂←GPU2</text>
+
+  <!-- Step 4 (Softmax reduce) -->
+  <rect x="90" y="518" width="300" height="24" rx="3" fill="#8e44ad" opacity="0.8"/>
+  <text x="240" y="535" text-anchor="middle" font-size="11" fill="#fff">局部 Softmax 合并 → 最终输出 O₀</text>
+
+  <!-- Legend -->
+  <rect x="600" y="380" width="18" height="14" rx="2" fill="#27ae60" opacity="0.8"/>
+  <text x="625" y="392" font-size="11" fill="#555">本地注意力计算</text>
+  <rect x="600" y="400" width="18" height="14" rx="2" fill="#4a6fa5" opacity="0.8"/>
+  <text x="625" y="412" font-size="11" fill="#555">远程KV注意力计算</text>
+  <rect x="600" y="420" width="18" height="14" rx="2" fill="#e67e22" opacity="0.8"/>
+  <text x="625" y="432" font-size="11" fill="#555">KV通信（与计算重叠）</text>
+  <rect x="600" y="440" width="18" height="14" rx="2" fill="#8e44ad" opacity="0.8"/>
+  <text x="625" y="452" font-size="11" fill="#555">局部结果合并</text>
+</svg>
