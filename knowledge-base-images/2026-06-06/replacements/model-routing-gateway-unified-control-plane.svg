@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ecfeff"/>
+      <stop offset="55%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#fff7ed"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0f766e"/>
+    </marker>
+    <style>
+      text { font-family: "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #0f172a; }
+      .h1 { font-size: 30px; font-weight: 800; }
+      .subtitle { font-size: 17px; fill: #475569; }
+      .title { font-size: 20px; font-weight: 700; }
+      .body { font-size: 15px; fill: #475569; }
+      .small { font-size: 13px; fill: #64748b; }
+    </style>
+  </defs>
+  <rect width="1200" height="520" fill="url(#bg)"/>
+  <text x="60" y="54" class="h1">Model Routing Gateway：统一模型入口</text>
+  <text x="60" y="84" class="subtitle">网关把请求、策略、成本、延迟和安全治理放到同一个控制面。</text>
+  
+
+  <rect x="70" y="215" width="180" height="90" rx="18" fill="#e0f2fe" stroke="#334155" stroke-width="2"/>
+  <text x="160.0" y="249" text-anchor="middle" class="title">用户请求</text>
+  <text x="160.0" y="273" text-anchor="middle" class="body">任务 / 上下文 / SLA</text>
+
+
+  <rect x="330" y="190" width="230" height="140" rx="18" fill="#dcfce7" stroke="#334155" stroke-width="2"/>
+  <text x="445.0" y="224" text-anchor="middle" class="title">Routing Gateway</text>
+  <text x="445.0" y="248" text-anchor="middle" class="body">鉴权 · 策略 · 观测 · 回退</text>
+
+
+  <rect x="660" y="110" width="190" height="80" rx="18" fill="#fef3c7" stroke="#334155" stroke-width="2"/>
+  <text x="755.0" y="144" text-anchor="middle" class="title">高性能模型</text>
+  <text x="755.0" y="168" text-anchor="middle" class="body">低延迟</text>
+
+
+  <rect x="660" y="230" width="190" height="80" rx="18" fill="#ede9fe" stroke="#334155" stroke-width="2"/>
+  <text x="755.0" y="264" text-anchor="middle" class="title">强推理模型</text>
+  <text x="755.0" y="288" text-anchor="middle" class="body">高质量</text>
+
+
+  <rect x="660" y="350" width="190" height="80" rx="18" fill="#ffedd5" stroke="#334155" stroke-width="2"/>
+  <text x="755.0" y="384" text-anchor="middle" class="title">专用模型</text>
+  <text x="755.0" y="408" text-anchor="middle" class="body">领域能力</text>
+
+
+  <rect x="930" y="230" width="180" height="90" rx="18" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <text x="1020.0" y="264" text-anchor="middle" class="title">统一响应</text>
+  <text x="1020.0" y="288" text-anchor="middle" class="body">质量与成本可控</text>
+
+<path d="M250,260 C290,260 290,260 330,260" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/><path d="M560,238 C610,238 610,150 660,150" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/><path d="M560,260 C610,260 610,270 660,270" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/><path d="M560,282 C610,282 610,390 660,390" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M850,150 C890,150 890,250 930,250" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/><path d="M850,270 C890,270 890,270 930,270" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/><path d="M850,390 C890,390 890,290 930,290" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+
+</svg>
