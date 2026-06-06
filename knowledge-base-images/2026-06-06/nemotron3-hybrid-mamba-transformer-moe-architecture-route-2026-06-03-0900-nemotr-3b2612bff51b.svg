@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="mambaGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#66BB6A;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="attnGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2196F3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#42A5F5;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="moeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FF9800;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFB74D;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Nemotron 3 混合 Mamba-Transformer-MoE 架构</text>
+  <text x="400" y="55" text-anchor="middle" font-size="12" fill="#666">Nano 31.6B (3.6B active) · Super 120B (12B active) · Ultra 550B (55B active)</text>
+
+  <!-- Layer Stack -->
+  <text x="50" y="95" font-size="13" font-weight="bold" fill="#333">层堆叠结构（交错设计）</text>
+
+  <!-- Layer 1 - Mamba -->
+  <rect x="80" y="110" width="640" height="40" rx="6" fill="url(#mambaGrad)" opacity="0.9"/>
+  <text x="400" y="135" text-anchor="middle" font-size="13" fill="white" font-weight="bold">Mamba-2 层（选择性扫描 · 线性复杂度 · 长距离依赖建模）</text>
+
+  <!-- Layer 2 - MoE -->
+  <rect x="80" y="158" width="640" height="40" rx="6" fill="url(#moeGrad)" opacity="0.9"/>
+  <text x="400" y="183" text-anchor="middle" font-size="13" fill="white" font-weight="bold">稀疏 MoE 层（128 选 6 · 仅 4.7% 专家激活 · 知识容量放大）</text>
+
+  <!-- Layer 3 - Mamba -->
+  <rect x="80" y="206" width="640" height="40" rx="6" fill="url(#mambaGrad)" opacity="0.9"/>
+  <text x="400" y="231" text-anchor="middle" font-size="13" fill="white" font-weight="bold">Mamba-2 层</text>
+
+  <!-- Layer 4 - Attention (fewer) -->
+  <rect x="80" y="254" width="640" height="40" rx="6" fill="url(#attnGrad)" opacity="0.9"/>
+  <text x="400" y="279" text-anchor="middle" font-size="13" fill="white" font-weight="bold">Transformer 注意力层（GQA · 精确推理 · 仅在关键位置插入）</text>
+
+  <!-- Layer 5 - MoE -->
+  <rect x="80" y="302" width="640" height="40" rx="6" fill="url(#moeGrad)" opacity="0.9"/>
+  <text x="400" y="327" text-anchor="middle" font-size="13" fill="white" font-weight="bold">稀疏 MoE 层</text>
+
+  <!-- Layer 6 - Mamba -->
+  <rect x="80" y="350" width="640" height="40" rx="6" fill="url(#mambaGrad)" opacity="0.9"/>
+  <text x="400" y="375" text-anchor="middle" font-size="13" fill="white" font-weight="bold">Mamba-2 层</text>
+
+  <!-- Dots -->
+  <text x="400" y="415" text-anchor="middle" font-size="20" fill="#999">⋮</text>
+  <text x="400" y="435" text-anchor="middle" font-size="11" fill="#999">（Mamba 层为主体，Attention 层少量插入）</text>
+
+  <!-- Legend -->
+  <text x="50" y="475" font-size="13" font-weight="bold" fill="#333">组件分工</text>
+
+  <rect x="80" y="490" width="18" height="18" rx="3" fill="url(#mambaGrad)"/>
+  <text x="105" y="505" font-size="12" fill="#333">Mamba-2 · 序列建模主体 · 线性 O(n)</text>
+
+  <rect x="80" y="515" width="18" height="18" rx="3" fill="url(#attnGrad)"/>
+  <text x="105" y="530" font-size="12" fill="#333">Attention · 精确推理辅助 · 二次 O(n²)</text>
+
+  <rect x="80" y="540" width="18" height="18" rx="3" fill="url(#moeGrad)"/>
+  <text x="105" y="555" font-size="12" fill="#333">MoE · 稀疏路由放大 · 128 选 6</text>
+
+  <!-- Key Stats -->
+  <text x="500" y="490" font-size="12" fill="#666">Ultra: 300+ tok/s · 3.3x 吞吐优势</text>
+  <text x="500" y="510" font-size="12" fill="#666">原生 1M token 上下文（Mamba 线性复杂度）</text>
+  <text x="500" y="530" font-size="12" fill="#666">Latent MoE: 同成本 4x 更多专家</text>
+  <text x="500" y="550" font-size="12" fill="#666">MTP + NVFP4 训练</text>
+
+  <!-- Footer -->
+  <text x="400" y="585" text-anchor="middle" font-size="10" fill="#999">2026-06-03 · AI 热点深度分析</text>
+</svg>
