@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Bellman backup 直觉</title>
+  <desc id="desc">当前价值等于即时奖励加下一状态价值的折扣估计</desc>
+  <defs><style>.bg{fill:#f8fbff}.node{fill:#fff;stroke:#1f4e79;stroke-width:3}.next{fill:#e9f5ff}.reward{fill:#fff1dc;stroke:#c76b00}.txt{font-family:"Microsoft YaHei",Arial,sans-serif;fill:#17324d}.title{font-size:34px;font-weight:800}.mid{font-size:28px;font-weight:700}.small{font-size:22px}.formula{font-size:30px;font-weight:700}.arrow{stroke:#1f4e79;stroke-width:4;fill:none;marker-end:url(#a)}.orange{stroke:#c76b00;stroke-width:4;fill:none;marker-end:url(#b)}</style><marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#1f4e79"/></marker><marker id="b" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#c76b00"/></marker></defs>
+  <rect class="bg" width="1280" height="720"/>
+  <text class="txt title" x="60" y="64">Bellman 方程：把未来价值往当前状态回传</text>
+  <circle class="node" cx="235" cy="330" r="95"/>
+  <text class="txt mid" x="188" y="323">当前状态</text>
+  <text class="txt small" x="206" y="360">$s$</text>
+  <rect class="reward" x="510" y="230" width="220" height="105" rx="18"/>
+  <text class="txt mid" x="566" y="272">即时奖励</text>
+  <text class="txt small" x="596" y="306">$r$</text>
+  <circle class="node next" cx="970" cy="330" r="95"/>
+  <text class="txt mid" x="915" y="323">下一状态</text>
+  <text class="txt small" x="942" y="360">$s'$</text>
+  <path class="orange" d="M330 305 H510"/>
+  <path class="arrow" d="M730 305 H875"/>
+  <text class="txt small" x="382" y="285">采取动作</text>
+  <text class="txt small" x="760" y="285">环境转移</text>
+  <rect class="node" x="190" y="520" width="890" height="92" rx="20"/>
+  <text class="txt formula" x="260" y="575">当前价值 $V(s)$  =  即时奖励 $r$  +  折扣后的未来价值 $\gamma V(s')$</text>
+  <path class="arrow" d="M970 425 C910 510 790 520 690 520"/>
+  <text class="txt small" x="760" y="485">backup：未来估计回传</text>
+</svg>
