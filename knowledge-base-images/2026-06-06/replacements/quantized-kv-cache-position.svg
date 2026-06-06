@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ecfeff"/>
+      <stop offset="55%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#fff7ed"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0f766e"/>
+    </marker>
+    <style>
+      text { font-family: "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #0f172a; }
+      .h1 { font-size: 30px; font-weight: 800; }
+      .subtitle { font-size: 17px; fill: #475569; }
+      .title { font-size: 20px; font-weight: 700; }
+      .body { font-size: 15px; fill: #475569; }
+      .small { font-size: 13px; fill: #64748b; }
+    </style>
+  </defs>
+  <rect width="1200" height="520" fill="url(#bg)"/>
+  <text x="60" y="54" class="h1">Quantized KV Cache：把长上下文的显存压力压下去</text>
+  <text x="60" y="84" class="subtitle">推理时历史 token 的 K/V 会持续占显存，量化缓存用更低位宽换取更长上下文。</text>
+  
+
+  <rect x="70" y="210" width="170" height="90" rx="18" fill="#e0f2fe" stroke="#334155" stroke-width="2"/>
+  <text x="155.0" y="244" text-anchor="middle" class="title">Prompt Tokens</text>
+  <text x="155.0" y="268" text-anchor="middle" class="body">历史上下文</text>
+
+
+  <rect x="320" y="175" width="210" height="70" rx="18" fill="#fee2e2" stroke="#334155" stroke-width="2"/>
+  <text x="425.0" y="209" text-anchor="middle" class="title">FP16 KV Cache</text>
+  <text x="425.0" y="233" text-anchor="middle" class="body">显存占用高</text>
+
+
+  <rect x="320" y="285" width="210" height="70" rx="18" fill="#dcfce7" stroke="#334155" stroke-width="2"/>
+  <text x="425.0" y="319" text-anchor="middle" class="title">INT8 / INT4 Cache</text>
+  <text x="425.0" y="343" text-anchor="middle" class="body">显存占用低</text>
+
+
+  <rect x="650" y="225" width="210" height="90" rx="18" fill="#fef3c7" stroke="#334155" stroke-width="2"/>
+  <text x="755.0" y="259" text-anchor="middle" class="title">Attention 读取</text>
+  <text x="755.0" y="283" text-anchor="middle" class="body">近似保持相关性</text>
+
+
+  <rect x="950" y="225" width="170" height="90" rx="18" fill="#ede9fe" stroke="#334155" stroke-width="2"/>
+  <text x="1035.0" y="259" text-anchor="middle" class="title">Decoder</text>
+  <text x="1035.0" y="283" text-anchor="middle" class="body">生成下一 token</text>
+
+<path d="M240,255 C280,255 280,210 320,210" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/><path d="M240,255 C280,255 280,320 320,320" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/><path d="M530,210 C590,210 590,255 650,255" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/><path d="M530,320 C590,320 590,280 650,280" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/><path d="M860,270 C905,270 905,270 950,270" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="585" y="385" text-anchor="middle" class="small">核心权衡：更省显存，但可能引入少量精度损失</text>
+
+</svg>
