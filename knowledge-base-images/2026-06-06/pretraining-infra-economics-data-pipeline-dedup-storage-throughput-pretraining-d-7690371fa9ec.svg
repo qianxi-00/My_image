@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" font-family="'PingFang SC','Microsoft YaHei',Arial,sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4A90D9"/>
+    </marker>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A90D9;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#357ABD;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#5CB85C;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#449D44;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F0AD4E;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#EC971F;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="g4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#D9534F;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#C9302C;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="480" fill="#F8F9FA" rx="8"/>
+
+  <!-- Title -->
+  <text x="600" y="35" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">大模型预训练数据管道全流程架构</text>
+
+  <!-- Stage 1: Raw Data -->
+  <rect x="30" y="60" width="130" height="120" rx="8" fill="url(#g1)"/>
+  <text x="95" y="105" text-anchor="middle" fill="white" font-size="14" font-weight="bold">原始语料</text>
+  <text x="95" y="125" text-anchor="middle" fill="#DDD" font-size="11">Common Crawl</text>
+  <text x="95" y="142" text-anchor="middle" fill="#DDD" font-size="11">授权数据集</text>
+  <text x="95" y="159" text-anchor="middle" fill="#DDD" font-size="11">合成数据</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="160" y1="120" x2="195" y2="120" stroke="#4A90D9" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Stage 2: Normalization -->
+  <rect x="200" y="60" width="110" height="120" rx="8" fill="url(#g1)" opacity="0.85"/>
+  <text x="255" y="105" text-anchor="middle" fill="white" font-size="14" font-weight="bold">归一化</text>
+  <text x="255" y="125" text-anchor="middle" fill="#DDD" font-size="11">HTML剥离</text>
+  <text x="255" y="142" text-anchor="middle" fill="#DDD" font-size="11">Unicode正则化</text>
+  <text x="255" y="159" text-anchor="middle" fill="#DDD" font-size="11">不可见字符清理</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="310" y1="120" x2="345" y2="120" stroke="#4A90D9" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Stage 3: Language Detection -->
+  <rect x="350" y="60" width="110" height="120" rx="8" fill="url(#g3)"/>
+  <text x="405" y="105" text-anchor="middle" fill="white" font-size="14" font-weight="bold">语言检测</text>
+  <text x="405" y="125" text-anchor="middle" fill="#FFF" font-size="11">fastText分类</text>
+  <text x="405" y="142" text-anchor="middle" fill="#FFF" font-size="11">200+语言</text>
+  <text x="405" y="159" text-anchor="middle" fill="#FFF" font-size="11">置信度评分</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="460" y1="120" x2="495" y2="120" stroke="#F0AD4E" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Stage 4: Deduplication -->
+  <rect x="500" y="60" width="130" height="120" rx="8" fill="url(#g4)"/>
+  <text x="565" y="100" text-anchor="middle" fill="white" font-size="14" font-weight="bold">去重</text>
+  <text x="565" y="118" text-anchor="middle" fill="#DDD" font-size="11">Exact Hash</text>
+  <text x="565" y="135" text-anchor="middle" fill="#DDD" font-size="11">MinHash LSH</text>
+  <text x="565" y="152" text-anchor="middle" fill="#DDD" font-size="11">跨源去重</text>
+  <text x="565" y="169" text-anchor="middle" fill="#DDD" font-size="11">移除30-60%数据</text>
+
+  <!-- Arrow 4→5 -->
+  <line x1="630" y1="120" x2="665" y2="120" stroke="#D9534F" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Stage 5: Quality Filtering -->
+  <rect x="670" y="60" width="130" height="120" rx="8" fill="url(#g2)"/>
+  <text x="735" y="100" text-anchor="middle" fill="white" font-size="14" font-weight="bold">质量过滤</text>
+  <text x="735" y="118" text-anchor="middle" fill="#DDD" font-size="11">长度/符号比过滤</text>
+  <text x="735" y="135" text-anchor="middle" fill="#DDD" font-size="11">Perplexity筛选</text>
+  <text x="735" y="152" text-anchor="middle" fill="#DDD" font-size="11">质量分类器</text>
+  <text x="735" y="169" text-anchor="middle" fill="#DDD" font-size="11">PII去除</text>
+
+  <!-- Arrow 5→6 -->
+  <line x1="800" y1="120" x2="835" y2="120" stroke="#5CB85C" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Stage 6: Tokenization -->
+  <rect x="840" y="60" width="110" height="120" rx="8" fill="url(#g1)" opacity="0.7"/>
+  <text x="895" y="105" text-anchor="middle" fill="white" font-size="14" font-weight="bold">分词</text>
+  <text x="895" y="125" text-anchor="middle" fill="#DDD" font-size="11">BPE</text>
+  <text x="895" y="142" text-anchor="middle" fill="#DDD" font-size="11">词汇表设计</text>
+  <text x="895" y="159" text-anchor="middle" fill="#DDD" font-size="11">byte fallback</text>
+
+  <!-- Arrow 6→7 -->
+  <line x1="950" y1="120" x2="985" y2="120" stroke="#4A90D9" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Stage 7: Shard & Store -->
+  <rect x="990" y="60" width="160" height="120" rx="8" fill="url(#g2)" opacity="0.85"/>
+  <text x="1070" y="100" text-anchor="middle" fill="white" font-size="14" font-weight="bold">分片与存储</text>
+  <text x="1070" y="118" text-anchor="middle" fill="#DDD" font-size="11">二进制格式</text>
+  <text x="1070" y="135" text-anchor="middle" fill="#DDD" font-size="11">固定大小shard</text>
+  <text x="1070" y="152" text-anchor="middle" fill="#DDD" font-size="11">NVMe热层</text>
+  <text x="1070" y="169" text-anchor="middle" fill="#DDD" font-size="11">→ 训练集群</text>
+
+  <!-- Bottom section: Architecture layers -->
+  <rect x="30" y="210" width="1120" height="100" rx="6" fill="#E8F4FD" stroke="#4A90D9" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="600" y="238" text-anchor="middle" font-size="14" font-weight="bold" fill="#357ABD">基础设施分层架构</text>
+
+  <!-- Storage Layers -->
+  <rect x="60" y="255" width="200" height="40" rx="5" fill="#D9534F" opacity="0.8"/>
+  <text x="160" y="280" text-anchor="middle" fill="white" font-size="12" font-weight="bold">L1 热层：GPU HBM</text>
+
+  <rect x="280" y="255" width="200" height="40" rx="5" fill="#F0AD4E"/>
+  <text x="380" y="280" text-anchor="middle" fill="white" font-size="12" font-weight="bold">L2 温层：NVMe SSD</text>
+
+  <rect x="500" y="255" width="200" height="40" rx="5" fill="#5CB85C"/>
+  <text x="600" y="280" text-anchor="middle" fill="white" font-size="12" font-weight="bold">L3 冷层：对象存储/HDD</text>
+
+  <!-- Network -->
+  <rect x="720" y="255" width="200" height="40" rx="5" fill="#4A90D9"/>
+  <text x="820" y="280" text-anchor="middle" fill="white" font-size="12" font-weight="bold">网络：InfiniBand/RoCE</text>
+
+  <!-- DPP -->
+  <rect x="940" y="255" width="190" height="40" rx="5" fill="#6F42C1"/>
+  <text x="1035" y="280" text-anchor="middle" fill="white" font-size="12" font-weight="bold">DPP 预处理服务</text>
+
+  <!-- Bottom highlight stats -->
+  <rect x="30" y="335" width="1120" height="55" rx="6" fill="#FFF3CD" stroke="#F0AD4E" stroke-width="1"/>
+  <text x="170" y="365" text-anchor="middle" font-size="13" fill="#856404" font-weight="bold">56% GPU周期等数据</text>
+  <text x="450" y="365" text-anchor="middle" font-size="13" fill="#856404" font-weight="bold">720GB/s单集群吞吐</text>
+  <text x="730" y="365" text-anchor="middle" font-size="13" fill="#856404" font-weight="bold">去重移除30-60%原始数据</text>
+  <text x="1020" y="365" text-anchor="middle" font-size="13" fill="#856404" font-weight="bold">GPT-5: 100万亿tokens</text>
+
+  <!-- Bottom note -->
+  <text x="600" y="430" text-anchor="middle" font-size="11" fill="#999">数据来源：Meta DPP架构、Google AI Infra、WEKApod 2025</text>
+</svg>
