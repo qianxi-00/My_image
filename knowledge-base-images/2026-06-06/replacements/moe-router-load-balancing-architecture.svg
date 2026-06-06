@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ecfeff"/>
+      <stop offset="55%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#fff7ed"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0f766e"/>
+    </marker>
+    <style>
+      text { font-family: "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #0f172a; }
+      .h1 { font-size: 30px; font-weight: 800; }
+      .subtitle { font-size: 17px; fill: #475569; }
+      .title { font-size: 20px; font-weight: 700; }
+      .body { font-size: 15px; fill: #475569; }
+      .small { font-size: 13px; fill: #64748b; }
+    </style>
+  </defs>
+  <rect width="1200" height="520" fill="url(#bg)"/>
+  <text x="60" y="54" class="h1">MoE Router 与负载均衡</text>
+  <text x="60" y="84" class="subtitle">Router 既要选对 expert，也要避免所有 token 挤到少数 expert 上。</text>
+  
+
+  <rect x="80" y="220" width="160" height="88" rx="18" fill="#e0f2fe" stroke="#334155" stroke-width="2"/>
+  <text x="160.0" y="254" text-anchor="middle" class="title">Token</text>
+  <text x="160.0" y="278" text-anchor="middle" class="body">输入表示</text>
+
+
+  <rect x="320" y="190" width="200" height="140" rx="18" fill="#fef3c7" stroke="#334155" stroke-width="2"/>
+  <text x="420.0" y="224" text-anchor="middle" class="title">Router</text>
+  <text x="420.0" y="248" text-anchor="middle" class="body">打分 · Top-k · 容量限制</text>
+
+
+  <rect x="650" y="100" width="170" height="70" rx="18" fill="#dcfce7" stroke="#334155" stroke-width="2"/>
+  <text x="735.0" y="134" text-anchor="middle" class="title">Expert A</text>
+  <text x="735.0" y="158" text-anchor="middle" class="body">负载 30%</text>
+
+
+  <rect x="650" y="220" width="170" height="70" rx="18" fill="#ede9fe" stroke="#334155" stroke-width="2"/>
+  <text x="735.0" y="254" text-anchor="middle" class="title">Expert B</text>
+  <text x="735.0" y="278" text-anchor="middle" class="body">负载 35%</text>
+
+
+  <rect x="650" y="340" width="170" height="70" rx="18" fill="#ffedd5" stroke="#334155" stroke-width="2"/>
+  <text x="735.0" y="374" text-anchor="middle" class="title">Expert C</text>
+  <text x="735.0" y="398" text-anchor="middle" class="body">负载 35%</text>
+
+
+  <rect x="910" y="220" width="200" height="88" rx="18" fill="#fee2e2" stroke="#334155" stroke-width="2"/>
+  <text x="1010.0" y="254" text-anchor="middle" class="title">Balance Loss</text>
+  <text x="1010.0" y="278" text-anchor="middle" class="body">惩罚拥塞与塌缩</text>
+
+<path d="M240,264 C280,264 280,260 320,260" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/><path d="M520,230 C585,230 585,135 650,135" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/><path d="M520,260 C585,260 585,255 650,255" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/><path d="M520,290 C585,290 585,375 650,375" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/><path d="M820,255 C865,255 865,264 910,264" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+
+</svg>
