@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ecfeff"/>
+      <stop offset="55%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#fff7ed"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0f766e"/>
+    </marker>
+    <style>
+      text { font-family: "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #0f172a; }
+      .h1 { font-size: 30px; font-weight: 800; }
+      .subtitle { font-size: 17px; fill: #475569; }
+      .title { font-size: 20px; font-weight: 700; }
+      .body { font-size: 15px; fill: #475569; }
+      .small { font-size: 13px; fill: #64748b; }
+    </style>
+  </defs>
+  <rect width="1200" height="520" fill="url(#bg)"/>
+  <text x="60" y="54" class="h1">Dreamer 系列：在世界模型中想象再学习</text>
+  <text x="60" y="84" class="subtitle">Model-Based RL 的关键是先学环境动力学，再在潜空间中做 rollout。</text>
+  
+
+  <rect x="80" y="210" width="180" height="92" rx="18" fill="#e0f2fe" stroke="#334155" stroke-width="2"/>
+  <text x="170.0" y="244" text-anchor="middle" class="title">真实交互</text>
+  <text x="170.0" y="268" text-anchor="middle" class="body">观测 · 动作 · 奖励</text>
+
+
+  <rect x="340" y="190" width="220" height="130" rx="18" fill="#dcfce7" stroke="#334155" stroke-width="2"/>
+  <text x="450.0" y="224" text-anchor="middle" class="title">World Model</text>
+  <text x="450.0" y="248" text-anchor="middle" class="body">表示学习 + 动力学 + 奖励预测</text>
+
+
+  <rect x="660" y="130" width="210" height="90" rx="18" fill="#fef3c7" stroke="#334155" stroke-width="2"/>
+  <text x="765.0" y="164" text-anchor="middle" class="title">Imagined Rollout</text>
+  <text x="765.0" y="188" text-anchor="middle" class="body">潜空间想象轨迹</text>
+
+
+  <rect x="660" y="300" width="210" height="90" rx="18" fill="#ede9fe" stroke="#334155" stroke-width="2"/>
+  <text x="765.0" y="334" text-anchor="middle" class="title">Actor-Critic</text>
+  <text x="765.0" y="358" text-anchor="middle" class="body">策略与价值更新</text>
+
+
+  <rect x="950" y="215" width="170" height="90" rx="18" fill="#ffedd5" stroke="#334155" stroke-width="2"/>
+  <text x="1035.0" y="249" text-anchor="middle" class="title">更好策略</text>
+  <text x="1035.0" y="273" text-anchor="middle" class="body">回到环境验证</text>
+
+<path d="M260,255 C300,255 300,255 340,255" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/><path d="M560,235 C610,235 610,175 660,175" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/><path d="M560,275 C610,275 610,345 660,345" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/><path d="M870,175 C910,175 910,245 950,245" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/><path d="M870,345 C910,345 910,285 950,285" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+
+</svg>
