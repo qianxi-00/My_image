@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="'PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0f4ff"/>
+      <stop offset="100%" stop-color="#e8edff"/>
+    </linearGradient>
+    <linearGradient id="headerG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="520" rx="14" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="900" height="52" rx="14" fill="url(#headerG)"/>
+  <rect x="0" y="26" width="900" height="26" fill="url(#headerG)"/>
+  <text x="450" y="34" text-anchor="middle" fill="#fff" font-size="18" font-weight="bold">VideoFDB 全双工视听对话 Agent 评估基准架构</text>
+
+  <!-- User Side (Left) -->
+  <rect x="30" y="80" width="160" height="200" rx="12" fill="#fff" stroke="#c7d2fe" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="30" y="80" width="160" height="36" rx="12" fill="#eef2ff"/>
+  <rect x="30" y="104" width="160" height="12" fill="#eef2ff"/>
+  <text x="110" y="104" text-anchor="middle" fill="#4338ca" font-size="14" font-weight="bold">👤 用户端</text>
+
+  <!-- Camera icon -->
+  <rect x="50" y="130" width="120" height="44" rx="8" fill="#f5f3ff" stroke="#ddd6fe"/>
+  <text x="74" y="148" font-size="18">🎥</text>
+  <text x="130" y="153" text-anchor="middle" fill="#5b21b6" font-size="11">摄像头输入</text>
+  <text x="110" y="168" text-anchor="middle" fill="#7c3aed" font-size="9">表情 · 手势 · 眼神 · 姿态</text>
+
+  <!-- Mic icon -->
+  <rect x="50" y="184" width="120" height="44" rx="8" fill="#f5f3ff" stroke="#ddd6fe"/>
+  <text x="74" y="208" font-size="18">🎤</text>
+  <text x="130" y="213" text-anchor="middle" fill="#5b21b6" font-size="11">麦克风输入</text>
+  <text x="110" y="222" text-anchor="middle" fill="#7c3aed" font-size="9">语音 · 语调 · 停顿 · 打断</text>
+
+  <!-- Arrows from user to agent -->
+  <line x1="190" y1="152" x2="270" y2="152" stroke="#a78bfa" stroke-width="2" marker-end="url(#arrowPurple)"/>
+  <line x1="190" y1="206" x2="270" y2="206" stroke="#a78bfa" stroke-width="2" marker-end="url(#arrowPurple)"/>
+  <defs>
+    <marker id="arrowPurple" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#a78bfa"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#ef4444"/>
+    </marker>
+  </defs>
+
+  <!-- AV2AV Agent (Center) -->
+  <rect x="270" y="80" width="200" height="200" rx="12" fill="#fff" stroke="#a78bfa" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="270" y="80" width="200" height="36" rx="12" fill="#ede9fe"/>
+  <rect x="270" y="104" width="200" height="12" fill="#ede9fe"/>
+  <text x="370" y="104" text-anchor="middle" fill="#5b21b6" font-size="14" font-weight="bold">🤖 AV2AV Agent</text>
+
+  <rect x="286" y="128" width="168" height="30" rx="6" fill="#f5f3ff" stroke="#ddd6fe"/>
+  <text x="370" y="148" text-anchor="middle" fill="#6d28d9" font-size="11">视觉编码器 → LLM → 语音合成</text>
+
+  <rect x="286" y="166" width="168" height="30" rx="6" fill="#f5f3ff" stroke="#ddd6fe"/>
+  <text x="370" y="186" text-anchor="middle" fill="#6d28d9" font-size="11">全双工流式处理（同时听+看+说）</text>
+
+  <rect x="286" y="204" width="168" height="30" rx="6" fill="#fef2f2" stroke="#fca5a5"/>
+  <text x="370" y="224" text-anchor="middle" fill="#dc2626" font-size="10" font-weight="bold">⚠️ 级联延迟 2.8~3.5s</text>
+
+  <!-- Arrow from agent to benchmark -->
+  <line x1="470" y1="180" x2="530" y2="180" stroke="#a78bfa" stroke-width="2" marker-end="url(#arrowPurple)"/>
+
+  <!-- Benchmark Modules (Right) -->
+  <rect x="530" y="80" width="340" height="200" rx="12" fill="#fff" stroke="#f97316" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="530" y="80" width="340" height="36" rx="12" fill="#fff7ed"/>
+  <rect x="530" y="104" width="340" height="12" fill="#fff7ed"/>
+  <text x="700" y="104" text-anchor="middle" fill="#c2410c" font-size="14" font-weight="bold">📊 VideoFDB 评估模块</text>
+
+  <!-- Eval Module 1 -->
+  <rect x="546" y="128" width="308" height="36" rx="6" fill="#fef2f2" stroke="#fecaca"/>
+  <text x="562" y="147" font-size="14">❌</text>
+  <text x="582" y="147" fill="#991b1b" font-size="11" font-weight="bold">文字描述坍缩</text>
+  <text x="582" y="160" fill="#b91c1c" font-size="9">Agent 倾向用文字描述视觉内容，而非自然对话</text>
+
+  <!-- Eval Module 2 -->
+  <rect x="546" y="172" width="308" height="36" rx="6" fill="#fef2f2" stroke="#fecaca"/>
+  <text x="562" y="191" font-size="14">👁️</text>
+  <text x="582" y="191" fill="#991b1b" font-size="11" font-weight="bold">视觉流忽视</text>
+  <text x="582" y="204" fill="#b91c1c" font-size="9">Agent 未能持续关注视频流中的非语言信号</text>
+
+  <!-- Eval Module 3 -->
+  <rect x="546" y="216" width="308" height="36" rx="6" fill="#fef2f2" stroke="#fecaca"/>
+  <text x="562" y="235" font-size="14">⏱️</text>
+  <text x="582" y="235" fill="#991b1b" font-size="11" font-weight="bold">全双工延迟超标</text>
+  <text x="582" y="248" fill="#b91c1c" font-size="9">响应延迟远超人类 200~500ms 的非语言信号窗口</text>
+
+  <!-- Latency Comparison (Bottom) -->
+  <rect x="30" y="310" width="840" height="190" rx="12" fill="#fff" stroke="#e5e7eb" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="450" y="340" text-anchor="middle" fill="#1e293b" font-size="15" font-weight="bold">🕐 响应延迟对比：人类 vs AI 系统</text>
+
+  <!-- Human bar -->
+  <text x="60" y="380" fill="#059669" font-size="13" font-weight="bold">人类</text>
+  <rect x="120" y="364" width="80" height="28" rx="6" fill="#34d399"/>
+  <text x="160" y="384" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">200~500ms</text>
+  <text x="210" y="384" fill="#059669" font-size="10">✅ 自然对话节奏</text>
+
+  <!-- Moshi bar -->
+  <text x="60" y="416" fill="#2563eb" font-size="13" font-weight="bold">Moshi</text>
+  <rect x="120" y="400" width="160" height="28" rx="6" fill="#60a5fa"/>
+  <text x="200" y="420" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">~800ms</text>
+  <text x="290" y="420" fill="#2563eb" font-size="10">⚠️ 接近可接受</text>
+
+  <!-- GPT Realtime bar -->
+  <text x="60" y="452" fill="#d97706" font-size="13" font-weight="bold">GPT Realtime</text>
+  <rect x="120" y="436" width="320" height="28" rx="6" fill="#fbbf24"/>
+  <text x="280" y="456" text-anchor="middle" fill="#78350f" font-size="11" font-weight="bold">2800~3500ms</text>
+  <text x="450" y="456" fill="#dc2626" font-size="10" font-weight="bold">❌ 远超自然对话窗口</text>
+
+  <!-- Legend -->
+  <text x="520" y="380" fill="#64748b" font-size="10">人类非语言信号响应窗口：200~500ms</text>
+  <text x="520" y="400" fill="#64748b" font-size="10">全双工对话需要同时处理视觉+语音</text>
+  <text x="520" y="420" fill="#64748b" font-size="10">当前 AV2A 系统尚未实现真正的 AV2AV</text>
+  <text x="520" y="440" fill="#dc2626" font-size="10" font-weight="bold">核心差距：非语言信号的实时理解与响应</text>
+
+  <!-- Footer -->
+  <text x="450" y="505" text-anchor="middle" fill="#94a3b8" font-size="10">来源：VideoFDB (arXiv:2605.30256) · NVIDIA Research & David AI · 2026</text>
+</svg>
