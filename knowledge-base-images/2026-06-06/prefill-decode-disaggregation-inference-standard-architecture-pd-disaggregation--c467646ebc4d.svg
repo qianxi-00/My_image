@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="prefillGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="decodeGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="kvGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="520" rx="12" fill="#F8FAFC"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E293B">Prefill-Decode 分离架构（PD Disaggregation）</text>
+
+  <!-- Request input -->
+  <rect x="30" y="70" width="160" height="50" rx="8" fill="#E0E7FF" stroke="#6366F1" stroke-width="2" filter="url(#shadow)"/>
+  <text x="110" y="92" text-anchor="middle" font-size="13" font-weight="bold" fill="#4338CA">用户请求</text>
+  <text x="110" y="110" text-anchor="middle" font-size="11" fill="#6366F1">Prompt Tokens</text>
+
+  <!-- Arrow: request to prefill -->
+  <path d="M190 95 L260 95" stroke="#6366F1" stroke-width="2" fill="none" marker-end="url(#arrowPurple)"/>
+  <defs><marker id="arrowPurple" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#6366F1"/></marker></defs>
+
+  <!-- Prefill Pool -->
+  <rect x="260" y="55" width="240" height="160" rx="10" fill="url(#prefillGrad)" opacity="0.12" stroke="#3B82F6" stroke-width="2" filter="url(#shadow)"/>
+  <text x="380" y="80" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E40AF">Prefill 计算池</text>
+  <text x="380" y="100" text-anchor="middle" font-size="11" fill="#3B82F6">计算密集型 · GPU 算力</text>
+
+  <!-- GPU boxes in prefill -->
+  <rect x="280" y="115" width="90" height="40" rx="6" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="325" y="138" text-anchor="middle" font-size="11" font-weight="bold" fill="#1E40AF">GPU-0</text>
+  <rect x="390" y="115" width="90" height="40" rx="6" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="435" y="138" text-anchor="middle" font-size="11" font-weight="bold" fill="#1E40AF">GPU-1</text>
+
+  <text x="380" y="175" text-anchor="middle" font-size="11" fill="#1E40AF">并行处理 · 生成 KV Cache</text>
+  <text x="380" y="192" text-anchor="middle" font-size="11" fill="#1E40AF">长 Prompt → 高 FLOPS 利用</text>
+
+  <!-- KV Transfer -->
+  <rect x="530" y="90" width="120" height="55" rx="8" fill="url(#kvGrad)" opacity="0.2" stroke="#F59E0B" stroke-width="2" filter="url(#shadow)"/>
+  <text x="590" y="113" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400E">KV 传输层</text>
+  <text x="590" y="132" text-anchor="middle" font-size="10" fill="#B45309">NIXL / Mooncake</text>
+  <text x="590" y="143" text-anchor="middle" font-size="9" fill="#B45309">RDMA · 异步流式</text>
+
+  <!-- Arrows: prefill → KV → decode -->
+  <path d="M500 130 L530 120" stroke="#F59E0B" stroke-width="2.5" fill="none" marker-end="url(#arrowAmber)"/>
+  <defs><marker id="arrowAmber" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#F59E0B"/></marker></defs>
+  <path d="M650 120 L680 120" stroke="#F59E0B" stroke-width="2.5" fill="none" marker-end="url(#arrowAmber)"/>
+
+  <!-- Decode Pool -->
+  <rect x="680" y="55" width="195" height="160" rx="10" fill="url(#decodeGrad)" opacity="0.12" stroke="#10B981" stroke-width="2" filter="url(#shadow)"/>
+  <text x="777" y="80" text-anchor="middle" font-size="15" font-weight="bold" fill="#065F46">Decode 生成池</text>
+  <text x="777" y="100" text-anchor="middle" font-size="11" fill="#10B981">显存带宽型 · HBM 读取</text>
+
+  <!-- GPU boxes in decode -->
+  <rect x="695" y="115" width="75" height="40" rx="6" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="732" y="138" text-anchor="middle" font-size="11" font-weight="bold" fill="#065F46">GPU-2</text>
+  <rect x="785" y="115" width="75" height="40" rx="6" fill="#D1FAE5" stroke="#10B981" stroke-width="1.5"/>
+  <text x="822" y="138" text-anchor="middle" font-size="11" font-weight="bold" fill="#065F46">GPU-3</text>
+
+  <text x="777" y="175" text-anchor="middle" font-size="11" fill="#065F46">逐 Token 自回归生成</text>
+  <text x="777" y="192" text-anchor="middle" font-size="11" fill="#065F46">读 KV Cache → 输出 Token</text>
+
+  <!-- Response output -->
+  <path d="M877 130 L877 260" stroke="#10B981" stroke-width="2" fill="none"/>
+  <rect x="810" y="260" width="80" height="45" rx="8" fill="#D1FAE5" stroke="#10B981" stroke-width="2" filter="url(#shadow)"/>
+  <text x="850" y="280" text-anchor="middle" font-size="11" font-weight="bold" fill="#065F46">响应</text>
+  <text x="850" y="296" text-anchor="middle" font-size="10" fill="#10B981">Tokens Out</text>
+
+  <!-- Comparison Section: Traditional Architecture -->
+  <rect x="30" y="260" width="380" height="240" rx="10" fill="#FEF2F2" stroke="#EF4444" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="220" y="290" text-anchor="middle" font-size="14" font-weight="bold" fill="#991B1B">❌ 传统 Co-located 架构</text>
+
+  <rect x="50" y="310" width="340" height="60" rx="6" fill="#FEE2E2" stroke="#FCA5A5" stroke-width="1"/>
+  <text x="220" y="333" text-anchor="middle" font-size="12" font-weight="bold" fill="#B91C1C">统一 GPU（Prefill + Decode 混合）</text>
+  <text x="220" y="353" text-anchor="middle" font-size="10" fill="#DC2626">GPU-0: Prefill A (4096 tok) → 阻塞 Decode B,C,D</text>
+
+  <text x="50" y="400" font-size="11" fill="#991B1B">• 长 Prefill 阻塞 Decode → ITL 尖峰</text>
+  <text x="50" y="420" font-size="11" fill="#991B1B">• Decode 排队延迟 → TTFT 飙升</text>
+  <text x="50" y="440" font-size="11" fill="#991B1B">• 无法独立扩缩 → 资源浪费</text>
+  <text x="50" y="460" font-size="11" fill="#991B1B">• chunk size 调参存在不可调和的矛盾</text>
+
+  <!-- PD Separation Benefits -->
+  <rect x="440" y="260" width="435" height="240" rx="10" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="657" y="290" text-anchor="middle" font-size="14" font-weight="bold" fill="#065F46">✅ PD 分离架构</text>
+
+  <rect x="460" y="310" width="180" height="50" rx="6" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1"/>
+  <text x="550" y="333" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E40AF">Prefill 池（算力型）</text>
+  <text x="550" y="350" text-anchor="middle" font-size="10" fill="#3B82F6">独立扩缩 · 按需调度</text>
+
+  <path d="M640 335 L670 335" stroke="#F59E0B" stroke-width="2" fill="none" marker-end="url(#arrowAmber)"/>
+  <text x="655" y="327" text-anchor="middle" font-size="9" fill="#B45309">KV</text>
+
+  <rect x="670" y="310" width="180" height="50" rx="6" fill="#D1FAE5" stroke="#10B981" stroke-width="1"/>
+  <text x="760" y="333" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">Decode 池（带宽型）</text>
+  <text x="760" y="350" text-anchor="middle" font-size="10" fill="#10B981">独立扩缩 · 按需调度</text>
+
+  <text x="460" y="395" font-size="11" fill="#065F46">• Prefill/Decode 互不阻塞 → ITL 稳定</text>
+  <text x="460" y="415" font-size="11" fill="#065F46">• 各自独立弹性扩缩 → 资源高效</text>
+  <text x="460" y="435" font-size="11" fill="#065F46">• 按阶段特性选硬件 → 成本优化</text>
+  <text x="460" y="455" font-size="11" fill="#065F46">• TTFT / ITL 可独立调优 → SLO 达标</text>
+  <text x="460" y="475" font-size="11" fill="#065F46">• 新优化技术以此为基础 → 未来兼容</text>
+</svg>
