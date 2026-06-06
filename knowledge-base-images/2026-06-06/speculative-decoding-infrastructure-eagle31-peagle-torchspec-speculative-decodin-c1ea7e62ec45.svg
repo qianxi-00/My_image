@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="13">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0891b2"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#1e293b">推测解码基础设施化：三层生态架构</text>
+  <text x="450" y="52" text-anchor="middle" font-size="12" fill="#64748b">EAGLE 3.1 · P-EAGLE · TorchSpec / SpecForge / Speculators</text>
+
+  <!-- Layer 1: Training Frameworks -->
+  <rect x="40" y="75" width="820" height="110" rx="12" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="60" y="98" font-size="14" font-weight="bold" fill="#166534">训练层 — 草稿模型训练框架</text>
+  <text x="60" y="115" font-size="11" fill="#4b5563">负责训练高质量草稿模型（draft model），决定推测解码的接受率上限</text>
+
+  <rect x="70" y="128" width="160" height="42" rx="8" fill="url(#g3)" opacity="0.9"/>
+  <text x="150" y="150" text-anchor="middle" fill="white" font-weight="bold" font-size="13">TorchSpec</text>
+  <text x="150" y="164" text-anchor="middle" fill="#d1fae5" font-size="10">PyTorch 原生训练</text>
+
+  <rect x="260" y="128" width="160" height="42" rx="8" fill="url(#g3)" opacity="0.9"/>
+  <text x="340" y="150" text-anchor="middle" fill="white" font-weight="bold" font-size="13">SpecForge</text>
+  <text x="340" y="164" text-anchor="middle" fill="#d1fae5" font-size="10">SGLang 生态集成</text>
+
+  <rect x="450" y="128" width="160" height="42" rx="8" fill="url(#g3)" opacity="0.9"/>
+  <text x="530" y="150" text-anchor="middle" fill="white" font-weight="bold" font-size="13">Speculators</text>
+  <text x="530" y="164" text-anchor="middle" fill="#d1fae5" font-size="10">vLLM 官方训练栈</text>
+
+  <!-- EAGLE 3.1 badge in training layer -->
+  <rect x="650" y="125" width="190" height="50" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="745" y="146" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400e">EAGLE 3.1 架构改进</text>
+  <text x="745" y="163" text-anchor="middle" font-size="10" fill="#78350f">FC归一化 + 状态反馈 → 修复注意力漂移</text>
+
+  <!-- Arrow down -->
+  <path d="M450 190 L450 215" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#9ca3af"/></marker></defs>
+
+  <!-- Layer 2: Inference Frameworks -->
+  <rect x="40" y="218" width="820" height="120" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="60" y="241" font-size="14" font-weight="bold" fill="#1e3a8a">推理层 — 主流推理框架集成</text>
+  <text x="60" y="258" font-size="11" fill="#4b5563">将训练好的草稿模型接入推理流水线，实现生产级推测解码服务</text>
+
+  <rect x="60" y="272" width="115" height="50" rx="8" fill="url(#g1)" opacity="0.9"/>
+  <text x="117" y="295" text-anchor="middle" fill="white" font-weight="bold" font-size="13">vLLM</text>
+  <text x="117" y="312" text-anchor="middle" fill="#e0e7ff" font-size="10">P-EAGLE / EAGLE 3.1</text>
+
+  <rect x="190" y="272" width="115" height="50" rx="8" fill="url(#g1)" opacity="0.9"/>
+  <text x="247" y="295" text-anchor="middle" fill="white" font-weight="bold" font-size="13">SGLang</text>
+  <text x="247" y="312" text-anchor="middle" fill="#e0e7ff" font-size="10">v0.5.12+</text>
+
+  <rect x="320" y="272" width="130" height="50" rx="8" fill="url(#g1)" opacity="0.9"/>
+  <text x="385" y="295" text-anchor="middle" fill="white" font-weight="bold" font-size="13">TensorRT-LLM</text>
+  <text x="385" y="312" text-anchor="middle" fill="#e0e7ff" font-size="10">NVIDIA 生态</text>
+
+  <rect x="465" y="272" width="115" height="50" rx="8" fill="url(#g1)" opacity="0.9"/>
+  <text x="522" y="295" text-anchor="middle" fill="white" font-weight="bold" font-size="13">AMD ROCm</text>
+  <text x="522" y="312" text-anchor="middle" fill="#e0e7ff" font-size="10">异构适配</text>
+
+  <rect x="595" y="272" width="115" height="50" rx="8" fill="url(#g1)" opacity="0.9"/>
+  <text x="652" y="295" text-anchor="middle" fill="white" font-weight="bold" font-size="13">MLC-LLM</text>
+  <text x="652" y="312" text-anchor="middle" fill="#e0e7ff" font-size="10">端侧部署</text>
+
+  <rect x="725" y="272" width="115" height="50" rx="8" fill="url(#g1)" opacity="0.9"/>
+  <text x="782" y="295" text-anchor="middle" fill="white" font-weight="bold" font-size="13">PaddleNLP</text>
+  <text x="782" y="312" text-anchor="middle" fill="#e0e7ff" font-size="10">国产框架</text>
+
+  <!-- Arrow down -->
+  <path d="M450 343 L450 368" stroke="#9ca3af" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Layer 3: Algorithm Research -->
+  <rect x="40" y="372" width="820" height="110" rx="12" fill="#fdf4ff" stroke="#d8b4fe" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="60" y="395" font-size="14" font-weight="bold" fill="#581c87">算法层 — 核心算法研究与突破</text>
+  <text x="60" y="412" font-size="11" fill="#4b5563">解决推测解码的根本性技术挑战，推动接受率与推测深度的上限</text>
+
+  <rect x="70" y="425" width="200" height="42" rx="8" fill="url(#g2)" opacity="0.9"/>
+  <text x="170" y="446" text-anchor="middle" fill="white" font-weight="bold" font-size="13">EAGLE 3.1</text>
+  <text x="170" y="461" text-anchor="middle" fill="#cffafe" font-size="10">修复注意力漂移 · 接受率 +15%</text>
+
+  <rect x="300" y="425" width="200" height="42" rx="8" fill="url(#g2)" opacity="0.9"/>
+  <text x="400" y="446" text-anchor="middle" fill="white" font-weight="bold" font-size="13">P-EAGLE</text>
+  <text x="400" y="461" text-anchor="middle" fill="#cffafe" font-size="10">并行草稿 · 多候选验证</text>
+
+  <rect x="530" y="425" width="310" height="42" rx="8" fill="#fef9c3" stroke="#facc15" stroke-width="1"/>
+  <text x="685" y="446" text-anchor="middle" font-size="12" font-weight="bold" fill="#713f12">核心问题：草稿质量 × 推测深度 × 验证开销</text>
+  <text x="685" y="461" text-anchor="middle" font-size="10" fill="#854d0e">三者的帕累托前沿决定了实际加速比</text>
+
+  <!-- Right side: key insight -->
+  <rect x="40" y="492" width="820" height="22" rx="6" fill="#1e293b"/>
+  <text x="450" y="508" text-anchor="middle" font-size="12" fill="#f8fafc">从算法技巧 → 训练框架 → 推理集成 → 标准化部署：推测解码已完成基础设施化蜕变</text>
+</svg>
