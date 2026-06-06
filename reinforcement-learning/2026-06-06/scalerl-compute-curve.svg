@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">ScaleRL compute-performance 曲线</title>
+  <desc id="desc">RL 训练 compute 增加时验证集 pass rate 呈现起步、快速提升和饱和三个阶段</desc>
+  <defs><style>.bg{fill:#fbfcff}.axis{stroke:#17324d;stroke-width:4}.curve{stroke:#c76b00;stroke-width:7;fill:none}.dash{stroke:#1f4e79;stroke-width:3;stroke-dasharray:8 8}.txt{font-family:"Microsoft YaHei",Arial,sans-serif;fill:#17324d}.title{font-size:34px;font-weight:800}.mid{font-size:26px;font-weight:800}.small{font-size:21px}.point{fill:#c76b00}.card{fill:#fff;stroke:#1f4e79;stroke-width:2;rx:16}</style></defs>
+  <rect class="bg" width="1280" height="720"/>
+  <text class="txt title" x="60" y="62">ScaleRL：用曲线判断 RL compute 是否值得继续放大</text>
+  <line class="axis" x1="130" y1="590" x2="1060" y2="590"/>
+  <line class="axis" x1="130" y1="590" x2="130" y2="130"/>
+  <text class="txt small" x="470" y="650">Training compute / GPU-hours</text>
+  <text class="txt small" x="28" y="330" transform="rotate(-90 28 330)">Validation pass rate</text>
+  <path class="curve" d="M150 560 C260 555 340 525 420 455 C510 375 570 280 680 220 C790 160 900 150 1040 145"/>
+  <circle class="point" cx="275" cy="545" r="9"/><circle class="point" cx="470" cy="400" r="9"/><circle class="point" cx="720" cy="205" r="9"/><circle class="point" cx="980" cy="150" r="9"/>
+  <line class="dash" x1="130" y1="145" x2="1080" y2="145"/>
+  <text class="txt mid" x="1088" y="153">上限 $A$</text>
+  <rect class="card" x="190" y="180" width="250" height="95"/><text class="txt mid" x="220" y="220">起步区</text><text class="txt small" x="220" y="253">提升慢，信号刚建立</text>
+  <rect class="card" x="515" y="370" width="280" height="95"/><text class="txt mid" x="545" y="410">快速提升区</text><text class="txt small" x="545" y="443">效率参数决定斜率</text>
+  <rect class="card" x="850" y="240" width="285" height="95"/><text class="txt mid" x="880" y="280">饱和区</text><text class="txt small" x="880" y="313">继续加 compute 收益变小</text>
+  <text class="txt small" x="150" y="625">小规模点</text>
+  <text class="txt small" x="930" y="625">大规模验证</text>
+</svg>
