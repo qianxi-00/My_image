@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Agent 与 Environment 交互循环</title>
+  <desc id="desc">强化学习中智能体采取动作，环境返回状态和奖励的循环</desc>
+  <defs>
+    <style>.bg{fill:#fbfcf7}.box{fill:#fff;stroke:#24527a;stroke-width:3;rx:24}.env{fill:#eaf4ff}.agent{fill:#fff3df}.txt{font-family:"Microsoft YaHei",Arial,sans-serif;fill:#18344f}.title{font-size:34px;font-weight:800}.mid{font-size:30px;font-weight:700}.small{font-size:23px}.arrow{stroke:#24527a;stroke-width:5;fill:none;marker-end:url(#a)}.orange{stroke:#d87900}.note{fill:#f2f7fb;stroke:#9bbad2;stroke-width:2;rx:16}</style>
+    <marker id="a" markerWidth="13" markerHeight="13" refX="10" refY="6" orient="auto"><path d="M2,2 L11,6 L2,11 Z" fill="#24527a"/></marker>
+  </defs>
+  <rect class="bg" width="1280" height="720"/>
+  <text class="txt title" x="64" y="64">MDP 的核心：Agent 与 Environment 的闭环</text>
+  <rect class="box agent" x="120" y="220" width="320" height="180"/>
+  <text class="txt mid" x="220" y="300">Agent</text>
+  <text class="txt small" x="160" y="342">根据当前状态选择动作</text>
+  <rect class="box env" x="840" y="220" width="320" height="180"/>
+  <text class="txt mid" x="920" y="300">Environment</text>
+  <text class="txt small" x="880" y="342">执行转移并返回反馈</text>
+  <path class="arrow orange" d="M440 286 C570 190 720 190 840 286"/>
+  <text class="txt small" x="555" y="205">动作 $A_t$</text>
+  <path class="arrow" d="M840 354 C720 490 560 490 440 354"/>
+  <text class="txt small" x="520" y="520">新状态 $S_{t+1}$ 与奖励 $R_{t+1}$</text>
+  <rect class="note" x="110" y="520" width="310" height="80"/>
+  <text class="txt small" x="135" y="552">策略 $\pi(a \mid s)$</text>
+  <text class="txt small" x="135" y="582">决定“在状态下怎么行动”</text>
+  <rect class="note" x="470" y="520" width="310" height="80"/>
+  <text class="txt small" x="495" y="552">转移 $P(s' \mid s,a)$</text>
+  <text class="txt small" x="495" y="582">决定“动作后世界怎么变”</text>
+  <rect class="note" x="830" y="520" width="310" height="80"/>
+  <text class="txt small" x="855" y="552">奖励 $R(s,a)$</text>
+  <text class="txt small" x="855" y="582">告诉智能体结果好坏</text>
+</svg>
