@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="'Noto Sans SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3a5f"/>
+      <stop offset="100%" stop-color="#0d1b2a"/>
+    </linearGradient>
+    <linearGradient id="gEdge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="gFog" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="gCloud" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" rx="12" fill="url(#g1)"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="#e2e8f0">端云协同三层架构：感知在端侧 · 理解在边缘 · 推理在云端</text>
+
+  <!-- Layer 1: Perception (Edge/Device) -->
+  <rect x="30" y="65" width="230" height="370" rx="10" fill="url(#gEdge)" opacity="0.15" stroke="#10b981" stroke-width="1.5"/>
+  <rect x="30" y="65" width="230" height="36" rx="10" fill="#10b981" opacity="0.3"/>
+  <text x="145" y="90" text-anchor="middle" font-size="14" font-weight="bold" fill="#10b981">感知层 · 端侧</text>
+  <text x="145" y="115" text-anchor="middle" font-size="10" fill="#a7f3d0">延迟 &lt; 100ms · 隐私最高</text>
+
+  <!-- Perception icons -->
+  <g transform="translate(60,135)">
+    <circle cx="25" cy="25" r="22" fill="#065f46" opacity="0.6"/>
+    <text x="25" y="30" text-anchor="middle" font-size="20">📷</text>
+    <text x="25" y="58" text-anchor="middle" font-size="9" fill="#d1fae5">摄像头</text>
+  </g>
+  <g transform="translate(140,135)">
+    <circle cx="25" cy="25" r="22" fill="#065f46" opacity="0.6"/>
+    <text x="25" y="30" text-anchor="middle" font-size="20">🎤</text>
+    <text x="25" y="58" text-anchor="middle" font-size="9" fill="#d1fae5">麦克风</text>
+  </g>
+  <g transform="translate(60,210)">
+    <circle cx="25" cy="25" r="22" fill="#065f46" opacity="0.6"/>
+    <text x="25" y="30" text-anchor="middle" font-size="20">📡</text>
+    <text x="25" y="58" text-anchor="middle" font-size="9" fill="#d1fae5">传感器</text>
+  </g>
+  <g transform="translate(140,210)">
+    <circle cx="25" cy="25" r="22" fill="#065f46" opacity="0.6"/>
+    <text x="25" y="30" text-anchor="middle" font-size="20">🔒</text>
+    <text x="25" y="58" text-anchor="middle" font-size="9" fill="#d1fae5">原始数据</text>
+  </g>
+
+  <!-- Perception tasks -->
+  <text x="145" y="300" text-anchor="middle" font-size="10" font-weight="bold" fill="#a7f3d0">典型任务</text>
+  <text x="145" y="318" text-anchor="middle" font-size="9" fill="#d1fae5">唤醒词检测</text>
+  <text x="145" y="334" text-anchor="middle" font-size="9" fill="#d1fae5">人脸检测</text>
+  <text x="145" y="350" text-anchor="middle" font-size="9" fill="#d1fae5">场景分类</text>
+  <text x="145" y="366" text-anchor="middle" font-size="9" fill="#d1fae5">基础 OCR</text>
+  <text x="145" y="382" text-anchor="middle" font-size="9" fill="#d1fae5">运动检测</text>
+
+  <!-- Layer 2: Understanding (Edge/Fog) -->
+  <rect x="285" y="65" width="230" height="370" rx="10" fill="url(#gFog)" opacity="0.15" stroke="#f59e0b" stroke-width="1.5"/>
+  <rect x="285" y="65" width="230" height="36" rx="10" fill="#f59e0b" opacity="0.3"/>
+  <text x="400" y="90" text-anchor="middle" font-size="14" font-weight="bold" fill="#f59e0b">理解层 · 边缘</text>
+  <text x="400" y="115" text-anchor="middle" font-size="10" fill="#fde68a">延迟 100-500ms · 高隐私</text>
+
+  <!-- Edge device icons -->
+  <g transform="translate(315,135)">
+    <circle cx="25" cy="25" r="22" fill="#92400e" opacity="0.6"/>
+    <text x="25" y="30" text-anchor="middle" font-size="20">📱</text>
+    <text x="25" y="58" text-anchor="middle" font-size="9" fill="#fef3c7">手机</text>
+  </g>
+  <g transform="translate(395,135)">
+    <circle cx="25" cy="25" r="22" fill="#92400e" opacity="0.6"/>
+    <text x="25" y="30" text-anchor="middle" font-size="20">⌚</text>
+    <text x="25" y="58" text-anchor="middle" font-size="9" fill="#fef3c7">手表</text>
+  </g>
+  <g transform="translate(315,210)">
+    <circle cx="25" cy="25" r="22" fill="#92400e" opacity="0.6"/>
+    <text x="25" y="30" text-anchor="middle" font-size="20">👓</text>
+    <text x="25" y="58" text-anchor="middle" font-size="9" fill="#fef3c7">眼镜</text>
+  </g>
+  <g transform="translate(395,210)">
+    <circle cx="25" cy="25" r="22" fill="#92400e" opacity="0.6"/>
+    <text x="25" y="30" text-anchor="middle" font-size="20">🧠</text>
+    <text x="25" y="58" text-anchor="middle" font-size="9" fill="#fef3c7">NPU</text>
+  </g>
+
+  <!-- Edge tasks -->
+  <text x="400" y="300" text-anchor="middle" font-size="10" font-weight="bold" fill="#fde68a">典型任务</text>
+  <text x="400" y="318" text-anchor="middle" font-size="9" fill="#fef3c7">图像描述</text>
+  <text x="400" y="334" text-anchor="middle" font-size="9" fill="#fef3c7">语音转文字</text>
+  <text x="400" y="350" text-anchor="middle" font-size="9" fill="#fef3c7">意图识别</text>
+  <text x="400" y="366" text-anchor="middle" font-size="9" fill="#fef3c7">实时翻译</text>
+  <text x="400" y="382" text-anchor="middle" font-size="9" fill="#fef3c7">健康分析</text>
+
+  <!-- Layer 3: Reasoning (Cloud) -->
+  <rect x="540" y="65" width="230" height="370" rx="10" fill="url(#gCloud)" opacity="0.15" stroke="#3b82f6" stroke-width="1.5"/>
+  <rect x="540" y="65" width="230" height="36" rx="10" fill="#3b82f6" opacity="0.3"/>
+  <text x="655" y="90" text-anchor="middle" font-size="14" font-weight="bold" fill="#60a5fa">推理层 · 云端</text>
+  <text x="655" y="115" text-anchor="middle" font-size="10" fill="#bfdbfe">延迟 1-5s · 加密传输</text>
+
+  <!-- Cloud icons -->
+  <g transform="translate(570,135)">
+    <circle cx="25" cy="25" r="22" fill="#1e40af" opacity="0.6"/>
+    <text x="25" y="30" text-anchor="middle" font-size="20">☁️</text>
+    <text x="25" y="58" text-anchor="middle" font-size="9" fill="#dbeafe">大模型</text>
+  </g>
+  <g transform="translate(650,135)">
+    <circle cx="25" cy="25" r="22" fill="#1e40af" opacity="0.6"/>
+    <text x="25" y="30" text-anchor="middle" font-size="20">🔗</text>
+    <text x="25" y="58" text-anchor="middle" font-size="9" fill="#dbeafe">知识库</text>
+  </g>
+  <g transform="translate(570,210)">
+    <circle cx="25" cy="25" r="22" fill="#1e40af" opacity="0.6"/>
+    <text x="25" y="30" text-anchor="middle" font-size="20">⚡</text>
+    <text x="25" y="58" text-anchor="middle" font-size="9" fill="#dbeafe">GPU集群</text>
+  </g>
+  <g transform="translate(650,210)">
+    <circle cx="25" cy="25" r="22" fill="#1e40af" opacity="0.6"/>
+    <text x="25" y="30" text-anchor="middle" font-size="20">🛡️</text>
+    <text x="25" y="58" text-anchor="middle" font-size="9" fill="#dbeafe">安全飞地</text>
+  </g>
+
+  <!-- Cloud tasks -->
+  <text x="655" y="300" text-anchor="middle" font-size="10" font-weight="bold" fill="#bfdbfe">典型任务</text>
+  <text x="655" y="318" text-anchor="middle" font-size="9" fill="#dbeafe">复杂问答</text>
+  <text x="655" y="334" text-anchor="middle" font-size="9" fill="#dbeafe">长文档分析</text>
+  <text x="655" y="350" text-anchor="middle" font-size="9" fill="#dbeafe">多轮对话</text>
+  <text x="655" y="366" text-anchor="middle" font-size="9" fill="#dbeafe">代码生成</text>
+  <text x="655" y="382" text-anchor="middle" font-size="9" fill="#dbeafe">知识更新</text>
+
+  <!-- Arrows between layers -->
+  <defs>
+    <marker id="arrowG" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#10b981"/>
+    </marker>
+    <marker id="arrowY" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arrowB" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+
+  <!-- Arrow: Perception → Understanding -->
+  <line x1="260" y1="200" x2="285" y2="200" stroke="#10b981" stroke-width="2.5" marker-end="url(#arrowG)"/>
+  <text x="272" y="192" text-anchor="middle" font-size="8" fill="#a7f3d0">特征</text>
+
+  <!-- Arrow: Understanding → Cloud -->
+  <line x1="515" y1="200" x2="540" y2="200" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#arrowY)"/>
+  <text x="527" y="192" text-anchor="middle" font-size="8" fill="#fde68a">加密</text>
+
+  <!-- Arrow: Cloud → Understanding (response) -->
+  <line x1="540" y1="230" x2="515" y2="230" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowB)"/>
+  <text x="527" y="248" text-anchor="middle" font-size="8" fill="#bfdbfe">结果</text>
+
+  <!-- Bottom: Platform logos -->
+  <rect x="30" y="445" width="740" height="45" rx="8" fill="#0d1b2a" opacity="0.6" stroke="#334155" stroke-width="0.5"/>
+  <text x="400" y="462" text-anchor="middle" font-size="10" fill="#94a3b8">三大平台代表</text>
+  <text x="160" y="480" text-anchor="middle" font-size="11" font-weight="bold" fill="#10b981">Apple Intelligence</text>
+  <text x="400" y="480" text-anchor="middle" font-size="11" font-weight="bold" fill="#f59e0b">Google Gemini Nano</text>
+  <text x="640" y="480" text-anchor="middle" font-size="11" font-weight="bold" fill="#60a5fa">Qualcomm Snapdragon</text>
+</svg>
