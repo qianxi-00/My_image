@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4285F4;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#34A853;stop-opacity:0.08"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EA4335;stop-opacity:0.12"/>
+      <stop offset="100%" style="stop-color:#FBBC05;stop-opacity:0.08"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#666"/>
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4285F4"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a2e">Google 多模态生成架构演进：从管线模式到统一模型</text>
+
+  <!-- LEFT: Pipeline Model -->
+  <rect x="30" y="60" width="380" height="430" rx="12" fill="url(#g2)" stroke="#EA4335" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="220" y="90" text-anchor="middle" font-size="15" font-weight="bold" fill="#EA4335">❌ 旧方案：管线模式（Veo 时代）</text>
+
+  <!-- Text Input -->
+  <rect x="60" y="110" width="100" height="40" rx="6" fill="#fff" stroke="#999" stroke-width="1"/>
+  <text x="110" y="135" text-anchor="middle" font-size="12" fill="#333">文本输入</text>
+
+  <!-- Veo -->
+  <rect x="185" y="110" width="100" height="40" rx="6" fill="#E8F0FE" stroke="#4285F4" stroke-width="1.5"/>
+  <text x="235" y="130" text-anchor="middle" font-size="12" font-weight="bold" fill="#4285F4">Veo 3.1</text>
+  <text x="235" y="145" text-anchor="middle" font-size="10" fill="#666">视频扩散模型</text>
+
+  <!-- Imagen -->
+  <rect x="185" y="170" width="100" height="40" rx="6" fill="#E8F5E9" stroke="#34A853" stroke-width="1.5"/>
+  <text x="235" y="190" text-anchor="middle" font-size="12" font-weight="bold" fill="#34A853">Imagen</text>
+  <text x="235" y="205" text-anchor="middle" font-size="10" fill="#666">图像生成</text>
+
+  <!-- Lyria -->
+  <rect x="185" y="230" width="100" height="40" rx="6" fill="#FFF3E0" stroke="#FBBC05" stroke-width="1.5"/>
+  <text x="235" y="250" text-anchor="middle" font-size="12" font-weight="bold" fill="#F9AB00">Lyria</text>
+  <text x="235" y="265" text-anchor="middle" font-size="10" fill="#666">音频合成</text>
+
+  <!-- Editor -->
+  <rect x="185" y="290" width="100" height="40" rx="6" fill="#F3E8FD" stroke="#9C27B0" stroke-width="1.5"/>
+  <text x="235" y="310" text-anchor="middle" font-size="12" font-weight="bold" fill="#9C27B0">外部编辑器</text>
+  <text x="235" y="325" text-anchor="middle" font-size="10" fill="#666">视频后处理</text>
+
+  <!-- Arrows between models -->
+  <line x1="160" y1="130" x2="183" y2="130" stroke="#999" stroke-width="1" marker-end="url(#arrow)"/>
+  <line x1="235" y1="152" x2="235" y2="168" stroke="#999" stroke-width="1" marker-end="url(#arrow)"/>
+  <line x1="235" y1="212" x2="235" y2="228" stroke="#999" stroke-width="1" marker-end="url(#arrow)"/>
+  <line x1="235" y1="272" x2="235" y2="288" stroke="#999" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- Pain points -->
+  <rect x="60" y="350" width="320" height="120" rx="8" fill="#FFF8E1" stroke="#FF9800" stroke-width="1"/>
+  <text x="220" y="372" text-anchor="middle" font-size="12" font-weight="bold" fill="#E65100">⚠ 管线瓶颈</text>
+  <text x="80" y="395" font-size="11" fill="#555">• 模态间语义信息丢失（模型 A→B→C 互相不理解）</text>
+  <text x="80" y="413" font-size="11" fill="#555">• 复合任务需切换 3+ 系统，工程链路脆弱</text>
+  <text x="80" y="431" font-size="11" fill="#555">• 编辑需跳出生成管线，无法端到端优化</text>
+  <text x="80" y="449" font-size="11" fill="#555">• 无法实现跨模态联合训练的涌现能力</text>
+  <text x="80" y="467" font-size="11" fill="#555">• 用户提示词理解受限于单一模态上下文</text>
+
+  <!-- CENTER: Arrow -->
+  <line x1="420" y1="280" x2="490" y2="280" stroke="#4285F4" stroke-width="3" marker-end="url(#arrow-blue)"/>
+  <text x="455" y="265" text-anchor="middle" font-size="11" font-weight="bold" fill="#4285F4">范式</text>
+  <text x="455" y="280" text-anchor="middle" font-size="11" font-weight="bold" fill="#4285F4">转移</text>
+
+  <!-- RIGHT: Unified Model -->
+  <rect x="500" y="60" width="370" height="430" rx="12" fill="url(#g1)" stroke="#4285F4" stroke-width="1.5"/>
+  <text x="685" y="90" text-anchor="middle" font-size="15" font-weight="bold" fill="#4285F4">✅ 新方案：统一模型（Gemini Omni）</text>
+
+  <!-- Unified core -->
+  <rect x="570" y="120" width="230" height="180" rx="16" fill="#E8F0FE" stroke="#4285F4" stroke-width="2.5"/>
+  <text x="685" y="152" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a73e8">Gemini Omni</text>
+  <text x="685" y="172" text-anchor="middle" font-size="11" fill="#555">统一 Transformer 架构</text>
+
+  <!-- Four modalities inside -->
+  <rect x="590" y="190" width="90" height="30" rx="4" fill="#fff" stroke="#4285F4" stroke-width="1"/>
+  <text x="635" y="210" text-anchor="middle" font-size="11" fill="#333">📝 文本</text>
+
+  <rect x="690" y="190" width="90" height="30" rx="4" fill="#fff" stroke="#34A853" stroke-width="1"/>
+  <text x="735" y="210" text-anchor="middle" font-size="11" fill="#333">🖼 图像</text>
+
+  <rect x="590" y="230" width="90" height="30" rx="4" fill="#fff" stroke="#FBBC05" stroke-width="1"/>
+  <text x="635" y="250" text-anchor="middle" font-size="11" fill="#333">🔊 音频</text>
+
+  <rect x="690" y="230" width="90" height="30" rx="4" fill="#fff" stroke="#EA4335" stroke-width="1"/>
+  <text x="735" y="250" text-anchor="middle" font-size="11" fill="#333">🎬 视频</text>
+
+  <text x="685" y="283" text-anchor="middle" font-size="10" fill="#888">跨模态联合训练 · 端到端生成</text>
+
+  <!-- Input arrows to unified model -->
+  <rect x="520" y="330" width="80" height="32" rx="4" fill="#fff" stroke="#999" stroke-width="1"/>
+  <text x="560" y="351" text-anchor="middle" font-size="10" fill="#333">文本提示</text>
+  <line x1="560" y1="330" x2="630" y2="302" stroke="#666" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <rect x="610" y="330" width="80" height="32" rx="4" fill="#fff" stroke="#999" stroke-width="1"/>
+  <text x="650" y="351" text-anchor="middle" font-size="10" fill="#333">参考图像</text>
+  <line x1="660" y1="330" x2="670" y2="302" stroke="#666" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <rect x="700" y="330" width="80" height="32" rx="4" fill="#fff" stroke="#999" stroke-width="1"/>
+  <text x="740" y="351" text-anchor="middle" font-size="10" fill="#333">音频输入</text>
+  <line x1="740" y1="330" x2="720" y2="302" stroke="#666" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- Output -->
+  <rect x="570" y="380" width="230" height="40" rx="8" fill="#E8F5E9" stroke="#34A853" stroke-width="1.5"/>
+  <text x="685" y="400" text-anchor="middle" font-size="12" font-weight="bold" fill="#2E7D32">🎞 统一输出：视频 + 同步音频 + 帧级编辑</text>
+  <line x1="685" y1="302" x2="685" y2="378" stroke="#34A853" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Benefits -->
+  <rect x="520" y="430" width="330" height="48" rx="8" fill="#E8F5E9" stroke="#34A853" stroke-width="1"/>
+  <text x="685" y="450" text-anchor="middle" font-size="11" font-weight="bold" fill="#2E7D32">💡 核心优势：跨模态语义保留 · 端到端优化</text>
+  <text x="685" y="468" text-anchor="middle" font-size="10" fill="#555">对话式编辑 · 单次推理完成复合任务 · 涌现能力</text>
+
+  <!-- Footer -->
+  <text x="450" y="510" text-anchor="middle" font-size="10" fill="#999">数据来源：Google I/O 2026 · Google DeepMind · TechCrunch | 制图：AI Hotspot</text>
+</svg>
