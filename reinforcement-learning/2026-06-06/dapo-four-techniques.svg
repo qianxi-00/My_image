@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">DAPO 四个关键技术</title>
+  <desc id="desc">Clip-Higher、Dynamic Sampling、Token-Level Policy Gradient Loss、Overlong Reward Shaping 对应四类训练问题</desc>
+  <defs><style>.bg{fill:#fffdf8}.card{fill:#fff;stroke:#1f4e79;stroke-width:3;rx:22}.problem{fill:#fff0e5;stroke:#c76b00}.fix{fill:#eaf4ff}.txt{font-family:"Microsoft YaHei",Arial,sans-serif;fill:#17324d}.title{font-size:34px;font-weight:800}.mid{font-size:26px;font-weight:800}.small{font-size:21px}.arrow{stroke:#1f4e79;stroke-width:4;fill:none;marker-end:url(#a)}</style><marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#1f4e79"/></marker></defs>
+  <rect class="bg" width="1280" height="720"/>
+  <text class="txt title" x="60" y="60">DAPO：四个技巧修 GRPO 在 long-CoT 中的四类训练病</text>
+  <g>
+    <rect class="card problem" x="90" y="120" width="430" height="105"/><text class="txt mid" x="130" y="165">Entropy collapse</text><text class="txt small" x="130" y="198">模型越来越确定，探索空间变小</text>
+    <rect class="card fix" x="760" y="120" width="430" height="105"/><text class="txt mid" x="800" y="165">Clip-Higher</text><text class="txt small" x="800" y="198">放宽上裁剪，扶起低概率探索 token</text>
+    <path class="arrow" d="M520 172 H760"/>
+  </g>
+  <g>
+    <rect class="card problem" x="90" y="270" width="430" height="105"/><text class="txt mid" x="130" y="315">全对 / 全错样本组</text><text class="txt small" x="130" y="348">组内优势接近 0，梯度无效</text>
+    <rect class="card fix" x="760" y="270" width="430" height="105"/><text class="txt mid" x="800" y="315">Dynamic Sampling</text><text class="txt small" x="800" y="348">只保留有对有错的有效组</text>
+    <path class="arrow" d="M520 322 H760"/>
+  </g>
+  <g>
+    <rect class="card problem" x="90" y="420" width="430" height="105"/><text class="txt mid" x="130" y="465">长 CoT token 信号稀释</text><text class="txt small" x="130" y="498">样本级平均让长回答 token 权重变弱</text>
+    <rect class="card fix" x="760" y="420" width="430" height="105"/><text class="txt mid" x="800" y="465">Token-Level Loss</text><text class="txt small" x="800" y="498">按 token 聚合，保留长推理信号</text>
+    <path class="arrow" d="M520 472 H760"/>
+  </g>
+  <g>
+    <rect class="card problem" x="90" y="570" width="430" height="105"/><text class="txt mid" x="130" y="615">过长截断 reward noise</text><text class="txt small" x="130" y="648">正确思路也可能因超长被粗暴惩罚</text>
+    <rect class="card fix" x="760" y="570" width="430" height="105"/><text class="txt mid" x="800" y="615">Overlong Reward Shaping</text><text class="txt small" x="800" y="648">用平滑长度反馈降低噪声</text>
+    <path class="arrow" d="M520 622 H760"/>
+  </g>
+</svg>
