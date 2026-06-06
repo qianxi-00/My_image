@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ecfeff"/>
+      <stop offset="55%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#fff7ed"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0f766e"/>
+    </marker>
+    <style>
+      text { font-family: "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #0f172a; }
+      .h1 { font-size: 30px; font-weight: 800; }
+      .subtitle { font-size: 17px; fill: #475569; }
+      .title { font-size: 20px; font-weight: 700; }
+      .body { font-size: 15px; fill: #475569; }
+      .small { font-size: 13px; fill: #64748b; }
+    </style>
+  </defs>
+  <rect width="1200" height="520" fill="url(#bg)"/>
+  <text x="60" y="54" class="h1">RoPE：用旋转表示相对位置</text>
+  <text x="60" y="84" class="subtitle">位置不再只是加一个向量，而是在不同频率维度上旋转 Q/K，使相对距离进入注意力分数。</text>
+  
+  <circle cx="330" cy="275" r="130" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+  <path d="M330 275 L455 240" stroke="#2563eb" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M330 275 L395 390" stroke="#ea580c" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M390 252 A70 70 0 0 1 405 334" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="468" y="235" class="title">position i</text>
+  <text x="405" y="415" class="title">position j</text>
+  <text x="318" y="225" text-anchor="middle" class="body">旋转角度差</text>
+  <text x="720" y="235" class="title">Attention(Qi, Kj)</text>
+  <text x="720" y="280" class="body">点积天然包含相对位置 i-j</text>
+  <text x="720" y="325" class="body">适合长上下文外推与位置泛化</text>
+
+</svg>
