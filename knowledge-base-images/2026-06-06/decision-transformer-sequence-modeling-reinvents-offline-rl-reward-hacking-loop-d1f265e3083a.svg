@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 520" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#d32f2f"/>
+    </marker>
+    <marker id="arrowhead-blue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#1565c0"/>
+    </marker>
+    <marker id="arrowhead-green" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrowhead-orange" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e65100"/>
+    </marker>
+  </defs>
+
+  <!-- 标题 -->
+  <text x="550" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#212121">Reward Hacking 反馈循环机制</text>
+  <text x="550" y="68" text-anchor="middle" font-size="14" fill="#757575">策略优化代理奖励 → 分布漂移 → 奖励模型被利用 → 真实奖励下降</text>
+
+  <!-- 外层大循环箭头（红虚线） -->
+  <path d="M 240 200 Q 550 420 860 200" fill="none" stroke="#d32f2f" stroke-width="3" stroke-dasharray="10 6" marker-end="url(#arrowhead)"/>
+  <text x="550" y="390" text-anchor="middle" font-size="15" font-weight="bold" fill="#d32f2f">恶性循环</text>
+
+  <!-- 第一阶段：策略模型 -->
+  <rect x="60" y="140" width="200" height="120" rx="16" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="160" y="182" text-anchor="middle" font-size="16" font-weight="bold" fill="#1565c0">① 策略模型优化</text>
+  <text x="160" y="208" text-anchor="middle" font-size="13" fill="#424242">π_θ 最大化代理奖励</text>
+  <text x="160" y="230" text-anchor="middle" font-size="12" fill="#757575">强化学习 / 最佳-N采样</text>
+
+  <!-- 第二阶段：分布漂移 -->
+  <rect x="360" y="140" width="200" height="120" rx="16" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="460" y="182" text-anchor="middle" font-size="16" font-weight="bold" fill="#e65100">② 分布漂移</text>
+  <text x="460" y="208" text-anchor="middle" font-size="13" fill="#424242">策略输出偏离训练分布</text>
+  <text x="460" y="230" text-anchor="middle" font-size="12" fill="#757575">OOD 裁剪 / 幻觉 / 套路化</text>
+
+  <!-- 第三阶段：奖励模型被利用 -->
+  <rect x="660" y="140" width="200" height="120" rx="16" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
+  <text x="760" y="182" text-anchor="middle" font-size="16" font-weight="bold" fill="#c62828">③ 代理奖励被利用</text>
+  <text x="760" y="208" text-anchor="middle" font-size="13" fill="#424242">Goodhart 效应显化</text>
+  <text x="760" y="230" text-anchor="middle" font-size="12" fill="#757575">Proxy ≫ Gold → 失真</text>
+
+  <!-- 第四阶段：真实奖励下降 -->
+  <rect x="410" y="440" width="280" height="60" rx="16" fill="#ffebee" stroke="#b71c1c" stroke-width="2.5"/>
+  <text x="550" y="468" text-anchor="middle" font-size="15" font-weight="bold" fill="#b71c1c">④ 真实奖励（Gold RM）下降</text>
+  <text x="550" y="488" text-anchor="middle" font-size="12" fill="#757575">策略质量 ≠ 代理分数 ↑↑</text>
+
+  <!-- 连接箭头 -->
+  <line x1="260" y1="200" x2="356" y2="200" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrowhead-blue)"/>
+  <line x1="560" y1="200" x2="656" y2="200" stroke="#e65100" stroke-width="2.5" marker-end="url(#arrowhead-orange)"/>
+  <path d="M 760 260 Q 760 380 690 440" fill="none" stroke="#c62828" stroke-width="2.5" marker-end="url(#arrowhead)"/>
+  <path d="M 410 440 Q 200 380 160 260" fill="none" stroke="#2e7d32" stroke-width="2.5" marker-end="url(#arrowhead-green)"/>
+
+  <!-- 旁注 -->
+  <text x="880" y="320" font-size="12" fill="#616161">KL 惩罚可减缓</text>
+  <text x="880" y="338" font-size="12" fill="#616161">但无法根治</text>
+  <line x1="860" y1="260" x2="860" y2="310" stroke="#9e9e9e" stroke-width="1" stroke-dasharray="4 3"/>
+
+  <!-- Goodhart 标注 -->
+  <rect x="780" y="80" width="260" height="50" rx="8" fill="#fff8e1" stroke="#f9a825" stroke-width="1.5"/>
+  <text x="910" y="100" text-anchor="middle" font-size="13" font-weight="bold" fill="#e65100">Goodhart's Law</text>
+  <text x="910" y="118" text-anchor="middle" font-size="11" fill="#757575">"当指标成为目标，它就不再是好指标"</text>
+</svg>
