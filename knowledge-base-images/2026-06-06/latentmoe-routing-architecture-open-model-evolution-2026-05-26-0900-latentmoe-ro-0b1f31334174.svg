@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#43e97b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38f9d7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a2e">LatentMoE vs 标准 MoE 路由架构对比</text>
+
+  <!-- Left: Standard MoE -->
+  <rect x="30" y="55" width="400" height="440" rx="12" fill="#f8f9ff" stroke="#667eea" stroke-width="2"/>
+  <text x="230" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="#667eea">标准 MoE 路由（Top-K）</text>
+
+  <!-- Token input -->
+  <rect x="140" y="95" width="180" height="35" rx="8" fill="url(#g1)" opacity="0.9"/>
+  <text x="230" y="118" text-anchor="middle" font-size="12" fill="white">输入 Token 隐藏表示 h∈R^d</text>
+
+  <!-- Arrow -->
+  <line x1="230" y1="130" x2="230" y2="155" stroke="#667eea" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#667eea"/></marker></defs>
+
+  <!-- Router -->
+  <rect x="140" y="158" width="180" height="35" rx="8" fill="url(#g2)" opacity="0.9"/>
+  <text x="230" y="180" text-anchor="middle" font-size="12" fill="white">Router: Softmax(W_r · h)</text>
+
+  <!-- Arrows to experts -->
+  <line x1="170" y1="193" x2="100" y2="230" stroke="#f5576c" stroke-width="1.5"/>
+  <line x1="200" y1="193" x2="170" y2="230" stroke="#f5576c" stroke-width="1.5"/>
+  <line x1="230" y1="193" x2="230" y2="230" stroke="#f5576c" stroke-width="2"/>
+  <line x1="260" y1="193" x2="290" y2="230" stroke="#f5576c" stroke-width="1.5"/>
+  <line x1="290" y1="193" x2="360" y2="230" stroke="#f5576c" stroke-width="1.5"/>
+  <text x="230" y="218" text-anchor="middle" font-size="10" fill="#888">Top-K 选择（K=2）</text>
+
+  <!-- Experts (standard) -->
+  <rect x="55" y="232" width="70" height="50" rx="6" fill="#e8eaff" stroke="#667eea" stroke-width="1"/>
+  <text x="90" y="252" text-anchor="middle" font-size="10" fill="#667eea">Expert 1</text>
+  <text x="90" y="268" text-anchor="middle" font-size="9" fill="#888">FFN_d</text>
+
+  <rect x="135" y="232" width="70" height="50" rx="6" fill="#e8eaff" stroke="#667eea" stroke-width="1"/>
+  <text x="170" y="252" text-anchor="middle" font-size="10" fill="#667eea">Expert 2</text>
+  <text x="170" y="268" text-anchor="middle" font-size="9" fill="#888">FFN_d</text>
+
+  <rect x="215" y="232" width="70" height="50" rx="6" fill="#ffe8e8" stroke="#f5576c" stroke-width="2"/>
+  <text x="250" y="252" text-anchor="middle" font-size="10" fill="#f5576c">Expert 3</text>
+  <text x="250" y="268" text-anchor="middle" font-size="9" fill="#888">FFN_d</text>
+
+  <rect x="295" y="232" width="70" height="50" rx="6" fill="#ffe8e8" stroke="#f5576c" stroke-width="2"/>
+  <text x="330" y="252" text-anchor="middle" font-size="10" fill="#f5576c">Expert 4</text>
+  <text x="330" y="268" text-anchor="middle" font-size="9" fill="#888">FFN_d</text>
+
+  <rect x="55" y="290" width="70" height="50" rx="6" fill="#e8eaff" stroke="#667eea" stroke-width="1" opacity="0.4"/>
+  <text x="90" y="310" text-anchor="middle" font-size="10" fill="#667eea" opacity="0.5">Expert 5</text>
+  <text x="90" y="326" text-anchor="middle" font-size="9" fill="#888" opacity="0.5">FFN_d</text>
+
+  <rect x="135" y="290" width="70" height="50" rx="6" fill="#e8eaff" stroke="#667eea" stroke-width="1" opacity="0.4"/>
+  <text x="170" y="310" text-anchor="middle" font-size="10" fill="#667eea" opacity="0.5">Expert 6</text>
+  <text x="170" y="326" text-anchor="middle" font-size="9" fill="#888" opacity="0.5">FFN_d</text>
+
+  <rect x="215" y="290" width="70" height="50" rx="6" fill="#e8eaff" stroke="#667eea" stroke-width="1" opacity="0.4"/>
+  <text x="250" y="310" text-anchor="middle" font-size="10" fill="#667eea" opacity="0.5">Expert 7</text>
+  <text x="250" y="326" text-anchor="middle" font-size="9" fill="#888" opacity="0.5">FFN_d</text>
+
+  <rect x="295" y="290" width="70" height="50" rx="6" fill="#e8eaff" stroke="#667eea" stroke-width="1" opacity="0.4"/>
+  <text x="330" y="310" text-anchor="middle" font-size="10" fill="#667eea" opacity="0.5">Expert 8</text>
+  <text x="330" y="326" text-anchor="middle" font-size="9" fill="#888" opacity="0.5">FFN_d</text>
+
+  <!-- Combine -->
+  <line x1="250" y1="282" x2="230" y2="360" stroke="#f5576c" stroke-width="1.5"/>
+  <line x1="330" y1="282" x2="230" y2="360" stroke="#f5576c" stroke-width="1.5"/>
+  <rect x="150" y="362" width="160" height="32" rx="8" fill="url(#g1)" opacity="0.8"/>
+  <text x="230" y="383" text-anchor="middle" font-size="11" fill="white">加权求和 Σ g_i·E_i(x)</text>
+
+  <!-- Output -->
+  <rect x="165" y="410" width="130" height="30" rx="8" fill="url(#g3)" opacity="0.9"/>
+  <text x="230" y="430" text-anchor="middle" font-size="11" fill="white">输出 ∈ R^d</text>
+
+  <!-- Stats -->
+  <text x="230" y="465" text-anchor="middle" font-size="11" fill="#555">激活参数: 2 × FFN_d</text>
+  <text x="230" y="482" text-anchor="middle" font-size="11" fill="#555">通信开销: 高（全维度路由）</text>
+
+  <!-- VS -->
+  <text x="450" y="290" text-anchor="middle" font-size="24" font-weight="bold" fill="#ccc">VS</text>
+
+  <!-- Right: LatentMoE -->
+  <rect x="470" y="55" width="400" height="440" rx="12" fill="#f0fff8" stroke="#43e97b" stroke-width="2"/>
+  <text x="670" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="#2d8a56">LatentMoE 路由（潜空间压缩）</text>
+
+  <!-- Token input -->
+  <rect x="580" y="95" width="180" height="35" rx="8" fill="url(#g1)" opacity="0.9"/>
+  <text x="670" y="118" text-anchor="middle" font-size="12" fill="white">输入 Token 隐藏表示 h∈R^d</text>
+
+  <!-- Compress arrow -->
+  <line x1="670" y1="130" x2="670" y2="150" stroke="#43e97b" stroke-width="2" marker-end="url(#arrow2)"/>
+  <defs><marker id="arrow2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#43e97b"/></marker></defs>
+
+  <!-- Down-projection -->
+  <rect x="570" y="153" width="200" height="35" rx="8" fill="url(#g4)" opacity="0.9"/>
+  <text x="670" y="175" text-anchor="middle" font-size="11" fill="white">↓ 下投影 W_down: R^d → R^c (c≪d)</text>
+
+  <!-- Latent space -->
+  <rect x="560" y="205" width="220" height="80" rx="10" fill="#e0fff0" stroke="#43e97b" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="670" y="225" text-anchor="middle" font-size="11" font-weight="bold" fill="#2d8a56">潜空间 (Latent Space)</text>
+
+  <!-- Latent router -->
+  <rect x="580" y="235" width="180" height="30" rx="8" fill="url(#g2)" opacity="0.8"/>
+  <text x="670" y="255" text-anchor="middle" font-size="11" fill="white">Router: Softmax(W_r' · z)</text>
+
+  <!-- Latent experts (more of them) -->
+  <line x1="610" y1="265" x2="545" y2="298" stroke="#f5576c" stroke-width="1"/>
+  <line x1="640" y1="265" x2="600" y2="298" stroke="#f5576c" stroke-width="1"/>
+  <line x1="670" y1="265" x2="655" y2="298" stroke="#f5576c" stroke-width="1.5"/>
+  <line x1="700" y1="265" x2="710" y2="298" stroke="#f5576c" stroke-width="1"/>
+  <line x1="730" y1="265" x2="765" y2="298" stroke="#f5576c" stroke-width="1"/>
+
+  <rect x="525" y="300" width="50" height="35" rx="5" fill="#ffe8e8" stroke="#f5576c" stroke-width="1.5"/>
+  <text x="550" y="315" text-anchor="middle" font-size="9" fill="#f5576c">E₁</text>
+  <text x="550" y="328" text-anchor="middle" font-size="8" fill="#888">FFN_c</text>
+
+  <rect x="580" y="300" width="50" height="35" rx="5" fill="#ffe8e8" stroke="#f5576c" stroke-width="1.5"/>
+  <text x="605" y="315" text-anchor="middle" font-size="9" fill="#f5576c">E₂</text>
+  <text x="605" y="328" text-anchor="middle" font-size="8" fill="#888">FFN_c</text>
+
+  <rect x="635" y="300" width="50" height="35" rx="5" fill="#ffe8e8" stroke="#f5576c" stroke-width="2"/>
+  <text x="660" y="315" text-anchor="middle" font-size="9" fill="#f5576c">E₃</text>
+  <text x="660" y="328" text-anchor="middle" font-size="8" fill="#888">FFN_c</text>
+
+  <rect x="690" y="300" width="50" height="35" rx="5" fill="#ffe8e8" stroke="#f5576c" stroke-width="2"/>
+  <text x="715" y="315" text-anchor="middle" font-size="9" fill="#f5576c">E₄</text>
+  <text x="715" y="328" text-anchor="middle" font-size="8" fill="#888">FFN_c</text>
+
+  <rect x="745" y="300" width="50" height="35" rx="5" fill="#ffe8e8" stroke="#f5576c" stroke-width="1.5"/>
+  <text x="770" y="315" text-anchor="middle" font-size="9" fill="#f5576c">E₅</text>
+  <text x="770" y="328" text-anchor="middle" font-size="8" fill="#888">FFN_c</text>
+
+  <text x="670" y="350" text-anchor="middle" font-size="9" fill="#888">... E₆ ~ E₁₆（等效 4× 激活）</text>
+
+  <!-- Up-projection -->
+  <line x1="670" y1="340" x2="670" y2="370" stroke="#43e97b" stroke-width="2"/>
+  <rect x="570" y="372" width="200" height="35" rx="8" fill="url(#g4)" opacity="0.9"/>
+  <text x="670" y="394" text-anchor="middle" font-size="11" fill="white">↑ 上投影 W_up: R^c → R^d</text>
+
+  <!-- Output -->
+  <rect x="605" y="422" width="130" height="30" rx="8" fill="url(#g3)" opacity="0.9"/>
+  <text x="670" y="442" text-anchor="middle" font-size="11" fill="white">输出 ∈ R^d</text>
+
+  <!-- Stats -->
+  <text x="670" y="472" text-anchor="middle" font-size="11" fill="#2d8a56">激活参数: 2 × FFN_c + 投影（c≪d）</text>
+  <text x="670" y="489" text-anchor="middle" font-size="11" fill="#2d8a56">通信开销: 低（压缩维度路由）</text>
+
+  <!-- Key insight box -->
+  <rect x="200" y="505" width="500" height="30" rx="8" fill="#fff3e0" stroke="#ff9800" stroke-width="1"/>
+  <text x="450" y="525" text-anchor="middle" font-size="11" fill="#e65100">核心差异: LatentMoE 在低维潜空间做路由 → 等效更多专家激活 + 更低通信开销</text>
+</svg>
