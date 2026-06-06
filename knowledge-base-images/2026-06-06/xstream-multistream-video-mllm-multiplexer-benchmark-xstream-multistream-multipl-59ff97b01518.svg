@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#e0f2fe"/></linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#f1f5f9"/></linearGradient>
+    <style>
+      .title{font:700 34px system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#0f172a}.sub{font:500 18px system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#475569}.label{font:700 20px system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#0f172a}.txt{font:500 16px system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#475569}.small{font:600 14px system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#64748b}.box{fill:url(#card);stroke:#cbd5e1;stroke-width:2}.blue{fill:#e0f2fe;stroke:#38bdf8}.indigo{fill:#eef2ff;stroke:#818cf8}.cyan{fill:#ecfeff;stroke:#22d3ee}.red{fill:#fff1f2;stroke:#fb7185}.arrow{stroke:#334155;stroke-width:3;fill:none;marker-end:url(#arrow)}
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+  </defs>
+  <rect width="1200" height="680" rx="34" fill="url(#bg)"/>
+  <text x="70" y="72" class="title">X-Stream：多流视频理解中的“多路复用器”瓶颈</text>
+  <text x="70" y="108" class="sub">多路同步视频输入不只是更长上下文，而是 token 预算、跨流对齐与实时响应的共同压力测试</text>
+  <g transform="translate(70,160)">
+    <rect class="box blue" x="0" y="0" width="210" height="88" rx="18"/><text class="label" x="24" y="36">Stream A</text><text class="txt" x="24" y="64">前视/主画面</text>
+    <rect class="box blue" x="0" y="120" width="210" height="88" rx="18"/><text class="label" x="24" y="156">Stream B</text><text class="txt" x="24" y="184">侧视/辅助视角</text>
+    <rect class="box blue" x="0" y="240" width="210" height="88" rx="18"/><text class="label" x="24" y="276">Stream C</text><text class="txt" x="24" y="304">音视频同步流</text>
+  </g>
+  <path class="arrow" d="M300 205 C370 205 390 245 445 275"/><path class="arrow" d="M300 325 C370 325 390 315 445 315"/><path class="arrow" d="M300 445 C370 445 390 385 445 355"/>
+  <g transform="translate(445,220)"><rect class="box indigo" x="0" y="0" width="300" height="180" rx="24"/><text class="label" x="28" y="44">朴素 MLLM 多路复用器</text><text class="txt" x="28" y="82">空间分割 / 时序分割 / 语义分割</text><text class="txt" x="28" y="116">在有限上下文里选择、压缩、对齐</text><text class="small" x="28" y="150">瓶颈：跨流注意力、token 带宽、实时调度</text></g>
+  <path class="arrow" d="M760 310 C825 310 850 310 905 310"/>
+  <g transform="translate(905,220)"><rect class="box red" x="0" y="0" width="225" height="180" rx="24"/><text class="label" x="26" y="44">评测结果</text><text class="txt" x="26" y="82">强模型约 50% 正确率</text><text class="txt" x="26" y="116">单流捷径被双验证过滤</text><text class="small" x="26" y="150">说明多流感知仍是开放问题</text></g>
+  <g transform="translate(120,540)"><rect class="box cyan" x="0" y="0" width="960" height="72" rx="20"/><text class="label" x="28" y="31">工程含义</text><text class="txt" x="160" y="31">自动驾驶、直播多机位、机器人与办公协同场景，需要从“单流视频问答”升级为“多流实时感知调度”。</text><text class="small" x="160" y="56">这也是 X-Stream 比普通多视频 benchmark 更值得关注的地方。</text></g>
+</svg>
