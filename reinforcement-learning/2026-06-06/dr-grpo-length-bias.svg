@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Dr.GRPO 长度偏置</title>
+  <desc id="desc">按回答长度平均 loss 可能让长错误回答受到的惩罚被稀释</desc>
+  <defs><style>.bg{fill:#fffafa}.card{fill:#fff;stroke:#1f4e79;stroke-width:3;rx:22}.bad{fill:#fff0f0;stroke:#b94a48}.good{fill:#eef8ed;stroke:#2e7d32}.txt{font-family:"Microsoft YaHei",Arial,sans-serif;fill:#17324d}.title{font-size:34px;font-weight:800}.mid{font-size:27px;font-weight:800}.small{font-size:21px}.bar1{fill:#2e7d32}.bar2{fill:#b94a48}.bar3{fill:#f3b05f}.arrow{stroke:#b94a48;stroke-width:4;fill:none;marker-end:url(#a)}</style><marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#b94a48"/></marker></defs>
+  <rect class="bg" width="1280" height="720"/>
+  <text class="txt title" x="60" y="60">Dr.GRPO：警惕“长错误回答”被长度平均保护</text>
+  <rect class="card good" x="95" y="135" width="520" height="250"/>
+  <text class="txt mid" x="140" y="180">短错误回答</text>
+  <text class="txt small" x="140" y="225">长度：10 tokens</text>
+  <text class="txt small" x="140" y="260">负优势：$\hat A=-1$</text>
+  <rect class="bar2" x="140" y="305" width="360" height="42" rx="12"/>
+  <text class="txt small" x="520" y="334">惩罚集中</text>
+  <rect class="card bad" x="665" y="135" width="520" height="250"/>
+  <text class="txt mid" x="710" y="180">长错误回答</text>
+  <text class="txt small" x="710" y="225">长度：100 tokens</text>
+  <text class="txt small" x="710" y="260">负优势：$\hat A=-1$</text>
+  <rect class="bar3" x="710" y="305" width="70" height="42" rx="12"/>
+  <text class="txt small" x="800" y="334">按长度平均后，单 token 惩罚变弱</text>
+  <path class="arrow" d="M925 385 C925 455 925 455 925 500"/>
+  <rect class="card bad" x="250" y="500" width="780" height="115"/>
+  <text class="txt mid" x="315" y="548">风险：错误回答也越来越长</text>
+  <text class="txt small" x="315" y="588">回答变长不一定等于推理增强，可能是 loss 归一化造成的无效长度膨胀。</text>
+</svg>
