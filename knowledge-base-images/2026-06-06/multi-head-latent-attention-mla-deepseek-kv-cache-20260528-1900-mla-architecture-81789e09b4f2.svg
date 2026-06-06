@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#333"/>
+    </marker>
+    <linearGradient id="latentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e8f4f8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b8e0e8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="contentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f0f8e8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c8e8b8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="posGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#fff3e0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffe0b2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a1a">Multi-head Latent Attention (MLA) 架构示意图</text>
+
+  <!-- Input h_t -->
+  <rect x="350" y="55" width="200" height="40" rx="6" fill="#4a90d9" stroke="#2c5f8a" stroke-width="1.5"/>
+  <text x="450" y="80" text-anchor="middle" font-size="13" fill="white" font-weight="bold">h_t ∈ ℝ^d （注意力输入）</text>
+
+  <!-- Arrow down from h_t -->
+  <line x1="450" y1="95" x2="450" y2="120" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- Three branches from h_t -->
+  <!-- Left branch: W_DKV (Down-projection) -->
+  <line x1="450" y1="120" x2="200" y2="120" stroke="#333" stroke-width="1.5"/>
+  <line x1="200" y1="120" x2="200" y2="145" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- Center branch: W_Q -->
+  <line x1="450" y1="120" x2="450" y2="145" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- Right branch: W_KR (position path) -->
+  <line x1="450" y1="120" x2="700" y2="120" stroke="#333" stroke-width="1.5"/>
+  <line x1="700" y1="120" x2="700" y2="145" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- W_DKV box -->
+  <rect x="110" y="145" width="180" height="40" rx="6" fill="#e74c3c" stroke="#c0392b" stroke-width="1.5"/>
+  <text x="200" y="170" text-anchor="middle" font-size="12" fill="white" font-weight="bold">W_DKV 下投影矩阵</text>
+
+  <!-- W_Q box -->
+  <rect x="370" y="145" width="160" height="40" rx="6" fill="#8e44ad" stroke="#6c3483" stroke-width="1.5"/>
+  <text x="450" y="170" text-anchor="middle" font-size="12" fill="white" font-weight="bold">W_Q Query 投影</text>
+
+  <!-- W_KR box -->
+  <rect x="610" y="145" width="180" height="40" rx="6" fill="#e67e22" stroke="#d35400" stroke-width="1.5"/>
+  <text x="700" y="170" text-anchor="middle" font-size="12" fill="white" font-weight="bold">W_KR 位置 Key 投影</text>
+
+  <!-- Arrow from W_DKV down to c_KV -->
+  <line x1="200" y1="185" x2="200" y2="220" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- Latent vector c_KV (core of MLA) -->
+  <rect x="100" y="220" width="200" height="50" rx="8" fill="url(#latentGrad)" stroke="#2980b9" stroke-width="2"/>
+  <text x="200" y="243" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a5276">c_t^KV ∈ ℝ^d_c</text>
+  <text x="200" y="260" text-anchor="middle" font-size="10" fill="#555">低秩潜向量（缓存项）</text>
+
+  <!-- Big dashed box for "Cache" -->
+  <rect x="70" y="210" width="260" height="70" rx="10" fill="none" stroke="#2980b9" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="85" y="228" font-size="10" fill="#2980b9" font-weight="bold">💾 推理时缓存</text>
+
+  <!-- Arrow from c_KV down to two up-projections -->
+  <line x1="200" y1="270" x2="200" y2="305" stroke="#333" stroke-width="1.5"/>
+  <line x1="200" y1="305" x2="130" y2="305" stroke="#333" stroke-width="1.5"/>
+  <line x1="200" y1="305" x2="270" y2="305" stroke="#333" stroke-width="1.5"/>
+  <line x1="130" y1="305" x2="130" y2="320" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="270" y1="305" x2="270" y2="320" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- W_UK box -->
+  <rect x="55" y="320" width="150" height="36" rx="6" fill="#27ae60" stroke="#1e8449" stroke-width="1.5"/>
+  <text x="130" y="343" text-anchor="middle" font-size="11" fill="white" font-weight="bold">W_UK 上投影</text>
+
+  <!-- W_UV box -->
+  <rect x="195" y="320" width="150" height="36" rx="6" fill="#27ae60" stroke="#1e8449" stroke-width="1.5"/>
+  <text x="270" y="343" text-anchor="middle" font-size="11" fill="white" font-weight="bold">W_UV 上投影</text>
+
+  <!-- k_C and v outputs -->
+  <line x1="130" y1="356" x2="130" y2="385" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="270" y1="356" x2="270" y2="385" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <rect x="65" y="385" width="130" height="36" rx="6" fill="url(#contentGrad)" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="130" y="408" text-anchor="middle" font-size="11" fill="#1a5276" font-weight="bold">k_t^C (内容 Key)</text>
+
+  <rect x="205" y="385" width="130" height="36" rx="6" fill="url(#contentGrad)" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="270" y="408" text-anchor="middle" font-size="11" fill="#1a5276" font-weight="bold">v_t (Value)</text>
+
+  <!-- Position path -->
+  <line x1="700" y1="185" x2="700" y2="220" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- RoPE box -->
+  <rect x="620" y="220" width="160" height="40" rx="6" fill="#e67e22" stroke="#d35400" stroke-width="1.5"/>
+  <text x="700" y="237" text-anchor="middle" font-size="11" fill="white" font-weight="bold">RoPE 位置编码</text>
+  <text x="700" y="252" text-anchor="middle" font-size="9" fill="white">cos/sin 旋转</text>
+
+  <!-- k_R output -->
+  <line x1="700" y1="260" x2="700" y2="295" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <rect x="620" y="295" width="160" height="36" rx="6" fill="url(#posGrad)" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="700" y="318" text-anchor="middle" font-size="11" fill="#7d4e00" font-weight="bold">k_t^R (位置 Key)</text>
+
+  <!-- Cache indicator for position -->
+  <rect x="590" y="285" width="220" height="56" rx="10" fill="none" stroke="#e67e22" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="600" y="298" font-size="9" fill="#e67e22" font-weight="bold">💾 缓存（维度很小）</text>
+
+  <!-- Query path: from W_Q down -->
+  <line x1="450" y1="185" x2="450" y2="300" stroke="#333" stroke-width="1.5"/>
+  <line x1="450" y1="300" x2="380" y2="300" stroke="#333" stroke-width="1.5"/>
+  <line x1="450" y1="300" x2="520" y2="300" stroke="#333" stroke-width="1.5"/>
+  <line x1="380" y1="300" x2="380" y2="320" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="520" y1="300" x2="520" y2="320" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <rect x="320" y="320" width="120" height="36" rx="6" fill="url(#contentGrad)" stroke="#8e44ad" stroke-width="1.5"/>
+  <text x="380" y="343" text-anchor="middle" font-size="11" fill="#1a5276" font-weight="bold">q_t^C (内容)</text>
+
+  <rect x="460" y="320" width="120" height="36" rx="6" fill="url(#posGrad)" stroke="#8e44ad" stroke-width="1.5"/>
+  <text x="520" y="343" text-anchor="middle" font-size="11" fill="#7d4e00" font-weight="bold">q_t^R (位置)</text>
+
+  <!-- Arrow from W_Q to RoPE for q^R -->
+  <line x1="520" y1="356" x2="520" y2="380" stroke="#333" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <text x="535" y="373" font-size="9" fill="#888">也经 RoPE</text>
+
+  <!-- Attention computation box -->
+  <rect x="280" y="450" width="340" height="80" rx="10" fill="#f5e6ff" stroke="#8e44ad" stroke-width="2"/>
+  <text x="450" y="475" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a235a">注意力计算</text>
+  <text x="450" y="495" text-anchor="middle" font-size="11" fill="#555">score = (k^C)^T · q^C + (k^R)^T · q^R</text>
+  <text x="450" y="515" text-anchor="middle" font-size="10" fill="#888">在压缩空间中完成，无需还原完整 K</text>
+
+  <!-- Arrows into attention box -->
+  <line x1="130" y1="421" x2="350" y2="450" stroke="#333" stroke-width="1.2" marker-end="url(#arrowhead)"/>
+  <line x1="270" y1="421" x2="370" y2="450" stroke="#333" stroke-width="1.2" marker-end="url(#arrowhead)"/>
+  <line x1="380" y1="356" x2="400" y2="450" stroke="#333" stroke-width="1.2" marker-end="url(#arrowhead)"/>
+  <line x1="520" y1="380" x2="500" y2="450" stroke="#333" stroke-width="1.2" marker-end="url(#arrowhead)"/>
+  <line x1="700" y1="331" x2="570" y2="450" stroke="#333" stroke-width="1.2" marker-end="url(#arrowhead)"/>
+
+  <!-- Output -->
+  <line x1="450" y1="530" x2="450" y2="560" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <rect x="350" y="560" width="200" height="40" rx="6" fill="#4a90d9" stroke="#2c5f8a" stroke-width="1.5"/>
+  <text x="450" y="585" text-anchor="middle" font-size="13" fill="white" font-weight="bold">o_t （注意力输出）</text>
+
+  <!-- Legend -->
+  <rect x="30" y="560" width="260" height="50" rx="6" fill="#f8f9fa" stroke="#ddd" stroke-width="1"/>
+  <text x="45" y="578" font-size="10" fill="#333" font-weight="bold">图例：</text>
+  <text x="45" y="595" font-size="9" fill="#e74c3c">■ 下投影/压缩路径</text>
+  <text x="155" y="595" font-size="9" fill="#27ae60">■ 上投影/还原路径</text>
+  <text x="45" y="605" font-size="9" fill="#e67e22">■ 位置编码路径</text>
+  <text x="155" y="605" font-size="9" fill="#8e44ad">■ Query 路径</text>
+</svg>
