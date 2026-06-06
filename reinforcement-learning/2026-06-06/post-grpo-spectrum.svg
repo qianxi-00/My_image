@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">后 GRPO 方法谱系</title>
+  <desc id="desc">DAPO、GSPO、ScaleRL、Dr.GRPO 从不同角度改进 GRPO</desc>
+  <defs><style>.bg{fill:#f9fbff}.center{fill:#1f4e79}.card{fill:#fff;stroke:#1f4e79;stroke-width:3;rx:24}.orange{fill:#fff4e6;stroke:#c76b00}.blue{fill:#eaf4ff}.green{fill:#eef8ed;stroke:#2e7d32}.red{fill:#fff0f0;stroke:#b94a48}.txt{font-family:"Microsoft YaHei",Arial,sans-serif;fill:#17324d}.white{fill:#fff}.title{font-size:34px;font-weight:800}.mid{font-size:28px;font-weight:800}.small{font-size:21px}.arrow{stroke:#1f4e79;stroke-width:4;fill:none;marker-end:url(#a)}</style><marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#1f4e79"/></marker></defs>
+  <rect class="bg" width="1280" height="720"/>
+  <text class="txt title" x="60" y="62">后 GRPO：不是线性升级，而是四个问题切面</text>
+  <circle class="center" cx="640" cy="350" r="105"/>
+  <text class="white mid" x="596" y="340">GRPO</text>
+  <text class="white small" x="566" y="378">组内相对优势</text>
+  <rect class="card orange" x="90" y="140" width="330" height="150"/>
+  <text class="txt mid" x="182" y="190">DAPO</text>
+  <text class="txt small" x="125" y="230">采样、裁剪、token loss</text>
+  <text class="txt small" x="125" y="260">和过长奖励塑形</text>
+  <rect class="card blue" x="860" y="140" width="330" height="150"/>
+  <text class="txt mid" x="952" y="190">GSPO</text>
+  <text class="txt small" x="900" y="230">sequence-level ratio</text>
+  <text class="txt small" x="900" y="260">和 sequence-level clipping</text>
+  <rect class="card green" x="90" y="475" width="330" height="150"/>
+  <text class="txt mid" x="166" y="525">ScaleRL</text>
+  <text class="txt small" x="125" y="565">训练 recipe 能否随</text>
+  <text class="txt small" x="125" y="595">compute 可预测放大</text>
+  <rect class="card red" x="860" y="475" width="330" height="150"/>
+  <text class="txt mid" x="938" y="525">Dr.GRPO</text>
+  <text class="txt small" x="900" y="565">长度归一化和组内</text>
+  <text class="txt small" x="900" y="595">标准差归一化偏差</text>
+  <path class="arrow" d="M560 300 C470 230 430 215 420 215"/>
+  <path class="arrow" d="M720 300 C810 230 850 215 860 215"/>
+  <path class="arrow" d="M560 410 C470 520 430 550 420 550"/>
+  <path class="arrow" d="M720 410 C810 520 850 550 860 550"/>
+</svg>
