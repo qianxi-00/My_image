@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="'Noto Sans SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f8f9fa"/><stop offset="100%" stop-color="#e9ecef"/></linearGradient>
+  </defs>
+
+  <rect width="900" height="520" fill="url(#bg2)" rx="12"/>
+  <text x="450" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#2c3e50">三种 Context Parallelism 方案对比</text>
+
+  <!-- Column headers -->
+  <rect x="40" y="50" width="260" height="36" rx="6" fill="#27ae60" opacity="0.85"/>
+  <text x="170" y="74" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">Ring Attention</text>
+
+  <rect x="320" y="50" width="260" height="36" rx="6" fill="#4a6fa5" opacity="0.85"/>
+  <text x="450" y="74" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">DeepSpeed-Ulysses</text>
+
+  <rect x="600" y="50" width="260" height="36" rx="6" fill="#8e44ad" opacity="0.85"/>
+  <text x="730" y="74" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">Megatron SP (TP-based)</text>
+
+  <!-- Row: Sequence Split -->
+  <text x="450" y="110" text-anchor="middle" font-size="13" font-weight="bold" fill="#2c3e50">序列切分方式</text>
+
+  <rect x="40" y="118" width="260" height="55" rx="4" fill="#fff" stroke="#dee2e6"/>
+  <text x="170" y="137" text-anchor="middle" font-size="11" fill="#333">每个GPU持有序列的1/N</text>
+  <text x="170" y="155" text-anchor="middle" font-size="11" fill="#333">Q/K/V按序列维度切分</text>
+
+  <rect x="320" y="118" width="260" height="55" rx="4" fill="#fff" stroke="#dee2e6"/>
+  <text x="450" y="137" text-anchor="middle" font-size="11" fill="#333">每个GPU持有序列的1/N</text>
+  <text x="450" y="155" text-anchor="middle" font-size="11" fill="#333">Q/K/V按序列维度切分</text>
+
+  <rect x="600" y="118" width="260" height="55" rx="4" fill="#fff" stroke="#dee2e6"/>
+  <text x="730" y="137" text-anchor="middle" font-size="11" fill="#333">利用TP的列/行并行切分</text>
+  <text x="730" y="155" text-anchor="middle" font-size="11" fill="#333">Q按head切，K/V按seq切</text>
+
+  <!-- Row: Communication -->
+  <text x="450" y="198" text-anchor="middle" font-size="13" font-weight="bold" fill="#2c3e50">通信模式</text>
+
+  <rect x="40" y="206" width="260" height="55" rx="4" fill="#fff" stroke="#dee2e6"/>
+  <text x="170" y="225" text-anchor="middle" font-size="11" fill="#333">P2P 环形通信 (send/recv)</text>
+  <text x="170" y="243" text-anchor="middle" font-size="11" fill="#333">N-1步，可与计算重叠</text>
+
+  <rect x="320" y="206" width="260" height="55" rx="4" fill="#fff" stroke="#dee2e6"/>
+  <text x="450" y="225" text-anchor="middle" font-size="11" fill="#333">All-to-All 集合通信</text>
+  <text x="450" y="243" text-anchor="middle" font-size="11" fill="#333">序列↔head维度转置</text>
+
+  <rect x="600" y="206" width="260" height="55" rx="4" fill="#fff" stroke="#dee2e6"/>
+  <text x="730" y="225" text-anchor="middle" font-size="11" fill="#333">All-Gather 收集完整序列</text>
+  <text x="730" y="243" text-anchor="middle" font-size="11" fill="#333">每层需同步，通信量大</text>
+
+  <!-- Row: Memory -->
+  <text x="450" y="286" text-anchor="middle" font-size="13" font-weight="bold" fill="#2c3e50">显存特性</text>
+
+  <rect x="40" y="294" width="260" height="55" rx="4" fill="#fff" stroke="#dee2e6"/>
+  <text x="170" y="313" text-anchor="middle" font-size="11" fill="#333">O(N/P) 每GPU仅存本地块</text>
+  <text x="170" y="331" text-anchor="middle" font-size="11" fill="#333">临时KV缓冲区很小</text>
+
+  <rect x="320" y="294" width="260" height="55" rx="4" fill="#fff" stroke="#dee2e6"/>
+  <text x="450" y="313" text-anchor="middle" font-size="11" fill="#333">O(N/P) 每GPU仅存本地块</text>
+  <text x="450" y="331" text-anchor="middle" font-size="11" fill="#333">All-to-All需临时缓冲</text>
+
+  <rect x="600" y="294" width="260" height="55" rx="4" fill="#fff" stroke="#dee2e6"/>
+  <text x="730" y="313" text-anchor="middle" font-size="11" fill="#333">All-Gather需暂存完整KV</text>
+  <text x="730" y="331" text-anchor="middle" font-size="11" fill="#333">峰值显存较高</text>
+
+  <!-- Row: Scalability -->
+  <text x="450" y="374" text-anchor="middle" font-size="13" font-weight="bold" fill="#2c3e50">扩展性</text>
+
+  <rect x="40" y="382" width="260" height="55" rx="4" fill="#fff" stroke="#dee2e6"/>
+  <text x="170" y="401" text-anchor="middle" font-size="11" fill="#333">序列长度与设备数线性扩展</text>
+  <text x="170" y="419" text-anchor="middle" font-size="11" fill="#333">通信量恒定，扩展性好</text>
+
+  <rect x="320" y="382" width="260" height="55" rx="4" fill="#fff" stroke="#dee2e6"/>
+  <text x="450" y="401" text-anchor="middle" font-size="11" fill="#333">序列长度与设备数线性扩展</text>
+  <text x="450" y="419" text-anchor="middle" font-size="11" fill="#333">通信量恒定，需高带宽互联</text>
+
+  <rect x="600" y="382" width="260" height="55" rx="4" fill="#fff" stroke="#dee2e6"/>
+  <text x="730" y="401" text-anchor="middle" font-size="11" fill="#333">受TP并行度限制</text>
+  <text x="730" y="419" text-anchor="middle" font-size="11" fill="#333">序列越长通信越大</text>
+
+  <!-- Row: Use Case -->
+  <text x="450" y="462" text-anchor="middle" font-size="13" font-weight="bold" fill="#2c3e50">典型场景</text>
+
+  <rect x="40" y="470" width="260" height="40" rx="4" fill="#e8f5e9" stroke="#27ae60"/>
+  <text x="170" y="495" text-anchor="middle" font-size="11" fill="#2c3e50">百万级token训练/推理，跨节点</text>
+
+  <rect x="320" y="470" width="260" height="40" rx="4" fill="#e3f0fc" stroke="#4a6fa5"/>
+  <text x="450" y="495" text-anchor="middle" font-size="11" fill="#2c3e50">高带宽互联节点内长序列训练</text>
+
+  <rect x="600" y="470" width="260" height="40" rx="4" fill="#f3e5f5" stroke="#8e44ad"/>
+  <text x="730" y="495" text-anchor="middle" font-size="11" fill="#2c3e50">中等序列长度，与TP复用</text>
+</svg>
