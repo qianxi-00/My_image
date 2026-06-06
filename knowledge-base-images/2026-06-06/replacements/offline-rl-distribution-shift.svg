@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ecfeff"/>
+      <stop offset="55%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#fff7ed"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0f766e"/>
+    </marker>
+    <style>
+      text { font-family: "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #0f172a; }
+      .h1 { font-size: 30px; font-weight: 800; }
+      .subtitle { font-size: 17px; fill: #475569; }
+      .title { font-size: 20px; font-weight: 700; }
+      .body { font-size: 15px; fill: #475569; }
+      .small { font-size: 13px; fill: #64748b; }
+    </style>
+  </defs>
+  <rect width="1200" height="520" fill="url(#bg)"/>
+  <text x="60" y="54" class="h1">Offline RL：分布偏移与外推误差</text>
+  <text x="60" y="84" class="subtitle">不能在线试错时，策略一旦走出数据覆盖区域，Q 值估计就容易虚高。</text>
+  
+<ellipse cx="395" cy="270" rx="230" ry="135" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<ellipse cx="690" cy="270" rx="180" ry="105" fill="#fee2e2" stroke="#dc2626" stroke-width="2" stroke-dasharray="10 8"/>
+<text x="350" y="245" class="title">数据集分布</text>
+<text x="620" y="245" class="title">新策略访问区域</text>
+<text x="455" y="330" class="body">覆盖充分：估计可靠</text>
+<text x="680" y="330" class="body">覆盖不足：外推误差</text>
+
+  <rect x="80" y="85" width="210" height="72" rx="18" fill="#e0f2fe" stroke="#334155" stroke-width="2"/>
+  <text x="185.0" y="119" text-anchor="middle" class="title">Offline Dataset</text>
+  <text x="185.0" y="143" text-anchor="middle" class="body">固定轨迹</text>
+
+
+  <rect x="900" y="85" width="210" height="72" rx="18" fill="#dcfce7" stroke="#334155" stroke-width="2"/>
+  <text x="1005.0" y="119" text-anchor="middle" class="title">Conservative Update</text>
+  <text x="1005.0" y="143" text-anchor="middle" class="body">限制虚高 Q 值</text>
+
+<path d="M290,121 C342,121 342,180 395,180" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/><path d="M780,180 C840,180 840,121 900,121" fill="none" stroke="#0f766e" stroke-width="3" marker-end="url(#arrow)"/>
+
+</svg>
