@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">DP、MC、TD 对比</title>
+  <desc id="desc">动态规划、蒙特卡洛和时序差分学习的更新差异</desc>
+  <defs><style>.bg{fill:#fbfcff}.card{fill:#fff;stroke:#1f4e79;stroke-width:3;rx:22}.dp{fill:#eaf4ff}.mc{fill:#fff4e6}.td{fill:#eef8ed}.txt{font-family:"Microsoft YaHei",Arial,sans-serif;fill:#17324d}.title{font-size:34px;font-weight:800}.mid{font-size:28px;font-weight:800}.small{font-size:22px}.tiny{font-size:19px}.line{stroke:#1f4e79;stroke-width:3;fill:none;marker-end:url(#a)}.dot{fill:#1f4e79}.orange{fill:#d87900}.green{fill:#308247}</style><marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#1f4e79"/></marker></defs>
+  <rect class="bg" width="1280" height="720"/>
+  <text class="txt title" x="58" y="62">DP、Monte Carlo、TD：三种价值更新思路</text>
+  <rect class="card dp" x="70" y="130" width="350" height="500"/>
+  <text class="txt mid" x="180" y="180">动态规划 DP</text>
+  <text class="txt small" x="100" y="230">前提：知道环境模型</text>
+  <text class="txt small" x="100" y="268">更新：用 Bellman 期望</text>
+  <circle class="dot" cx="130" cy="370" r="18"/><circle class="dot" cx="230" cy="320" r="18"/><circle class="dot" cx="230" cy="420" r="18"/><circle class="dot" cx="330" cy="370" r="18"/>
+  <path class="line" d="M148 370 L212 326"/><path class="line" d="M148 370 L212 414"/><path class="line" d="M248 320 L314 364"/><path class="line" d="M248 420 L314 376"/>
+  <text class="txt tiny" x="110" y="510">像“知道地图规则后”</text>
+  <text class="txt tiny" x="110" y="540">反复推回每个格子的价值</text>
+  <rect class="card mc" x="465" y="130" width="350" height="500"/>
+  <text class="txt mid" x="555" y="180">Monte Carlo</text>
+  <text class="txt small" x="495" y="230">前提：不需要模型</text>
+  <text class="txt small" x="495" y="268">更新：等完整回合结束</text>
+  <circle class="orange" cx="525" cy="370" r="16"/><circle class="orange" cx="610" cy="370" r="16"/><circle class="orange" cx="695" cy="370" r="16"/><circle class="orange" cx="780" cy="370" r="16"/>
+  <path class="line" d="M541 370 H594"/><path class="line" d="M626 370 H679"/><path class="line" d="M711 370 H764"/>
+  <text class="txt tiny" x="500" y="510">像“玩完整局后”</text>
+  <text class="txt tiny" x="500" y="540">用真实总回报更新一路状态</text>
+  <rect class="card td" x="860" y="130" width="350" height="500"/>
+  <text class="txt mid" x="1010" y="180">TD</text>
+  <text class="txt small" x="890" y="230">前提：不需要模型</text>
+  <text class="txt small" x="890" y="268">更新：走一步就 bootstrap</text>
+  <circle class="green" cx="925" cy="370" r="16"/><circle class="green" cx="1035" cy="370" r="16"/><circle class="green" cx="1145" cy="370" r="16"/>
+  <path class="line" d="M941 370 H1019"/><path class="line" d="M1051 370 H1129"/>
+  <path class="line" d="M1035 386 C1010 455 940 455 925 386"/>
+  <text class="txt tiny" x="890" y="510">像“走一步，看下一步估计”</text>
+  <text class="txt tiny" x="890" y="540">用 $r+\gamma V(s')$ 立刻更新</text>
+</svg>
