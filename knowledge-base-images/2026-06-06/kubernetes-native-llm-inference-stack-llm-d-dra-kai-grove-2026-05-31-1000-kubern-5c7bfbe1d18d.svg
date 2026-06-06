@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="system-ui, sans-serif" font-size="13">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="900" height="620" fill="url(#bg)" rx="10"/>
+
+  <!-- Title -->
+  <text x="450" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">Kubernetes LLM 推理四层架构</text>
+  <text x="450" y="52" text-anchor="middle" font-size="12" fill="#64748b">DRA + KAI Scheduler + llm-d + Grove 协同栈</text>
+
+  <!-- Layer 4: Grove (top) -->
+  <rect x="60" y="72" width="780" height="90" rx="8" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="80" y="95" font-size="14" font-weight="bold" fill="#1e40af">④ Grove — 工作负载生命周期层</text>
+  <text x="80" y="115" font-size="12" fill="#334155">PodCliqueSet：声明式描述整个推理系统（prefill + decode + router）</text>
+  <text x="80" y="133" font-size="12" fill="#334155">PodCliqueScalingGroup：层级 Gang Scheduling | 多级自动扩缩 | 启动顺序控制</text>
+  <text x="80" y="151" font-size="11" fill="#64748b">单一 CR → 自动处理组件编排、拓扑放置、弹性伸缩</text>
+
+  <!-- Arrow -->
+  <line x1="450" y1="162" x2="450" y2="182" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Layer 3: llm-d -->
+  <rect x="60" y="185" width="780" height="100" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="80" y="208" font-size="14" font-weight="bold" fill="#166534">③ llm-d — 路由与编排层（CNCF Sandbox）</text>
+  <text x="80" y="228" font-size="12" fill="#334155">Endpoint Picker（EPP）：前缀缓存感知路由 → 57x TTFT 改善</text>
+  <text x="80" y="246" font-size="12" fill="#334155">Disaggregated Sidecar：P/D 分离协调 + NIXL KV 缓存传输</text>
+  <text x="80" y="264" font-size="12" fill="#334155">WVA：基于推理指标的动态实例比例调整（TTFT / 队列深度 / KV 利用率）</text>
+  <text x="80" y="278" font-size="11" fill="#64748b">不替代 vLLM/SGLang，构建于推理引擎之上，处理集群级编排</text>
+
+  <!-- Arrow -->
+  <line x1="450" y1="285" x2="450" y2="305" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Layer 2: KAI Scheduler -->
+  <rect x="60" y="308" width="780" height="90" rx="8" fill="#fefce8" stroke="#eab308" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="80" y="331" font-size="14" font-weight="bold" fill="#854d0e">② KAI Scheduler — 调度层（CNCF Sandbox）</text>
+  <text x="80" y="351" font-size="12" fill="#334155">Gang Scheduling：全部调度或全部不调度 | 层级 Gang：跨组件协调</text>
+  <text x="80" y="369" font-size="12" fill="#334155">拓扑感知调度（TAS）：NVLink 域 / InfiniBand fabric 感知放置</text>
+  <text x="80" y="387" font-size="12" fill="#334155">DRF 公平队列：多租户配额 + 优先级抢占 + Bin-packing</text>
+
+  <!-- Arrow -->
+  <line x1="450" y1="398" x2="450" y2="418" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Layer 1: DRA -->
+  <rect x="60" y="421" width="780" height="90" rx="8" fill="#fdf2f8" stroke="#ec4899" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="80" y="444" font-size="14" font-weight="bold" fill="#9d174d">① NVIDIA DRA Driver — 资源分配层（CNCF）</text>
+  <text x="80" y="464" font-size="12" fill="#334155">DeviceClass / ResourceClaim / ResourceClaimTemplate：结构化 GPU 资源描述</text>
+  <text x="80" y="482" font-size="12" fill="#334155">MIG 切片分配 | 显存/算力/拓扑 CEL 约束 | ComputeDomain（MNNVL）</text>
+  <text x="80" y="500" font-size="11" fill="#64748b">替代 Device Plugin（2017）→ 从不透明整数到结构化属性</text>
+
+  <!-- Bottom: Model Server -->
+  <rect x="250" y="530" width="400" height="40" rx="6" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1"/>
+  <text x="450" y="555" text-anchor="middle" font-size="13" font-weight="bold" fill="#475569">vLLM / SGLang（推理引擎层）</text>
+  <line x1="450" y1="511" x2="450" y2="530" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Right side annotations -->
+  <rect x="680" y="530" width="160" height="40" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+  <text x="760" y="555" text-anchor="middle" font-size="11" fill="#92400e">GPU 硬件（H100/B200）</text>
+  <line x1="650" y1="550" x2="680" y2="550" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Legend -->
+  <text x="80" y="590" font-size="11" fill="#64748b">KubeCon EU 2026 四大发布 → 组成完整 K8s 原生 LLM 推理栈</text>
+  <text x="80" y="607" font-size="11" fill="#64748b">实测：57x TTFT 改善 | 2x 吞吐提升 | 50k tok/s 集群吞吐 | 40% 延迟降低</text>
+</svg>
