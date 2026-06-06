@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="'Microsoft YaHei','PingFang SC',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0f4ff"/>
+      <stop offset="100%" stop-color="#e8eeff"/>
+    </linearGradient>
+    <linearGradient id="core" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="task" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="out" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="base" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <rect width="900" height="520" rx="14" fill="url(#bg)"/>
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e1b4b">UNISON 统一音频生成架构</text>
+  <text x="450" y="58" text-anchor="middle" font-size="12" fill="#6b7280">单一模型 · 七大任务 · 层级深度LLM融合</text>
+
+  <!-- Left: Input Tasks -->
+  <rect x="30" y="100" width="160" height="44" rx="8" fill="url(#task)" filter="url(#shadow)"/>
+  <text x="110" y="127" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">文本转语音 (TTS)</text>
+  <rect x="30" y="160" width="160" height="44" rx="8" fill="url(#task)" filter="url(#shadow)"/>
+  <text x="110" y="187" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">文本生成音频 (T2A)</text>
+  <rect x="30" y="220" width="160" height="44" rx="8" fill="url(#task)" filter="url(#shadow)"/>
+  <text x="110" y="247" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">零样本声音克隆</text>
+  <rect x="30" y="280" width="160" height="44" rx="8" fill="url(#task)" filter="url(#shadow)"/>
+  <text x="110" y="307" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">场景级音频编辑</text>
+  <rect x="30" y="340" width="160" height="44" rx="8" fill="url(#task)" filter="url(#shadow)"/>
+  <text x="110" y="367" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">混合语音-音效生成</text>
+  <rect x="30" y="400" width="160" height="44" rx="8" fill="url(#task)" filter="url(#shadow)"/>
+  <text x="110" y="427" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">时序编排</text>
+
+  <!-- Arrows left to center -->
+  <line x1="195" y1="122" x2="310" y2="230" stroke="#3b82f6" stroke-width="1.8" marker-end="url(#arrowBlue)"/>
+  <line x1="195" y1="182" x2="310" y2="240" stroke="#3b82f6" stroke-width="1.8"/>
+  <line x1="195" y1="242" x2="310" y2="250" stroke="#3b82f6" stroke-width="1.8"/>
+  <line x1="195" y1="302" x2="310" y2="260" stroke="#3b82f6" stroke-width="1.8"/>
+  <line x1="195" y1="362" x2="310" y2="270" stroke="#3b82f6" stroke-width="1.8"/>
+  <line x1="195" y1="422" x2="310" y2="280" stroke="#3b82f6" stroke-width="1.8"/>
+  <defs><marker id="arrowBlue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#3b82f6"/></marker></defs>
+
+  <!-- Center: Core Model -->
+  <rect x="310" y="170" width="280" height="140" rx="16" fill="url(#core)" filter="url(#shadow)"/>
+  <text x="450" y="215" text-anchor="middle" font-size="18" fill="#fff" font-weight="bold">UNISON</text>
+  <text x="450" y="240" text-anchor="middle" font-size="12" fill="#e0e7ff">Latent Diffusion + DiT 骨干</text>
+  <text x="450" y="260" text-anchor="middle" font-size="12" fill="#e0e7ff">621M 参数 · 单一前向通路</text>
+  <text x="450" y="280" text-anchor="middle" font-size="11" fill="#c7d2fe">任务掩码通道 · 层级深度LLM融合</text>
+  <text x="450" y="300" text-anchor="middle" font-size="11" fill="#c7d2fe">七大任务统一覆盖</text>
+
+  <!-- Arrows center to right -->
+  <line x1="595" y1="210" x2="710" y2="122" stroke="#10b981" stroke-width="1.8"/>
+  <line x1="595" y1="225" x2="710" y2="182" stroke="#10b981" stroke-width="1.8"/>
+  <line x1="595" y1="240" x2="710" y2="242" stroke="#10b981" stroke-width="1.8"/>
+  <line x1="595" y1="260" x2="710" y2="302" stroke="#10b981" stroke-width="1.8"/>
+  <line x1="595" y1="280" x2="710" y2="362" stroke="#10b981" stroke-width="1.8"/>
+  <line x1="595" y1="295" x2="710" y2="422" stroke="#10b981" stroke-width="1.8"/>
+
+  <!-- Right: Outputs -->
+  <rect x="710" y="100" width="160" height="44" rx="8" fill="url(#out)" filter="url(#shadow)"/>
+  <text x="790" y="127" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">合成语音</text>
+  <rect x="710" y="160" width="160" height="44" rx="8" fill="url(#out)" filter="url(#shadow)"/>
+  <text x="790" y="187" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">环境音效</text>
+  <rect x="710" y="220" width="160" height="44" rx="8" fill="url(#out)" filter="url(#shadow)"/>
+  <text x="790" y="247" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">克隆声音</text>
+  <rect x="710" y="280" width="160" height="44" rx="8" fill="url(#out)" filter="url(#shadow)"/>
+  <text x="790" y="307" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">编辑音频</text>
+  <rect x="710" y="340" width="160" height="44" rx="8" fill="url(#out)" filter="url(#shadow)"/>
+  <text x="790" y="367" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">混合音频</text>
+  <rect x="710" y="400" width="160" height="44" rx="8" fill="url(#out)" filter="url(#shadow)"/>
+  <text x="790" y="427" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">场景音频</text>
+
+  <!-- Bottom: Foundation -->
+  <rect x="200" y="460" width="500" height="44" rx="10" fill="url(#base)" filter="url(#shadow)"/>
+  <text x="450" y="487" text-anchor="middle" font-size="14" fill="#fff" font-weight="bold">层级深度 LLM 融合 + 任务掩码通道设计</text>
+
+  <!-- Legend -->
+  <rect x="30" y="470" width="12" height="12" rx="2" fill="#3b82f6"/>
+  <text x="48" y="481" font-size="10" fill="#4b5563">输入任务</text>
+  <rect x="30" y="490" width="12" height="12" rx="2" fill="#10b981"/>
+  <text x="48" y="501" font-size="10" fill="#4b5563">输出结果</text>
+</svg>
