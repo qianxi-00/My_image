@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4285F4"/>
+      <stop offset="100%" stop-color="#34A853"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#EA4335"/>
+      <stop offset="100%" stop-color="#FBBC05"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#202124">Google 搜索范式跃迁：从一次性查询到 Information Agents</text>
+
+  <!-- Era 1: Traditional Search -->
+  <rect x="30" y="60" width="260" height="180" rx="12" fill="#F8F9FA" stroke="#DADCE0" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="30" y="60" width="260" height="36" rx="12" fill="url(#g2)"/>
+  <text x="160" y="84" text-anchor="middle" font-size="14" font-weight="bold" fill="white">第一代：关键词匹配</text>
+  <text x="160" y="115" text-anchor="middle" font-size="11" fill="#5F6368">用户输入关键词 → 返回链接列表</text>
+  <text x="160" y="135" text-anchor="middle" font-size="11" fill="#5F6368">用户自行点击、阅读、筛选</text>
+  <text x="160" y="155" text-anchor="middle" font-size="11" fill="#5F6368">搜索引擎 = 索引器 + 排序器</text>
+  <rect x="60" y="175" width="200" height="28" rx="6" fill="#FEF7E0" stroke="#F9AB00" stroke-width="1"/>
+  <text x="160" y="194" text-anchor="middle" font-size="10" fill="#E37400">⚠ 被动应答，用户承担全部信息处理</text>
+
+  <!-- Arrow 1 -->
+  <text x="310" y="155" text-anchor="middle" font-size="24" fill="#5F6368">→</text>
+
+  <!-- Era 2: AI Overview -->
+  <rect x="330" y="60" width="240" height="180" rx="12" fill="#F8F9FA" stroke="#DADCE0" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="330" y="60" width="240" height="36" rx="12" fill="#4285F4"/>
+  <text x="450" y="84" text-anchor="middle" font-size="14" font-weight="bold" fill="white">第二代：AI Overview</text>
+  <text x="450" y="115" text-anchor="middle" font-size="11" fill="#5F6368">语义理解 + 综合回答</text>
+  <text x="450" y="135" text-anchor="middle" font-size="11" fill="#5F6368">直接给出带引用的答案</text>
+  <text x="450" y="155" text-anchor="middle" font-size="11" fill="#5F6368">搜索引擎 = 回答者</text>
+  <rect x="355" y="175" width="190" height="28" rx="6" fill="#FEF7E0" stroke="#F9AB00" stroke-width="1"/>
+  <text x="450" y="194" text-anchor="middle" font-size="10" fill="#E37400">⚠ 仍需用户主动提问，一次性交互</text>
+
+  <!-- Arrow 2 -->
+  <text x="590" y="155" text-anchor="middle" font-size="24" fill="#5F6368">→</text>
+
+  <!-- Era 3: Information Agents -->
+  <rect x="630" y="60" width="250" height="180" rx="12" fill="#F8F9FA" stroke="#34A853" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="630" y="60" width="250" height="36" rx="12" fill="url(#g1)"/>
+  <text x="755" y="84" text-anchor="middle" font-size="14" font-weight="bold" fill="white">第三代：Information Agents</text>
+  <text x="755" y="115" text-anchor="middle" font-size="11" fill="#5F6368">7×24 后台持续运行</text>
+  <text x="755" y="135" text-anchor="middle" font-size="11" fill="#5F6368">主动监控 + 智能推送 + 自动执行</text>
+  <text x="755" y="155" text-anchor="middle" font-size="11" fill="#5F6368">搜索引擎 = 持久化 Agent 平台</text>
+  <rect x="655" y="175" width="200" height="28" rx="6" fill="#E6F4EA" stroke="#34A853" stroke-width="1"/>
+  <text x="755" y="194" text-anchor="middle" font-size="10" fill="#137333">✓ 被动→主动，查询→工作流</text>
+
+  <!-- Agent Workflow Architecture -->
+  <text x="450" y="275" text-anchor="middle" font-size="16" font-weight="bold" fill="#202124">Information Agent 工作流架构</text>
+
+  <!-- User -->
+  <rect x="30" y="300" width="100" height="50" rx="10" fill="#E8F0FE" stroke="#4285F4" stroke-width="1.5"/>
+  <text x="80" y="330" text-anchor="middle" font-size="12" font-weight="bold" fill="#1A73E8">用户</text>
+
+  <!-- Arrow: User creates Agent -->
+  <line x1="130" y1="325" x2="180" y2="325" stroke="#5F6368" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <text x="155" y="315" text-anchor="middle" font-size="9" fill="#5F6368">创建</text>
+
+  <!-- Agent Config -->
+  <rect x="180" y="295" width="130" height="60" rx="10" fill="#FEF7E0" stroke="#F9AB00" stroke-width="1.5"/>
+  <text x="245" y="318" text-anchor="middle" font-size="11" font-weight="bold" fill="#E37400">Agent 配置</text>
+  <text x="245" y="335" text-anchor="middle" font-size="9" fill="#5F6368">监控条件 / 推送规则</text>
+
+  <!-- Arrow: to Scanner -->
+  <line x1="310" y1="325" x2="360" y2="325" stroke="#5F6368" stroke-width="1.5"/>
+
+  <!-- Background Scanner -->
+  <rect x="360" y="295" width="130" height="60" rx="10" fill="#E6F4EA" stroke="#34A853" stroke-width="1.5"/>
+  <text x="425" y="318" text-anchor="middle" font-size="11" font-weight="bold" fill="#137333">后台扫描引擎</text>
+  <text x="425" y="335" text-anchor="middle" font-size="9" fill="#5F6368">7×24 持续监控全网</text>
+
+  <!-- Arrow: to Intelligence Synthesis -->
+  <line x1="490" y1="325" x2="540" y2="325" stroke="#5F6368" stroke-width="1.5"/>
+
+  <!-- Intelligence Synthesis -->
+  <rect x="540" y="295" width="140" height="60" rx="10" fill="#F3E8FD" stroke="#9334E6" stroke-width="1.5"/>
+  <text x="610" y="318" text-anchor="middle" font-size="11" font-weight="bold" fill="#7627BB">智能综合引擎</text>
+  <text x="610" y="335" text-anchor="middle" font-size="9" fill="#5F6368">多源聚合 / 变化检测</text>
+
+  <!-- Arrow: to Push/Act -->
+  <line x1="680" y1="315" x2="730" y2="300" stroke="#5F6368" stroke-width="1.5"/>
+  <line x1="680" y1="335" x2="730" y2="350" stroke="#5F6368" stroke-width="1.5"/>
+
+  <!-- Push -->
+  <rect x="730" y="280" width="140" height="35" rx="8" fill="#E8F0FE" stroke="#4285F4" stroke-width="1.5"/>
+  <text x="800" y="302" text-anchor="middle" font-size="10" font-weight="bold" fill="#1A73E8">主动推送更新</text>
+
+  <!-- Act -->
+  <rect x="730" y="330" width="140" height="35" rx="8" fill="#FCE8E6" stroke="#EA4335" stroke-width="1.5"/>
+  <text x="800" y="352" text-anchor="middle" font-size="10" font-weight="bold" fill="#C5221F">触发后续操作</text>
+
+  <!-- Ecosystem Box -->
+  <rect x="30" y="390" width="840" height="110" rx="12" fill="#F8F9FA" stroke="#DADCE0" stroke-width="1" filter="url(#shadow)"/>
+  <text x="450" y="415" text-anchor="middle" font-size="13" font-weight="bold" fill="#202124">Google I/O 2026 配套产品矩阵</text>
+
+  <!-- Product cards -->
+  <rect x="50" y="430" width="150" height="55" rx="8" fill="white" stroke="#4285F4" stroke-width="1"/>
+  <text x="125" y="450" text-anchor="middle" font-size="10" font-weight="bold" fill="#1A73E8">Deep Research Max</text>
+  <text x="125" y="467" text-anchor="middle" font-size="9" fill="#5F6368">MCP + 可视化深度研究</text>
+
+  <rect x="220" y="430" width="150" height="55" rx="8" fill="white" stroke="#34A853" stroke-width="1"/>
+  <text x="295" y="450" text-anchor="middle" font-size="10" font-weight="bold" fill="#137333">Managed Agents</text>
+  <text x="295" y="467" text-anchor="middle" font-size="9" fill="#5F6368">Gemini API 托管 Agent</text>
+
+  <rect x="390" y="430" width="150" height="55" rx="8" fill="white" stroke="#9334E6" stroke-width="1"/>
+  <text x="465" y="450" text-anchor="middle" font-size="10" font-weight="bold" fill="#7627BB">Antigravity 2.0</text>
+  <text x="465" y="467" text-anchor="middle" font-size="9" fill="#5F6368">Agent-first 桌面平台</text>
+
+  <rect x="560" y="430" width="150" height="55" rx="8" fill="white" fill-opacity="0.5" stroke="#FBBC05" stroke-width="1"/>
+  <text x="635" y="450" text-anchor="middle" font-size="10" font-weight="bold" fill="#E37400">Gemini 3.5 Flash</text>
+  <text x="635" y="467" text-anchor="middle" font-size="9" fill="#5F6368">Agent 工作流优化模型</text>
+
+  <rect x="730" y="430" width="120" height="55" rx="8" fill="white" fill-opacity="0.5" stroke="#EA4335" stroke-width="1"/>
+  <text x="790" y="450" text-anchor="middle" font-size="10" font-weight="bold" fill="#C5221F">MCP 协议</text>
+  <text x="790" y="467" text-anchor="middle" font-size="9" fill="#5F6368">Agent 互操作标准</text>
+
+  <!-- Footer -->
+  <text x="450" y="515" text-anchor="middle" font-size="10" fill="#9AA0A6">数据来源：Google I/O 2026 官方发布 | 制图：AI 热点分析</text>
+</svg>
