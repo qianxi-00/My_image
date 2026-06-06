@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" font-family="'Microsoft YaHei','PingFang SC',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="100%" stop-color="#162a4a"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <!-- Title -->
+  <text x="600" y="60" text-anchor="middle" fill="#e0e8f0" font-size="28" font-weight="bold">AI 硬件入口大战：五条路线全景图</text>
+  <text x="600" y="90" text-anchor="middle" fill="#7a9cc6" font-size="14">2026年上半年 · 从屏幕到身体 · 大模型寻找新物理接口</text>
+  <!-- Center AI chip -->
+  <circle cx="600" cy="400" r="70" fill="#1a3a6a" stroke="#4a9eff" stroke-width="3" filter="url(#glow)"/>
+  <text x="600" y="390" text-anchor="middle" fill="#4a9eff" font-size="36">🧠</text>
+  <text x="600" y="420" text-anchor="middle" fill="#a0c4ff" font-size="13" font-weight="bold">AI 大模型</text>
+  <!-- Route 1: OpenAI io -->
+  <line x1="540" y1="340" x2="200" y2="180" stroke="#00d4aa" stroke-width="2"/>
+  <circle cx="200" cy="180" r="50" fill="#0d2d2d" stroke="#00d4aa" stroke-width="2"/>
+  <text x="200" y="170" text-anchor="middle" fill="#00d4aa" font-size="24">🎧</text>
+  <text x="200" y="195" text-anchor="middle" fill="#00d4aa" font-size="11" font-weight="bold">OpenAI io</text>
+  <text x="200" y="250" text-anchor="middle" fill="#7ac4b0" font-size="10">无屏伴侣 · 平静计算</text>
+  <text x="200" y="268" text-anchor="middle" fill="#5a9a8a" font-size="9">Sweetpea耳塞 + Gumdrop笔</text>
+  <!-- Route 2: Meta Ray-Ban -->
+  <line x1="660" y1="350" x2="1000" y2="180" stroke="#7c4dff" stroke-width="2"/>
+  <circle cx="1000" cy="180" r="50" fill="#1a0d3d" stroke="#7c4dff" stroke-width="2"/>
+  <text x="1000" y="170" text-anchor="middle" fill="#7c4dff" font-size="24">👓</text>
+  <text x="1000" y="195" text-anchor="middle" fill="#7c4dff" font-size="11" font-weight="bold">Meta Ray-Ban</text>
+  <text x="1000" y="250" text-anchor="middle" fill="#a080e0" font-size="10">眼镜形态 · 渐进革命</text>
+  <text x="1000" y="268" text-anchor="middle" fill="#8060b0" font-size="9">75-80%市场份额 · 处方镜片</text>
+  <!-- Route 3: Qualcomm -->
+  <line x1="560" y1="460" x2="200" y2="620" stroke="#ff6b35" stroke-width="2"/>
+  <circle cx="200" cy="620" r="50" fill="#2d1508" stroke="#ff6b35" stroke-width="2"/>
+  <text x="200" y="610" text-anchor="middle" fill="#ff6b35" font-size="24">⚡</text>
+  <text x="200" y="635" text-anchor="middle" fill="#ff6b35" font-size="11" font-weight="bold">Qualcomm</text>
+  <text x="200" y="690" text-anchor="middle" fill="#c08050" font-size="10">Snapdragon Wear Elite</text>
+  <text x="200" y="708" text-anchor="middle" fill="#a06838" font-size="9">3nm · NPU · 端侧推理基础设施</text>
+  <!-- Route 4: Google Fitbit -->
+  <line x1="640" y1="460" x2="1000" y2="620" stroke="#00bfa5" stroke-width="2"/>
+  <circle cx="1000" cy="620" r="50" fill="#082d28" stroke="#00bfa5" stroke-width="2"/>
+  <text x="1000" y="610" text-anchor="middle" fill="#00bfa5" font-size="24">⌚</text>
+  <text x="1000" y="635" text-anchor="middle" fill="#00bfa5" font-size="11" font-weight="bold">Google Fitbit Air</text>
+  <text x="1000" y="690" text-anchor="middle" fill="#60a090" font-size="10">无屏健康 · AI驱动洞察</text>
+  <text x="1000" y="708" text-anchor="middle" fill="#408878" font-size="9">$99.99 · 7天续航 · 反直觉减法</text>
+  <!-- Route 5: Sarvam Kaze -->
+  <line x1="600" y1="470" x2="600" y2="700" stroke="#ff4081" stroke-width="2"/>
+  <circle cx="600" cy="720" r="40" fill="#2d0818" stroke="#ff4081" stroke-width="2"/>
+  <text x="600" y="715" text-anchor="middle" fill="#ff4081" font-size="20">🌐</text>
+  <text x="600" y="735" text-anchor="middle" fill="#ff4081" font-size="10" font-weight="bold">Sarvam Kaze</text>
+  <text x="600" y="775" text-anchor="middle" fill="#c06080" font-size="9">新兴市场AI眼镜 · 印度制造</text>
+  <!-- Bottom note -->
+  <text x="600" y="790" text-anchor="middle" fill="#4a6a8a" font-size="10">数据截至2026年5月 · 来源：OpenAI/Meta/Qualcomm/Google/Sarvam官方发布</text>
+</svg>
