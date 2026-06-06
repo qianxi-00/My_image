@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">PPO 与 GRPO 对比</title>
+  <desc id="desc">PPO 使用 value model 估计优势，GRPO 使用同题多回答的组内相对奖励估计优势</desc>
+  <defs><style>.bg{fill:#fbfcff}.panel{fill:#fff;stroke:#1f4e79;stroke-width:3;rx:24}.ppo{fill:#eaf4ff}.grpo{fill:#fff4e6}.txt{font-family:"Microsoft YaHei",Arial,sans-serif;fill:#17324d}.title{font-size:34px;font-weight:800}.mid{font-size:28px;font-weight:800}.small{font-size:21px}.arrow{stroke:#1f4e79;stroke-width:4;fill:none;marker-end:url(#a)}.orange{stroke:#c76b00}</style><marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#1f4e79"/></marker></defs>
+  <rect class="bg" width="1280" height="720"/>
+  <text class="txt title" x="60" y="60">PPO vs GRPO：优势从哪里来？</text>
+  <rect class="panel ppo" x="70" y="115" width="540" height="560"/>
+  <text class="txt mid" x="260" y="165">PPO</text>
+  <rect class="panel" x="120" y="220" width="190" height="80"/><text class="txt small" x="155" y="268">Policy Model</text>
+  <rect class="panel" x="370" y="220" width="190" height="80"/><text class="txt small" x="405" y="268">Value Model</text>
+  <path class="arrow" d="M215 300 V380"/><path class="arrow" d="M465 300 V380"/>
+  <rect class="panel" x="120" y="380" width="440" height="105"/><text class="txt small" x="155" y="426">优势 $\hat A_t$ 来自 critic/value 估计</text><text class="txt small" x="155" y="458">稳定但额外占显存和计算</text>
+  <rect class="panel" x="120" y="530" width="440" height="82"/><text class="txt small" x="155" y="580">再用 clipped objective 限制更新幅度</text>
+  <rect class="panel grpo" x="670" y="115" width="540" height="560"/>
+  <text class="txt mid" x="850" y="165">GRPO</text>
+  <rect class="panel" x="720" y="215" width="420" height="80"/><text class="txt small" x="780" y="265">同一个 prompt 采样多条回答</text>
+  <path class="arrow orange" d="M930 295 V350"/>
+  <rect class="panel" x="720" y="350" width="420" height="115"/>
+  <text class="txt small" x="760" y="395">回答 A：奖励 1</text>
+  <text class="txt small" x="760" y="428">回答 B：奖励 0</text>
+  <text class="txt small" x="760" y="458">回答 C：奖励 1</text>
+  <path class="arrow orange" d="M930 465 V520"/>
+  <rect class="panel" x="720" y="520" width="420" height="90"/>
+  <text class="txt small" x="750" y="558">组内均值/标准差得到相对优势</text>
+  <text class="txt small" x="750" y="590">减少对 value model 的依赖</text>
+</svg>
