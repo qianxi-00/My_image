@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:0.15"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:0.12"/>
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:0.12"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:0.15"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="520" fill="#fafbfc" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="32" text-anchor="middle" font-size="16" font-weight="700" fill="#1a1a2e">产品开发工作流演进：从线性流水线到实时协作网络</text>
+
+  <!-- LEFT: Traditional Workflow -->
+  <rect x="20" y="50" width="410" height="450" rx="10" fill="url(#g1)" stroke="#667eea" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="225" y="75" text-anchor="middle" font-size="14" font-weight="700" fill="#4a5568">传统模式：线性流水线</text>
+
+  <!-- Step 1 -->
+  <rect x="50" y="95" width="140" height="55" rx="8" fill="#e8eaf6" stroke="#5c6bc0" stroke-width="1"/>
+  <text x="120" y="118" text-anchor="middle" font-size="12" font-weight="600" fill="#283593">产品经理</text>
+  <text x="120" y="136" text-anchor="middle" font-size="10" fill="#5c6bc0">写PRD / 需求文档</text>
+
+  <text x="225" y="125" text-anchor="middle" font-size="18" fill="#9e9e9e">→</text>
+
+  <!-- Step 2 -->
+  <rect x="240" y="95" width="140" height="55" rx="8" fill="#e8eaf6" stroke="#5c6bc0" stroke-width="1"/>
+  <text x="310" y="118" text-anchor="middle" font-size="12" font-weight="600" fill="#283593">设计师</text>
+  <text x="310" y="136" text-anchor="middle" font-size="10" fill="#5c6bc0">Figma 设计稿</text>
+
+  <text x="225" y="185" text-anchor="middle" font-size="18" fill="#9e9e9e">↓ 设计交付</text>
+
+  <!-- Step 3 -->
+  <rect x="50" y="200" width="140" height="55" rx="8" fill="#e8eaf6" stroke="#5c6bc0" stroke-width="1"/>
+  <text x="120" y="223" text-anchor="middle" font-size="12" font-weight="600" fill="#283593">前端开发者</text>
+  <text x="120" y="241" text-anchor="middle" font-size="10" fill="#5c6bc0">设计还原 → 代码</text>
+
+  <text x="225" y="230" text-anchor="middle" font-size="18" fill="#9e9e9e">→</text>
+
+  <!-- Step 4 -->
+  <rect x="240" y="200" width="140" height="55" rx="8" fill="#e8eaf6" stroke="#5c6bc0" stroke-width="1"/>
+  <text x="310" y="223" text-anchor="middle" font-size="12" font-weight="600" fill="#283593">后端开发者</text>
+  <text x="310" y="241" text-anchor="middle" font-size="10" fill="#5c6bc0">API / 数据库</text>
+
+  <text x="225" y="290" text-anchor="middle" font-size="18" fill="#9e9e9e">↓</text>
+
+  <!-- Step 5 -->
+  <rect x="110" y="305" width="230" height="55" rx="8" fill="#fff3e0" stroke="#ff9800" stroke-width="1"/>
+  <text x="225" y="328" text-anchor="middle" font-size="12" font-weight="600" fill="#e65100">反复对齐 / 返工循环</text>
+  <text x="225" y="346" text-anchor="middle" font-size="10" fill="#ff9800">2-4 周迭代周期</text>
+
+  <text x="225" y="395" text-anchor="middle" font-size="18" fill="#9e9e9e">↓</text>
+
+  <!-- Step 6 -->
+  <rect x="110" y="410" width="230" height="50" rx="8" fill="#c8e6c9" stroke="#4caf50" stroke-width="1.5"/>
+  <text x="225" y="433" text-anchor="middle" font-size="12" font-weight="600" fill="#2e7d32">上线产品</text>
+  <text x="225" y="449" text-anchor="middle" font-size="10" fill="#4caf50">数周到数月</text>
+
+  <!-- Pain points -->
+  <rect x="40" y="472" width="370" height="22" rx="4" fill="#ffebee"/>
+  <text x="225" y="488" text-anchor="middle" font-size="9" fill="#c62828">⚠ 信息损耗 · 迭代成本高 · 角色壁垒 · 协作断点</text>
+
+  <!-- RIGHT: New Workflow -->
+  <rect x="470" y="50" width="410" height="450" rx="10" fill="url(#g3)" stroke="#4facfe" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="675" y="75" text-anchor="middle" font-size="14" font-weight="700" fill="#4a5568">AI 原生模式：实时协作网络</text>
+
+  <!-- Central: Figma Make -->
+  <rect x="530" y="100" width="290" height="80" rx="12" fill="#ffffff" stroke="#4facfe" stroke-width="2" filter="url(#shadow)"/>
+  <text x="675" y="125" text-anchor="middle" font-size="14" font-weight="700" fill="#1565c0">Figma Make + MCP + Sites</text>
+  <text x="675" y="145" text-anchor="middle" font-size="10" fill="#1976d2">设计文件 → 可运行产品 → 发布上线</text>
+  <text x="675" y="162" text-anchor="middle" font-size="9" fill="#64b5f6">Claude 3.7 Sonnet · Supabase · 设计系统</text>
+
+  <!-- Roles connected -->
+  <rect x="490" y="210" width="100" height="50" rx="8" fill="#e3f2fd" stroke="#42a5f5" stroke-width="1"/>
+  <text x="540" y="233" text-anchor="middle" font-size="11" font-weight="600" fill="#1565c0">设计师</text>
+  <text x="540" y="249" text-anchor="middle" font-size="9" fill="#42a5f5">直接构建产品</text>
+
+  <rect x="605" y="210" width="100" height="50" rx="8" fill="#e3f2fd" stroke="#42a5f5" stroke-width="1"/>
+  <text x="655" y="233" text-anchor="middle" font-size="11" font-weight="600" fill="#1565c0">产品经理</text>
+  <text x="655" y="249" text-anchor="middle" font-size="9" fill="#42a5f5">直接验证想法</text>
+
+  <rect x="720" y="210" width="100" height="50" rx="8" fill="#e3f2fd" stroke="#42a5f5" stroke-width="1"/>
+  <text x="770" y="233" text-anchor="middle" font-size="11" font-weight="600" fill="#1565c0">开发者</text>
+  <text x="770" y="249" text-anchor="middle" font-size="9" fill="#42a5f5">系统工程聚焦</text>
+
+  <!-- Arrows up to center -->
+  <line x1="540" y1="210" x2="620" y2="180" stroke="#90caf9" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+  <line x1="655" y1="210" x2="675" y2="180" stroke="#90caf9" stroke-width="1.5"/>
+  <line x1="770" y1="210" x2="730" y2="180" stroke="#90caf9" stroke-width="1.5"/>
+
+  <!-- Real-time collaboration indicator -->
+  <rect x="530" y="280" width="290" height="30" rx="6" fill="#e8f5e9" stroke="#66bb6a" stroke-width="1"/>
+  <text x="675" y="300" text-anchor="middle" font-size="10" font-weight="600" fill="#2e7d32">🔄 多人实时协作 · 同一文件 · 同一上下文</text>
+
+  <!-- Connected tools -->
+  <rect x="490" y="335" width="120" height="40" rx="6" fill="#f3e5f5" stroke="#ab47bc" stroke-width="1"/>
+  <text x="550" y="353" text-anchor="middle" font-size="9" font-weight="600" fill="#7b1fa2">Supabase 后端</text>
+  <text x="550" y="367" text-anchor="middle" font-size="8" fill="#ab47bc">数据库 / 认证</text>
+
+  <rect x="630" y="335" width="120" height="40" rx="6" fill="#f3e5f5" stroke="#ab47bc" stroke-width="1"/>
+  <text x="690" y="353" text-anchor="middle" font-size="9" font-weight="600" fill="#7b1fa2">Figma Sites</text>
+  <text x="690" y="367" text-anchor="middle" font-size="8" fill="#ab47bc">一键发布上线</text>
+
+  <rect x="770" y="335" width="100" height="40" rx="6" fill="#f3e5f5" stroke="#ab47bc" stroke-width="1"/>
+  <text x="820" y="353" text-anchor="middle" font-size="9" font-weight="600" fill="#7b1fa2">MCP 协议</text>
+  <text x="820" y="367" text-anchor="middle" font-size="8" fill="#ab47bc">Agent 接入</text>
+
+  <!-- Result -->
+  <rect x="530" y="400" width="290" height="50" rx="8" fill="#c8e6c9" stroke="#4caf50" stroke-width="1.5"/>
+  <text x="675" y="423" text-anchor="middle" font-size="12" font-weight="600" fill="#2e7d32">上线产品</text>
+  <text x="675" y="439" text-anchor="middle" font-size="10" fill="#4caf50">分钟级验证 · 小时级上线</text>
+
+  <!-- Advantage -->
+  <rect x="480" y="472" width="390" height="22" rx="4" fill="#e8f5e9"/>
+  <text x="675" y="488" text-anchor="middle" font-size="9" fill="#2e7d32">✓ 设计即产品 · 全员协作 · 实时迭代 · 无角色壁垒</text>
+</svg>
