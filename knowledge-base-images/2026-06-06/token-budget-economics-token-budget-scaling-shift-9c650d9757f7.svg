@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>
+  <rect width="900" height="500" fill="#fff"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a2e">Token 预算经济学：从 Chinchilla 最优到过度训练范式</text>
+  
+  <!-- Axes -->
+  <line x1="100" y1="420" x2="820" y2="420" stroke="#555" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="100" y1="420" x2="100" y2="70" stroke="#555" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- X-axis label -->
+  <text x="460" y="465" text-anchor="middle" font-size="14" fill="#333">训练 Token 数（对数刻度）</text>
+  <!-- Y-axis label -->
+  <text x="50" y="250" text-anchor="middle" font-size="14" fill="#333" transform="rotate(-90,50,250)">模型性能</text>
+  
+  <!-- X-axis ticks -->
+  <text x="180" y="440" text-anchor="middle" font-size="11" fill="#666">100B</text>
+  <text x="300" y="440" text-anchor="middle" font-size="11" fill="#666">1T</text>
+  <text x="420" y="440" text-anchor="middle" font-size="11" fill="#666">5T</text>
+  <text x="540" y="440" text-anchor="middle" font-size="11" fill="#666">10T</text>
+  <text x="660" y="440" text-anchor="middle" font-size="11" fill="#666">15T</text>
+  <text x="780" y="440" text-anchor="middle" font-size="11" fill="#666">20T</text>
+  
+  <!-- Chinchilla Optimal line -->
+  <line x1="250" y1="80" x2="250" y2="420" stroke="#e74c3c" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="250" y="70" text-anchor="middle" font-size="11" fill="#e74c3c" font-weight="bold">Chinchilla 最优 (20:1)</text>
+  
+  <!-- Current Practice line -->
+  <line x1="620" y1="80" x2="620" y2="420" stroke="#2ecc71" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="620" y="70" text-anchor="middle" font-size="11" fill="#2ecc71" font-weight="bold">当前实践 (1000:1+)</text>
+  
+  <!-- Over-training zone -->
+  <rect x="252" y="85" width="366" height="330" fill="#2ecc71" opacity="0.08" rx="4"/>
+  <text x="435" y="115" text-anchor="middle" font-size="13" fill="#2ecc71" font-weight="bold">过度训练区</text>
+  
+  <!-- Performance curves -->
+  <!-- 7B model -->
+  <path d="M 140,350 Q 250,260 400,220 Q 550,200 700,190 Q 760,188 800,186" fill="none" stroke="#3498db" stroke-width="2.5"/>
+  <text x="810" y="188" font-size="12" fill="#3498db" font-weight="bold">7B</text>
+  
+  <!-- 13B model -->
+  <path d="M 140,320 Q 250,230 400,190 Q 550,170 700,155 Q 760,150 800,147" fill="none" stroke="#9b59b6" stroke-width="2.5"/>
+  <text x="810" y="149" font-size="12" fill="#9b59b6" font-weight="bold">13B</text>
+  
+  <!-- 70B model -->
+  <path d="M 140,280 Q 250,190 400,150 Q 550,130 700,115 Q 760,110 800,107" fill="none" stroke="#e67e22" stroke-width="2.5"/>
+  <text x="810" y="109" font-size="12" fill="#e67e22" font-weight="bold">70B</text>
+  
+  <!-- Annotations -->
+  <!-- Chinchilla point -->
+  <circle cx="250" cy="260" r="6" fill="#e74c3c"/>
+  <text x="265" y="255" font-size="11" fill="#e74c3c">Chinchilla-70B</text>
+  <text x="265" y="270" font-size="10" fill="#e74c3c">1.4T tokens</text>
+  
+  <!-- LLaMA-3 8B point -->
+  <circle cx="660" cy="188" r="6" fill="#3498db"/>
+  <text x="540" y="180" font-size="11" fill="#3498db">LLaMA-3 8B</text>
+  <text x="540" y="195" font-size="10" fill="#3498db">15T tokens (1875:1)</text>
+  
+  <!-- Legend box -->
+  <rect x="120" y="470" width="700" height="25" fill="#f8f9fa" rx="4"/>
+  <text x="460" y="488" text-anchor="middle" font-size="11" fill="#666">核心趋势：行业从"大模型+少数据"转向"小模型+海量Token"，推理成本驱动训练策略重塑</text>
+</svg>
