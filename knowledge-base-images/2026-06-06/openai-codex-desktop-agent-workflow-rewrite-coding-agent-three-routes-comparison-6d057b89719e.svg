@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" font-family="'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="gOpenAI" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="gAnthropic" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="gCursor" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <filter id="shadow2">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect width="960" height="520" fill="url(#bg2)" rx="12"/>
+  <text x="480" y="36" text-anchor="middle" fill="#e2e8f0" font-size="18" font-weight="700">编码 Agent 三条路线对比</text>
+  <!-- Column Headers -->
+  <rect x="60" y="60" width="260" height="44" rx="10" fill="url(#gOpenAI)" filter="url(#shadow2)"/>
+  <text x="190" y="88" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">OpenAI Codex</text>
+  <rect x="350" y="60" width="260" height="44" rx="10" fill="url(#gAnthropic)" filter="url(#shadow2)"/>
+  <text x="480" y="88" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">Anthropic Claude Code</text>
+  <rect x="640" y="60" width="260" height="44" rx="10" fill="url(#gCursor)" filter="url(#shadow2)"/>
+  <text x="770" y="88" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">Cursor</text>
+  <!-- Row labels and data -->
+  <!-- Row 1: 定位 -->
+  <text x="480" y="135" text-anchor="middle" fill="#94a3b8" font-size="12" font-weight="600">核心定位</text>
+  <rect x="60" y="145" width="260" height="44" rx="6" fill="#1e293b" stroke="#334155"/>
+  <text x="190" y="172" text-anchor="middle" fill="#a7f3d0" font-size="12">通用桌面自动化平台</text>
+  <rect x="350" y="145" width="260" height="44" rx="6" fill="#1e293b" stroke="#334155"/>
+  <text x="480" y="172" text-anchor="middle" fill="#c4b5fd" font-size="12">极致编码体验 + 深耕终端</text>
+  <rect x="640" y="145" width="260" height="44" rx="6" fill="#1e293b" stroke="#334155"/>
+  <text x="770" y="172" text-anchor="middle" fill="#bfdbfe" font-size="12">IDE 原生编码 Agent</text>
+  <!-- Row 2: 渠道 -->
+  <text x="480" y="215" text-anchor="middle" fill="#94a3b8" font-size="12" font-weight="600">分发渠道</text>
+  <rect x="60" y="225" width="260" height="44" rx="6" fill="#1e293b" stroke="#334155"/>
+  <text x="190" y="252" text-anchor="middle" fill="#a7f3d0" font-size="12">独立桌面应用 (ChatGPT 生态)</text>
+  <rect x="350" y="225" width="260" height="44" rx="6" fill="#1e293b" stroke="#334155"/>
+  <text x="480" y="252" text-anchor="middle" fill="#c4b5fd" font-size="12">终端 + IDE 插件 + 桌面端</text>
+  <rect x="640" y="225" width="260" height="44" rx="6" fill="#1e293b" stroke="#334155"/>
+  <text x="770" y="252" text-anchor="middle" fill="#bfdbfe" font-size="12">VS Code Fork (IDE 原生)</text>
+  <!-- Row 3: 优势 -->
+  <text x="480" y="295" text-anchor="middle" fill="#94a3b8" font-size="12" font-weight="600">核心优势</text>
+  <rect x="60" y="305" width="260" height="44" rx="6" fill="#1e293b" stroke="#334155"/>
+  <text x="190" y="332" text-anchor="middle" fill="#a7f3d0" font-size="12">平台化 · 插件生态 · 桌面操控</text>
+  <rect x="350" y="305" width="260" height="44" rx="6" fill="#1e293b" stroke="#334155"/>
+  <text x="480" y="332" text-anchor="middle" fill="#c4b5fd" font-size="12">编码深度 · 终端体验 · 信任感</text>
+  <rect x="640" y="305" width="260" height="44" rx="6" fill="#1e293b" stroke="#334155"/>
+  <text x="770" y="332" text-anchor="middle" fill="#bfdbfe" font-size="12">IDE 集成 · 补全精准 · Cloud Agent</text>
+  <!-- Row 4: 局限 -->
+  <text x="480" y="375" text-anchor="middle" fill="#94a3b8" font-size="12" font-weight="600">当前局限</text>
+  <rect x="60" y="385" width="260" height="44" rx="6" fill="#1e293b" stroke="#334155"/>
+  <text x="190" y="412" text-anchor="middle" fill="#fca5a5" font-size="12">仅 macOS · 安全风险 · 功能膨胀</text>
+  <rect x="350" y="385" width="260" height="44" rx="6" fill="#1e293b" stroke="#334155"/>
+  <text x="480" y="412" text-anchor="middle" fill="#fca5a5" font-size="12">桌面操控缺失 · 平台化保守</text>
+  <rect x="640" y="385" width="260" height="44" rx="6" fill="#1e293b" stroke="#334155"/>
+  <text x="770" y="412" text-anchor="middle" fill="#fca5a5" font-size="12">非独立应用 · 生态绑定 VS Code</text>
+  <!-- Bottom -->
+  <text x="480" y="470" text-anchor="middle" fill="#64748b" font-size="11">三条路线各有取舍，2026 年的竞争焦点已从"谁更准"转向"谁能接管更多工作流"</text>
+  <text x="480" y="500" text-anchor="middle" fill="#475569" font-size="10">数据来源：OpenAI · Anthropic · Cursor 官方资料 | 2026 年 6 月</text>
+</svg>
