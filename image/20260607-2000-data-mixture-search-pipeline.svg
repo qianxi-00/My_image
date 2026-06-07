@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 620" font-family="'PingFang SC','Microsoft YaHei',Arial,sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4A90D9"/>
+    </marker>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A90D9;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#357ABD;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#5CB85C;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#449D44;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F0AD4E;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#EC971F;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1100" height="620" fill="#FAFBFC" rx="12"/>
+
+  <!-- Title -->
+  <text x="550" y="35" text-anchor="middle" font-size="20" font-weight="bold" fill="#2C3E50">Data Mixing Laws 嵌套 Scaling 管线架构</text>
+
+  <!-- Layer 1: Step Scaling -->
+  <rect x="40" y="60" width="1020" height="150" rx="10" fill="#EBF5FB" stroke="#4A90D9" stroke-width="2"/>
+  <text x="60" y="85" font-size="15" font-weight="bold" fill="#2E86C1">第一层：训练步数 Scaling Law</text>
+  <text x="60" y="108" font-size="12" fill="#5D6D7E">对每个候选配比，在小模型上训练少量步数，拟合 L(S) = E₁ + B/S^β 外推到目标步数</text>
+
+  <!-- Small model boxes -->
+  <rect x="80" y="125" width="110" height="65" rx="6" fill="url(#g1)" opacity="0.9"/>
+  <text x="135" y="150" text-anchor="middle" font-size="11" fill="white" font-weight="bold">70M 参数</text>
+  <text x="135" y="168" text-anchor="middle" font-size="10" fill="#D6EAF8">30B tokens</text>
+  <text x="135" y="182" text-anchor="middle" font-size="9" fill="#D6EAF8">3.5h / 配比</text>
+
+  <rect x="210" y="125" width="110" height="65" rx="6" fill="url(#g1)" opacity="0.9"/>
+  <text x="265" y="150" text-anchor="middle" font-size="11" fill="white" font-weight="bold">160M 参数</text>
+  <text x="265" y="168" text-anchor="middle" font-size="10" fill="#D6EAF8">30B tokens</text>
+  <text x="265" y="182" text-anchor="middle" font-size="9" fill="#D6EAF8">8h / 配比</text>
+
+  <rect x="340" y="125" width="110" height="65" rx="6" fill="url(#g1)" opacity="0.9"/>
+  <text x="395" y="150" text-anchor="middle" font-size="11" fill="white" font-weight="bold">305M 参数</text>
+  <text x="395" y="168" text-anchor="middle" font-size="10" fill="#D6EAF8">30B tokens</text>
+  <text x="395" y="182" text-anchor="middle" font-size="9" fill="#D6EAF8">16h / 配比</text>
+
+  <rect x="470" y="125" width="110" height="65" rx="6" fill="url(#g1)" opacity="0.9"/>
+  <text x="525" y="150" text-anchor="middle" font-size="11" fill="white" font-weight="bold">410M 参数</text>
+  <text x="525" y="168" text-anchor="middle" font-size="10" fill="#D6EAF8">30B tokens</text>
+  <text x="525" y="182" text-anchor="middle" font-size="9" fill="#D6EAF8">21h / 配比</text>
+
+  <!-- Arrow to extrapolation -->
+  <line x1="600" y1="157" x2="660" y2="157" stroke="#4A90D9" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="630" y="147" text-anchor="middle" font-size="9" fill="#4A90D9">外推</text>
+
+  <rect x="670" y="125" width="170" height="65" rx="6" fill="#D4E6F1" stroke="#2E86C1" stroke-width="1.5"/>
+  <text x="755" y="150" text-anchor="middle" font-size="12" fill="#1B4F72" font-weight="bold">预测目标步数损失</text>
+  <text x="755" y="170" text-anchor="middle" font-size="10" fill="#2E86C1">S_target = 100B tokens</text>
+
+  <!-- Arrow down -->
+  <line x1="755" y1="210" x2="755" y2="230" stroke="#4A90D9" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Layer 2: Model Size Scaling -->
+  <rect x="40" y="230" width="1020" height="130" rx="10" fill="#EAFAF1" stroke="#5CB85C" stroke-width="2"/>
+  <text x="60" y="255" font-size="15" font-weight="bold" fill="#27AE60">第二层：模型规模 Scaling Law</text>
+  <text x="60" y="278" font-size="12" fill="#5D6D7E">利用第一层外推结果，拟合 L(N) = E₂ + A/N^α 外推到目标模型规模</text>
+
+  <rect x="200" y="295" width="250" height="50" rx="6" fill="url(#g2)" opacity="0.9"/>
+  <text x="325" y="318" text-anchor="middle" font-size="12" fill="white" font-weight="bold">多规模损失 → 拟合规模幂律</text>
+  <text x="325" y="335" text-anchor="middle" font-size="10" fill="#D5F5E3">70M / 160M / 305M / 410M</text>
+
+  <line x1="470" y1="320" x2="530" y2="320" stroke="#5CB85C" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="540" y="295" width="200" height="50" rx="6" fill="#D5F5E3" stroke="#27AE60" stroke-width="1.5"/>
+  <text x="640" y="318" text-anchor="middle" font-size="12" fill="#1E8449" font-weight="bold">预测目标规模损失</text>
+  <text x="640" y="335" text-anchor="middle" font-size="10" fill="#27AE60">N_target = 1B 参数</text>
+
+  <!-- Arrow down -->
+  <line x1="640" y1="345" x2="640" y2="380" stroke="#5CB85C" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Layer 3: Data Mixing Law -->
+  <rect x="40" y="380" width="1020" height="130" rx="10" fill="#FEF9E7" stroke="#F0AD4E" stroke-width="2"/>
+  <text x="60" y="405" font-size="15" font-weight="bold" fill="#D68910">第三层：数据混合定律拟合与最优配比搜索</text>
+  <text x="60" y="428" font-size="12" fill="#5D6D7E">在目标规模下拟合 L(r₁,...,rₘ) = c + k·exp(Σ tᵢⱼ·rⱼ)，搜索损失最小的配比</text>
+
+  <rect x="100" y="445" width="200" height="50" rx="6" fill="url(#g3)" opacity="0.9"/>
+  <text x="200" y="468" text-anchor="middle" font-size="11" fill="white" font-weight="bold">40个候选配比</text>
+  <text x="200" y="485" text-anchor="middle" font-size="10" fill="#FDEBD0">双递减比例采样</text>
+
+  <line x1="320" y1="470" x2="380" y2="470" stroke="#F0AD4E" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="390" y="445" width="200" height="50" rx="6" fill="url(#g3)" opacity="0.9"/>
+  <text x="490" y="468" text-anchor="middle" font-size="11" fill="white" font-weight="bold">拟合指数函数</text>
+  <text x="490" y="485" text-anchor="middle" font-size="10" fill="#FDEBD0">选20个信息量最大配比</text>
+
+  <line x1="610" y1="470" x2="670" y2="470" stroke="#F0AD4E" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="680" y="435" width="220" height="65" rx="8" fill="#F5CBA7" stroke="#E67E22" stroke-width="2"/>
+  <text x="790" y="460" text-anchor="middle" font-size="13" fill="#A04000" font-weight="bold">最优配比</text>
+  <text x="790" y="480" text-anchor="middle" font-size="10" fill="#784212">CommonCrawl: 12.5%  ArXiv: 25%</text>
+  <text x="790" y="493" text-anchor="middle" font-size="10" fill="#784212">GitHub: 14.1%  C4: 25%</text>
+
+  <!-- Arrow down to result -->
+  <line x1="790" y1="500" x2="790" y2="530" stroke="#E67E22" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Result box -->
+  <rect x="250" y="530" width="600" height="70" rx="10" fill="#FADBD8" stroke="#E74C3C" stroke-width="2"/>
+  <text x="550" y="558" text-anchor="middle" font-size="14" fill="#922B21" font-weight="bold">效果：仅用 73% 训练步数达到默认配比最终性能</text>
+  <text x="550" y="580" text-anchor="middle" font-size="12" fill="#C0392B">等效于默认配比额外训练 48% 步数 | 8×A100 总成本 < 1周</text>
+  <text x="550" y="595" text-anchor="middle" font-size="11" fill="#7B241C">vs 传统穷举：数十次完整训练，数百万美元，数月时间</text>
+</svg>
