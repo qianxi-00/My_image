@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#f8fafc"/>
+  <text x="60" y="70" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#0f172a">开发者选型决策：模型直连、SDK 编排、媒体框架</text>
+  <g font-family="Arial, sans-serif" font-size="24" fill="#0f172a" stroke-width="2">
+    <rect x="80" y="130" width="300" height="120" rx="14" fill="#dbeafe" stroke="#2563eb"/>
+    <text x="120" y="180" font-weight="700">模型直连 API</text><text x="120" y="220">低延迟能力验证</text>
+    <rect x="450" y="130" width="300" height="120" rx="14" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="490" y="180" font-weight="700">Agents SDK</text><text x="490" y="220">工具、护栏、会话</text>
+    <rect x="820" y="130" width="300" height="120" rx="14" fill="#fef3c7" stroke="#d97706"/>
+    <text x="860" y="180" font-weight="700">媒体与房间框架</text><text x="860" y="220">多人、电话、部署</text>
+    <path d="M380 190 H450 M750 190 H820" stroke="#64748b" marker-end="url(#arrow)"/>
+    <rect x="180" y="340" width="840" height="110" rx="18" fill="#f1f5f9" stroke="#64748b"/>
+    <text x="240" y="392" font-weight="700">共同压力：端到端延迟、打断准确率、工具可靠性、成本和可观测性</text>
+    <path d="M600 250 V340" stroke="#64748b" marker-end="url(#arrow)"/>
+    <rect x="270" y="530" width="660" height="90" rx="16" fill="#fce7f3" stroke="#db2777"/>
+    <text x="320" y="586" font-weight="700">生产化目标：像实时应用一样交付 AI，而不是像聊天框一样包装 AI</text>
+  </g>
+  <defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="6" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#64748b"/></marker></defs>
+</svg>

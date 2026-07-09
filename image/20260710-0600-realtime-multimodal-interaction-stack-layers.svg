@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#f7f8fb"/>
+  <text x="60" y="70" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#1f2937">实时多模态交互栈：从模型能力到产品体验</text>
+  <rect x="80" y="130" width="1040" height="90" rx="14" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="110" y="185" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#1e3a8a">体验层：语音、视频、屏幕共享、电话、智能眼镜、车载座舱</text>
+  <rect x="80" y="260" width="1040" height="90" rx="14" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="110" y="315" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#14532d">会话层：打断、轮次管理、上下文、工具调用、权限与护栏</text>
+  <rect x="80" y="390" width="1040" height="90" rx="14" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="110" y="445" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#78350f">传输层：WebRTC、WebSocket、SIP、媒体房间、数据通道</text>
+  <rect x="80" y="520" width="1040" height="90" rx="14" fill="#fce7f3" stroke="#db2777" stroke-width="2"/>
+  <text x="110" y="575" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#831843">模型层：端到端语音、实时翻译、视觉输入、STT/LLM/TTS 组合链</text>
+  <path d="M600 220 L600 260 M600 350 L600 390 M600 480 L600 520" stroke="#64748b" stroke-width="6" marker-end="url(#arrow)"/>
+  <defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="6" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#64748b"/></marker></defs>
+</svg>
