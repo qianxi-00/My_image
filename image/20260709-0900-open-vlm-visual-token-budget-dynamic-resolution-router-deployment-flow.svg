@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#f8fafc"/>
+  <text x="640" y="58" text-anchor="middle" font-family="Arial, 'Noto Sans CJK SC', sans-serif" font-size="32" font-weight="700" fill="#1f2937">从视觉 Token 到生产部署的约束链</text>
+  <text x="640" y="94" text-anchor="middle" font-family="Arial, 'Noto Sans CJK SC', sans-serif" font-size="18" fill="#64748b">VLM 的下一轮竞争，会落在“把哪些视觉证据送进 LLM，以及用什么成本送进去”</text>
+  <g font-family="Arial, 'Noto Sans CJK SC', sans-serif">
+    <rect x="65" y="160" width="175" height="120" rx="16" fill="#ffffff" stroke="#334155" stroke-width="2"/>
+    <text x="152" y="204" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">任务入口</text>
+    <text x="152" y="238" text-anchor="middle" font-size="16" fill="#475569">OCR / GUI / 视频</text>
+    <text x="152" y="262" text-anchor="middle" font-size="16" fill="#475569">图表 / 空间推理</text>
+
+    <rect x="295" y="145" width="190" height="150" rx="16" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+    <text x="390" y="190" text-anchor="middle" font-size="22" font-weight="700" fill="#1d4ed8">预算决策</text>
+    <text x="390" y="226" text-anchor="middle" font-size="16" fill="#475569">分辨率</text>
+    <text x="390" y="250" text-anchor="middle" font-size="16" fill="#475569">帧采样</text>
+    <text x="390" y="274" text-anchor="middle" font-size="16" fill="#475569">区域裁剪</text>
+
+    <rect x="540" y="145" width="190" height="150" rx="16" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+    <text x="635" y="190" text-anchor="middle" font-size="22" font-weight="700" fill="#15803d">视觉编码</text>
+    <text x="635" y="226" text-anchor="middle" font-size="16" fill="#475569">多层特征</text>
+    <text x="635" y="250" text-anchor="middle" font-size="16" fill="#475569">动态路由</text>
+    <text x="635" y="274" text-anchor="middle" font-size="16" fill="#475569">压缩 / 聚合</text>
+
+    <rect x="785" y="145" width="190" height="150" rx="16" fill="#fff7ed" stroke="#f97316" stroke-width="2"/>
+    <text x="880" y="190" text-anchor="middle" font-size="22" font-weight="700" fill="#c2410c">LLM 推理</text>
+    <text x="880" y="226" text-anchor="middle" font-size="16" fill="#475569">上下文窗口</text>
+    <text x="880" y="250" text-anchor="middle" font-size="16" fill="#475569">KV cache</text>
+    <text x="880" y="274" text-anchor="middle" font-size="16" fill="#475569">工具调用</text>
+
+    <rect x="1030" y="160" width="185" height="120" rx="16" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+    <text x="1122" y="204" text-anchor="middle" font-size="22" font-weight="700" fill="#5b21b6">部署结果</text>
+    <text x="1122" y="238" text-anchor="middle" font-size="16" fill="#475569">延迟 / 成本</text>
+    <text x="1122" y="262" text-anchor="middle" font-size="16" fill="#475569">准确率 / 可扩展性</text>
+
+    <path d="M240 220 L295 220" stroke="#94a3b8" stroke-width="4" marker-end="url(#arrow)"/>
+    <path d="M485 220 L540 220" stroke="#94a3b8" stroke-width="4" marker-end="url(#arrow)"/>
+    <path d="M730 220 L785 220" stroke="#94a3b8" stroke-width="4" marker-end="url(#arrow)"/>
+    <path d="M975 220 L1030 220" stroke="#94a3b8" stroke-width="4" marker-end="url(#arrow)"/>
+
+    <rect x="120" y="415" width="300" height="125" rx="16" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="270" y="455" text-anchor="middle" font-size="21" font-weight="700" fill="#0f172a">低预算策略</text>
+    <text x="270" y="493" text-anchor="middle" font-size="16" fill="#475569">低分辨率、少帧、强压缩</text>
+    <text x="270" y="519" text-anchor="middle" font-size="16" fill="#475569">适合摘要、粗粒度检索、移动端</text>
+
+    <rect x="490" y="415" width="300" height="125" rx="16" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="640" y="455" text-anchor="middle" font-size="21" font-weight="700" fill="#0f172a">自适应策略</text>
+    <text x="640" y="493" text-anchor="middle" font-size="16" fill="#475569">按任务和区域动态加密 token</text>
+    <text x="640" y="519" text-anchor="middle" font-size="16" fill="#475569">适合文档、GUI、长视频</text>
+
+    <rect x="860" y="415" width="300" height="125" rx="16" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="1010" y="455" text-anchor="middle" font-size="21" font-weight="700" fill="#0f172a">高预算策略</text>
+    <text x="1010" y="493" text-anchor="middle" font-size="16" fill="#475569">保留高分辨率和多层视觉证据</text>
+    <text x="1010" y="519" text-anchor="middle" font-size="16" fill="#475569">适合精密 OCR、空间与具身任务</text>
+  </g>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#94a3b8"/></marker></defs>
+</svg>
