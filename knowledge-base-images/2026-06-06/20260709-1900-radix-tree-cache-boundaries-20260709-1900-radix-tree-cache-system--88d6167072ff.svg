@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#f9fafb"/>
+  <text x="600" y="58" text-anchor="middle" font-size="34" font-family="Arial, sans-serif" fill="#111827">Radix Tree Cache 在推理系统中的位置</text>
+  <text x="600" y="94" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#4b5563">它位于请求模板、KV 内存管理、调度器和外部缓存层之间，是控制面的一部分</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="80" y="145" width="230" height="92" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+    <text x="195" y="181" text-anchor="middle" font-size="22" fill="#1e3a8a">请求模板治理</text>
+    <text x="195" y="213" text-anchor="middle" font-size="17" fill="#1e3a8a">稳定前缀前置</text>
+    <path d="M310 191 L395 191" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+    <rect x="395" y="125" width="410" height="132" rx="14" fill="#fef3c7" stroke="#d97706" stroke-width="3"/>
+    <text x="600" y="169" text-anchor="middle" font-size="26" fill="#78350f">Radix Tree Cache</text>
+    <text x="600" y="205" text-anchor="middle" font-size="18" fill="#78350f">前缀匹配、节点拆分、插入、驱逐</text>
+    <text x="600" y="234" text-anchor="middle" font-size="18" fill="#78350f">把 token 序列映射到 KV 页面</text>
+    <path d="M805 191 L890 191" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+    <rect x="890" y="145" width="230" height="92" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+    <text x="1005" y="181" text-anchor="middle" font-size="22" fill="#14532d">Paged KV</text>
+    <text x="1005" y="213" text-anchor="middle" font-size="17" fill="#14532d">HBM 页面管理</text>
+    <rect x="205" y="360" width="260" height="96" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="3"/>
+    <text x="335" y="397" text-anchor="middle" font-size="22" fill="#4c1d95">Cache-Aware 调度</text>
+    <text x="335" y="430" text-anchor="middle" font-size="17" fill="#4c1d95">命中优先与公平性权衡</text>
+    <path d="M515 257 L390 360" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+    <rect x="735" y="360" width="260" height="96" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="3"/>
+    <text x="865" y="397" text-anchor="middle" font-size="22" fill="#7f1d1d">外部缓存层</text>
+    <text x="865" y="430" text-anchor="middle" font-size="17" fill="#7f1d1d">CPU / NVMe / 跨引擎</text>
+    <path d="M685 257 L812 360" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+    <rect x="370" y="555" width="460" height="72" rx="12" fill="#e2e8f0" stroke="#64748b" stroke-width="3"/>
+    <text x="600" y="586" text-anchor="middle" font-size="22" fill="#0f172a">观测与策略层</text>
+    <text x="600" y="613" text-anchor="middle" font-size="17" fill="#334155">命中长度、节省 token、驱逐代价、租户隔离、质量回退</text>
+    <path d="M430 456 L535 555" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+    <path d="M805 456 L665 555" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+  </g>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#64748b"/></marker></defs>
+</svg>
