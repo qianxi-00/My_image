@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620">
+  <rect width="1200" height="620" fill="#f9fafb"/>
+  <text x="600" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#111827">encoder-free 路线的收益与代价</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="80" y="120" width="470" height="410" rx="20" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+    <text x="315" y="165" text-anchor="middle" font-size="24" font-weight="700" fill="#312e81">收益</text>
+    <circle cx="150" cy="220" r="9" fill="#4f46e5"/><text x="178" y="226" font-size="18" fill="#1f2937">少一层重型视觉/音频 encoder，部署链路更短</text>
+    <circle cx="150" cy="280" r="9" fill="#4f46e5"/><text x="178" y="286" font-size="18" fill="#1f2937">多模态输入共享同一主干，微调路径更统一</text>
+    <circle cx="150" cy="340" r="9" fill="#4f46e5"/><text x="178" y="346" font-size="18" fill="#1f2937">适合 16GB 级本地设备和桌面 Agent 试验</text>
+    <circle cx="150" cy="400" r="9" fill="#4f46e5"/><text x="178" y="406" font-size="18" fill="#1f2937">图像、音频、视频输入能进入统一交互循环</text>
+    <rect x="650" y="120" width="470" height="410" rx="20" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+    <text x="885" y="165" text-anchor="middle" font-size="24" font-weight="700" fill="#9a3412">代价与风险</text>
+    <circle cx="720" cy="220" r="9" fill="#ea580c"/><text x="748" y="226" font-size="18" fill="#1f2937">线性投影不等于免费理解，训练配方仍是核心</text>
+    <circle cx="720" cy="280" r="9" fill="#ea580c"/><text x="748" y="286" font-size="18" fill="#1f2937">视频主要靠帧序列处理，时间建模能力需谨慎验证</text>
+    <circle cx="720" cy="340" r="9" fill="#ea580c"/><text x="748" y="346" font-size="18" fill="#1f2937">长视频、多路音频、实时对话仍受算力和缓存约束</text>
+    <circle cx="720" cy="400" r="9" fill="#ea580c"/><text x="748" y="406" font-size="18" fill="#1f2937">本地运行降低云依赖，但不自动解决安全和评测问题</text>
+    <line x1="600" y1="115" x2="600" y2="535" stroke="#9ca3af" stroke-width="2" stroke-dasharray="8 8"/>
+    <text x="600" y="575" text-anchor="middle" font-size="18" fill="#4b5563">判断：这是一条工程路线变化，不是单纯“参数更小但能力更强”的宣传点</text>
+  </g>
+</svg>
