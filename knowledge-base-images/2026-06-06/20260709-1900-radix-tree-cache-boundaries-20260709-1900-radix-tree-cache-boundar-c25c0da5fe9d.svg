@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#fffdf7"/>
+  <text x="600" y="58" text-anchor="middle" font-size="34" font-family="Arial, sans-serif" fill="#111827">Radix Tree Cache 的四类边界</text>
+  <text x="600" y="96" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#4b5563">前缀树是高效索引，不是万能缓存策略；收益取决于输入、内存、调度和安全约束</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="90" y="145" width="470" height="210" rx="12" fill="#ecfeff" stroke="#0891b2" stroke-width="3"/>
+    <text x="325" y="188" text-anchor="middle" font-size="25" fill="#164e63">输入边界</text>
+    <text x="130" y="232" font-size="19" fill="#0f172a">只识别 token 前缀共享</text>
+    <text x="130" y="268" font-size="19" fill="#0f172a">模板抖动会提前分叉</text>
+    <text x="130" y="304" font-size="19" fill="#0f172a">相似语义不等于可复用 KV</text>
+    <rect x="640" y="145" width="470" height="210" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="3"/>
+    <text x="875" y="188" text-anchor="middle" font-size="25" fill="#14532d">内存边界</text>
+    <text x="680" y="232" font-size="19" fill="#0f172a">缓存命中会占用 HBM</text>
+    <text x="680" y="268" font-size="19" fill="#0f172a">LRU 未必等于业务最优</text>
+    <text x="680" y="304" font-size="19" fill="#0f172a">长前缀会挤压新请求空间</text>
+    <rect x="90" y="405" width="470" height="210" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="3"/>
+    <text x="325" y="448" text-anchor="middle" font-size="25" fill="#7f1d1d">调度边界</text>
+    <text x="130" y="492" font-size="19" fill="#0f172a">命中率高不等于 TTFT 最优</text>
+    <text x="130" y="528" font-size="19" fill="#0f172a">prefill / decode 目标不同</text>
+    <text x="130" y="564" font-size="19" fill="#0f172a">热点前缀可能造成不公平</text>
+    <rect x="640" y="405" width="470" height="210" rx="12" fill="#f5f3ff" stroke="#7c3aed" stroke-width="3"/>
+    <text x="875" y="448" text-anchor="middle" font-size="25" fill="#4c1d95">安全边界</text>
+    <text x="680" y="492" font-size="19" fill="#0f172a">租户、权限、adapter 必须隔离</text>
+    <text x="680" y="528" font-size="19" fill="#0f172a">跨会话复用需要审计</text>
+    <text x="680" y="564" font-size="19" fill="#0f172a">缓存侧信道不能被忽视</text>
+  </g>
+  <text x="600" y="675" text-anchor="middle" font-size="20" font-family="Arial, sans-serif" fill="#334155">结论：Radix Tree Cache 解决“怎样找共享前缀”，但不单独回答“哪些 KV 应该保留、迁移、共享或禁止复用”。</text>
+</svg>
