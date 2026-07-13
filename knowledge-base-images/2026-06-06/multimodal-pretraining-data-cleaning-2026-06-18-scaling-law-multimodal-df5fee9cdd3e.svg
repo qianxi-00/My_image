@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#f8fafc"/>
+  <rect x="40" y="40" width="1120" height="640" rx="28" fill="white" stroke="#dbeafe" stroke-width="4"/>
+  <text x="60" y="105" font-size="40" font-family="Arial, 'Noto Sans CJK SC', sans-serif" font-weight="700" fill="#059669">多模态数据的 Scaling 账本</text>
+  <line x1="60" y1="125" x2="1140" y2="125" stroke="#e5e7eb" stroke-width="3"/>
+  <text x="60" y="150" font-size="26" fill="#1f2937">更多样本 ≠ 更多有效监督：错配样本会放大噪声</text><text x="60" y="198" font-size="26" fill="#1f2937">更高分辨率 ≠ 更强理解：计算预算会被视觉 token 吞掉</text><text x="60" y="246" font-size="26" fill="#1f2937">更多模态 ≠ 自动涌现：需要任务和评价指标牵引</text><text x="60" y="294" font-size="26" fill="#1f2937">更严格过滤 ≠ 必然公平：过滤器也会带入价值偏差</text><text x="60" y="342" font-size="26" fill="#1f2937">真正的 scaling 来自质量、覆盖、对齐与采样权重共同优化</text>
+  <text x="60" y="650" font-size="22" fill="#64748b">AI 热点知识体系图示 · 2000 预训练 / 数据 / Scaling Law 线</text>
+</svg>
