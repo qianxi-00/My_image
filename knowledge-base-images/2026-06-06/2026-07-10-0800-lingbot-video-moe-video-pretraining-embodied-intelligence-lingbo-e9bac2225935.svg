@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680">
+  <rect width="1200" height="680" fill="#f8fafc"/>
+  <text x="60" y="72" font-size="34" font-family="Arial, sans-serif" font-weight="700" fill="#111827">视频基础模型的两条路线：创作优先 vs 具身优先</text>
+  <rect x="80" y="140" width="480" height="430" rx="18" fill="#fdf2f8" stroke="#db2777" stroke-width="2"/>
+  <text x="145" y="195" font-size="28" font-family="Arial, sans-serif" font-weight="700" fill="#9d174d">创作型视频模型</text>
+  <text x="125" y="250" font-size="20" font-family="Arial, sans-serif" fill="#111827">核心目标：画面质量、风格、镜头感</text>
+  <text x="125" y="292" font-size="18" font-family="Arial, sans-serif" fill="#374151">优化信号：审美、提示词跟随、运动一致</text>
+  <text x="125" y="334" font-size="18" font-family="Arial, sans-serif" fill="#374151">典型用户：内容创作者、广告、影视预演</text>
+  <text x="125" y="376" font-size="18" font-family="Arial, sans-serif" fill="#374151">主要风险：好看但不一定物理可执行</text>
+  <text x="125" y="418" font-size="18" font-family="Arial, sans-serif" fill="#374151">系统位置：生成素材或表达意图</text>
+  <rect x="640" y="140" width="480" height="430" rx="18" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
+  <text x="705" y="195" font-size="28" font-family="Arial, sans-serif" font-weight="700" fill="#155e75">具身型视频模型</text>
+  <text x="685" y="250" font-size="20" font-family="Arial, sans-serif" fill="#111827">核心目标：动作、物理、任务进度</text>
+  <text x="685" y="292" font-size="18" font-family="Arial, sans-serif" fill="#374151">优化信号：合理性、可控性、完成度</text>
+  <text x="685" y="334" font-size="18" font-family="Arial, sans-serif" fill="#374151">典型用户：机器人、仿真、世界模型团队</text>
+  <text x="685" y="376" font-size="18" font-family="Arial, sans-serif" fill="#374151">主要风险：评测困难、闭环验证成本高</text>
+  <text x="685" y="418" font-size="18" font-family="Arial, sans-serif" fill="#374151">系统位置：预测、规划与执行前置模型</text>
+  <path d="M570 355 L630 355" stroke="#64748b" stroke-width="5" marker-end="url(#arrow)"/>
+  <text x="520" y="625" font-size="18" font-family="Arial, sans-serif" fill="#475569">LingBot-Video 的看点：把视频预训练从内容生成路线拉向物理世界 AGI 平台的基础组件。</text>
+  <defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#64748b"/></marker></defs>
+</svg>
