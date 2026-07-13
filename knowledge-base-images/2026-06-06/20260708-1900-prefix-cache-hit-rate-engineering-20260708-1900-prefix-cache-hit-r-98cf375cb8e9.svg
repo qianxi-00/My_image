@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680">
+  <rect width="1200" height="680" fill="#f8fafc"/>
+  <text x="60" y="70" font-size="34" font-family="Arial, sans-serif" font-weight="700" fill="#0f172a">Prefix Cache 的三种复用层级</text>
+  <text x="60" y="110" font-size="18" font-family="Arial, sans-serif" fill="#475569">从完全相同前缀到语义相似复用，命中率越高，正确性约束越强</text>
+  <g transform="translate(70,170)">
+    <rect x="0" y="0" width="320" height="360" rx="16" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+    <text x="28" y="52" font-size="28" font-family="Arial, sans-serif" font-weight="700" fill="#1d4ed8">相同前缀</text>
+    <rect x="32" y="95" width="250" height="44" rx="8" fill="#ffffff" stroke="#93c5fd"/>
+    <text x="52" y="124" font-size="18" font-family="Arial, sans-serif" fill="#0f172a">系统提示词</text>
+    <rect x="32" y="155" width="250" height="44" rx="8" fill="#ffffff" stroke="#93c5fd"/>
+    <text x="52" y="184" font-size="18" font-family="Arial, sans-serif" fill="#0f172a">固定工具说明</text>
+    <rect x="32" y="215" width="250" height="44" rx="8" fill="#ffffff" stroke="#93c5fd"/>
+    <text x="52" y="244" font-size="18" font-family="Arial, sans-serif" fill="#0f172a">Few-shot 示例</text>
+    <text x="28" y="305" font-size="18" font-family="Arial, sans-serif" fill="#1e3a8a">可直接复用 KV，收益最稳定</text>
+  </g>
+  <g transform="translate(440,170)">
+    <rect x="0" y="0" width="320" height="360" rx="16" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+    <text x="28" y="52" font-size="28" font-family="Arial, sans-serif" font-weight="700" fill="#15803d">相似前缀</text>
+    <rect x="32" y="95" width="250" height="44" rx="8" fill="#ffffff" stroke="#86efac"/>
+    <text x="52" y="124" font-size="18" font-family="Arial, sans-serif" fill="#0f172a">模板一致</text>
+    <rect x="32" y="155" width="120" height="44" rx="8" fill="#ffffff" stroke="#86efac"/>
+    <text x="52" y="184" font-size="18" font-family="Arial, sans-serif" fill="#0f172a">变量 A</text>
+    <rect x="162" y="155" width="120" height="44" rx="8" fill="#fef3c7" stroke="#f59e0b"/>
+    <text x="182" y="184" font-size="18" font-family="Arial, sans-serif" fill="#92400e">变量 B</text>
+    <rect x="32" y="215" width="250" height="44" rx="8" fill="#ffffff" stroke="#86efac"/>
+    <text x="52" y="244" font-size="18" font-family="Arial, sans-serif" fill="#0f172a">结构化输出约束</text>
+    <text x="28" y="305" font-size="18" font-family="Arial, sans-serif" fill="#14532d">需要模板治理与块级匹配</text>
+  </g>
+  <g transform="translate(810,170)">
+    <rect x="0" y="0" width="320" height="360" rx="16" fill="#fae8ff" stroke="#a21caf" stroke-width="3"/>
+    <text x="28" y="52" font-size="28" font-family="Arial, sans-serif" font-weight="700" fill="#86198f">语义复用</text>
+    <rect x="32" y="95" width="250" height="44" rx="8" fill="#ffffff" stroke="#e879f9"/>
+    <text x="52" y="124" font-size="18" font-family="Arial, sans-serif" fill="#0f172a">检索材料相近</text>
+    <rect x="32" y="155" width="250" height="44" rx="8" fill="#ffffff" stroke="#e879f9"/>
+    <text x="52" y="184" font-size="18" font-family="Arial, sans-serif" fill="#0f172a">知识片段重叠</text>
+    <rect x="32" y="215" width="250" height="44" rx="8" fill="#ffffff" stroke="#e879f9"/>
+    <text x="52" y="244" font-size="18" font-family="Arial, sans-serif" fill="#0f172a">需局部重算校正</text>
+    <text x="28" y="305" font-size="18" font-family="Arial, sans-serif" fill="#581c87">收益大但质量风险最高</text>
+  </g>
+  <path d="M390 350 C410 330 420 330 440 350" stroke="#64748b" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <path d="M760 350 C780 330 790 330 810 350" stroke="#64748b" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#64748b"/></marker></defs>
+</svg>
