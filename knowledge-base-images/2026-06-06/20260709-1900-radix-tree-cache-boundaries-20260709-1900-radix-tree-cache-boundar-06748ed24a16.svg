@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#f8fafc"/>
+  <text x="600" y="58" text-anchor="middle" font-size="34" font-family="Arial, sans-serif" fill="#111827">Radix Tree Cache 适合处理的共享前缀</text>
+  <text x="600" y="96" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#4b5563">同一系统提示词、工具定义、会话历史可以在树上共享；一旦 token 序列分叉，复用边界也随之分叉</text>
+  <circle cx="600" cy="160" r="32" fill="#1d4ed8"/>
+  <text x="600" y="168" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="white">根</text>
+  <line x1="600" y1="192" x2="600" y2="255" stroke="#64748b" stroke-width="4"/>
+  <rect x="410" y="255" width="380" height="58" rx="10" fill="#dbeafe" stroke="#1d4ed8" stroke-width="3"/>
+  <text x="600" y="291" text-anchor="middle" font-size="21" font-family="Arial, sans-serif" fill="#1e3a8a">共享系统提示词 + 安全规则</text>
+  <line x1="500" y1="313" x2="280" y2="390" stroke="#64748b" stroke-width="4"/>
+  <line x1="600" y1="313" x2="600" y2="390" stroke="#64748b" stroke-width="4"/>
+  <line x1="700" y1="313" x2="920" y2="390" stroke="#64748b" stroke-width="4"/>
+  <rect x="110" y="390" width="340" height="58" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+  <text x="280" y="426" text-anchor="middle" font-size="20" font-family="Arial, sans-serif" fill="#14532d">会话 A 历史</text>
+  <rect x="430" y="390" width="340" height="58" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="3"/>
+  <text x="600" y="426" text-anchor="middle" font-size="20" font-family="Arial, sans-serif" fill="#78350f">Few-shot 示例集</text>
+  <rect x="750" y="390" width="340" height="58" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="3"/>
+  <text x="920" y="426" text-anchor="middle" font-size="20" font-family="Arial, sans-serif" fill="#4c1d95">Agent 工具说明</text>
+  <line x1="280" y1="448" x2="220" y2="535" stroke="#94a3b8" stroke-width="3"/>
+  <line x1="280" y1="448" x2="340" y2="535" stroke="#94a3b8" stroke-width="3"/>
+  <rect x="90" y="535" width="260" height="54" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="220" y="568" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#111827">新问题 1</text>
+  <rect x="290" y="535" width="260" height="54" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="420" y="568" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#111827">新问题 2</text>
+  <line x1="600" y1="448" x2="600" y2="535" stroke="#94a3b8" stroke-width="3"/>
+  <rect x="470" y="535" width="260" height="54" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="600" y="568" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#111827">不同题目</text>
+  <line x1="920" y1="448" x2="850" y2="535" stroke="#94a3b8" stroke-width="3"/>
+  <line x1="920" y1="448" x2="990" y2="535" stroke="#94a3b8" stroke-width="3"/>
+  <rect x="720" y="535" width="260" height="54" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="850" y="568" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#111827">工具调用轨迹 A</text>
+  <rect x="940" y="535" width="220" height="54" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="1050" y="568" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#111827">轨迹 B</text>
+  <rect x="120" y="640" width="960" height="42" rx="8" fill="#e2e8f0"/>
+  <text x="600" y="667" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#334155">边界：树只能复用 token 级共享路径，不能自动理解相似语义、权限隔离或跨模型状态</text>
+</svg>
