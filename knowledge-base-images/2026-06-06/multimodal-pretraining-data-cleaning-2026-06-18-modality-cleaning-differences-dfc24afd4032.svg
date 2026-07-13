@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#f8fafc"/>
+  <rect x="40" y="40" width="1120" height="640" rx="28" fill="white" stroke="#dbeafe" stroke-width="4"/>
+  <text x="60" y="105" font-size="40" font-family="Arial, 'Noto Sans CJK SC', sans-serif" font-weight="700" fill="#7c3aed">不同模态的清洗难点</text>
+  <line x1="60" y1="125" x2="1140" y2="125" stroke="#e5e7eb" stroke-width="3"/>
+  <text x="60" y="150" font-size="26" fill="#1f2937">文本：可解析、可去重、可按语言和主题分桶</text><text x="60" y="198" font-size="26" fill="#1f2937">图像：需要判断内容、风格、水印、OCR 与 caption 是否对应</text><text x="60" y="246" font-size="26" fill="#1f2937">视频：还要处理帧冗余、镜头切分、动作事件和时间顺序</text><text x="60" y="294" font-size="26" fill="#1f2937">音频：涉及说话人、噪声、转写、音乐版权与声纹隐私</text><text x="60" y="342" font-size="26" fill="#1f2937">多模态：难点不在单个样本，而在“跨模态是否真的对齐”</text>
+  <text x="60" y="650" font-size="22" fill="#64748b">AI 热点知识体系图示 · 2000 预训练 / 数据 / Scaling Law 线</text>
+</svg>
