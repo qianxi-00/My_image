@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680">
+  <rect width="1200" height="680" fill="#f7f8fb"/>
+  <text x="60" y="70" font-size="34" font-family="Arial, sans-serif" font-weight="700" fill="#1f2937">LingBot-Video：面向具身智能的视频预训练主线</text>
+  <text x="60" y="110" font-size="18" font-family="Arial, sans-serif" fill="#4b5563">从互联网视频走向机器人动作、物理合理性与任务完成对齐</text>
+  <rect x="70" y="175" width="220" height="115" rx="14" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+  <text x="108" y="220" font-size="24" font-family="Arial, sans-serif" font-weight="700" fill="#075985">数据画像引擎</text>
+  <text x="96" y="255" font-size="16" font-family="Arial, sans-serif" fill="#0f172a">互联网视频 + 机器人视角</text>
+  <text x="112" y="278" font-size="16" font-family="Arial, sans-serif" fill="#0f172a">操作 / 导航 / 第一视角</text>
+  <path d="M300 232 L390 232" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+  <rect x="400" y="150" width="300" height="165" rx="16" fill="#ecfdf5" stroke="#16a34a" stroke-width="2"/>
+  <text x="464" y="198" font-size="25" font-family="Arial, sans-serif" font-weight="700" fill="#166534">DiT + MoE 主干</text>
+  <text x="438" y="235" font-size="17" font-family="Arial, sans-serif" fill="#0f172a">稀疏专家扩展容量</text>
+  <text x="438" y="262" font-size="17" font-family="Arial, sans-serif" fill="#0f172a">兼顾建模能力与推理效率</text>
+  <text x="438" y="289" font-size="17" font-family="Arial, sans-serif" fill="#0f172a">从零训练的视频基础模型</text>
+  <path d="M710 232 L800 232" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+  <rect x="815" y="175" width="300" height="115" rx="14" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+  <text x="872" y="220" font-size="24" font-family="Arial, sans-serif" font-weight="700" fill="#9a3412">多维奖励系统</text>
+  <text x="850" y="255" font-size="16" font-family="Arial, sans-serif" fill="#0f172a">物理合理性 / 任务完成 / 动作一致</text>
+  <rect x="175" y="410" width="850" height="150" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="235" y="455" font-size="24" font-family="Arial, sans-serif" font-weight="700" fill="#1f2937">目标变化：视频模型不只服务“好看”，还要服务“可执行”</text>
+  <text x="235" y="495" font-size="18" font-family="Arial, sans-serif" fill="#334155">内容创作：视觉保真、审美、提示词跟随、运动连续</text>
+  <text x="235" y="528" font-size="18" font-family="Arial, sans-serif" fill="#334155">具身智能：动作因果、物理约束、任务进度、机器人可用轨迹</text>
+  <defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#64748b"/></marker></defs>
+</svg>
