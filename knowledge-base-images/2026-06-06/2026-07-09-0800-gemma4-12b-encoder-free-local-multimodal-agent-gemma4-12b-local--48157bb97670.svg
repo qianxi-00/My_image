@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680">
+  <rect width="1200" height="680" fill="#fbfbf8"/>
+  <text x="600" y="56" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#111827">本地多模态 Agent 栈：从模型到桌面工作流</text>
+  <g font-family="Arial, sans-serif" font-size="16">
+    <rect x="70" y="130" width="220" height="420" rx="18" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+    <text x="180" y="170" text-anchor="middle" font-size="22" font-weight="700" fill="#92400e">用户输入</text>
+    <text x="180" y="220" text-anchor="middle" fill="#78350f">语音问题</text>
+    <text x="180" y="270" text-anchor="middle" fill="#78350f">屏幕截图 / 图片</text>
+    <text x="180" y="320" text-anchor="middle" fill="#78350f">视频片段 + 音频</text>
+    <text x="180" y="370" text-anchor="middle" fill="#78350f">代码与文件上下文</text>
+    <text x="180" y="420" text-anchor="middle" fill="#78350f">函数调用请求</text>
+    <rect x="410" y="130" width="330" height="420" rx="18" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+    <text x="575" y="170" text-anchor="middle" font-size="22" font-weight="700" fill="#075985">Gemma 4 12B 本地服务</text>
+    <text x="575" y="225" text-anchor="middle" fill="#0c4a6e">LiteRT-LM / llama.cpp / Transformers</text>
+    <text x="575" y="275" text-anchor="middle" fill="#0c4a6e">OpenAI-compatible API</text>
+    <text x="575" y="325" text-anchor="middle" fill="#0c4a6e">256K 上下文 + prefix cache</text>
+    <text x="575" y="375" text-anchor="middle" fill="#0c4a6e">音频、视觉、文本统一推理</text>
+    <text x="575" y="425" text-anchor="middle" fill="#0c4a6e">MTP drafter 降低生成延迟</text>
+    <rect x="870" y="130" width="260" height="420" rx="18" fill="#ecfdf5" stroke="#16a34a" stroke-width="2"/>
+    <text x="1000" y="170" text-anchor="middle" font-size="22" font-weight="700" fill="#14532d">工具与产物</text>
+    <text x="1000" y="220" text-anchor="middle" fill="#166534">桌面语音编辑</text>
+    <text x="1000" y="270" text-anchor="middle" fill="#166534">图像处理 App</text>
+    <text x="1000" y="320" text-anchor="middle" fill="#166534">科学绘图 / Python 执行</text>
+    <text x="1000" y="370" text-anchor="middle" fill="#166534">OpenCode / Aider / Continue</text>
+    <text x="1000" y="420" text-anchor="middle" fill="#166534">离线知识工作流</text>
+    <path d="M290 340 L410 340" stroke="#6b7280" stroke-width="5" marker-end="url(#arrow)"/>
+    <path d="M740 340 L870 340" stroke="#6b7280" stroke-width="5" marker-end="url(#arrow)"/>
+    <rect x="320" y="580" width="560" height="52" rx="12" fill="#ffffff" stroke="#9ca3af"/>
+    <text x="600" y="613" text-anchor="middle" fill="#374151">关键变化：云端多模态演示变成本地可集成、可调试、可接工具的开发组件</text>
+  </g>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6b7280"/></marker></defs>
+</svg>
