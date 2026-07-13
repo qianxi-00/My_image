@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#f8fafc"/>
+  <rect x="40" y="40" width="1120" height="640" rx="28" fill="white" stroke="#dbeafe" stroke-width="4"/>
+  <text x="60" y="105" font-size="40" font-family="Arial, 'Noto Sans CJK SC', sans-serif" font-weight="700" fill="#2563eb">多模态预训练数据管线</text>
+  <line x1="60" y1="125" x2="1140" y2="125" stroke="#e5e7eb" stroke-width="3"/>
+  <text x="60" y="150" font-size="26" fill="#1f2937">采集：网页、图片、视频、音频、代码与元数据</text><text x="60" y="198" font-size="26" fill="#1f2937">对齐：图文匹配、字幕切分、时间戳同步、语义一致性</text><text x="60" y="246" font-size="26" fill="#1f2937">过滤：质量、版权、隐私、安全、重复与偏见审计</text><text x="60" y="294" font-size="26" fill="#1f2937">采样：按任务、模态、语言、领域、难度重新配比</text><text x="60" y="342" font-size="26" fill="#1f2937">训练：把 token 预算变成跨模态能力，而不是只堆规模</text>
+  <text x="60" y="650" font-size="22" fill="#64748b">AI 热点知识体系图示 · 2000 预训练 / 数据 / Scaling Law 线</text>
+</svg>
