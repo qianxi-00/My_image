@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680">
+  <rect width="1200" height="680" fill="#fcfcfd"/>
+  <text x="60" y="70" font-size="34" font-family="Arial, sans-serif" font-weight="700" fill="#111827">Prefix Cache 命中率账本</text>
+  <text x="60" y="110" font-size="18" font-family="Arial, sans-serif" fill="#4b5563">命中率不是单一指标，要同时看省下的 Prefill、额外索引成本、显存占用和质量风险</text>
+  <g transform="translate(90,170)" font-family="Arial, sans-serif">
+    <rect x="0" y="0" width="1010" height="390" rx="18" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+    <line x1="0" y1="78" x2="1010" y2="78" stroke="#d1d5db" stroke-width="2"/>
+    <line x1="250" y1="0" x2="250" y2="390" stroke="#d1d5db" stroke-width="2"/>
+    <line x1="500" y1="0" x2="500" y2="390" stroke="#d1d5db" stroke-width="2"/>
+    <line x1="755" y1="0" x2="755" y2="390" stroke="#d1d5db" stroke-width="2"/>
+    <text x="35" y="48" font-size="21" font-weight="700" fill="#0f172a">复用类型</text>
+    <text x="285" y="48" font-size="21" font-weight="700" fill="#0f172a">主要收益</text>
+    <text x="535" y="48" font-size="21" font-weight="700" fill="#0f172a">主要成本</text>
+    <text x="790" y="48" font-size="21" font-weight="700" fill="#0f172a">适合场景</text>
+    <g font-size="18" fill="#111827">
+      <text x="35" y="130">相同前缀</text><text x="285" y="130">直接减少 Prefill</text><text x="535" y="130">缓存驻留与驱逐</text><text x="790" y="130">系统提示词、Few-shot、工具说明</text>
+      <text x="35" y="205">相似前缀</text><text x="285" y="205">块级复用更灵活</text><text x="535" y="205">模板治理、哈希粒度</text><text x="790" y="205">RAG 模板、批量分类、结构化抽取</text>
+      <text x="35" y="280">语义复用</text><text x="285" y="280">跨表达复用潜力大</text><text x="535" y="280">局部重算与质量恢复</text><text x="790" y="280">知识库问答、多轮 Agent 资料池</text>
+      <text x="35" y="355">外部缓存层</text><text x="285" y="355">跨引擎、跨节点复用</text><text x="535" y="355">传输、序列化、租户隔离</text><text x="790" y="355">长上下文、企业 RAG、分离式推理</text>
+    </g>
+  </g>
+  <rect x="90" y="590" width="1010" height="44" rx="10" fill="#0f172a"/>
+  <text x="120" y="618" font-size="18" font-family="Arial, sans-serif" fill="#ffffff">评估公式：有效收益 = 命中节省的 Prefill 时间 - 索引/传输/恢复成本 - 显存机会成本 - 质量风险成本</text>
+</svg>
