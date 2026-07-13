@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7fbff"/>
+      <stop offset="0.58" stop-color="#eef7f1"/>
+      <stop offset="1" stop-color="#fff6e6"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1f5f56"/>
+    </marker>
+    <style>
+      text { font-family: "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #17312d; }
+      .title { font-size: 44px; font-weight: 800; }
+      .sub { font-size: 23px; fill: #4a635e; }
+      .node-title { font-size: 27px; font-weight: 800; }
+      .node-body { font-size: 20px; fill: #52635f; }
+      .tag { font-size: 18px; fill: #ffffff; font-weight: 700; }
+    </style>
+  </defs>
+  <rect width="1400" height="760" fill="url(#bg)"/>
+  <text x="90" y="90" class="title">MolmoMotion 核心流程图</text>
+  <text x="90" y="132" class="sub">从视频观察和语言指令出发，预测对象附着点在 3D 空间中的未来轨迹。</text>
+  <g transform="translate(90 230)">
+    <rect width="300" height="210" rx="28" fill="#ffffff" stroke="#9bc7bd" stroke-width="3"/>
+    <rect x="32" y="38" width="236" height="92" rx="16" fill="#dcefe9"/>
+    <circle cx="95" cy="84" r="25" fill="#1f7a6d" opacity="0.86"/>
+    <path d="M140 118 C165 66 205 65 238 108" fill="none" stroke="#17312d" stroke-width="8" stroke-linecap="round"/>
+    <text x="34" y="166" class="node-title">视频帧 / 场景</text>
+    <text x="34" y="198" class="node-body">观察物体与上下文</text>
+  </g>
+  <g transform="translate(550 230)">
+    <rect width="300" height="210" rx="28" fill="#ffffff" stroke="#9bc7bd" stroke-width="3"/>
+    <rect x="38" y="42" width="224" height="54" rx="18" fill="#1f5f56"/>
+    <text x="64" y="78" class="tag">语言运动指令</text>
+    <path d="M66 130 L236 130 M66 160 L196 160" stroke="#6c8f87" stroke-width="10" stroke-linecap="round"/>
+    <text x="34" y="166" class="node-title">多模态理解</text>
+    <text x="34" y="198" class="node-body">把意图绑定到对象</text>
+  </g>
+  <g transform="translate(1010 230)">
+    <rect width="300" height="210" rx="28" fill="#ffffff" stroke="#9bc7bd" stroke-width="3"/>
+    <path d="M56 145 C112 54 180 66 248 92" fill="none" stroke="#e27d3f" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="56" cy="145" r="11" fill="#17312d"/>
+    <circle cx="121" cy="82" r="11" fill="#17312d"/>
+    <circle cx="188" cy="74" r="11" fill="#17312d"/>
+    <circle cx="248" cy="92" r="11" fill="#17312d"/>
+    <text x="34" y="166" class="node-title">3D 点轨迹</text>
+    <text x="34" y="198" class="node-body">预测动作将如何发生</text>
+  </g>
+  <path d="M410 335 L530 335" stroke="#1f5f56" stroke-width="8" marker-end="url(#arrow)"/>
+  <path d="M870 335 L990 335" stroke="#1f5f56" stroke-width="8" marker-end="url(#arrow)"/>
+  <rect x="90" y="560" width="1220" height="92" rx="24" fill="#ffffff" opacity="0.74" stroke="#c7d9d4"/>
+  <text x="126" y="612" class="sub">重点：MolmoMotion 不是只识别“发生了什么”，而是把视觉、指令和稀疏 3D 运动表示连成可预测链条。</text>
+</svg>
