@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#ffffff"/>
+  <text x="60" y="70" font-size="34" font-family="Arial, sans-serif" font-weight="700" fill="#111827">Prefix Cache 运行时命中流程</text>
+  <text x="60" y="108" font-size="18" font-family="Arial, sans-serif" fill="#4b5563">真正的工程问题不是“有没有缓存”，而是请求进入系统后能否快速、正确、可控地复用 KV</text>
+  <g font-family="Arial, sans-serif" font-size="18" fill="#111827">
+    <rect x="70" y="180" width="190" height="86" rx="14" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+    <text x="105" y="230">新请求进入</text>
+    <rect x="320" y="180" width="210" height="86" rx="14" fill="#f0fdf4" stroke="#16a34a" stroke-width="3"/>
+    <text x="350" y="215">规范化 Prompt</text>
+    <text x="350" y="245">模板、工具、变量</text>
+    <rect x="590" y="180" width="210" height="86" rx="14" fill="#fefce8" stroke="#ca8a04" stroke-width="3"/>
+    <text x="625" y="215">前缀索引查询</text>
+    <text x="625" y="245">哈希 / 前缀树</text>
+    <rect x="860" y="180" width="220" height="86" rx="14" fill="#faf5ff" stroke="#9333ea" stroke-width="3"/>
+    <text x="895" y="215">加载可复用 KV</text>
+    <text x="895" y="245">GPU / CPU / 外部层</text>
+    <rect x="320" y="370" width="210" height="86" rx="14" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+    <text x="355" y="405">仅计算未命中块</text>
+    <text x="355" y="435">减少 Prefill</text>
+    <rect x="590" y="370" width="210" height="86" rx="14" fill="#ecfeff" stroke="#0891b2" stroke-width="3"/>
+    <text x="625" y="405">Decode 写入新 KV</text>
+    <text x="625" y="435">生命周期管理</text>
+    <rect x="860" y="370" width="220" height="86" rx="14" fill="#f8fafc" stroke="#475569" stroke-width="3"/>
+    <text x="895" y="405">驱逐与观测</text>
+    <text x="895" y="435">命中率、TTFT、显存</text>
+  </g>
+  <g stroke="#6b7280" stroke-width="4" fill="none" marker-end="url(#arrow)">
+    <path d="M260 223 L320 223"/>
+    <path d="M530 223 L590 223"/>
+    <path d="M800 223 L860 223"/>
+    <path d="M970 266 C970 330 425 320 425 370"/>
+    <path d="M530 413 L590 413"/>
+    <path d="M800 413 L860 413"/>
+    <path d="M970 370 C1040 315 1030 285 1080 266"/>
+  </g>
+  <rect x="70" y="560" width="1010" height="80" rx="12" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="100" y="595" font-size="20" font-family="Arial, sans-serif" font-weight="700" fill="#0f172a">核心判断</text>
+  <text x="100" y="625" font-size="18" font-family="Arial, sans-serif" fill="#334155">命中率工程必须同时管理输入规范化、缓存索引、分层加载、驱逐策略和业务侧 prompt 设计。</text>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#6b7280"/></marker></defs>
+</svg>
