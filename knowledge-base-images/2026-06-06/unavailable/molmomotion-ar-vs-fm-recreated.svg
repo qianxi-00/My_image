@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6f8ff"/>
+      <stop offset="0.55" stop-color="#fff7ed"/>
+      <stop offset="1" stop-color="#f0faf6"/>
+    </linearGradient>
+    <style>
+      text { font-family: "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #222a35; }
+      .title { font-size: 44px; font-weight: 800; }
+      .sub { font-size: 23px; fill: #5f6874; }
+      .head { font-size: 30px; font-weight: 800; }
+      .body { font-size: 21px; fill: #5b6570; }
+    </style>
+  </defs>
+  <rect width="1400" height="760" fill="url(#bg)"/>
+  <text x="90" y="92" class="title">MolmoMotion 两条预测路线对比图</text>
+  <text x="90" y="134" class="sub">AR 强调按序列逐步生成；FM 强调在连续空间中采样合理未来。</text>
+  <g transform="translate(90 220)">
+    <rect width="570" height="350" rx="34" fill="#ffffff" stroke="#6b7fd7" stroke-width="3"/>
+    <text x="42" y="64" class="head">AR：自回归轨迹</text>
+    <text x="42" y="106" class="body">未来被写成连续坐标序列</text>
+    <path d="M74 248 H480" stroke="#d8ddff" stroke-width="6"/>
+    <circle cx="90" cy="248" r="14" fill="#4e63c7"/>
+    <circle cx="178" cy="214" r="14" fill="#4e63c7"/>
+    <circle cx="266" cy="184" r="14" fill="#4e63c7"/>
+    <circle cx="354" cy="170" r="14" fill="#4e63c7"/>
+    <circle cx="442" cy="160" r="14" fill="#4e63c7"/>
+    <path d="M90 248 L178 214 L266 184 L354 170 L442 160" fill="none" stroke="#4e63c7" stroke-width="9" stroke-linecap="round"/>
+    <text x="78" y="303" class="body">t1 -&gt; t2 -&gt; t3 -&gt; t4</text>
+  </g>
+  <g transform="translate(740 220)">
+    <rect width="570" height="350" rx="34" fill="#ffffff" stroke="#d08348" stroke-width="3"/>
+    <text x="42" y="64" class="head">FM：流匹配 / 连续生成</text>
+    <text x="42" y="106" class="body">从噪声或初始分布流向合理未来</text>
+    <path d="M92 254 C174 142 286 312 454 152" fill="none" stroke="#d08348" stroke-width="9" stroke-linecap="round"/>
+    <path d="M100 176 C206 108 314 222 458 118" fill="none" stroke="#e8b184" stroke-width="7" stroke-linecap="round" opacity="0.74"/>
+    <path d="M100 292 C214 206 310 334 466 216" fill="none" stroke="#efc8a7" stroke-width="7" stroke-linecap="round" opacity="0.9"/>
+    <circle cx="92" cy="254" r="13" fill="#4f3424"/>
+    <circle cx="454" cy="152" r="13" fill="#4f3424"/>
+    <text x="78" y="303" class="body">多条可行未来，而非单一路径</text>
+  </g>
+  <rect x="90" y="620" width="1220" height="82" rx="24" fill="#ffffff" opacity="0.78" stroke="#d7ddd9"/>
+  <text x="126" y="672" class="sub">两者对应不同任务形态：确定性轨迹预测 vs. 多解未来建模。</text>
+</svg>
