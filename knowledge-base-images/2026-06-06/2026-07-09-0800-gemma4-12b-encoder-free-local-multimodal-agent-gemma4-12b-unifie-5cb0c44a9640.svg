@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640">
+  <rect width="1200" height="640" fill="#f8fafc"/>
+  <text x="600" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#111827">Gemma 4 12B：encoder-free 多模态输入流</text>
+  <text x="600" y="94" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#4b5563">图示为概念化整理：原始图像块与音频帧经轻量投影进入同一个 decoder-only 主干</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="70" y="170" width="180" height="92" rx="14" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="160" y="206" text-anchor="middle" font-size="20" font-weight="700" fill="#1e3a8a">图像 / 视频帧</text>
+    <text x="160" y="235" text-anchor="middle" font-size="15" fill="#1e40af">48x48 图像块</text>
+    <rect x="70" y="330" width="180" height="92" rx="14" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="160" y="366" text-anchor="middle" font-size="20" font-weight="700" fill="#14532d">音频波形</text>
+    <text x="160" y="395" text-anchor="middle" font-size="15" fill="#166534">16kHz / 40ms 帧</text>
+    <rect x="70" y="490" width="180" height="72" rx="14" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+    <text x="160" y="533" text-anchor="middle" font-size="20" font-weight="700" fill="#7f1d1d">文本 Token</text>
+    <rect x="380" y="160" width="210" height="112" rx="16" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+    <text x="485" y="200" text-anchor="middle" font-size="20" font-weight="700" fill="#1d4ed8">视觉嵌入器</text>
+    <text x="485" y="230" text-anchor="middle" font-size="15" fill="#1e40af">单次矩阵乘法 + 坐标查找</text>
+    <rect x="380" y="324" width="210" height="112" rx="16" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+    <text x="485" y="364" text-anchor="middle" font-size="20" font-weight="700" fill="#15803d">音频线性投影</text>
+    <text x="485" y="394" text-anchor="middle" font-size="15" fill="#166534">波形帧映射到隐藏维度</text>
+    <rect x="720" y="230" width="360" height="210" rx="24" fill="#111827" stroke="#374151" stroke-width="2"/>
+    <text x="900" y="285" text-anchor="middle" font-size="25" font-weight="700" fill="#ffffff">统一 decoder-only Transformer</text>
+    <text x="900" y="324" text-anchor="middle" font-size="17" fill="#d1d5db">视觉、音频、文本共享同一残差流</text>
+    <text x="900" y="358" text-anchor="middle" font-size="17" fill="#d1d5db">无需冻结多套 encoder 后再拼接</text>
+    <text x="900" y="392" text-anchor="middle" font-size="17" fill="#d1d5db">LoRA / 全参微调可一次覆盖多模态回路</text>
+    <path d="M250 216 L380 216" stroke="#2563eb" stroke-width="4" marker-end="url(#arrow)"/>
+    <path d="M250 376 L380 376" stroke="#16a34a" stroke-width="4" marker-end="url(#arrow)"/>
+    <path d="M250 526 C440 526 530 474 720 400" stroke="#dc2626" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+    <path d="M590 216 C650 230 680 265 720 305" stroke="#2563eb" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+    <path d="M590 380 C650 370 680 360 720 348" stroke="#16a34a" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  </g>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#374151"/></marker></defs>
+</svg>
