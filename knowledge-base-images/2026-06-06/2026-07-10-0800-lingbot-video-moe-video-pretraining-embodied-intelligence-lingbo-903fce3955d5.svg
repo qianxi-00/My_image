@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <rect width="1200" height="700" fill="#fbfbf8"/>
+  <text x="60" y="72" font-size="34" font-family="Arial, sans-serif" font-weight="700" fill="#111827">数据、模型、奖励：具身视频模型的闭环</text>
+  <text x="60" y="112" font-size="18" font-family="Arial, sans-serif" fill="#4b5563">LingBot-Video 的关键不只是生成视频，而是把视频预训练导向物理世界任务</text>
+  <circle cx="315" cy="300" r="120" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+  <text x="252" y="280" font-size="24" font-family="Arial, sans-serif" font-weight="700" fill="#1e3a8a">数据扩展</text>
+  <text x="238" y="315" font-size="17" font-family="Arial, sans-serif" fill="#111827">机器人操作</text>
+  <text x="238" y="342" font-size="17" font-family="Arial, sans-serif" fill="#111827">导航与第一视角</text>
+  <circle cx="600" cy="300" r="120" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+  <text x="538" y="280" font-size="24" font-family="Arial, sans-serif" font-weight="700" fill="#166534">MoE 视频主干</text>
+  <text x="522" y="315" font-size="17" font-family="Arial, sans-serif" fill="#111827">更大容量</text>
+  <text x="522" y="342" font-size="17" font-family="Arial, sans-serif" fill="#111827">更低激活成本</text>
+  <circle cx="885" cy="300" r="120" fill="#ffedd5" stroke="#ea580c" stroke-width="3"/>
+  <text x="826" y="280" font-size="24" font-family="Arial, sans-serif" font-weight="700" fill="#9a3412">奖励对齐</text>
+  <text x="804" y="315" font-size="17" font-family="Arial, sans-serif" fill="#111827">物理合理性</text>
+  <text x="804" y="342" font-size="17" font-family="Arial, sans-serif" fill="#111827">任务完成质量</text>
+  <path d="M435 300 L480 300" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M720 300 L765 300" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M885 425 C840 555 360 555 315 425" fill="none" stroke="#64748b" stroke-width="4" stroke-dasharray="8 8" marker-end="url(#arrow)"/>
+  <rect x="160" y="545" width="880" height="88" rx="14" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+  <text x="215" y="580" font-size="20" font-family="Arial, sans-serif" font-weight="700" fill="#111827">闭环含义</text>
+  <text x="215" y="612" font-size="17" font-family="Arial, sans-serif" fill="#374151">数据让模型看见真实动作，MoE 提供容量，奖励系统把“像视频”进一步推向“像可执行世界”。</text>
+  <defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#64748b"/></marker></defs>
+</svg>
