@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)" rx="14"/>
+  <text x="600" y="48" text-anchor="middle" fill="#f8fafc" font-size="26" font-weight="700">开源 VLM 组件竞争 vs 闭源一体化</text>
+  <rect x="60" y="110" width="500" height="420" rx="12" fill="#1d4ed8" opacity="0.92" filter="url(#shadow)"/>  <text x="310" y="142" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">开源路线</text>  <text x="76" y="172" fill="#e2e8f0" font-size="15">可替换视觉编码器</text>  <text x="76" y="196" fill="#e2e8f0" font-size="15">可审计 projector</text>  <text x="76" y="220" fill="#e2e8f0" font-size="15">接口开放便于二次开发</text>  <text x="76" y="244" fill="#e2e8f0" font-size="15">部署与微调自由度高</text>  <text x="76" y="268" fill="#e2e8f0" font-size="15">代价：组件拼装成本</text>  <rect x="640" y="110" width="500" height="420" rx="12" fill="#0f766e" opacity="0.92" filter="url(#shadow)"/>  <text x="890" y="142" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">闭源路线</text>  <text x="656" y="172" fill="#e2e8f0" font-size="15">端到端一体化优化</text>  <text x="656" y="196" fill="#e2e8f0" font-size="15">体验一致性更强</text>  <text x="656" y="220" fill="#e2e8f0" font-size="15">工具链封闭</text>  <text x="656" y="244" fill="#e2e8f0" font-size="15">接口黑盒</text>  <text x="656" y="268" fill="#e2e8f0" font-size="15">代价：可定制性弱</text>  <text x="600" y="696" text-anchor="middle" fill="#94a3b8" font-size="14">Qwen2.5-VL 的价值在于把关键接口公开到可拼装</text></svg>

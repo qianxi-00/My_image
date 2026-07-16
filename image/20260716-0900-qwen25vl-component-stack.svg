@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="560" fill="url(#bg)" rx="14"/>
+  <text x="600" y="48" text-anchor="middle" fill="#f8fafc" font-size="26" font-weight="700">Qwen2.5-VL 关键组件栈：从看图到可执行视觉理解</text>
+  <rect x="40" y="120" width="262" height="300" rx="12" fill="#4f46e5" opacity="0.92" filter="url(#shadow)"/>  <text x="171" y="152" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">视觉编码</text>  <text x="56" y="182" fill="#e2e8f0" font-size="15">动态分辨率</text>  <text x="56" y="206" fill="#e2e8f0" font-size="15">窗口/全局注意力</text>  <text x="56" y="230" fill="#e2e8f0" font-size="15">文档与UI细节</text>  <rect x="326" y="120" width="262" height="300" rx="12" fill="#0ea5e9" opacity="0.92" filter="url(#shadow)"/>  <text x="457" y="152" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">时间/空间</text>  <text x="342" y="182" fill="#e2e8f0" font-size="15">绝对坐标</text>  <text x="342" y="206" fill="#e2e8f0" font-size="15">时间戳对齐</text>  <text x="342" y="230" fill="#e2e8f0" font-size="15">长视频采样</text>  <rect x="612" y="120" width="262" height="300" rx="12" fill="#10b981" opacity="0.92" filter="url(#shadow)"/>  <text x="743" y="152" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">对齐投影</text>  <text x="628" y="182" fill="#e2e8f0" font-size="15">视觉→语言映射</text>  <text x="628" y="206" fill="#e2e8f0" font-size="15">结构化输出</text>  <text x="628" y="230" fill="#e2e8f0" font-size="15">工具调用接口</text>  <rect x="898" y="120" width="262" height="300" rx="12" fill="#f59e0b" opacity="0.92" filter="url(#shadow)"/>  <text x="1029" y="152" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">Agent 能力</text>  <text x="914" y="182" fill="#e2e8f0" font-size="15">截图操作</text>  <text x="914" y="206" fill="#e2e8f0" font-size="15">多步视觉任务</text>  <text x="914" y="230" fill="#e2e8f0" font-size="15">工作流嵌入</text>  <text x="600" y="536" text-anchor="middle" fill="#94a3b8" font-size="14">开源 VLM 竞争重心：组件接口，而不是单纯榜单分数</text></svg>

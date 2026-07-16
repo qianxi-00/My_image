@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)" rx="14"/>
+  <text x="600" y="48" text-anchor="middle" fill="#f8fafc" font-size="26" font-weight="700">视觉编码器取舍矩阵：语义 / 结构 / 成本 / 鲁棒</text>
+  <rect x="50" y="110" width="270" height="450" rx="12" fill="#4f46e5" opacity="0.92" filter="url(#shadow)"/>  <text x="185" y="142" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">语义对齐</text>  <text x="66" y="172" fill="#e2e8f0" font-size="15">SigLIP 2 ★★★★</text>  <text x="66" y="196" fill="#e2e8f0" font-size="15">DINOv2 ★★</text>  <text x="66" y="220" fill="#e2e8f0" font-size="15">Hybrid ★★★★</text>  <rect x="340" y="110" width="270" height="450" rx="12" fill="#0ea5e9" opacity="0.92" filter="url(#shadow)"/>  <text x="475" y="142" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">结构细节</text>  <text x="356" y="172" fill="#e2e8f0" font-size="15">SigLIP 2 ★★</text>  <text x="356" y="196" fill="#e2e8f0" font-size="15">DINOv2 ★★★★</text>  <text x="356" y="220" fill="#e2e8f0" font-size="15">Hybrid ★★★★</text>  <rect x="630" y="110" width="270" height="450" rx="12" fill="#10b981" opacity="0.92" filter="url(#shadow)"/>  <text x="765" y="142" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">训练/服务成本</text>  <text x="646" y="172" fill="#e2e8f0" font-size="15">SigLIP 2 ★★★</text>  <text x="646" y="196" fill="#e2e8f0" font-size="15">DINOv2 ★★★</text>  <text x="646" y="220" fill="#e2e8f0" font-size="15">Hybrid ★★</text>  <rect x="920" y="110" width="240" height="450" rx="12" fill="#f59e0b" opacity="0.92" filter="url(#shadow)"/>  <text x="1040" y="142" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">域外鲁棒</text>  <text x="936" y="172" fill="#e2e8f0" font-size="15">SigLIP 2 ★★★</text>  <text x="936" y="196" fill="#e2e8f0" font-size="15">DINOv2 ★★★★</text>  <text x="936" y="220" fill="#e2e8f0" font-size="15">Hybrid ★★★★</text>  <text x="600" y="696" text-anchor="middle" fill="#94a3b8" font-size="14">没有唯一最优编码器，只有任务匹配</text></svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)" rx="14"/>
+  <text x="600" y="48" text-anchor="middle" fill="#f8fafc" font-size="26" font-weight="700">Encoder-free vs 模块化多模态：两条架构路线</text>
+  <rect x="50" y="110" width="540" height="450" rx="12" fill="#4f46e5" opacity="0.92" filter="url(#shadow)"/>  <text x="320" y="142" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">Encoder-free</text>  <text x="66" y="172" fill="#e2e8f0" font-size="15">去掉独立 vision encoder</text>  <text x="66" y="196" fill="#e2e8f0" font-size="15">早期层直接吃视觉 token</text>  <text x="66" y="220" fill="#e2e8f0" font-size="15">训练更端到端</text>  <text x="66" y="244" fill="#e2e8f0" font-size="15">迁移与替换成本高</text>  <text x="66" y="268" fill="#e2e8f0" font-size="15">利于统一优化</text>  <rect x="620" y="110" width="540" height="450" rx="12" fill="#0ea5e9" opacity="0.92" filter="url(#shadow)"/>  <text x="890" y="142" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">Modular Encoder</text>  <text x="636" y="172" fill="#e2e8f0" font-size="15">独立视觉编码器</text>  <text x="636" y="196" fill="#e2e8f0" font-size="15">浅/深 projector 连接</text>  <text x="636" y="220" fill="#e2e8f0" font-size="15">组件可替换</text>  <text x="636" y="244" fill="#e2e8f0" font-size="15">拼装灵活</text>  <text x="636" y="268" fill="#e2e8f0" font-size="15">接口损耗与双系统成本</text>  <text x="600" y="696" text-anchor="middle" fill="#94a3b8" font-size="14">从“接插件”走向“内部组件”</text></svg>
