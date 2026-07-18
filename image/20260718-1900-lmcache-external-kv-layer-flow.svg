@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#f8fafc"/>
+  <text x="600" y="48" text-anchor="middle" font-size="28" font-family="Arial, sans-serif" fill="#111827">外部缓存层的请求时序：查找 → 复用 → 补算 → 回写</text>
+  <text x="600" y="80" text-anchor="middle" font-size="15" font-family="Arial, sans-serif" fill="#4b5563">以共享前缀请求为例：尽量少做 prefill，并把新算出来的 KV 变成后续可复用资产</text>
+
+  <!-- steps -->
+  <rect x="50" y="140" width="200" height="160" rx="12" fill="#e0e7ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="150" y="190" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#312e81" font-weight="bold">1. 请求进入</text>
+  <text x="150" y="225" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#3730a3">tokenize + 模型配置</text>
+  <text x="150" y="250" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#3730a3">租户 / adapter 维度</text>
+  <text x="150" y="275" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#3730a3">形成 cache key</text>
+
+  <rect x="280" y="140" width="200" height="160" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="380" y="190" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#1e3a8a" font-weight="bold">2. 分层查找</text>
+  <text x="380" y="225" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#1e40af">GPU 本地页缓存</text>
+  <text x="380" y="250" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#1e40af">L1 主机内存</text>
+  <text x="380" y="275" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#1e40af">L2 远端/磁盘</text>
+
+  <rect x="510" y="140" width="200" height="160" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="610" y="190" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#14532d" font-weight="bold">3. 命中加载</text>
+  <text x="610" y="225" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#166534">按 chunk 取回 KV</text>
+  <text x="610" y="250" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#166534">写入引擎页表</text>
+  <text x="610" y="275" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#166534">跳过重复 prefill</text>
+
+  <rect x="740" y="140" width="200" height="160" rx="12" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+  <text x="840" y="190" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#9a3412" font-weight="bold">4. 补算后缀</text>
+  <text x="840" y="225" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#c2410c">只 prefill 未命中段</text>
+  <text x="840" y="250" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#c2410c">质量与兼容校验</text>
+  <text x="840" y="275" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#c2410c">进入 decode</text>
+
+  <rect x="970" y="140" width="180" height="160" rx="12" fill="#fce7f3" stroke="#db2777" stroke-width="2"/>
+  <text x="1060" y="190" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#9d174d" font-weight="bold">5. 回写</text>
+  <text x="1060" y="225" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#be185d">新 chunk 落层</text>
+  <text x="1060" y="250" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#be185d">异步 offload</text>
+  <text x="1060" y="275" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#be185d">供跨请求复用</text>
+
+  <!-- bottom comparison -->
+  <rect x="80" y="360" width="480" height="280" rx="14" fill="#fff7ed" stroke="#f97316" stroke-width="2"/>
+  <text x="320" y="410" text-anchor="middle" font-size="20" font-family="Arial, sans-serif" fill="#9a3412" font-weight="bold">引擎内缓存的局限</text>
+  <text x="110" y="460" font-size="16" font-family="Arial, sans-serif" fill="#7c2d12">• 生命周期绑定引擎进程</text>
+  <text x="110" y="500" font-size="16" font-family="Arial, sans-serif" fill="#7c2d12">• DP/多实例之间难以共享</text>
+  <text x="110" y="540" font-size="16" font-family="Arial, sans-serif" fill="#7c2d12">• 难以跨存储后端统一治理</text>
+  <text x="110" y="580" font-size="16" font-family="Arial, sans-serif" fill="#7c2d12">• 观测、配额、驱逐策略碎片化</text>
+
+  <rect x="640" y="360" width="480" height="280" rx="14" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
+  <text x="880" y="410" text-anchor="middle" font-size="20" font-family="Arial, sans-serif" fill="#065f46" font-weight="bold">外部缓存层的价值</text>
+  <text x="670" y="460" font-size="16" font-family="Arial, sans-serif" fill="#064e3b">• 缓存与引擎解耦，崩溃不共死</text>
+  <text x="670" y="500" font-size="16" font-family="Arial, sans-serif" fill="#064e3b">• 跨引擎/跨进程复用同一份 KV</text>
+  <text x="670" y="540" font-size="16" font-family="Arial, sans-serif" fill="#064e3b">• L1/L2 分层 + 可插拔后端</text>
+  <text x="670" y="580" font-size="16" font-family="Arial, sans-serif" fill="#064e3b">• 统一控制面、观测与传输</text>
+
+  <text x="600" y="680" text-anchor="middle" font-size="15" font-family="Arial, sans-serif" fill="#334155">关键账：命中收益必须大于查找 + 传输 + 反序列化成本</text>
+</svg>
