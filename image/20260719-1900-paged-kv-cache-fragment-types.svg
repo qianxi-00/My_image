@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <rect width="1200" height="700" fill="#f8fafc"/>
+  <text x="600" y="42" text-anchor="middle" font-size="28" font-family="Arial, sans-serif" fill="#111827" font-weight="bold">分页 KV 的三类碎片与调度压力</text>
+  <text x="600" y="74" text-anchor="middle" font-size="15" font-family="Arial, sans-serif" fill="#4b5563">内部碎片 · 外部/空闲碎片 · 生命周期碎片：吞吐收益背后的真实损耗面</text>
+
+  <!-- Type 1 -->
+  <rect x="40" y="110" width="360" height="540" rx="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="220" y="155" text-anchor="middle" font-size="22" font-family="Arial, sans-serif" fill="#1d4ed8" font-weight="bold">内部碎片</text>
+  <text x="220" y="185" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#1e40af">块内未用空间</text>
+  <rect x="80" y="220" width="280" height="70" rx="10" fill="#93c5fd"/>
+  <text x="220" y="250" text-anchor="middle" font-size="16" font-family="Arial, sans-serif" fill="#1e3a8a">块大小 = 16 token</text>
+  <text x="220" y="275" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#1e3a8a">尾块只写了 3 token</text>
+  <rect x="80" y="310" width="280" height="90" rx="10" fill="#dbeafe"/>
+  <text x="220" y="345" text-anchor="middle" font-size="15" font-family="Arial, sans-serif" fill="#1e3a8a">浪费 ≈ (块大小-1)/2</text>
+  <text x="220" y="375" text-anchor="middle" font-size="15" font-family="Arial, sans-serif" fill="#1e3a8a">请求越多浪费越明显</text>
+  <rect x="80" y="420" width="280" height="180" rx="10" fill="#bfdbfe"/>
+  <text x="220" y="460" text-anchor="middle" font-size="15" font-family="Arial, sans-serif" fill="#1e3a8a">触发场景</text>
+  <text x="220" y="495" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#1e3a8a">· 短请求海量并发</text>
+  <text x="220" y="520" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#1e3a8a">· 过大 block size</text>
+  <text x="220" y="545" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#1e3a8a">· 频繁截断/提前结束</text>
+  <text x="220" y="575" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#1e3a8a">缓解：更小块 / 自适应粒度</text>
+
+  <!-- Type 2 -->
+  <rect x="420" y="110" width="360" height="540" rx="14" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+  <text x="600" y="155" text-anchor="middle" font-size="22" font-family="Arial, sans-serif" fill="#c2410c" font-weight="bold">外部/空闲碎片</text>
+  <text x="600" y="185" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#9a3412">空闲块足够但“形状不对”</text>
+  <rect x="460" y="220" width="50" height="40" rx="4" fill="#fdba74"/>
+  <rect x="520" y="220" width="50" height="40" rx="4" fill="#fed7aa"/>
+  <rect x="580" y="220" width="50" height="40" rx="4" fill="#fdba74"/>
+  <rect x="640" y="220" width="50" height="40" rx="4" fill="#fed7aa"/>
+  <rect x="700" y="220" width="50" height="40" rx="4" fill="#fdba74"/>
+  <text x="600" y="290" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#9a3412">占用与空闲交错</text>
+  <rect x="460" y="310" width="280" height="90" rx="10" fill="#ffedd5"/>
+  <text x="600" y="345" text-anchor="middle" font-size="15" font-family="Arial, sans-serif" fill="#7c2d12">分页后外部碎片弱化</text>
+  <text x="600" y="375" text-anchor="middle" font-size="15" font-family="Arial, sans-serif" fill="#7c2d12">但空闲链表管理仍有成本</text>
+  <rect x="460" y="420" width="280" height="180" rx="10" fill="#fed7aa"/>
+  <text x="600" y="460" text-anchor="middle" font-size="15" font-family="Arial, sans-serif" fill="#7c2d12">触发场景</text>
+  <text x="600" y="495" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#7c2d12">· 长短期会话混跑</text>
+  <text x="600" y="520" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#7c2d12">· 频繁分配/释放</text>
+  <text x="600" y="545" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#7c2d12">· 需要连续物理块迁移</text>
+  <text x="600" y="575" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#7c2d12">缓解：块池/整理/分层 offload</text>
+
+  <!-- Type 3 -->
+  <rect x="800" y="110" width="360" height="540" rx="14" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="980" y="155" text-anchor="middle" font-size="22" font-family="Arial, sans-serif" fill="#15803d" font-weight="bold">生命周期碎片</text>
+  <text x="980" y="185" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#166534">占位粘滞与调度不匹配</text>
+  <rect x="840" y="220" width="280" height="70" rx="10" fill="#86efac"/>
+  <text x="980" y="250" text-anchor="middle" font-size="15" font-family="Arial, sans-serif" fill="#14532d">前缀共享块引用计数 &gt; 0</text>
+  <text x="980" y="275" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#14532d">无法立即回收</text>
+  <rect x="840" y="310" width="280" height="90" rx="10" fill="#bbf7d0"/>
+  <text x="980" y="345" text-anchor="middle" font-size="15" font-family="Arial, sans-serif" fill="#14532d">长 CoT / Agent 会话</text>
+  <text x="980" y="375" text-anchor="middle" font-size="15" font-family="Arial, sans-serif" fill="#14532d">长时间占住热点块</text>
+  <rect x="840" y="420" width="280" height="180" rx="10" fill="#dcfce7"/>
+  <text x="980" y="460" text-anchor="middle" font-size="15" font-family="Arial, sans-serif" fill="#14532d">触发场景</text>
+  <text x="980" y="495" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#14532d">· 前缀命中高但输出长</text>
+  <text x="980" y="520" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#14532d">· 多分支采样共享前缀</text>
+  <text x="980" y="545" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#14532d">· 驱逐策略与公平性冲突</text>
+  <text x="980" y="575" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#14532d">缓解：引用计数 + 优先级驱逐</text>
+</svg>

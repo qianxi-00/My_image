@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="740" viewBox="0 0 1200 740">
+  <rect width="1200" height="740" fill="#f8fafc"/>
+  <text x="600" y="42" text-anchor="middle" font-size="28" font-family="Arial, sans-serif" fill="#111827" font-weight="bold">分页 KV Cache：逻辑连续 vs 物理碎片</text>
+  <text x="600" y="74" text-anchor="middle" font-size="15" font-family="Arial, sans-serif" fill="#4b5563">固定块池提升分配成功率，但碎片与调度复杂度成为新的系统税</text>
+
+  <!-- Left: continuous -->
+  <rect x="40" y="110" width="540" height="280" rx="14" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+  <text x="310" y="148" text-anchor="middle" font-size="20" font-family="Arial, sans-serif" fill="#c2410c" font-weight="bold">传统连续分配</text>
+  <rect x="70" y="175" width="180" height="50" rx="8" fill="#fdba74"/>
+  <text x="160" y="206" text-anchor="middle" font-size="15" font-family="Arial, sans-serif" fill="#7c2d12">请求 A 预留 8K</text>
+  <rect x="260" y="175" width="90" height="50" rx="8" fill="#fed7aa"/>
+  <text x="305" y="206" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#9a3412">空洞</text>
+  <rect x="360" y="175" width="150" height="50" rx="8" fill="#fdba74"/>
+  <text x="435" y="206" text-anchor="middle" font-size="15" font-family="Arial, sans-serif" fill="#7c2d12">请求 B 预留</text>
+  <rect x="70" y="245" width="70" height="50" rx="8" fill="#fed7aa"/>
+  <text x="105" y="276" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#9a3412">碎片</text>
+  <rect x="150" y="245" width="200" height="50" rx="8" fill="#fdba74"/>
+  <text x="250" y="276" text-anchor="middle" font-size="15" font-family="Arial, sans-serif" fill="#7c2d12">请求 C 长会话</text>
+  <rect x="360" y="245" width="150" height="50" rx="8" fill="#fed7aa"/>
+  <text x="435" y="276" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#9a3412">不可用空洞</text>
+  <text x="310" y="340" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#9a3412">总量够却装不进：外部碎片主导失败</text>
+  <text x="310" y="365" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#9a3412">预留浪费 + 连续区难找 + 共享困难</text>
+
+  <!-- Right: paged -->
+  <rect x="620" y="110" width="540" height="280" rx="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="890" y="148" text-anchor="middle" font-size="20" font-family="Arial, sans-serif" fill="#1d4ed8" font-weight="bold">分页块池（Paged KV）</text>
+  <!-- block grid -->
+  <g font-family="Arial, sans-serif" font-size="12" fill="#1e3a8a">
+    <rect x="660" y="175" width="48" height="40" rx="4" fill="#93c5fd"/><text x="684" y="200" text-anchor="middle">A1</text>
+    <rect x="716" y="175" width="48" height="40" rx="4" fill="#93c5fd"/><text x="740" y="200" text-anchor="middle">B1</text>
+    <rect x="772" y="175" width="48" height="40" rx="4" fill="#dbeafe"/><text x="796" y="200" text-anchor="middle">空</text>
+    <rect x="828" y="175" width="48" height="40" rx="4" fill="#93c5fd"/><text x="852" y="200" text-anchor="middle">C1</text>
+    <rect x="884" y="175" width="48" height="40" rx="4" fill="#93c5fd"/><text x="908" y="200" text-anchor="middle">A2</text>
+    <rect x="940" y="175" width="48" height="40" rx="4" fill="#dbeafe"/><text x="964" y="200" text-anchor="middle">空</text>
+    <rect x="996" y="175" width="48" height="40" rx="4" fill="#93c5fd"/><text x="1020" y="200" text-anchor="middle">C2</text>
+    <rect x="1052" y="175" width="48" height="40" rx="4" fill="#93c5fd"/><text x="1076" y="200" text-anchor="middle">B2</text>
+
+    <rect x="660" y="230" width="48" height="40" rx="4" fill="#93c5fd"/><text x="684" y="255" text-anchor="middle">C3</text>
+    <rect x="716" y="230" width="48" height="40" rx="4" fill="#dbeafe"/><text x="740" y="255" text-anchor="middle">空</text>
+    <rect x="772" y="230" width="48" height="40" rx="4" fill="#93c5fd"/><text x="796" y="255" text-anchor="middle">A3</text>
+    <rect x="828" y="230" width="48" height="40" rx="4" fill="#bfdbfe"/><text x="852" y="255" text-anchor="middle">共享</text>
+    <rect x="884" y="230" width="48" height="40" rx="4" fill="#dbeafe"/><text x="908" y="255" text-anchor="middle">空</text>
+    <rect x="940" y="230" width="48" height="40" rx="4" fill="#93c5fd"/><text x="964" y="255" text-anchor="middle">B3</text>
+    <rect x="996" y="230" width="48" height="40" rx="4" fill="#93c5fd"/><text x="1020" y="255" text-anchor="middle">C4</text>
+    <rect x="1052" y="230" width="48" height="40" rx="4" fill="#dbeafe"/><text x="1076" y="255" text-anchor="middle">空</text>
+  </g>
+  <text x="890" y="310" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#1e40af">逻辑序列靠块表拼接；物理块可交错摆放</text>
+  <text x="890" y="338" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#1e40af">吞吐上去了，但块表/引用计数/回收成了新路径</text>
+  <text x="890" y="366" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#1e40af">内部碎片：尾块未满；调度碎片：空闲块不连续</text>
+
+  <!-- Bottom flow -->
+  <rect x="40" y="420" width="1120" height="280" rx="14" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="600" y="458" text-anchor="middle" font-size="20" font-family="Arial, sans-serif" fill="#15803d" font-weight="bold">从“有没有空间”到“如何调度空间”的代价转移</text>
+
+  <rect x="70" y="490" width="240" height="160" rx="12" fill="#dcfce7"/>
+  <text x="190" y="530" text-anchor="middle" font-size="16" font-family="Arial, sans-serif" fill="#14532d" font-weight="bold">1. 分配更灵活</text>
+  <text x="190" y="565" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#166534">按块按需申请</text>
+  <text x="190" y="590" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#166534">并发接纳率上升</text>
+  <text x="190" y="615" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#166534">前缀块可共享</text>
+
+  <rect x="340" y="490" width="240" height="160" rx="12" fill="#dcfce7"/>
+  <text x="460" y="530" text-anchor="middle" font-size="16" font-family="Arial, sans-serif" fill="#14532d" font-weight="bold">2. 新碎片形态</text>
+  <text x="460" y="565" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#166534">尾块内部空洞</text>
+  <text x="460" y="590" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#166534">空闲块碎片化</text>
+  <text x="460" y="615" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#166534">长会话占位粘滞</text>
+
+  <rect x="610" y="490" width="240" height="160" rx="12" fill="#dcfce7"/>
+  <text x="730" y="530" text-anchor="middle" font-size="16" font-family="Arial, sans-serif" fill="#14532d" font-weight="bold">3. 调度复杂度</text>
+  <text x="730" y="565" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#166534">块表查找与更新</text>
+  <text x="730" y="590" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#166534">驱逐/压缩/迁移</text>
+  <text x="730" y="615" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#166534">与 batch 决策耦合</text>
+
+  <rect x="880" y="490" width="240" height="160" rx="12" fill="#bbf7d0"/>
+  <text x="1000" y="530" text-anchor="middle" font-size="16" font-family="Arial, sans-serif" fill="#14532d" font-weight="bold">4. 工程主问题</text>
+  <text x="1000" y="565" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#166534">不是“要不要分页”</text>
+  <text x="1000" y="590" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#166534">而是“块粒度 + 策略”</text>
+  <text x="1000" y="615" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#166534">如何压低系统税</text>
+</svg>

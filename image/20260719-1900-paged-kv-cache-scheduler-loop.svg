@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#f8fafc"/>
+  <text x="600" y="40" text-anchor="middle" font-size="28" font-family="Arial, sans-serif" fill="#111827" font-weight="bold">Paged KV 与推理调度的耦合闭环</text>
+  <text x="600" y="72" text-anchor="middle" font-size="15" font-family="Arial, sans-serif" fill="#4b5563">块预算、接纳控制、连续批处理与驱逐策略共同决定吞吐与尾延迟</text>
+
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- Top row boxes -->
+  <rect x="60" y="120" width="240" height="110" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="180" y="165" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#1e3a8a" font-weight="bold">请求到达</text>
+  <text x="180" y="195" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#1e40af">估计 prefill/decode</text>
+  <text x="180" y="218" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#1e40af">与 KV 块预算</text>
+
+  <rect x="360" y="120" width="240" height="110" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="480" y="165" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#1e3a8a" font-weight="bold">接纳控制</text>
+  <text x="480" y="195" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#1e40af">空闲块是否够？</text>
+  <text x="480" y="218" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#1e40af">是否会饿死短请求？</text>
+
+  <rect x="660" y="120" width="240" height="110" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="780" y="165" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#1e3a8a" font-weight="bold">块分配 / 映射</text>
+  <text x="780" y="195" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#1e40af">block table 更新</text>
+  <text x="780" y="218" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#1e40af">前缀块引用计数 +1</text>
+
+  <rect x="960" y="120" width="180" height="110" rx="12" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
+  <text x="1050" y="165" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#1e3a8a" font-weight="bold">进入批次</text>
+  <text x="1050" y="195" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#1e40af">continuous</text>
+  <text x="1050" y="218" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#1e40af">batching</text>
+
+  <line x1="300" y1="175" x2="350" y2="175" stroke="#64748b" stroke-width="3" marker-end="url(#arr)"/>
+  <line x1="600" y1="175" x2="650" y2="175" stroke="#64748b" stroke-width="3" marker-end="url(#arr)"/>
+  <line x1="900" y1="175" x2="950" y2="175" stroke="#64748b" stroke-width="3" marker-end="url(#arr)"/>
+
+  <!-- Middle -->
+  <rect x="180" y="290" width="840" height="120" rx="14" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="600" y="335" text-anchor="middle" font-size="20" font-family="Arial, sans-serif" fill="#92400e" font-weight="bold">运行时热点：块预算与计算预算双约束</text>
+  <text x="600" y="370" text-anchor="middle" font-size="15" font-family="Arial, sans-serif" fill="#a16207">GPU 算力可跑更多请求，但空闲 KV 块不足 → 无法扩 batch</text>
+  <text x="600" y="395" text-anchor="middle" font-size="15" font-family="Arial, sans-serif" fill="#a16207">有空闲块但碎片/锁竞争/拷贝开销高 → 吞吐仍上不去</text>
+
+  <!-- Bottom three -->
+  <rect x="60" y="460" width="340" height="200" rx="12" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+  <text x="230" y="505" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#065f46" font-weight="bold">驱逐 / 压缩</text>
+  <text x="230" y="545" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#047857">LRU / 优先级 / 前缀保护</text>
+  <text x="230" y="575" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#047857">量化压缩与 offload</text>
+  <text x="230" y="605" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#047857">目标：释放块而少伤命中率</text>
+  <text x="230" y="635" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#047857">风险：误杀共享前缀</text>
+
+  <rect x="430" y="460" width="340" height="200" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <text x="600" y="505" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#1e3a8a" font-weight="bold">迁移 / 整理</text>
+  <text x="600" y="545" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#1e40af">跨 GPU / CPU / 外部缓存层</text>
+  <text x="600" y="575" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#1e40af">块拷贝与页表改写</text>
+  <text x="600" y="605" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#1e40af">目标：给新请求腾出预算</text>
+  <text x="600" y="635" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#1e40af">风险：TTFT 抖动与带宽争用</text>
+
+  <rect x="800" y="460" width="340" height="200" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <text x="970" y="505" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#991b1b" font-weight="bold">失败与回退</text>
+  <text x="970" y="545" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#b91c1c">分配失败 → 排队/拒绝</text>
+  <text x="970" y="575" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#b91c1c">抢占失败 → 长请求饿死</text>
+  <text x="970" y="605" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#b91c1c">过度整理 → 算力空转</text>
+  <text x="970" y="635" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" fill="#b91c1c">复杂度税最终体现在尾延迟</text>
+</svg>
