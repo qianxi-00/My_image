@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420">
+  <rect width="960" height="420" fill="#0b1220"/>
+  <text x="480" y="40" text-anchor="middle" fill="#e2e8f0" font-size="22" font-family="Noto Sans CJK SC, sans-serif">桌面/浏览器 Agent 能力分层架构</text>
+  <rect x="70" y="80" width="820" height="70" rx="12" fill="#172554" stroke="#60a5fa"/>
+  <text x="480" y="122" text-anchor="middle" fill="#dbeafe" font-size="18" font-family="Noto Sans CJK SC, sans-serif">感知层：屏幕截图 / 页面 DOM / 应用状态 / 会话上下文</text>
+  <rect x="70" y="170" width="820" height="70" rx="12" fill="#3b0764" stroke="#c084fc"/>
+  <text x="480" y="212" text-anchor="middle" fill="#f3e8ff" font-size="18" font-family="Noto Sans CJK SC, sans-serif">规划层：任务拆解 / 多步决策 / 工具选择 / 失败重试</text>
+  <rect x="70" y="260" width="820" height="70" rx="12" fill="#064e3b" stroke="#34d399"/>
+  <text x="480" y="302" text-anchor="middle" fill="#d1fae5" font-size="18" font-family="Noto Sans CJK SC, sans-serif">执行层：鼠标键盘 / 浏览器自动化 / 文件与跨应用流转</text>
+  <rect x="70" y="340" width="250" height="50" rx="10" fill="#1f2937" stroke="#94a3b8"/>
+  <text x="195" y="371" text-anchor="middle" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, sans-serif">云侧执行（Operator）</text>
+  <rect x="355" y="340" width="250" height="50" rx="10" fill="#1f2937" stroke="#94a3b8"/>
+  <text x="480" y="371" text-anchor="middle" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, sans-serif">端云协同（Kimi Work）</text>
+  <rect x="640" y="340" width="250" height="50" rx="10" fill="#1f2937" stroke="#94a3b8"/>
+  <text x="765" y="371" text-anchor="middle" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, sans-serif">本地私有（ClawBridge）</text>
+</svg>
