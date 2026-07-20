@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680">
+  <rect width="1200" height="680" fill="#f8fafc"/>
+  <text x="600" y="48" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="26" fill="#0f172a" font-weight="700">持续双工语音 Agent 产品服务循环</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#334155"/>
+    </marker>
+  </defs>
+  <rect x="60" y="120" width="180" height="90" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="150" y="172" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="18" fill="#1e3a8a">用户通话</text>
+  <rect x="300" y="120" width="220" height="90" rx="12" fill="#e0e7ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="410" y="160" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="16" fill="#312e81">STT / LLM / TTS</text>
+  <text x="410" y="185" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="14" fill="#4338ca">实时双工管线</text>
+  <rect x="580" y="120" width="220" height="90" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="690" y="172" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="18" fill="#5b21b6">工具 / MCP 调用</text>
+  <rect x="860" y="120" width="240" height="90" rx="12" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+  <text x="980" y="172" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="18" fill="#064e3b">CRM / 业务系统</text>
+  <line x1="240" y1="165" x2="300" y2="165" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="520" y1="165" x2="580" y2="165" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="800" y1="165" x2="860" y2="165" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="220" y="320" width="280" height="90" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="360" y="372" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="18" fill="#92400e">监控与可观测</text>
+  <rect x="620" y="320" width="280" height="90" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="760" y="372" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="18" fill="#991b1b">人工接管 / 降级</text>
+  <path d="M980 210 C980 260 760 280 760 320" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M360 410 C360 480 150 480 150 210" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="600" y="520" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="16" fill="#475569">关键指标：P95延迟 · 中断率 · 每千分钟成本 · 回退干预率</text>
+  <text x="600" y="560" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="16" fill="#475569">从“模型会说话”到“服务可持续运行”</text>
+</svg>
