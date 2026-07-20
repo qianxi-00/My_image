@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <rect width="1200" height="700" fill="#f8fafc"/>
+  <text x="600" y="48" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="26" fill="#0f172a" font-weight="700">MoE 专家专业化四级诊断体系</text>
+  <rect x="60" y="100" width="250" height="160" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="185" y="160" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="18" fill="#1e3a8a" font-weight="700">L1 激活频率</text>
+  <text x="185" y="200" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="14" fill="#1e40af">专家被选中次数</text>
+  <rect x="340" y="100" width="250" height="160" rx="12" fill="#e0e7ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="465" y="160" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="18" fill="#312e81" font-weight="700">L2 负载均衡</text>
+  <text x="465" y="200" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="14" fill="#3730a3">Router熵 / CV</text>
+  <rect x="620" y="100" width="250" height="160" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="745" y="160" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="18" fill="#5b21b6" font-weight="700">L3 能力差异</text>
+  <text x="745" y="200" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="14" fill="#6d28d9">重叠度 / 偏度</text>
+  <rect x="900" y="100" width="250" height="160" rx="12" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+  <text x="1025" y="160" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="18" fill="#064e3b" font-weight="700">L4 因果验证</text>
+  <text x="1025" y="200" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="14" fill="#065f46">干预 / 消融</text>
+  <text x="600" y="360" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="18" fill="#334155">从统计行为 → 表征差异 → 功能因果，逐层排除“伪分化”</text>
+  <rect x="180" y="420" width="840" height="180" rx="14" fill="#fff7ed" stroke="#f97316" stroke-width="2"/>
+  <text x="600" y="480" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="18" fill="#9a3412" font-weight="700">核心问题</text>
+  <text x="600" y="530" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="16" fill="#c2410c">激活稀疏 ≠ 能力分工；必须用多指标联合诊断专家是否真专业</text>
+</svg>
