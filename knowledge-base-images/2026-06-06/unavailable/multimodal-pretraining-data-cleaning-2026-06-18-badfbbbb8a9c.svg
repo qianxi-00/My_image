@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="60%" stop-color="#eef2ff"/>
+      <stop offset="100%" stop-color="#fff7ed"/>
+    </linearGradient>
+    <style>
+      text { font-family: "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #0f172a; }
+      .title { font-size: 34px; font-weight: 800; }
+      .body { font-size: 20px; fill: #475569; }
+      .small { font-size: 15px; fill: #64748b; }
+    </style>
+  </defs>
+  <rect width="1200" height="520" fill="url(#bg)"/>
+  <rect x="70" y="80" width="1060" height="360" rx="28" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="110" y="150" class="title">缺失图片占位图</text>
+  <text x="110" y="210" class="body">不同模态的清洗难点</text>
+  <text x="110" y="270" class="body">原始图片当前不可下载，因此已替换为 GitHub 图床占位图。</text>
+  <text x="110" y="330" class="small">原因：upload failed: &lt;urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1028)&gt;</text>
+  <text x="110" y="375" class="small">原始引用：http://8.148.252.27/uploads/images/multimodal-pretraining-data-cleaning-2026-06-18--modality-cleaning-differences.svg</text>
+</svg>
