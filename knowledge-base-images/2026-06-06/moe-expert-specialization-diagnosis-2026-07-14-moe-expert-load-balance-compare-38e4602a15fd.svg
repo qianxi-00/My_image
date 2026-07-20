@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680">
+  <rect width="1200" height="680" fill="#f8fafc"/>
+  <text x="600" y="48" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="26" fill="#0f172a" font-weight="700">负载均衡与路由坍缩示意</text>
+  <text x="300" y="110" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="18" fill="#065f46">理想均衡</text>
+  <text x="900" y="110" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="18" fill="#991b1b">路由坍缩</text>
+  <!-- ideal bars -->
+  <rect x="120" y="400" width="40" height="160" fill="#34d399"/><rect x="180" y="380" width="40" height="180" fill="#34d399"/>
+  <rect x="240" y="390" width="40" height="170" fill="#34d399"/><rect x="300" y="410" width="40" height="150" fill="#34d399"/>
+  <rect x="360" y="395" width="40" height="165" fill="#34d399"/><rect x="420" y="405" width="40" height="155" fill="#34d399"/>
+  <!-- collapse bars -->
+  <rect x="720" y="180" width="40" height="380" fill="#f87171"/><rect x="780" y="500" width="40" height="60" fill="#fca5a5"/>
+  <rect x="840" y="520" width="40" height="40" fill="#fca5a5"/><rect x="900" y="530" width="40" height="30" fill="#fca5a5"/>
+  <rect x="960" y="540" width="40" height="20" fill="#fca5a5"/><rect x="1020" y="545" width="40" height="15" fill="#fca5a5"/>
+  <line x1="100" y1="560" x2="500" y2="560" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="700" y1="560" x2="1100" y2="560" stroke="#94a3b8" stroke-width="2"/>
+  <text x="600" y="620" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="16" fill="#475569">负载均衡损失只保证“被用到”，不能单独证明“学出了分工”</text>
+</svg>
