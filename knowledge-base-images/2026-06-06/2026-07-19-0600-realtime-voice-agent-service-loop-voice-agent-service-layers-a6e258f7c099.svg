@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#f8fafc"/>
+  <text x="600" y="48" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="28" fill="#0f172a" font-weight="700">实时语音 Agent 三层服务架构</text>
+  <rect x="80" y="90" width="1040" height="150" rx="16" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="110" y="140" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="24" fill="#1e3a8a" font-weight="700">① 感知与生成层</text>
+  <text x="110" y="180" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="18" fill="#1e40af">ASR · 声学编码 · LLM · TTS · 口语化表达控制</text>
+  <rect x="80" y="270" width="1040" height="150" rx="16" fill="#e0e7ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="110" y="320" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="24" fill="#312e81" font-weight="700">② 会话控制层</text>
+  <text x="110" y="360" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="18" fill="#3730a3">barge-in · turn-taking · 异步工具调用 · 会话状态 · 多轮上下文 · 停断恢复</text>
+  <rect x="80" y="450" width="1040" height="170" rx="16" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+  <text x="110" y="500" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="24" fill="#064e3b" font-weight="700">③ 服务运营层（当前竞争主战场）</text>
+  <text x="110" y="545" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="18" fill="#065f46">计费 · 多租户 · 路由策略 · 录制审计 · 降级回退 · 异常可视化 · 人工接管</text>
+  <text x="110" y="580" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="16" fill="#047857">音频流上行 / SLA·成本·可观测指标下行</text>
+</svg>
