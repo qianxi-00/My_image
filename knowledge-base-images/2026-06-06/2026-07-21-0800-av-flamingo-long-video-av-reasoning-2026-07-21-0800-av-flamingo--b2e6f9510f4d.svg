@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="a" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <linearGradient id="b" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#34d399"/><stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" fill="url(#bg)" rx="18"/>
+  <text x="48" y="52" fill="#e2e8f0" font-size="26" font-family="Noto Sans SC, PingFang SC, sans-serif" font-weight="700">音视频理解能力重心迁移</text>
+  <text x="48" y="86" fill="#94a3b8" font-size="16" font-family="Noto Sans SC, PingFang SC, sans-serif">从短片段感知 → 长视频跨模态时序推理（AV-Flamingo 视角）</text>
+
+  <rect x="48" y="120" width="400" height="360" rx="16" fill="#111827" stroke="#334155" stroke-width="2"/>
+  <rect x="48" y="120" width="400" height="48" rx="16" fill="#1e293b"/>
+  <text x="68" y="150" fill="#f87171" font-size="18" font-family="Noto Sans SC, PingFang SC, sans-serif" font-weight="700">旧范式：短片段 AV-LLM</text>
+  <text x="68" y="200" fill="#cbd5e1" font-size="15" font-family="Noto Sans SC, PingFang SC, sans-serif">• 以秒级/数十秒 clip 为主</text>
+  <text x="68" y="232" fill="#cbd5e1" font-size="15" font-family="Noto Sans SC, PingFang SC, sans-serif">• 音视频各自编码后浅融合</text>
+  <text x="68" y="264" fill="#cbd5e1" font-size="15" font-family="Noto Sans SC, PingFang SC, sans-serif">• 问答偏“看见/听见什么”</text>
+  <text x="68" y="296" fill="#cbd5e1" font-size="15" font-family="Noto Sans SC, PingFang SC, sans-serif">• 事件链与因果推理薄弱</text>
+  <text x="68" y="328" fill="#cbd5e1" font-size="15" font-family="Noto Sans SC, PingFang SC, sans-serif">• 时间戳定位能力有限</text>
+  <text x="68" y="360" fill="#cbd5e1" font-size="15" font-family="Noto Sans SC, PingFang SC, sans-serif">• 长视频靠滑窗拼凑</text>
+  <text x="68" y="410" fill="#94a3b8" font-size="14" font-family="Noto Sans SC, PingFang SC, sans-serif">典型失败：多事件混淆、证据</text>
+  <text x="68" y="432" fill="#94a3b8" font-size="14" font-family="Noto Sans SC, PingFang SC, sans-serif">不可追溯、跨镜头一致性差</text>
+
+  <path d="M470 300 L510 300" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"/>
+  <polygon points="505,290 530,300 505,310" fill="#94a3b8"/>
+
+  <rect x="512" y="120" width="400" height="360" rx="16" fill="#0b1f1a" stroke="#115e59" stroke-width="2"/>
+  <rect x="512" y="120" width="400" height="48" rx="16" fill="url(#b)"/>
+  <text x="532" y="150" fill="#042f2e" font-size="18" font-family="Noto Sans SC, PingFang SC, sans-serif" font-weight="700">新范式：长视频 AV 推理</text>
+  <text x="532" y="200" fill="#d1fae5" font-size="15" font-family="Noto Sans SC, PingFang SC, sans-serif">• 面向真实长视频与复杂场景</text>
+  <text x="532" y="232" fill="#d1fae5" font-size="15" font-family="Noto Sans SC, PingFang SC, sans-serif">• Audio-Visual-Skills ≈7M 样本</text>
+  <text x="532" y="264" fill="#d1fae5" font-size="15" font-family="Noto Sans SC, PingFang SC, sans-serif">• 三阶段课程：感知→长程推理</text>
+  <text x="532" y="296" fill="#d1fae5" font-size="15" font-family="Noto Sans SC, PingFang SC, sans-serif">• 时序交织思维链（T-AVI-CoT）</text>
+  <text x="532" y="328" fill="#d1fae5" font-size="15" font-family="Noto Sans SC, PingFang SC, sans-serif">• 中间步骤锚定时间戳</text>
+  <text x="532" y="360" fill="#d1fae5" font-size="15" font-family="Noto Sans SC, PingFang SC, sans-serif">• 跨模态组合与多事件因果</text>
+  <text x="532" y="410" fill="#99f6e4" font-size="14" font-family="Noto Sans SC, PingFang SC, sans-serif">目标：可解释、可定位、可迁移</text>
+  <text x="532" y="432" fill="#99f6e4" font-size="14" font-family="Noto Sans SC, PingFang SC, sans-serif">的开放权重音视频智能</text>
+</svg>
