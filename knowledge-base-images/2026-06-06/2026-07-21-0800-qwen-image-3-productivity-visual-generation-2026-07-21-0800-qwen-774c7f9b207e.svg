@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#0b1220"/>
+  <text x="600" y="48" text-anchor="middle" fill="#f8fafc" font-size="26" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif" font-weight="700">生产力图像四象限：内容密度 × 交付严谨度</text>
+  <text x="600" y="80" text-anchor="middle" fill="#94a3b8" font-size="15" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">选对场景比盲目追模型分数更重要</text>
+
+  <!-- axes -->
+  <line x1="140" y1="620" x2="1100" y2="620" stroke="#64748b" stroke-width="2"/>
+  <line x1="140" y1="140" x2="140" y2="620" stroke="#64748b" stroke-width="2"/>
+  <text x="620" y="680" text-anchor="middle" fill="#94a3b8" font-size="16" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">内容密度（低 → 高）</text>
+  <text x="40" y="390" fill="#94a3b8" font-size="16" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif" transform="rotate(-90 40 390)">交付严谨度（低 → 高）</text>
+
+  <!-- Q2 high rigor low density -->
+  <rect x="170" y="160" width="420" height="200" rx="16" fill="#172554" stroke="#60a5fa"/>
+  <text x="380" y="200" text-anchor="middle" fill="#93c5fd" font-size="18" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif" font-weight="700">合规标识 / 包装文字</text>
+  <text x="200" y="245" fill="#dbeafe" font-size="15" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">• 字准优先，结构相对简单</text>
+  <text x="200" y="275" fill="#dbeafe" font-size="15" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">• 适合：包装、海报主文案</text>
+  <text x="200" y="305" fill="#dbeafe" font-size="15" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">• 风险：错字直接事故</text>
+
+  <!-- Q1 high rigor high density -->
+  <rect x="620" y="160" width="420" height="200" rx="16" fill="#064e3b" stroke="#34d399"/>
+  <text x="830" y="200" text-anchor="middle" fill="#6ee7b7" font-size="18" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif" font-weight="700">信息图 / 3×3 知识卡</text>
+  <text x="650" y="245" fill="#d1fae5" font-size="15" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">• 长指令+网格最对口</text>
+  <text x="650" y="275" fill="#d1fae5" font-size="15" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">• 适合：报告、教程、看板</text>
+  <text x="650" y="305" fill="#d1fae5" font-size="15" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">• 风险：事实与层级错乱</text>
+
+  <!-- Q3 low rigor low density -->
+  <rect x="170" y="390" width="420" height="200" rx="16" fill="#1f2937" stroke="#9ca3af"/>
+  <text x="380" y="430" text-anchor="middle" fill="#e5e7eb" font-size="18" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif" font-weight="700">氛围插画 / 概念图</text>
+  <text x="200" y="475" fill="#d1d5db" font-size="15" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">• 传统文生图主场</text>
+  <text x="200" y="505" fill="#d1d5db" font-size="15" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">• 适合：封面、情绪板</text>
+  <text x="200" y="535" fill="#d1d5db" font-size="15" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">• 风险：过拟合审美竞赛</text>
+
+  <!-- Q4 low rigor high density -->
+  <rect x="620" y="390" width="420" height="200" rx="16" fill="#422006" stroke="#fbbf24"/>
+  <text x="830" y="430" text-anchor="middle" fill="#fde68a" font-size="18" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif" font-weight="700">社媒九宫格草稿</text>
+  <text x="650" y="475" fill="#fef3c7" font-size="15" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">• 高速迭代与 A/B</text>
+  <text x="650" y="505" fill="#fef3c7" font-size="15" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">• 适合：运营批量素材</text>
+  <text x="650" y="535" fill="#fef3c7" font-size="15" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">• 风险：同质化与幻觉</text>
+</svg>
