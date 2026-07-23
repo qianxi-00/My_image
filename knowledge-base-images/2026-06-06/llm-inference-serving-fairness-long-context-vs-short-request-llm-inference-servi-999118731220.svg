@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#0f172a"/>
+  <rect x="48" y="48" width="1104" height="624" rx="20" fill="#111827" stroke="#38bdf8" stroke-width="3"/>
+  <text x="80" y="130" fill="#e2e8f0" font-size="34" font-family="sans-serif">调度三层</text>
+  <text x="80" y="190" fill="#94a3b8" font-size="22" font-family="sans-serif">路由 / 批 / 抢占</text>
+  <rect x="80" y="280" width="320" height="160" rx="14" fill="#1e293b" stroke="#0ea5e9" stroke-width="3"/>
+<text x="100" y="370" fill="#f8fafc" font-size="22" font-family="sans-serif">请求路由</text>
+<rect x="440" y="280" width="320" height="160" rx="14" fill="#1e293b" stroke="#22c55e" stroke-width="3"/>
+<text x="460" y="370" fill="#f8fafc" font-size="22" font-family="sans-serif">连续批处理</text>
+<rect x="800" y="280" width="320" height="160" rx="14" fill="#1e293b" stroke="#a78bfa" stroke-width="3"/>
+<text x="820" y="370" fill="#f8fafc" font-size="22" font-family="sans-serif">抢占回退</text>
+</svg>
