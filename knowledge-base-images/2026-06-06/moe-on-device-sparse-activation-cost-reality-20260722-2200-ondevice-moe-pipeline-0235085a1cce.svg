@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#0f172a"/>
+  <text x="600" y="48" text-anchor="middle" fill="#e2e8f0" font-size="26" font-family="Noto Sans CJK SC, sans-serif" font-weight="700">端侧 MoE 推理流水线：存储—路由—换页—计算</text>
+  <text x="600" y="80" text-anchor="middle" fill="#94a3b8" font-size="15" font-family="Noto Sans CJK SC, sans-serif">从 Flash / DRAM / NPU 缓存到专家内核的真实路径</text>
+
+  <rect x="40" y="130" width="180" height="100" rx="12" fill="#1e3a5f" stroke="#38bdf8" stroke-width="2"/>
+  <text x="130" y="170" text-anchor="middle" fill="#e0f2fe" font-size="16" font-family="Noto Sans CJK SC, sans-serif" font-weight="600">模型包</text>
+  <text x="130" y="200" text-anchor="middle" fill="#7dd3fc" font-size="13" font-family="Noto Sans CJK SC, sans-serif">全量专家权重</text>
+
+  <path d="M230 180 H290" stroke="#64748b" stroke-width="3"/>
+  <polygon points="290,180 275,173 275,187" fill="#64748b"/>
+
+  <rect x="300" y="130" width="180" height="100" rx="12" fill="#312e81" stroke="#a5b4fc" stroke-width="2"/>
+  <text x="390" y="170" text-anchor="middle" fill="#e0e7ff" font-size="16" font-family="Noto Sans CJK SC, sans-serif" font-weight="600">Router</text>
+  <text x="390" y="200" text-anchor="middle" fill="#c7d2fe" font-size="13" font-family="Noto Sans CJK SC, sans-serif">Top-k 专家 ID</text>
+
+  <path d="M490 180 H550" stroke="#64748b" stroke-width="3"/>
+  <polygon points="550,180 535,173 535,187" fill="#64748b"/>
+
+  <rect x="560" y="110" width="220" height="140" rx="12" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+  <text x="670" y="150" text-anchor="middle" fill="#fef3c7" font-size="16" font-family="Noto Sans CJK SC, sans-serif" font-weight="600">专家工作集管理</text>
+  <text x="670" y="180" text-anchor="middle" fill="#fde68a" font-size="13" font-family="Noto Sans CJK SC, sans-serif">热专家驻留 / 冷专家换入</text>
+  <text x="670" y="210" text-anchor="middle" fill="#fcd34d" font-size="13" font-family="Noto Sans CJK SC, sans-serif">DRAM ↔ NPU 缓存</text>
+
+  <path d="M790 180 H850" stroke="#64748b" stroke-width="3"/>
+  <polygon points="850,180 835,173 835,187" fill="#64748b"/>
+
+  <rect x="860" y="130" width="280" height="100" rx="12" fill="#14532d" stroke="#4ade80" stroke-width="2"/>
+  <text x="1000" y="170" text-anchor="middle" fill="#dcfce7" font-size="16" font-family="Noto Sans CJK SC, sans-serif" font-weight="600">专家 GEMM / 激活</text>
+  <text x="1000" y="200" text-anchor="middle" fill="#86efac" font-size="13" font-family="Noto Sans CJK SC, sans-serif">仅对命中专家做计算</text>
+
+  <rect x="80" y="320" width="1040" height="340" rx="14" fill="#111827" stroke="#334155" stroke-width="2"/>
+  <text x="600" y="360" text-anchor="middle" fill="#e2e8f0" font-size="18" font-family="Noto Sans CJK SC, sans-serif" font-weight="700">延迟构成（典型端侧单请求）</text>
+
+  <rect x="120" y="400" width="160" height="40" rx="6" fill="#1d4ed8"/>
+  <text x="200" y="426" text-anchor="middle" fill="#dbeafe" font-size="13" font-family="Noto Sans CJK SC, sans-serif">Router 5%</text>
+  <rect x="280" y="400" width="320" height="40" rx="6" fill="#c2410c"/>
+  <text x="440" y="426" text-anchor="middle" fill="#ffedd5" font-size="13" font-family="Noto Sans CJK SC, sans-serif">专家权重装载/换页 35%~55%</text>
+  <rect x="600" y="400" width="280" height="40" rx="6" fill="#15803d"/>
+  <text x="740" y="426" text-anchor="middle" fill="#dcfce7" font-size="13" font-family="Noto Sans CJK SC, sans-serif">专家计算 25%~40%</text>
+  <rect x="880" y="400" width="160" height="40" rx="6" fill="#6d28d9"/>
+  <text x="960" y="426" text-anchor="middle" fill="#ede9fe" font-size="13" font-family="Noto Sans CJK SC, sans-serif">其它 10%</text>
+
+  <text x="120" y="480" fill="#94a3b8" font-size="15" font-family="Noto Sans CJK SC, sans-serif">关键洞察：</text>
+  <text x="120" y="520" fill="#cbd5e1" font-size="15" font-family="Noto Sans CJK SC, sans-serif">• 云侧大批次训练/服务里，专家并行能摊薄通信；端侧几乎是 batch=1，通信与装载摊不薄。</text>
+  <text x="120" y="555" fill="#cbd5e1" font-size="15" font-family="Noto Sans CJK SC, sans-serif">• 稀疏激活降低的是「算了多少」，不是「装了多少」；包体与常驻内存仍按总专家规模付费。</text>
+  <text x="120" y="590" fill="#cbd5e1" font-size="15" font-family="Noto Sans CJK SC, sans-serif">• 若热专家命中率低，每次 token 都在换页，MoE 会比同激活量的稠密模型更慢、更烫、更耗电。</text>
+  <text x="120" y="625" fill="#fbbf24" font-size="15" font-family="Noto Sans CJK SC, sans-serif">工程目标应从「更稀疏」转向「更小工作集 + 更稳的热专家驻留 + 端侧友好路由」。</text>
+</svg>
