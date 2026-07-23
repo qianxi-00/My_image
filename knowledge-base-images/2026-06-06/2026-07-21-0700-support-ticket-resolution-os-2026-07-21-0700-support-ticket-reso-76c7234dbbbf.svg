@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="a" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" fill="url(#bg)"/>
+  <text x="48" y="56" fill="#e2e8f0" font-size="28" font-family="Arial, sans-serif" font-weight="700">Support Ticket → Resolution OS</text>
+  <text x="48" y="92" fill="#94a3b8" font-size="16" font-family="Arial, sans-serif">从排队回复到可交付闭环：三层产品栈</text>
+  <!-- boxes -->
+  <rect x="60" y="140" width="240" height="120" rx="14" fill="#0ea5e9" opacity="0.18" stroke="#38bdf8" stroke-width="2"/>
+  <text x="180" y="190" text-anchor="middle" fill="#e0f2fe" font-size="18" font-family="Arial, sans-serif" font-weight="700">交互层</text>
+  <text x="180" y="220" text-anchor="middle" fill="#bae6fd" font-size="14" font-family="Arial, sans-serif">渠道统一 / 会话态</text>
+  <text x="180" y="242" text-anchor="middle" fill="#bae6fd" font-size="14" font-family="Arial, sans-serif">意图与情绪识别</text>
+
+  <rect x="360" y="140" width="240" height="120" rx="14" fill="#8b5cf6" opacity="0.18" stroke="#a78bfa" stroke-width="2"/>
+  <text x="480" y="190" text-anchor="middle" fill="#ede9fe" font-size="18" font-family="Arial, sans-serif" font-weight="700">决策与编排层</text>
+  <text x="480" y="220" text-anchor="middle" fill="#ddd6fe" font-size="14" font-family="Arial, sans-serif">策略路由 / 工具计划</text>
+  <text x="480" y="242" text-anchor="middle" fill="#ddd6fe" font-size="14" font-family="Arial, sans-serif">风险分级与升级</text>
+
+  <rect x="660" y="140" width="240" height="120" rx="14" fill="#10b981" opacity="0.18" stroke="#34d399" stroke-width="2"/>
+  <text x="780" y="190" text-anchor="middle" fill="#d1fae5" font-size="18" font-family="Arial, sans-serif" font-weight="700">执行与回写层</text>
+  <text x="780" y="220" text-anchor="middle" fill="#a7f3d0" font-size="14" font-family="Arial, sans-serif">系统写操作 / 证据</text>
+  <text x="780" y="242" text-anchor="middle" fill="#a7f3d0" font-size="14" font-family="Arial, sans-serif">SLA 与复盘账本</text>
+
+  <path d="M300 200 H360" stroke="url(#a)" stroke-width="3" marker-end="url(#m)"/>
+  <path d="M600 200 H660" stroke="url(#a)" stroke-width="3"/>
+  <defs>
+    <marker id="m" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#38bdf8"/>
+    </marker>
+  </defs>
+
+  <rect x="60" y="320" width="840" height="150" rx="16" fill="#111827" stroke="#334155" stroke-width="1.5"/>
+  <text x="90" y="365" fill="#f8fafc" font-size="18" font-family="Arial, sans-serif" font-weight="700">产品化关键转变</text>
+  <text x="90" y="400" fill="#cbd5e1" font-size="15" font-family="Arial, sans-serif">旧系统：Ticket 是记录单元，人是主执行者，AI 只做草稿建议</text>
+  <text x="90" y="430" fill="#cbd5e1" font-size="15" font-family="Arial, sans-serif">新系统：Resolution 是交付单元，Agent 是默认执行者，人是策略与例外审阅者</text>
+  <text x="90" y="460" fill="#94a3b8" font-size="14" font-family="Arial, sans-serif">指标从 CSAT/AHT 扩展到：自动解决率、一次闭环率、误操作率、可审计回放覆盖率</text>
+</svg>
