@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640">
+  <rect width="1200" height="640" fill="#f8fafc"/>
+  <text x="600" y="48" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="28" font-weight="700" fill="#0f172a">从 GAE 到 PPO / 大模型后训练的桥梁</text>
+  <text x="600" y="82" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="16" fill="#475569">优势估计稳定是策略梯度进入生产的前置条件</text>
+  <rect x="60" y="130" width="200" height="120" rx="14" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="160" y="180" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="18" font-weight="700" fill="#1d4ed8">Policy Gradient</text>
+  <text x="160" y="215" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="14" fill="#1e40af">REINFORCE 高方差</text>
+  <rect x="300" y="130" width="200" height="120" rx="14" fill="#e0e7ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="400" y="180" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="18" font-weight="700" fill="#4338ca">Actor-Critic</text>
+  <text x="400" y="215" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="14" fill="#3730a3">引入基线 / 价值函数</text>
+  <rect x="540" y="130" width="200" height="120" rx="14" fill="#fef3c7" stroke="#d97706" stroke-width="3"/>
+  <text x="640" y="175" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="18" font-weight="700" fill="#b45309">GAE（本讲）</text>
+  <text x="640" y="210" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="14" fill="#92400e">多步优势 · λ 折中</text>
+  <rect x="780" y="130" width="160" height="120" rx="14" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="860" y="180" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="18" font-weight="700" fill="#15803d">TRPO</text>
+  <text x="860" y="215" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="14" fill="#166534">信赖域硬约束</text>
+  <rect x="980" y="130" width="160" height="120" rx="14" fill="#d1fae5" stroke="#059669" stroke-width="2"/>
+  <text x="1060" y="180" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="18" font-weight="700" fill="#047857">PPO</text>
+  <text x="1060" y="215" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="14" fill="#065f46">裁剪代理目标</text>
+  <path d="M260 190 L300 190" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M500 190 L540 190" stroke="#64748b" stroke-width="3"/>
+  <path d="M740 190 L780 190" stroke="#64748b" stroke-width="3"/>
+  <path d="M940 190 L980 190" stroke="#64748b" stroke-width="3"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect x="80" y="300" width="1040" height="260" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="600" y="345" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="20" font-weight="700" fill="#0f172a">为什么 PPO 时代仍要先讲透 GAE？</text>
+  <text x="120" y="390" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="16" fill="#334155">1. 策略梯度的信号质量由优势 Â 决定，裁剪只能限制步长，不能修复噪声信号。</text>
+  <text x="120" y="430" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="16" fill="#334155">2. 大模型 RLHF / 推理 RL 中，长序列 credit assignment 更依赖稳定的多步优势。</text>
+  <text x="120" y="470" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="16" fill="#334155">3. GRPO、RLOO 等“少 critic”路线，本质上也在重新分配“谁来估计优势”。</text>
+  <text x="120" y="510" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="16" fill="#334155">4. 下一讲 TRPO→PPO 将建立在“优势已可用”的前提上讨论信赖域与工程折中。</text>
+  <text x="600" y="600" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="13" fill="#94a3b8">知识线位置：PPO 之前必须先稳住优势估计</text>
+</svg>
