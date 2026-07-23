@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="l1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <linearGradient id="l2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#34d399"/><stop offset="100%" stop-color="#2dd4bf"/>
+    </linearGradient>
+    <linearGradient id="l3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fbbf24"/><stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" rx="24" fill="url(#bg)"/>
+  <text x="48" y="52" fill="#e2e8f0" font-size="26" font-family="system-ui,sans-serif" font-weight="700">Activation OS · 三层产品栈</text>
+  <text x="48" y="84" fill="#94a3b8" font-size="14" font-family="system-ui,sans-serif">信号层 → 旅程编排层 → 结果回写与学习层</text>
+
+  <rect x="48" y="120" width="864" height="100" rx="16" fill="#0b1220" stroke="url(#l1)" stroke-width="2"/>
+  <rect x="48" y="120" width="12" height="100" rx="6" fill="url(#l1)"/>
+  <text x="80" y="158" fill="#7dd3fc" font-size="18" font-family="system-ui,sans-serif" font-weight="700">L1 信号与身份层</text>
+  <text x="80" y="188" fill="#cbd5e1" font-size="14" font-family="system-ui,sans-serif">产品事件 · CRM/计费身份 · 账号图谱 · 健康分输入 · 渠道触点归一</text>
+
+  <rect x="48" y="240" width="864" height="100" rx="16" fill="#0b1220" stroke="url(#l2)" stroke-width="2"/>
+  <rect x="48" y="240" width="12" height="100" rx="6" fill="url(#l2)"/>
+  <text x="80" y="278" fill="#6ee7b7" font-size="18" font-family="system-ui,sans-serif" font-weight="700">L2 旅程编排与决策层</text>
+  <text x="80" y="308" fill="#cbd5e1" font-size="14" font-family="system-ui,sans-serif">里程碑状态机 · 策略路由 · 共岗升级 · 多通道动作计划 · 幂等任务</text>
+
+  <rect x="48" y="360" width="864" height="100" rx="16" fill="#0b1220" stroke="url(#l3)" stroke-width="2"/>
+  <rect x="48" y="360" width="12" height="100" rx="6" fill="url(#l3)"/>
+  <text x="80" y="398" fill="#fcd34d" font-size="18" font-family="system-ui,sans-serif" font-weight="700">L3 执行回写与学习层</text>
+  <text x="80" y="428" fill="#cbd5e1" font-size="14" font-family="system-ui,sans-serif">邮件/应用内/销售任务 · 配置变更 · 验证与证据账本 · 策略回灌</text>
+
+  <text x="48" y="510" fill="#64748b" font-size="12" font-family="system-ui,sans-serif">本地示意图 · 产品激活工作流重写 · 0700</text>
+</svg>
