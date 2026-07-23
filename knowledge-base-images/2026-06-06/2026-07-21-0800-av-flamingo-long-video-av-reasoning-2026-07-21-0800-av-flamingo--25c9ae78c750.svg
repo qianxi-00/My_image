@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560">
+  <rect width="960" height="560" fill="#0f172a" rx="18"/>
+  <text x="40" y="48" fill="#e2e8f0" font-size="24" font-family="Noto Sans SC, PingFang SC, sans-serif" font-weight="700">AV-Flamingo 训练与推理双流水线</text>
+  <text x="40" y="78" fill="#94a3b8" font-size="15" font-family="Noto Sans SC, PingFang SC, sans-serif">三阶段课程学习 + 时序音视频交织思维链（Temporal AV Interleaved CoT）</text>
+
+  <!-- stage boxes -->
+  <rect x="40" y="110" width="270" height="150" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+  <text x="56" y="140" fill="#38bdf8" font-size="16" font-family="Noto Sans SC, PingFang SC, sans-serif" font-weight="700">阶段1 · 短程感知</text>
+  <text x="56" y="172" fill="#cbd5e1" font-size="14" font-family="Noto Sans SC, PingFang SC, sans-serif">短片段音/视对齐</text>
+  <text x="56" y="198" fill="#cbd5e1" font-size="14" font-family="Noto Sans SC, PingFang SC, sans-serif">基础描述与识别</text>
+  <text x="56" y="224" fill="#94a3b8" font-size="13" font-family="Noto Sans SC, PingFang SC, sans-serif">建立跨模态 grounding</text>
+
+  <rect x="345" y="110" width="270" height="150" rx="12" fill="#1e293b" stroke="#a78bfa" stroke-width="2"/>
+  <text x="361" y="140" fill="#a78bfa" font-size="16" font-family="Noto Sans SC, PingFang SC, sans-serif" font-weight="700">阶段2 · 组合扩展</text>
+  <text x="361" y="172" fill="#cbd5e1" font-size="14" font-family="Noto Sans SC, PingFang SC, sans-serif">多事件/多镜头组合</text>
+  <text x="361" y="198" fill="#cbd5e1" font-size="14" font-family="Noto Sans SC, PingFang SC, sans-serif">跨模态因果与属性绑定</text>
+  <text x="361" y="224" fill="#94a3b8" font-size="13" font-family="Noto Sans SC, PingFang SC, sans-serif">强化 compositional 推理</text>
+
+  <rect x="650" y="110" width="270" height="150" rx="12" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+  <text x="666" y="140" fill="#34d399" font-size="16" font-family="Noto Sans SC, PingFang SC, sans-serif" font-weight="700">阶段3 · 长程推理</text>
+  <text x="666" y="172" fill="#cbd5e1" font-size="14" font-family="Noto Sans SC, PingFang SC, sans-serif">长时域多事件推理</text>
+  <text x="666" y="198" fill="#cbd5e1" font-size="14" font-family="Noto Sans SC, PingFang SC, sans-serif">时间轴证据链构建</text>
+  <text x="666" y="224" fill="#94a3b8" font-size="13" font-family="Noto Sans SC, PingFang SC, sans-serif">逼近真实复杂视频</text>
+
+  <path d="M310 185 L340 185" stroke="#64748b" stroke-width="2"/>
+  <polygon points="335,178 350,185 335,192" fill="#94a3b8"/>
+  <path d="M615 185 L645 185" stroke="#64748b" stroke-width="2"/>
+  <polygon points="640,178 655,185 640,192" fill="#94a3b8"/>
+
+  <!-- bottom pipeline -->
+  <text x="40" y="310" fill="#e2e8f0" font-size="18" font-family="Noto Sans SC, PingFang SC, sans-serif" font-weight="700">推理时：T-AVI-CoT 证据锚定</text>
+  <rect x="40" y="330" width="880" height="190" rx="14" fill="#111827" stroke="#334155"/>
+  <!-- timeline -->
+  <line x1="80" y1="390" x2="880" y2="390" stroke="#475569" stroke-width="3"/>
+  <circle cx="140" cy="390" r="8" fill="#38bdf8"/>
+  <circle cx="320" cy="390" r="8" fill="#a78bfa"/>
+  <circle cx="520" cy="390" r="8" fill="#fbbf24"/>
+  <circle cx="740" cy="390" r="8" fill="#34d399"/>
+  <text x="110" y="420" fill="#93c5fd" font-size="12" font-family="Noto Sans SC, PingFang SC, sans-serif">t1 视觉线索</text>
+  <text x="280" y="420" fill="#c4b5fd" font-size="12" font-family="Noto Sans SC, PingFang SC, sans-serif">t2 音频证据</text>
+  <text x="480" y="420" fill="#fde68a" font-size="12" font-family="Noto Sans SC, PingFang SC, sans-serif">t3 跨模态绑定</text>
+  <text x="700" y="420" fill="#6ee7b7" font-size="12" font-family="Noto Sans SC, PingFang SC, sans-serif">t4 结论可回溯</text>
+  <text x="80" y="470" fill="#cbd5e1" font-size="14" font-family="Noto Sans SC, PingFang SC, sans-serif">中间推理步骤显式对齐到时间戳 → 提升长视频时序一致性与可解释性</text>
+  <text x="80" y="496" fill="#94a3b8" font-size="13" font-family="Noto Sans SC, PingFang SC, sans-serif">数据层：Audio-Visual-Skills（真实视频 + 约 700 万 caption/QA）支撑课程与评测迁移</text>
+</svg>
