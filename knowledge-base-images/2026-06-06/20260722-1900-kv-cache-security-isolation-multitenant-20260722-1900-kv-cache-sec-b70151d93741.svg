@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="560" viewBox="0 0 980 560">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1f2937"/>
+    </linearGradient>
+    <marker id="a3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#a7f3d0"/>
+    </marker>
+  </defs>
+  <rect width="980" height="560" fill="url(#bg3)" rx="12"/>
+  <text x="40" y="44" fill="#f9fafb" font-size="22" font-family="Noto Sans SC, PingFang SC, sans-serif" font-weight="700">安全优先的推理服务缓存管线</text>
+  <text x="40" y="72" fill="#9ca3af" font-size="14" font-family="Noto Sans SC, PingFang SC, sans-serif">请求进入 → 身份/策略判定 → 作用域 key 构造 → 命中/分配 → 审计与驱逐</text>
+
+  <!-- Steps -->
+  <rect x="40" y="120" width="160" height="120" rx="12" fill="#065f46"/>
+  <text x="120" y="170" text-anchor="middle" fill="#ecfdf5" font-size="15" font-family="Noto Sans SC, PingFang SC, sans-serif" font-weight="700">1. 身份绑定</text>
+  <text x="120" y="200" text-anchor="middle" fill="#a7f3d0" font-size="12" font-family="Noto Sans SC, PingFang SC, sans-serif">tenant / user</text>
+  <text x="120" y="220" text-anchor="middle" fill="#a7f3d0" font-size="12" font-family="Noto Sans SC, PingFang SC, sans-serif">workspace / role</text>
+
+  <rect x="230" y="120" width="160" height="120" rx="12" fill="#0f766e"/>
+  <text x="310" y="170" text-anchor="middle" fill="#ecfdf5" font-size="15" font-family="Noto Sans SC, PingFang SC, sans-serif" font-weight="700">2. 数据分级</text>
+  <text x="310" y="200" text-anchor="middle" fill="#a7f3d0" font-size="12" font-family="Noto Sans SC, PingFang SC, sans-serif">公开 / 内部</text>
+  <text x="310" y="220" text-anchor="middle" fill="#a7f3d0" font-size="12" font-family="Noto Sans SC, PingFang SC, sans-serif">机密 / 专有</text>
+
+  <rect x="420" y="120" width="160" height="120" rx="12" fill="#115e59"/>
+  <text x="500" y="170" text-anchor="middle" fill="#ecfdf5" font-size="15" font-family="Noto Sans SC, PingFang SC, sans-serif" font-weight="700">3. 作用域 Key</text>
+  <text x="500" y="200" text-anchor="middle" fill="#a7f3d0" font-size="12" font-family="Noto Sans SC, PingFang SC, sans-serif">hash(scope+tokens)</text>
+  <text x="500" y="220" text-anchor="middle" fill="#a7f3d0" font-size="12" font-family="Noto Sans SC, PingFang SC, sans-serif">禁止裸内容键</text>
+
+  <rect x="610" y="120" width="160" height="120" rx="12" fill="#134e4a"/>
+  <text x="690" y="170" text-anchor="middle" fill="#ecfdf5" font-size="15" font-family="Noto Sans SC, PingFang SC, sans-serif" font-weight="700">4. 受控命中</text>
+  <text x="690" y="200" text-anchor="middle" fill="#a7f3d0" font-size="12" font-family="Noto Sans SC, PingFang SC, sans-serif">同 scope 可复用</text>
+  <text x="690" y="220" text-anchor="middle" fill="#a7f3d0" font-size="12" font-family="Noto Sans SC, PingFang SC, sans-serif">跨 scope 强制 miss</text>
+
+  <rect x="800" y="120" width="140" height="120" rx="12" fill="#14532d"/>
+  <text x="870" y="170" text-anchor="middle" fill="#ecfdf5" font-size="15" font-family="Noto Sans SC, PingFang SC, sans-serif" font-weight="700">5. 审计</text>
+  <text x="870" y="200" text-anchor="middle" fill="#a7f3d0" font-size="12" font-family="Noto Sans SC, PingFang SC, sans-serif">命中日志</text>
+  <text x="870" y="220" text-anchor="middle" fill="#a7f3d0" font-size="12" font-family="Noto Sans SC, PingFang SC, sans-serif">异常侧信道</text>
+
+  <!-- arrows -->
+  <line x1="200" y1="180" x2="228" y2="180" stroke="#a7f3d0" stroke-width="2" marker-end="url(#a3)"/>
+  <line x1="390" y1="180" x2="418" y2="180" stroke="#a7f3d0" stroke-width="2" marker-end="url(#a3)"/>
+  <line x1="580" y1="180" x2="608" y2="180" stroke="#a7f3d0" stroke-width="2" marker-end="url(#a3)"/>
+  <line x1="770" y1="180" x2="798" y2="180" stroke="#a7f3d0" stroke-width="2" marker-end="url(#a3)"/>
+
+  <!-- Bottom panels -->
+  <rect x="40" y="290" width="290" height="180" rx="12" fill="#1f2937" stroke="#374151"/>
+  <text x="60" y="325" fill="#fbbf24" font-size="15" font-family="Noto Sans SC, PingFang SC, sans-serif" font-weight="700">侧信道防护</text>
+  <text x="60" y="360" fill="#e5e7eb" font-size="13" font-family="Noto Sans SC, PingFang SC, sans-serif">• 模糊命中时延差异</text>
+  <text x="60" y="385" fill="#e5e7eb" font-size="13" font-family="Noto Sans SC, PingFang SC, sans-serif">• 限速探测请求</text>
+  <text x="60" y="410" fill="#e5e7eb" font-size="13" font-family="Noto Sans SC, PingFang SC, sans-serif">• 禁止按命中结果返回可观察标识</text>
+  <text x="60" y="435" fill="#e5e7eb" font-size="13" font-family="Noto Sans SC, PingFang SC, sans-serif">• 对敏感前缀禁用共享</text>
+
+  <rect x="350" y="290" width="290" height="180" rx="12" fill="#1f2937" stroke="#374151"/>
+  <text x="370" y="325" fill="#60a5fa" font-size="15" font-family="Noto Sans SC, PingFang SC, sans-serif" font-weight="700">生命周期控制</text>
+  <text x="370" y="360" fill="#e5e7eb" font-size="13" font-family="Noto Sans SC, PingFang SC, sans-serif">• TTL / 会话结束即失效</text>
+  <text x="370" y="385" fill="#e5e7eb" font-size="13" font-family="Noto Sans SC, PingFang SC, sans-serif">• 租户配额与强制驱逐</text>
+  <text x="370" y="410" fill="#e5e7eb" font-size="13" font-family="Noto Sans SC, PingFang SC, sans-serif">• 外部缓存加密 at-rest</text>
+  <text x="370" y="435" fill="#e5e7eb" font-size="13" font-family="Noto Sans SC, PingFang SC, sans-serif">• 调试 dump 脱敏与权限门</text>
+
+  <rect x="660" y="290" width="280" height="180" rx="12" fill="#1f2937" stroke="#374151"/>
+  <text x="680" y="325" fill="#c084fc" font-size="15" font-family="Noto Sans SC, PingFang SC, sans-serif" font-weight="700">可观测与合规</text>
+  <text x="680" y="360" fill="#e5e7eb" font-size="13" font-family="Noto Sans SC, PingFang SC, sans-serif">• 跨 scope 命中尝试告警</text>
+  <text x="680" y="385" fill="#e5e7eb" font-size="13" font-family="Noto Sans SC, PingFang SC, sans-serif">• 缓存策略版本可审计</text>
+  <text x="680" y="410" fill="#e5e7eb" font-size="13" font-family="Noto Sans SC, PingFang SC, sans-serif">• 红队测试与渗透回归</text>
+  <text x="680" y="435" fill="#e5e7eb" font-size="13" font-family="Noto Sans SC, PingFang SC, sans-serif">• 合规租户默认禁跨会话复用</text>
+
+  <text x="40" y="520" fill="#6b7280" font-size="12" font-family="Noto Sans SC, PingFang SC, sans-serif">图3：安全缓存不是“关掉 prefix cache”，而是把作用域、策略、生命周期与审计做成完整控制面</text>
+  <text x="40" y="542" fill="#6b7280" font-size="12" font-family="Noto Sans SC, PingFang SC, sans-serif">知识线 1900 · 第 45 讲 · KV Cache 安全与隔离</text>
+</svg>
