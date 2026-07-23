@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#0f172a"/>
+  <text x="60" y="60" fill="#e2e8f0" font-size="30" font-family="sans-serif" font-weight="700">粗暴路径 vs 可控路径：个性化如何进入模型系统</text>
+  <text x="60" y="100" fill="#94a3b8" font-size="16" font-family="sans-serif">同一目标（更懂我），不同数据落点决定风险与可撤销性</text>
+
+  <!-- left path -->
+  <rect x="50" y="140" width="520" height="520" rx="16" fill="#1c1917" stroke="#ef4444" stroke-width="2"/>
+  <text x="80" y="190" fill="#fca5a5" font-size="24" font-family="sans-serif" font-weight="700">粗暴路径（高风险）</text>
+  <text x="80" y="240" fill="#fecaca" font-size="16" font-family="sans-serif">1. 收集原始个人语料</text>
+  <text x="80" y="280" fill="#fecaca" font-size="16" font-family="sans-serif">2. 直接混入预训练/CPT 批次</text>
+  <text x="80" y="320" fill="#fecaca" font-size="16" font-family="sans-serif">3. 全量更新共享权重</text>
+  <text x="80" y="360" fill="#fecaca" font-size="16" font-family="sans-serif">4. 用户删除请求难落实</text>
+  <text x="80" y="400" fill="#fecaca" font-size="16" font-family="sans-serif">5. 成员推断 / 数据提取</text>
+  <text x="80" y="440" fill="#fecaca" font-size="16" font-family="sans-serif">6. 一次事故影响整批用户</text>
+  <text x="80" y="500" fill="#f87171" font-size="18" font-family="sans-serif" font-weight="700">结果：合规不可审计、遗忘不可证明</text>
+  <text x="80" y="540" fill="#f87171" font-size="18" font-family="sans-serif" font-weight="700">护城河变诉讼面，能力增益不可持续</text>
+
+  <!-- right path -->
+  <rect x="630" y="140" width="520" height="520" rx="16" fill="#052e16" stroke="#22c55e" stroke-width="2"/>
+  <text x="660" y="190" fill="#86efac" font-size="24" font-family="sans-serif" font-weight="700">可控路径（工程可落地）</text>
+  <text x="660" y="240" fill="#bbf7d0" font-size="16" font-family="sans-serif">1. 同意与目的声明 + 最小化采集</text>
+  <text x="660" y="280" fill="#bbf7d0" font-size="16" font-family="sans-serif">2. 外置记忆：RAG / 会话记忆库</text>
+  <text x="660" y="320" fill="#bbf7d0" font-size="16" font-family="sans-serif">3. 用户级适配器 / 本地 LoRA</text>
+  <text x="660" y="360" fill="#bbf7d0" font-size="16" font-family="sans-serif">4. 差分隐私 / 联邦 / 合成脱敏</text>
+  <text x="660" y="400" fill="#bbf7d0" font-size="16" font-family="sans-serif">5. 可删除索引与可回滚权重层</text>
+  <text x="660" y="440" fill="#bbf7d0" font-size="16" font-family="sans-serif">6. 审计日志与数据版本契约</text>
+  <text x="660" y="500" fill="#4ade80" font-size="18" font-family="sans-serif" font-weight="700">结果：个性化可开关、可隔离、可遗忘</text>
+  <text x="660" y="540" fill="#4ade80" font-size="18" font-family="sans-serif" font-weight="700">基础模型保持通用，风险面可控</text>
+</svg>
