@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560">
+  <rect width="960" height="560" fill="#0b1220"/>
+  <text x="40" y="48" fill="#f1f5f9" font-size="26" font-family="Arial, sans-serif" font-weight="700">Resolution Loop：支持工单的自动闭环</text>
+  <text x="40" y="80" fill="#94a3b8" font-size="15" font-family="Arial, sans-serif">Inbound → Diagnose → Act → Verify → Learn</text>
+  <!-- loop stages -->
+  <g font-family="Arial, sans-serif">
+    <rect x="70" y="130" width="150" height="90" rx="12" fill="#1d4ed8" opacity="0.85"/>
+    <text x="145" y="170" text-anchor="middle" fill="#eff6ff" font-size="16" font-weight="700">1. Inbound</text>
+    <text x="145" y="195" text-anchor="middle" fill="#dbeafe" font-size="12">多渠道归并</text>
+
+    <rect x="270" y="130" width="150" height="90" rx="12" fill="#7c3aed" opacity="0.85"/>
+    <text x="345" y="170" text-anchor="middle" fill="#f5f3ff" font-size="16" font-weight="700">2. Diagnose</text>
+    <text x="345" y="195" text-anchor="middle" fill="#ede9fe" font-size="12">证据检索/根因</text>
+
+    <rect x="470" y="130" width="150" height="90" rx="12" fill="#059669" opacity="0.85"/>
+    <text x="545" y="170" text-anchor="middle" fill="#ecfdf5" font-size="16" font-weight="700">3. Act</text>
+    <text x="545" y="195" text-anchor="middle" fill="#d1fae5" font-size="12">工具调用/写回</text>
+
+    <rect x="670" y="130" width="150" height="90" rx="12" fill="#d97706" opacity="0.9"/>
+    <text x="745" y="170" text-anchor="middle" fill="#fffbeb" font-size="16" font-weight="700">4. Verify</text>
+    <text x="745" y="195" text-anchor="middle" fill="#fef3c7" font-size="12">验收与用户确认</text>
+
+    <rect x="370" y="300" width="220" height="90" rx="12" fill="#0f766e" opacity="0.9"/>
+    <text x="480" y="340" text-anchor="middle" fill="#ecfeff" font-size="16" font-weight="700">5. Learn</text>
+    <text x="480" y="365" text-anchor="middle" fill="#cffafe" font-size="12">策略沉淀 / 评测回流</text>
+  </g>
+  <path d="M220 175 H270" stroke="#64748b" stroke-width="3"/>
+  <path d="M420 175 H470" stroke="#64748b" stroke-width="3"/>
+  <path d="M620 175 H670" stroke="#64748b" stroke-width="3"/>
+  <path d="M745 220 V270 H480 V300" stroke="#64748b" stroke-width="3" fill="none"/>
+  <path d="M370 345 H145 V220" stroke="#64748b" stroke-width="3" fill="none"/>
+  <rect x="60" y="430" width="840" height="90" rx="12" fill="#111827" stroke="#334155"/>
+  <text x="90" y="470" fill="#e2e8f0" font-size="16" font-family="Arial, sans-serif" font-weight="700">产品要点：每一步都要有「状态机 + 证据对象 + 可回滚边界」</text>
+  <text x="90" y="500" fill="#94a3b8" font-size="14" font-family="Arial, sans-serif">没有 Verify 的 Act 只是自动化；没有 Learn 的 Verify 只是脚本；没有证据账本的闭环无法上生产</text>
+</svg>
