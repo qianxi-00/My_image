@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="620" viewBox="0 0 960 620">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="960" height="620" fill="url(#bg)" rx="12"/>
+  <text x="48" y="48" fill="#f8fafc" font-size="22" font-family="Noto Sans SC, PingFang SC, sans-serif" font-weight="700">多租户 KV Cache 威胁模型</text>
+  <text x="48" y="78" fill="#94a3b8" font-size="14" font-family="Noto Sans SC, PingFang SC, sans-serif">性能复用（前缀共享）与安全隔离（租户边界）的张力</text>
+
+  <!-- Tenants -->
+  <rect x="48" y="120" width="180" height="100" rx="10" fill="#1d4ed8" opacity="0.9"/>
+  <text x="138" y="165" text-anchor="middle" fill="#fff" font-size="16" font-family="Noto Sans SC, PingFang SC, sans-serif" font-weight="600">租户 A</text>
+  <text x="138" y="190" text-anchor="middle" fill="#dbeafe" font-size="12" font-family="Noto Sans SC, PingFang SC, sans-serif">私有 Prompt / 系统指令</text>
+
+  <rect x="48" y="250" width="180" height="100" rx="10" fill="#7c3aed" opacity="0.9"/>
+  <text x="138" y="295" text-anchor="middle" fill="#fff" font-size="16" font-family="Noto Sans SC, PingFang SC, sans-serif" font-weight="600">租户 B</text>
+  <text x="138" y="320" text-anchor="middle" fill="#ede9fe" font-size="12" font-family="Noto Sans SC, PingFang SC, sans-serif">可能探测共享前缀</text>
+
+  <rect x="48" y="380" width="180" height="100" rx="10" fill="#0f766e" opacity="0.9"/>
+  <text x="138" y="425" text-anchor="middle" fill="#fff" font-size="16" font-family="Noto Sans SC, PingFang SC, sans-serif" font-weight="600">租户 C</text>
+  <text x="138" y="450" text-anchor="middle" fill="#ccfbf1" font-size="12" font-family="Noto Sans SC, PingFang SC, sans-serif">合规 / 专有数据区</text>
+
+  <!-- Shared cache pool -->
+  <rect x="320" y="160" width="280" height="320" rx="12" fill="#334155" stroke="#64748b" stroke-width="2"/>
+  <text x="460" y="195" text-anchor="middle" fill="#f8fafc" font-size="16" font-family="Noto Sans SC, PingFang SC, sans-serif" font-weight="700">共享 KV 块池</text>
+  <text x="460" y="220" text-anchor="middle" fill="#94a3b8" font-size="12" font-family="Noto Sans SC, PingFang SC, sans-serif">Prefix Cache / Radix / Paged Blocks</text>
+
+  <rect x="350" y="250" width="220" height="48" rx="8" fill="#475569"/>
+  <text x="460" y="280" text-anchor="middle" fill="#fde68a" font-size="13" font-family="Noto Sans SC, PingFang SC, sans-serif">精确前缀哈希命中</text>
+  <rect x="350" y="315" width="220" height="48" rx="8" fill="#475569"/>
+  <text x="460" y="345" text-anchor="middle" fill="#fde68a" font-size="13" font-family="Noto Sans SC, PingFang SC, sans-serif">跨请求引用计数共享</text>
+  <rect x="350" y="380" width="220" height="48" rx="8" fill="#475569"/>
+  <text x="460" y="410" text-anchor="middle" fill="#fde68a" font-size="13" font-family="Noto Sans SC, PingFang SC, sans-serif">驱逐 / 侧信道时间差</text>
+
+  <!-- Risks -->
+  <rect x="680" y="140" width="240" height="360" rx="12" fill="#450a0a" stroke="#f87171" stroke-width="2"/>
+  <text x="800" y="180" text-anchor="middle" fill="#fecaca" font-size="16" font-family="Noto Sans SC, PingFang SC, sans-serif" font-weight="700">主要风险面</text>
+  <text x="700" y="230" fill="#fee2e2" font-size="13" font-family="Noto Sans SC, PingFang SC, sans-serif">1. 前缀误共享泄密</text>
+  <text x="700" y="265" fill="#fee2e2" font-size="13" font-family="Noto Sans SC, PingFang SC, sans-serif">2. 缓存命中时序侧信道</text>
+  <text x="700" y="300" fill="#fee2e2" font-size="13" font-family="Noto Sans SC, PingFang SC, sans-serif">3. 多租户元数据泄露</text>
+  <text x="700" y="335" fill="#fee2e2" font-size="13" font-family="Noto Sans SC, PingFang SC, sans-serif">4. 驱逐策略可被操纵</text>
+  <text x="700" y="370" fill="#fee2e2" font-size="13" font-family="Noto Sans SC, PingFang SC, sans-serif">5. 外部缓存层跨边界</text>
+  <text x="700" y="405" fill="#fee2e2" font-size="13" font-family="Noto Sans SC, PingFang SC, sans-serif">6. 日志/调试快照残留</text>
+  <text x="700" y="450" fill="#fca5a5" font-size="12" font-family="Noto Sans SC, PingFang SC, sans-serif">核心矛盾：共享越激进</text>
+  <text x="700" y="470" fill="#fca5a5" font-size="12" font-family="Noto Sans SC, PingFang SC, sans-serif">隔离边界越难守住</text>
+
+  <!-- Arrows -->
+  <line x1="228" y1="170" x2="318" y2="220" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="228" y1="300" x2="318" y2="300" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="228" y1="430" x2="318" y2="380" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="600" y1="320" x2="678" y2="320" stroke="#f87171" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="48" y="560" fill="#64748b" font-size="12" font-family="Noto Sans SC, PingFang SC, sans-serif">图1：共享块池放大吞吐，同时把“谁能命中谁的前缀”变成一等安全问题</text>
+  <text x="48" y="585" fill="#64748b" font-size="12" font-family="Noto Sans SC, PingFang SC, sans-serif">知识线 1900 · 注意力/KV Cache/推理加速 · 第 45 讲</text>
+</svg>
