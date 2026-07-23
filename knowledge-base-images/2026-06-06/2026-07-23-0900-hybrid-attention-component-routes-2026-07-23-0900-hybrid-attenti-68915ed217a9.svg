@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560">
+  <rect width="960" height="560" fill="#0b1220"/>
+  <text x="40" y="44" fill="#f1f5f9" font-size="22" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif" font-weight="700">层预算：从“全层 Softmax”到“交错混合”</text>
+  <text x="40" y="72" fill="#94a3b8" font-size="13" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif">示意：L0-L31 中哪些层走线性/低秩，哪些层保留全注意力</text>
+  <!-- axis -->
+  <line x1="80" y1="420" x2="900" y2="420" stroke="#64748b" stroke-width="2"/>
+  <text x="80" y="450" fill="#94a3b8" font-size="12" font-family="DejaVu Sans, sans-serif">浅层</text>
+  <text x="850" y="450" fill="#94a3b8" font-size="12" font-family="DejaVu Sans, sans-serif">深层</text>
+  <!-- bars pattern -->
+  <!-- full attn blue -->
+  <rect x="90" y="180" width="28" height="240" fill="#2563eb"/>
+  <rect x="130" y="240" width="28" height="180" fill="#0d9488"/>
+  <rect x="170" y="250" width="28" height="170" fill="#0d9488"/>
+  <rect x="210" y="200" width="28" height="220" fill="#2563eb"/>
+  <rect x="250" y="255" width="28" height="165" fill="#0d9488"/>
+  <rect x="290" y="260" width="28" height="160" fill="#0d9488"/>
+  <rect x="330" y="190" width="28" height="230" fill="#7c3aed"/>
+  <rect x="370" y="250" width="28" height="170" fill="#0d9488"/>
+  <rect x="410" y="245" width="28" height="175" fill="#0d9488"/>
+  <rect x="450" y="175" width="28" height="245" fill="#2563eb"/>
+  <rect x="490" y="255" width="28" height="165" fill="#0d9488"/>
+  <rect x="530" y="250" width="28" height="170" fill="#0d9488"/>
+  <rect x="570" y="200" width="28" height="220" fill="#7c3aed"/>
+  <rect x="610" y="260" width="28" height="160" fill="#0d9488"/>
+  <rect x="650" y="255" width="28" height="165" fill="#0d9488"/>
+  <rect x="690" y="185" width="28" height="235" fill="#2563eb"/>
+  <rect x="730" y="250" width="28" height="170" fill="#0d9488"/>
+  <rect x="770" y="245" width="28" height="175" fill="#0d9488"/>
+  <rect x="810" y="195" width="28" height="225" fill="#7c3aed"/>
+  <rect x="850" y="250" width="28" height="170" fill="#0d9488"/>
+  <!-- legend -->
+  <rect x="90" y="490" width="16" height="16" fill="#2563eb"/>
+  <text x="112" y="503" fill="#e2e8f0" font-size="13" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif">全注意力（召回锚点）</text>
+  <rect x="300" y="490" width="16" height="16" fill="#0d9488"/>
+  <text x="322" y="503" fill="#e2e8f0" font-size="13" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif">线性/递推（吞吐层）</text>
+  <rect x="520" y="490" width="16" height="16" fill="#7c3aed"/>
+  <text x="542" y="503" fill="#e2e8f0" font-size="13" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif">MLA/DSA（KV 压缩层）</text>
+  <text x="90" y="140" fill="#cbd5e1" font-size="14" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif">常见策略：每 N 层插入 1 个全注意力“锚点”，其余走线性/压缩；锚点位置影响长上下文检索与 Agent 工具轨迹召回。</text>
+</svg>
