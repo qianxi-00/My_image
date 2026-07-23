@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#0b1220"/>
+  <text x="600" y="48" text-anchor="middle" fill="#e2e8f0" font-size="26" font-family="Noto Sans CJK SC, sans-serif" font-weight="700">端侧 MoE 决策树：何时值得上稀疏专家</text>
+  <text x="600" y="80" text-anchor="middle" fill="#94a3b8" font-size="15" font-family="Noto Sans CJK SC, sans-serif">按包体、内存、热专家命中率与质量目标分流</text>
+
+  <rect x="420" y="110" width="360" height="70" rx="12" fill="#1e3a5f" stroke="#38bdf8" stroke-width="2"/>
+  <text x="600" y="150" text-anchor="middle" fill="#e0f2fe" font-size="16" font-family="Noto Sans CJK SC, sans-serif">目标：端侧要更大能力但更低成本？</text>
+
+  <path d="M600 180 V210" stroke="#64748b" stroke-width="2"/>
+  <rect x="380" y="210" width="440" height="55" rx="10" fill="#312e81" stroke="#a5b4fc"/>
+  <text x="600" y="243" text-anchor="middle" fill="#e0e7ff" font-size="15" font-family="Noto Sans CJK SC, sans-serif">全量专家能否装入设备可用内存？</text>
+
+  <path d="M480 265 L300 310" stroke="#64748b" stroke-width="2"/>
+  <path d="M720 265 L900 310" stroke="#64748b" stroke-width="2"/>
+
+  <rect x="150" y="320" width="300" height="70" rx="10" fill="#7f1d1d" stroke="#fca5a5"/>
+  <text x="300" y="350" text-anchor="middle" fill="#fee2e2" font-size="14" font-family="Noto Sans CJK SC, sans-serif">否：优先稠密小模型</text>
+  <text x="300" y="375" text-anchor="middle" fill="#fecaca" font-size="13" font-family="Noto Sans CJK SC, sans-serif">+ 量化 / 蒸馏 / 云边协同</text>
+
+  <rect x="750" y="320" width="300" height="70" rx="10" fill="#14532d" stroke="#86efac"/>
+  <text x="900" y="350" text-anchor="middle" fill="#dcfce7" font-size="14" font-family="Noto Sans CJK SC, sans-serif">是：检查热专家工作集</text>
+  <text x="900" y="375" text-anchor="middle" fill="#bbf7d0" font-size="13" font-family="Noto Sans CJK SC, sans-serif">会话级命中率是否稳定</text>
+
+  <path d="M900 390 V430" stroke="#64748b" stroke-width="2"/>
+  <rect x="720" y="430" width="360" height="55" rx="10" fill="#422006" stroke="#fbbf24"/>
+  <text x="900" y="463" text-anchor="middle" fill="#fef3c7" font-size="14" font-family="Noto Sans CJK SC, sans-serif">热专家集合能否驻留高速缓存？</text>
+
+  <path d="M800 485 L650 530" stroke="#64748b" stroke-width="2"/>
+  <path d="M1000 485 L1100 530" stroke="#64748b" stroke-width="2"/>
+
+  <rect x="500" y="540" width="300" height="80" rx="10" fill="#9a3412" stroke="#fdba74"/>
+  <text x="650" y="575" text-anchor="middle" fill="#ffedd5" font-size="14" font-family="Noto Sans CJK SC, sans-serif">否：用 Shared Expert</text>
+  <text x="650" y="600" text-anchor="middle" fill="#fed7aa" font-size="13" font-family="Noto Sans CJK SC, sans-serif">+ 少专家 + 专家选择蒸馏</text>
+
+  <rect x="980" y="540" width="180" height="80" rx="10" fill="#166534" stroke="#4ade80"/>
+  <text x="1070" y="575" text-anchor="middle" fill="#dcfce7" font-size="14" font-family="Noto Sans CJK SC, sans-serif">是：可上端侧 MoE</text>
+  <text x="1070" y="600" text-anchor="middle" fill="#bbf7d0" font-size="12" font-family="Noto Sans CJK SC, sans-serif">配合量化与路由冻结</text>
+
+  <rect x="60" y="540" width="380" height="120" rx="12" fill="#111827" stroke="#475569"/>
+  <text x="250" y="580" text-anchor="middle" fill="#e2e8f0" font-size="14" font-family="Noto Sans CJK SC, sans-serif" font-weight="600">兜底策略（几乎总值得做）</text>
+  <text x="80" y="610" fill="#cbd5e1" font-size="13" font-family="Noto Sans CJK SC, sans-serif">• Router 高精度保留，专家可低比特</text>
+  <text x="80" y="635" fill="#cbd5e1" font-size="13" font-family="Noto Sans CJK SC, sans-serif">• 路由统计预热 + 会话亲和缓存</text>
+</svg>
