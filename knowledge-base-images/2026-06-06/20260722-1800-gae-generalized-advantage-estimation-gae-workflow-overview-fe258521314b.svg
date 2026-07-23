@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640">
+  <rect width="1200" height="640" fill="#f8fafc"/>
+  <text x="600" y="48" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="28" font-weight="700" fill="#0f172a">广义优势估计（GAE）工作流总览</text>
+  <text x="600" y="82" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="16" fill="#475569">从轨迹采样 → TD误差 → λ回报 → 优势Â_t → 策略/价值更新</text>
+  <rect x="40" y="130" width="240" height="360" rx="16" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+  <text x="160" y="170" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="20" font-weight="700" fill="#0369a1">① 轨迹采样</text>
+  <text x="160" y="220" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="15" fill="#0c4a6e">状态 s_t</text>
+  <text x="160" y="250" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="15" fill="#0c4a6e">动作 a_t</text>
+  <text x="160" y="280" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="15" fill="#0c4a6e">奖励 r_t</text>
+  <text x="160" y="310" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="15" fill="#0c4a6e">下一状态 s_{t+1}</text>
+  <text x="160" y="360" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="14" fill="#075985">策略 π_θ 与环境交互</text>
+  <text x="160" y="400" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="14" fill="#075985">得到完整或部分回合</text>
+  <polygon points="300,310 340,290 340,330" fill="#64748b"/>
+  <rect x="360" y="130" width="240" height="360" rx="16" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="480" y="170" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="20" font-weight="700" fill="#b45309">② TD 误差 δ_t</text>
+  <text x="480" y="230" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="15" fill="#92400e">δ_t = r_t + γ V(s_{t+1})</text>
+  <text x="480" y="270" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="15" fill="#92400e">　　　− V(s_t)</text>
+  <text x="480" y="330" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="14" fill="#a16207">单步时序差分</text>
+  <text x="480" y="370" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="14" fill="#a16207">偏差低、方差可控入口</text>
+  <text x="480" y="420" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="14" fill="#a16207">依赖价值函数 V_φ</text>
+  <polygon points="620,310 660,290 660,330" fill="#64748b"/>
+  <rect x="680" y="130" width="240" height="360" rx="16" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="800" y="170" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="20" font-weight="700" fill="#15803d">③ GAE(λ) 合成</text>
+  <text x="800" y="230" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="15" fill="#166534">Â_t = Σ (γλ)^l δ_{t+l}</text>
+  <text x="800" y="280" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="14" fill="#166534">λ=0 → TD(0) 低方差</text>
+  <text x="800" y="320" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="14" fill="#166534">λ=1 → MC 低偏差</text>
+  <text x="800" y="360" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="14" fill="#166534">0&lt;λ&lt;1 → 连续折中</text>
+  <text x="800" y="420" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="14" fill="#166534">多步优势的统一框架</text>
+  <polygon points="940,310 980,290 980,330" fill="#64748b"/>
+  <rect x="1000" y="180" width="160" height="260" rx="16" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="1080" y="230" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="18" font-weight="700" fill="#6d28d9">④ 更新</text>
+  <text x="1080" y="280" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="14" fill="#5b21b6">Actor: ∇logπ Â</text>
+  <text x="1080" y="320" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="14" fill="#5b21b6">Critic: 拟合回报</text>
+  <text x="1080" y="370" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="14" fill="#5b21b6">进入 PPO/TRPO</text>
+  <text x="600" y="560" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="15" fill="#334155">核心洞见：先稳住优势估计，再谈信赖域约束与大模型 RL 后训练</text>
+  <text x="600" y="600" text-anchor="middle" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="13" fill="#94a3b8">强化学习与决策基础线 · 第21讲 · slot 1800</text>
+</svg>
