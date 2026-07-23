@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <text x="60" y="70" fill="#e2e8f0" font-size="32" font-family="sans-serif" font-weight="700">个性化预训练的隐私边界：为什么不能“把用户数据直接塞进模型”</text>
+  <text x="60" y="110" fill="#94a3b8" font-size="18" font-family="sans-serif">威胁面与数据流动：采集 → 训练 → 记忆 → 推断 → 外泄</text>
+
+  <!-- boxes -->
+  <rect x="50" y="160" width="200" height="120" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+  <text x="70" y="210" fill="#f8fafc" font-size="20" font-family="sans-serif">个人数据源</text>
+  <text x="70" y="245" fill="#94a3b8" font-size="14" font-family="sans-serif">聊天/邮件/文档</text>
+  <text x="70" y="265" fill="#94a3b8" font-size="14" font-family="sans-serif">行为轨迹/偏好</text>
+
+  <rect x="290" y="160" width="200" height="120" rx="12" fill="#1e293b" stroke="#a78bfa" stroke-width="2"/>
+  <text x="310" y="210" fill="#f8fafc" font-size="20" font-family="sans-serif">训练入口</text>
+  <text x="310" y="245" fill="#94a3b8" font-size="14" font-family="sans-serif">CPT / 微调 / 蒸馏</text>
+  <text x="310" y="265" fill="#94a3b8" font-size="14" font-family="sans-serif">合成回流</text>
+
+  <rect x="530" y="160" width="200" height="120" rx="12" fill="#1e293b" stroke="#f472b6" stroke-width="2"/>
+  <text x="550" y="210" fill="#f8fafc" font-size="20" font-family="sans-serif">模型记忆</text>
+  <text x="550" y="245" fill="#94a3b8" font-size="14" font-family="sans-serif">权重编码</text>
+  <text x="550" y="265" fill="#94a3b8" font-size="14" font-family="sans-serif">可提取痕迹</text>
+
+  <rect x="770" y="160" width="200" height="120" rx="12" fill="#1e293b" stroke="#fbbf24" stroke-width="2"/>
+  <text x="790" y="210" fill="#f8fafc" font-size="20" font-family="sans-serif">攻击与推断</text>
+  <text x="790" y="245" fill="#94a3b8" font-size="14" font-family="sans-serif">成员推断</text>
+  <text x="790" y="265" fill="#94a3b8" font-size="14" font-family="sans-serif">训练数据提取</text>
+
+  <rect x="1010" y="160" width="150" height="120" rx="12" fill="#7f1d1d" stroke="#ef4444" stroke-width="2"/>
+  <text x="1030" y="220" fill="#fecaca" font-size="18" font-family="sans-serif">合规</text>
+  <text x="1030" y="250" fill="#fecaca" font-size="18" font-family="sans-serif">事故面</text>
+
+  <!-- arrows -->
+  <path d="M250 220 L290 220" stroke="#64748b" stroke-width="3" marker-end="url(#a)"/>
+  <path d="M490 220 L530 220" stroke="#64748b" stroke-width="3"/>
+  <path d="M730 220 L770 220" stroke="#64748b" stroke-width="3"/>
+  <path d="M970 220 L1010 220" stroke="#64748b" stroke-width="3"/>
+
+  <!-- bottom layers -->
+  <rect x="50" y="340" width="1100" height="320" rx="16" fill="#0b1220" stroke="#334155" stroke-width="2"/>
+  <text x="80" y="390" fill="#38bdf8" font-size="22" font-family="sans-serif" font-weight="700">三层隐私边界（不能粗暴推进的原因）</text>
+
+  <rect x="80" y="420" width="320" height="200" rx="12" fill="#172554" stroke="#60a5fa" stroke-width="2"/>
+  <text x="100" y="460" fill="#bfdbfe" font-size="18" font-family="sans-serif" font-weight="700">法律与同意层</text>
+  <text x="100" y="500" fill="#e2e8f0" font-size="15" font-family="sans-serif">目的限制 / 最小必要</text>
+  <text x="100" y="530" fill="#e2e8f0" font-size="15" font-family="sans-serif">删除权 / 被遗忘权</text>
+  <text x="100" y="560" fill="#e2e8f0" font-size="15" font-family="sans-serif">跨境与行业合规</text>
+
+  <rect x="440" y="420" width="320" height="200" rx="12" fill="#3b0764" stroke="#c084fc" stroke-width="2"/>
+  <text x="460" y="460" fill="#e9d5ff" font-size="18" font-family="sans-serif" font-weight="700">技术可撤销层</text>
+  <text x="460" y="500" fill="#e2e8f0" font-size="15" font-family="sans-serif">权重难精确遗忘</text>
+  <text x="460" y="530" fill="#e2e8f0" font-size="15" font-family="sans-serif">记忆提取风险</text>
+  <text x="460" y="560" fill="#e2e8f0" font-size="15" font-family="sans-serif">共享权重污染</text>
+
+  <rect x="800" y="420" width="320" height="200" rx="12" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+  <text x="820" y="460" fill="#fde68a" font-size="18" font-family="sans-serif" font-weight="700">产品与系统层</text>
+  <text x="820" y="500" fill="#e2e8f0" font-size="15" font-family="sans-serif">RAG / 记忆外置</text>
+  <text x="820" y="530" fill="#e2e8f0" font-size="15" font-family="sans-serif">PEFT / 本地适配</text>
+  <text x="820" y="560" fill="#e2e8f0" font-size="15" font-family="sans-serif">租户隔离与审计</text>
+</svg>
