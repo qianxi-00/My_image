@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="960" height="560" fill="url(#bg)"/>
+  <text x="48" y="48" fill="#e2e8f0" font-size="24" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif" font-weight="700">开源混合注意力：三种主流组件拼装路线</text>
+  <text x="48" y="78" fill="#94a3b8" font-size="14" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif">全注意力 · 线性/递推 · 低秩/稀疏压缩 如何在同一骨架中分层部署</text>
+  <!-- boxes -->
+  <rect x="60" y="120" width="240" height="120" rx="12" fill="#1d4ed8" opacity="0.9"/>
+  <text x="80" y="160" fill="#fff" font-size="18" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif" font-weight="700">全注意力层</text>
+  <text x="80" y="188" fill="#dbeafe" font-size="13" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif">GQA / Sliding / Softmax</text>
+  <text x="80" y="210" fill="#bfdbfe" font-size="12" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif">强召回 · 高 KV 成本</text>
+
+  <rect x="360" y="120" width="240" height="120" rx="12" fill="#0f766e" opacity="0.95"/>
+  <text x="380" y="160" fill="#fff" font-size="18" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif" font-weight="700">线性 / 递推层</text>
+  <text x="380" y="188" fill="#ccfbf1" font-size="13" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif">Gated DeltaNet / Mamba</text>
+  <text x="380" y="210" fill="#99f6e4" font-size="12" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif">长程吞吐 · 局部细节弱</text>
+
+  <rect x="660" y="120" width="240" height="120" rx="12" fill="#7c3aed" opacity="0.95"/>
+  <text x="680" y="160" fill="#fff" font-size="18" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif" font-weight="700">低秩 / 稀疏层</text>
+  <text x="680" y="188" fill="#ede9fe" font-size="13" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif">MLA / DSA / Sparse</text>
+  <text x="680" y="210" fill="#ddd6fe" font-size="12" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif">省 KV · 需系统适配</text>
+
+  <rect x="180" y="300" width="600" height="160" rx="14" fill="#334155"/>
+  <text x="210" y="345" fill="#f8fafc" font-size="18" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif" font-weight="700">混合骨架 = 层间交错 + 缓存语义统一 + 服务端路径特化</text>
+  <text x="210" y="380" fill="#cbd5e1" font-size="14" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif">关键不是“换掉 Attention”，而是把不同组件变成可配置层级预算：</text>
+  <text x="210" y="408" fill="#cbd5e1" font-size="14" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif">召回层负责难检索，吞吐层负责长序列，压缩层负责部署经济学。</text>
+  <text x="210" y="436" fill="#94a3b8" font-size="13" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif">0900 架构观察：组件接口比“谁更强”更决定开源可复用性</text>
+</svg>
