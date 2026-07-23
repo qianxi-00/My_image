@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <text x="600" y="52" text-anchor="middle" fill="#e2e8f0" font-size="28" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-weight="700">低比特 MoE：量化如何切入路由—专家链路</text>
+  <text x="600" y="88" text-anchor="middle" fill="#94a3b8" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">Token → Router → Top-k 选择 → 专家权重（可能已量化）→ 聚合输出</text>
+  <!-- Token -->
+  <rect x="60" y="180" width="160" height="90" rx="14" fill="#1e3a5f" stroke="#38bdf8" stroke-width="2"/>
+  <text x="140" y="220" text-anchor="middle" fill="#e0f2fe" font-size="20" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-weight="600">Token 表示</text>
+  <text x="140" y="248" text-anchor="middle" fill="#7dd3fc" font-size="14" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">h ∈ R^d</text>
+  <!-- Arrow -->
+  <path d="M230 225 H300" stroke="#64748b" stroke-width="3" marker-end="url(#m)"/>
+  <polygon points="300,225 285,218 285,232" fill="#64748b"/>
+  <!-- Router -->
+  <rect x="310" y="160" width="200" height="130" rx="14" fill="#312e81" stroke="#a5b4fc" stroke-width="2"/>
+  <text x="410" y="205" text-anchor="middle" fill="#e0e7ff" font-size="20" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-weight="600">Router / 门控</text>
+  <text x="410" y="235" text-anchor="middle" fill="#c7d2fe" font-size="14" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">得分 g(h) / Top-k</text>
+  <text x="410" y="260" text-anchor="middle" fill="#fcd34d" font-size="13" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">常保持高精度</text>
+  <path d="M520 225 H590" stroke="#64748b" stroke-width="3"/>
+  <polygon points="590,225 575,218 575,232" fill="#64748b"/>
+  <!-- Experts -->
+  <rect x="600" y="120" width="280" height="230" rx="16" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+  <text x="740" y="150" text-anchor="middle" fill="#e2e8f0" font-size="18" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-weight="600">专家层 Expert Parallel</text>
+  <rect x="630" y="170" width="100" height="60" rx="8" fill="#164e63" stroke="#22d3ee"/>
+  <text x="680" y="195" text-anchor="middle" fill="#cffafe" font-size="13" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">专家 A</text>
+  <text x="680" y="215" text-anchor="middle" fill="#fde68a" font-size="12" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">INT4/FP8</text>
+  <rect x="750" y="170" width="100" height="60" rx="8" fill="#164e63" stroke="#22d3ee"/>
+  <text x="800" y="195" text-anchor="middle" fill="#cffafe" font-size="13" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">专家 B</text>
+  <text x="800" y="215" text-anchor="middle" fill="#fde68a" font-size="12" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">INT4/FP8</text>
+  <rect x="630" y="250" width="100" height="60" rx="8" fill="#334155" stroke="#94a3b8"/>
+  <text x="680" y="275" text-anchor="middle" fill="#e2e8f0" font-size="13" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">专家 C</text>
+  <text x="680" y="295" text-anchor="middle" fill="#cbd5e1" font-size="12" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">未激活</text>
+  <rect x="750" y="250" width="100" height="60" rx="8" fill="#334155" stroke="#94a3b8"/>
+  <text x="800" y="275" text-anchor="middle" fill="#e2e8f0" font-size="13" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">专家 D</text>
+  <text x="800" y="295" text-anchor="middle" fill="#cbd5e1" font-size="12" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">未激活</text>
+  <path d="M890 235 H960" stroke="#64748b" stroke-width="3"/>
+  <polygon points="960,235 945,228 945,242" fill="#64748b"/>
+  <!-- Output -->
+  <rect x="970" y="190" width="170" height="90" rx="14" fill="#14532d" stroke="#4ade80" stroke-width="2"/>
+  <text x="1055" y="230" text-anchor="middle" fill="#dcfce7" font-size="18" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-weight="600">加权聚合</text>
+  <text x="1055" y="258" text-anchor="middle" fill="#86efac" font-size="14" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">Σ p_i · F_i^q(h)</text>
+  <!-- Bottom notes -->
+  <rect x="80" y="400" width="1040" height="260" rx="16" fill="#111827" stroke="#334155"/>
+  <text x="110" y="445" fill="#f8fafc" font-size="20" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-weight="700">三处关键误差源</text>
+  <text x="110" y="490" fill="#38bdf8" font-size="17" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">1. 路由精度：若门控被量化，Top-k 边界决策可能翻转</text>
+  <text x="110" y="535" fill="#a5b4fc" font-size="17" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">2. 专家权重误差：被选中专家的 F_i 变成近似算子 F_i^q</text>
+  <text x="110" y="580" fill="#fbbf24" font-size="17" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">3. 能力结构：专业化分工是否被“统一噪声”抹平</text>
+  <text x="110" y="625" fill="#94a3b8" font-size="15" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">核心问题：低比特压缩节省的是存储与带宽，但可能悄悄改写“谁处理什么”的分工契约</text>
+</svg>
