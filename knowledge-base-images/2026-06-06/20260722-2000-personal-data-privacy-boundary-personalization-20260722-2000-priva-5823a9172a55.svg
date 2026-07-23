@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#0b1220"/>
+  <text x="50" y="55" fill="#e2e8f0" font-size="28" font-family="sans-serif" font-weight="700">隐私友好的个性化分层架构（推荐工程栈）</text>
+  <text x="50" y="95" fill="#94a3b8" font-size="16" font-family="sans-serif">从“权重内记忆”转向“系统外可控状态”</text>
+
+  <!-- layers top to bottom -->
+  <rect x="80" y="130" width="1040" height="90" rx="12" fill="#1e3a8a" stroke="#60a5fa" stroke-width="2"/>
+  <text x="110" y="175" fill="#dbeafe" font-size="22" font-family="sans-serif" font-weight="700">应用层：同意管理 / 偏好设置 / 删除与导出入口</text>
+  <text x="110" y="200" fill="#93c5fd" font-size="14" font-family="sans-serif">用户可见控制面：开/关个性化、查看记忆、一键清除</text>
+
+  <rect x="80" y="240" width="1040" height="90" rx="12" fill="#312e81" stroke="#a78bfa" stroke-width="2"/>
+  <text x="110" y="285" fill="#e9d5ff" font-size="22" font-family="sans-serif" font-weight="700">记忆与检索层：向量库 / 文档库 / 事件日志（可删可审）</text>
+  <text x="110" y="310" fill="#c4b5fd" font-size="14" font-family="sans-serif">RAG、个人知识库、工作区记忆；密钥隔离；TTL；租户边界</text>
+
+  <rect x="80" y="350" width="1040" height="90" rx="12" fill="#134e4a" stroke="#2dd4bf" stroke-width="2"/>
+  <text x="110" y="395" fill="#ccfbf1" font-size="22" font-family="sans-serif" font-weight="700">适配层：用户/组织级 PEFT 适配器（可选、可卸载）</text>
+  <text x="110" y="420" fill="#99f6e4" font-size="14" font-family="sans-serif">LoRA/Adapter 与基础权重解耦；删除适配器≈删除个性化</text>
+
+  <rect x="80" y="460" width="1040" height="90" rx="12" fill="#422006" stroke="#fbbf24" stroke-width="2"/>
+  <text x="110" y="505" fill="#fef3c7" font-size="22" font-family="sans-serif" font-weight="700">训练治理层：DP-SGD / 联邦 / 合成数据 / 机器遗忘评估</text>
+  <text x="110" y="530" fill="#fde68a" font-size="14" font-family="sans-serif">仅在有强合规与评估时进入；记录数据版本与影响范围</text>
+
+  <rect x="80" y="570" width="1040" height="100" rx="12" fill="#111827" stroke="#64748b" stroke-width="2"/>
+  <text x="110" y="620" fill="#e2e8f0" font-size="22" font-family="sans-serif" font-weight="700">基础模型层：通用预训练权重（默认不写个人原始数据）</text>
+  <text x="110" y="650" fill="#94a3b8" font-size="14" font-family="sans-serif">保持共享、可审计、可复用；个人数据不进入主权重是默认策略</text>
+</svg>
