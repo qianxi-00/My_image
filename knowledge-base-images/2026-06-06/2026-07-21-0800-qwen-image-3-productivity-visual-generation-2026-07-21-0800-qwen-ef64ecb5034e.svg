@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <rect width="1200" height="700" fill="#0f172a"/>
+  <text x="600" y="46" text-anchor="middle" fill="#f8fafc" font-size="26" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif" font-weight="700">长指令信息图生成流水线（生产力视角）</text>
+  <text x="600" y="78" text-anchor="middle" fill="#94a3b8" font-size="15" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">Brief → 结构规划 → 版式约束 → 渲染 → 验收 → 发布</text>
+
+  <rect x="40" y="130" width="160" height="110" rx="14" fill="#1e3a5f" stroke="#38bdf8"/>
+  <text x="120" y="175" text-anchor="middle" fill="#e0f2fe" font-size="18" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif" font-weight="700">业务 Brief</text>
+  <text x="120" y="205" text-anchor="middle" fill="#bae6fd" font-size="13" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">目标/受众/事实</text>
+
+  <path d="M210 185 H250" stroke="#64748b" stroke-width="3" marker-end="url(#a)"/>
+  <rect x="260" y="130" width="160" height="110" rx="14" fill="#1e3a5f" stroke="#38bdf8"/>
+  <text x="340" y="175" text-anchor="middle" fill="#e0f2fe" font-size="18" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif" font-weight="700">结构规划</text>
+  <text x="340" y="205" text-anchor="middle" fill="#bae6fd" font-size="13" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">分栏/网格/层级</text>
+
+  <path d="M430 185 H470" stroke="#64748b" stroke-width="3"/>
+  <rect x="480" y="130" width="160" height="110" rx="14" fill="#1e3a5f" stroke="#38bdf8"/>
+  <text x="560" y="175" text-anchor="middle" fill="#e0f2fe" font-size="18" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif" font-weight="700">版式约束</text>
+  <text x="560" y="205" text-anchor="middle" fill="#bae6fd" font-size="13" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">字号/对齐/色板</text>
+
+  <path d="M650 185 H690" stroke="#64748b" stroke-width="3"/>
+  <rect x="700" y="130" width="160" height="110" rx="14" fill="#14532d" stroke="#34d399"/>
+  <text x="780" y="175" text-anchor="middle" fill="#d1fae5" font-size="18" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif" font-weight="700">图像渲染</text>
+  <text x="780" y="205" text-anchor="middle" fill="#a7f3d0" font-size="13" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">3.0 长指令出图</text>
+
+  <path d="M870 185 H910" stroke="#64748b" stroke-width="3"/>
+  <rect x="920" y="130" width="160" height="110" rx="14" fill="#422006" stroke="#fbbf24"/>
+  <text x="1000" y="175" text-anchor="middle" fill="#fef3c7" font-size="18" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif" font-weight="700">验收</text>
+  <text x="1000" y="205" text-anchor="middle" fill="#fde68a" font-size="13" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">OCR/事实/风格</text>
+
+  <rect x="80" y="310" width="1040" height="300" rx="18" fill="#111827" stroke="#334155"/>
+  <text x="120" y="360" fill="#f1f5f9" font-size="20" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif" font-weight="700">长指令为何是分水岭</text>
+  <text x="120" y="410" fill="#cbd5e1" font-size="16" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">短提示词时代：模型猜风格，用户靠重抽；长指令时代：用户写规格，模型执行约束。</text>
+  <text x="120" y="450" fill="#cbd5e1" font-size="16" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">4.5k token 量级允许放入：角色设定、信息层级、九宫格面板文案、字体与禁止项。</text>
+  <text x="120" y="490" fill="#cbd5e1" font-size="16" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">3×3 网格把「多页 PPT 信息密度」压进单图，适配社媒、报告封面、知识卡片与看板。</text>
+  <text x="120" y="530" fill="#cbd5e1" font-size="16" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">10px 级文本渲染与多语种，使图从装饰层进入说明层：图内文字可被阅读与核对。</text>
+  <text x="120" y="570" fill="#94a3b8" font-size="14" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">提示：生产系统仍需把验收做成门禁，而不是完全信任一次生成。</text>
+</svg>
