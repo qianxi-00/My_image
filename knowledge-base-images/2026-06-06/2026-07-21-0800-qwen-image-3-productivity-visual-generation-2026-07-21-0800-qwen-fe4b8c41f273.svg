@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bg)"/>
+  <text x="600" y="48" text-anchor="middle" fill="#e2e8f0" font-size="28" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif" font-weight="700">图像生成能力重心迁移：从好看图到可部署生产力资产</text>
+  <text x="600" y="82" text-anchor="middle" fill="#94a3b8" font-size="16" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">Qwen-Image-3.0 关键词「实」：真实细节 · 丰富内容 · 可交付结构</text>
+
+  <rect x="60" y="130" width="320" height="420" rx="18" fill="#111827" stroke="#64748b" stroke-width="2"/>
+  <text x="220" y="170" text-anchor="middle" fill="#94a3b8" font-size="20" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif" font-weight="700">1.0 时代 · 审美优先</text>
+  <text x="90" y="220" fill="#cbd5e1" font-size="16" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">• 风格迁移与氛围感</text>
+  <text x="90" y="255" fill="#cbd5e1" font-size="16" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">• 短提示词出图</text>
+  <text x="90" y="290" fill="#cbd5e1" font-size="16" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">• 文字易糊、易错</text>
+  <text x="90" y="325" fill="#cbd5e1" font-size="16" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">• 单图叙事为主</text>
+  <text x="90" y="360" fill="#cbd5e1" font-size="16" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">• 难进正式交付</text>
+  <rect x="90" y="420" width="260" height="80" rx="12" fill="#1f2937"/>
+  <text x="220" y="465" text-anchor="middle" fill="#f87171" font-size="18" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">演示资产</text>
+
+  <rect x="440" y="130" width="320" height="420" rx="18" fill="#111827" stroke="#38bdf8" stroke-width="2"/>
+  <text x="600" y="170" text-anchor="middle" fill="#7dd3fc" font-size="20" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif" font-weight="700">2.x 时代 · 可控增强</text>
+  <text x="470" y="220" fill="#cbd5e1" font-size="16" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">• 构图与主体可控</text>
+  <text x="470" y="255" fill="#cbd5e1" font-size="16" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">• 局部编辑增强</text>
+  <text x="470" y="290" fill="#cbd5e1" font-size="16" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">• 中文渲染改善</text>
+  <text x="470" y="325" fill="#cbd5e1" font-size="16" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">• 仍缺长指令结构</text>
+  <text x="470" y="360" fill="#cbd5e1" font-size="16" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">• 多图一致性弱</text>
+  <rect x="470" y="420" width="260" height="80" rx="12" fill="#0c4a6e"/>
+  <text x="600" y="465" text-anchor="middle" fill="#7dd3fc" font-size="18" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">半成品资产</text>
+
+  <rect x="820" y="130" width="320" height="420" rx="18" fill="#0f172a" stroke="#34d399" stroke-width="3"/>
+  <text x="980" y="170" text-anchor="middle" fill="#6ee7b7" font-size="20" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif" font-weight="700">3.0 · 生产力优先</text>
+  <text x="850" y="220" fill="#e2e8f0" font-size="16" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">• 最长约 4.5k 指令</text>
+  <text x="850" y="255" fill="#e2e8f0" font-size="16" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">• 3×3 信息图网格</text>
+  <text x="850" y="290" fill="#e2e8f0" font-size="16" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">• 文本约 10px 精度</text>
+  <text x="850" y="325" fill="#e2e8f0" font-size="16" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">• 12 语种原生渲染</text>
+  <text x="850" y="360" fill="#e2e8f0" font-size="16" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">• 可部署交付物</text>
+  <rect x="850" y="420" width="260" height="80" rx="12" fill="#064e3b"/>
+  <text x="980" y="465" text-anchor="middle" fill="#6ee7b7" font-size="18" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">可交付资产</text>
+
+  <text x="600" y="620" text-anchor="middle" fill="#64748b" font-size="14" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">示意图：概括能力迁移，非官方架构原图</text>
+</svg>
