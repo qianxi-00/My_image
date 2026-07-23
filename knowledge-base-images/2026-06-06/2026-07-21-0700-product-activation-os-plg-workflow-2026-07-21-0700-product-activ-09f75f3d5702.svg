@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560">
+  <rect width="960" height="560" rx="24" fill="#0f172a"/>
+  <text x="48" y="52" fill="#f8fafc" font-size="26" font-family="system-ui,sans-serif" font-weight="700">Activation OS · 四条产品化路线</text>
+  <text x="48" y="82" fill="#94a3b8" font-size="14" font-family="system-ui,sans-serif">按切入点与边界能力选择，而不是一上来做“全能增长 Agent”</text>
+
+  <g font-family="system-ui,sans-serif">
+    <rect x="40" y="120" width="210" height="360" rx="16" fill="#111827" stroke="#38bdf8" stroke-width="2"/>
+    <text x="145" y="160" text-anchor="middle" fill="#7dd3fc" font-size="18" font-weight="700">A. 信号中枢</text>
+    <text x="55" y="200" fill="#cbd5e1" font-size="13">统一事件与身份</text>
+    <text x="55" y="228" fill="#cbd5e1" font-size="13">健康分可解释</text>
+    <text x="55" y="256" fill="#cbd5e1" font-size="13">重复账号消解</text>
+    <text x="55" y="300" fill="#64748b" font-size="12">适合：数据散乱</text>
+    <text x="55" y="324" fill="#64748b" font-size="12">先把“看见”做对</text>
+    <text x="55" y="380" fill="#94a3b8" font-size="12">风险：只看板</text>
+    <text x="55" y="404" fill="#94a3b8" font-size="12">不改变动作</text>
+
+    <rect x="270" y="120" width="210" height="360" rx="16" fill="#111827" stroke="#34d399" stroke-width="2"/>
+    <text x="375" y="160" text-anchor="middle" fill="#6ee7b7" font-size="18" font-weight="700">B. 旅程编排</text>
+    <text x="285" y="200" fill="#cbd5e1" font-size="13">里程碑状态机</text>
+    <text x="285" y="228" fill="#cbd5e1" font-size="13">策略路由/升级</text>
+    <text x="285" y="256" fill="#cbd5e1" font-size="13">多通道动作计划</text>
+    <text x="285" y="300" fill="#64748b" font-size="12">适合：流程已有</text>
+    <text x="285" y="324" fill="#64748b" font-size="12">缺自动决策</text>
+    <text x="285" y="380" fill="#94a3b8" font-size="12">风险：编排过度</text>
+    <text x="285" y="404" fill="#94a3b8" font-size="12">缺少验证闭环</text>
+
+    <rect x="500" y="120" width="210" height="360" rx="16" fill="#111827" stroke="#fbbf24" stroke-width="2"/>
+    <text x="605" y="160" text-anchor="middle" fill="#fcd34d" font-size="18" font-weight="700">C. 共岗执行</text>
+    <text x="515" y="200" fill="#cbd5e1" font-size="13">销售/CS 任务包</text>
+    <text x="515" y="228" fill="#cbd5e1" font-size="13">话术+证据+CTA</text>
+    <text x="515" y="256" fill="#cbd5e1" font-size="13">人工确认边界</text>
+    <text x="515" y="300" fill="#64748b" font-size="12">适合：高客单</text>
+    <text x="515" y="324" fill="#64748b" font-size="12">B2B 人机协作</text>
+    <text x="515" y="380" fill="#94a3b8" font-size="12">风险：人成瓶颈</text>
+    <text x="515" y="404" fill="#94a3b8" font-size="12">自动化率上不去</text>
+
+    <rect x="730" y="120" width="190" height="360" rx="16" fill="#111827" stroke="#f472b6" stroke-width="2"/>
+    <text x="825" y="160" text-anchor="middle" fill="#f9a8d4" font-size="18" font-weight="700">D. 结果 OS</text>
+    <text x="745" y="200" fill="#cbd5e1" font-size="13">目标态验收</text>
+    <text x="745" y="228" fill="#cbd5e1" font-size="13">证据账本</text>
+    <text x="745" y="256" fill="#cbd5e1" font-size="13">策略自动回灌</text>
+    <text x="745" y="300" fill="#64748b" font-size="12">适合：规模化</text>
+    <text x="745" y="324" fill="#64748b" font-size="12">PLG 自助路径</text>
+    <text x="745" y="380" fill="#94a3b8" font-size="12">风险：治理不足</text>
+    <text x="745" y="404" fill="#94a3b8" font-size="12">误动作事故</text>
+  </g>
+  <text x="48" y="530" fill="#64748b" font-size="12" font-family="system-ui,sans-serif">本地示意图 · 四条路线可组合，但 KPI 与权限边界必须先写清</text>
+</svg>
