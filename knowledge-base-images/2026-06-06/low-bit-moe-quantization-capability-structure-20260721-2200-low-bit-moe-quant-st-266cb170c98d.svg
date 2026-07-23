@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#0b1220"/>
+  <text x="600" y="48" text-anchor="middle" fill="#f1f5f9" font-size="26" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-weight="700">量化策略对比：统一压专家 vs 保护路由与关键路径</text>
+  <text x="600" y="82" text-anchor="middle" fill="#94a3b8" font-size="15" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">不同比特与保护策略如何影响路由稳定性与专家专业化</text>
+  <!-- Table-like cards -->
+  <rect x="50" y="120" width="350" height="520" rx="16" fill="#111827" stroke="#ef4444" stroke-width="2"/>
+  <text x="225" y="165" text-anchor="middle" fill="#fecaca" font-size="20" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-weight="700">A. 粗暴统一量化</text>
+  <text x="70" y="210" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">· Router + 全部专家同比特</text>
+  <text x="70" y="245" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">· 无校准 / 无专家敏感度区分</text>
+  <text x="70" y="280" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">· 热点专家与冷门专家一视同仁</text>
+  <text x="70" y="330" fill="#fca5a5" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-weight="600">风险</text>
+  <text x="70" y="365" fill="#fecaca" font-size="14" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">· Top-k 翻转率上升</text>
+  <text x="70" y="395" fill="#fecaca" font-size="14" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">· 长尾专家能力塌缩</text>
+  <text x="70" y="425" fill="#fecaca" font-size="14" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">· 路由熵与专业化指标漂移</text>
+  <text x="70" y="455" fill="#fecaca" font-size="14" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">· 验证集“整体还行、局部崩”</text>
+  <text x="70" y="520" fill="#94a3b8" font-size="14" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">适合：快速压测、粗粒度</text>
+  <text x="70" y="545" fill="#94a3b8" font-size="14" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">显存摸底；不适合生产主路径</text>
+  <rect x="425" y="120" width="350" height="520" rx="16" fill="#111827" stroke="#f59e0b" stroke-width="2"/>
+  <text x="600" y="165" text-anchor="middle" fill="#fde68a" font-size="20" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-weight="700">B. 分层保护量化</text>
+  <text x="445" y="210" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">· Router / Norm 保 FP16/BF16</text>
+  <text x="445" y="245" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">· 专家主体 INT4/FP8</text>
+  <text x="445" y="280" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">· 共享专家或关键层更高精度</text>
+  <text x="445" y="330" fill="#fcd34d" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-weight="600">收益</text>
+  <text x="445" y="365" fill="#fef3c7" font-size="14" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">· 路由决策更稳</text>
+  <text x="445" y="395" fill="#fef3c7" font-size="14" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">· 大部分参数仍可压缩</text>
+  <text x="445" y="425" fill="#fef3c7" font-size="14" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">· 工程实现相对成熟</text>
+  <text x="445" y="455" fill="#fef3c7" font-size="14" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">· 可与校准数据配合</text>
+  <text x="445" y="520" fill="#94a3b8" font-size="14" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">适合：服务期部署的默认</text>
+  <text x="445" y="545" fill="#94a3b8" font-size="14" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">折中方案</text>
+  <rect x="800" y="120" width="350" height="520" rx="16" fill="#111827" stroke="#22c55e" stroke-width="2"/>
+  <text x="975" y="165" text-anchor="middle" fill="#bbf7d0" font-size="20" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-weight="700">C. 感知路由/能力结构</text>
+  <text x="820" y="210" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">· 按专家敏感度分配比特</text>
+  <text x="820" y="245" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">· 量化感知训练 / QAT</text>
+  <text x="820" y="280" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">· 监测路由翻转与专业化</text>
+  <text x="820" y="330" fill="#86efac" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-weight="600">目标</text>
+  <text x="820" y="365" fill="#dcfce7" font-size="14" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">· 保住“谁处理什么”</text>
+  <text x="820" y="395" fill="#dcfce7" font-size="14" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">· 压缩与分工同时优化</text>
+  <text x="820" y="425" fill="#dcfce7" font-size="14" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">· 长尾能力可回归</text>
+  <text x="820" y="455" fill="#dcfce7" font-size="14" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">· 形成可观测闭环</text>
+  <text x="820" y="520" fill="#94a3b8" font-size="14" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">适合：生产级 MoE 压缩</text>
+  <text x="820" y="545" fill="#94a3b8" font-size="14" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">与持续迭代</text>
+</svg>
