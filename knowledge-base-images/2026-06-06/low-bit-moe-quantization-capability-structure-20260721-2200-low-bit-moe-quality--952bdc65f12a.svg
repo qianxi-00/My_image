@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#0f172a"/>
+  <text x="600" y="50" text-anchor="middle" fill="#f8fafc" font-size="26" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-weight="700">低比特 MoE 质量护栏：从部署前到在线闭环</text>
+  <text x="600" y="85" text-anchor="middle" fill="#94a3b8" font-size="15" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">不要只看整体 PPL / 平均准确率，要同时看路由与专家能力结构</text>
+  <!-- Flow boxes -->
+  <rect x="40" y="140" width="220" height="160" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+  <text x="150" y="185" text-anchor="middle" fill="#7dd3fc" font-size="18" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-weight="700">1. 部署前审计</text>
+  <text x="60" y="225" fill="#e2e8f0" font-size="13" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">· 路由翻转率</text>
+  <text x="60" y="250" fill="#e2e8f0" font-size="13" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">· 专家负载分布 KL</text>
+  <text x="60" y="275" fill="#e2e8f0" font-size="13" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">· 分层/域能力回归</text>
+  <path d="M270 220 H320" stroke="#64748b" stroke-width="3"/>
+  <polygon points="320,220 305,213 305,227" fill="#64748b"/>
+  <rect x="330" y="140" width="220" height="160" rx="14" fill="#1e293b" stroke="#a78bfa" stroke-width="2"/>
+  <text x="440" y="185" text-anchor="middle" fill="#c4b5fd" font-size="18" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-weight="700">2. 比特预算分配</text>
+  <text x="350" y="225" fill="#e2e8f0" font-size="13" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">· Router 高保真</text>
+  <text x="350" y="250" fill="#e2e8f0" font-size="13" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">· 敏感专家更高比特</text>
+  <text x="350" y="275" fill="#e2e8f0" font-size="13" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">· 冷门专家单独策略</text>
+  <path d="M560 220 H610" stroke="#64748b" stroke-width="3"/>
+  <polygon points="610,220 595,213 595,227" fill="#64748b"/>
+  <rect x="620" y="140" width="220" height="160" rx="14" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+  <text x="730" y="185" text-anchor="middle" fill="#6ee7b7" font-size="18" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-weight="700">3. 校准 / QAT</text>
+  <text x="640" y="225" fill="#e2e8f0" font-size="13" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">· 覆盖路由分布</text>
+  <text x="640" y="250" fill="#e2e8f0" font-size="13" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">· 长尾任务样本</text>
+  <text x="640" y="275" fill="#e2e8f0" font-size="13" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">· 激活范围统计</text>
+  <path d="M850 220 H900" stroke="#64748b" stroke-width="3"/>
+  <polygon points="900,220 885,213 885,227" fill="#64748b"/>
+  <rect x="910" y="140" width="250" height="160" rx="14" fill="#1e293b" stroke="#fbbf24" stroke-width="2"/>
+  <text x="1035" y="185" text-anchor="middle" fill="#fde68a" font-size="18" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-weight="700">4. 在线观测</text>
+  <text x="930" y="225" fill="#e2e8f0" font-size="13" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">· 专家命中率漂移</text>
+  <text x="930" y="250" fill="#e2e8f0" font-size="13" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">· 域任务质量告警</text>
+  <text x="930" y="275" fill="#e2e8f0" font-size="13" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">· 回滚 / 混合精度</text>
+  <!-- Bottom principle -->
+  <rect x="80" y="360" width="1040" height="300" rx="16" fill="#111827" stroke="#334155"/>
+  <text x="110" y="410" fill="#f8fafc" font-size="20" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-weight="700">判定原则：低比特 MoE 是否“成功”</text>
+  <text x="110" y="460" fill="#cbd5e1" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">不能只问：平均分数掉了多少？</text>
+  <text x="110" y="500" fill="#93c5fd" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">还要问：路由是否仍把同类 token 送到同类专家？</text>
+  <text x="110" y="540" fill="#c4b5fd" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">还要问：长尾专家是否仍能被激活并贡献可测量增益？</text>
+  <text x="110" y="580" fill="#86efac" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">还要问：容量溢出、通信热点与延迟是否可接受？</text>
+  <text x="110" y="625" fill="#fbbf24" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">结论：低比特是在压缩“参数表示”，但真正要保护的是“条件计算契约”。</text>
+</svg>
