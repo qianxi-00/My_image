@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#052e16"/><stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <text x="60" y="58" fill="#e2e8f0" font-size="28" font-family="Noto Sans CJK SC, sans-serif" font-weight="700">三类错误的后训练处方对照</text>
+  <text x="60" y="95" fill="#94a3b8" font-size="16" font-family="Noto Sans CJK SC, sans-serif">从数据形态、损失目标到评测指标：把“失败”拆成可优化对象</text>
+  <rect x="50" y="130" width="1100" height="50" rx="8" fill="#14532d"/>
+  <text x="90" y="162" fill="#bbf7d0" font-size="16" font-family="Noto Sans CJK SC, sans-serif" font-weight="700">维度</text>
+  <text x="280" y="162" fill="#bbf7d0" font-size="16" font-family="Noto Sans CJK SC, sans-serif" font-weight="700">计划错</text>
+  <text x="560" y="162" fill="#bbf7d0" font-size="16" font-family="Noto Sans CJK SC, sans-serif" font-weight="700">工具错</text>
+  <text x="860" y="162" fill="#bbf7d0" font-size="16" font-family="Noto Sans CJK SC, sans-serif" font-weight="700">观察错</text>
+
+  <rect x="50" y="190" width="1100" height="65" fill="#052e16"/>
+  <text x="90" y="228" fill="#86efac" font-size="15" font-family="Noto Sans CJK SC, sans-serif" font-weight="700">核心坏信号</text>
+  <text x="280" y="228" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, sans-serif">错误分解/顺序/目标</text>
+  <text x="560" y="228" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, sans-serif">错误 API/参数/权限</text>
+  <text x="860" y="228" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, sans-serif">误读结果/假成功</text>
+  <rect x="50" y="260" width="1100" height="65" fill="#0b1f14"/>
+  <text x="90" y="298" fill="#86efac" font-size="15" font-family="Noto Sans CJK SC, sans-serif" font-weight="700">首选数据</text>
+  <text x="280" y="298" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, sans-serif">好计划 vs 坏计划轨迹</text>
+  <text x="560" y="298" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, sans-serif">工具调用正负例</text>
+  <text x="860" y="298" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, sans-serif">观察解读+纠正对</text>
+  <rect x="50" y="330" width="1100" height="65" fill="#052e16"/>
+  <text x="90" y="368" fill="#86efac" font-size="15" font-family="Noto Sans CJK SC, sans-serif" font-weight="700">首选方法</text>
+  <text x="280" y="368" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, sans-serif">轨迹偏好 / PRM</text>
+  <text x="560" y="368" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, sans-serif">Tool SFT + RLVR</text>
+  <text x="860" y="368" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, sans-serif">过程批评 / 恢复 RL</text>
+  <rect x="50" y="400" width="1100" height="65" fill="#0b1f14"/>
+  <text x="90" y="438" fill="#86efac" font-size="15" font-family="Noto Sans CJK SC, sans-serif" font-weight="700">信用分配</text>
+  <text x="280" y="438" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, sans-serif">多步 plan token</text>
+  <text x="560" y="438" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, sans-serif">调用步与参数 token</text>
+  <text x="860" y="438" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, sans-serif">观察后决策 token</text>
+  <rect x="50" y="470" width="1100" height="65" fill="#052e16"/>
+  <text x="90" y="508" fill="#86efac" font-size="15" font-family="Noto Sans CJK SC, sans-serif" font-weight="700">运行时护栏</text>
+  <text x="280" y="508" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, sans-serif">计划审查/预算</text>
+  <text x="560" y="508" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, sans-serif">schema/权限网关</text>
+  <text x="860" y="508" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, sans-serif">结果校验器</text>
+  <rect x="50" y="540" width="1100" height="65" fill="#0b1f14"/>
+  <text x="90" y="578" fill="#86efac" font-size="15" font-family="Noto Sans CJK SC, sans-serif" font-weight="700">评测重点</text>
+  <text x="280" y="578" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, sans-serif">步骤必要与顺序</text>
+  <text x="560" y="578" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, sans-serif">调用正确率/重试</text>
+  <text x="860" y="578" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, sans-serif">读数正确/可恢复</text>
+  <text x="60" y="680" fill="#64748b" font-size="14" font-family="Noto Sans CJK SC, sans-serif">下一讲：Long-Horizon RL —— 当任务更长、奖励更稀疏，归因与信用分配会更难</text>
+</svg>
