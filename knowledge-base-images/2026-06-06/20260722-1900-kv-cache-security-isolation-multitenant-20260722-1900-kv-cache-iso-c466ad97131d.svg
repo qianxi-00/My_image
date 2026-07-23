@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="640" viewBox="0 0 960 640">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#172554"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="640" fill="url(#bg2)" rx="12"/>
+  <text x="48" y="48" fill="#f8fafc" font-size="22" font-family="Noto Sans SC, PingFang SC, sans-serif" font-weight="700">KV Cache 隔离分层策略</text>
+  <text x="48" y="76" fill="#93c5fd" font-size="14" font-family="Noto Sans SC, PingFang SC, sans-serif">从“完全不共享”到“受控共享”，隔离强度与复用收益此消彼长</text>
+
+  <!-- Layers -->
+  <rect x="60" y="110" width="840" height="70" rx="10" fill="#1e3a8a"/>
+  <text x="90" y="140" fill="#dbeafe" font-size="15" font-family="Noto Sans SC, PingFang SC, sans-serif" font-weight="700">L0 物理/池级隔离</text>
+  <text x="90" y="162" fill="#bfdbfe" font-size="12" font-family="Noto Sans SC, PingFang SC, sans-serif">独立引擎实例 · 独立 GPU 池 · 专有硬件分区 · 最高安全 / 最低复用</text>
+
+  <rect x="60" y="195" width="840" height="70" rx="10" fill="#1d4ed8"/>
+  <text x="90" y="225" fill="#dbeafe" font-size="15" font-family="Noto Sans SC, PingFang SC, sans-serif" font-weight="700">L1 租户命名空间隔离</text>
+  <text x="90" y="247" fill="#bfdbfe" font-size="12" font-family="Noto Sans SC, PingFang SC, sans-serif">tenant_id 进入 cache key · 禁止跨租户前缀命中 · 共享硬件但逻辑分区</text>
+
+  <rect x="60" y="280" width="840" height="70" rx="10" fill="#2563eb"/>
+  <text x="90" y="310" fill="#dbeafe" font-size="15" font-family="Noto Sans SC, PingFang SC, sans-serif" font-weight="700">L2 会话/用户作用域隔离</text>
+  <text x="90" y="332" fill="#bfdbfe" font-size="12" font-family="Noto Sans SC, PingFang SC, sans-serif">user/session scope · 仅本会话复用 · 适合含私有文档与敏感系统提示的服务</text>
+
+  <rect x="60" y="365" width="840" height="70" rx="10" fill="#3b82f6"/>
+  <text x="90" y="395" fill="#eff6ff" font-size="15" font-family="Noto Sans SC, PingFang SC, sans-serif" font-weight="700">L3 内容哈希 + 策略标签共享</text>
+  <text x="90" y="417" fill="#dbeafe" font-size="12" font-family="Noto Sans SC, PingFang SC, sans-serif">公开模板/公共文档可共享 · 私有段禁止 · 需 ACL 与内容分级标签</text>
+
+  <rect x="60" y="450" width="840" height="70" rx="10" fill="#60a5fa"/>
+  <text x="90" y="480" fill="#0f172a" font-size="15" font-family="Noto Sans SC, PingFang SC, sans-serif" font-weight="700">L4 激进全局前缀共享</text>
+  <text x="90" y="502" fill="#1e3a8a" font-size="12" font-family="Noto Sans SC, PingFang SC, sans-serif">最大化命中率 · 风险最高 · 仅适合公开、无敏感、同信任域场景</text>
+
+  <!-- Side note -->
+  <rect x="60" y="545" width="840" height="60" rx="10" fill="#0f172a" stroke="#64748b"/>
+  <text x="90" y="575" fill="#e2e8f0" font-size="13" font-family="Noto Sans SC, PingFang SC, sans-serif">工程原则：默认 L1；高合规租户升到 L0/L2；仅对“已分类为可公开复用”的内容启用 L3；禁止把 L4 当默认生产策略。</text>
+
+  <text x="48" y="625" fill="#64748b" font-size="12" font-family="Noto Sans SC, PingFang SC, sans-serif">图2：隔离不是开关，而是按数据敏感度选择的分层控制面</text>
+</svg>
