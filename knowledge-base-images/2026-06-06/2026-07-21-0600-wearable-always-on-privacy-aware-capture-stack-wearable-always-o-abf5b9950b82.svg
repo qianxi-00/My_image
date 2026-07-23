@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="a" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <text x="600" y="58" text-anchor="middle" fill="#f8fafc" font-size="32" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-weight="700">可穿戴常开上下文采集：三层交互栈</text>
+  <text x="600" y="96" text-anchor="middle" fill="#94a3b8" font-size="18" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">感知入口 → 本地策略 → 云端任务闭环</text>
+  <!-- layer boxes -->
+  <rect x="80" y="150" width="1040" height="140" rx="16" fill="#0ea5e9" fill-opacity="0.15" stroke="#38bdf8" stroke-width="2"/>
+  <text x="110" y="195" fill="#7dd3fc" font-size="22" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-weight="700">L1 物理入口层</text>
+  <text x="110" y="235" fill="#e2e8f0" font-size="18" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">眼镜摄像头 · 麦克风阵列 · IMU/定位 · 按键/手势 · 指示灯与录音提示</text>
+  <text x="110" y="265" fill="#94a3b8" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">职责：持续感知“世界状态”，而不是被动等待用户提问</text>
+
+  <rect x="80" y="320" width="1040" height="140" rx="16" fill="#8b5cf6" fill-opacity="0.15" stroke="#a78bfa" stroke-width="2"/>
+  <text x="110" y="365" fill="#c4b5fd" font-size="22" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-weight="700">L2 设备策略层（端侧）</text>
+  <text x="110" y="405" fill="#e2e8f0" font-size="18" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">唤醒门控 · 场景分类 · 隐私掩码 · 事件摘要 · 本地缓存 · 权限状态机</text>
+  <text x="110" y="435" fill="#94a3b8" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">职责：决定“采什么、何时上传、保留多久、何时主动开口”</text>
+
+  <rect x="80" y="490" width="1040" height="140" rx="16" fill="#10b981" fill-opacity="0.15" stroke="#34d399" stroke-width="2"/>
+  <text x="110" y="535" fill="#6ee7b7" font-size="22" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-weight="700">L3 云端任务层</text>
+  <text x="110" y="575" fill="#e2e8f0" font-size="18" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">长上下文融合 · 工具调用 · 多用户协作 · 审计日志 · 记忆写入与召回</text>
+  <text x="110" y="605" fill="#94a3b8" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">职责：把“连续片段”变成可交付动作，而不是无限录像</text>
+</svg>
