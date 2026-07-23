@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560">
+  <rect width="960" height="560" fill="#111827"/>
+  <text x="40" y="46" fill="#f9fafb" font-size="22" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif" font-weight="700">服务侧映射：架构组件如何变成吞吐与成本</text>
+  <text x="40" y="74" fill="#9ca3af" font-size="13" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif">同一套混合注意力，若 serving 不识别缓存语义，架构红利会被吞掉</text>
+  <!-- three columns -->
+  <rect x="50" y="110" width="270" height="380" rx="14" fill="#1f2937" stroke="#374151"/>
+  <text x="70" y="150" fill="#60a5fa" font-size="18" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif" font-weight="700">1. 模型组件</text>
+  <text x="70" y="190" fill="#e5e7eb" font-size="14" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif">• 全注意力层 KV 形态</text>
+  <text x="70" y="220" fill="#e5e7eb" font-size="14" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif">• 线性层递推状态</text>
+  <text x="70" y="250" fill="#e5e7eb" font-size="14" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif">• MLA latent / DSA 索引</text>
+  <text x="70" y="280" fill="#e5e7eb" font-size="14" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif">• 层交错拓扑</text>
+  <text x="70" y="330" fill="#9ca3af" font-size="13" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif">决定：表达能力与理论</text>
+  <text x="70" y="352" fill="#9ca3af" font-size="13" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif">KV 上界</text>
+
+  <rect x="345" y="110" width="270" height="380" rx="14" fill="#1f2937" stroke="#374151"/>
+  <text x="365" y="150" fill="#34d399" font-size="18" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif" font-weight="700">2. 运行时适配</text>
+  <text x="365" y="190" fill="#e5e7eb" font-size="14" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif">• 混合 KV 布局</text>
+  <text x="365" y="220" fill="#e5e7eb" font-size="14" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif">• 状态页/缓存池</text>
+  <text x="365" y="250" fill="#e5e7eb" font-size="14" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif">• 前缀复用兼容</text>
+  <text x="365" y="280" fill="#e5e7eb" font-size="14" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif">• kernel 分流路径</text>
+  <text x="365" y="330" fill="#9ca3af" font-size="13" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif">决定：真实吞吐与</text>
+  <text x="365" y="352" fill="#9ca3af" font-size="13" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif">显存占用曲线</text>
+
+  <rect x="640" y="110" width="270" height="380" rx="14" fill="#1f2937" stroke="#374151"/>
+  <text x="660" y="150" fill="#fbbf24" font-size="18" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif" font-weight="700">3. 产品预算</text>
+  <text x="660" y="190" fill="#e5e7eb" font-size="14" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif">• 1M 上下文 SKU</text>
+  <text x="660" y="220" fill="#e5e7eb" font-size="14" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif">• Agent 长轨迹会话</text>
+  <text x="660" y="250" fill="#e5e7eb" font-size="14" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif">• 延迟分层计费</text>
+  <text x="660" y="280" fill="#e5e7eb" font-size="14" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif">• 召回失败兜底</text>
+  <text x="660" y="330" fill="#9ca3af" font-size="13" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif">决定：能否把架构</text>
+  <text x="660" y="352" fill="#9ca3af" font-size="13" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif">红利卖成产品</text>
+
+  <path d="M320 300 L345 300" stroke="#6b7280" stroke-width="3" marker-end="url(#a)"/>
+  <path d="M615 300 L640 300" stroke="#6b7280" stroke-width="3"/>
+  <defs>
+    <marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#6b7280"/></marker>
+  </defs>
+</svg>
