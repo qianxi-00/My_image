@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <rect width="1200" height="700" fill="#0f172a"/>
+  <text x="600" y="48" text-anchor="middle" fill="#f8fafc" font-size="26" font-family="Noto Sans CJK SC, Sans-Serif" font-weight="700">面向召回质量的 KV 治理流水线</text>
+  <text x="600" y="80" text-anchor="middle" fill="#94a3b8" font-size="15" font-family="Noto Sans CJK SC, Sans-Serif">把“省显存”从单点技巧升级为可测、可控、可分层的系统策略</text>
+
+  <!-- boxes row 1 -->
+  <rect x="50" y="130" width="210" height="110" rx="12" fill="#1e293b" stroke="#22d3ee"/>
+  <text x="155" y="175" text-anchor="middle" fill="#22d3ee" font-size="18" font-family="Noto Sans CJK SC, Sans-Serif" font-weight="700">请求画像</text>
+  <text x="155" y="210" text-anchor="middle" fill="#cbd5e1" font-size="13" font-family="Noto Sans CJK SC, Sans-Serif">长度/任务/敏感级</text>
+
+  <rect x="290" y="130" width="210" height="110" rx="12" fill="#1e293b" stroke="#38bdf8"/>
+  <text x="395" y="175" text-anchor="middle" fill="#38bdf8" font-size="18" font-family="Noto Sans CJK SC, Sans-Serif" font-weight="700">缓存策略</text>
+  <text x="395" y="210" text-anchor="middle" fill="#cbd5e1" font-size="13" font-family="Noto Sans CJK SC, Sans-Serif">全精度/量化/驱逐</text>
+
+  <rect x="530" y="130" width="210" height="110" rx="12" fill="#1e293b" stroke="#a78bfa"/>
+  <text x="635" y="175" text-anchor="middle" fill="#a78bfa" font-size="18" font-family="Noto Sans CJK SC, Sans-Serif" font-weight="700">运行时执行</text>
+  <text x="635" y="210" text-anchor="middle" fill="#cbd5e1" font-size="13" font-family="Noto Sans CJK SC, Sans-Serif">Paged/分层/Offload</text>
+
+  <rect x="770" y="130" width="210" height="110" rx="12" fill="#1e293b" stroke="#f59e0b"/>
+  <text x="875" y="175" text-anchor="middle" fill="#f59e0b" font-size="18" font-family="Noto Sans CJK SC, Sans-Serif" font-weight="700">质量探针</text>
+  <text x="875" y="210" text-anchor="middle" fill="#cbd5e1" font-size="13" font-family="Noto Sans CJK SC, Sans-Serif">NIAH/位置扫描</text>
+
+  <rect x="1010" y="130" width="150" height="110" rx="12" fill="#1e293b" stroke="#22c55e"/>
+  <text x="1085" y="175" text-anchor="middle" fill="#22c55e" font-size="18" font-family="Noto Sans CJK SC, Sans-Serif" font-weight="700">闭环</text>
+  <text x="1085" y="210" text-anchor="middle" fill="#cbd5e1" font-size="13" font-family="Noto Sans CJK SC, Sans-Serif">调参/回滚</text>
+
+  <path d="M260 185 L290 185" stroke="#64748b" stroke-width="3" marker-end="url(#a)"/>
+  <path d="M500 185 L530 185" stroke="#64748b" stroke-width="3"/>
+  <path d="M740 185 L770 185" stroke="#64748b" stroke-width="3"/>
+  <path d="M980 185 L1010 185" stroke="#64748b" stroke-width="3"/>
+
+  <!-- bottom detail -->
+  <rect x="50" y="290" width="1100" height="340" rx="16" fill="#111827" stroke="#334155"/>
+  <text x="80" y="340" fill="#e2e8f0" font-size="18" font-family="Noto Sans CJK SC, Sans-Serif" font-weight="700">关键控制点</text>
+  <text x="80" y="385" fill="#94a3b8" font-size="16" font-family="Noto Sans CJK SC, Sans-Serif">• 关键 token 保护：系统提示、用户约束、引用段落、工具结果 ID 提高 admission 与保留优先级</text>
+  <text x="80" y="425" fill="#94a3b8" font-size="16" font-family="Noto Sans CJK SC, Sans-Serif">• 分层精度：热 token 高位宽，冷历史可量化/摘要；禁止对“针密度高”区段盲目 3-bit</text>
+  <text x="80" y="465" fill="#94a3b8" font-size="16" font-family="Noto Sans CJK SC, Sans-Serif">• 任务路由：检索问答 / 合同审阅走高质量路径；闲聊摘要可走激进压缩路径</text>
+  <text x="80" y="505" fill="#94a3b8" font-size="16" font-family="Noto Sans CJK SC, Sans-Serif">• 观测指标：按深度桶的召回率、位置桶准确率、压缩比、显存占用、TTFT/TPOT</text>
+  <text x="80" y="545" fill="#94a3b8" font-size="16" font-family="Noto Sans CJK SC, Sans-Serif">• 安全边界：压缩不得变成“静默丢证据”；失败应可提示、可降级、可重算关键段</text>
+  <text x="80" y="585" fill="#94a3b8" font-size="16" font-family="Noto Sans CJK SC, Sans-Serif">• 与前序课程衔接：Paged 块池、Prefix 复用、安全隔离都要服务“可召回”而不是只服务“可塞进更多请求”</text>
+</svg>
