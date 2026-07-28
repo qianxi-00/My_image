@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#0b1220"/>
+  <text x="40" y="48" fill="#f1f5f9" font-size="24" font-family="Noto Sans SC, sans-serif" font-weight="700">Decision Transformer 训练与推理流水线</text>
+  <text x="40" y="78" fill="#94a3b8" font-size="15" font-family="Noto Sans SC, sans-serif">训练：从离线轨迹构造 (R̂, s, a) 序列；推理：给定目标回报与当前状态，自回归采样动作</text>
+  <rect x="40" y="110" width="270" height="170" rx="14" fill="#172554" stroke="#60a5fa"/>
+  <text x="60" y="145" fill="#93c5fd" font-size="18" font-family="Noto Sans SC, sans-serif" font-weight="700">阶段 A · 数据构造</text>
+  <text x="60" y="180" fill="#e2e8f0" font-size="14" font-family="Noto Sans SC, sans-serif">• 计算每步 Return-to-Go</text>
+  <text x="60" y="208" fill="#e2e8f0" font-size="14" font-family="Noto Sans SC, sans-serif">• 状态/动作/回报嵌入</text>
+  <text x="60" y="236" fill="#e2e8f0" font-size="14" font-family="Noto Sans SC, sans-serif">• 加时间步位置信息</text>
+  <rect x="345" y="110" width="270" height="170" rx="14" fill="#3b0764" stroke="#c084fc"/>
+  <text x="365" y="145" fill="#e9d5ff" font-size="18" font-family="Noto Sans SC, sans-serif" font-weight="700">阶段 B · 序列训练</text>
+  <text x="365" y="180" fill="#e2e8f0" font-size="14" font-family="Noto Sans SC, sans-serif">• 因果掩码 Transformer</text>
+  <text x="365" y="208" fill="#e2e8f0" font-size="14" font-family="Noto Sans SC, sans-serif">• 预测 a_t 为主损失</text>
+  <text x="365" y="236" fill="#e2e8f0" font-size="14" font-family="Noto Sans SC, sans-serif">• 可选预测 r/s 辅助</text>
+  <rect x="650" y="110" width="270" height="170" rx="14" fill="#064e3b" stroke="#34d399"/>
+  <text x="670" y="145" fill="#a7f3d0" font-size="18" font-family="Noto Sans SC, sans-serif" font-weight="700">阶段 C · 条件推理</text>
+  <text x="670" y="180" fill="#e2e8f0" font-size="14" font-family="Noto Sans SC, sans-serif">• 设定目标 R̂0</text>
+  <text x="670" y="208" fill="#e2e8f0" font-size="14" font-family="Noto Sans SC, sans-serif">• 观察 s_t 后生成 a_t</text>
+  <text x="670" y="236" fill="#e2e8f0" font-size="14" font-family="Noto Sans SC, sans-serif">• 更新 R̂t ← R̂t − r_t</text>
+  <rect x="40" y="320" width="880" height="170" rx="14" fill="#111827" stroke="#475569"/>
+  <text x="60" y="360" fill="#fbbf24" font-size="18" font-family="Noto Sans SC, sans-serif" font-weight="700">token 交错示意</text>
+  <text x="60" y="400" fill="#f8fafc" font-size="16" font-family="Noto Sans SC, sans-serif">R̂1  s1  a1   R̂2  s2  a2   R̂3  s3  a3   …   R̂T  sT  aT</text>
+  <text x="60" y="440" fill="#cbd5e1" font-size="14" font-family="Noto Sans SC, sans-serif">模型在看到当前 R̂t 与 st 后，预测 at；环境反馈 rt 后，用 R̂t+1 = R̂t − rt 维持目标一致性</text>
+  <text x="60" y="470" fill="#94a3b8" font-size="13" font-family="Noto Sans SC, sans-serif">工程直觉：Return-to-Go 像“提示词”，状态像上下文，动作像被生成的下一个 token</text>
+</svg>
