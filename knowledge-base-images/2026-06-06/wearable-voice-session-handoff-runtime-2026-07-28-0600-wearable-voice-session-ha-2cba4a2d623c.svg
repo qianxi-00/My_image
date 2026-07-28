@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1220"/>
+      <stop offset="100%" stop-color="#152238"/>
+    </linearGradient>
+    <linearGradient id="a" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#35D0C3"/>
+      <stop offset="100%" stop-color="#4F8CFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" rx="24" fill="url(#bg)"/>
+  <text x="48" y="56" fill="#E8F1FF" font-size="28" font-family="Arial, sans-serif" font-weight="700">可穿戴语音会话跨设备接力总览</text>
+  <text x="48" y="92" fill="#9DB0CC" font-size="16" font-family="Arial, sans-serif">Audio Stream → Session State → Handoff Token → Device Runtime → Continuity Audit</text>
+  <rect x="40" y="130" width="160" height="90" rx="14" fill="#1B2A44" stroke="#35D0C3" stroke-width="2"/>
+  <text x="60" y="175" fill="#E8F1FF" font-size="18" font-family="Arial, sans-serif">耳机/表端</text>
+  <text x="58" y="200" fill="#9DB0CC" font-size="13" font-family="Arial, sans-serif">近端感知入口</text>
+  <rect x="220" y="130" width="160" height="90" rx="14" fill="#1B2A44" stroke="#4F8CFF" stroke-width="2"/>
+  <text x="245" y="175" fill="#E8F1FF" font-size="18" font-family="Arial, sans-serif">会话状态机</text>
+  <text x="238" y="200" fill="#9DB0CC" font-size="13" font-family="Arial, sans-serif">Turn/Intent/Risk</text>
+  <rect x="400" y="130" width="160" height="90" rx="14" fill="#1B2A44" stroke="#F5B942" stroke-width="2"/>
+  <text x="420" y="175" fill="#E8F1FF" font-size="18" font-family="Arial, sans-serif">Handoff Token</text>
+  <text x="425" y="200" fill="#9DB0CC" font-size="13" font-family="Arial, sans-serif">短时权威证明</text>
+  <rect x="580" y="130" width="160" height="90" rx="14" fill="#1B2A44" stroke="#FF7A59" stroke-width="2"/>
+  <text x="610" y="175" fill="#E8F1FF" font-size="18" font-family="Arial, sans-serif">目标设备</text>
+  <text x="595" y="200" fill="#9DB0CC" font-size="13" font-family="Arial, sans-serif">眼镜/手机/车机</text>
+  <rect x="760" y="130" width="160" height="90" rx="14" fill="#1B2A44" stroke="#A78BFA" stroke-width="2"/>
+  <text x="795" y="175" fill="#E8F1FF" font-size="18" font-family="Arial, sans-serif">审计闭环</text>
+  <text x="780" y="200" fill="#9DB0CC" font-size="13" font-family="Arial, sans-serif">回放/补偿/拒绝</text>
+  <path d="M200 175 H220 M380 175 H400 M560 175 H580 M740 175 H760" stroke="url(#a)" stroke-width="4" fill="none"/>
+  <rect x="40" y="270" width="880" height="220" rx="18" fill="#101A2E" stroke="#243552"/>
+  <text x="64" y="316" fill="#E8F1FF" font-size="20" font-family="Arial, sans-serif" font-weight="700">核心原则：理解可分散，会话权威必须单写者</text>
+  <text x="64" y="360" fill="#B8C7DE" font-size="16" font-family="Arial, sans-serif">1. 多设备可并行感知，但同一时刻只允许一个 Primary Session Writer</text>
+  <text x="64" y="396" fill="#B8C7DE" font-size="16" font-family="Arial, sans-serif">2. 接力不是“复制聊天记录”，而是迁移可恢复状态快照 + 未提交意图</text>
+  <text x="64" y="432" fill="#B8C7DE" font-size="16" font-family="Arial, sans-serif">3. 任何跨端动作提交，都必须绑定 Handoff Token 与设备能力边界</text>
+  <text x="64" y="468" fill="#B8C7DE" font-size="16" font-family="Arial, sans-serif">4. 失败默认回退到只读续聊，禁止静默双写外部系统</text>
+</svg>
