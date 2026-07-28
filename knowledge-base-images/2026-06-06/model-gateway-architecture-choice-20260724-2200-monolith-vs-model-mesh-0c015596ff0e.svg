@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <rect width="1200" height="700" fill="#0b1220"/>
+  <text x="600" y="46" text-anchor="middle" fill="#f1f5f9" font-size="28" font-family="Noto Sans CJK SC, sans-serif" font-weight="700">单一巨型模型 vs 多模型网格（Model Mesh）</text>
+  <rect x="60" y="90" width="500" height="520" rx="18" fill="#111827" stroke="#38bdf8" stroke-width="2"/>
+  <text x="310" y="135" text-anchor="middle" fill="#7dd3fc" font-size="24" font-family="Noto Sans CJK SC, sans-serif" font-weight="700">单一巨型模型</text>
+  <rect x="110" y="170" width="400" height="90" rx="12" fill="#0c4a6e"/>
+  <text x="310" y="210" text-anchor="middle" fill="#fff" font-size="20" font-family="Noto Sans CJK SC, sans-serif">统一参数空间</text>
+  <text x="310" y="238" text-anchor="middle" fill="#bae6fd" font-size="15" font-family="Noto Sans CJK SC, sans-serif">训练目标一致 · 能力边界模糊共享</text>
+  <rect x="110" y="290" width="400" height="90" rx="12" fill="#1e3a5f"/>
+  <text x="310" y="330" text-anchor="middle" fill="#fff" font-size="20" font-family="Noto Sans CJK SC, sans-serif">服务拓扑相对简单</text>
+  <text x="310" y="358" text-anchor="middle" fill="#bae6fd" font-size="15" font-family="Noto Sans CJK SC, sans-serif">单一路由 · 缓存共享 · 版本粒度粗</text>
+  <rect x="110" y="410" width="400" height="90" rx="12" fill="#334155"/>
+  <text x="310" y="450" text-anchor="middle" fill="#fff" font-size="20" font-family="Noto Sans CJK SC, sans-serif">代价集中</text>
+  <text x="310" y="478" text-anchor="middle" fill="#cbd5e1" font-size="15" font-family="Noto Sans CJK SC, sans-serif">长尾任务也吃高端算力 · 变更牵一发而动全身</text>
+  <text x="310" y="560" text-anchor="middle" fill="#94a3b8" font-size="16" font-family="Noto Sans CJK SC, sans-serif">适合：统一品牌体验、强通用推理、少租户场景</text>
+  <rect x="640" y="90" width="500" height="520" rx="18" fill="#111827" stroke="#a78bfa" stroke-width="2"/>
+  <text x="890" y="135" text-anchor="middle" fill="#c4b5fd" font-size="24" font-family="Noto Sans CJK SC, sans-serif" font-weight="700">多模型网格</text>
+  <rect x="690" y="170" width="180" height="70" rx="10" fill="#5b21b6"/>
+  <text x="780" y="210" text-anchor="middle" fill="#fff" font-size="16" font-family="Noto Sans CJK SC, sans-serif">推理大模型</text>
+  <rect x="900" y="170" width="180" height="70" rx="10" fill="#6d28d9"/>
+  <text x="990" y="210" text-anchor="middle" fill="#fff" font-size="16" font-family="Noto Sans CJK SC, sans-serif">代码小模型</text>
+  <rect x="690" y="260" width="180" height="70" rx="10" fill="#7c3aed"/>
+  <text x="780" y="300" text-anchor="middle" fill="#fff" font-size="16" font-family="Noto Sans CJK SC, sans-serif">检索重排</text>
+  <rect x="900" y="260" width="180" height="70" rx="10" fill="#8b5cf6"/>
+  <text x="990" y="300" text-anchor="middle" fill="#fff" font-size="16" font-family="Noto Sans CJK SC, sans-serif">安全分类</text>
+  <rect x="690" y="350" width="180" height="70" rx="10" fill="#4c1d95"/>
+  <text x="780" y="390" text-anchor="middle" fill="#fff" font-size="16" font-family="Noto Sans CJK SC, sans-serif">工具规划</text>
+  <rect x="900" y="350" width="180" height="70" rx="10" fill="#312e81"/>
+  <text x="990" y="390" text-anchor="middle" fill="#fff" font-size="16" font-family="Noto Sans CJK SC, sans-serif">验证器 / 裁判</text>
+  <rect x="690" y="450" width="390" height="70" rx="10" fill="#1f2937" stroke="#a78bfa"/>
+  <text x="885" y="480" text-anchor="middle" fill="#e9d5ff" font-size="18" font-family="Noto Sans CJK SC, sans-serif">网关统一路由、策略与观测</text>
+  <text x="885" y="505" text-anchor="middle" fill="#c4b5fd" font-size="14" font-family="Noto Sans CJK SC, sans-serif">按任务切能力 · 按成本切资源 · 按风险切路径</text>
+  <text x="890" y="560" text-anchor="middle" fill="#94a3b8" font-size="16" font-family="Noto Sans CJK SC, sans-serif">适合：异构流量、多产品线、Agent 多工具场景</text>
+  <text x="600" y="660" text-anchor="middle" fill="#64748b" font-size="16" font-family="Noto Sans CJK SC, sans-serif">关键不是二选一，而是：哪些能力必须集中，哪些能力必须拆分</text>
+</svg>
