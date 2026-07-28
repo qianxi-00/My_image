@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <rect width="1200" height="700" fill="#0b1220"/>
+  <text x="600" y="46" text-anchor="middle" fill="#f8fafc" font-size="26" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-weight="700">可服务架构检查清单（Serving-Aware）</text>
+  <text x="600" y="78" text-anchor="middle" fill="#94a3b8" font-size="15" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">结构评审时必须同时回答：质量增益值不值服务成本</text>
+
+  <rect x="50" y="120" width="350" height="240" rx="14" fill="#172554" stroke="#3b82f6"/>
+  <text x="225" y="160" text-anchor="middle" fill="#93c5fd" font-size="18" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-weight="700">A. 显存与缓存</text>
+  <text x="80" y="205" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">• 每 token KV 字节是否下降</text>
+  <text x="80" y="240" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">• 前缀命中后是否可复用</text>
+  <text x="80" y="275" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">• 长上下文是否引发尾延迟</text>
+  <text x="80" y="310" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">• 分页碎片是否可控</text>
+
+  <rect x="425" y="120" width="350" height="240" rx="14" fill="#14532d" stroke="#22c55e"/>
+  <text x="600" y="160" text-anchor="middle" fill="#86efac" font-size="18" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-weight="700">B. 计算与通信</text>
+  <text x="455" y="205" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">• 激活参数与真实 FLOPs</text>
+  <text x="455" y="240" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">• EP/TP 通信占比</text>
+  <text x="455" y="275" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">• 小 batch 是否仍友好</text>
+  <text x="455" y="310" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">• 专家热点是否可扩缩</text>
+
+  <rect x="800" y="120" width="350" height="240" rx="14" fill="#4c1d95" stroke="#a78bfa"/>
+  <text x="975" y="160" text-anchor="middle" fill="#ddd6fe" font-size="18" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-weight="700">C. 调度与工程</text>
+  <text x="830" y="205" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">• 内核形状是否稳定</text>
+  <text x="830" y="240" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">• 是否支持 continuous batch</text>
+  <text x="830" y="275" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">• 故障专家能否降级</text>
+  <text x="830" y="310" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">• 网关路由是否可声明</text>
+
+  <rect x="50" y="400" width="1100" height="240" rx="16" fill="#1f2937" stroke="#64748b"/>
+  <text x="600" y="445" text-anchor="middle" fill="#fbbf24" font-size="20" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-weight="700">通过门（必须同时满足）</text>
+  <text x="100" y="500" fill="#e2e8f0" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">1) 质量：主任务 + 安全 + 工具调用回归不低于基线（允许约定容差）</text>
+  <text x="100" y="540" fill="#e2e8f0" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">2) 服务：P95 TTFT/TPOT、显存峰值、单位请求成本达到目标区间</text>
+  <text x="100" y="580" fill="#e2e8f0" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">3) 运维：可观测、可灰度、可回滚；结构变更带版本说明与能力画像</text>
+  <text x="100" y="620" fill="#94a3b8" font-size="15" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">任一门槛失败：退回结构方案，而不是仅靠更大集群硬扛</text>
+</svg>
