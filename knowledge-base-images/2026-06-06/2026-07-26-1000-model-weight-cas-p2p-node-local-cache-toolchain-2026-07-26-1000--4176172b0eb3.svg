@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#0b1220"/>
+  <text x="48" y="48" fill="#e8eefc" font-size="22" font-family="sans-serif">权重分发分层：Registry / CAS / P2P / Node Local</text>
+  <rect x="60" y="100" width="180" height="90" rx="12" fill="#1e3a5f" stroke="#5b9fd4"/>
+  <text x="90" y="150" fill="#d7e7ff" font-size="16" font-family="sans-serif">对象存储/制品库</text>
+  <rect x="280" y="100" width="180" height="90" rx="12" fill="#1e3a5f" stroke="#5b9fd4"/>
+  <text x="320" y="150" fill="#d7e7ff" font-size="16" font-family="sans-serif">内容寻址 CAS</text>
+  <rect x="500" y="100" width="180" height="90" rx="12" fill="#1e3a5f" stroke="#5b9fd4"/>
+  <text x="545" y="150" fill="#d7e7ff" font-size="16" font-family="sans-serif">P2P 预热层</text>
+  <rect x="720" y="100" width="180" height="90" rx="12" fill="#1e3a5f" stroke="#5b9fd4"/>
+  <text x="755" y="150" fill="#d7e7ff" font-size="16" font-family="sans-serif">节点本地缓存</text>
+  <path d="M240 145 H280" stroke="#7dd3fc" stroke-width="3"/>
+  <path d="M460 145 H500" stroke="#7dd3fc" stroke-width="3"/>
+  <path d="M680 145 H720" stroke="#7dd3fc" stroke-width="3"/>
+  <rect x="160" y="260" width="640" height="180" rx="16" fill="#132033" stroke="#334155"/>
+  <text x="190" y="310" fill="#cbd5e1" font-size="18" font-family="sans-serif">控制面：版本清单 · 配额 · 预热任务 · 命中率与失败证据</text>
+  <text x="190" y="350" fill="#94a3b8" font-size="16" font-family="sans-serif">数据面：分块哈希 · 并发拉取 · 校验回写 · 本地 pin/evict</text>
+  <text x="190" y="390" fill="#94a3b8" font-size="16" font-family="sans-serif">目标：把“拷模型”从人工脚本升级为平台化部署能力</text>
+</svg>
