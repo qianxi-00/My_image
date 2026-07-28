@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560">
+  <rect width="960" height="560" fill="#0b1220"/>
+  <text x="48" y="48" fill="#e2e8f0" font-size="24" font-family="DejaVu Sans, sans-serif" font-weight="700">可复现节点账本：版本矩阵 × 证据</text>
+  <text x="48" y="78" fill="#94a3b8" font-size="14" font-family="DejaVu Sans, sans-serif">每次节点变更都要留下可回放证据，而不是“运维说装好了”</text>
+  <!-- table-like cards -->
+  <rect x="48" y="120" width="270" height="380" rx="14" fill="#111827" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="70" y="160" fill="#93c5fd" font-size="18" font-family="DejaVu Sans, sans-serif" font-weight="700">输入声明</text>
+  <text x="70" y="200" fill="#e2e8f0" font-size="14" font-family="DejaVu Sans, sans-serif">• OS 镜像 digest</text>
+  <text x="70" y="230" fill="#e2e8f0" font-size="14" font-family="DejaVu Sans, sans-serif">• 内核版本</text>
+  <text x="70" y="260" fill="#e2e8f0" font-size="14" font-family="DejaVu Sans, sans-serif">• 驱动分支/版本</text>
+  <text x="70" y="290" fill="#e2e8f0" font-size="14" font-family="DejaVu Sans, sans-serif">• toolkit 版本</text>
+  <text x="70" y="320" fill="#e2e8f0" font-size="14" font-family="DejaVu Sans, sans-serif">• 固件/BIOS 约束</text>
+  <text x="70" y="350" fill="#e2e8f0" font-size="14" font-family="DejaVu Sans, sans-serif">• 允许 CUDA 用户态</text>
+  <text x="70" y="380" fill="#e2e8f0" font-size="14" font-family="DejaVu Sans, sans-serif">• 节点池标签策略</text>
+  <text x="70" y="410" fill="#e2e8f0" font-size="14" font-family="DejaVu Sans, sans-serif">• 回滚镜像指针</text>
+  <text x="70" y="450" fill="#64748b" font-size="12" font-family="DejaVu Sans, sans-serif">source of truth in Git</text>
+
+  <rect x="345" y="120" width="270" height="380" rx="14" fill="#111827" stroke="#059669" stroke-width="2"/>
+  <text x="367" y="160" fill="#6ee7b7" font-size="18" font-family="DejaVu Sans, sans-serif" font-weight="700">运行时证据</text>
+  <text x="367" y="200" fill="#e2e8f0" font-size="14" font-family="DejaVu Sans, sans-serif">• lsmod / 驱动模块</text>
+  <text x="367" y="230" fill="#e2e8f0" font-size="14" font-family="DejaVu Sans, sans-serif">• nvidia-smi 快照</text>
+  <text x="367" y="260" fill="#e2e8f0" font-size="14" font-family="DejaVu Sans, sans-serif">• CDI spec hash</text>
+  <text x="367" y="290" fill="#e2e8f0" font-size="14" font-family="DejaVu Sans, sans-serif">• DCGM 健康结果</text>
+  <text x="367" y="320" fill="#e2e8f0" font-size="14" font-family="DejaVu Sans, sans-serif">• 烟测 Job 日志</text>
+  <text x="367" y="350" fill="#e2e8f0" font-size="14" font-family="DejaVu Sans, sans-serif">• 设备可见性检查</text>
+  <text x="367" y="380" fill="#e2e8f0" font-size="14" font-family="DejaVu Sans, sans-serif">• 节点条件与污点</text>
+  <text x="367" y="410" fill="#e2e8f0" font-size="14" font-family="DejaVu Sans, sans-serif">• 升级耗时指标</text>
+  <text x="367" y="450" fill="#64748b" font-size="12" font-family="DejaVu Sans, sans-serif">attach to change ticket</text>
+
+  <rect x="642" y="120" width="270" height="380" rx="14" fill="#111827" stroke="#c026d3" stroke-width="2"/>
+  <text x="664" y="160" fill="#f0abfc" font-size="18" font-family="DejaVu Sans, sans-serif" font-weight="700">平台动作</text>
+  <text x="664" y="200" fill="#e2e8f0" font-size="14" font-family="DejaVu Sans, sans-serif">• 准入/拒绝入池</text>
+  <text x="664" y="230" fill="#e2e8f0" font-size="14" font-family="DejaVu Sans, sans-serif">• 自动隔离故障卡</text>
+  <text x="664" y="260" fill="#e2e8f0" font-size="14" font-family="DejaVu Sans, sans-serif">• 触发回滚镜像</text>
+  <text x="664" y="290" fill="#e2e8f0" font-size="14" font-family="DejaVu Sans, sans-serif">• 冻结节点池</text>
+  <text x="664" y="320" fill="#e2e8f0" font-size="14" font-family="DejaVu Sans, sans-serif">• 通知容量看板</text>
+  <text x="664" y="350" fill="#e2e8f0" font-size="14" font-family="DejaVu Sans, sans-serif">• 生成差异报告</text>
+  <text x="664" y="380" fill="#e2e8f0" font-size="14" font-family="DejaVu Sans, sans-serif">• 更新兼容矩阵</text>
+  <text x="664" y="410" fill="#e2e8f0" font-size="14" font-family="DejaVu Sans, sans-serif">• 归档到对象存储</text>
+  <text x="664" y="450" fill="#64748b" font-size="12" font-family="DejaVu Sans, sans-serif">close the loop</text>
+</svg>
