@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <style>
+      .t{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#0f172a}
+      .s{font-size:22px;font-weight:700}
+      .b{font-size:15px;font-weight:700}
+      .m{font-size:13px;fill:#334155}
+      .w{fill:#fff;font-size:13px;font-weight:600}
+      .box{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2;rx:10}
+      .ok{fill:#059669}
+    </style>
+  </defs>
+  <rect width="1200" height="720" fill="#ffffff"/>
+  <text class="t s" x="40" y="42">投机解码家族 × KV 复用可行性矩阵</text>
+  <text class="t m" x="40" y="70">把“能不能复用”拆成：同权重、同布局、同精度、同接受边界四个条件</text>
+
+  <rect class="box" x="40" y="100" width="1120" height="580"/>
+  <rect x="60" y="120" width="200" height="48" rx="8" fill="#1e293b"/><text class="w" x="110" y="150">方法家族</text>
+  <rect x="270" y="120" width="200" height="48" rx="8" fill="#1e293b"/><text class="w" x="310" y="150">草稿与目标关系</text>
+  <rect x="480" y="120" width="220" height="48" rx="8" fill="#1e293b"/><text class="w" x="530" y="150">草稿能否读目标KV</text>
+  <rect x="710" y="120" width="220" height="48" rx="8" fill="#1e293b"/><text class="w" x="745" y="150">目标能否复用草稿KV</text>
+  <rect x="940" y="120" width="200" height="48" rx="8" fill="#1e293b"/><text class="w" x="990" y="150">工程主收益点</text>
+
+  <text class="t b" x="70" y="210">独立 Draft 模型</text>
+  <text class="t m" x="290" y="210">异构小模型</text>
+  <text class="t m" x="510" y="210">默认否</text>
+  <text class="t m" x="740" y="210">否</text>
+  <text class="t m" x="960" y="210">减少目标前向次数</text>
+
+  <text class="t b" x="70" y="270">Medusa 多头</text>
+  <text class="t m" x="290" y="270">共享主干 + 额外头</text>
+  <text class="t m" x="510" y="270">共享主干状态</text>
+  <text class="t m" x="740" y="270">不存在独立草稿KV</text>
+  <text class="t m" x="960" y="270">少加载权重次数</text>
+
+  <text class="t b" x="70" y="330">EAGLE 特征草稿</text>
+  <text class="t m" x="290" y="330">用目标特征外推</text>
+  <text class="t m" x="510" y="330">读特征/部分状态</text>
+  <text class="t m" x="740" y="330">否（仍写目标KV）</text>
+  <text class="t m" x="960" y="330">提高接受率</text>
+
+  <text class="t b" x="70" y="390">Self-Spec / 量化草稿</text>
+  <text class="t m" x="290" y="390">同架构低精度副本</text>
+  <text class="t m" x="510" y="390">有条件近似共享</text>
+  <text class="t m" x="740" y="390">通常否，需重算/映射</text>
+  <text class="t m" x="960" y="390">长上下文省带宽</text>
+
+  <text class="t b" x="70" y="450">n-gram / 后缀匹配</text>
+  <text class="t m" x="290" y="450">无模型草稿</text>
+  <text class="t m" x="510" y="450">不涉及草稿KV</text>
+  <text class="t m" x="740" y="450">不涉及</text>
+  <text class="t m" x="960" y="450">零额外模型成本</text>
+
+  <text class="t b" x="70" y="510">树状投机 Tree Spec</text>
+  <text class="t m" x="290" y="510">多分支候选</text>
+  <text class="t m" x="510" y="510">分支临时状态隔离</text>
+  <text class="t m" x="740" y="510">仅接受路径写入</text>
+  <text class="t m" x="960" y="510">提升并行验证收益</text>
+
+  <text class="t m" x="70" y="580">判断口诀：能共享的是“已接受前缀在目标模型中的权威 KV”，不是“草稿算过的任意中间状态”。</text>
+  <text class="t m" x="70" y="615">任何跨模型直接复用，都必须先证明：表示空间同构、位置编码一致、分页布局兼容、拒绝回滚正确。</text>
+  <text class="t m" x="70" y="650">否则，把草稿 KV 塞进目标，会把“无损加速”变成“悄悄改分布”。</text>
+</svg>
