@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560">
+  <rect width="960" height="560" rx="18" fill="#0A0F1C"/>
+  <text x="40" y="48" fill="#F8FAFC" font-size="24" font-family="Arial, sans-serif" font-weight="700">可穿戴同传验收看板：延迟 × 稳定性 × 隐私</text>
+  <text x="40" y="78" fill="#94A3B8" font-size="14" font-family="Arial, sans-serif">把“听起来聪明”拆成可回归的三组指标，避免只看 BLEU/COMET</text>
+
+  <!-- boxes -->
+  <rect x="40" y="120" width="280" height="380" rx="16" fill="#111827" stroke="#38BDF8"/>
+  <text x="60" y="160" fill="#7DD3FC" font-size="18" font-family="Arial, sans-serif" font-weight="700">Latency Budget</text>
+  <text x="60" y="200" fill="#E5E7EB" font-size="14" font-family="Arial, sans-serif">• 首字幕 P50 / P95</text>
+  <text x="60" y="230" fill="#E5E7EB" font-size="14" font-family="Arial, sans-serif">• 首语音 P50 / P95</text>
+  <text x="60" y="260" fill="#E5E7EB" font-size="14" font-family="Arial, sans-serif">• 端到端同传滞后</text>
+  <text x="60" y="290" fill="#E5E7EB" font-size="14" font-family="Arial, sans-serif">• 掉线恢复时间</text>
+  <text x="60" y="320" fill="#E5E7EB" font-size="14" font-family="Arial, sans-serif">• 本地降级切换时延</text>
+  <text x="60" y="370" fill="#93C5FD" font-size="13" font-family="Arial, sans-serif">门禁建议：</text>
+  <text x="60" y="400" fill="#CBD5E1" font-size="13" font-family="Arial, sans-serif">首字幕 P95 &lt; 900ms</text>
+  <text x="60" y="428" fill="#CBD5E1" font-size="13" font-family="Arial, sans-serif">首语音 P95 &lt; 1800ms</text>
+  <text x="60" y="456" fill="#CBD5E1" font-size="13" font-family="Arial, sans-serif">滞后中位 &lt; 2.5s</text>
+
+  <rect x="340" y="120" width="280" height="380" rx="16" fill="#111827" stroke="#34D399"/>
+  <text x="360" y="160" fill="#6EE7B7" font-size="18" font-family="Arial, sans-serif" font-weight="700">Stability Budget</text>
+  <text x="360" y="200" fill="#E5E7EB" font-size="14" font-family="Arial, sans-serif">• 字幕闪烁率</text>
+  <text x="360" y="230" fill="#E5E7EB" font-size="14" font-family="Arial, sans-serif">• commit 后改写率</text>
+  <text x="360" y="260" fill="#E5E7EB" font-size="14" font-family="Arial, sans-serif">• 术语锁定命中</text>
+  <text x="360" y="290" fill="#E5E7EB" font-size="14" font-family="Arial, sans-serif">• 说话人切换误切</text>
+  <text x="360" y="320" fill="#E5E7EB" font-size="14" font-family="Arial, sans-serif">• 重译预算超限次数</text>
+  <text x="360" y="370" fill="#6EE7B7" font-size="13" font-family="Arial, sans-serif">门禁建议：</text>
+  <text x="360" y="400" fill="#CBD5E1" font-size="13" font-family="Arial, sans-serif">闪烁率 &lt; 8% 词位</text>
+  <text x="360" y="428" fill="#CBD5E1" font-size="13" font-family="Arial, sans-serif">commit改写 &lt; 1.5%</text>
+  <text x="360" y="456" fill="#CBD5E1" font-size="13" font-family="Arial, sans-serif">术语命中 &gt; 95%</text>
+
+  <rect x="640" y="120" width="280" height="380" rx="16" fill="#111827" stroke="#FBBF24"/>
+  <text x="660" y="160" fill="#FDE68A" font-size="18" font-family="Arial, sans-serif" font-weight="700">Privacy Budget</text>
+  <text x="660" y="200" fill="#E5E7EB" font-size="14" font-family="Arial, sans-serif">• 默认本地保留比例</text>
+  <text x="660" y="230" fill="#E5E7EB" font-size="14" font-family="Arial, sans-serif">• 云端上送字节/分钟</text>
+  <text x="660" y="260" fill="#E5E7EB" font-size="14" font-family="Arial, sans-serif">• 敏感场景阻断率</text>
+  <text x="660" y="290" fill="#E5E7EB" font-size="14" font-family="Arial, sans-serif">• 用户可见审计日志</text>
+  <text x="660" y="320" fill="#E5E7EB" font-size="14" font-family="Arial, sans-serif">• 一键清空时延</text>
+  <text x="660" y="370" fill="#FDE68A" font-size="13" font-family="Arial, sans-serif">门禁建议：</text>
+  <text x="660" y="400" fill="#CBD5E1" font-size="13" font-family="Arial, sans-serif">本地默认处理 ≥70%</text>
+  <text x="660" y="428" fill="#CBD5E1" font-size="13" font-family="Arial, sans-serif">敏感阻断可解释</text>
+  <text x="660" y="456" fill="#CBD5E1" font-size="13" font-family="Arial, sans-serif">清空 &lt; 2s 完成</text>
+</svg>
