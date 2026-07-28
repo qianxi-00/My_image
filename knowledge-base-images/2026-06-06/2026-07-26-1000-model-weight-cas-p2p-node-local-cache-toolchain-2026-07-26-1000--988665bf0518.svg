@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#0b1220"/>
+  <text x="48" y="48" fill="#e8eefc" font-size="22" font-family="sans-serif">权重分发控制闭环：声明 → 预热 → 挂载 → 回收</text>
+  <rect x="80" y="120" width="160" height="70" rx="10" fill="#1e3a5f"/>
+  <text x="115" y="160" fill="#e2e8f0" font-size="16" font-family="sans-serif">版本清单</text>
+  <rect x="290" y="120" width="160" height="70" rx="10" fill="#1e3a5f"/>
+  <text x="330" y="160" fill="#e2e8f0" font-size="16" font-family="sans-serif">预热任务</text>
+  <rect x="500" y="120" width="160" height="70" rx="10" fill="#1e3a5f"/>
+  <text x="540" y="160" fill="#e2e8f0" font-size="16" font-family="sans-serif">就绪门禁</text>
+  <rect x="710" y="120" width="160" height="70" rx="10" fill="#1e3a5f"/>
+  <text x="750" y="160" fill="#e2e8f0" font-size="16" font-family="sans-serif">服务挂载</text>
+  <rect x="180" y="280" width="600" height="160" rx="14" fill="#111827" stroke="#64748b"/>
+  <text x="210" y="330" fill="#cbd5e1" font-size="16" font-family="sans-serif">观测：源占比(OSS/P2P/Local) · 校验失败 · 预热 ETA · 驱逐原因</text>
+  <text x="210" y="370" fill="#cbd5e1" font-size="16" font-family="sans-serif">治理：租户配额 · 热点 pin · 灰度节点池 · 变更窗口</text>
+  <text x="210" y="410" fill="#94a3b8" font-size="15" font-family="sans-serif">任何“拷贝成功”都必须留下可回放证据，否则不能算平台能力</text>
+</svg>
