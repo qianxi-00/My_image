@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#0b1220"/>
+  <text x="480" y="40" text-anchor="middle" fill="#f8fafc" font-size="24" font-family="Sans-serif" font-weight="bold">RLHF / PRM / RLVR 信号对比</text>
+  <rect x="40" y="80" width="280" height="400" rx="14" fill="#1e293b" stroke="#60a5fa"/>
+  <text x="180" y="120" text-anchor="middle" fill="#93c5fd" font-size="20" font-family="Sans-serif">RLHF 偏好奖励</text>
+  <text x="60" y="170" fill="#cbd5e1" font-size="15" font-family="Sans-serif">来源：人类/AI 偏好</text>
+  <text x="60" y="205" fill="#cbd5e1" font-size="15" font-family="Sans-serif">形态：相对排序</text>
+  <text x="60" y="240" fill="#cbd5e1" font-size="15" font-family="Sans-serif">优点：覆盖开放任务</text>
+  <text x="60" y="275" fill="#cbd5e1" font-size="15" font-family="Sans-serif">风险：风格讨好</text>
+  <text x="60" y="310" fill="#cbd5e1" font-size="15" font-family="Sans-serif">风险：奖励漂移</text>
+  <text x="60" y="345" fill="#cbd5e1" font-size="15" font-family="Sans-serif">成本：标注昂贵</text>
+  <text x="60" y="400" fill="#7dd3fc" font-size="15" font-family="Sans-serif">适合：写作、对话</text>
+  <rect x="340" y="80" width="280" height="400" rx="14" fill="#1e293b" stroke="#c084fc"/>
+  <text x="480" y="120" text-anchor="middle" fill="#d8b4fe" font-size="20" font-family="Sans-serif">过程奖励 PRM</text>
+  <text x="360" y="170" fill="#cbd5e1" font-size="15" font-family="Sans-serif">来源：步骤标签</text>
+  <text x="360" y="205" fill="#cbd5e1" font-size="15" font-family="Sans-serif">形态：逐步打分</text>
+  <text x="360" y="240" fill="#cbd5e1" font-size="15" font-family="Sans-serif">优点：信用分配细</text>
+  <text x="360" y="275" fill="#cbd5e1" font-size="15" font-family="Sans-serif">风险：标注难</text>
+  <text x="360" y="310" fill="#cbd5e1" font-size="15" font-family="Sans-serif">风险：步骤定义模糊</text>
+  <text x="360" y="345" fill="#cbd5e1" font-size="15" font-family="Sans-serif">成本：过程监督贵</text>
+  <text x="360" y="400" fill="#e9d5ff" font-size="15" font-family="Sans-serif">适合：长推理过程</text>
+  <rect x="640" y="80" width="280" height="400" rx="14" fill="#1e293b" stroke="#34d399"/>
+  <text x="780" y="120" text-anchor="middle" fill="#6ee7b7" font-size="20" font-family="Sans-serif">可验证奖励 RLVR</text>
+  <text x="660" y="170" fill="#cbd5e1" font-size="15" font-family="Sans-serif">来源：规则/执行器</text>
+  <text x="660" y="205" fill="#cbd5e1" font-size="15" font-family="Sans-serif">形态：对错/分数</text>
+  <text x="660" y="240" fill="#cbd5e1" font-size="15" font-family="Sans-serif">优点：信号客观</text>
+  <text x="660" y="275" fill="#cbd5e1" font-size="15" font-family="Sans-serif">风险：任务覆盖窄</text>
+  <text x="660" y="310" fill="#cbd5e1" font-size="15" font-family="Sans-serif">风险：投机过拟合</text>
+  <text x="660" y="345" fill="#cbd5e1" font-size="15" font-family="Sans-serif">成本：验证器工程</text>
+  <text x="660" y="400" fill="#a7f3d0" font-size="15" font-family="Sans-serif">适合：数学代码工具</text>
+</svg>
