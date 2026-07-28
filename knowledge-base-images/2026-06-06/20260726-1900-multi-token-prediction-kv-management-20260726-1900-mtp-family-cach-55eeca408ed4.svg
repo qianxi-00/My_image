@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="740" viewBox="0 0 1200 740">
+  <defs>
+    <linearGradient id="a" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#0f766e"/><stop offset="100%" stop-color="#2dd4bf"/></linearGradient>
+    <linearGradient id="b" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#b45309"/><stop offset="100%" stop-color="#fbbf24"/></linearGradient>
+    <linearGradient id="c" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#be123c"/><stop offset="100%" stop-color="#fb7185"/></linearGradient>
+    <style>
+      .t{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#0f172a}
+      .s{font-size:22px;font-weight:700}
+      .m{font-size:14px;fill:#334155}
+      .w{fill:#fff;font-size:14px;font-weight:600}
+      .box{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2;rx:12}
+    </style>
+  </defs>
+  <rect width="1200" height="740" fill="#ffffff"/>
+  <text class="t s" x="36" y="40">MTP 家族下的缓存写入路径</text>
+  <text class="t m" x="36" y="70">不同结构决定“候选 token 的 KV 从哪来、何时提交、失败怎么回滚”</text>
+
+  <rect class="box" x="36" y="100" width="360" height="280"/>
+  <rect x="56" y="120" width="320" height="42" rx="10" fill="url(#a)"/>
+  <text class="w" x="120" y="147">多头并行 MTP</text>
+  <text class="t m" x="56" y="190">共享主干 hidden state</text>
+  <text class="t m" x="56" y="220">n+1,n+2,... 多个预测头</text>
+  <text class="t m" x="56" y="250">候选可并行验证</text>
+  <text class="t m" x="56" y="280">KV：主干一次，头输出后提交</text>
+  <text class="t m" x="56" y="320">风险：深度依赖被低估</text>
+  <text class="t m" x="56" y="350">代表：Medusa 类结构</text>
+
+  <rect class="box" x="420" y="100" width="360" height="280"/>
+  <rect x="440" y="120" width="320" height="42" rx="10" fill="url(#b)"/>
+  <text class="w" x="500" y="147">特征级草稿 MTP</text>
+  <text class="t m" x="440" y="190">用特征层近似下一 token</text>
+  <text class="t m" x="440" y="220">草稿状态贴近目标模型</text>
+  <text class="t m" x="440" y="250">接受率通常更高</text>
+  <text class="t m" x="440" y="280">KV：可共享部分中间态</text>
+  <text class="t m" x="440" y="320">风险：状态维度绑定强</text>
+  <text class="t m" x="440" y="350">代表：EAGLE 类结构</text>
+
+  <rect class="box" x="804" y="100" width="360" height="280"/>
+  <rect x="824" y="120" width="320" height="42" rx="10" fill="url(#c)"/>
+  <text class="w" x="880" y="147">树状/多路径 MTP</text>
+  <text class="t m" x="824" y="190">一次展开多条候选路径</text>
+  <text class="t m" x="824" y="220">验证后选最长可接受前缀</text>
+  <text class="t m" x="824" y="250">KV：分支块临时占用大</text>
+  <text class="t m" x="824" y="280">未选中路径必须整枝回收</text>
+  <text class="t m" x="824" y="320">风险：峰值显存突刺</text>
+  <text class="t m" x="824" y="350">代表：Tree Spec / 并行采样树</text>
+
+  <rect class="box" x="36" y="410" width="1128" height="290"/>
+  <text class="t s" x="56" y="450" style="font-size:18px">写入节奏工程含义</text>
+  <text class="t m" x="56" y="500">1. 线性路径：提交边界简单，像“批量追加 + 截断尾部”。</text>
+  <text class="t m" x="56" y="540">2. 特征共享路径：草稿态与目标态耦合，回滚要同步两端指针。</text>
+  <text class="t m" x="56" y="580">3. 树状路径：缓存管理从队列变成图，分页块要支持分支引用计数。</text>
+  <text class="t m" x="56" y="620">4. 共同原则：未验证 token 绝不能永久污染权威 KV；接受后必须原子提交。</text>
+  <text class="t m" x="56" y="660">5. 观测指标：候选写入量、提交率、回滚字节数、峰值 block 占用。</text>
+</svg>
