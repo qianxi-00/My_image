@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#0b1220"/>
+  <text x="60" y="70" fill="#f8fafc" font-size="32" font-family="sans-serif" font-weight="700">动作提交状态机（Wearable Commit FSM）</text>
+  <text x="60" y="110" fill="#94a3b8" font-size="18" font-family="sans-serif">PROPOSED → PREVIEWED → ARMED → COMMITTED → REVERSIBLE / FINAL</text>
+  <!-- states -->
+  <g font-family="sans-serif">
+    <rect x="70" y="200" width="180" height="80" rx="12" fill="#1d4ed8"/>
+    <text x="160" y="248" text-anchor="middle" fill="#fff" font-size="20" font-weight="700">PROPOSED</text>
+    <rect x="300" y="200" width="180" height="80" rx="12" fill="#7c3aed"/>
+    <text x="390" y="248" text-anchor="middle" fill="#fff" font-size="20" font-weight="700">PREVIEWED</text>
+    <rect x="530" y="200" width="180" height="80" rx="12" fill="#db2777"/>
+    <text x="620" y="248" text-anchor="middle" fill="#fff" font-size="20" font-weight="700">ARMED</text>
+    <rect x="760" y="200" width="180" height="80" rx="12" fill="#059669"/>
+    <text x="850" y="248" text-anchor="middle" fill="#fff" font-size="20" font-weight="700">COMMITTED</text>
+    <rect x="990" y="200" width="150" height="80" rx="12" fill="#b45309"/>
+    <text x="1065" y="248" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">FINAL</text>
+  </g>
+  <path d="M250 240 H300" stroke="#94a3b8" stroke-width="3"/>
+  <path d="M480 240 H530" stroke="#94a3b8" stroke-width="3"/>
+  <path d="M710 240 H760" stroke="#94a3b8" stroke-width="3"/>
+  <path d="M940 240 H990" stroke="#94a3b8" stroke-width="3"/>
+  <!-- side notes -->
+  <rect x="70" y="340" width="500" height="300" rx="16" fill="#111827" stroke="#334155"/>
+  <text x="100" y="390" fill="#93c5fd" font-size="22" font-family="sans-serif" font-weight="700">可撤销窗口（Reversible Window）</text>
+  <text x="100" y="440" fill="#cbd5e1" font-size="18" font-family="sans-serif">• L1: 5–15s 内可语音撤销</text>
+  <text x="100" y="480" fill="#cbd5e1" font-size="18" font-family="sans-serif">• L2: 提交前草稿预览，确认后短窗撤销</text>
+  <text x="100" y="520" fill="#cbd5e1" font-size="18" font-family="sans-serif">• L3+: 无静默撤销，必须显式二次确认</text>
+  <text x="100" y="560" fill="#94a3b8" font-size="17" font-family="sans-serif">• 撤销必须可感知：TTS/触感/字幕同步</text>
+  <text x="100" y="600" fill="#64748b" font-size="16" font-family="sans-serif">核心：提交不等于最终；最终才写外部副作用</text>
+  <rect x="620" y="340" width="520" height="300" rx="16" fill="#111827" stroke="#334155"/>
+  <text x="650" y="390" fill="#f9a8d4" font-size="22" font-family="sans-serif" font-weight="700">失败与超时策略</text>
+  <text x="650" y="440" fill="#cbd5e1" font-size="18" font-family="sans-serif">• 确认超时：默认 abort，不默认 yes</text>
+  <text x="650" y="480" fill="#cbd5e1" font-size="18" font-family="sans-serif">• 低置信意图：降级为草稿，不进 ARMED</text>
+  <text x="650" y="520" fill="#cbd5e1" font-size="18" font-family="sans-serif">• 噪声/串话：要求二次短语或触控</text>
+  <text x="650" y="560" fill="#cbd5e1" font-size="18" font-family="sans-serif">• 网络失败：本地记录 pending commit</text>
+  <text x="650" y="600" fill="#64748b" font-size="16" font-family="sans-serif">原则：宁可少做一件，不可错做一件</text>
+</svg>
