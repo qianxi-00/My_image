@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="c1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <text x="600" y="48" text-anchor="middle" fill="#e2e8f0" font-size="28" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-weight="700">模型网关控制面：从入口到多后端的决策链路</text>
+  <rect x="80" y="100" width="200" height="90" rx="14" fill="#0ea5e9" opacity="0.9"/>
+  <text x="180" y="140" text-anchor="middle" fill="#fff" font-size="20" font-family="Noto Sans CJK SC, sans-serif">客户端 / Agent</text>
+  <text x="180" y="168" text-anchor="middle" fill="#e0f2fe" font-size="15" font-family="Noto Sans CJK SC, sans-serif">请求 · 会话 · 工具轨迹</text>
+  <path d="M280 145 H360" stroke="#94a3b8" stroke-width="3" marker-end="url(#arrow)"/>
+  <polygon points="360,140 375,145 360,150" fill="#94a3b8"/>
+  <rect x="380" y="80" width="440" height="560" rx="18" fill="#111827" stroke="#64748b" stroke-width="2"/>
+  <text x="600" y="115" text-anchor="middle" fill="#f8fafc" font-size="22" font-family="Noto Sans CJK SC, sans-serif" font-weight="700">模型网关（控制面）</text>
+  <rect x="410" y="145" width="380" height="55" rx="10" fill="#1d4ed8"/>
+  <text x="600" y="178" text-anchor="middle" fill="#fff" font-size="18" font-family="Noto Sans CJK SC, sans-serif">鉴权 · 配额 · 租户策略</text>
+  <rect x="410" y="220" width="380" height="55" rx="10" fill="#7c3aed"/>
+  <text x="600" y="253" text-anchor="middle" fill="#fff" font-size="18" font-family="Noto Sans CJK SC, sans-serif">意图分类 / 能力画像匹配</text>
+  <rect x="410" y="295" width="380" height="55" rx="10" fill="#0f766e"/>
+  <text x="600" y="328" text-anchor="middle" fill="#fff" font-size="18" font-family="Noto Sans CJK SC, sans-serif">路由：成本 / 延迟 / 质量 / 风险</text>
+  <rect x="410" y="370" width="380" height="55" rx="10" fill="#b45309"/>
+  <text x="600" y="403" text-anchor="middle" fill="#fff" font-size="18" font-family="Noto Sans CJK SC, sans-serif">缓存 · 前缀复用 · 会话粘性</text>
+  <rect x="410" y="445" width="380" height="55" rx="10" fill="#be123c"/>
+  <text x="600" y="478" text-anchor="middle" fill="#fff" font-size="18" font-family="Noto Sans CJK SC, sans-serif">限流 · 熔断 · 降级 · 回滚</text>
+  <rect x="410" y="520" width="380" height="55" rx="10" fill="#334155"/>
+  <text x="600" y="553" text-anchor="middle" fill="#fff" font-size="18" font-family="Noto Sans CJK SC, sans-serif">观测：追踪 · 成本账本 · 回放</text>
+  <path d="M820 200 H900" stroke="#94a3b8" stroke-width="3"/>
+  <polygon points="900,195 915,200 900,205" fill="#94a3b8"/>
+  <path d="M820 330 H900" stroke="#94a3b8" stroke-width="3"/>
+  <polygon points="900,325 915,330 900,335" fill="#94a3b8"/>
+  <path d="M820 460 H900" stroke="#94a3b8" stroke-width="3"/>
+  <polygon points="900,455 915,460 900,465" fill="#94a3b8"/>
+  <rect x="920" y="150" width="210" height="80" rx="12" fill="#0369a1"/>
+  <text x="1025" y="185" text-anchor="middle" fill="#fff" font-size="18" font-family="Noto Sans CJK SC, sans-serif">巨型通用模型</text>
+  <text x="1025" y="210" text-anchor="middle" fill="#e0f2fe" font-size="14" font-family="Noto Sans CJK SC, sans-serif">高能力 · 高成本</text>
+  <rect x="920" y="280" width="210" height="80" rx="12" fill="#6d28d9"/>
+  <text x="1025" y="315" text-anchor="middle" fill="#fff" font-size="18" font-family="Noto Sans CJK SC, sans-serif">专用 / 小模型池</text>
+  <text x="1025" y="340" text-anchor="middle" fill="#ede9fe" font-size="14" font-family="Noto Sans CJK SC, sans-serif">低延迟 · 可扩缩</text>
+  <rect x="920" y="410" width="210" height="80" rx="12" fill="#0f766e"/>
+  <text x="1025" y="445" text-anchor="middle" fill="#fff" font-size="18" font-family="Noto Sans CJK SC, sans-serif">工具 / 检索 / 验证器</text>
+  <text x="1025" y="470" text-anchor="middle" fill="#ccfbf1" font-size="14" font-family="Noto Sans CJK SC, sans-serif">非参数化能力扩展</text>
+  <rect x="920" y="540" width="210" height="80" rx="12" fill="#9a3412"/>
+  <text x="1025" y="575" text-anchor="middle" fill="#fff" font-size="18" font-family="Noto Sans CJK SC, sans-serif">安全与合规后端</text>
+  <text x="1025" y="600" text-anchor="middle" fill="#ffedd5" font-size="14" font-family="Noto Sans CJK SC, sans-serif">拒答 · 审计 · 隔离</text>
+  <text x="600" y="690" text-anchor="middle" fill="#94a3b8" font-size="16" font-family="Noto Sans CJK SC, sans-serif">网关不是“转发器”，而是架构选择与 SLO 的统一执行点</text>
+</svg>
