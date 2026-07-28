@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="740" viewBox="0 0 1200 740">
+  <rect width="1200" height="740" fill="#0b1220"/>
+  <text x="600" y="46" text-anchor="middle" fill="#f8fafc" font-size="26" font-family="Noto Sans CJK SC, Sans-Serif" font-weight="700">Needle-in-a-Haystack 失败模式与 KV 状态路径</text>
+  <text x="600" y="78" text-anchor="middle" fill="#94a3b8" font-size="15" font-family="Noto Sans CJK SC, Sans-Serif">从 token 写入 → 压缩/驱逐 → 注意力读回 → 生成决策的误差放大链</text>
+
+  <!-- timeline -->
+  <rect x="80" y="130" width="1040" height="90" rx="12" fill="#111827" stroke="#334155"/>
+  <circle cx="180" cy="175" r="18" fill="#22d3ee"/>
+  <circle cx="400" cy="175" r="18" fill="#38bdf8"/>
+  <circle cx="620" cy="175" r="18" fill="#a78bfa"/>
+  <circle cx="840" cy="175" r="18" fill="#f59e0b"/>
+  <circle cx="1040" cy="175" r="18" fill="#ef4444"/>
+  <line x1="198" y1="175" x2="382" y2="175" stroke="#475569" stroke-width="4"/>
+  <line x1="418" y1="175" x2="602" y2="175" stroke="#475569" stroke-width="4"/>
+  <line x1="638" y1="175" x2="822" y2="175" stroke="#475569" stroke-width="4"/>
+  <line x1="858" y1="175" x2="1022" y2="175" stroke="#475569" stroke-width="4"/>
+  <text x="180" y="155" text-anchor="middle" fill="#e2e8f0" font-size="14" font-family="Noto Sans CJK SC, Sans-Serif">写入 KV</text>
+  <text x="400" y="155" text-anchor="middle" fill="#e2e8f0" font-size="14" font-family="Noto Sans CJK SC, Sans-Serif">压缩/量化</text>
+  <text x="620" y="155" text-anchor="middle" fill="#e2e8f0" font-size="14" font-family="Noto Sans CJK SC, Sans-Serif">驱逐/截断</text>
+  <text x="840" y="155" text-anchor="middle" fill="#e2e8f0" font-size="14" font-family="Noto Sans CJK SC, Sans-Serif">注意力读回</text>
+  <text x="1040" y="155" text-anchor="middle" fill="#e2e8f0" font-size="14" font-family="Noto Sans CJK SC, Sans-Serif">生成输出</text>
+  <text x="180" y="205" text-anchor="middle" fill="#64748b" font-size="12" font-family="Noto Sans CJK SC, Sans-Serif">针被编码</text>
+  <text x="400" y="205" text-anchor="middle" fill="#64748b" font-size="12" font-family="Noto Sans CJK SC, Sans-Serif">信号变弱</text>
+  <text x="620" y="205" text-anchor="middle" fill="#64748b" font-size="12" font-family="Noto Sans CJK SC, Sans-Serif">针可能消失</text>
+  <text x="840" y="205" text-anchor="middle" fill="#64748b" font-size="12" font-family="Noto Sans CJK SC, Sans-Serif">位置偏置</text>
+  <text x="1040" y="205" text-anchor="middle" fill="#64748b" font-size="12" font-family="Noto Sans CJK SC, Sans-Serif">幻觉/漏答</text>
+
+  <!-- 4 cards -->
+  <rect x="70" y="260" width="250" height="200" rx="14" fill="#111827" stroke="#22d3ee"/>
+  <text x="195" y="300" text-anchor="middle" fill="#22d3ee" font-size="18" font-family="Noto Sans CJK SC, Sans-Serif" font-weight="700">模式 A</text>
+  <text x="195" y="340" text-anchor="middle" fill="#f1f5f9" font-size="16" font-family="Noto Sans CJK SC, Sans-Serif">硬丢失</text>
+  <text x="195" y="375" text-anchor="middle" fill="#94a3b8" font-size="14" font-family="Noto Sans CJK SC, Sans-Serif">针 token 被驱逐</text>
+  <text x="195" y="405" text-anchor="middle" fill="#94a3b8" font-size="14" font-family="Noto Sans CJK SC, Sans-Serif">或滑窗截断掉</text>
+  <text x="195" y="435" text-anchor="middle" fill="#fca5a5" font-size="14" font-family="Noto Sans CJK SC, Sans-Serif">不可恢复</text>
+
+  <rect x="340" y="260" width="250" height="200" rx="14" fill="#111827" stroke="#a78bfa"/>
+  <text x="465" y="300" text-anchor="middle" fill="#a78bfa" font-size="18" font-family="Noto Sans CJK SC, Sans-Serif" font-weight="700">模式 B</text>
+  <text x="465" y="340" text-anchor="middle" fill="#f1f5f9" font-size="16" font-family="Noto Sans CJK SC, Sans-Serif">软失真</text>
+  <text x="465" y="375" text-anchor="middle" fill="#94a3b8" font-size="14" font-family="Noto Sans CJK SC, Sans-Serif">量化/低秩压缩</text>
+  <text x="465" y="405" text-anchor="middle" fill="#94a3b8" font-size="14" font-family="Noto Sans CJK SC, Sans-Serif">关键细节模糊</text>
+  <text x="465" y="435" text-anchor="middle" fill="#fcd34d" font-size="14" font-family="Noto Sans CJK SC, Sans-Serif">偶发可猜中</text>
+
+  <rect x="610" y="260" width="250" height="200" rx="14" fill="#111827" stroke="#f59e0b"/>
+  <text x="735" y="300" text-anchor="middle" fill="#f59e0b" font-size="18" font-family="Noto Sans CJK SC, Sans-Serif" font-weight="700">模式 C</text>
+  <text x="735" y="340" text-anchor="middle" fill="#f1f5f9" font-size="16" font-family="Noto Sans CJK SC, Sans-Serif">位置偏置</text>
+  <text x="735" y="375" text-anchor="middle" fill="#94a3b8" font-size="14" font-family="Noto Sans CJK SC, Sans-Serif">中间段更易丢</text>
+  <text x="735" y="405" text-anchor="middle" fill="#94a3b8" font-size="14" font-family="Noto Sans CJK SC, Sans-Serif">首尾相对更稳</text>
+  <text x="735" y="435" text-anchor="middle" fill="#fcd34d" font-size="14" font-family="Noto Sans CJK SC, Sans-Serif">NIAH 曲线 U 形</text>
+
+  <rect x="880" y="260" width="250" height="200" rx="14" fill="#111827" stroke="#ef4444"/>
+  <text x="1005" y="300" text-anchor="middle" fill="#ef4444" font-size="18" font-family="Noto Sans CJK SC, Sans-Serif" font-weight="700">模式 D</text>
+  <text x="1005" y="340" text-anchor="middle" fill="#f1f5f9" font-size="16" font-family="Noto Sans CJK SC, Sans-Serif">竞争淹没</text>
+  <text x="1005" y="375" text-anchor="middle" fill="#94a3b8" font-size="14" font-family="Noto Sans CJK SC, Sans-Serif">多针/多约束</text>
+  <text x="1005" y="405" text-anchor="middle" fill="#94a3b8" font-size="14" font-family="Noto Sans CJK SC, Sans-Serif">注意力预算不足</text>
+  <text x="1005" y="435" text-anchor="middle" fill="#fca5a5" font-size="14" font-family="Noto Sans CJK SC, Sans-Serif">只答到部分针</text>
+
+  <rect x="70" y="500" width="1060" height="180" rx="14" fill="#111827" stroke="#334155"/>
+  <text x="600" y="545" text-anchor="middle" fill="#e2e8f0" font-size="20" font-family="Noto Sans CJK SC, Sans-Serif" font-weight="700">治理提示</text>
+  <text x="600" y="585" text-anchor="middle" fill="#94a3b8" font-size="16" font-family="Noto Sans CJK SC, Sans-Serif">1) 用分层 NIAH / Multi-Needle / 位置扫描评测替代“窗口长度营销”</text>
+  <text x="600" y="620" text-anchor="middle" fill="#94a3b8" font-size="16" font-family="Noto Sans CJK SC, Sans-Serif">2) 对关键 token 提高保留优先级；压缩与驱逐必须可观测、可回滚</text>
+  <text x="600" y="655" text-anchor="middle" fill="#94a3b8" font-size="16" font-family="Noto Sans CJK SC, Sans-Serif">3) 将召回成功率纳入服务 SLO，与 TTFT、吞吐并列</text>
+</svg>
