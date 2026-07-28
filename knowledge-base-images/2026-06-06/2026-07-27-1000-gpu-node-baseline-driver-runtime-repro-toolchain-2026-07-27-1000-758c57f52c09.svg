@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f766e"/>
+      <stop offset="100%" stop-color="#115e59"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="560" fill="#0b1220"/>
+  <text x="48" y="48" fill="#e2e8f0" font-size="24" font-family="DejaVu Sans, sans-serif" font-weight="700">GPU 节点基线分层：从内核到推理运行时</text>
+  <text x="48" y="78" fill="#94a3b8" font-size="14" font-family="DejaVu Sans, sans-serif">可复现部署工具链需要把“能跑”拆成可版本化、可校验、可回滚的层</text>
+  <!-- layers -->
+  <rect x="60" y="110" width="840" height="70" rx="12" fill="url(#g1)"/>
+  <text x="80" y="152" fill="#ecfeff" font-size="18" font-family="DejaVu Sans, sans-serif">L0 主机 OS / 内核 / 安全基线 / 内核参数与 cgroup</text>
+  <rect x="60" y="195" width="840" height="70" rx="12" fill="#134e4a"/>
+  <text x="80" y="237" fill="#ecfeff" font-size="18" font-family="DejaVu Sans, sans-serif">L1 GPU 驱动 / Fabric Manager / 固件 / 设备节点与权限</text>
+  <rect x="60" y="280" width="840" height="70" rx="12" fill="#1e3a5f"/>
+  <text x="80" y="322" fill="#e0f2fe" font-size="18" font-family="DejaVu Sans, sans-serif">L2 Container Runtime + NVIDIA Container Toolkit / CDI / 设备注入</text>
+  <rect x="60" y="365" width="840" height="70" rx="12" fill="url(#g2)"/>
+  <text x="80" y="407" fill="#f8fafc" font-size="18" font-family="DejaVu Sans, sans-serif">L3 节点 Agent：DCGM / NFD / Device Plugin 或 DRA 插件 / 健康探针</text>
+  <rect x="60" y="450" width="840" height="70" rx="12" fill="#312e81"/>
+  <text x="80" y="492" fill="#e0e7ff" font-size="18" font-family="DejaVu Sans, sans-serif">L4 工作负载：推理容器 / 权重挂载 / 网络与配额（不在本文展开引擎内部）</text>
+</svg>
