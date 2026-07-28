@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680">
+  <defs>
+    <linearGradient id="a" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1d4ed8"/><stop offset="100%" stop-color="#38bdf8"/></linearGradient>
+    <linearGradient id="b" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#047857"/><stop offset="100%" stop-color="#34d399"/></linearGradient>
+    <linearGradient id="c" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#b45309"/><stop offset="100%" stop-color="#fbbf24"/></linearGradient>
+    <style>
+      .t{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#0f172a}
+      .s{font-size:22px;font-weight:700}
+      .b{font-size:16px;font-weight:700}
+      .m{font-size:14px;fill:#334155}
+      .w{fill:#fff;font-size:15px;font-weight:600}
+      .box{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2;rx:12}
+    </style>
+  </defs>
+  <rect width="1200" height="680" fill="#ffffff"/>
+  <text class="t s" x="40" y="42">投机解码中的 KV 归属：谁写、谁读、谁能复用</text>
+  <text class="t m" x="40" y="72">核心问题：草稿模型的 KV 与目标模型的 KV 通常不能直接互换</text>
+
+  <rect class="box" x="40" y="100" width="350" height="240"/>
+  <rect x="60" y="120" width="310" height="44" rx="10" fill="url(#a)"/>
+  <text class="w" x="120" y="148">目标模型 Target KV</text>
+  <text class="t m" x="60" y="190">维度：层数 × 头数 × d_k</text>
+  <text class="t m" x="60" y="218">精度：FP16 / FP8 / INT4 策略</text>
+  <text class="t m" x="60" y="246">分页布局：PagedAttention block</text>
+  <text class="t m" x="60" y="274">语义：最终被接受 token 的真状态</text>
+  <text class="t m" x="60" y="310">结论：权威缓存，不可被草稿污染</text>
+
+  <rect class="box" x="425" y="100" width="350" height="240"/>
+  <rect x="445" y="120" width="310" height="44" rx="10" fill="url(#b)"/>
+  <text class="w" x="500" y="148">草稿模型 Draft KV</text>
+  <text class="t m" x="445" y="190">可能是另一套权重/架构</text>
+  <text class="t m" x="445" y="218">层数、头数、RoPE 可能不同</text>
+  <text class="t m" x="445" y="246">只服务候选 token 生成</text>
+  <text class="t m" x="445" y="274">拒绝后需要回滚草稿缓存</text>
+  <text class="t m" x="445" y="310">结论：临时缓存，默认不可并入目标</text>
+
+  <rect class="box" x="810" y="100" width="350" height="240"/>
+  <rect x="830" y="120" width="310" height="44" rx="10" fill="url(#c)"/>
+  <text class="w" x="885" y="148">验证期临时状态</text>
+  <text class="t m" x="830" y="190">目标模型并行验证 K 个候选</text>
+  <text class="t m" x="830" y="218">前缀接受段写入目标 KV</text>
+  <text class="t m" x="830" y="246">拒绝点之后的 KV 必须丢弃</text>
+  <text class="t m" x="830" y="274">采样分布保持与自回归一致</text>
+  <text class="t m" x="830" y="310">结论：复用发生在验证后确认</text>
+
+  <rect class="box" x="40" y="370" width="1120" height="260"/>
+  <text class="t b" x="60" y="410">三种常见“复用”说法，分别指什么</text>
+  <text class="t m" x="60" y="450">1. 草稿读目标 KV：仅当草稿与目标同架构、同布局、且有跨注意力/特征注入时可能成立，属于特例而非默认能力。</text>
+  <text class="t m" x="60" y="490">2. 目标复用草稿 KV：通常不可行。草稿与目标参数不同，KV 表示空间不一致，直接复用会破坏正确性。</text>
+  <text class="t m" x="60" y="530">3. 目标复用自己验证时写的 KV：这是真复用。接受的前缀 token 对应 KV 保留，拒绝后缀回滚，下轮继续追加。</text>
+  <text class="t m" x="60" y="570">工程含义：投机解码加速的是“目标模型前向次数”，不是“让两套 KV 免费共享”。缓存账本必须按模型与接受边界分账。</text>
+  <text class="t m" x="60" y="610">下一层问题：树状草稿、Medusa/EAGLE 头、量化自投机，会改变写入节奏，但不会取消“目标 KV 才是权威状态”这条原则。</text>
+</svg>
