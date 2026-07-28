@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0c1222"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="560" rx="24" fill="url(#bg3)"/>
+  <text x="48" y="52" fill="#f8fafc" font-size="24" font-family="Arial, sans-serif" font-weight="700">本地路由器决策矩阵（示意）</text>
+  <text x="48" y="82" fill="#94a3b8" font-size="14" font-family="Arial, sans-serif">输入：意图风险 × 模态需求 × 网络/电量 × 隐私域 → 输出：执行平面</text>
+  <!-- table-like boxes -->
+  <g font-family="Arial, sans-serif" font-size="13">
+    <rect x="48" y="120" width="860" height="48" rx="8" fill="#312e81"/>
+    <text x="70" y="150" fill="#e0e7ff">场景</text>
+    <text x="250" y="150" fill="#e0e7ff">风险级</text>
+    <text x="380" y="150" fill="#e0e7ff">默认平面</text>
+    <text x="560" y="150" fill="#e0e7ff">可升级条件</text>
+    <text x="760" y="150" fill="#e0e7ff">必须确认</text>
+    <rect x="48" y="180" width="860" height="52" rx="8" fill="#0f172a"/>
+    <text x="70" y="212" fill="#cbd5e1">查天气/计时</text>
+    <text x="250" y="212" fill="#86efac">L0</text>
+    <text x="380" y="212" fill="#cbd5e1">本地小模型</text>
+    <text x="560" y="212" fill="#94a3b8">几乎不升级</text>
+    <text x="760" y="212" fill="#94a3b8">否</text>
+    <rect x="48" y="244" width="860" height="52" rx="8" fill="#111827"/>
+    <text x="70" y="276" fill="#cbd5e1">看菜单翻译</text>
+    <text x="250" y="276" fill="#fde047">L1</text>
+    <text x="380" y="276" fill="#cbd5e1">端侧视觉短窗</text>
+    <text x="560" y="276" fill="#94a3b8">模糊/多语 → 云</text>
+    <text x="760" y="276" fill="#94a3b8">否</text>
+    <rect x="48" y="308" width="860" height="52" rx="8" fill="#0f172a"/>
+    <text x="70" y="340" fill="#cbd5e1">改日程/发消息</text>
+    <text x="250" y="340" fill="#fb923c">L2</text>
+    <text x="380" y="340" fill="#cbd5e1">本地草稿+确认</text>
+    <text x="560" y="340" fill="#94a3b8">歧义高 → 复述</text>
+    <text x="760" y="340" fill="#fda4af">是</text>
+    <rect x="48" y="372" width="860" height="52" rx="8" fill="#111827"/>
+    <text x="70" y="404" fill="#cbd5e1">支付/对外发送</text>
+    <text x="250" y="404" fill="#f87171">L3</text>
+    <text x="380" y="404" fill="#cbd5e1">云策略+二次确认</text>
+    <text x="560" y="404" fill="#94a3b8">仅用户显式授权</text>
+    <text x="760" y="404" fill="#fda4af">强制</text>
+  </g>
+  <text x="48" y="470" fill="#a5b4fc" font-size="14" font-family="Arial, sans-serif">路由不是“哪个模型更强”，而是“这次交互允许消耗多少感知与副作用预算”。</text>
+  <text x="48" y="510" fill="#64748b" font-size="13" font-family="Arial, sans-serif">本地路由器先裁决，模型后生成；生成不得绕过预算与确认门。</text>
+</svg>
