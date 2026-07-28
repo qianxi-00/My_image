@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1220"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" fill="url(#bg)"/>
+  <text x="48" y="58" fill="#E2E8F0" font-size="28" font-family="sans-serif">从长上下文堆帧 → 流式 AV 工作记忆</text>
+  <rect x="48" y="100" width="400" height="360" rx="16" fill="#1E293B" stroke="#64748B"/>
+  <text x="72" y="140" fill="#94A3B8" font-size="20" font-family="sans-serif">旧范式</text>
+  <text x="72" y="190" fill="#F8FAFC" font-size="18" font-family="sans-serif">1. 采样更多帧</text>
+  <text x="72" y="230" fill="#F8FAFC" font-size="18" font-family="sans-serif">2. 塞进超长 context</text>
+  <text x="72" y="270" fill="#F8FAFC" font-size="18" font-family="sans-serif">3. 末尾再问答</text>
+  <text x="72" y="310" fill="#F8FAFC" font-size="18" font-family="sans-serif">4. 证据不可提交</text>
+  <text x="72" y="350" fill="#FCA5A5" font-size="18" font-family="sans-serif">结果：贵、慢、难审计</text>
+  <rect x="512" y="100" width="400" height="360" rx="16" fill="#0F766E" stroke="#5EEAD4"/>
+  <text x="536" y="140" fill="#CCFBF1" font-size="20" font-family="sans-serif">新范式</text>
+  <text x="536" y="190" fill="#F0FDFA" font-size="18" font-family="sans-serif">1. 连续感知写入</text>
+  <text x="536" y="230" fill="#F0FDFA" font-size="18" font-family="sans-serif">2. 事件化工作记忆</text>
+  <text x="536" y="270" fill="#F0FDFA" font-size="18" font-family="sans-serif">3. 可遗忘/可检索</text>
+  <text x="536" y="310" fill="#F0FDFA" font-size="18" font-family="sans-serif">4. 时间戳证据提交</text>
+  <text x="536" y="350" fill="#99F6E4" font-size="18" font-family="sans-serif">结果：可在线、可验收</text>
+</svg>
