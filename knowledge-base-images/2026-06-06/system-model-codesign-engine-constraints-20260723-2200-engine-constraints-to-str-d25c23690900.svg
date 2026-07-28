@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#0f172a"/>
+  <text x="600" y="48" text-anchor="middle" fill="#f8fafc" font-size="26" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-weight="700">引擎约束如何映射到模型结构旋钮</text>
+  <text x="600" y="80" text-anchor="middle" fill="#94a3b8" font-size="15" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">把“系统痛点”翻译成可改的架构参数，而不是只调服务端补丁</text>
+
+  <!-- left column -->
+  <rect x="60" y="120" width="340" height="540" rx="16" fill="#111827" stroke="#334155"/>
+  <text x="230" y="160" text-anchor="middle" fill="#38bdf8" font-size="20" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-weight="700">推理引擎侧痛点</text>
+  <text x="90" y="210" fill="#e2e8f0" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">• KV Cache 线性膨胀</text>
+  <text x="90" y="250" fill="#e2e8f0" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">• Prefill / Decode 争用</text>
+  <text x="90" y="290" fill="#e2e8f0" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">• 小 batch 带宽瓶颈</text>
+  <text x="90" y="330" fill="#e2e8f0" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">• MoE all-to-all 抖动</text>
+  <text x="90" y="370" fill="#e2e8f0" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">• 热专家负载倾斜</text>
+  <text x="90" y="410" fill="#e2e8f0" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">• 内核碎片与形状爆炸</text>
+  <text x="90" y="450" fill="#e2e8f0" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">• 多租户隔离与缓存复用</text>
+  <text x="90" y="490" fill="#e2e8f0" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">• 长 CoT 显存尾延迟</text>
+  <text x="90" y="530" fill="#e2e8f0" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">• 网关多模型路由成本</text>
+  <text x="90" y="570" fill="#e2e8f0" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">• 硬件算子生态差异</text>
+  <text x="90" y="610" fill="#e2e8f0" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">• 灰度/回滚与版本兼容</text>
+
+  <!-- right column -->
+  <rect x="800" y="120" width="340" height="540" rx="16" fill="#111827" stroke="#334155"/>
+  <text x="970" y="160" text-anchor="middle" fill="#34d399" font-size="20" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-weight="700">结构侧可调旋钮</text>
+  <text x="830" y="210" fill="#e2e8f0" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">• GQA / MLA / 跨层 KV 共享</text>
+  <text x="830" y="250" fill="#e2e8f0" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">• Hybrid Dense+MoE 分层</text>
+  <text x="830" y="290" fill="#e2e8f0" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">• 共享专家 + 细粒度专家</text>
+  <text x="830" y="330" fill="#e2e8f0" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">• 可批友好路由/Top-k</text>
+  <text x="830" y="370" fill="#e2e8f0" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">• Expert Choice / Soft MoE</text>
+  <text x="830" y="410" fill="#e2e8f0" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">• 固定激活宽度与头维</text>
+  <text x="830" y="450" fill="#e2e8f0" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">• 前缀可复用注意力设计</text>
+  <text x="830" y="490" fill="#e2e8f0" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">• 记忆/工具头与状态接口</text>
+  <text x="830" y="530" fill="#e2e8f0" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">• 可组合专家模块边界</text>
+  <text x="830" y="570" fill="#e2e8f0" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">• 算子友好稀疏模式</text>
+  <text x="830" y="610" fill="#e2e8f0" font-size="16" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">• 结构版本与能力声明卡</text>
+
+  <!-- middle -->
+  <rect x="450" y="280" width="300" height="200" rx="18" fill="#1e293b" stroke="#64748b"/>
+  <text x="600" y="340" text-anchor="middle" fill="#fbbf24" font-size="20" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-weight="700">协同翻译层</text>
+  <text x="600" y="380" text-anchor="middle" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">成本模型 + 压测画像</text>
+  <text x="600" y="410" text-anchor="middle" fill="#e2e8f0" font-size="15" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">+ 质量门槛 + 兼容策略</text>
+  <text x="600" y="440" text-anchor="middle" fill="#94a3b8" font-size="14" font-family="Noto Sans CJK SC, PingFang SC, sans-serif">避免“只改服务 / 只改模型”</text>
+
+  <line x1="400" y1="380" x2="450" y2="380" stroke="#94a3b8" stroke-width="3"/>
+  <line x1="750" y1="380" x2="800" y2="380" stroke="#94a3b8" stroke-width="3"/>
+</svg>
