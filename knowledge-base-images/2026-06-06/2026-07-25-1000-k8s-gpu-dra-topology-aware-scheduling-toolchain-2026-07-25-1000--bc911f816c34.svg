@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <text x="60" y="58" fill="#f8fafc" font-size="26" font-family="DejaVu Sans, sans-serif" font-weight="700">ResourceClaim 生命周期与准入门禁</text>
+  <text x="60" y="92" fill="#94a3b8" font-size="15" font-family="DejaVu Sans, sans-serif">从提交到绑定、分配、运行、回收的可审计闭环</text>
+
+  <!-- flow boxes -->
+  <g font-family="DejaVu Sans, sans-serif">
+    <rect x="50" y="150" width="200" height="90" rx="12" fill="#172554" stroke="#60a5fa" stroke-width="2"/>
+    <text x="70" y="190" fill="#bfdbfe" font-size="16" font-weight="700">1. 提交</text>
+    <text x="70" y="218" fill="#93c5fd" font-size="13">Workload + ClaimTemplate</text>
+
+    <rect x="280" y="150" width="200" height="90" rx="12" fill="#1e1b4b" stroke="#a78bfa" stroke-width="2"/>
+    <text x="300" y="190" fill="#ddd6fe" font-size="16" font-weight="700">2. 准入</text>
+    <text x="300" y="218" fill="#c4b5fd" font-size="13">Policy / Quota / 标签</text>
+
+    <rect x="510" y="150" width="200" height="90" rx="12" fill="#14532d" stroke="#4ade80" stroke-width="2"/>
+    <text x="530" y="190" fill="#bbf7d0" font-size="16" font-weight="700">3. 调度</text>
+    <text x="530" y="218" fill="#86efac" font-size="13">拓扑评分 + 预留</text>
+
+    <rect x="740" y="150" width="200" height="90" rx="12" fill="#7c2d12" stroke="#fb923c" stroke-width="2"/>
+    <text x="760" y="190" fill="#fed7aa" font-size="16" font-weight="700">4. 分配</text>
+    <text x="760" y="218" fill="#fdba74" font-size="13">Device allocation</text>
+
+    <rect x="970" y="150" width="180" height="90" rx="12" fill="#3f1d2e" stroke="#f472b6" stroke-width="2"/>
+    <text x="990" y="190" fill="#fbcfe8" font-size="16" font-weight="700">5. 运行</text>
+    <text x="990" y="218" fill="#f9a8d4" font-size="13">挂载/隔离/观测</text>
+  </g>
+
+  <!-- arrows -->
+  <path d="M250 195 L280 195" stroke="#64748b" stroke-width="3" marker-end="url(#m)"/>
+  <path d="M480 195 L510 195" stroke="#64748b" stroke-width="3"/>
+  <path d="M710 195 L740 195" stroke="#64748b" stroke-width="3"/>
+  <path d="M940 195 L970 195" stroke="#64748b" stroke-width="3"/>
+
+  <!-- lower panels -->
+  <rect x="50" y="300" width="530" height="340" rx="14" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+  <text x="80" y="345" fill="#e2e8f0" font-size="18" font-family="DejaVu Sans, sans-serif" font-weight="700">必须拦截的失败模式</text>
+  <text x="80" y="385" fill="#cbd5e1" font-size="15" font-family="DejaVu Sans, sans-serif">• 只声明卡数，不声明显存/互连/驱动</text>
+  <text x="80" y="420" fill="#cbd5e1" font-size="15" font-family="DejaVu Sans, sans-serif">• 训练与在线推理争抢同一拓扑岛</text>
+  <text x="80" y="455" fill="#cbd5e1" font-size="15" font-family="DejaVu Sans, sans-serif">• 队列无公平性，导致长任务饿死</text>
+  <text x="80" y="490" fill="#cbd5e1" font-size="15" font-family="DejaVu Sans, sans-serif">• 节点漂移后 Claim 仍绑定脏设备</text>
+  <text x="80" y="525" fill="#cbd5e1" font-size="15" font-family="DejaVu Sans, sans-serif">• 缺少回收 SLA，碎片化持续恶化</text>
+  <text x="80" y="560" fill="#cbd5e1" font-size="15" font-family="DejaVu Sans, sans-serif">• 无放置证据，故障只能“重试碰运气”</text>
+  <text x="80" y="595" fill="#94a3b8" font-size="14" font-family="DejaVu Sans, sans-serif">建议：每次分配产出 placement evidence</text>
+
+  <rect x="620" y="300" width="530" height="340" rx="14" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+  <text x="650" y="345" fill="#e2e8f0" font-size="18" font-family="DejaVu Sans, sans-serif" font-weight="700">工具链输出物</text>
+  <text x="650" y="385" fill="#cbd5e1" font-size="15" font-family="DejaVu Sans, sans-serif">• DeviceClass / ResourceClaim 模板库</text>
+  <text x="650" y="420" fill="#cbd5e1" font-size="15" font-family="DejaVu Sans, sans-serif">• 拓扑评分策略与禁止组合表</text>
+  <text x="650" y="455" fill="#cbd5e1" font-size="15" font-family="DejaVu Sans, sans-serif">• 配额、优先级与抢占策略包</text>
+  <text x="650" y="490" fill="#cbd5e1" font-size="15" font-family="DejaVu Sans, sans-serif">• 准入 Webhook 与策略测试夹具</text>
+  <text x="650" y="525" fill="#cbd5e1" font-size="15" font-family="DejaVu Sans, sans-serif">• DCGM/节点健康到调度的反馈环</text>
+  <text x="650" y="560" fill="#cbd5e1" font-size="15" font-family="DejaVu Sans, sans-serif">• 审计事件：谁、何时、分到何设备</text>
+  <text x="650" y="595" fill="#94a3b8" font-size="14" font-family="DejaVu Sans, sans-serif">目标：可复盘、可回放、可容量规划</text>
+
+  <text x="60" y="680" fill="#64748b" font-size="13" font-family="DejaVu Sans, sans-serif">图 2 · ResourceClaim 生命周期 · 2026-07-25</text>
+</svg>
