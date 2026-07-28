@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#0b1220"/>
+  <text x="48" y="48" fill="#e8eefc" font-size="22" font-family="sans-serif">冷启动路径对比：朴素拉取 vs 预热+本地命中</text>
+  <rect x="70" y="100" width="380" height="360" rx="14" fill="#1a2336" stroke="#475569"/>
+  <text x="100" y="140" fill="#fca5a5" font-size="18" font-family="sans-serif">朴素路径</text>
+  <text x="100" y="190" fill="#cbd5e1" font-size="15" font-family="sans-serif">1. Pod 启动后才开始 wget/s3 cp</text>
+  <text x="100" y="230" fill="#cbd5e1" font-size="15" font-family="sans-serif">2. 全量串行落盘，无分块校验</text>
+  <text x="100" y="270" fill="#cbd5e1" font-size="15" font-family="sans-serif">3. 多副本同时打满出口带宽</text>
+  <text x="100" y="310" fill="#cbd5e1" font-size="15" font-family="sans-serif">4. 失败重试=整包重下</text>
+  <text x="100" y="350" fill="#cbd5e1" font-size="15" font-family="sans-serif">5. 无命中率/配额/证据</text>
+  <text x="100" y="400" fill="#f87171" font-size="16" font-family="sans-serif">结果：上线窗口不可预测</text>
+  <rect x="510" y="100" width="380" height="360" rx="14" fill="#132a24" stroke="#34d399"/>
+  <text x="540" y="140" fill="#6ee7b7" font-size="18" font-family="sans-serif">平台化路径</text>
+  <text x="540" y="190" fill="#d1fae5" font-size="15" font-family="sans-serif">1. 发布前异步预热到目标池</text>
+  <text x="540" y="230" fill="#d1fae5" font-size="15" font-family="sans-serif">2. CAS 分块 + 并发 + 断点续传</text>
+  <text x="540" y="270" fill="#d1fae5" font-size="15" font-family="sans-serif">3. P2P 在机架内互拷降中心压力</text>
+  <text x="540" y="310" fill="#d1fae5" font-size="15" font-family="sans-serif">4. 节点本地 pin，滚动只读命中</text>
+  <text x="540" y="350" fill="#d1fae5" font-size="15" font-family="sans-serif">5. 命中率/字节源/失败码可审计</text>
+  <text x="540" y="400" fill="#34d399" font-size="16" font-family="sans-serif">结果：Ready 时间可承诺</text>
+</svg>
