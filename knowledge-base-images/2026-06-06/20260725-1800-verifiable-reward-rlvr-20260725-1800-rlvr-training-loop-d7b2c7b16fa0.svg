@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#0f172a"/>
+  <text x="480" y="40" text-anchor="middle" fill="#f1f5f9" font-size="24" font-family="Sans-serif" font-weight="bold">RLVR 训练闭环</text>
+  <rect x="60" y="90" width="180" height="90" rx="10" fill="#1e3a5f" stroke="#38bdf8"/>
+  <text x="150" y="140" text-anchor="middle" fill="#e0f2fe" font-size="16" font-family="Sans-serif">题库/任务池</text>
+  <rect x="290" y="90" width="180" height="90" rx="10" fill="#1e3a5f" stroke="#38bdf8"/>
+  <text x="380" y="140" text-anchor="middle" fill="#e0f2fe" font-size="16" font-family="Sans-serif">策略采样</text>
+  <rect x="520" y="90" width="180" height="90" rx="10" fill="#1e3a5f" stroke="#38bdf8"/>
+  <text x="610" y="140" text-anchor="middle" fill="#e0f2fe" font-size="16" font-family="Sans-serif">验证器判分</text>
+  <rect x="750" y="90" width="150" height="90" rx="10" fill="#1e3a5f" stroke="#38bdf8"/>
+  <text x="825" y="140" text-anchor="middle" fill="#e0f2fe" font-size="16" font-family="Sans-serif">组相对更新</text>
+  <path d="M240 135 H290" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M470 135 H520" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M700 135 H750" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M825 180 V250 H150 V180" stroke="#fbbf24" stroke-width="2" fill="none"/>
+  <text x="480" y="240" text-anchor="middle" fill="#fde68a" font-size="14" font-family="Sans-serif">回传策略参数 / 过滤失败样本 / 扩展题库</text>
+  <rect x="80" y="300" width="800" height="180" rx="12" fill="#111827" stroke="#475569"/>
+  <text x="100" y="345" fill="#a5b4fc" font-size="16" font-family="Sans-serif">工程关键点</text>
+  <text x="100" y="385" fill="#cbd5e1" font-size="15" font-family="Sans-serif">1. 验证器必须确定性、可复现，避免噪声奖励</text>
+  <text x="100" y="420" fill="#cbd5e1" font-size="15" font-family="Sans-serif">2. 同一题多次采样形成组内相对优势，降低方差</text>
+  <text x="100" y="455" fill="#cbd5e1" font-size="15" font-family="Sans-serif">3. 防捷径：格式奖励、部分分、反作弊测试集要分层设计</text>
+</svg>
