@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1220"/>
+      <stop offset="100%" stop-color="#152238"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#7DD3FC"/>
+    </marker>
+  </defs>
+  <rect width="960" height="560" rx="18" fill="url(#bg)"/>
+  <text x="40" y="48" fill="#E2E8F0" font-size="24" font-family="Arial, sans-serif" font-weight="700">可穿戴同传流水线：从声纹到可交付字幕/语音</text>
+  <text x="40" y="78" fill="#94A3B8" font-size="14" font-family="Arial, sans-serif">核心不是“翻得更准”，而是延迟、对齐、纠错与隐私预算同时成立</text>
+
+  <rect x="40" y="120" width="160" height="78" rx="12" fill="#1E293B" stroke="#38BDF8" stroke-width="2"/>
+  <text x="120" y="152" text-anchor="middle" fill="#F8FAFC" font-size="15" font-family="Arial, sans-serif">麦克风阵列</text>
+  <text x="120" y="176" text-anchor="middle" fill="#93C5FD" font-size="12" font-family="Arial, sans-serif">AEC / NS / VAD</text>
+
+  <rect x="230" y="120" width="160" height="78" rx="12" fill="#1E293B" stroke="#34D399" stroke-width="2"/>
+  <text x="310" y="152" text-anchor="middle" fill="#F8FAFC" font-size="15" font-family="Arial, sans-serif">流式 ASR</text>
+  <text x="310" y="176" text-anchor="middle" fill="#6EE7B7" font-size="12" font-family="Arial, sans-serif">partial + final</text>
+
+  <rect x="420" y="120" width="160" height="78" rx="12" fill="#1E293B" stroke="#FBBF24" stroke-width="2"/>
+  <text x="500" y="152" text-anchor="middle" fill="#F8FAFC" font-size="15" font-family="Arial, sans-serif">语义分片</text>
+  <text x="500" y="176" text-anchor="middle" fill="#FDE68A" font-size="12" font-family="Arial, sans-serif">chunk planner</text>
+
+  <rect x="610" y="120" width="160" height="78" rx="12" fill="#1E293B" stroke="#F472B6" stroke-width="2"/>
+  <text x="690" y="152" text-anchor="middle" fill="#F8FAFC" font-size="15" font-family="Arial, sans-serif">流式 MT</text>
+  <text x="690" y="176" text-anchor="middle" fill="#F9A8D4" font-size="12" font-family="Arial, sans-serif">prefix stable</text>
+
+  <rect x="800" y="120" width="120" height="78" rx="12" fill="#1E293B" stroke="#A78BFA" stroke-width="2"/>
+  <text x="860" y="152" text-anchor="middle" fill="#F8FAFC" font-size="15" font-family="Arial, sans-serif">TTS/字幕</text>
+  <text x="860" y="176" text-anchor="middle" fill="#C4B5FD" font-size="12" font-family="Arial, sans-serif">commit gate</text>
+
+  <line x1="200" y1="159" x2="230" y2="159" stroke="#7DD3FC" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="390" y1="159" x2="420" y2="159" stroke="#7DD3FC" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="580" y1="159" x2="610" y2="159" stroke="#7DD3FC" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="770" y1="159" x2="800" y2="159" stroke="#7DD3FC" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="250" width="280" height="250" rx="14" fill="#0F172A" stroke="#334155"/>
+  <text x="60" y="285" fill="#E2E8F0" font-size="16" font-family="Arial, sans-serif" font-weight="700">本地环 (on-device)</text>
+  <text x="60" y="320" fill="#94A3B8" font-size="13" font-family="Arial, sans-serif">• 降噪 / 端点 / 关键词</text>
+  <text x="60" y="348" fill="#94A3B8" font-size="13" font-family="Arial, sans-serif">• 低功耗 partial ASR</text>
+  <text x="60" y="376" fill="#94A3B8" font-size="13" font-family="Arial, sans-serif">• 隐私门禁与红线词</text>
+  <text x="60" y="404" fill="#94A3B8" font-size="13" font-family="Arial, sans-serif">• 对齐缓存 (ring buffer)</text>
+  <text x="60" y="432" fill="#94A3B8" font-size="13" font-family="Arial, sans-serif">• 失败时离线降级</text>
+  <text x="60" y="470" fill="#38BDF8" font-size="13" font-family="Arial, sans-serif">目标：&lt;150ms 感知闭环</text>
+
+  <rect x="340" y="250" width="280" height="250" rx="14" fill="#0F172A" stroke="#334155"/>
+  <text x="360" y="285" fill="#E2E8F0" font-size="16" font-family="Arial, sans-serif" font-weight="700">近端环 (phone/edge)</text>
+  <text x="360" y="320" fill="#94A3B8" font-size="13" font-family="Arial, sans-serif">• 稳定 prefix 翻译</text>
+  <text x="360" y="348" fill="#94A3B8" font-size="13" font-family="Arial, sans-serif">• 术语表 / 人名锁定</text>
+  <text x="360" y="376" fill="#94A3B8" font-size="13" font-family="Arial, sans-serif">• retranslation 预算</text>
+  <text x="360" y="404" fill="#94A3B8" font-size="13" font-family="Arial, sans-serif">• 与字幕/TTS 同步</text>
+  <text x="360" y="432" fill="#94A3B8" font-size="13" font-family="Arial, sans-serif">• 会话级上下文压缩</text>
+  <text x="360" y="470" fill="#34D399" font-size="13" font-family="Arial, sans-serif">目标：1.2–2.0s 可听结果</text>
+
+  <rect x="640" y="250" width="280" height="250" rx="14" fill="#0F172A" stroke="#334155"/>
+  <text x="660" y="285" fill="#E2E8F0" font-size="16" font-family="Arial, sans-serif" font-weight="700">云端环 (optional)</text>
+  <text x="660" y="320" fill="#94A3B8" font-size="13" font-family="Arial, sans-serif">• 长上下文重译</text>
+  <text x="660" y="348" fill="#94A3B8" font-size="13" font-family="Arial, sans-serif">• 领域模型增强</text>
+  <text x="660" y="376" fill="#94A3B8" font-size="13" font-family="Arial, sans-serif">• 质量评分回传</text>
+  <text x="660" y="404" fill="#94A3B8" font-size="13" font-family="Arial, sans-serif">• 仅在置信度不足时触发</text>
+  <text x="660" y="432" fill="#94A3B8" font-size="13" font-family="Arial, sans-serif">• 可关闭 / 可审计</text>
+  <text x="660" y="470" fill="#FBBF24" font-size="13" font-family="Arial, sans-serif">目标：质量兜底，不拖主路径</text>
+</svg>
