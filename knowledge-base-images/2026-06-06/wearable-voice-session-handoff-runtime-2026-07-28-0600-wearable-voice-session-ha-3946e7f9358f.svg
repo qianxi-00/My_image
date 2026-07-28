@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540">
+  <rect width="960" height="540" rx="24" fill="#0B1220"/>
+  <text x="48" y="52" fill="#E8F1FF" font-size="26" font-family="Arial, sans-serif" font-weight="700">跨端接力延迟预算与能力矩阵</text>
+  <text x="48" y="84" fill="#9DB0CC" font-size="15" font-family="Arial, sans-serif">目标：用户感知“还在同一段对话”，而不是“换了个助手重新开始”</text>
+  <g font-family="Arial, sans-serif" font-size="14">
+    <rect x="48" y="120" width="864" height="48" rx="8" fill="#152238"/>
+    <text x="70" y="150" fill="#9DB0CC">阶段</text>
+    <text x="250" y="150" fill="#9DB0CC">预算</text>
+    <text x="400" y="150" fill="#9DB0CC">关键动作</text>
+    <text x="680" y="150" fill="#9DB0CC">失败可感知</text>
+    <rect x="48" y="176" width="864" height="48" rx="8" fill="#1B2A44"/>
+    <text x="70" y="206" fill="#E8F1FF">探测与决策</text>
+    <text x="250" y="206" fill="#35D0C3">≤80ms</text>
+    <text x="400" y="206" fill="#E8F1FF">选目标设备/评估能力</text>
+    <text x="680" y="206" fill="#E8F1FF">轻微提示音</text>
+    <rect x="48" y="232" width="864" height="48" rx="8" fill="#152238"/>
+    <text x="70" y="262" fill="#E8F1FF">状态快照打包</text>
+    <text x="250" y="262" fill="#35D0C3">≤120ms</text>
+    <text x="400" y="262" fill="#E8F1FF">压缩 turn 与 open intents</text>
+    <text x="680" y="262" fill="#E8F1FF">本地重试</text>
+    <rect x="48" y="288" width="864" height="48" rx="8" fill="#1B2A44"/>
+    <text x="70" y="318" fill="#E8F1FF">Token 签发与校验</text>
+    <text x="250" y="318" fill="#35D0C3">≤60ms</text>
+    <text x="400" y="318" fill="#E8F1FF">绑定 risk_ceiling</text>
+    <text x="680" y="318" fill="#E8F1FF">拒绝并回退</text>
+    <rect x="48" y="344" width="864" height="48" rx="8" fill="#152238"/>
+    <text x="70" y="374" fill="#E8F1FF">音频/UI 接管</text>
+    <text x="250" y="374" fill="#35D0C3">≤150ms</text>
+    <text x="400" y="374" fill="#E8F1FF">续播 stable_prefix</text>
+    <text x="680" y="374" fill="#E8F1FF">复述关键摘要</text>
+    <rect x="48" y="400" width="864" height="48" rx="8" fill="#1B2A44"/>
+    <text x="70" y="430" fill="#E8F1FF">总用户可感中断</text>
+    <text x="250" y="430" fill="#F5B942">≤400ms</text>
+    <text x="400" y="430" fill="#E8F1FF">跨端“无缝”门槛</text>
+    <text x="680" y="430" fill="#E8F1FF">超过则显式说明</text>
+  </g>
+  <text x="48" y="490" fill="#B8C7DE" font-size="15" font-family="Arial, sans-serif">能力矩阵示例：耳机可听可说不可看；眼镜可看可指不可精细输入；手机可确认可支付可编辑</text>
+</svg>
