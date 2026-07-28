@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540">
+  <rect width="960" height="540" rx="24" fill="#0B1220"/>
+  <text x="48" y="54" fill="#E8F1FF" font-size="26" font-family="Arial, sans-serif" font-weight="700">会话状态机：Idle → Active → PendingHandoff → Resumed / RolledBack</text>
+  <text x="48" y="88" fill="#9DB0CC" font-size="15" font-family="Arial, sans-serif">以可穿戴实时语音为中心的最小可落地状态集合</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="60" y="140" width="150" height="70" rx="12" fill="#1B2A44" stroke="#35D0C3" stroke-width="2"/>
+    <text x="110" y="182" fill="#E8F1FF" font-size="18">Idle</text>
+    <rect x="250" y="140" width="150" height="70" rx="12" fill="#1B2A44" stroke="#4F8CFF" stroke-width="2"/>
+    <text x="290" y="182" fill="#E8F1FF" font-size="18">Listening</text>
+    <rect x="440" y="140" width="150" height="70" rx="12" fill="#1B2A44" stroke="#F5B942" stroke-width="2"/>
+    <text x="475" y="182" fill="#E8F1FF" font-size="18">Speaking</text>
+    <rect x="630" y="140" width="150" height="70" rx="12" fill="#1B2A44" stroke="#FF7A59" stroke-width="2"/>
+    <text x="655" y="182" fill="#E8F1FF" font-size="18">ToolDraft</text>
+    <rect x="250" y="280" width="180" height="70" rx="12" fill="#1B2A44" stroke="#A78BFA" stroke-width="2"/>
+    <text x="270" y="322" fill="#E8F1FF" font-size="17">PendingHandoff</text>
+    <rect x="470" y="280" width="150" height="70" rx="12" fill="#1B2A44" stroke="#35D0C3" stroke-width="2"/>
+    <text x="505" y="322" fill="#E8F1FF" font-size="18">Resumed</text>
+    <rect x="660" y="280" width="160" height="70" rx="12" fill="#1B2A44" stroke="#EF4444" stroke-width="2"/>
+    <text x="685" y="322" fill="#E8F1FF" font-size="18">RolledBack</text>
+  </g>
+  <path d="M210 175 H250 M400 175 H440 M590 175 H630" stroke="#4F8CFF" stroke-width="3" fill="none"/>
+  <path d="M705 210 V260 H340 V280" stroke="#A78BFA" stroke-width="3" fill="none"/>
+  <path d="M340 350 H470 M620 315 H660" stroke="#35D0C3" stroke-width="3" fill="none"/>
+  <path d="M530 350 V400 H740 V350" stroke="#EF4444" stroke-width="2" fill="none" stroke-dasharray="6 4"/>
+  <text x="60" y="420" fill="#B8C7DE" font-size="15" font-family="Arial, sans-serif">关键迁移载荷：session_id / turn_cursor / stable_prefix / open_intents / risk_ceiling / device_capabilities</text>
+  <text x="60" y="456" fill="#B8C7DE" font-size="15" font-family="Arial, sans-serif">Handoff 触发：电量阈值、佩戴脱落、场景切换、屏幕可用性提升、用户显式“转到手机/眼镜”</text>
+  <text x="60" y="492" fill="#B8C7DE" font-size="15" font-family="Arial, sans-serif">失败策略：Token 过期或能力不匹配 → 自动 RolledBack，仅保留只读摘要，不提交外部副作用</text>
+</svg>
