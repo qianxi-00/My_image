@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <text x="60" y="58" fill="#f8fafc" font-size="26" font-family="DejaVu Sans, sans-serif" font-weight="700">落地路线图：90 天把“能跑”升级成“可运营”</text>
+  <text x="60" y="92" fill="#94a3b8" font-size="15" font-family="DejaVu Sans, sans-serif">按阶段交付可验收产物，而不是一次性替换整个集群</text>
+
+  <!-- three columns -->
+  <rect x="50" y="130" width="340" height="500" rx="16" fill="#111827" stroke="#38bdf8" stroke-width="2"/>
+  <rect x="430" y="130" width="340" height="500" rx="16" fill="#111827" stroke="#a78bfa" stroke-width="2"/>
+  <rect x="810" y="130" width="340" height="500" rx="16" fill="#111827" stroke="#34d399" stroke-width="2"/>
+
+  <text x="80" y="175" fill="#7dd3fc" font-size="20" font-family="DejaVu Sans, sans-serif" font-weight="700">Day 0-30 · 可见</text>
+  <text x="80" y="220" fill="#e2e8f0" font-size="15" font-family="DejaVu Sans, sans-serif">• 盘点 GPU 类型/驱动/拓扑</text>
+  <text x="80" y="255" fill="#e2e8f0" font-size="15" font-family="DejaVu Sans, sans-serif">• 建立 DeviceClass 初版</text>
+  <text x="80" y="290" fill="#e2e8f0" font-size="15" font-family="DejaVu Sans, sans-serif">• 训练/推理队列拆分</text>
+  <text x="80" y="325" fill="#e2e8f0" font-size="15" font-family="DejaVu Sans, sans-serif">• 统一命名与标签规范</text>
+  <text x="80" y="360" fill="#e2e8f0" font-size="15" font-family="DejaVu Sans, sans-serif">• 基线利用率与碎片率</text>
+  <text x="80" y="395" fill="#e2e8f0" font-size="15" font-family="DejaVu Sans, sans-serif">• 失败工单分类字典</text>
+  <text x="80" y="450" fill="#94a3b8" font-size="14" font-family="DejaVu Sans, sans-serif">验收：每周容量报告可自动出</text>
+  <text x="80" y="485" fill="#94a3b8" font-size="14" font-family="DejaVu Sans, sans-serif">验收：Claim 模板被 2 个业务采用</text>
+
+  <text x="460" y="175" fill="#c4b5fd" font-size="20" font-family="DejaVu Sans, sans-serif" font-weight="700">Day 31-60 · 可控</text>
+  <text x="460" y="220" fill="#e2e8f0" font-size="15" font-family="DejaVu Sans, sans-serif">• 拓扑感知调度上线</text>
+  <text x="460" y="255" fill="#e2e8f0" font-size="15" font-family="DejaVu Sans, sans-serif">• 准入门禁与配额策略</text>
+  <text x="460" y="290" fill="#e2e8f0" font-size="15" font-family="DejaVu Sans, sans-serif">• 健康反馈降权节点</text>
+  <text x="460" y="325" fill="#e2e8f0" font-size="15" font-family="DejaVu Sans, sans-serif">• 抢占与保护级策略</text>
+  <text x="460" y="360" fill="#e2e8f0" font-size="15" font-family="DejaVu Sans, sans-serif">• 放置证据写入审计</text>
+  <text x="460" y="395" fill="#e2e8f0" font-size="15" font-family="DejaVu Sans, sans-serif">• 灰度业务 30% 流量</text>
+  <text x="460" y="450" fill="#94a3b8" font-size="14" font-family="DejaVu Sans, sans-serif">验收：调度失败可归因到策略</text>
+  <text x="460" y="485" fill="#94a3b8" font-size="14" font-family="DejaVu Sans, sans-serif">验收：碎片率环比下降</text>
+
+  <text x="840" y="175" fill="#6ee7b7" font-size="20" font-family="DejaVu Sans, sans-serif" font-weight="700">Day 61-90 · 可运营</text>
+  <text x="840" y="220" fill="#e2e8f0" font-size="15" font-family="DejaVu Sans, sans-serif">• 自助门户/模板商店</text>
+  <text x="840" y="255" fill="#e2e8f0" font-size="15" font-family="DejaVu Sans, sans-serif">• 容量预测与预留日历</text>
+  <text x="840" y="290" fill="#e2e8f0" font-size="15" font-family="DejaVu Sans, sans-serif">• 成本分摊到队列/团队</text>
+  <text x="840" y="325" fill="#e2e8f0" font-size="15" font-family="DejaVu Sans, sans-serif">• 故障演练与回放手册</text>
+  <text x="840" y="360" fill="#e2e8f0" font-size="15" font-family="DejaVu Sans, sans-serif">• 多集群联邦策略同步</text>
+  <text x="840" y="395" fill="#e2e8f0" font-size="15" font-family="DejaVu Sans, sans-serif">• SLO 看板与告警闭环</text>
+  <text x="840" y="450" fill="#94a3b8" font-size="14" font-family="DejaVu Sans, sans-serif">验收：平台值班可按手册恢复</text>
+  <text x="840" y="485" fill="#94a3b8" font-size="14" font-family="DejaVu Sans, sans-serif">验收：新业务 1 天内完成接入</text>
+
+  <text x="60" y="680" fill="#64748b" font-size="13" font-family="DejaVu Sans, sans-serif">图 3 · 90 天落地路线图 · 2026-07-25</text>
+</svg>
