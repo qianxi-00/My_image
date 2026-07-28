@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <text x="600" y="48" text-anchor="middle" fill="#f8fafc" font-size="28" font-family="Noto Sans CJK SC, Sans-Serif" font-weight="700">KV 压缩省显存 vs 长上下文召回（NIAH）风险权衡</text>
+  <text x="600" y="82" text-anchor="middle" fill="#94a3b8" font-size="16" font-family="Noto Sans CJK SC, Sans-Serif">同一缓存预算下：吞吐上升往往伴随“针”位置敏感与召回失败</text>
+
+  <!-- left column -->
+  <rect x="60" y="120" width="500" height="520" rx="16" fill="#111827" stroke="#334155" stroke-width="2"/>
+  <text x="310" y="160" text-anchor="middle" fill="#22d3ee" font-size="22" font-family="Noto Sans CJK SC, Sans-Serif" font-weight="700">省显存路径</text>
+  <rect x="100" y="190" width="420" height="56" rx="10" fill="url(#g1)" opacity="0.25" stroke="#22d3ee"/>
+  <text x="310" y="225" text-anchor="middle" fill="#e2e8f0" font-size="18" font-family="Noto Sans CJK SC, Sans-Serif">量化 KV（FP8 / INT4 / 3-bit）</text>
+  <rect x="100" y="270" width="420" height="56" rx="10" fill="url(#g1)" opacity="0.25" stroke="#22d3ee"/>
+  <text x="310" y="305" text-anchor="middle" fill="#e2e8f0" font-size="18" font-family="Noto Sans CJK SC, Sans-Serif">驱逐 / 滑窗 / 稀疏注意力</text>
+  <rect x="100" y="350" width="420" height="56" rx="10" fill="url(#g1)" opacity="0.25" stroke="#22d3ee"/>
+  <text x="310" y="385" text-anchor="middle" fill="#e2e8f0" font-size="18" font-family="Noto Sans CJK SC, Sans-Serif">Token 聚合 / 摘要压缩 / 低秩 MLA</text>
+  <rect x="100" y="430" width="420" height="56" rx="10" fill="url(#g1)" opacity="0.25" stroke="#22d3ee"/>
+  <text x="310" y="465" text-anchor="middle" fill="#e2e8f0" font-size="18" font-family="Noto Sans CJK SC, Sans-Serif">分层 Offload 与块级回收</text>
+  <text x="310" y="540" text-anchor="middle" fill="#86efac" font-size="17" font-family="Noto Sans CJK SC, Sans-Serif">收益：更大并发 · 更长窗口 · 更低 HBM</text>
+  <text x="310" y="575" text-anchor="middle" fill="#86efac" font-size="17" font-family="Noto Sans CJK SC, Sans-Serif">代价：表示失真 · 位置敏感 · 难审计</text>
+
+  <!-- right column -->
+  <rect x="640" y="120" width="500" height="520" rx="16" fill="#111827" stroke="#334155" stroke-width="2"/>
+  <text x="890" y="160" text-anchor="middle" fill="#fbbf24" font-size="22" font-family="Noto Sans CJK SC, Sans-Serif" font-weight="700">召回失败面</text>
+  <rect x="680" y="190" width="420" height="56" rx="10" fill="url(#g2)" opacity="0.25" stroke="#f59e0b"/>
+  <text x="890" y="225" text-anchor="middle" fill="#e2e8f0" font-size="18" font-family="Noto Sans CJK SC, Sans-Serif">Needle 落在被驱逐区间</text>
+  <rect x="680" y="270" width="420" height="56" rx="10" fill="url(#g2)" opacity="0.25" stroke="#f59e0b"/>
+  <text x="890" y="305" text-anchor="middle" fill="#e2e8f0" font-size="18" font-family="Noto Sans CJK SC, Sans-Serif">量化噪声淹没弱信号</text>
+  <rect x="680" y="350" width="420" height="56" rx="10" fill="url(#g2)" opacity="0.25" stroke="#f59e0b"/>
+  <text x="890" y="385" text-anchor="middle" fill="#e2e8f0" font-size="18" font-family="Noto Sans CJK SC, Sans-Serif">中间位置“lost-in-the-middle”</text>
+  <rect x="680" y="430" width="420" height="56" rx="10" fill="url(#g2)" opacity="0.25" stroke="#f59e0b"/>
+  <text x="890" y="465" text-anchor="middle" fill="#e2e8f0" font-size="18" font-family="Noto Sans CJK SC, Sans-Serif">多针竞争与注意力预算耗尽</text>
+  <text x="890" y="540" text-anchor="middle" fill="#fca5a5" font-size="17" font-family="Noto Sans CJK SC, Sans-Serif">表现：答非所问 · 编造细节 · 漏关键约束</text>
+  <text x="890" y="575" text-anchor="middle" fill="#fca5a5" font-size="17" font-family="Noto Sans CJK SC, Sans-Serif">系统误判：以为“窗口够大就能用”</text>
+
+  <text x="600" y="680" text-anchor="middle" fill="#cbd5e1" font-size="15" font-family="Noto Sans CJK SC, Sans-Serif">工程原则：显存预算与质量 SLO 必须同时约束，不能只优化 cache hit / tokens per second</text>
+</svg>
