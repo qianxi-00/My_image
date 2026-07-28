@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1F2937"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="560" rx="18" fill="url(#g)"/>
+  <text x="40" y="48" fill="#F9FAFB" font-size="24" font-family="Arial, sans-serif" font-weight="700">流式对齐状态机：partial / stable / committed</text>
+  <text x="40" y="78" fill="#9CA3AF" font-size="14" font-family="Arial, sans-serif">同传体验崩坏通常不是翻译模型差，而是对齐状态乱跳导致“字幕抽搐、语音抢跑”</text>
+
+  <!-- timeline -->
+  <line x1="80" y1="180" x2="900" y2="180" stroke="#4B5563" stroke-width="3"/>
+  <circle cx="140" cy="180" r="10" fill="#60A5FA"/>
+  <circle cx="320" cy="180" r="10" fill="#34D399"/>
+  <circle cx="520" cy="180" r="10" fill="#FBBF24"/>
+  <circle cx="740" cy="180" r="10" fill="#F472B6"/>
+
+  <text x="140" y="150" text-anchor="middle" fill="#BFDBFE" font-size="13" font-family="Arial, sans-serif">t0 听到</text>
+  <text x="320" y="150" text-anchor="middle" fill="#A7F3D0" font-size="13" font-family="Arial, sans-serif">t1 partial</text>
+  <text x="520" y="150" text-anchor="middle" fill="#FDE68A" font-size="13" font-family="Arial, sans-serif">t2 stable</text>
+  <text x="740" y="150" text-anchor="middle" fill="#FBCFE8" font-size="13" font-family="Arial, sans-serif">t3 commit</text>
+
+  <rect x="80" y="220" width="200" height="120" rx="12" fill="#0B1220" stroke="#60A5FA"/>
+  <text x="100" y="255" fill="#E5E7EB" font-size="15" font-family="Arial, sans-serif" font-weight="700">PARTIAL</text>
+  <text x="100" y="285" fill="#9CA3AF" font-size="13" font-family="Arial, sans-serif">可改写、可撤回</text>
+  <text x="100" y="310" fill="#9CA3AF" font-size="13" font-family="Arial, sans-serif">只驱动弱提示字幕</text>
+
+  <rect x="300" y="220" width="200" height="120" rx="12" fill="#0B1220" stroke="#34D399"/>
+  <text x="320" y="255" fill="#E5E7EB" font-size="15" font-family="Arial, sans-serif" font-weight="700">STABLE PREFIX</text>
+  <text x="320" y="285" fill="#9CA3AF" font-size="13" font-family="Arial, sans-serif">前缀锁定</text>
+  <text x="320" y="310" fill="#9CA3AF" font-size="13" font-family="Arial, sans-serif">允许预读 TTS</text>
+
+  <rect x="520" y="220" width="200" height="120" rx="12" fill="#0B1220" stroke="#FBBF24"/>
+  <text x="540" y="255" fill="#E5E7EB" font-size="15" font-family="Arial, sans-serif" font-weight="700">RETRANSLATE</text>
+  <text x="540" y="285" fill="#9CA3AF" font-size="13" font-family="Arial, sans-serif">受预算约束</text>
+  <text x="540" y="310" fill="#9CA3AF" font-size="13" font-family="Arial, sans-serif">只修未提交尾部</text>
+
+  <rect x="740" y="220" width="160" height="120" rx="12" fill="#0B1220" stroke="#F472B6"/>
+  <text x="760" y="255" fill="#E5E7EB" font-size="15" font-family="Arial, sans-serif" font-weight="700">COMMITTED</text>
+  <text x="760" y="285" fill="#9CA3AF" font-size="13" font-family="Arial, sans-serif">不可静默改写</text>
+  <text x="760" y="310" fill="#9CA3AF" font-size="13" font-family="Arial, sans-serif">需纠错公告</text>
+
+  <rect x="80" y="380" width="800" height="120" rx="14" fill="#111827" stroke="#374151"/>
+  <text x="100" y="420" fill="#F3F4F6" font-size="16" font-family="Arial, sans-serif" font-weight="700">工程约束</text>
+  <text x="100" y="450" fill="#9CA3AF" font-size="14" font-family="Arial, sans-serif">1) 已 commit 的内容禁止“闪一下变成别的句子”；2) retranslate 次数/秒与窗口长度必须配额化；</text>
+  <text x="100" y="478" fill="#9CA3AF" font-size="14" font-family="Arial, sans-serif">3) 字幕与 TTS 共享同一 alignment clock，否则用户会感觉系统在“抢话”。</text>
+</svg>
