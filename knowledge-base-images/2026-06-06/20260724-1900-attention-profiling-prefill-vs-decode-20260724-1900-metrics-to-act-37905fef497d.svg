@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680">
+  <defs>
+    <style>
+      .t{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#0f172a}
+      .s{font-size:22px;font-weight:700}
+      .b{font-size:15px;font-weight:700}
+      .m{font-size:13px;fill:#334155}
+      .w{fill:#fff;font-size:14px;font-weight:600}
+      .card{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2;rx:12}
+    </style>
+  </defs>
+  <rect width="1200" height="680" fill="#ffffff"/>
+  <text class="t s" x="40" y="46">从指标到动作：Attention Profiling 闭环</text>
+  <text class="t m" x="40" y="76">观测 → 归因 → 对策 → 回归，避免“改了 kernel 却伤了调度”</text>
+
+  <rect x="40" y="110" width="250" height="120" rx="12" fill="#1e40af"/>
+  <text class="w" x="110" y="160">1. 观测</text>
+  <text class="w" x="70" y="195">TTFT/TPOT/队列/GPU</text>
+  <rect x="330" y="110" width="250" height="120" rx="12" fill="#0369a1"/>
+  <text class="w" x="400" y="160">2. 分层</text>
+  <text class="w" x="355" y="195">请求/阶段/算子/系统</text>
+  <rect x="620" y="110" width="250" height="120" rx="12" fill="#0f766e"/>
+  <text class="w" x="690" y="160">3. 归因</text>
+  <text class="w" x="650" y="195">算力/带宽/缓存/调度</text>
+  <rect x="910" y="110" width="250" height="120" rx="12" fill="#7c3aed"/>
+  <text class="w" x="980" y="160">4. 动作</text>
+  <text class="w" x="935" y="195">配置/内核/架构/SLO</text>
+
+  <rect class="card" x="40" y="270" width="270" height="360"/>
+  <text class="t b" x="60" y="305">请求级指标</text>
+  <text class="t m" x="60" y="340">· 输入/输出长度</text>
+  <text class="t m" x="60" y="370">· TTFT / TPOT / E2E</text>
+  <text class="t m" x="60" y="400">· 排队时延</text>
+  <text class="t m" x="60" y="430">· 前缀命中率</text>
+  <text class="t m" x="60" y="460">· 投机接受率</text>
+  <text class="t m" x="60" y="490">· 是否触发 offload</text>
+  <text class="t m" x="60" y="520">· 租户/优先级标签</text>
+  <text class="t m" x="60" y="550">· 失败重试次数</text>
+  <text class="t m" x="60" y="590">用途：先判定“慢在哪一段”</text>
+
+  <rect class="card" x="340" y="270" width="270" height="360"/>
+  <text class="t b" x="360" y="305">阶段与算子指标</text>
+  <text class="t m" x="360" y="340">· Prefill 总耗时</text>
+  <text class="t m" x="360" y="370">· Attention kernel 占比</text>
+  <text class="t m" x="360" y="400">· MLP / Norm / 采样</text>
+  <text class="t m" x="360" y="430">· KV read/write bytes</text>
+  <text class="t m" x="360" y="460">· HBM 带宽利用率</text>
+  <text class="t m" x="360" y="490">· SM 占用与空泡</text>
+  <text class="t m" x="360" y="520">· NCCL / 跨卡通信</text>
+  <text class="t m" x="360" y="550">· CPU tokenizer 开销</text>
+  <text class="t m" x="360" y="590">用途：定位“慢在哪个部件”</text>
+
+  <rect class="card" x="640" y="270" width="250" height="360"/>
+  <text class="t b" x="660" y="305">系统与调度指标</text>
+  <text class="t m" x="660" y="340">· continuous batch 大小</text>
+  <text class="t m" x="660" y="370">· prefill/decode 队列深</text>
+  <text class="t m" x="660" y="400">· 页表碎片率</text>
+  <text class="t m" x="660" y="430">· KV 迁移延迟</text>
+  <text class="t m" x="660" y="460">· 公平性/饥饿事件</text>
+  <text class="t m" x="660" y="490">· 冷启动/热缓存</text>
+  <text class="t m" x="660" y="520">· 多模型路由命中</text>
+  <text class="t m" x="660" y="550">· 资源争用告警</text>
+  <text class="t m" x="660" y="590">用途：判断是否系统问题</text>
+
+  <rect class="card" x="920" y="270" width="240" height="360"/>
+  <text class="t b" x="940" y="305">对策映射</text>
+  <text class="t m" x="940" y="340">算力紧：换 kernel</text>
+  <text class="t m" x="940" y="370">带宽紧：压 KV/分批</text>
+  <text class="t m" x="940" y="400">缓存冷：暖启动/前缀</text>
+  <text class="t m" x="940" y="430">排队长：限流/分池</text>
+  <text class="t m" x="940" y="460">通信重：调并行度</text>
+  <text class="t m" x="940" y="490">投机差：换草稿模型</text>
+  <text class="t m" x="940" y="520">长上下文：拆 PD</text>
+  <text class="t m" x="940" y="550">质量风险：保关键 token</text>
+  <text class="t m" x="940" y="590">最后做回归评测</text>
+</svg>
