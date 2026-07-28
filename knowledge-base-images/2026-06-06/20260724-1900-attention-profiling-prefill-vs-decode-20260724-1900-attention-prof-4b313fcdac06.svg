@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <style>
+      .t{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#0f172a}
+      .s{font-size:22px;font-weight:700}
+      .b{font-size:16px;font-weight:700}
+      .m{font-size:14px;fill:#334155}
+      .w{fill:#fff;font-size:14px;font-weight:600}
+      .box{fill:#f8fafc;stroke:#94a3b8;stroke-width:2;rx:12}
+    </style>
+  </defs>
+  <rect width="1200" height="720" fill="#ffffff"/>
+  <text class="t s" x="40" y="46">Attention Profiling 决策树：先分阶段，再分算子</text>
+  <text class="t m" x="40" y="76">从请求级指标下钻到 kernel / KV / 调度 / 通信，避免“一刀切优化”</text>
+
+  <rect x="420" y="100" width="360" height="70" rx="12" fill="#1d4ed8"/>
+  <text class="w" x="470" y="142">请求慢：先看 TTFT 还是 TPOT？</text>
+
+  <path d="M600 170 L600 210 L250 210 L250 240" stroke="#64748b" stroke-width="2" fill="none"/>
+  <path d="M600 170 L600 210 L950 210 L950 240" stroke="#64748b" stroke-width="2" fill="none"/>
+
+  <rect x="100" y="240" width="300" height="70" rx="12" fill="#2563eb"/>
+  <text class="w" x="155" y="282">TTFT 高 → Prefill 侧</text>
+  <rect x="800" y="240" width="300" height="70" rx="12" fill="#059669"/>
+  <text class="w" x="855" y="282">TPOT 高 → Decode 侧</text>
+
+  <rect class="box" x="60" y="340" width="380" height="320"/>
+  <text class="t b" x="80" y="375">Prefill 排查清单</text>
+  <text class="t m" x="80" y="410">1. 输入长度与 chunked prefill 切分</text>
+  <text class="t m" x="80" y="440">2. Attention / MLP 算子耗时占比</text>
+  <text class="t m" x="80" y="470">3. FlashAttention 是否命中高效 kernel</text>
+  <text class="t m" x="80" y="500">4. TP/PP 通信是否拖尾</text>
+  <text class="t m" x="80" y="530">5. 调度排队 / 批合并等待</text>
+  <text class="t m" x="80" y="560">6. 前缀缓存未命中导致重算</text>
+  <text class="t m" x="80" y="590">7. 量化/稀疏路径是否退化</text>
+  <text class="t m" x="80" y="620">8. 显存分配与 page table 开销</text>
+  <text class="t m" x="80" y="650">结论：算力与并行效率优先</text>
+
+  <rect class="box" x="760" y="340" width="380" height="320"/>
+  <text class="t b" x="780" y="375">Decode 排查清单</text>
+  <text class="t m" x="780" y="410">1. 上下文长度 → KV 读取量</text>
+  <text class="t m" x="780" y="440">2. KV 是否 offload / 跨层共享</text>
+  <text class="t m" x="780" y="470">3. batch 是否过大导致带宽争用</text>
+  <text class="t m" x="780" y="500">4. 分页 KV 碎片与 page fault</text>
+  <text class="t m" x="780" y="530">5. 投机解码接受率是否过低</text>
+  <text class="t m" x="780" y="560">6. continuous batching 插入抖动</text>
+  <text class="t m" x="780" y="590">7. 采样与 tokenizer 后处理开销</text>
+  <text class="t m" x="780" y="620">8. 多租户公平性导致饥饿</text>
+  <text class="t m" x="780" y="650">结论：带宽与缓存路径优先</text>
+</svg>
