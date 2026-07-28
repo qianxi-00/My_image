@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1d4ed8"/><stop offset="100%" stop-color="#38bdf8"/></linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#c084fc"/></linearGradient>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#047857"/><stop offset="100%" stop-color="#34d399"/></linearGradient>
+    <style>
+      .t{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#0f172a}
+      .s{font-size:22px;font-weight:700}
+      .b{font-size:15px;font-weight:700}
+      .m{font-size:14px;fill:#334155}
+      .w{fill:#fff;font-size:14px;font-weight:600}
+      .box{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2;rx:12}
+    </style>
+  </defs>
+  <rect width="1200" height="720" fill="#ffffff"/>
+  <text class="t s" x="36" y="40">自回归 vs Multi-Token Prediction：KV 写入节奏对比</text>
+  <text class="t m" x="36" y="70">核心差异：一次前向写 1 个 token 的 KV，还是一次写入 K 个候选/已验证 token 的 KV</text>
+
+  <rect class="box" x="36" y="100" width="540" height="280"/>
+  <rect x="56" y="120" width="500" height="42" rx="10" fill="url(#g1)"/>
+  <text class="w" x="190" y="147">经典自回归 Decode</text>
+  <text class="t m" x="56" y="190">步骤 t：读历史 KV[0..t-1]</text>
+  <text class="t m" x="56" y="218">计算当前 token 的 Q/K/V</text>
+  <text class="t m" x="56" y="246">写出 1 个 token 的 K/V 到缓存尾部</text>
+  <text class="t m" x="56" y="274">采样 1 个 token，长度 +1</text>
+  <text class="t m" x="56" y="302">节奏：串行、边界清晰、回滚简单</text>
+  <text class="t m" x="56" y="340">缓存增长：严格 1 token / 前向</text>
+
+  <rect class="box" x="624" y="100" width="540" height="280"/>
+  <rect x="644" y="120" width="500" height="42" rx="10" fill="url(#g2)"/>
+  <text class="w" x="760" y="147">Multi-Token Prediction</text>
+  <text class="t m" x="644" y="190">同一次主干前向产生多个头输出</text>
+  <text class="t m" x="644" y="218">候选 token 可能先写“影子 KV”</text>
+  <text class="t m" x="644" y="246">验证/接受后才提交到权威 KV</text>
+  <text class="t m" x="644" y="274">拒绝时要按位置回滚写入指针</text>
+  <text class="t m" x="644" y="302">节奏：突发写入 + 条件提交</text>
+  <text class="t m" x="644" y="340">缓存增长：0~K token / 前向</text>
+
+  <rect class="box" x="36" y="410" width="1128" height="270"/>
+  <rect x="56" y="430" width="1088" height="42" rx="10" fill="url(#g3)"/>
+  <text class="w" x="430" y="457">KV 管理必须新增的三层抽象</text>
+  <text class="t m" x="56" y="510">1. 权威序列缓存：已接受、可服务后续注意力的真实前缀 KV</text>
+  <text class="t m" x="56" y="548">2. 候选/影子缓存：MTP 头、树状候选、未验证 token 的临时 K/V</text>
+  <text class="t m" x="56" y="586">3. 提交边界：接受长度、树路径选择、回滚点决定真正写入位置</text>
+  <text class="t m" x="56" y="630">结论：MTP 不是“一次多写几个 token”那么简单，而是把缓存从单调追加改成了事务式追加。</text>
+</svg>
