@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#2563eb"/><stop offset="100%" stop-color="#38bdf8"/></linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#059669"/><stop offset="100%" stop-color="#34d399"/></linearGradient>
+    <style>
+      .t{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#0f172a}
+      .s{font-size:22px;font-weight:700}
+      .b{font-size:16px}
+      .m{font-size:14px;fill:#334155}
+      .w{fill:#fff;font-size:15px;font-weight:600}
+      .box{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2;rx:12}
+    </style>
+  </defs>
+  <rect width="1200" height="640" fill="#ffffff"/>
+  <text class="t s" x="40" y="48">一次 LLM 推理请求的时间线：Prefill → Decode</text>
+  <text class="t m" x="40" y="78">目标：把 TTFT / TPOT / 总延迟拆到阶段与算子，而不是只看“慢”</text>
+
+  <rect class="box" x="40" y="110" width="1120" height="180"/>
+  <text class="t b" x="60" y="145">阶段 A：Prefill（提示词并行处理）</text>
+  <rect x="60" y="165" width="520" height="90" rx="10" fill="url(#g1)"/>
+  <text class="w" x="80" y="200">输入 tokens 一次性进模型</text>
+  <text class="w" x="80" y="228">计算密集 · 写满 KV Cache · 决定 TTFT</text>
+  <g transform="translate(620,165)">
+    <rect width="500" height="90" rx="10" fill="#eff6ff" stroke="#93c5fd"/>
+    <text class="t m" x="20" y="30">常见瓶颈：Attention GEMM / FlashAttention</text>
+    <text class="t m" x="20" y="55">QKV 投影、MLP、通信（TP/PP）</text>
+    <text class="t m" x="20" y="80">Chunked Prefill 排队与调度等待</text>
+  </g>
+
+  <rect class="box" x="40" y="320" width="1120" height="200"/>
+  <text class="t b" x="60" y="355">阶段 B：Decode（自回归逐步生成）</text>
+  <rect x="60" y="375" width="180" height="70" rx="10" fill="url(#g2)"/>
+  <text class="w" x="95" y="417">token 1</text>
+  <rect x="260" y="375" width="180" height="70" rx="10" fill="url(#g2)"/>
+  <text class="w" x="295" y="417">token 2</text>
+  <rect x="460" y="375" width="180" height="70" rx="10" fill="url(#g2)"/>
+  <text class="w" x="495" y="417">token 3</text>
+  <rect x="660" y="375" width="180" height="70" rx="10" fill="url(#g2)"/>
+  <text class="w" x="700" y="417">...</text>
+  <rect x="860" y="375" width="260" height="70" rx="10" fill="#ecfdf5" stroke="#6ee7b7"/>
+  <text class="t m" x="880" y="405">内存带宽主导</text>
+  <text class="t m" x="880" y="430">读 KV · 决定 TPOT</text>
+  <text class="t m" x="60" y="490">每步几乎只新增 1 个 query token，却要反复读取历史 KV；batch 越大，带宽与调度越敏感。</text>
+
+  <rect x="40" y="545" width="350" height="60" rx="10" fill="#fef3c7" stroke="#f59e0b"/>
+  <text class="t m" x="60" y="580">TTFT ≈ 排队 + Prefill 计算</text>
+  <rect x="420" y="545" width="350" height="60" rx="10" fill="#dbeafe" stroke="#3b82f6"/>
+  <text class="t m" x="440" y="580">TPOT ≈ 单步 Decode 时延</text>
+  <rect x="800" y="545" width="360" height="60" rx="10" fill="#ede9fe" stroke="#8b5cf6"/>
+  <text class="t m" x="820" y="580">总时延 ≈ TTFT + N×TPOT</text>
+</svg>
