@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#0f172a"/>
+  <text x="480" y="42" text-anchor="middle" fill="#e2e8f0" font-size="26" font-family="Sans-serif" font-weight="bold">可验证奖励 RLVR 总览</text>
+  <rect x="40" y="80" width="200" height="120" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+  <text x="140" y="130" text-anchor="middle" fill="#7dd3fc" font-size="18" font-family="Sans-serif">策略模型</text>
+  <text x="140" y="160" text-anchor="middle" fill="#94a3b8" font-size="14" font-family="Sans-serif">生成候选答案</text>
+  <rect x="280" y="80" width="200" height="120" rx="12" fill="#1e293b" stroke="#a78bfa" stroke-width="2"/>
+  <text x="380" y="130" text-anchor="middle" fill="#c4b5fd" font-size="18" font-family="Sans-serif">任务环境</text>
+  <text x="380" y="160" text-anchor="middle" fill="#94a3b8" font-size="14" font-family="Sans-serif">数学/代码/工具</text>
+  <rect x="520" y="80" width="200" height="120" rx="12" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+  <text x="620" y="130" text-anchor="middle" fill="#6ee7b7" font-size="18" font-family="Sans-serif">验证器</text>
+  <text x="620" y="160" text-anchor="middle" fill="#94a3b8" font-size="14" font-family="Sans-serif">规则/执行/判题</text>
+  <rect x="760" y="80" width="160" height="120" rx="12" fill="#1e293b" stroke="#fbbf24" stroke-width="2"/>
+  <text x="840" y="130" text-anchor="middle" fill="#fcd34d" font-size="18" font-family="Sans-serif">奖励 r</text>
+  <text x="840" y="160" text-anchor="middle" fill="#94a3b8" font-size="14" font-family="Sans-serif">0/1 或分数</text>
+  <path d="M240 140 H280" stroke="#64748b" stroke-width="2" marker-end="url(#a)"/>
+  <path d="M480 140 H520" stroke="#64748b" stroke-width="2"/>
+  <path d="M720 140 H760" stroke="#64748b" stroke-width="2"/>
+  <defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#64748b"/></marker></defs>
+  <rect x="80" y="260" width="800" height="220" rx="14" fill="#111827" stroke="#334155"/>
+  <text x="480" y="300" text-anchor="middle" fill="#e2e8f0" font-size="20" font-family="Sans-serif">与偏好 RL / ORM / PRM 的关系</text>
+  <text x="120" y="350" fill="#93c5fd" font-size="16" font-family="Sans-serif">• 不依赖人类偏好标注作为主信号</text>
+  <text x="120" y="385" fill="#93c5fd" font-size="16" font-family="Sans-serif">• 奖励来自可执行、可复核的正确性标准</text>
+  <text x="120" y="420" fill="#93c5fd" font-size="16" font-family="Sans-serif">• 适合数学、代码、单元测试、工具调用等可验证任务</text>
+  <text x="120" y="455" fill="#93c5fd" font-size="16" font-family="Sans-serif">• 可与 GRPO / PPO / RLOO 等优化器组合</text>
+</svg>
