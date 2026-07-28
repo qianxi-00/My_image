@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <defs>
+    <linearGradient id="p" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1e3a8a"/><stop offset="100%" stop-color="#60a5fa"/></linearGradient>
+    <style>
+      .t{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#0f172a}
+      .s{font-size:22px;font-weight:700}
+      .m{font-size:14px;fill:#334155}
+      .w{fill:#fff;font-size:14px;font-weight:600}
+      .box{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2;rx:12}
+      .step{fill:#eff6ff;stroke:#93c5fd;stroke-width:2;rx:10}
+    </style>
+  </defs>
+  <rect width="1200" height="760" fill="#ffffff"/>
+  <text class="t s" x="36" y="40">一次 MTP 步进的缓存事务：写候选 → 验证 → 提交/回滚</text>
+  <text class="t m" x="36" y="70">把 KV 增长从“append-only”改成“两阶段提交”，服务端才能既快又正确</text>
+
+  <rect class="step" x="36" y="110" width="220" height="140"/>
+  <text class="t" x="70" y="150" style="font-size:16px;font-weight:700">1. 主干前向</text>
+  <text class="t m" x="56" y="185">读权威前缀 KV</text>
+  <text class="t m" x="56" y="215">产出 hidden / logits</text>
+  <text class="t m" x="56" y="245">准备多头预测</text>
+
+  <rect class="step" x="286" y="110" width="220" height="140"/>
+  <text class="t" x="320" y="150" style="font-size:16px;font-weight:700">2. 候选生成</text>
+  <text class="t m" x="306" y="185">并行预测 K 个 token</text>
+  <text class="t m" x="306" y="215">写入影子 KV / 树块</text>
+  <text class="t m" x="306" y="245">不修改权威长度</text>
+
+  <rect class="step" x="536" y="110" width="220" height="140"/>
+  <text class="t" x="580" y="150" style="font-size:16px;font-weight:700">3. 目标验证</text>
+  <text class="t m" x="556" y="185">一次验证多候选</text>
+  <text class="t m" x="556" y="215">接受前缀长度 L</text>
+  <text class="t m" x="556" y="245">拒绝后续分支</text>
+
+  <rect class="step" x="786" y="110" width="220" height="140"/>
+  <text class="t" x="820" y="150" style="font-size:16px;font-weight:700">4. 提交边界</text>
+  <text class="t m" x="806" y="185">权威 KV 追加 L</text>
+  <text class="t m" x="806" y="215">回收 L 之后候选</text>
+  <text class="t m" x="806" y="245">更新页表/引用计数</text>
+
+  <rect class="box" x="36" y="290" width="1128" height="430"/>
+  <rect x="56" y="310" width="1088" height="42" rx="10" fill="url(#p)"/>
+  <text class="w" x="430" y="337">工程检查清单（上线前必须回答）</text>
+  <text class="t m" x="56" y="390">• 候选 token 的 K/V 存放在哪里？与权威页表是否隔离？</text>
+  <text class="t m" x="56" y="430">• 接受 L 个 token 时，是否原子更新序列长度、block table、RoPE 位置？</text>
+  <text class="t m" x="56" y="470">• 拒绝后是否保证后续注意力看不到脏 KV？分页块能否立即复用？</text>
+  <text class="t m" x="56" y="510">• 树状候选的峰值显存是否纳入 admission control？</text>
+  <text class="t m" x="56" y="550">• continuous batching 下，MTP 步进是否会饿死短请求？</text>
+  <text class="t m" x="56" y="590">• 与 prefix cache / PD 分离 / 量化 KV 是否兼容？</text>
+  <text class="t m" x="56" y="630">• 观测是否区分“候选写入字节”和“最终提交字节”？</text>
+  <text class="t m" x="56" y="680">• 失败路径是否可回放：哪一步写了什么、何时回滚？</text>
+</svg>
