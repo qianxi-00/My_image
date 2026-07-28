@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640">
+  <rect width="1200" height="640" fill="#0f172a"/>
+  <rect x="32" y="32" width="1136" height="576" rx="16" fill="#111827" stroke="#38bdf8" stroke-width="2"/>
+  <text x="60" y="90" fill="#38bdf8" font-size="30" font-family="sans-serif" font-weight="700">MoE 部署拓扑</text>
+  <text x="60" y="120" fill="#e2e8f0" font-size="24" font-family="sans-serif">专家并行EP</text>
+<text x="60" y="160" fill="#e2e8f0" font-size="24" font-family="sans-serif">张量并行TP</text>
+<text x="60" y="200" fill="#e2e8f0" font-size="24" font-family="sans-serif">流水并行PP</text>
+<text x="60" y="240" fill="#e2e8f0" font-size="24" font-family="sans-serif">组合策略</text>
+</svg>
