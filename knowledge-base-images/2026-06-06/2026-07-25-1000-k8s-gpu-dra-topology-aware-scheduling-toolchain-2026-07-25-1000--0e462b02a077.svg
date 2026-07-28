@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="a" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <linearGradient id="b" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <text x="60" y="64" fill="#e2e8f0" font-size="28" font-family="DejaVu Sans, sans-serif" font-weight="700">GPU 共享集群：资源声明与调度分层</text>
+  <text x="60" y="100" fill="#94a3b8" font-size="16" font-family="DejaVu Sans, sans-serif">从“数卡”到“声明能力、拓扑与配额”的工具链视图</text>
+
+  <!-- layers -->
+  <rect x="60" y="140" width="1080" height="90" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+  <text x="90" y="175" fill="#7dd3fc" font-size="18" font-family="DejaVu Sans, sans-serif" font-weight="700">L1 工作负载声明层</text>
+  <text x="90" y="205" fill="#cbd5e1" font-size="15" font-family="DejaVu Sans, sans-serif">Workload / Job / InferenceService · ResourceClaim · 队列与优先级 · 配额标签</text>
+
+  <rect x="60" y="250" width="1080" height="90" rx="14" fill="#1e293b" stroke="#818cf8" stroke-width="2"/>
+  <text x="90" y="285" fill="#c4b5fd" font-size="18" font-family="DejaVu Sans, sans-serif" font-weight="700">L2 调度与放置层</text>
+  <text x="90" y="315" fill="#cbd5e1" font-size="15" font-family="DejaVu Sans, sans-serif">Scheduler Plugins · Topology Aware · Gang/Coscheduling · Preemption · 亲和与反亲和</text>
+
+  <rect x="60" y="360" width="1080" height="90" rx="14" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+  <text x="90" y="395" fill="#6ee7b7" font-size="18" font-family="DejaVu Sans, sans-serif" font-weight="700">L3 设备抽象层（DRA / DeviceClass / ResourceSlice）</text>
+  <text x="90" y="425" fill="#cbd5e1" font-size="15" font-family="DejaVu Sans, sans-serif">Capability 选择 · MIG/分区 · 内存与互连属性 · 驱动版本约束 · 健康状态</text>
+
+  <rect x="60" y="470" width="1080" height="90" rx="14" fill="#1e293b" stroke="#fbbf24" stroke-width="2"/>
+  <text x="90" y="505" fill="#fcd34d" font-size="18" font-family="DejaVu Sans, sans-serif" font-weight="700">L4 节点与硬件层</text>
+  <text x="90" y="535" fill="#cbd5e1" font-size="15" font-family="DejaVu Sans, sans-serif">NVLink/PCIe 拓扑 · NUMA · MIG 实例 · 多租户隔离 · DCGM 健康与功耗墙</text>
+
+  <!-- arrows -->
+  <path d="M600 230 L600 250" stroke="url(#a)" stroke-width="3"/>
+  <path d="M600 340 L600 360" stroke="url(#a)" stroke-width="3"/>
+  <path d="M600 450 L600 470" stroke="url(#b)" stroke-width="3"/>
+
+  <text x="60" y="610" fill="#94a3b8" font-size="14" font-family="DejaVu Sans, sans-serif">关键转变：把 nvidia.com/gpu: N 的计数模型，升级为“可组合能力声明 + 可验证放置证据”</text>
+  <text x="60" y="640" fill="#64748b" font-size="13" font-family="DejaVu Sans, sans-serif">图 1 · 2026-07-25 · 基础设施/部署/工具链</text>
+</svg>
